@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Smallcase? How I Pick My Stocks? | Raghav</title>
+<meta name="description" content="Who all agree that year 2020 was a turning point in our lives? While most of might think that it was just us, in reality, a lot of people started paying attenti…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Smallcase? How I Pick My Stocks?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-22</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-22 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.moneycrashers.com/wp-content/uploads/2010/02/extra-cash-pocket.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Who all agree that year <strong>2020 was a turning point</strong> in our lives? While most of might think that it was just us, in reality, a lot of people <strong>started</strong> paying <strong>attention</strong> to their <strong>investments</strong>. So many <strong>finance bloggers</strong> popped up on various channels, ever <strong>highest</strong> <strong>number</strong> of <strong>demat</strong> <strong>accounts</strong> were opened during this period. Markets also <strong>recovered</strong> from a record <strong>fall</strong> in a record <strong>time</strong>. If you would ask me that how I <strong>invested</strong> my money before 2020, I would say "<strong><em>Papa ke ek CA friend hain</em></strong>". And that was it. My entire investment strategy was <strong>centered</strong> around <strong>saving</strong> <strong>taxes</strong> and nothing else.</p>
+<p><img alt="" src="https://www.moneycrashers.com/wp-content/uploads/2010/02/extra-cash-pocket.jpg" /></p>
+<p>With the onset of pandemic, I had more money than I could spend. Thanks to No <strong>Swiggy, Outings, Weekend Getaways in my life</strong>, I started thinking about other avenues of <strong>investing money</strong>. Of course I had heard about equity stock markets, but I had no clue of how and where to invest money.</p>
+<p>I still remember in the early days of investing in stock market, I would read the <strong><a href="https://www.moneycontrol.com/">money control</a></strong> every morning and would bet on <strong>random</strong> <strong>stocks</strong> basis a small piece of <strong>news</strong>. It wasn't until a couple of months that I realized that this <strong>strategy</strong> wasn't <strong>sustainable</strong>.</p>
+<h2>What Happened Then?</h2>
+<p>I wouldn't say that I lost a lot of money or something to scare you. Some news helped me <strong>make money</strong> while others <strong>backfired</strong> badly. In a nutshell, there had a to be <strong>structure</strong> to this <strong>madness</strong>. Until I found out, there was.</p>
+<p>I spent the next two months learning <strong>fundamental</strong> <strong>analysis</strong> and <strong>technical</strong> <strong>analysis</strong>. It was a vast topic and required <strong>years of practice</strong> to master it. I came across people who have been doing it for all their lives. The more I read about these analyses, more I realized that <strong>they weren't for me</strong>. I was <strong>not</strong> <strong>planning</strong> to make a <strong>living</strong> out of <strong>stocks</strong>. I wanted some <strong>passive</strong> <strong>income</strong> which would consume <strong>minimum</strong> <strong>time</strong> after my regular 9to5 job.</p>
+<p>This meant that I would never know what stocks to pick up for my portfolio. Here's when today's <strong>fintech</strong> platform comes in handy: Smallcase</p>
+<h2>What is it about?</h2>
+<p>You are a smart investor but have <strong>burnt your hands</strong> in equity markets in the past. So, you tend to take the <strong>mutual funds</strong> route usually. But, by the virtue of your job, or may be general interest, you know about a <strong>space more than an average joe</strong>. For example, I worked for Vodafone for a while in the past. I know how telcos operate, the profit drivers, the threats etc. I also know how telecom is going to ride the digital India wave in the coming future. It make complete sense for me to <strong>buy VI, Airtel and Reliance Stocks right</strong>? But what about companies supplying <strong>network equipment to these brands? E.g. Indus</strong>. I would surely NOT want to miss the rally in that segment. By now, if you are thinking of sleeping on the piles of money, note that it is not a particular stock that you are bullish on. It is rather, <strong>a theme, a space, an industry</strong>. Enter, <strong><a href="https://www.smallcase.com/">smallcase</a></strong>. Your <strong>tool for thematic investment</strong>.</p>
+<p><img alt="" src="https://i.imgflip.com/4pe1of.jpg" /></p>
+<h2>What is Smallcase?</h2>
+<p>In a very basic sense, smallcase is a mutual fund. Just like a MF, smallcase would invest in multiple stocks. But, unlike mutual funds, this time you know what your money goes into. A fund manager is not governing your portfolio while keeping you in the dark.</p>
+<p><strong>Smallcase allows you to invest in these stocks with your preferred underlying theme</strong>. All these stocks can be purchased with a single click of button and will get credited to your Demat account as per the normal cycle. They have tied up with top brokers of the country and integrated their app with them. I have used smallcase with Zerodha and the experience was quite seamless.</p>
+<p>To further establish the essence of 'thematic investment', let us look at some examples of smallcases I particularly liked:</p>
+<ul>
+<li><strong>The Great Indian Middle Class:</strong></li>
+</ul>
+<p>This smallcase includes the <strong>companies that are going to benefit from the rising middle class in the country</strong>. So if you are bullish on the upcoming rise of the middle class and believe that increased income levels would mean increased consumption, you can opt for this smallcase.</p>
+<p>You have the access to the complete information in terms of <strong>what stocks comprise of this case</strong>. Also, you would know what is the <strong>weight assigned to each stock</strong>. You can also <strong>edit the stocks and their weights</strong> as per your suitability.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/12/image-3.png" /></p>
+<p>Smallcase Analysis</p>
+<ul>
+<li><strong>Electric Mobility</strong>:</li>
+</ul>
+<p>On a similar note, if you think <strong>EV is the next big thing</strong> in India, this smallcase is for you. It invests in:</p>
+<ol>
+<li>Battery Companies</li>
+<li>Auto Parts</li>
+<li>Industrial Machinery</li>
+<li>4w, 2w companies who have entered this space</li>
+<li>Software companies</li>
+</ol>
+<p>In toto, it is quite a holistic approach to invest in a theme.</p>
+<h2>Who Should Invest in Smallcase?</h2>
+<p>You should use smallcase approach to enter stock markets if:</p>
+<ul>
+<li><strong>You are a beginner</strong>: Instead of fundamental and technical analysis of a specific company, you are simply bullish on a theme.</li>
+<li><strong>If you plan to go long</strong>: You should invest in a particular small case and wait. The way you are suggested to do for mutual funds. But this time, you have a stronger trust backing your patience.</li>
+<li><strong>If you do not have bulk money to play around in stock market:</strong> Did I mention that you can invest in a smallcase as you would do in mutual fund through SIP? Pretty handy right?</li>
+</ul>
+<h2>Conclusion:</h2>
+<p>In case you are wondering if Smallcase is legit and safe, then this might address your concern. Smallcase is funded by India's largest stock broker <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha</a> and has been around for a while now.</p>
+<p>Some key benefits I can think of using this over mutual funds are:</p>
+<ul>
+<li>I know where my money lies.</li>
+<li>Dividends are tax free but mutual funds returns aren't</li>
+<li>I can partially exit a small case by selling certain holdings as well</li>
+<li>Smallcase, just like a mutual fund is revisited and rebalanced at a periodic interval (revealed up front).</li>
+</ul>
+<p>I am currently invested in some of my key themes and plan to maintain the status quo for a while. I hope you find value in this post (literally).</p>
+<p>Do you plan to/have already invested in a smallcase?</p>
+<p>This blog is in association with <a href="https://www.theblogchatter.com/">Blogchatter's</a> #BlogchatterA2ZChallenge</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

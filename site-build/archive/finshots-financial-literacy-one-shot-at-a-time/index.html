@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finshots: Financial Literacy, One Shot at A Time | Raghav</title>
+<meta name="description" content="Are you one of those people who just can't get your head around financial jargons? Do you find yourself juggling between Google and the finance article itself w…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Finshots: Financial Literacy, One Shot at A Time</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-07</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-07 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pbs.twimg.com/media/EK3VrkwUcAMTSSs.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Are you one of those people who just can't get your head around <strong>financial jargons</strong>? Do you find yourself <strong>juggling</strong> between <strong>Google</strong> and the finance <strong>article</strong> <strong>itself</strong> while reading one? Well, if it makes you feel any better, you are not the only one. Despite having a degree in MBA (with Finance as a full blown subject for 2 semesters), <strong>I was</strong> almost on the <strong>same page</strong>. The <strong>struggle</strong> was so real that I would always <strong>lose</strong> the <strong>context</strong> of the article in the middle and <strong>give up</strong> every time. At one point, I also thought of buying a financial jargon glossary so that I could refer it each time I was trying to study. I wish someone could just <strong>simplify the finance and business news</strong>. Don't we all? Enter: <a href="https://finshots.in/">Finshots</a>. A platform that was born with this very aim.</p>
+<p><img alt="An infographic explaining Amazon's Businesses by Finshots" src="https://pbs.twimg.com/media/EK3VrkwUcAMTSSs.jpg" /></p>
+<p>An infographic explaining Amazon's Businesses by Finshots</p>
+<p>Finshots not only provides you quenches your thirst to know more about what is happening around the world, but it also does that in a very crisp manner. Posts are no longer than 7 minute read and are often supported by spectacular infographics.</p>
+<h2>The Story Behind Finshots:</h2>
+<p>Like most Indian Startups, this story also started out of fear of getting <strong>caught</strong> in the <strong>rat race</strong> of 9 to 5. Founders <strong>Bhanu</strong>, <strong>Pawan</strong> and <strong>Sherith</strong> conceived the idea in the <strong>second year</strong> of their <strong>IIM at Ahmedabad</strong>. Finshots began with the idea of a <strong>daily three-minute newsletter</strong>, that would share business and finance news in a language that a <strong>layman can comprehend.</strong></p>
+<p>Yet again, their journey through this noble cause wasn't easy at all. Recently, the founder Bhanu Harish Gautam shared a post on LinkedIn that quotes:</p>
+<blockquote>
+<p>"<em>Back in 2018/19, we used to apply for every B-plan competition out there hoping that we could win some grants and afford some more resources.</em></p>
+<p><em>And, we were rejected in all of those and this is just one of them. We never won any B-plan/ startup competition as no one believed in the idea of simplified financial news (<a href="https://www.linkedin.com/company/finshots/">Finshots</a>). Finally, we stopped applying to save our time</em> 🙂</p>
+<p><em>Glad that these rejections never became an impediment in our journey. Rejection is one of the first things that you actually learn during entrepreneurship</em>."</p>
+</blockquote>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-2.png" /></p>
+<p>Screenshot of the rejection mail posted by Bhanu Gautam</p>
+<p>“After all your <strong>liabilities</strong> are taken care of, it’s mostly about whether you’re ready to lead a <strong>simple</strong> <strong>life</strong> while all your other <strong>batchmates</strong> are going on <strong>fancy</strong> <strong>vacations</strong> on their <strong>20-25 lac</strong> salary packages.”</p>
+<p>To fund the startup in their initial stages, all the founder members took up <strong>part-time jobs teaching CAT aspirants at TIME and career launcher</strong>. They would simply set aside some money for their survival and chip in the remaining into the startup.</p>
+<h2>Popularity and How to Access?</h2>
+<p>Within a couple of years of <strong>inception</strong>, Finshots had a massive <strong>following</strong> of about <strong>2,00,000 subscribers</strong>. Soon enough they also came up with their <a href="https://play.google.com/store/apps/details?id=com.finception.finshots.android&amp;hl=en_IN&amp;gl=US">Android</a> and <a href="https://apps.apple.com/in/app/finshots/id1508510456">iOS</a> application. The application became a <strong>huge hit with 1,00,000 downloads</strong> on the <strong>playstore and a rating of 4.9 with 10k+ reviews</strong>. Finshots can be accessed through their <a href="http://finshots.in">website</a> as well.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-3.png" /></p>
+<p>However, my favorite medium to consume Finshots would be their <strong>podcast</strong> that is available on <strong>Spotify</strong>, <strong>Apple</strong> <strong>Music</strong> etc. I always had a hard time, waking up and going for a walk. However, thanks to Finshots, I simply plug my <strong>headphones</strong> and listen to the episodes lined up.</p>
+<p>Like all good work is somehow discovered, Finshots was recognized by <strong>Zerodha</strong> and they soon partnered with the application to <strong>push their content</strong> through their own app. In case you don't know about Zerodha, it is India's largest stock broker <strong>19% market share</strong> in this industry.</p>
+<h2>How do they Make Money?</h2>
+<p>Some blogging inspiration right here folks! Turns out, even after soaring popularity, <strong>they don't plan to monetize their platform</strong> as of now. There are <strong>no ads</strong> whatsoever on the website, the apps and the podcast. The reason quoted behind this is that a <strong>lot of their userbase is young and naïve investors who are learning finance</strong>. So it would just not make sense to charge them on their journey to financial freedom.</p>
+<p>Their next project is <strong>Ditto which aims to simplify insurance for general public</strong>. Finally, they plan to monetize this platform by eventually <strong>selling insurance</strong>. However, as of now, even this platform is <strong>absolutely free to use</strong>. As a matter of fact, you can simply Whatsapp them for any insurance related query and you will end up talking to a person and NOT a bot for your answer.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-07-at-10.23.19-PM-494x1024.jpeg" /></p>
+<p>A sample conversation I had with Ditto Team</p>
+<h2>My Favorite Finshots:</h2>
+<p>Still not convinced? Here are some of my best finshots reads till date. The insanity is explained so intricately, you'll fall in love with it.</p>
+<p>While we keep on <strong>blabbering</strong> about the <strong>petrol</strong> <strong>prices</strong> in our nation and rightly so. <a href="https://finshots.in/archive/petrol-diesel-hike/">Here's the logic behind the ever increasing prices.</a></p>
+<p>Also, do you know how we keep on talking about <strong>politicians parking their black money in Swiss Bank</strong>? Also, how Modi Ji promised to give all of us 15L? <a href="https://finshots.in/archive/tax-havens-and-why-they-exist/">Here's how the problem might be very different altogether.</a></p>
+<p>Here's a crazy idea you didn't even know you needed an answer to: <a href="https://finshots.in/archive/what-if-we-abolished-the-income-tax/">What if we abolished income taxes?</a></p>
+<p>Madness intensifies with this one! How a <a href="https://finshots.in/archive/the-call-of-duty/">grammatical mistake might cost our government a whopping 50,000 crores</a>.</p>
+<p>And finally, our <strong>recent favorite meme</strong>. But what is the math behind it? <a href="https://finshots.in/archive/the-suez-crisis-reloaded/">The Suez Canal conundrum</a>.</p>
+<h2>Conclusion:</h2>
+<p>So what are you waiting for? Go f<strong>launt your financial expertise</strong>. Trust me, these Finshots make an excellent <strong>dining</strong> <strong>table</strong> <strong>conversations</strong>. Who knows you might end up getting fit as well if you make Finshots as your morning walk partner.</p>
+<p>Also, if you plan to give it a shot, please share your favorite shot with me. (Ah! Unprecedented Wordplay!)</p>
+<p>This blogpost is in association with <a href="https://www.theblogchatter.com/">Blogchatter's</a> #BlogchatterA2Z Challenge. I write about a fintech platform everyday (except Sundays) in this challenge for the month of April. Other posts can be found <a href="https://pandatechie.in/tag/blogchattera2zchallenge/">here</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

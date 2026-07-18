@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Bad is Bitcoin for Environment? The Impact of Bitcoin Mining | Raghav</title>
+<meta name="description" content="While everyone was busy conforming to the societal norms laid out since the 19th century, there was one person (or a group) called Satoshi Nakamoto, who decided…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How Bad is Bitcoin for Environment? The Impact of Bitcoin Mining</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-08-15</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-08-15 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.aljazeera.com/wp-content/uploads/2021/05/370183998.jpg?resize=770%2C513" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>While everyone was busy <strong>conforming</strong> to the <strong>societal norms</strong> laid out since the <strong>19th century</strong>, there was one person (or a group) called <strong>Satoshi Nakamoto</strong>, who decided to <strong>change</strong> how it all worked. About a decade later, we don't need a <strong>proof</strong> of the fact that whatever he/they set out to do, is well on track. However, there are certain <strong>concerns</strong> around <strong>bitcoin</strong> and it's <strong>environmental</strong> <strong>impact</strong> of <strong>mining</strong>. So, in today's post, we try to understand why is there a problem at all and <strong>how Bitcoin</strong> ended on the <strong>wrong</strong> <strong>side</strong> of <strong>environmental</strong> activists. Also, we'd try to discuss <strong>how big is this impact</strong> and <strong>what is being done</strong> to fix this.</p>
+<h2>The Bitcoin Mining:</h2>
+<p>We have talked about this process at length in one of our previous blogposts. You can read that post <a href="https://pandatechie.in/2021/07/29/how-does-bitcoin-work/">here</a>. For the uninitiated, here's a quick context. You see, when you spend a currency note once, it's gone. Right? You can't <strong>spend</strong> it <strong>again</strong> at <strong>multiple</strong> points. Same should be case when you <strong>digitize money</strong>. But unfortunately, when you do so, people can <strong>copy paste it</strong> and create <strong>multiple copies</strong> of money, defeating the purpose.</p>
+<p>So Satoshi Nakamoto came up with a way of doing it through <strong>blockchain technology</strong>. This way you could <strong>transact</strong> and <strong>create</strong> a <strong>block</strong> each time and <strong>share it's copy</strong> with everyone. However, if <strong>putting up a block</strong> on the blockchain was made so easy, people might <strong>try to change</strong> the chain data in an attempt to <strong>dupe the system</strong>.</p>
+<p>So, for creating the block, concept of <a href="https://pandatechie.in/2021/07/29/how-does-bitcoin-work/">proof of work</a> was introduced. Think of it as a <strong>complicated mathematical puzzle</strong> that needs to be <strong>guessed</strong> before <strong>mining</strong> the <strong>next</strong> <strong>block</strong>.</p>
+<p>That's where the problem begins. This <strong>mathematical</strong> <strong>puzzle</strong> needs <strong>computational</strong> <strong>power</strong> which in turn requires <strong>electricity</strong>. Why do these miners spending resources? Well, they get BTC in return.</p>
+<p><img alt="" src="https://www.aljazeera.com/wp-content/uploads/2021/05/370183998.jpg?resize=770%2C513" /></p>
+<p>A Bitcoin Mining Field: Think of all these stacks as individual computers</p>
+<p>Every time a block needs to be added to the blockchain, each of these miners <strong>enter a race</strong> to solve this <strong>mathematical</strong> puzzle <strong>first</strong>. Since <strong>only one</strong> is going to win this race, everyone else who took part <strong>simply wasted electricity</strong> in the process. May be sad, but that's how it works.</p>
+<h2>The Quantum of Problem:</h2>
+<p>We'll talk about the problem in a way that is closest to the home. The <strong>normal pencil cell</strong> that we use to <strong>power</strong> our <strong>TV</strong> remote generates <strong>0.026Kwh</strong> power. Now put such batteries in a <strong>20-foot shipping container</strong>, you would get the <strong>electricity</strong> that is required by average <strong>American household</strong>.</p>
+<p><img alt="" src="https://static.dw.com/image/56572775_7.png" /></p>
+<p><strong>Get a ship that holds 24,000</strong> such <strong>containers</strong> and you would get enough <strong>energy</strong> to power a <strong>two month</strong> supply for every <strong>commercial</strong> building in US.</p>
+<p>For one year of Bitcoin Mining? <strong>You would need 385 such ships</strong>. That is quite a lot. The energy consumed by BTC in an year is <strong>84,594,077,568 kWh</strong>. (Data Courtesy: <a href="https://qz.com/2023032/how-much-energy-does-bitcoin-use/#:~:text=The%20most%20reputable%20such%20estimate,close%20to%20what%20is%20consumed">Quartz</a>)</p>
+<h3>Why isn't this a big deal?</h3>
+<p>Although a massive amount of energy is being spent to <strong>maintain</strong> <strong>Bitcoin</strong> <strong>blockchain</strong>, but rather than focusing on the quantum of energy, let's understand the <strong>sources</strong> from which this <strong>energy</strong> is being derived. As per a research done by Cambridge:</p>
+<p><img alt="" src="https://cdn1.vogel.de/unsafe/fit-in/1000x0/images.vogel.de/vogelonline/bdb/1836500/1836550/original.jpg" /></p>
+<p><strong>62%</strong> of global miners rely on <strong>hydropower</strong> for at least some of their electricity; <strong>38%</strong> use some <strong>coal</strong>, and about <strong>39%</strong> use at least some combination of <strong>solar</strong>, <strong>wind</strong>, or <strong>geothermal</strong>. Altogether, annual global emissions from the network are equal to <strong>London Metro Area</strong>, according to a March article in the journal <em>Joule</em>. But it’s important to note that these numbers are all informed guesses, based on a lot of <strong>assumptions</strong>, and liable to <strong>fluctuate</strong> seasonally and with the price of bitcoin.</p>
+<p>Now try <strong>comparing</strong> that with the likes of <strong>State Bank of India</strong>. The great bank has <strong>24,000+</strong> branches in <strong>India</strong> alone. These branches also require boat loads of <strong>electricity</strong> to power all the <strong>PCs, ACs</strong> and what not. Apart from that, energy sources are rather questionable when it comes to running SBI.</p>
+<p>Now you take a call. Is BTC going overboard with electricity consumption? OR is it just the cost of running a network?</p>
+<h2>What's Next?</h2>
+<p>No matter what side of narrative you pick, it's always better to <strong>reduce</strong> one's <strong>carbon</strong> <strong>footprint</strong>. And if you are something that is all set to takeover the <strong>future</strong> <strong>way</strong> of <strong>living</strong>, you better do that on early stages itself right? So, there are two ways in which people are trying to tackle this situation:</p>
+<h3>A. Energy Sources:</h3>
+<p>This must have crossed your mind as well. Why not convert 100% sources of energy consumption to <strong>renewable</strong> right? Let <strong>miners</strong> only use the <strong>energy</strong> being produced by the likes of <strong>geothermal</strong> and <strong>hydro</strong> <strong>power</strong> <strong>plants</strong>. While you are correct in principal and everything is being done to do so, it is likely to take some time. Given the <strong>Chinese</strong> <strong>bans</strong> on miners, they will have to <strong>relocate</strong> to other countries where <strong>electricity</strong> is <strong>cheaper</strong>. And while they do so, I doubt that <strong>clean energy</strong> will be the topmost selection criteria.</p>
+<p><img alt="" src="https://earth911.com/wp-content/uploads/2019/12/AdobeStock_271439094-1.jpeg" /></p>
+<h3>B. Consensus Mechanism:</h3>
+<p>Remember we talked about how all the <strong>computers</strong> take part in the <strong>race</strong> to solve the <strong>mathematical</strong> <strong>puzzle</strong>? What if rather than asking everyone to guess the answer, we only ask <strong>one PC</strong> to do so. That way, we'd <strong>save</strong> a lot of <strong>electricity</strong> right?</p>
+<p><img alt="" src="https://www.skalex.io/wp-content/uploads/2018/08/Proof-of-Work-vs.-Proof-of-Stake.jpg" /></p>
+<p>This method of reaching consensus is called <strong>Proof of Stake</strong>. In a proof of stake method, every <strong>node</strong> (or PC) stakes an <strong>amount</strong> in the <strong>network</strong>. Then basis multiple logics like (a) <strong>Amount staked</strong> (b) <strong>Time</strong> <strong>since</strong> amount has been staked (c) <strong>Past history</strong> (d) <strong>Randomization</strong>, a single PC is picked to mine the next block. This way, <strong>everyone</strong> has a <strong>fair</strong> chance of <strong>mining</strong> and <strong>electricity</strong> consumption is also under control.</p>
+<p>But not everything's as rosy as it looks. <strong>PoW or proof of work</strong> has a <strong>history</strong> of standing tall against all the attempted hacks. It has been the most proven and tested method of consensus when it comes to blockchains.</p>
+<p>On the other hand PoS is relatively new and still has a lot to prove it's mettle.</p>
+<p>Also, did I mention that BTC is never going to adopt PoS. Other blockchains like Ethereum are working on it and are likely to move from PoW to PoS by 2022.</p>
+<h2>Conclusion:</h2>
+<p>While the dreams of achieving carbon neutrality in Bitcoin mining might be far away, but let's agree on the fact that this is technology and it just like every other technology, it has some cost to run. Rather than bashing it and creating FUD, it's better that we compare us with it's peers and then come to a conclusion.</p>
+<p>What are your views on this?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

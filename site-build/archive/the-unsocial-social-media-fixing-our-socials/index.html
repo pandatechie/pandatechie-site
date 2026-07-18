@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Unsocial Social Media: Fixing our Socials | Raghav</title>
+<meta name="description" content="The only person in this world who makes the most of Twitter premium is our very own S. Balaji. His long ass tweets are packed with some immense triggers for you…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Unsocial Social Media: Fixing our Socials</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-05-19</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-05-19 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/05/240207-world-elections-2024-mb-1436-ece031-1024x683.webp" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>The only person in this world who makes the most of Twitter premium is our very own S. Balaji. His long ass tweets are packed with some immense triggers for your thought process. And this time, he has poked on a very sensitive topic.</p>
+<p>Politics.</p>
+<p>https://twitter.com/balajis/status/1660311953112461312</p>
+<p>S. Balaji on SM and Elections</p>
+<p>2024 will witness some 50 odd countries, constituting world's 70% population, undergoing some sort of electoral process. And the role of Social Media in this game of supremacy is more significant than ever. Balaji points out that 2012 was influenced heavily by Meta, but nobody batted an eye.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/240207-world-elections-2024-mb-1436-ece031-1024x683.webp" /></p>
+<p>Then came 2016, which saw the unprecedented impact of mass scale polarization swaying the results of elections in one particular direction.</p>
+<p>Closer to home, we see how mainstream political parties are going big on SM these days.</p>
+<p>So what do we do? There are two key issues at play here:</p>
+<p>A. Opaque algorithms governing user feed with single-party control on the future of accounts and protocol.</p>
+<p>B. Inability to identify: AI vs real content.</p>
+<p>So today, we try to figure out the following:</p>
+<ol>
+<li>
+<p>Why users stick to platforms despite knowing its downsides?</p>
+</li>
+<li>
+<p>How SM companies exploit it?</p>
+</li>
+<li>
+<p>What do we do?</p>
+</li>
+<li>
+<p>Finally, the war against AI</p>
+</li>
+</ol>
+<p>LFG then!</p>
+<h2>The Platform Stickiness:</h2>
+<p>I clearly remember that day.</p>
+<p>Meta announced that they could now freely share analytics from WhatsApp to feed personalized ad engine on their other platforms, including Facebook and Instagram.</p>
+<p>Honestly, after working in tech for most of my life, I didn't understand why this came as a surprise to our WhatsApp university.</p>
+<p>Anyway, so a lot of momentary protests happened. People quit WhatsApp and moved to <a href="https://pandatechie.in/2021/01/10/best-whatsapp-alternatives-in-2021-in-india/">Telegram</a> and <a href="https://pandatechie.in/2021/01/10/best-whatsapp-alternatives-in-2021-in-india/">Signal</a>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/1610168079_untitled-design.jpeg" /></p>
+<p>But then, just like most things, our anger was short lived. We forgot whatever we hypothesized about data stealing and moved back to WhatsApp.</p>
+<p>But why though?</p>
+<p>Simple answer: Friends. Nobody wants to setup their house in a ghost town waiting for their friends to walk in some day, especially when there's no merit to wait.</p>
+<p>Complicated answer lies in Social Graph. Let's dig deeper.</p>
+<h3>Social Graphs:</h3>
+<p>A <strong>social graph</strong> is a representation of relationships between individuals in a social network. It consists of nodes representing people and edges representing connections or relationships between them.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/Social-Graph-The-pattern-of-social-relationships-between-people-edited.png" /></p>
+<p>In the context of social media platforms like WhatsApp, Facebook, and Instagram, the social graph captures how users are connected through friendships, interactions, and shared content.</p>
+<p>Understanding the social graph helps these platforms personalize user experiences, recommend connections, and target advertisements effectively.</p>
+<p>It plays a crucial role in shaping online social interactions, influencing user behavior, and retaining users within the network due to the strong social ties and connections they have established.</p>
+<p>And that's where the entire moat of social media biggies is. As a user, you just can't let go your social graph. For any new platform to figure out your likes, dislikes, friends, frenemies it might take a while. And patience is not our strongest suite.</p>
+<h3>The Captivating Algorithms:</h3>
+<p>Now, once these social graphs are in place, you could literally start building algorithms on top of them that ensure people spend more time on your platforms.</p>
+<p>Fundamentally, an oversimplified version could include me liking a reel and then the same being suggested to my wife (figured out from social graph) OR one of my friends getting the same recommendation because we live in the same vicinity.</p>
+<p>Practically, these are complicated tricks devised just to increase your platform stickiness.</p>
+<p><strong>At one point, it doesn't matter if what you are consuming is factually correct or not. It should just comply with your belief system in such a way that you consume more content.</strong></p>
+<p>Moreover, this leads to polarization where your brain is deliberately restricted to consume only a single PoV because that is what keeps you 'hooked'.</p>
+<p>How else will they serve you ads?</p>
+<p>Don't believe me? Explain the sudden rise in flat earthers, anti vaxers etc.</p>
+<p>So what do we have now? We can't just rage quit because we are addicted to these platforms. We can't find something else because network effects.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/image-9-1024x857.png" /></p>
+<h2>The Solution:</h2>
+<p>Now that you understand the importance of social graphs, how about we take them and democratize it in a way that no one is able to build guard rails around them?</p>
+<p>Imagine if you had problems with algorithmic hypnotism by one of the platforms and you could simply move to another without losing any of your contacts/connects.</p>
+<p>The dominance of a few large social media platforms is problematic, as it concentrates too much power in the hands of a few companies. We need to encourage the development of alternative platforms and decentralized social networks that are not beholden to the same profit motives and incentives as the current platforms. This will foster more competition and give users more choices.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/what-is-a-decentralized-social-network-1024x526-1.png" /></p>
+<h3>Era of DeSo:</h3>
+<p>Decentralized social media, or DeSo, is one potential solution to the problems posed by centralized social media platforms. It involves the emergence of decentralized social (DeSo) networks built on blockchain technology.</p>
+<p>DeSo platforms aim to address the lack of transparency, user control, and competition in the current social media landscape.</p>
+<p>By decentralizing the underlying infrastructure, DeSo networks seek to give users more autonomy over their data and content.</p>
+<p>The use of blockchain ensures that user interactions and content are recorded immutably, reducing the ability of platform owners to manipulate or censor information. Moreover, DeSo networks often incorporate economic incentives, such as cryptocurrency rewards, to encourage user engagement and content creation.</p>
+<p>This model aims to align the interests of users, creators, and platform operators, in contrast to the advertising-driven business model of traditional social media.</p>
+<p>As the adoption of DeSo grows, it has the potential to disrupt the current social media landscape and provide users with more choice and control over their online experiences.</p>
+<h2>DeSo on Cosmos:</h2>
+<p>Sounds good, Doesn't work.</p>
+<p>No.</p>
+<p>We actually have a bunch of budding projects on Cosmos blockchain that plan to do away with the social media hegemony for once and all.</p>
+<h3>1. Desmos Network:</h3>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/0_1U7VF7L0N78j_400-1024x460.png" /></p>
+<p>Desmos Network is addressing issues of censorship and data misappropriation in centralized social networks. Their goal is to enhance user privacy and move towards censorship resistance.</p>
+<p>Desmos introduces a native staking token, DSM, to incentivize network participation. By redesigning the lifecycle of social networks, Desmos aims to create a self-sustainable social network without centralized intermediaries.</p>
+<p>The project leverages tokenomics to reflect network value and advertising value, creating an open marketplace of attention. Through staking rewards and a focus on network effects, Desmos encourages early user participation and growth, aiming to revolutionize the social networking landscape with decentralized profiles and a user-centric approach.</p>
+<h3>2. Sampark:</h3>
+<p>This project, named Sampark, focuses on celebrating connections with those around you. Users can share images on the platform to express their thoughts, emotions, or creativity.</p>
+<p>The project emphasizes decentralization, ensuring data security and privacy. It serves as a digital archive for future memories, utilizing blockchain technology for data integrity. The storage solution employed is Skynet, a decentralized platform offering secure storage.</p>
+<p>Sampark aims to create a meaningful and lasting digital space where users can preserve and share their experiences, thoughts, and connections with others.</p>
+<h3>3. Stakebird</h3>
+<p>Stakebird is a protocol that incentivizes social media content creation and curation. The first version of Stakebird will just focus on Twitter. Unlike giving a tip (which is zero-sum), Stakebird's mechanic allows curators to earn a reward based on how everyone else voted. This mechanic, <a href="https://vitalik.ca/general/2019/12/07/quadratic.html">quadratic voting</a>, goes beyond just a "like", allowing curators to signal intensity as well. All participants in Stakebird earn STB, the protocol’s native governance token.</p>
+<h2>Challenges:</h2>
+<p>While I sound extremely bullish on such narratives, this road to supremacy is not going to be easy. I mean, if someone made a trillion dollar company just by using social graphs, how are you supposed to do something similar by just letting them go?</p>
+<p>Projects like <a href="https://www.farcaster.xyz/">Farcaster</a> and Nostr have made a significant stride in DAUs after this narrative became mainstream, but even then, a clear road to monetization is missing.</p>
+<p>So is being right &gt;&gt;&gt; being rich? Only time will tell.</p>
+<p>But rest assured, I will be the first one to rant about it.</p>
+<p>Until next time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

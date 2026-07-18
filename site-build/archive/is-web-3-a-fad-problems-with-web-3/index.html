@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Web 3 a Fad?: Problems with Web 3 | Raghav</title>
+<meta name="description" content="You must be living under a rock if you have not come across the term 'web 3' so far. This new Blockchain based internet has hijacked the dinner table conversati…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Is Web 3 a Fad?: Problems with Web 3</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-02-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-02-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media2.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>You must be living under a rock if you have not come across the term 'web 3' so far. This new Blockchain based internet has hijacked the dinner table conversations of many families. Every other day we would come across a crypto that gives unimaginable returns (they call it 'to the moon' when this happens). This triggers a fresh wave of 'fear of missing out' or FOMO. While we strongly believe in the fundamentals of web 3 and think it is here to stay, FOMO is never good for any industry. It just splits the audience into two parts. One that thinks that web 3 is going to change the course of internet overnight and the others who think that web 3 is a fad. So in this blogpost, we try to unravel the problems with web 3.</p>
+<p>At its core, web 3 is a very strong technology. It has the potential of disrupting the internet as we know of. But quite a lot of it is in theory right now. Execution is going to play a key role in solving some fundamental problems with web 3. Let us try to decipher what kind of problems can these be.</p>
+<h2>A. Development:</h2>
+<p>Web 3 is built on the Blockchain technology. Currently there are multiple blockchains that are trying to address different problems. Some of them have a unique selling proposition of being decentralized while some market themselves as fast and cheap.</p>
+<p><img alt="" src="https://media2.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif" /></p>
+<p>Because of this, these Blockchains have different architecture and underlying tech. To put this in perspective, you can write smart contracts (fundamental code for Blockchain that governs 'if' and 'but' conditions) for Ethereum in a language called Solidity. For a similar development in Solana one needs to learn 'Rust'. For Tezos, it is 'Michelson'. You get the idea.</p>
+<p>Bottom line: The Blockchain technology is still very young (about a decade old). So there are not many people who know how to code. On the top of it, there is a niche carved out by each blockchain in terms of development language, further aggravating the situation.</p>
+<p>Until more people jump on to this space, there is going to be some gap between expectations of the masses and products shipped.</p>
+<p>By the way, this also means that these developers are going to be high in demand and rewarded handsomely for their work. Are you ready to make the switch? <a href="https://nasacademy.com/crypto">Here's</a> how you can get started.</p>
+<h2>B. Interoperability:</h2>
+<p>While web 3 is all about owning your assets in your wallet rather than leaving them at the mercy of a centralized platform, there is a slight problem at hand.</p>
+<p>Imagine you are entering a Metaverse. Let us call it Metaverse A. You own a fancy pair of shoes, shades and a watch in this Metaverse as NFTs. You are a highly respected individual and you can maintain your social clout because of these NFTs.</p>
+<p>Now imagine your friends start hanging out on a different Metaverse (say B). Ideally, since you own these assets, you could take them to the Metaverse B and nothing would have changed. You cannot buy these expensive assets in every different Metaverse right? But it is easier said than done.</p>
+<p>This is in fact one of the core problems that Blockchain industry is trying to solve. It is called interoperability or the ability of one Blockchain to talk to another.</p>
+<p><img alt="" src="https://media0.giphy.com/media/On80Kpb1mJR28B9qAP/giphy.gif" /></p>
+<p>Currently due to lack of interoperability, assets on one Blockchain cannot be used on the other. Therefore, owning your assets is not fun any more.</p>
+<p>Some Blockchains are trying to solve these problems using something called 'Bridge'. These bridges enable movement of assets from one Blockchain to another. However these bridges are often slow, expensive and unreliable. This makes them highly inaccessible to masses.</p>
+<p>Another solution to this problem is trying to create an ecosystem of Blockchains that are specifically meant for this purpose. Some Blockchains working on this specific use case are Polkadot, Cosmos, Injective etc.</p>
+<p>In a nutshell, this problem by and large remains unsolved and there is a lot of scope to build here. So if you are planning to nail this pressing issue, its time you get started.</p>
+<h2>C. Scalability:</h2>
+<p>This is a very complicated problem of the Blockchain technology and a big hindrance in web 3 adoption. This problem surfaced for the first time back in 2016 when a game called 'Crypto Kitties' went viral.</p>
+<p>The game involved breeding some kittens, raising them, exchanging them with peers. All of this was happening on the Blockchain. However, one fine day the game became so popular that Ethereum network was choked. Gas fee (transaction fees) hit the roof and it became too expensive to play the game.</p>
+<p>This sparked the conversation around problems in web 3 leading to scalability issues. In fact, the Ethereum co-founder, Vitalik Buterin came up with a scalability trilemma.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/02/image-9.png" /></p>
+<p>Scalability trilemma says that out of security, decentralization and scalability, only two aspects can be chosen at a given point in time.</p>
+<p>To solve this, many blockchains evolved as L2 or layer 2 solution for Ethereum. Broadly speaking, this means that all the intermediary transactions happen on these L2 Blockchains while the final transaction is submitted to Ethereum. This helps in off loading the main Blockchain (Ethereum), keeping things in control.</p>
+<p>But this comes at a cost. While Polygon is scalable and secure, it is not as decentralized as Ethereum.</p>
+<p>Similarly, many other Blockchains have evolved that tout themselves as ETH killers. Examples of these Blockchains are Solana, Avalanche, Terra, Binance Smart Chain etc.</p>
+<p>However, each of these blockchains give up one or the other aspect in order to achieve scale.</p>
+<p>We recently came across a Blockchain named 'Shardeum' that claims to have solved for the 'scalability trilemma'. But it is too early to comment on it as of now.</p>
+<h2>D. UI/UX</h2>
+<p>For the uninitiated, UI stands for user interface and UX stands for user experience. One thing that web 2 companies like Facebook and Google did was focus heavily on these aspects. Which is why they have some top notch products. These products are built in such a way that user journey is as smooth as possible. There is no resistance or barriers to adoption.</p>
+<p>Here is a good way to understand this. When you (or your parents for that matter) started using Facebook for the first time, did you need any kind of hand-holding? You figured your way around right?</p>
+<p>Now compare this with web 3 counterparts. You might have to check out a video or a tutorial to set up your Metamask wallet. Alternatively, a friend of yours might have volunteered to show you around and do a couple of transactions in web 3 space.</p>
+<p><img alt="" src="https://miro.medium.com/max/555/1*FjSkfan-Kh3vrgtlW8UP_g.png" /></p>
+<p>The point we are trying to drive home is that user experience comes at a much later stage of development life cycle. Currently, focus of web 3 is to build working products which maintain the theme of decentralization. There is little focus on how users interact with them.</p>
+<p>Here is an example: for using a decentralized exchange one may have to buy a crypto on a centralized exchange and then withdraw it to a decentralized exchange using his public key. He can then swap this recently withdrawn crypto with some other crypto present on the exchange.</p>
+<p>All of this is happening while he pays fees for each step.</p>
+<p>We see it is a major roadblock in web 3 adoption. Solutions that will try to solve this problem are going to change this industry for good.</p>
+<h2>E. Education:</h2>
+<p>Another missing piece of the web 3 puzzle is education. There is a lot of ground to cover in this space. Web 3 is not just a technological innovation. It is a movement, an ideology of sorts. There are very rare people who understand this and approach web 3 teaching from this lens.</p>
+<p>While there are multiple sources available to learn web 3, there are very few which are well structured and impart genuine knowledge that can add value to your crypto journey.</p>
+<p>Some Indian exchanges like CoinDCX are trying to solve this problem through incentivizing community to spread knowledge about crypto.</p>
+<h2>F. Regulation</h2>
+<p>Last but not the least, regulation is a grey area when it comes to web 3. We have a whole variety of approaches involved here. Some countries like El-Salvador have accepted BTC as a legal tender. Whereas some countries are taking things a little slow by trying to regulate web 3 space.</p>
+<p><img alt="" src="https://media2.giphy.com/media/xT5LMpwRdyRjlBlOko/giphy.gif" /></p>
+<p>There are others like China which have imposed an outright ban on crypto space.</p>
+<p>While the grey area around regulation subsides, it will be interesting to see the developments in this space.</p>
+<p>As a matter of fact, a total ban can be imposed but can never be executed.</p>
+<p>That is the power of a decentralized network. It is independent of any one individual or community.</p>
+<h2>What's in it for me?</h2>
+<p>The whole intention behind this blogpost was to cover some key problems in web 3. Idea is not whine about them, but to get motivated to solve one of these pressing issues. Whosoever is able to solve this problem for real, would unlock massive wealth for themselves and the community.</p>
+<p>Are you going to be the one?</p>
+<p>https://www.instagram.com/p/CaZjnI3P1Gn/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

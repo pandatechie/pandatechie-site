@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Days of Blogging: First Step of a Lifetime Journey | Raghav</title>
+<meta name="description" content="Today marks a special day for me. They say a habit takes 21 days to form. Later, I read online that most people quit a new venture within 100 days. And personal…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">100 Days of Blogging: First Step of a Lifetime Journey</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-21</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-21 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-ar_post-4042.jpg?1546633214" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Today marks a special day for me. They say a <strong>habit</strong> takes <strong>21 days</strong> to form. Later, I read online that most people <strong>quit a new venture within 100 days</strong>. And personally, I don't care if someone extends the timeline of this so called <strong>'test' to a lifetime</strong>. This hobby is here to stay. From no prior professional writing experience to writing <strong>64,266 words in these 100 days</strong>, life has definitely taken a new turn. So, today, its all about my <strong>blogging inspiration, experience, impact</strong> and <strong>results</strong>.</p>
+<p><em><Khushi ke aansu time></em></p>
+<p>My blogging journey began on <strong>13th October 2020</strong>. After a thorough research, tons of motivation and plethora of YouTube videos later, I posted my first blog on 14th October, 2020. Talk about chewing more than you can swallow, this was the most overwhelming projects of my life. And this is coming from someone who is working on the likes of recommendation engine at work.</p>
+<p>So let's quickly get started. . .</p>
+<h2>Motivation/Inspiration for Blogging:</h2>
+<p>So, pandemic hits the world and life is at a standstill. Well, it didn't bother me at all. All my college life I used to be one of those people who could stay in their 10x10 hostel room for days if not called out explicitly. So, what was <strong>lockdown for the whole world, was almost my daily routine</strong> before I started to work.</p>
+<p>Blogging didn't have anything to do with my free time and staying home in the lockdown, it was <strong>broadening of the perspective</strong> that made a difference. I was one of the lucky ones who <strong>retained</strong> the <strong>job</strong>, got a <strong>promotion</strong> and a <strong>hike</strong> in an year where people were being <strong>sacked</strong> left right and center. And that is the time I realized that lightning doesn't strike twice at the same place. <strong>I need to have a side gig</strong>.</p>
+<p><img alt="" src="https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-ar_post-4042.jpg?1546633214" /></p>
+<h3>Evaluating Options:</h3>
+<p>So there were multiple things that came to my mind. I could <strong>upskill and look for freelancing opportunities</strong> there. Therefore, for about <strong>4 months, I completed a 42 hour course on Salesforce administration</strong>. But that isn't an alternate stream of revenue? That is just an extension of my existing job.</p>
+<p>Then I thought of <strong>polishing my guitar skills</strong> (I have been playing since 2017). But once again, too much of a resistance. Also, this was <strong>something which is hard to learn online</strong>. Anything that involves a technique (cooking, running, playing any instrument) needs an in-person guidance. So that was ruled out.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/07003879-33ff-4ee5-836f-41be0622e32d-1024x466.jpg" /></p>
+<p>Finally, it struck me that <strong>I have a knack of trying out new stuff and sharing my experiences</strong> with different people. And that inquisitive nature could be of some use. Voila! Idea of <strong>blogging</strong> was born. Shoutout to my homie Atul the <a href="https://socialmaharaj.com/">Social Maharaj</a>, who guided me at each step and motivated me to jump in.</p>
+<p>From the day one, my expectations were set right. <strong>Monetization would come at a much later stage</strong>. But once you <strong>evaluate money vs something you love to do, of course the latter carries much more weightage.</strong></p>
+<p><em><Insert Kamyabi Jhakk maar ke something dialogue here></em></p>
+<h2>The Journey:</h2>
+<p>Man, it was hectic in the beginning. There was just <strong>too much to learn.</strong> Still is. But my attention span went berserk for first <strong>20-30 days</strong> I believe. I would start looking out for a solution to one problem and 15 minutes later, ended up with 25 tabs and 10 new issues.</p>
+<p>I changed my <strong>WordPress theme about 8 times</strong> just to revert back to the original one. It was a crazy time. I spent about <strong>9 hours at work and 6 hours on my blog.</strong> Soon enough I did realize that <strong>content is the key</strong> and these things can be taken care of any time. My <a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">digital wellbeing dashboard</a> says that I opened WordPress app to check out the views every 10 minutes.</p>
+<p><img alt="" src="https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/mind_blown_shutterstock_photoschmidt.jpg" /></p>
+<p><strong>30 days into the business, I diverted my focus to writing</strong>. Writing more and writing better. I started to learn more about this gigantic universe. And more I learnt, more I realized that numbers will follow. (Even without me checking on the app every now and then).</p>
+<p>And finally, I came up with a <strong>vision for my blog</strong>. A vision statement is indispensable for any brand. It helps you get back on track as soon as you digress from the mission. It reminds you what you stand for.</p>
+<h3>Vision:</h3>
+<p><strong>To help people make the most of the technology they have spent on ( or plan to).</strong></p>
+<p>If you have read my blog, that is the entire theme of technology section. You buy something or plan to buy it, research the crap out of it. Make sure there <strong>isn't a</strong> <strong>single feature of the device, application, appliance you are unaware of</strong>. It gives me immense pleasure when someone asks me, "Ye kaise kiya? (How'd you do it?)" I feel no less than a magician.</p>
+<p><strong>To help people become financially smarter and help them avoid financial pitfalls</strong></p>
+<p>And the finance section is full of articles that will help you to make <strong>smarter financial decisions</strong>. Our education system lacks the subject of <strong>personal finance</strong>. However, learning it, is not optional when it comes to real life. Therefore, I try to help people out by preventing them <a href="https://pandatechie.in/2020/11/30/personal-finance-and-its-importance/">commit blunders</a> like I did. <strong>No body should have to learn all this the hard way, like I did.</strong></p>
+<p>Intention is to present it in the simplest possible manner. <strong>No jargons, no technical terms, no out of the park</strong> examples. Uncomplicated, the way it should be.</p>
+<h2>Benefits of Blogging:</h2>
+<p>Blogging has had a tremendous impact on my life. I feel <strong>incomplete</strong> until I sit and jot down some words for the day. And of course there is a lot of merit in it. Here are some key benefits I registered after I started blogging:</p>
+<h3>1. Introduction to New Technologies/Platforms:</h3>
+<p>Yup. No prizes for guessing. Technology is my passion. Blogging introduced me to a <strong>brand new domain of tech</strong>. I learnt about <strong>Google Analytics, Adsense, Keyword Planner, likes of Ubersuggest, Moz, HARO etc</strong>. I went ahead and did a <strong>8 hour course on SEO</strong> from <a href="https://pandatechie.in/2020/11/08/what-is-linkedin-premium-and-is-it-worth-it-in-2020/">LinkedIn Learning</a>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/image-13.png" /></p>
+<p>The best part is that all this seems to be never ending. Each day I find something <strong>new</strong> to play around with. <strong>New techniques, tricks</strong> to enhance the blog traffic. And while you are doing this, you will eventually end up in helping someone looking for something on the internet. Need I say more?</p>
+<h3>2. Analysis:</h3>
+<p>While I write down what's on my mind, inadvertently I learn to organize my thoughts. That has helped me at my work as well. Being a business analyst, one of the tasks I have at my disposal is to <strong>review a problem statement from all the angles</strong>. Writing has helped me polish that trait.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/1-5.png" /></p>
+<p>I have often found myself doing a <strong>point wise analysis (listicles</strong>), ever since I started blogging. That helps <strong>formulate a clear communication</strong> which is a key skill back at work.</p>
+<h3>3. Reading:</h3>
+<p>As <a href="http://socialmaharaj.com">Socialmaharaj</a> once pointed out, blogging is not just about writing. In order to add value to other's lives, you need to upgrade yourself constantly. Therefore, <strong>there is a significant jump in my reading hours</strong> ever since I started blogging. If not reading, I'd be found watching some video on YouTube to keep up with the latest trends in tech and finance industry.</p>
+<p>Ever felt that you really want to learn more but you are just lazy? Start blogging and you won't be able to afford it any more.</p>
+<h3>4. Networking</h3>
+<p>Blogging community is really warm. They are always ready to help you out if you are stuck somewhere. I found many such people in this 100 day journey and plan grow my network further in future. As an example, my <strong>LinkedIn community grew by 100 connections</strong> in the last quarter. All these people connected with me after we read each other's work.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>Apart from that, I found solace in <a href="https://www.theblogchatter.com/">blogchatter</a>, a community of bloggers. There is so much to learn from some top bloggers on the site. And most of them will help you happily.</p>
+<h3>5. Better Routine</h3>
+<p>Do you also dream to wake up at 6 in the morning, work all day and end your day with a good read? Yup, I do that every day since 10th October. <strong>If you want to manage work and hobby together, this seems to be the only way.</strong> And if you are a Punjabi, your father would be so proud. All they want is their kids to wake up <em>Satti Savere</em> (early morning, when it's still dark)</p>
+<h2>Results:</h2>
+<p>Finally, the moment of truth. Where is <a href="https://pandatechie.in/">pandatechie</a> standing today after all this? Here are some key facts and figures that you might be interested in:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/Media-Kit-2.png" /></p>
+<p><strong>But as Shakespeare never said, "What is there in numbers?"</strong></p>
+<p>The <strong>real impact</strong> lies in <strong>influencing</strong> and <strong>helping</strong> the community <strong>for</strong> <strong>good</strong>. And trust me, I never thought my blog would be able to do that. However, some people were so kind to drop a feedback and this was the <strong>biggest motivation</strong> I could've asked for.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/sc1-3.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/sc2-3.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/sc3-2.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/sc4-2.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/sc5-1.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/sc6-1.png" /></li>
+</ul>
+<h2>And Finally:</h2>
+<p>Do I know all about blogging world and have this sorted? Not even close. Will I ever reach there? Hell Yeah! And then there's this old saying that encourages you to <strong>enjoy the journey rather than the destination</strong>. Well, I am sort of living it, at the moment. We will meet again with a similar blog when I celebrate my blog's first birthday. Finally, I would like to quote a line from Papon's Ghazal</p>
+<p><strong><em>"niyyat-e-shauq bhar na jaa.e kahīñ</em>" (May the desire of passion never reach satiation)</strong></p>
+<p>And this is what I aspire for. . .</p>
+<p>Until Next Time. . .</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

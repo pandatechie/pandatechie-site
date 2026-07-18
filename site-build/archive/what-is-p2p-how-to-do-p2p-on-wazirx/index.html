@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is P2P? How to do P2P on WazirX? | Raghav</title>
+<meta name="description" content="Did you know that back in early 2018, Indian government banned all transactions from banks to crypto exchanges. This meant that you could not transfer any form …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is P2P? How to do P2P on WazirX?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-01-29</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-01-29 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2022/01/image-14.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Did you know that back in early 2018, Indian government banned all transactions from banks to crypto exchanges. This meant that you could not transfer any form of fiat to your crypto exchange account in order to buy crypto. Despite that crypto industry managed to thrive until early 2019 when Supreme Court ruling lifted this ban for once and all.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/01/image-14.png" /></p>
+<p>But how did people buy and sell crypto using fiat back then? Well, that's primarily the topic of the day. We're going to talk about P2P transactions and how to do one using <a href="https://wazirx.com/">WazirX</a>. God forbids, if something of this sort were to happen, this is going to be your best bet to trade cryptos.</p>
+<h2>What is P2P?</h2>
+<p>As the name suggests, P2P or peer to peer is a method of exchanging assets between two parties directly. It’s like saying, that you pay me $36,000 and I give you 1 BTC in return. It is the go to method of converting your fiat into crypto for no cost whatsoever. In a P2P transaction you send money directly to the bank account of the person who is selling the crypto.</p>
+<h2>Benefits of P2P Transaction:</h2>
+<p>While it may not be as simple as buying a crypto using markets listed in the exchange itself, but it still has some inherent benefits over it. Let's discuss:</p>
+<h3>A. Free:</h3>
+<p><img alt="" src="https://media3.giphy.com/media/2D8g2rXcWx1DO/giphy.gif" /></p>
+<p>Unlike the exchange transactions that involve a maker and taker fee for buying crypto assets, P2P transactions are absolutely free. You are literally paying someone directly in exchange of assets.</p>
+<h3>B. Secure:</h3>
+<p>I know, I know! Let's address the elephant in the room. If you are dealing with the seller/buyer directly, who is going to ensure that transaction is fraud-proof? What if the buyer/seller runs away with my funds?</p>
+<p><img alt="" src="https://media2.giphy.com/media/X68QCGb5qx596/giphy.gif" /></p>
+<p>That's where the exchange kicks in. WazirX acts as an escrow in this case where crypto is locked from the seller's end as soon as you proceed to make the payment. Once the payment is made and seller confirms the reception of the funds, crypto is released to you.</p>
+<h3>C. Hedge against Regulations:</h3>
+<p>Banks have traditionally set their own norms and forced citizens to abide by it. Imagine it's your money and you cannot chose to send it to the person/organization of your choice. P2P by-passes such nuisance by allowing bank holders to transact with each other directly.</p>
+<h2>Downsides of P2P:</h2>
+<p>Well, before you jump in right away, there are some obvious negatives of dealing in P2P too. Being a responsible investor/trader, let's talk about it quickly:</p>
+<h3>A. Speed:</h3>
+<p>P2P transactions are slower than exchange swaps for obvious reasons. There is due diligence involved at every step. Therefore, even in the best cases, you would receive your assets or funds in no less than 5 odd minutes. This might not be much for someone who's buying or selling for long term. But for traders, this is absolutely unacceptable.</p>
+<p><img alt="" src="https://media2.giphy.com/media/3og0INAY5MLmEBubyU/giphy.gif" /></p>
+<h3>B. Frauds:</h3>
+<p>While the escrow (WazirX) tries it's best to educate people on how to do P2P transactions, there are cases where people become victims of online scams.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/01/image-13.png" /></p>
+<p>Once, one of my community members was stuck in an extremely unfortunate scam. He did everything right. However, when he released the crypto in return of money in his bank account, the buyer raised a fraudulent transaction request with the bank. All his money was then withdrawn. He did raise it to his bank but nothing happened as no body entertains crypto related transactions.</p>
+<h2>How to do P2P on WazirX?</h2>
+<p>As mentioned it is extremely important to understand the nitty gritty of a P2P transaction before doing one. So here goes a step by step guide to do a P2P transaction on WazirX. While the process of doing P2P is pretty similar on mobile and web, I would be using the web version to demo.</p>
+<h3>Step 1: Select the P2P Tab</h3>
+<p>Choose the P2P option from the tab as shown in the screenshot below. Currently you can only buy stablecoin USDT through P2P on WazirX exchange. On the left, you see the current price of last 10 orders of USDT. For the uninitiated, USDT is a <a href="https://pandatechie.in/2021/10/24/what-is-stablecoin-types-of-stablecoin-and-uses/">stablecoin</a> which is pegged to a dollar.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/01/image-10-1024x477.png" /></p>
+<h3>Step 2: Decide the Amount</h3>
+<p>Enter the amount of USDT you want to purchase. You can either enter it in the form of USDT or INR.</p>
+<p><em>Please note:</em> <em>The minimum purchase amount for USDT is 15 USD.</em></p>
+<p>At this point you can also select a preferred seller. This is applicable if you have been used P2P for a while now and trust a specific user.</p>
+<p>Also, you can select the price at which you want to purchase USDT.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/01/image-11.png" /></p>
+<p>Once you tap on buy, WazirX matches your price with all the sellers, and sends you a mail if the price is matched.</p>
+<h3>Step 3: Payment</h3>
+<p>Once you get the notification on email for the price match, there is a set timer of 15 minutes within which payment has to be made.</p>
+<p>Post that there are no surprises for guessing the next steps. It's all about moolah from there on.</p>
+<p>If you don't pay within 15 minutes your order would be cancelled.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/01/image-12.png" /></p>
+<h2>Conclusion:</h2>
+<p>Now that you have a fair idea of an alternate way to buy crypto, what are you waiting for? Go P2P away! If you're stuck somewhere and need help, hmu!</p>
+<p>https://www.instagram.com/p/CZPYExQPch5/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

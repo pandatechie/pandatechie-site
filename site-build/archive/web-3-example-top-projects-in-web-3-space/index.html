@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web 3 Example: Top Projects in Web 3 space | Raghav</title>
+<meta name="description" content="We have been talking about [web 3](https://nasacademy.com/blog/article/what-is-web-3) and where to learn web 3 from for a while now. While all of us clearly und…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Web 3 Example: Top Projects in Web 3 space</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-02-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-02-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://assets.weforum.org/article/image/0R7BdnZl_gyeWOKsudAVmI7gNR673V4BIxQM6gwT-FY.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>We have been talking about <a href="https://nasacademy.com/blog/article/what-is-web-3">web 3</a> and where to learn web 3 from for a while now. While all of us clearly understand the ethos of web 3 and are in line with this next incarnation of the internet. There is definitely a requirement to dig deeper to understand with the help of web 3 example projects. These projects would not only strengthen your understanding of web 3 but also help you in demarcating the web 2 and web 3 business models.</p>
+<p><img alt="" src="https://assets.weforum.org/article/image/0R7BdnZl_gyeWOKsudAVmI7gNR673V4BIxQM6gwT-FY.png" /></p>
+<p>Web 3 is all about ownership and data privacy. The genesis of web 3 is the fact that big tech is monetizing our data and attention. We are the product in the entire social media ecosystem. However, with rising concerns over data privacy many new age companies have stepped and created innovative revenue generation models. These models do not rely on monetizing the user data or attention. So today, we are going to learn about some projects that are created ripples in the internet space by causing this disruption.</p>
+<h2>A. Brave Browser:</h2>
+<p>Privacy and snooping is just one aspect of ad based revenue models. There are some other concerns in this conventional way of earning money. Let us discuss them in detail:</p>
+<h3>A.1: Monetary Cost:</h3>
+<p>Unlike the popular belief, advertisements have hidden costs involved with them. Yes. Third party apps and trackers consume up to 50% of your mobile data. This means you have to pay your service provider more money to get a plan with higher data usage quota.</p>
+<h3>A.2: Time Cost:</h3>
+<p>Web pages are designed in a way that advertisements load before the content itself. Therefore you are wasting a significant amount of time with each browsing session. This does NOT account for the fact if you get carried away by an advertisement and completely miss what you were originally set out to do.</p>
+<h3>A.3: Battery:</h3>
+<p>Since every session now leads to more data and time consumption, there is a direct correlation with the battery life of your device. Research says that this can impact up to 20% of your total battery life. Your phone is unable to operate at its full power capacity because of these advertisements.</p>
+<h3>Enter--Brave Browser:</h3>
+<p>Brave browser was developed by Brian Bondy and Brenden Eich. It is a web and mobile based brower. Brian has been a former employee of Khan Academy and Mozilla and Eich created Javascript and co-founded Mozilla. This validates the fact that these gentlemen know what they are up to.</p>
+<p>Brave is a fast, privacy first and free to use web browser based on the Blockchain technology. It aims to reinvent the entire ad ecosystem by impacting its core pillars like users, advertisers and content creators.</p>
+<p>Brave browser is 3x faster than conventional browsers as it has an in built ad blocker.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/02/image-6.png" /></p>
+<h4>How does Conventional Advertising Work?</h4>
+<p>For appreciating the model deployed by Brave browser, let us understand how any web 2 company operates in this space.</p>
+<p>A content creator works hard to push out a piece of content. This can be image, video, blog etc.</p>
+<p>Then this creator piggy backs on the network effects of a platform to distribute this content.</p>
+<p>As more and more people hop on to the platform for content like this, platform gets brand deals. Brands pay $$ to the platform which in turn shares a piece of that pie with you as a content creator because ads were integrated with your piece.</p>
+<p>Your content was the hook to stay on the platform.</p>
+<p>Some key problems that are emerging from this model are:</p>
+<ul>
+<li>User experience for a viewer is ruined. Let us be honest. No body likes ads.</li>
+<li>Some users use ad blocker which slashes the revenue for both creator and platform.</li>
+<li>If user clicks on the ad, he is not incentivized for paying attention.</li>
+</ul>
+<h4>Brave Advertising Model:</h4>
+<p>Unlike Google and Facebook which invade your privacy in the name of targeted advertisement, Brave approaches this by tracking user attention and engagement in real time. They track what tabs are you working on and how you are interacting with each of them. This data is not sent back to some centralized server.</p>
+<p>This enables Brave to learn what kind of ads need to be shown basis your consumption pattern. So as a user, you only get served by the ads that are related to the content you are browsing.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/02/image-7.png" /></p>
+<p>This doesn't end here. Users are also paid for paying attention. This happens in the form of native cryptocurrency of the platform called 'Basic Attention Token or BAT'.</p>
+<p>Now brands would reach out to the content creator directly instead of routing it through a platform like Google or Facebook. They would pay the creator in the form of BAT to run ads.</p>
+<p>In a nutshell, the brand gets targeted advertising using the browsing patterns.</p>
+<p>Creators get incentivized to create engaging content. <br />
+Users get incentivized to watch that content.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/02/image-8.png" /></p>
+<h2>B. Chingari:</h2>
+<p>Tiktok is a globally famous short form video content platform. India recently banned Tiktok over its data snooping tendencies. This gave rise to multiple platforms facilitating short form video content. One such platform was Chingari. After establishing itself in this segment, Chingari recently decided to pivot to web 3 completely. They came up with a token called $GARI and got rid of advertisements on its platform completely.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/02/image-12.png" /></p>
+<p>But then how is the company making money? That is where web 3 example kicks in. Let us explore the innovations around it:</p>
+<ol>
+<li>
+<p>All creators are incentivized to make videos, in the form of $GARI token. This means instant gratification for creators. The more they create, more they earn.</p>
+</li>
+<li>
+<p>Each short form of the video can be minted into an NFT and this could be listed on the platform for sale. As a viewer, you could buy these NFTs to support your favorite artists and hence participate actively in the ecosystem rather than pointless likes and comments.</p>
+</li>
+<li>
+<p>Chingari plans to enable the platform for creators to raise money. Creators could sell the rights to their future work to access money now. They could buy better equipment etc. to level up their creation game. Users also have an opportunity to take part in the creator's success by investing money in their future.</p>
+</li>
+<li>
+<p>There are multiple other use cases for $GARI tokens within the ecosystem like tips, donations etc. The possibilities are endless.</p>
+</li>
+<li>
+<p>Right at the heart of this model, $GARI is charging a certain amount of $GARI as transaction fee to facilitate these transactions. That is how they are making money. The entire ecosystem is built on Solana blockchain.</p>
+</li>
+</ol>
+<h2>C. Filecoin:</h2>
+<p>Do you know where does maximum revenue of Amazon is coming from? They have a business arm called AWS or Amazon Web Services. AWS is in the business of selling storage to corporates to run their databases. This storage is centralized and a lot of key players use it for hosting their websites.</p>
+<p>If we apply web 3 principals to this business model, there is a requirement to decentralize storage as well. That is what Filecoin does.</p>
+<p>Think of Filecoin as AirBNB of storage. If you have some empty storage in your computer's hard drive, you could actually rent it out and earn money from it.</p>
+<p><img alt="" src="https://docs.filecoin.io/assets/img/what-is-filecoin-diagram.c07b6058.png" /></p>
+<p>Here's what there website says about them:</p>
+<blockquote>
+<p>"Filecoin combines with IPFS, a peer-to-peer distributed network protocol, to make a more efficient and secure web free from corporate control.</p>
+<p>The Filecoin network achieves staggering economies of scale by allowing anyone to participate as a storage provider and compete for your business."</p>
+</blockquote>
+<h2>D. Theta Network:</h2>
+<p>Now that web 3 has tried to spread its wings by disrupting every industry, why should video streaming be any different? Theta is a blockchain network designed specifically to power video streaming. The genesis is rather simple. Currently, cost of video storage is going up and is likely to increase in the near future with technologies like 4K and 8K becoming mainstream.</p>
+<p><img alt="" src="https://i.ytimg.com/vi/OQR7GVoV-24/maxresdefault.jpg" /></p>
+<p>To tackle that, Theta operates decentralized network in which users share bandwidth and computing resources on a peer--to--peer basis. The project is advocated by Steve Chen, co--founder of YouTube and Justin Kan, co--founder of Twitch.</p>
+<p>This project is likely to change the streaming industry for good. The industry is centralized and the infrastructure cost is high right now. Users often end up with poor experience which involves advertisements and content creators are also not compensated adequately.</p>
+<p>Theta’s main business concept is to decentralize video streaming, data delivery and edge computing, making it more efficient, cost-effective and fair for industry participants.</p>
+<h2>Conclusion</h2>
+<p>Web3 seems to be the latest avatar of the internet and is probably here to stay. Do you think it is fair to ignore these developments and believe they aren't going to impact us? Well, if you believe so, my best wishes. For the rest of us #WAGMI</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

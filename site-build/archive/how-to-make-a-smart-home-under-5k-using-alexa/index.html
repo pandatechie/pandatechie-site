@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to make a smart home under 5k using Alexa | Raghav</title>
+<meta name="description" content="What looked like a dream while watching iron man and his Jarvis a few years ago, is slowly becoming a reality for most of us. Lately, market has been flooded by…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to make a smart home under 5k using Alexa</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-10-30</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-10-30 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/10/bb45b908-c702-4c2e-9c5e-f7e9584a3623.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>What looked like a <strong>dream</strong> while watching <strong>iron man</strong> and his <strong><em>Jarvis</em></strong> a few years ago, is slowly becoming a reality for most of us. Lately, market has been flooded by the likes of <strong>Amazon Echo Dot</strong> and <strong>Google Home</strong>. Being a strong believer of using the maximum <strong>potential</strong> of tech <strong>gadgets</strong>, here is how I made <strong>my home, a smart home under 5k.</strong></p>
+<h2>Amazon Echo Dot a.k.a Alexa:</h2>
+<p><a href="https://www.amazon.in/dp/B084DWH53T/ref=s9_acsd_al_bw_c2_x_0_i?pf_rd_m=A1K21FY43GMZF8&amp;pf_rd_s=merchandised-search-4&amp;pf_rd_r=69QZ47JRH4H249RSFC1A&amp;pf_rd_t=101&amp;pf_rd_p=dc60809f-d171-431e-be1b-19a1650fc411&amp;pf_rd_i=14156834031">Alexa</a>, that once helped me <a href="https://pandatechie.in/2020/10/21/top-use-case-of-amazon-echo/">search for my missing wife</a>, can also do something which is less intense, but way cooler: <strong>making your home, a smart home</strong>. It costs <strong>4.5k approximately</strong> on a <strong>regular</strong> day but in a typical prime day sale (happens twice an year I guess) it costs you just <strong>2,300</strong> to own an <strong>Echo Dot</strong> along with a <strong>compatible smart bulb</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/bb45b908-c702-4c2e-9c5e-f7e9584a3623.jpg" /></p>
+<p>Alexa, listening to husbands more than their wives, since forever!</p>
+<p>Once you own an echo dot, there are tons of <a href="https://pandatechie.in/category/lifestyle/">use cases</a> you can come up with. Undoubtedly, having a personal Jarvis tops that list.</p>
+<h2>Smart Bulb:</h2>
+<p>As mentioned above, I got a free <a href="https://www.amazon.in/12-Watt-Enabled-Compatible-Assistant-SSK-SMW-12W-5C/dp/B08BKWMBBJ/ref=sr_1_5_mod_primary_lightning_deal?crid=MTOCLGD1DS7B&amp;dchild=1&amp;keywords=syska+smart+led+bulb&amp;qid=1604024379&amp;sbo=Tc8eqSFhUl4VwMzbE4fw%2Fw%3D%3D&amp;smid=AT95IG9ONZD7S&amp;sprefix=syska+smart+%2Caps%2C308&amp;sr=8-5">Syska Smart</a> bulb which otherwise costs about <strong>Rs. 650</strong>, if purchased separately. Apart from the basic function of switching on and off using voice, a couple of amazing features it offers are:</p>
+<ul>
+<li>
+<p>Ability to <strong>set a brightness level</strong> ranging from 1% to 100%. This way I could use the same light as <strong>night light</strong> by dimming it down as per my requirement.</p>
+</li>
+<li>
+<p>It has a whole <strong>spectrum of colors</strong> to offer. Often, my <strong>three year old niece</strong>, would <strong>use it to memorize different color</strong>s. Learning couldn't be more fun for a kid.</p>
+</li>
+<li>
+<p>I could now set an <strong>Alexa routine</strong> involving the bulb. As an example, triggering the keyword: "<strong>Good Night Alexa</strong>" would set the <strong>brightness to 5%</strong>, change the <strong>color</strong> of the light to <strong>blue</strong> and will start playing some <strong>sleepy music</strong>.</p>
+</li>
+<li>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/83dcc563-cd0c-4893-adf4-884ab2203f9e-492x1024.jpg" /></p>
+</li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/SYSKA-SSK-SMW-9W-Smart-Lights-491600459-i-1-1200Wx1200H.jpg" /></li>
+</ul>
+<p>My Alexa Routine (L) Syska LED Bulb (R)</p>
+<h2>Universal Remote Control:</h2>
+<p>I purchased this <a href="https://www.amazon.in/Zoook-Clicker-Universal-Conditioner-Theatre/dp/B0847KMDJ4/ref=sr_1_3_mod_primary_lightning_deal?dchild=1&amp;keywords=zoook+universal+remote+control&amp;qid=1604024864&amp;sbo=Tc8eqSFhUl4VwMzbE4fw%2Fw%3D%3D&amp;smid=A14CZOWI0VEHLG&amp;sr=8-3">universal remote control</a> device from a brand called <strong>Zook</strong>. Again from an Amazon prime day sale and it <strong>costed</strong> me <strong>1k.</strong> A universal remote control can actually <strong>convert any non smart appliance</strong> to a <strong>smart one</strong> provided it is controlled by an infrared remote (which generally is the case with all the devices).</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/51Pl2zg1qcL._SL1500_-1024x1024.jpg" /></p>
+<p>Zook Universal Remote Control</p>
+<p>Remember our <strong>Nokia phones</strong> and <strong>older Samsung</strong> phones had this capability of <strong>controlling our TV</strong>? In principal, Zook universal remote using the same <strong>IR blaster</strong> technology to communicate with our devices (<strong>AC, TV, Set top box</strong>). Just that instead of a <strong>physical button</strong>, it takes <strong>commands from Alexa over the internet</strong>.</p>
+<p>I can now simply ask <strong>Alexa to turn my TV, AC set top box on and off</strong>. Also, there is a possibility of <strong>changing channels</strong> using voice. Imagine a hot summer day and you have been drenching in sweat for so long now. How cool would it be to <strong>turn on your AC even before you reach home</strong>? And please tell me its not just me who has to <strong>search for the remote every damn time I need it</strong>.</p>
+<h2>Smart Plug:</h2>
+<p>This has the capability of making <strong>any electrically powered wired device</strong> as a smart one. There are <strong>multiple options</strong> to choose from, in this space. You can actually go with an entire smart power strip from Belkin. However I purchased a <a href="https://www.reliancedigital.in/syska-wi-fi-smart-plug-for-small-appliances-10a-compatible-with-alexa-google-assistant/p/491600477?gclid=CjwKCAjw0On8BRAgEiwAincsHJYmolvRMmTtkFDVF0gCZ7E2Ce-whro3uQAi8XuDUir1wBlnfu4vJRoCdyoQAvD_BwE">Syska smart plug</a> from Amazon that costed me Rs. 899.</p>
+<p><img alt="" src="https://www.reliancedigital.in/medias/SYSKA-SSK-MWP002-Smart-Plugs-491600477-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w4OTc3MXxpbWFnZS9qcGVnfGltYWdlcy9oMGYvaGI5LzkzMTg2OTQ1MTg4MTQuanBnfDZkNWMxM2ZkYTgxMWQ1MDY3MWZiZTdlNDg4YzNlODAwMzA3M2NiNGQ4YTc2NDQ5NDQ0NDkxZWIzMTk0NDkxOGY" /></p>
+<p>Syska Smart Plug</p>
+<p>So lets be real. Our <strong>dads have terrorized us so much about the battery exploding</strong> in case we leave our phones charging overnight. I actually believe it now. This plug has the <strong>ability to go off after a particular timer that you set</strong>. Sigh! Also, my wife has this <strong>anxiety kicking in as soon as we leave the house</strong>. She tends to question herself regarding every appliance. A smart plug takes care of that too! (<strong>I still wish that someone would make a smart gas stove some day though</strong>)</p>
+<h2>Conclusion:</h2>
+<p>For a tech loving kid, this has not been less than a <strong>dream come true</strong>. Who doesn't want to be the real life <strong>iron man (well, almost)</strong>.</p>
+<p>On the setting up of these devices, <strong>I'd rate them a 6/10</strong> and I believe if you plan to purchase it for your <strong>parents, you may want to set it up for them.</strong></p>
+<p>With that being said, my experience with these devices has not been that rosy after all. There are <strong>some glitches every now and then</strong> which I believe will get <strong>resolved with new updates</strong> coming in. Common hiccups include these devices <strong>not listening to you</strong> at times. Or may be <strong>Alexa prompting <em>'okay'</em></strong> after your command but <strong>still ignoring</strong> it. In totality, I think <strong>we are on the right track</strong> when it comes to <strong>home automation</strong> for upper middle class. Making a smart home under 5k, was never real before this!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

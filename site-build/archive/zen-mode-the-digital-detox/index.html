@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen Mode: The perfect ingridient for a perfect dinner | Raghav</title>
+<meta name="description" content="Hey, why wouldn't you keep your phone aside even while having dinner?
+
+ -Almost everyone, I have dinner with
+
+I am sure this rings a bell for most of us. The [s…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Zen Mode: The perfect ingridient for a perfect dinner</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-10-31</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-10-31 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/10/21569e0d-1f23-487d-bae8-ac7e69afb8d0.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<blockquote>
+<p>Hey, why wouldn't you keep your phone aside even while having dinner?</p>
+<p><em>-Almost everyone, I have dinner with</em></p>
+</blockquote>
+<p>I am sure this rings a bell for most of us. The <a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">screen zombies</a> we are turning into, it is getting harder each day, to adhere to your personal <a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">digital wellbeing</a> norms. Constantly glued to news or social media (or whatever your nicotine is), we all have to agree that we have <strong>stopped living in the moment</strong>.</p>
+<p>Handset manufacturers across the world are trying to <strong>help its users to overcome</strong> this menace, or at least, <strong>strike a balance</strong>. One such attempt was made by <a href="https://www.oneplus.in/">Oneplus</a> with the launch of <strong>Oneplus 7 Pro</strong>. <strong>Zen Mode</strong>, is a digital well being tool that can enables you to disconnect with a no return option. Let's explore it step by step:</p>
+<h2>What is Zen?</h2>
+<p>Even before jumping into <strong>Zen mode</strong>, lets understand what is <strong>Zen</strong>? I'll make it super easy for you. Imagine yourself in a spa. <strong>Aroma of essentials oil</strong> (say lemongrass) is pleasing your senses. There is this <strong>ambient instrumental music</strong> working on some other senses. And of course you are feeling <strong>super relieved</strong>, <strong>stress free</strong> and <strong>relaxed</strong>. Yup, that's what Zen is. It is a state of <strong>peace</strong> and <strong>mindfulness</strong>.</p>
+<h2>Zen Mode and its features:</h2>
+<p>Zen mode is a feature of devices running on <strong>oxygen 9</strong> and above. Some amazing features of this mode are as follows:</p>
+<ul>
+<li>Once the Zen mode is enabled, you cannot cancel it.</li>
+<li>All incoming notifications are muted during this time.</li>
+<li>You can still receive phone calls and make emergency calls only.</li>
+<li>
+<p>All apps are locked during this period except for the camera (I wonder why camera is left out).</p>
+</li>
+<li>
+<p><img alt="Zen Mode in Notifications Panel" src="https://pandatechie.in/wp-content/uploads/2020/10/21569e0d-1f23-487d-bae8-ac7e69afb8d0.jpg" /></p>
+</li>
+</ul>
+<p>Zen Mode in Notifications Panel
+* <img alt="Zen Mode" src="https://pandatechie.in/wp-content/uploads/2020/10/cf991bbf-5447-4c2b-a49f-fc15a10c2339.jpg" /></p>
+<p>Zen Mode</p>
+<p>Enabling Zen Mode (L)</p>
+<p>You can enable the Zen mode from <strong>notification pane</strong>l. Then pick a duration ranging from <strong>1 minute to 120 minutes</strong>. Phone will give you a <strong>disclaimer</strong> before proceeding, highlighting above features, and voila! Time to <strong>disconnect</strong>. Once enabled, there is nothing at all you can do with your phone. I tried <strong>turning it off and back on</strong> in the Zen mode but that doesn't help either. It is a strict enforcement of discipline.</p>
+<h2>1. Group Zen Mode:</h2>
+<p>You and your friends/spouse can enable group <strong>Zen Mode</strong> so that you can <strong>disconnect together</strong>. Pretty handy right? All you need to do is:</p>
+<ul>
+<li>Toggle to the group mode as shown below.</li>
+<li>You may create a room or join a room created by your partner.</li>
+<li>Enter the 6 digit auto generated "Room Code" available with the creator of the room, if you are the joinee.</li>
+</ul>
+<p>And boom! Back to real life.</p>
+<ul>
+<li><img alt="Group Zen Mode Toggle" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201031-201237-1-493x1024.jpg" /></li>
+</ul>
+<p>Group Zen Mode Toggle
+* <img alt="Searching for Partners" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201031-195502-473x1024.jpg" /></p>
+<p>Searching for Partners</p>
+<h2>2. ZEN MODE Profile:</h2>
+<p>You can track your history in this section. There are some key metrics like</p>
+<ul>
+<li>Total "Zen Time"</li>
+<li>Number of times you have done this.</li>
+<li>Number of total days you have done this.</li>
+<li>There are certain medals you can earn along your journey to keep you motivated.</li>
+</ul>
+<p><img alt="Image showing the profile section of Zen Mode" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201031-200022-473x1024.jpg" /></p>
+<p>Key Metrics of Zen Mode Usage</p>
+<h2>3. ZEN MODE Settings:</h2>
+<p>In this section:</p>
+<ul>
+<li>You can set a <strong>daily reminder</strong> for enabling this mode at a set time.</li>
+<li>You can change the <strong>content</strong> it shows on your screen while this mode is enabled.</li>
+<li>Alternatively you can choose to remind you to use this mode when you have used phone <strong>constantly</strong> for a <strong>certain period of time</strong>.</li>
+</ul>
+<p><img alt="Image Showing settings of Zen Mode" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201031-200259-493x1024.jpg" /></p>
+<p>Zen Mode Settings</p>
+<h2>Our Dinner Time:</h2>
+<p>As mentioned above, my nicotine is <strong>news</strong>, <strong>moneycontrol</strong> app and <strong>9gag</strong>. If given a chance, I can be hooked to these apps the entire day. One fine day, while I was having dinner with my wife, she said, "<em>You work so hard to put food on the table, and when it is there, you ignore it.</em>" Those words brought up yet <a href="https://pandatechie.in/2020/10/23/unable-to-sleep-how-to-sleep-fast/">another use case</a>  of <strong>Zen Mode</strong>. Since that very day, I enable the this mode for <strong>20 minutes</strong> during every meal. No phones, no TV. Just <strong>me</strong>, <strong>food</strong> and <strong>conversations</strong> of our day so far.</p>
+<p>One such incident happened yesterday where my wife <strong>couldn't stop checking out</strong> the number of likes on the photo she had just uploaded, while we were eating in a restaurant. I politely asked for her phone and <strong>enabled the Zen Mode</strong>. End of the problem.</p>
+<h2>Conclusion:</h2>
+<p>I couldn't emphasize more on the fact that we need to disconnect from our phones regularly. This is a quick way of starting that journey. After all, technology is as good as you use it.</p>
+<p>Until Next Time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

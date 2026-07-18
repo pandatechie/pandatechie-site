@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eating Out: Ordering: Cooking Home: What Makes Sense Financially? | Raghav</title>
+<meta name="description" content="How many times do you go out to eat, in a month? What about the number of times you order from outside? It is bound to be pretty high given the growth numbers l…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Eating Out: Ordering: Cooking Home: What Makes Sense Financially?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-02-23</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-02-23 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/jpeg;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>How many times do you <strong>go out to eat</strong>, in a month? What about the number of times you <strong>order from outside</strong>? It is bound to be pretty high given the growth numbers likes of <a href="https://www.swiggy.com/">Swiggy</a> and <a href="https://www.zomato.com/mumbai">Zomato</a> are posting lately. This new year, Zomato's CEO, <strong>Deepinder Goyal</strong>, went on record and tweeted that number of peak orders jumped to a staggering <strong>4,254 orders per minute</strong>. That is a <strong>60% jump in the GMV (Gross Merchandise Value)</strong> from the previous year. Believe it or not, it is pretty much established that <strong>eating out or ordering in, is being rooted deeper into our daily lives with every passing day.</strong></p>
+<p>https://twitter.com/deepigoyal/status/1344898161483997188</p>
+<p>This phenomena is not restricted to casual foodies like me. In fact, there are <strong>restaurants</strong> <strong>targeting</strong> every <strong>niche</strong> available out there. <strong>Gourmet? Fitness Freak? Street Food?</strong> <strong>Ghar ka khana (Homemade Food)</strong>? You name it and there will be a restaurant nearby catering to your requirement. So today, I plan to dive deeper into some <strong>mathematics of home cooked meals vis-à-vis the cost of indulgence.</strong> Lets begin:</p>
+<h2>What About Me?</h2>
+<p>See, <strong>knowing that there is a problem is the first step</strong> of solving it. So, I know that <strong>I need to cut down</strong>. If you keep a record of your monthly expenditure like me, <strong>scaling down on eating out is a no brainer</strong>. However, some of us may not even realize that there's a problem. I used to <strong>order</strong> a lot (don't like going out much) in my <strong>bachelorhood</strong>. As much as at least one meal on a daily basis. When I got <strong>married</strong>, <strong>ordering</strong> came <strong>down</strong> drastically. But that was <strong>compensated</strong> by <strong>going</strong> <strong>out</strong> every other day. So, I am working on by sticking to a schedule of <strong>fixed day outs or allocating a fixed sum to it</strong>.</p>
+<p><img alt="Binge eating" src="data:image/jpeg;base64,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" /></p>
+<p>I would also go ahead and pull off the <strong>pity card</strong> here. Pandemic has crushed the hopes of millions of small business owners. Especially in the <strong>hospitality</strong> segment. So I take the <strong>onus of reviving them</strong>. Plus, my <strong>nutritionist</strong> loves me for this. Why wouldn't she? I keep on paying her every month with a hope of listening to her someday. You see, I have a lot of <strong>dependents</strong> at stake here.</p>
+<h2>Why Do People Prefer Eating Out Generally?</h2>
+<p>So, others may not have a noble rationale like mine behind ordering or eating out, but there are a few reasons I can think of:</p>
+<h3>1. Laziness:</h3>
+<p>This is probably the <strong>top</strong> <strong>reason</strong> people don't prefer cooking at home. And I tried to break it down into <strong>fragments</strong> to <strong>understand</strong> which is the most <strong>boring part of cooking</strong>. Turns out <strong>chopping the vegetables</strong> is the saddest job of all. So in case you want to consider cooking yourself, you can think of <strong>hiring a help</strong> that can accompany you with this task. It won't cost you more than <strong>Rs. 500 a month</strong> and you'd end up saving a lot. Unless you are a total sloth like me when it comes to cooking, things should work out.</p>
+<p><img alt="Sloth Sleeping" src="https://theblacknarcissus.files.wordpress.com/2020/04/sloth-header_tcm25-544723.jpg?w=584" /></p>
+<p>Me When I am asked to Cook</p>
+<h3>2. Lack of Time:</h3>
+<p>Another barrier to enter the kitchen. <strong>Cooking may not fit into your work schedule</strong>. In cities like Mumbai, one has to <strong>leave</strong> for <strong>work</strong> as early as <strong>7AM</strong> in some cases. Which is why, <strong><em>dabbawalas</em></strong> are a great hit in this culture. But that concept would still need someone to prepare meals for you. In case you are living all alone, there aren't much options available. In such a case, I'd <strong>recommend</strong> that you can <strong>cook</strong> <strong>meals</strong> for a few <strong>days</strong> to come in a <strong>single</strong> go. Then probably just <strong>reheat</strong> and go on with your life. By the way, if you <strong>don't have time for food</strong>, you may also want to <strong>reconsider your life choices</strong> and focus more on work life balance.</p>
+<p><img alt="Running Short of time" src="https://miro.medium.com/max/3600/1*jdPYY859jNK6v7D9PoOpdw.jpeg" /></p>
+<p>Another way to deal with such a situation would be to cook <strong>"Masala" or "Gravy"</strong> for a few days in <strong>bulk</strong>. Later, you can just add some <strong>vegetable</strong> to it and prepare a <strong>decent</strong> <strong>dish</strong> out of it.</p>
+<h3>3. Variety:</h3>
+<p>What's your favourite Hindi translation of the word "<strong>Foodie</strong>"? Mine is "<strong><em>Chatora</em></strong>". It describes an individual so well. So if you are one of those whose <strong>hunger depends solely on the type of dishes prepared</strong>, welcome to the club. And mind it, Swiggy picked up this point for advertising really well. Remember the campaign that says <strong><em>"Thoda Ghar se, Thoda Swiggy se"</em></strong>. That is what it all boils down to. We tend to order a <strong>starter</strong> or may be a <strong>side</strong> <strong>dish</strong> along with what's cooked at home.</p>
+<p><img alt="photo of sliced cheese on wooden surface" src="https://pandatechie.in/wp-content/uploads/2021/02/pexels-photo-4087609.jpeg" /></p>
+<h3>4. Lack of Skill:</h3>
+<p>This may be specific to some <strong>bachelors</strong> (especially boys). If you don't know how to cook, in all probability you are bound to end up ordering or going out a lot. You can <strong>alternatively</strong> <strong>hire</strong> a <strong>cook</strong> but ain't nobody got time for that right? Wrong! <strong>Turns out that hiring a maid is a much cheaper proposition as compared to eating out on a daily basis</strong>. However, I'd share my experience here. While we had a maid for <strong>all three meals</strong> when I was <strong>lived with my friends in a rented apartment</strong>, nobody bothered to bring <strong>vegetables</strong> for <strong>cooking</strong>. So, we ended up paying the <strong>salary and eating out both</strong>.Beat that!</p>
+<p><img alt="" src="https://previews.123rf.com/images/ocusfocus/ocusfocus1509/ocusfocus150900113/45948788-funny-30s-caucasian-man-holding-pan-and-household-with-pot-on-his-head-in-red-apron-at-home-kitchen-.jpg" /></p>
+<h2>Why is Eating Out Bad (Apart from Cost)?</h2>
+<h3>1. Nutrition Value:</h3>
+<p>The very reason that you don't know what is <strong>going into your food</strong>, it is very difficult to realize what <strong>constitutes</strong> your <strong>meal</strong>. An <strong>industry</strong> that <strong>thrives</strong> on your <strong>taste</strong> <strong>buds</strong> is likely to go to that <strong>extra</strong> <strong>mile</strong> to ensure that you <strong>keep</strong> <strong>coming</strong> <strong>back</strong>. In that run, they may <strong>overlook</strong> the <strong>nutritional</strong> <strong>value</strong> of the food being served. <strong>Cure Fit</strong>, a famous cloud kitchen, serves "<strong>healthy</strong>" <strong>biryani</strong>. I wonder how is that possible. I tasted it once and it tasted just like our regular biryani which raises even more doubts.</p>
+<p><img alt="photo of female hand holding a bowl of green vegetables" src="https://pandatechie.in/wp-content/uploads/2021/02/pexels-photo-4117550.jpeg" /></p>
+<h3>2. Portion Size:</h3>
+<p>There's no <strong>suitable</strong> <strong>portion</strong> <strong>size</strong> while you are eating out. It's either <strong>too much to finish</strong> (which we finish any way btw) OR, it's <strong>very less</strong>, all in the name of mindful eating. So, you have a very little control over this aspect. While <strong>Swiggy</strong> has an <strong>option</strong> of <strong>complaining</strong> for the <strong>portion</strong> <strong>size</strong>, I don't really know what further action is taken on it.</p>
+<h2>Cost Comparison:</h2>
+<p>Mathematics time. It is definitely not going to like <a href="https://pandatechie.in/2020/11/27/what-is-xirr-and-how-to-calculate-it/">XIRR</a> or <a href="https://pandatechie.in/2020/11/25/what-is-cagr/">CAGR</a> I covered a few days ago. I would cover one dish that is loved by everyone and compare the cost of relishing it from all three modes:</p>
+<h3>Rajma Chawal:</h3>
+<p>Well, if you don't like Rajma Chawal, please consult a therapist immediately.</p>
+<p><strong>Going Out:</strong> A decent restaurant will charge you about <strong>Rs. 150 for a plate of Rajma Rice</strong>. There are some outliers here and the price may vary from Rs. 120 to Rs. 250 but I am considering the average cost of a restaurant.</p>
+<p><strong>Ordering</strong>: The same range applies here too. I can see restaurants delivering from Swiggy charging up to <strong>Rs. 250</strong> as well for a bowl. However, assuming that this is going to be a daily meal for someone who won't cook at home, let's go with the lowest price of <strong>Rs. 90</strong>.</p>
+<p><img alt="" src="https://s9c2c8i7.rocketcdn.me/wp-content/uploads/2017/08/rajma-chawal-1.jpg" /></p>
+<p><strong>Cooking</strong>: A packet of Rajma costs about <strong>Rs. 99 for 500g</strong>. You would use about <strong>50g of Rajma</strong> for a meal that serves one. So, you'd use <strong>Rs. 9</strong> worth of Rajma. <strong>Onions</strong>: You'd use about <strong>one fair sized</strong> unit of it. That costs you around <strong>Rs.</strong> 5 (assuming price per KG @ 60 and per piece weight @ 10g) <strong>Masala, Gas, Electricity</strong>? Let's just double it. We reach out to a <strong>total price of Rs. 28</strong>.</p>
+<p>Rice would be <strong>90g per single serving</strong>. A good quality basmati would cost you about <strong>Rs. 200 per kg</strong>. With that, you can have a plate of rice ready under <strong>Rs. 20</strong>. So, <strong>Rs. 50 for your Rajma Chawal</strong>. Pretty decent right?</p>
+<p>So in toto, you are spending a <strong>2x</strong> when it comes to <strong>ordering</strong> and about <strong>3x</strong> while you are <strong>eating out</strong>. In short, restaurants are covering overheads <strong>like rent, salaries from your food</strong>. So you take a call.</p>
+<h2>But I'll Still Eat Outside:</h2>
+<p>Okay, I get it. You are either <strong>super rich or super lazy</strong>. You are still planning to maintain the status quo. So here are some tips to save money while you are at it.</p>
+<h3>1. Comparison:</h3>
+<p>You are not you when you are hungry. But, I suggest that you maintain that calm and <strong>compare</strong> the <strong>last mile prices</strong> when it comes to ordering from online platforms. <strong><em>*Comparison should be made</em>* with all coupon codes in place, including delivery</strong>. Also, if some restaurants offer a <strong>native app like Box8, Behrouz etc</strong>, the prices are much <strong>lower</strong> there. This is obvious as that they don't have to pay <strong>intermediary</strong> <strong>commissions</strong> to Swiggy and Zomato.</p>
+<p><img alt="food people woman summer" src="https://pandatechie.in/wp-content/uploads/2021/02/pexels-photo-4412925.jpeg" /></p>
+<h3>2. Packing Leftovers:</h3>
+<p>Do not feel ashamed while you ask the waiter to <strong>pack</strong> the leftover food. You have <strong>paid for it</strong> and you <strong>deserve</strong> to have every last bite for it. Just ask him to top that gravy for the heck of it. Okay, may be we went a little overboard there.</p>
+<h3>3. Service Tax:</h3>
+<p><strong>Service tax</strong> has been made <strong>optional</strong> by the Government since <strong>April 2017</strong>. So if your bill has an <strong>included tax of 10%</strong> under this head, you can ask the <strong>restaurant</strong> to <strong>remove</strong> it and issue a new bill. They say it is subjective on the basis of the fact weather or not you liked the service. But, I always ask for this refund.</p>
+<p><img alt="" src="https://groups.commonfloor.com/blog/wp-content/uploads/2015/01/TAX.jpg" /></p>
+<h2>Conclusion:</h2>
+<p>Food is <strong>love</strong>. And catering to some <strong>indulgence</strong> every now and then is also okay. However, one should not make it a <strong>habit</strong>. If you are craving some really good food, try following one of those <strong>step by step recipes from YouTube</strong>. Handmade food, prepared after hours of effort, <strong>hits differently on your taste buds</strong> for sure.</p>
+<p>Which side are you on?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Bitcoin Dead?: Why is it tough to replace Bitcoin? | Raghav</title>
+<meta name="description" content="Ever since humanity began, multiple human needs took different shapes. One such need was of socializing. History suggests that there hasn't been a single instan…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Is Bitcoin Dead?: Why is it tough to replace Bitcoin?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-08-16</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-08-16 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_145083527_9706409704500129_89702.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Ever since humanity began, multiple human needs took different shapes. One such need was of <strong>socializing</strong>. History suggests that there hasn't been a single instance where <strong>homo-sapiens</strong> could <strong>thrive</strong> without a <strong>society</strong>. This is <strong>engraved</strong> in our <strong>DNA</strong> so deep that at times we push <strong>logical</strong> <strong>boundaries</strong> to <strong>conform</strong> with the <strong>norms</strong> set by these very <strong>societies</strong>. As society became more complex, these <strong>norms</strong> forked and we came up with <strong>sub</strong>-<strong>communities</strong> under the common umbrella of <strong>humanity</strong>. Today, we plan to address one such <strong>community</strong> of <strong>cryptocurrencies</strong>. Specifically: <strong>Bitcoin</strong>. The burning question of the hour: <strong>Is Bitcoin Dead?</strong></p>
+<p><img alt="" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_145083527_9706409704500129_89702.jpg" /></p>
+<p>Bitcoin has turned <strong>12</strong> this year. And as they say in the crypto space, <strong>every 3 crypto months are equal to 1 year of financial world</strong>. With that logic, your beloved BTC is about <strong>48 years old</strong>. While this number is still <strong>young</strong> as compared to other <strong>asset</strong> <strong>classes</strong>, but given the heavy <strong>reliance</strong> on ever changing <strong>technology</strong>, BTC seems to be a <strong>thing of pas</strong>t for many. But I am a Bitcoin purist. I don't think that anything is going to <strong>replace</strong> Bitcoin any time soon. So today, we understand the reasons why these <strong>conversations</strong> are coming up. Also, we'd understand why <strong>BTC</strong> is going to hold the crypto throne.</p>
+<h2>Why is Bitcoin Becoming Obsolete?</h2>
+<p>Crazy world right? Using words like <strong>obsolete</strong> for something that's just a decade old is something unheard of. Let's understand why!</p>
+<p>Creators of <a href="https://pandatechie.in/2021/07/29/how-does-bitcoin-work/">Bitcoin</a> very carefully <strong>evaluated</strong> and <strong>pin</strong> <strong>pointed</strong> the <strong>flaws</strong> in the <strong>current</strong> <strong>financial</strong> <strong>system</strong>. They used <strong>blockchain</strong> <strong>technology</strong> to come up with the world's first <strong>peer to peer</strong>, <strong>public</strong>, <strong>decentralized</strong> transaction system.</p>
+<p>Imagine you have to send me Rs. 1000 through UPI. You first reach out to <strong>Google Pay</strong> and ask <strong>Google</strong> to initiate the <strong>transaction</strong> on your behalf. Your Google in turn talks to your <strong>bank</strong> saying that you have to send Rs. 1000 to me. Your <strong>bank</strong> then talks to <strong>my bank</strong>. And when my bank receives money, it has to <strong>relay</strong> that information to <strong>Google</strong> so that I can be <strong>notified</strong> of the same. That's a lot of <strong>friction</strong> and <strong>intermediaries</strong> who now have a lot of <strong>data</strong> about you and me both.</p>
+<p><img alt="" src="https://www.askcody.com/hubfs/cetralized-vs-discetralized-workplace5.png" /></p>
+<p>Bitcoin aimed to do away with all this through a system that is <strong>governing</strong> itself using <strong>technology</strong>.</p>
+<p>But unfortunately, that is it for Bitcoin. That's all it can do. <strong>A decentralized ledger</strong>. Nothing more, nothing less.</p>
+<h3>Birth of Ethereum:</h3>
+<p>A few years down the line after BTC was launched, a <strong>19 year old boy named Vitalik Buterin</strong> had this crazy idea. He thought if money can be <strong>decentralized</strong> and <strong>maintained</strong> without any <strong>intermediary</strong>, why can't everything else.</p>
+<p><img alt="" src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/03/ethereum-1.jpeg" /></p>
+<p>There is a legend that goes around that Vitalik had this idea while playing a game. In that game, he had a <strong>specific sword</strong> he used to play with. One fine day, creators of the game <strong>removed</strong> that sword. At that point he <strong>realized</strong> that we live on a <strong>mercy</strong> of set of central authorities.</p>
+<p>At that point he borrowed the <strong>technology</strong> from Bitcoin and decided to come up with a <strong>platform</strong> that would enable <strong>people</strong> to create <strong>decentralized</strong> <strong>applications</strong>. Imagine a scenario where you are <strong>connecting</strong> with <strong>driver</strong> without <strong>Uber</strong> keeping the commission.</p>
+<h3>Is Bitcoin Dead?</h3>
+<p>It's logical to think this way right? If you have <strong>replicated</strong> the <strong>technology</strong> that <strong>powers</strong> <strong>BTC</strong> and <strong>turbo</strong> <strong>charged</strong> it <strong>100x</strong>, its likely to <strong>kill</strong> <strong>bitcoin</strong>. And that's what the community is pondering over, for a while now. But I don't think it's going to be as easy as they might think. Here are a few reasons I think so:</p>
+<h2>A. Network Effect:</h2>
+<p>A few months ago, there was a lot of noise around <strong>Whatsapp's</strong> <strong>privacy</strong> <strong>policy</strong>. Remember? All of us downloaded <strong>Signal</strong> and <strong>Telegram</strong>. We were ready to boycott Whatsapp for once and all. But what happened after that? Nothing right? Why do you think this happened?</p>
+<p>When we flocked to the likes of Signal and Telegram, we found it really <strong>hard</strong> to <strong>find</strong> other people on the platform. No body wants to be on a <strong>social</strong> <strong>media</strong> <strong>platform</strong> all alone.</p>
+<p>Enter: Network effect. A situation where the <strong>value of your product, service or platform depends on the number of buyers, sellers, users who leverage it</strong>. Typically more the number of people, greater is the network effect and greater is the value created by the offering.</p>
+<p><img alt="" src="https://ryanberg.co/wp-content/uploads/2019/08/social-media-3846597_1280-1.png" /></p>
+<p>Right now Bitcoin has the most number of <strong>transactions</strong> in the <strong>cryptoverse</strong>. Every new entrant in the crypto space <strong>starts</strong> their <strong>journey</strong> with Bitcoin (at least that's what I would like to hope).</p>
+<p><img alt="" src="https://cryptopotato.com/wp-content/uploads/2021/01/BitcoinDominance-min.png" /></p>
+<p>Apart from that, <strong>dominance</strong> of <strong>Bitcoin</strong> on the crypto market by market capitalization is nearly <strong>60%</strong>. So, if someone were to <strong>topple</strong> <strong>BTC</strong> for the first place, it would take a significant effort and price surge. While that may be happening in tandem with the likes of ETH, but creating a <strong>community</strong> does take time.</p>
+<h2>B. Irrational Exuberance:</h2>
+<p>This always brings me back to the infamous quote by Steve Jobs:</p>
+<blockquote>
+<p>"People who are crazy enough to think that they can change the world are actually the ones that do!"</p>
+<p><a href="http://twitter.com/share?&amp;text=%22People%20who%20are%20crazy%20enough%20to%20think%20that%20they%20can%20change%20the%20world%20are%20actually%20the%20ones%20that%20do!%22&amp;url=https://pandatechie.in/2021/08/16/is-bitcoin-dead-why-is-it-tough-to-replace-bitcoin/">Click to Tweet</a></p>
+</blockquote>
+<p>You need a significant tinge of <strong>irrationality</strong> when you are driving the <strong>adoption</strong> of something that is <strong>challenging</strong> the <strong>status</strong> <strong>quo</strong> big time. And in case of <strong>BTC</strong>, you'd find multiple such examples where people have gone past the boundaries to prove their loyalty for BTC.</p>
+<p><img alt="" src="https://image.cnbcfm.com/api/v1/image/106805488-1606965798321-Portugal2019.jpg?v=1606968358" /></p>
+<p>In one of the example, a man named <strong>Didi Taihuttu</strong>, his <strong>wife</strong> and <strong>three</strong> <strong>kids</strong> bet on <strong>Bitcoin</strong> like no one else could. In 2017, this Dutch family liquidated all they had and put it in Bitcoin. By all, I mean the business, house, belongings, other assets, everything!</p>
+<p>I wonder if any other asset class has seen this level of craziness.</p>
+<h2>C. Big Money</h2>
+<p>No matter how much we hate it, but in order to <strong>drive an asset class</strong>, you need <strong>rich</strong> <strong>people's</strong> <strong>money</strong>. They are the ones that bring in the <strong>sums</strong> that have the <strong>potential</strong> of taking the <strong>market</strong> to the next level. In case of Bitcoin, you would find plenty of such examples:</p>
+<ul>
+<li>Elon Musk and his company Tesla</li>
+<li>Marc Cuban</li>
+<li>Kevin O' Leary</li>
+<li>Winklevoss Twins</li>
+<li>Russel Okung</li>
+</ul>
+<p><img alt="" src="https://timandjulieharris.com/wp-content/uploads/2020/02/rich-business-man.jpg" /></p>
+<p>Of course there are many such investors in other projects too, but Bitcoin has always been the first preference of anyone planning to park in crypto space.</p>
+<h2>Conclusion:</h2>
+<p>Have you started your crypto journey? If yes, where did you start it from? Well, that might just prove my point. Do you think Ethereum will overtake BTC? Is Bitcoin dead?</p>
+<p>https://www.instagram.com/p/CRI30mQr9if/</p>
+<p>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> and sponsored by <a href="https://bakezbydaizy.in/">Bakez by Daizy</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

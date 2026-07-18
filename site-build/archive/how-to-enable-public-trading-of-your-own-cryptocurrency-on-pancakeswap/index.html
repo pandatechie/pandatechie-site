@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Enable Public Trading of Your Own Cryptocurrency on Pancakeswap? | Raghav</title>
+<meta name="description" content="Disclaimer: This blogpost is in continuation to the previous blogpost that talks about how one can create their own cryptocurrency. If you haven't read that art…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span> <span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Enable Public Trading of Your Own Cryptocurrency on Pancakeswap?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-07</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-07 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/10/Automated-Market-Maker.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><em>Disclaimer: This blogpost is in continuation to the previous blogpost that talks about how one can create their own cryptocurrency. If you haven't read that article, this one is probably not meant to be read in isolation.</em></p>
+<p>With that out of the way, let's get started. Last time, we created our token called <strong>PandaToken</strong> on <strong>Binance Smart Chain</strong>. Until that point, we were able to <strong>transfer</strong> all the <strong>token supply</strong> in our <strong>Metamask</strong> <strong>Wallet</strong> and it was <strong>ready</strong> to be <strong>shared</strong> with our <strong>friends</strong> and <strong>family</strong>. From participating in <strong>petty</strong> <strong>airdrops</strong> to actually <strong>conducting</strong> one, we have come a long way in this journey. However, we want more right? We want to list it on <strong>Pancakeswap</strong> for the <strong>world</strong> to <strong>transact</strong> with our <strong>token</strong> right?</p>
+<p>That's exactly what we are going to learn today. Raise your hands if you are as excited as me. Dopamine shot is real with this one!</p>
+<h2>How Pancakeswap Works?</h2>
+<p>So any Decentralized Exchange or DEX like <strong>Uniswap</strong> or <strong>Pancakeswap</strong> is a lot different in working as compared to a <strong>centralized exchange</strong> or <strong>CEX</strong> like <strong>CoinDCX</strong>, <strong>Binance</strong> etc. You see in a CEX, there's an <strong>order book</strong> where all the <strong>open buy</strong> and <strong>sell</strong> <strong>orders</strong> are <strong>matched</strong> with each other and the <strong>exchange</strong> takes care of the <strong>asset swapping</strong>. On the other hand, in a <strong>DEX</strong>, this happens in a <strong>decentralized</strong> manner.</p>
+<p>Investors put in some assets (any cryptocurrency) in something called a liquidity pool. Later, traders come along and exchange their assets with the ones in the liquidity pool. Basic supply and demand takes care of the prices of the assets in the pool. If you wish to dive deeper in to the working of decentralized exchanges, read my blogpost on Automatic Market Maker <a href="https://pandatechie.in/2021/10/09/what-is-an-automated-market-maker-amm/">here</a>.</p>
+<p><img alt="Robot representing automated market maker" src="https://pandatechie.in/wp-content/uploads/2021/10/Automated-Market-Maker.png" /></p>
+<p>Automated Market Maker</p>
+<p>Since <strong>nobody knows</strong> about your <strong>token</strong> yet, there is no <strong>liquidity available</strong> for it in a decentralized exchange. Similarly, none of the <strong>exchanges have so far listed your token</strong>. So it is important for you to <strong>enable</strong> it's <strong>trading</strong> starting from a <strong>DEX</strong>. Let's explore how to do that on Pancakeswap in a step by step guide.</p>
+<h2>Step 1: Login and Connecting to Pancakeswap:</h2>
+<p>Go to <a href="https://pancakeswap.finance/">pancakeswap.finance</a>. On the <strong>top right corner</strong>, find an <strong>option</strong> to <strong>connect</strong> the wallet. Once you press that button, you would be shown a <strong>pop up</strong> with a variety of wallets (as shown in the image below). Select <strong>Metamask</strong> and authorize the connection from the Metamask extension when prompted.</p>
+<p>Once you are done, your Metamask wallet address should be displayed on the homepage indicating that it's connected.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-13.png" /></p>
+<p>Connecting wallet to Pancakeswap.finance</p>
+<h2>Step 2: Finding Contract Address for Your Token:</h2>
+<p>This is very important. Not only because you need this address for <strong>providing liquidity</strong>, but also this is like the <strong>unique identity</strong> of your token. There are multiple <strong>PandaTokens</strong> out there, however, the token with contract address: <em>0xB7e78d2843e65851BBBd5426D4eE423ebbAf8711</em> belongs to me.</p>
+<p>Moving on, so in the previous blogpost, we <strong>transferred</strong> all the <strong>tokens</strong> after <strong>deployment</strong> to our own <strong>Metamask</strong> wallet. Let's explore the <strong>transactions</strong> of our <strong>wallet</strong> to find the <strong>contract address</strong> of our token. Since <strong>blockchain</strong> <strong>records</strong> all the data in a public domain, all the transactions for a particular wallet can be viewed on <a href="https://bscscan.com/">BSCScan</a>.</p>
+<p>Simply open the link and enter your <strong>Metamask wallet address</strong> on the search bar provided. Once you do that, you would see a <strong>screen</strong> that will have the entire information including <strong>transactions</strong> happening from your wallet.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-15-1024x369.png" /></p>
+<p>BSC Scan screenshot of my Metamask Wallet</p>
+<p>Refer to screenshot to find the <strong>dropdown</strong> that is going to have the <strong>list</strong> of all the <strong>tokens</strong> in your wallet. Once you select your own token, it will open up a <strong>different page</strong> which will be like a <em>Janam Kundli</em> for the token. In that page, you would find a section called <strong>profile summary</strong>. This would have the contract address. You can copy that same with a single click. (Screenshot below)</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-16.png" /></p>
+<p>BSC Scan screenshot of PandaToken</p>
+<h2>Step 3: Liquidity Provision</h2>
+<p>From the <strong>navigation menu</strong> on the top select <strong>trade</strong> and then select <strong>liquidity</strong> from the menu. Once you do that, you should land on a <strong>page</strong> where can now <strong>add liquidity</strong>.</p>
+<p>Tap on add liquidity and you should be able to select the <strong>cryptocurrency pair</strong> from this screen.</p>
+<p>In the first input, enter <strong>BNB</strong>. Why? Because you already have BNB in your <strong>Metamask</strong> ever since we started this experiment.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-14.png" /></p>
+<p>Liquidity Provision Pancakeswap</p>
+<p>In the <strong>second input enter the contract address</strong> you found in the <strong>previous step</strong>. This will ensure that you are <strong>providing liquidity</strong> to your <strong>own coin</strong> and not some <strong>doppelganger</strong> crap (assuming that yours have some real use case)</p>
+<h2>Step 4: Deciding the Price:</h2>
+<p>Once you select the pair, you would get a notification saying that you are the first liquidity provider. (Screenshot below).</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-17.png" /></p>
+<p>As a liquidity provider, you would have to add both <strong>BNB</strong> and your own token. This <strong>ratio</strong> is going to <strong>determine</strong> the <strong>price</strong> of your <strong>token</strong>. Example, I added <strong>1,000,000 PND</strong> against a price of <strong>0.01 BNB</strong>.</p>
+<p>This would mean that entire supply of <strong>PND</strong> can be bought with <strong>Rs. 500</strong> OR, <strong>1 PND</strong> would cost about <strong>Rs. 0.000049</strong>.</p>
+<p>You can tweak the price as per your convenience to select a price band for your token.</p>
+<p><em>Note: You will have to pay a ga</em>s fee to enable the liquidity. This price would be less than $2 in most cases.</p>
+<h2>Conclusion:</h2>
+<p>That was it. Go ahead and share the contract address with anyone. Simply ask them to swap your token with BNB. You could also provide liquidity against other tokens like USDT, ETH as and when required using the exact same steps.</p>
+<p>And just like that, you have a running publicly traded token at your disposal. Have fun and let me know what you plan to do with this information.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Takeaways from ‘State of Crypto’ report by Andreessen and Horowitz (a16z) | Raghav</title>
+<meta name="description" content="Working in the crypto industry has both upsides and downsides alike. In terms of upsides, it is an extremely fun, fast and exciting place to be in. And in terms…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">5 Takeaways from ‘State of Crypto’ report by Andreessen and Horowitz (a16z)</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-05-30</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-05-30 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2019/08/a16z.png?fit=834%2C378&amp;ssl=1" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Working in the <strong>crypto industry</strong> has both upsides and downsides alike. In terms of upsides, it is an extremely fun, fast and exciting place to be in. And in terms of downsides, there is this obvious uncertainty about the future. But as long as you keep yourself updated with the <strong>latest trends</strong> in the industry, you should be good.</p>
+<p><img alt="" src="https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2019/08/a16z.png?fit=834%2C378&amp;ssl=1" /></p>
+<p>And the best way to do that is to read reports. <strong>LinkedIn posts</strong> and articles are good for <strong>building</strong> perspectives. However, reports are more data oriented. They would help you analyze and take smarter bets for the future. Out of <strong>multiple outlets</strong> providing well researched reports, one notable player is a16z.</p>
+<p>For the uninitiated, <strong>Andreessen</strong> and <strong>Horowitz</strong> or <strong>a16z</strong> is a <strong>venture capital firm</strong> based out of <strong>silicon valley</strong>. Lately, they have been investing actively in <strong>crypto</strong> and <strong>web3 space</strong>. And if people are trusting them with their <strong>money</strong>, I think it is fair to assume that the data they would have gathered will have substantial credibility.</p>
+<p>So in this post, I would talk about the key takeaways from one of their reports called ‘<strong>State of Crypto</strong>’. The report is 57 pages long and can be downloaded from <a href="https://a16zcrypto.com/wp-content/uploads/2022/05/state-of-crypto-2022_a16z-crypto.pdf">here</a>.</p>
+<h2>A. Price Innovation Cycle:</h2>
+<p>This is an interesting hypothesis I came across in this report. As per the ‘<strong>price-innovation cycle</strong>’, the entire industry (not specific to crypto) cuts through the cycles of</p>
+<p><img alt="" src="https://lh4.googleusercontent.com/vT5K0lHTwCrK8JBVV0ZzUFNTa-SXovZXG1lVV5uGITmWW6cPh_huSxPUCCOpMdolX7oq-5TbQxnrdzilFA1xSanBIkeZHjBlaJ4XOP9VZ9P-1yB-p_Y6bRBlZmjKBKS8X2fKLFzQGSyHfZApTQ" /></p>
+<h2>A.1 Price:</h2>
+<p>This is when the price of a <strong>specific asset class</strong> outperforms its peers and gains attention of <strong>enthusiasts</strong> across the board. Think of it like this. If <strong>BTC</strong> were trading at <strong>$1000</strong>, would you be as interested in it as today? All the <strong>technological revolution</strong> remains the same. But masses won’t have been there.</p>
+<h2>A.2 Interest:</h2>
+<p>Any movement in prices creates interest where <strong>developers</strong> start taking notice of this space, <strong>enthusiasts</strong> start talking about it on <strong>Social media</strong>.</p>
+<h2>A.3 Ideas and Innovation:</h2>
+<p>This in turn leads to <strong>creation</strong> of an <strong>idea repository</strong>. People start figuring out the problems in this <strong>space</strong> and hence develop solutions around it.</p>
+<h2>A.4 Startups and Projects:</h2>
+<p>This finally paves the way for <strong>businesses</strong> to be centered around these new technologies. People go all-in, with an aim to take these <strong>innovations mainstream</strong>.</p>
+<p>The report states that we are amidst the middle of the fourth price <strong>innovation cycle</strong>. This constant feedback loop has propelled the <strong>industry</strong> ever since the advent of <strong>Bitcoin</strong>.</p>
+<h2>B. Web3 and its potential:</h2>
+<p>Report highlights the key problems with the <strong>existing avatar</strong> of the internet. The current internet is either a <strong>digital authoritarianism</strong> (Eg. China, North Korea) or <strong>Oligopoly</strong> by <strong>big tech</strong> (Google, Meta).</p>
+<p>And as the growth has stagnated over a period of time, these <strong>organizations</strong> have moved from a model of ‘<strong>attract</strong>’ to ‘<strong>extract</strong>’</p>
+<p>As a result, users tend to make the least out of the <strong>value chain</strong>. Refer to the image below:</p>
+<p><img alt="" src="https://lh5.googleusercontent.com/Sd36-qxw0l7yYAQj4Lmy8J2dyULp_VnHDHaEhqxTUhRr5scjFLc0jkgUC60s5_lhO2ROle_KEGyTyt-cuCUIHn2i8U-3rfNfmyU4S4W_6AaqPkhOv-ejQ0-mCYVim7-jWRHpjiyCjPDT54SzxA" /></p>
+<p><strong><a href="https://pandatechie.in/2021/10/31/what-is-web3-0-how-is-different-from-web1-0-and-web2-0/">Web3</a></strong> uses <strong>innovative models</strong> of token economy to safeguard the interests of everyone in the <strong>ecosystem</strong>. Which is why you would see such a stark difference, in the <strong>earnings</strong> and share, between the <strong>creator’s economy</strong> powered by <strong>web2</strong> and <strong>web3</strong> (refer to the image below).</p>
+<p><img alt="" src="https://lh4.googleusercontent.com/QXRVBtSvDYiX_Rhvw3nlNwWzS4dGyuqx2iD-qCku8ZbkR_RdgxGjkVOo_Kf50QnsUdPQRZ6_dU61np8WoqFCnQPu_NOgTCH5GIiLT3f_hI7ljJ2jE9-BI6lwHoU9zsGIXQZxY0SDrRbo4BXhfA" /></p>
+<p><img alt="" src="https://lh4.googleusercontent.com/WZ7X7hrYEnR_ff7dDPfUDf2darQqZiy8dnNBGKKEsmPyO674u94HOZsEg7DRVwemfdHKf6h11pOt3jxpAH9fmq39xganmKZaS39tioFxwB89SKUirRl2i3sf09Yg5ivPupDsmuQpbqAE8ycw2w" /></p>
+<h2>C. Wen Eth2.0?</h2>
+<p>The report shows a clear dominance of <strong>Ethereum Blockchain</strong> when it comes to <strong>building</strong> in this <strong>space</strong>. Ethereum has far and away the most builders, with nearly <strong>4,000</strong> monthly active <strong>developers</strong>. This is way beyond the second best, <strong>Solana</strong> which has about <strong>1000 devs</strong>.</p>
+<p>This can be attributed to the early mover advantage and the immense network effects of the <strong>large</strong> <strong>community</strong> that backs up <strong>Ethereum</strong>.</p>
+<p>However, with that being said, <strong>Ethereum</strong> faces a tough competition from multiple L1s out there like <strong>Solana, Avalanche, Fantom, BNB Smart Chain</strong>. These chains have tried to find a product market fit in a space where the end consumer does not care about <strong>decentralization</strong>.</p>
+<p>Therefore, they are able to provide <strong>Blockchains</strong> that handle <strong>transactions</strong> faster and at a cheaper price.</p>
+<p>Will the narrative stick to <strong>decentralization</strong>? Only time will tell.</p>
+<h2>D. DeFi and It's Real World Impact:</h2>
+<p>Currently, about <strong>1.7 bn</strong> people across the globe are unbanked. Sadder part is that about 1 bn of them have access to the internet. So there is no reason for them to miss the <strong>financial inclusion</strong>. <strong>Crypto</strong> and <strong>DeFi</strong> offers them the opportunity to <strong>leverage products</strong> like <strong>lending</strong>/<strong>borrowing</strong>/<strong>staking</strong> to grow their business and wealth.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/05/image-6-1024x568.png" /></p>
+<p>This idea behind this realm is going mainstream faster than ever. <strong>DeFi protocols</strong> have already become the <strong>31st largest bank</strong> in the world when compared on the basis of <strong>total assets</strong> under <strong>management</strong>.</p>
+<h2>E. To the Moon? Not So Soon!</h2>
+<p>When you work in the <strong>crypto industry</strong>, it is really hard to believe this. But we are still very early in this game. Report claims that this is a mere assumption based on certain number crunching but <strong>web3</strong> would hit a critical mass of 1B users by 2031. They have done it by mapping the number of users with the <strong>adoption history of the internet</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/05/image-7-1024x531.png" /></p>
+<h1>What’s Your PoV?</h1>
+<p>Report also touches upon a few other areas like state of <strong>L2s, NFTs, Metaverse, DeFi and Stablecoins</strong>. It is definitely worth a read if you are really looking forward to planning your next moves in this <strong>bear market</strong>.</p>
+<p>For now, <strong>keep calm</strong> and believe in the <strong>Blockchain</strong> tech!</p>
+<p>https://www.instagram.com/p/Cdqa2ShPYma/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

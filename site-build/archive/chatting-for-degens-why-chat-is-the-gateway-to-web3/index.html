@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatting for Degens: Why Chat is the Gateway to Web3? | Raghav</title>
+<meta name="description" content="It was March of 2023.
+
+Even if it feels that way, not so long ago, Dharmesh Shah, CEO of Hubspot [announced on Linkedin](https://www.linkedin.com/feed/update/ur…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Chatting for Degens: Why Chat is the Gateway to Web3?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-02-19</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-02-19 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/02/image-25.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>It was March of 2023.</p>
+<p>Even if it feels that way, not so long ago, Dharmesh Shah, CEO of Hubspot <a href="https://www.linkedin.com/feed/update/urn:li:activity:7046856167502848001/">announced on Linkedin</a> that he has bought the domain "chat.com" for 8-figures.</p>
+<p>Reason? His words, not mine 👇</p>
+<blockquote>
+<p>"<em>The reason I bought <a href="http://chat.com/">chat.com</a> is simple: I think Chat-based UX is the next big thing in software. Communicating with computers/software through a natural language interface is much more intuitive.</em>"</p>
+<ul>
+<li>Dharmesh Shah</li>
+</ul>
+</blockquote>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-25.png" /></p>
+<p>Why are billionaires betting on chat UI all of a sudden?</p>
+<p>More importantly why are we talking about it now? What business does chat-based UI has in Crypto? Well, a lot more than you think. So today, we are up for a chatty session that includes:</p>
+<ul>
+<li>Why is Chat UI picking up as a preferred mode of user engagement?</li>
+<li>The big tech oligopoly and rent-seeking revenue splits</li>
+<li>Chat and Web3. Our savior?</li>
+<li>Chat UI in dialect</li>
+<li>Chat UI: Other use cases</li>
+</ul>
+<p>Let's roll, shall we?</p>
+<h2>Chat UI: The Sudden Surge</h2>
+<p>Isn't it fun? I mean we are living in an era where Blockchains are trying to rewrite the history of internet as we know.</p>
+<p>At the same time, there are machines that can now perform certain tasks better than humans.</p>
+<p>Even then, some cute, little, naive tech interventions seem to be so befitting in a use case that you feel if we have exploited the existing ecosystem enough before deciding to swim in fresh waters.</p>
+<p>Chat UI is one such simple innovation.</p>
+<p>If you are wondering what happened to <a href="https://chat.com">chat.com</a>, I tracked it until OpenAI purchased it from Dharmesh for 10+ million dollars.</p>
+<p>A few days later, site was redirecting to x.ai and today, I am unable to access the website.</p>
+<p>So billionaires had their fair share of domain flipping before the site went down.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-26.png" /></p>
+<p>Billionaires Flipping 'chat.com' like there is no tomorrow</p>
+<p>Which brings us to a very important question. Do they know something that we don't know?</p>
+<p>Let us explore.</p>
+<p>The day OpenAI unleashed the GPT in the market, the chat UI became our go-to mode for interacting with a machine. It was so convenient that we wondered why are we not deploying it everywhere.</p>
+<p>Before this, we always considered chat as a medium to converse with each other. All the blockbuster tools of past and present focused on this use case alone to gain massive popularity.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-15.png" /></p>
+<p>However, off late, things are changing rapidly. If chat is such an intuitive way of interaction, why not use it for other tasks as well?</p>
+<p>For example, why can't an influencer use chat medium to boost user engagement through polls, quizzes?</p>
+<p>Well, I guess they can. The screenshot here shows 'Sharan Hegde', the founder of 1% club, leveraging WhatsApp for community engagement.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/WhatsApp-495x1024.jpeg" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-16.png" /></p>
+<p>And if that's the case, can chat UI also enable transactions? Oh wait. I think it can.</p>
+<p>This is a generic HR-office 'Chat' Bot, taking actions on user requests in 'English'.</p>
+<p>What about verification through chat? Okay. You get the drift.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-17-1024x388.png" /></p>
+<p>So while we were underestimating the power of natural language, it somehow creeped into our software and transformed the way we interacted with machines.</p>
+<p>Today, Google is experimenting with <a href="https://blog.google/products/search/generative-ai-search/">SGE</a>, wherein a user can ask follow up questions on top of a generated search result.</p>
+<p>A company that makes its money from brands fighting for the top spot in search has decided to slowly pivot away from that model.</p>
+<p>Chat UI is now and here!</p>
+<h3>Chat UI and The Great App Fatigue:</h3>
+<p>Wait. There's more to it than just the functionality.</p>
+<p>Let us do a quick experiment. How many apps do you have in your phone? I am at a staggering 94 applications.</p>
+<p>This is in line with the <a href="https://buildfire.com/app-statistics/">BuildFire (2024) reports</a> that suggests an average of 80+ apps installed on smartphones.</p>
+<p>Interesting part is that <strong>only 9 are used daily and 30 monthly</strong>. This implies over 62% of installed apps go unused.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/ChatG.webp" /></p>
+<p>Furthermore, a 2021 Deloitte report finds that <strong>63% of consumers feel overwhelmed</strong> by the number of apps they have. This feeling of fatigue can lead to decreased engagement, lower productivity, and even negative mental health impacts (<a href="https://www2.deloitte.com/bg/en/pages/technology-media-and-telecommunications/articles/global-mobile-consumer-survey.html">Source</a>).</p>
+<p>Go ahead. Count the number of apps you used today. I am sure you would be able to count it on fingers.</p>
+<p><em>This means, while chat interfaces offer a potentially intuitive alternative, they also reflect a broader shift away from app overload.</em></p>
+<h2>Apple App Store and Google Play Store:</h2>
+<p>Now that we have established that app fatigue is real and Chat has somewhat become the preferred mode of engagement, let us try to crystal ball the future of the two largest app stores in the world.</p>
+<p>Outside of China, <strong>Apple and Google control over 95%</strong> of the app store market share through iOS and Android, respectively. <strong>143 Billion</strong> apps were downloaded between these two in the year 2022.</p>
+<p>And that is the thing with power. It corrupts. And something similar happened with these two giants as well.</p>
+<p>You see, the entire business model of these stores is built around charging the developers for this massive distribution.</p>
+<p>Therefore, Apple and Google both charge <strong>30% of the in-app purchases.</strong></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-27.png" /></p>
+<p>Recently, Apple proved that regulators can’t stop its App Store monopoly with its <a href="https://stratechery.com/2024/apple-and-the-dmc-apple-and-or-a-reluctant-apple-apologist/">frustrating response</a> to the EU’s Digital Markets Act (DMA).</p>
+<p><em>What started as a humble distribution mechanism to foster innovation in software has now become rent-seeking.</em></p>
+<h2>Why Web3 Needs Chat UI Even More?</h2>
+<p>Okay. We get it. Chat is not only the need of the hour, but also picking up steadily due to recent AI advancements. Let us now understand why web3 needs it even more.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-28.png" /></p>
+<p>While app fatigue is a growing concern, the need for chatUI in Web3 goes beyond just addressing user overload. Here are some key reasons why Web3 might benefit even more from chat-based interfaces:</p>
+<h3>1. Business Model:</h3>
+<p>Web3 is often touted as an additional application on the internet. However, that is NOT true. It is a lot more fundamental than that. As fundamental as the internet itself.</p>
+<p>Web3 applications often prioritize <strong>user empowerment and decentralization</strong> over direct user monetization.</p>
+<p>For example, Many web3 applications rely on <strong>microtransactions</strong>, which are small financial transactions that can occur frequently within the app. The 30% fee on each transaction can make these microtransactions economically unviable.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/DALL·E-Feb-21-ChatG.webp" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-29-676x1024.png" /></p>
+<p>OpenSea charging a 2.5% fee for the sale of assets out of which 30% might go to App stores despite having no influence in the discovery of the asset</p>
+<p>Additionally, blockchain transactions incur "gas fees," which are payments made to network miners or validators for processing transactions. The App Store and Play Store fees add an extra layer of cost on top of these already present gas fees, further straining the economic model of web3 apps.</p>
+<h3>2. Censorship Resistance and Decentralization</h3>
+<p>Web3 apps often promote censorship resistance as a core feature. However, relying on centralized app stores subjects these apps to the policies and regulations of these platforms, which can include content moderation and app removals that go against the ethos of web3.</p>
+<h3>3. Token Based Economy:</h3>
+<p>Web3 apps often utilize their native tokens for in-app transactions, rewards, and governance. The requirement to give a portion of these transactions to app stores can disrupt the token economics, affecting the distribution, valuation, and utility of the tokens within the ecosystem.</p>
+<h3>4. Stifling Innovation:</h3>
+<p>The financial and operational constraints imposed by app store fees and policies can limit the scope for innovation and experimentation in web3 apps, which are essential for exploring new use cases and business models in the decentralized web.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-30-672x1024.png" /></p>
+<p><em>The industry could surely use a different distribution platform where innovation is not a function of cost.</em></p>
+<h2>Wen Chat UI?</h2>
+<p>I know you have been waiting for this. I will not disappoint you after the epic buildup above.</p>
+<p>Turns out that experimentation on this newly discovered mechanism is on.</p>
+<p>Recently, <a href="https://www.dialect.to/">dialect</a>, launched a telegram bot that can now turbocharge your crypto endeavors through, wait for it, CHAT.</p>
+<p>Yes. All you have to do is open up Telegram, reach out to @dialectbot (Dialect operator) and connect your phantom wallet to it.</p>
+<p>Once you are done, <a href="https://pandatechie.in/2022/07/11/trader-vs-hodler-what-is-better/">trading</a> is simply a few menial clicks away.</p>
+<p>For example:</p>
+<p>Here's a screenshot of me connecting my wallet with dialect operator and degening my way to cryptoverse without opening my laptop and more importantly, without giving Google their 'UNdue' share of transaction.</p>
+<p>To bolster this initiative, Dialect is offering zero trading fee trades through this mode right now.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-19-at-11.12.17-AM-494x1024.jpeg" /></p>
+<p>This is like killing two birds with one stone.</p>
+<ul>
+<li>Skip the app store BS by squishing yourself in a pre-existing app.</li>
+<li>Also enhance the utility of existing application and leverage its existing distribution.</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-18.png" /></p>
+<h2>What Else With Chat UI?</h2>
+<p>Now, the question of the moment. What else can you power with this Chat UI? How will it look like in real life? Let us explore:</p>
+<h3>1. Educational and Onboarding Tools:</h3>
+<p>Chat interfaces could serve as educational tools for users new to web3, guiding them through the basics of blockchain, how to set up a wallet, understand tokenomics, or stay updated with the latest in the web3 space, all in a conversational and interactive manner.</p>
+<p>One could now call an OpenAI API here to enable interactions in natural language.</p>
+<p>Currently web3 education lies in lengthy blogs or YT videos.</p>
+<p>If someone could feed that to me in a multipurpose bot as a bite-sized tips, that would be great.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/WhatsApp-Feb-21-Image-473x1024.jpeg" /></p>
+<p>Bombay Stock Exchange starting a learning series on WhatsApp Chat</p>
+<p>Adding a layer of LLMs will also allow user to ask questions on top of it and get answers instantly.</p>
+<p>Real-time web3 tutoring. Definitely has a vibe to it.</p>
+<h3>2. NFTs at a Breeze:</h3>
+<p>From minting to trading, NFTs can be simplified through the chat interface big time.</p>
+<p>Current process of purchasing NFTs is simple for crypto natives, but a typical normie journey looks like this:</p>
+<pre><code>Find a suitable wallet compatible with Blockchain --&gt; Create a wallet --&gt; Note down the seed phrase --&gt; Add funds to the wallet --&gt; Visit the NFT marketplace --&gt; Connect the wallet --&gt; Make the bid --&gt; Sign the transaction --&gt; Buy NFT --&gt; List it --&gt; Sign the transaction
+</code></pre>
+<p>Of course a part of it is due to self-custody. But then, you cannot expect a feature to be a deterrent elsewhere in the journey.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/DALL·E-cleaner-mockup-chat.webp" /></p>
+<p>AI attempting to replace UX designers with a mockup of chat interface for NFTs. 😂</p>
+<p>Now imagine user could scroll for NFTs on their phone by invoking most popular NFTs and getting them as images on the chat.</p>
+<p>Later, they decide to pick one and make a bid there and then using chat buttons.</p>
+<p>If everything works out, they should have NFT in their wallet at minimal effort.</p>
+<p>Something similar can also be envisioned in case of in-game assets. Platforms like <a href="http://dialect.to">dialect</a> and <a href="http://push.org">Push Protocol</a> provide an interface for the web3 applications to enable notifications for user on their mobile.</p>
+<p>So literally every game trying to experiment with NFTs can enable transactions and information to the user through ChatUI.</p>
+<h3>2. DAOism</h3>
+<p>For the uninitiated, DAOs (Decentralized autonomous organizations) are Blockchain co-operatives that believe in democratic on-chain governance.</p>
+<p>Too jargon(y)?</p>
+<p>Okay, think of a system where everyone gets to have a say in the key decisions related to the organization. Their intent is recorded in this immutable ledger and since they are vested in the organization's growth monetarily, they do not have any incentive to go malicious.</p>
+<p>In principal, this looks like a world we want to live in.</p>
+<p>Reality? Quite different.</p>
+<p>Here's a chart that shows the trend of people voting across the DAOs on 6 Blockchains made through xDAO (A DAO making platform).</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-19-1024x229.png" /></p>
+<p>The overall interest in taking part in decision making is constantly decreasing.</p>
+<p>More importantly, as new DAOs are created, people chime in their opinion with voting. Later, they just give up! As the number of DAOs stopped climbing up, the number of votes decreased significantly.</p>
+<p>You would have experienced the same while deciding to attend and vote in Annual General Meetings of the stocks you hold.</p>
+<p>Why would someone be uninterested in knowing where there money is going?</p>
+<p>Well, its the cognitive load.</p>
+<p>For starters, there is no mobile friendly way of doing it.</p>
+<p>Secondly, it costs 'gas-fee' to do these transactions in case of a DAO.</p>
+<p>Now, imagine if I enable this through a chat interface?</p>
+<p>Everytime there is a proposal, you get notified and just by clicking a button, you can cast your vote?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-20-481x1024.png" /></p>
+<p>I an not a UX guy, but this is how it could look like, in principle. Even if does not look like the cleanest way of doing it, it sure is super intuitive and would bolster the turnout ratio to all time highs.</p>
+<h3>4. Token Trading 2.0:</h3>
+<p>For the purpose of writing this piece, I met a prolific investor. This is a middle aged man, earning handsomely and trading in equities on a daily basis.</p>
+<p>I asked him how does he have the time to track the market and place orders?</p>
+<p>As per him, he watches the market every now and then and calls up his financial advisor. They have a dedicated resource allocated to him to take/exit positions at his command.</p>
+<p>When asked why won't he do it himself, he says all apps have tricky interfaces and it is not his core competency to deal with them. He'd rather deploy that time in understanding the market.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-33.png" /></p>
+<p>Now imagine how a layer of LAM (large action model) on top of a chatbot could be game changer for him.</p>
+<p>Rather than calling up someone who is prone to make mistakes, he can simply use voice/text to invoke this bot to take actions on his behalf.</p>
+<p>Recently launched <a href="http://rabbit.tech">Rabit R1</a> enables this functionality for basic apps like Uber, Calendar and Searches. Its a matter of time when trading interfaces are powered through chats.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-32-1024x791.png" /></p>
+<p>Rabbit R1</p>
+<h3>5. Bridging:</h3>
+<p>Although it might not be a direct comparison, but bridging is somewhat an equivalent of moving money between two of your own accounts.</p>
+<p>This is how you can do it in India through readily available applications built atop India Payment Stack.</p>
+<p>It is a 3-step process that involves choosing the receiver account, sender account and the amount.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/WhatsApp-Feb-20-Image-552x1024.jpeg" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/WhatsApp-1-478x1024.jpeg" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/WhatsApp-2-478x1024.jpeg" /></p>
+<p>To do something similar in web3, one might have to perform an elaborate tango of events involving connecting wallets and praying that nothing goes wrong.</p>
+<p>What if you could just ask instead?</p>
+<p><em>"Move 20 wETH from Polygon to Ethereum"</em></p>
+<p>Far fetched? May be. Dream come true? Oh yes!</p>
+<h2>And Finally:</h2>
+<p>Chat UI has become that on-demand 24x7 assistant that is slowly getting better each day. Microsoft has bet on it heavily by introducing <a href="http://microsoft.com/en-us/windows/copilot-ai-features">Windows CoPilot</a>. Instead of juggling between different settings, users could just write what they want and voila!</p>
+<p>The beauty of web3 is that it is not contained to leveraging JUST Blockchain to transform the way we the work. While it remains fundamental to its functioning, the world is our oyster when it comes to experimentation.</p>
+<p>In other words, we have just evolved from solving product to now solving discovery. The future is bright! And if you make your moves, right, you might just make it to the next level.</p>
+<p><strong>References:</strong></p>
+<ol>
+<li><a href="https://twitter.com/saydialect">Dialect Twitter</a></li>
+<li><a href="https://www.dialect.to/">Dialect Website</a></li>
+<li><a href="https://dialectlabs.medium.com/introducing-dialect-operator-for-telegram-3ce4908cc122">Dialect Medium</a></li>
+<li>Some images in this post have been generated using Dall E</li>
+<li><a href="http://buildfire.com/app-statistics">BuildFire Report</a></li>
+</ol>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

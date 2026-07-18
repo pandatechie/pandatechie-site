@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Impermanent Loss? | Raghav</title>
+<meta name="description" content="We recently covered the working of an [automated market maker](https://pandatechie.in/2021/10/09/what-is-an-automated-market-maker-amm/). For the uninitiated, i…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Impermanent Loss?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-10-16</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-10-16 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.leaprate.com/wp-content/uploads/2019/08/liquidity-provider.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>We recently covered the working of an <a href="https://pandatechie.in/2021/10/09/what-is-an-automated-market-maker-amm/">automated market maker</a>. For the uninitiated, it is a way to <strong>exchange</strong> two <strong>cryptocurrencies</strong> (assets) in a way that the <strong>price</strong> is decided by the <strong>amount</strong> of <strong>crypto</strong> left in the <strong>liquidity</strong> <strong>pool</strong>. Simply put, on the basis of <strong>supply</strong> and <strong>demand</strong>, the price of an <strong>asset</strong> is decided. If this sounds a little confusing, don't worry! While you would find the detailed explanation <a href="https://pandatechie.in/2021/10/09/what-is-an-automated-market-maker-amm/">here</a>, a part of this blogpost would cover that as well. For now, let's play some attention to this term: what is <strong>impermanent loss</strong>. We shall dive into the specifics real soon.</p>
+<h2>Liquidity Pool and Liquidity Providers (LP)</h2>
+<p>Think of <strong>liquidity</strong> <strong>pool</strong> as a digital stash. This stash has huge <strong>volumes</strong> of <strong>cryptocurrencies</strong> which are being <strong>swapped</strong>. For example, an <strong>Ethereum</strong> and <strong>Basic Attention Token</strong> liquidity pool, would be full of <strong>ETH</strong> and <strong>BAT</strong>. Initially this pool would contain an <strong>equal</strong> <strong>amount</strong> (Dollar value worth) of <strong>BAT</strong> and <strong>ETH</strong>. But as and when people come and <strong>deposit</strong> a crypto (ETH or BAT), the value of each one of them would <strong>fluctuate</strong>.</p>
+<p>How? Say someone comes along and deposits a lot of ETH to buy BAT, the <strong>price of ETH in the liquidity pool will fall down</strong> and more number of ETH would be required to buy a single BAT. The same is true for the flip side as well.</p>
+<p>The question that arises is <strong>who</strong> put that <strong>initial equivalent value of ETH and BAT in that liquidity pool</strong> now? The answer is investors. These people, called <strong><em>liquidity providers</em></strong>, come and <strong>deposit</strong> their <strong>crypto</strong> in 50:50 ratio in order to <strong>gain</strong> some <strong>return</strong> out of it. How? Through the <strong>fees</strong> levied to <strong>individuals</strong> who come along to swap their cryptocurrency.</p>
+<p><img alt="" src="https://www.leaprate.com/wp-content/uploads/2019/08/liquidity-provider.gif" /></p>
+<p>This sounds like a really cool investment right? You just deposit your crypto and make a <strong>sweet ROI</strong> by the fee being charged to the traders. While it is cool, it is definitely <strong>NOT risk free</strong>. And that's what today's blogpost will talk about. Read on.</p>
+<h2>What is Impermanent Loss:</h2>
+<p><strong><em>Impermanent loss is the loss incurred by the liquidity provider due to price fluctuations in the liquidity pool such that the LP (liquidity provider) would have been more profitable if he had just held his tokens without providing the liquidity.</em></strong></p>
+<p><img alt="" src="https://image.binance.vision/uploads/42d737922c424a71900d7fd9baa9a911.png" /></p>
+<p>Why impermanent? Because unless you withdraw your liquidity, this loss isn't realized. In other words, impermanent loss is the temporary loss when the share of liquidity provider positions becomes uneven as compared to it's original position.</p>
+<h2>Illustration to Demonstrate Impermanent Loss:</h2>
+<p>Ya. That would make sense. Let's take it with an example. Imagine there is a liquidity pool where you deposit <strong>$10,000 worth of USDT (a stable coin) and 100 ETH.</strong> Since most liquidity pools want a 50:50 ratio, it is fair to assume that 1 ETH here would cost $100 (100 ETH worth $10,000). In totality, you have put a total of $20,000 in the liquidity pool with a hope of earning some income from the trader fees.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/Liquidity-Pool-1024x576.png" /></p>
+<h3>Mathematics Time:</h3>
+<p>Now imagine that the price of ETH on <a href="http://coindcx.com">CoinDCX</a> is $110. So a trader realizes this arbitrage opportunity and decides to make use of it. He can now buy ETH from our liquidity pool at $100 and sell it on CoinDCX @ $110. So by the rule of constant product automated market maker, he was able to buy 4.652 ETH worth $488 in our liquidity pool. After that, the price of ETH in our pool also shot up to $110. If he would purchase any more ETH from us, he would bear a loss.</p>
+<p>Trader Profits:  </p>
+<p>Trader sold 4.652 ETH at CoinDCX for $511.82. The purchase price was $488. Therefore, the trader made a profit of $23.82  </p>
+<p>Your Profit:  </p>
+<p>The liquidity pool now has $10,488 in USDT and 95.347 ETH.   </p>
+<p>Or, 95.347 * 110 = $10,488   </p>
+<p>Total pool value= 10,488 (USDT) + 10,488 (ETH) = $20,976  </p>
+<p>Total Profits= $976 (Mama Mia!)  </p>
+<p>But wait...   </p>
+<p>What's the impermanent loss?  </p>
+<p>If he had not invested this money in the liquidity pool, the investor would have $10,000 in Stable coin and 100 ETH.   </p>
+<p>Price of 100 ETH: 100*110 = $11,000  </p>
+<p>Total Money: 11,000 (ETH)+ 10,000 (Stable Coin) = $21,000  </p>
+<p>So the impermanent loss is now at = 21,000 (Money he would have had by NOT investing in L. Pool) - 20976 (Money he has)  </p>
+<p>= $24</p>
+<p>In short, this LP would have made more had he not invested his money in a liquidity pool. This might not seem to be a lot in the first glance, but imagine a situation where the price of ETH drops by 50% or it jumps by 25%. In either case, the losses could have been exponential.</p>
+<p>Please note, that if ETH goes back to it's original price of $100, there is no impermanent loss.</p>
+<h2>But Why Does Impermanent Loss Happen?</h2>
+<p>As a rule of thumb, impermanent loss happens when the <strong>two</strong> <strong>assets</strong> start moving in <strong>opposite</strong> <strong>direction</strong> <strong>relative</strong> to each other as compared to the time when you provided the liquidity. So, it's better when the <strong>two assets you are investing in are roughly the same</strong> price.</p>
+<p>If both these assets start moving in opposite direction, the exposure to impermanent loss increases. Contrary to this, if both the <strong>assets start moving in the same direction</strong> (can be up or down) proportionately, the LP makes a profit.</p>
+<p>The graph below explains the impermanent loss to a LP due to price variation. If you observe closely you would note that price movement in either direction will cause an impermanent loss. <strong>Also, the loss is in the range of 0-25%</strong> if the prices tend to go up.</p>
+<p><img alt="" src="https://finematics.com/wp-content/uploads/2020/08/impermanent-loss-chart-1024x575.png" /></p>
+<p>You can also calculate the impermanent loss using the calculator available <a href="https://www.impermanent-loss-calculator.net/">here</a>. Simply put in the current and original price of assetsand Viola!</p>
+<h2>Why do People Provide Liquidity at all then?</h2>
+<p>Valid question right? If there is a cash loss, why are people providing liquidity at all? Must be some catch? Well, the answer was always there in front of you. <strong>I mentioned that traders earn a part of the total fees for providing liquidity. This fee might be less (~0.3%) but it adds up exponentially when the total traded volumes are to the the tune of billions.</strong> For example, the traded volume on Uniswap touched $10bn in a single day this April (<a href="https://finance.yahoo.com/news/uniswap-weekly-trading-volume-crosses-065600669.html">source</a>).</p>
+<p>The earning from this trading fee compensates for the impermanent loss and more than often beats it.</p>
+<p>But with that being said, there are ways to mitigate impermanent loss to. We shall explore more about it as we go in the upcoming blogs.</p>
+<h2>Conclusion:</h2>
+<p>I am not scaring you, but rather pacifying myself with this. Yes, this is just the tip of the iceberg. The world of DeFi has a lot more to explore and I am all set to take that journey with you.</p>
+<p>The question is, are you game?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

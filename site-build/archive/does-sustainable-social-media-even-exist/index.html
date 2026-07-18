@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does Sustainable Social Media Even Exist? | Raghav</title>
+<meta name="description" content="One day, machines and robots will rule the world. Bad news: they already are. The secret of social media is already out there in the open. These 'advertising fi…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Does Sustainable Social Media Even Exist?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-05-08</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-05-08 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://tuftsresearch.files.wordpress.com/2019/02/social-media-addiction.jpg?w=601" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>One day, <strong>machines</strong> and <strong>robots</strong> will rule the world. Bad news: they already are. The <strong>secret</strong> of <strong>social media</strong> is already out there in the open. These '<strong>advertising firms'</strong> sell our <strong>data</strong> to earn money. However, that is not it. If the <strong>basic premise</strong> of revenue model involves <strong>selling targeted ads</strong> to you, it makes sense to keep you <strong>hooked</strong> on the <strong>platform</strong> for as <strong>long</strong> as possible. <strong>More time you spend on the platform, more ads served to you</strong>. It's simple. What's not simple is it's <strong>implications</strong> on our <strong>mind</strong>. You are unable to <strong>control</strong> what you see on your feed. Even worse, you don't even <strong>realize</strong> that. So, the million dollar question here is: <strong>Does sustainable social media even exist?</strong></p>
+<p><img alt="" src="https://tuftsresearch.files.wordpress.com/2019/02/social-media-addiction.jpg?w=601" /></p>
+<p>I have been talking a lot about through various media lately. However, I have reached to a point where <strong>I don't know if we can ever go back to non algorithmic feed</strong> at all or not. Even if we did, how will the <strong>revenue models</strong> pan out for the <strong>tech giants</strong>? Recently, I read about the fact that if we switch back to chronological feeds, <strong>people</strong> tend to <strong>miss out 70% of their posts</strong>. That means missing out on <strong>half their friends and family</strong>. In this blogpost, I put some light on how big is this problem, how social media giants have become an attention craving echo chambers and what possibly could be our way out! Tighten your seat belts, coz I am going to drop some <strong>truth bombs</strong>.</p>
+<p>https://www.instagram.com/p/CNJspVwjIve/?utm_source=ig_web_copy_link</p>
+<h2>Why is it Scary?</h2>
+<p>Before jumping into the coping mechanism, let's understand why is this even worth a read. Is this problem even big or are we just being paranoid? So, in order to explain this, I would take an example of <strong>Indian politics</strong>.</p>
+<h4><em>Disclaimer: Please note that I am an apolitical person and all the examples would be from a view point of illustration.</em></h4>
+<p>Let's say that you <strong>support BJP and it's ideologies</strong>. Simultaneously, you also <strong>dislike</strong> <strong>Rahul Gandhi</strong> and think that he is <strong>incompetent</strong>. I would go ahead and use the word '<strong>nincompoop</strong>', for that matter. <strong>Everything is fine</strong> until this point. After all, we are the world's largest democracy.</p>
+<p>https://www.facebook.com/BJP4India/photos/a.140501359323729/5811107342263074/</p>
+<p>So, one fine day you are <strong>scrolling through Facebook</strong> and find an <strong>ad run by BJP's media team</strong>. You feel good about the advertisement, it <strong>resonates</strong> with your ideologies so you hit the '<strong>like</strong>' button. More ads pop up and you chose to <strong>like</strong> some of them. At this point, <strong>algorithm</strong> <strong>recognizes</strong> that you like <strong>posts</strong> which are talking <strong>highly of BJP</strong>. In order to <strong>retain</strong> you (ensure your stickiness) on the platform, it starts showing <strong>more</strong> <strong>such</strong> posts.</p>
+<p>A few days later, another BJP follower tries to <strong>take a jab at Rahul Gandhi</strong>. So, he purposefully <strong>edits</strong> one of his <strong>videos</strong> to <strong>portray</strong> him as <strong>dumb</strong>. Since <strong>you</strong> and <strong>thousands</strong> '<strong>like you</strong>' are <strong>seeking</strong> such <strong>content</strong>, it pops up. The content may be <strong>fake</strong> and <strong>misleading</strong>, but it has become extremely <strong>popular</strong>. Therefore, a few <strong>irrational people</strong> (not you), develop a stronger <strong>hate</strong> for Mr. Gandhi because of this. They did not even think of <strong>validating the credibility</strong> of the video because of <strong>confirmation bias</strong> i.e. tendency to interpret new <strong>evidence</strong> as <strong>confirmation</strong> of one's <strong>existing</strong> <strong>beliefs</strong> or theories.</p>
+<p>The above example is <strong>not fictitious</strong>. Remember Rahul Gandhi's video where he says "<em>Ek taraf se aloo, doosri taraf se sona"?</em> That video was <strong>actually an edited part</strong> of another <a href="https://www.youtube.com/watch?v=IXApgh2CrcU">video</a>.</p>
+<h2>The Problem:</h2>
+<p>Problem lies in the fact that <strong>misinformation</strong> and <strong>conspiracy theories</strong> spread <strong>faster</strong> than the <strong>truth</strong>. As humans, we love <em>Masala</em> in our lives. Unfortunately, <strong>truth is just plain boring</strong>.</p>
+<p>It all starts with some <strong>crooks</strong> around us who <strong>understand</strong> <strong>social</strong> <strong>media</strong> and <strong>human</strong> <strong>psychology</strong> pretty well. These people play with our <strong>brains</strong> and generate <strong>viral</strong> content which would benefit their cause. And using social media to promote it, just <strong>aggravates</strong> the situation.</p>
+<p>Every false information that goes viral is in line with the incorrect thought process of millions of people. Therefore, it <strong>amplifies</strong> and we <strong>stray further away from truth</strong>. Why do you think even flat earthers exist? Let that sink in.</p>
+<p>Here's a way you can <strong>test this out in real</strong>. Refer to the screenshot below:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/image-1.png" /></p>
+<p>My Google Suggested Search</p>
+<p>Now, <strong>search similar phrase</strong> on your <strong>desktop/phone</strong>. It's highly likely that <strong>results</strong> will be absolutely <strong>different</strong>. So at this point, it doesn't matter what social media is. It's all about what you think instead. I got these <strong>search suggestions</strong> from Google because I think of social media as fake, bad, boon, creativity killer etc.</p>
+<h2>Social Media and Switch to Algorithms:</h2>
+<p>Remember good old times when you had to manually chose if you wanted '<strong>most recent' or 'most popular' posts</strong> first? Yes. Even I don't. So here's how switch happened for the social media giants:</p>
+<h3>Facebook:</h3>
+<p>Facebook is the <strong>pioneer</strong> of the <strong>algorithmic</strong> <strong>feed</strong>. It had started using algorithms to tweak the feed back in <strong>2009</strong>. However, for initial few years, some <strong>control</strong> was given to the <strong>user</strong> where one could press the '<strong>most recent</strong>' button and <strong>switch back</strong> to <strong>chronological</strong> feeds. This button was <strong>hidden</strong> deep inside <strong>navigation</strong> in <strong>2016</strong>.</p>
+<p>However, if you still want your feed to <strong>switch</strong> <strong>back</strong> to chronological order of uploads. There are ways to do that. All you have to do is click on the top right three bars and search for 'recent &amp; favorites' button. If you never knew this existed, is a proof that it was never intended so. (Screenshot Attached)</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-08-at-7.04.26-PM-608x1024.jpeg" /></p>
+<p>Enabling Chronological Feed on Facebook</p>
+<h3>Twitter:</h3>
+<p>Twitter also <strong>switched</strong> to <strong>machine</strong> <strong>based</strong> feed <strong>display</strong> in 2016. However, you can <strong>switch back</strong> to <strong>chronological</strong> feed again. (Refer to the screenshot below). Note how the algorithmic feed is called "Home". This just reveals the intention behind maintaining the opacity around algorithms for someone who is not tech savvy.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-08-at-7.08.29-PM-494x1024.jpeg" /></p>
+<p>Enabling Chronological Feed on Twitter</p>
+<h3>Instagram:</h3>
+<p>Instagram was born with algorithmic approach. Also, there is <strong>no way to switch</strong> to a 'Most Recent'. Therefore, you are in a total dark in terms of what you are seeing and why.</p>
+<h2>What is the Solution?</h2>
+<p>So, it is very hard to find a perfect balance and form a sustainable <a href="https://pandatechie.in/2020/11/17/what-happens-to-your-social-media-accounts-when-you-die/">social media</a> model. However, one thing is for sure. <strong>Creating an alternate social media might just not be the correct way of going about it</strong>. Why? Because of network effect. Here's an explainer carousal on the same:</p>
+<p>https://www.instagram.com/p/CNOt_K7DozS/?utm_source=ig_web_copy_link</p>
+<p>But that doesn't mean we should give up yet. Here's somethings that can be done to control this menace of misinformation:</p>
+<h2>1. Advertiser Profile Verification:</h2>
+<p>There should be an <strong>upper limit</strong> to the <strong>spends</strong> on <strong>advertising</strong> you can do on social media. Every second post should not be about your cause. Also, if posts run by a particular <strong>individual</strong>, <strong>group</strong>, <strong>agency</strong> are seem to spreading <strong>misinformation</strong>, a <strong>ban needs to be put</strong> on them.</p>
+<p>There should be stricter governance, norms and <strong>validation</strong> <strong>mechanisms</strong> in order to be able to <strong>advertise</strong> on social media.</p>
+<p><img alt="" src="https://cdn2.hubspot.net/hubfs/4956879/id-verification-blockchain.png" /></p>
+<h2>2. Democratize Feed:</h2>
+<p>Let people pick their <strong>areas of interests</strong>. Until someone <strong>specifically</strong> chases <strong>misinformation</strong>, they won't have to see it. Let people decide if they want to see <strong>political</strong> <strong>posts</strong>, <strong>religious</strong> <strong>posts</strong> or posts <strong>only from friends and family</strong>. This way, if someone feels insecure about what they are viewing, they can always customize their feed as per the preference.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<h2>Conclusion:</h2>
+<p>I think one cannot put the entire blame on <a href="https://pandatechie.in/2021/01/12/9-months-of-social-media-detox-rebirth/">social media platforms</a> for this ruckus. Some miscreants are abusing the power of technology for their personal gains. With that being said, the onus of fixing this problem, lies on these tech giants alone. The mammoth they have created needs to be tamed whenever required. Steps like banning Trump from social media platforms have restored faith in the fact that above all machines, there is still a human being who calls the final shots.</p>
+<p>So? Am I just being paranoid or this is really serious? Also, share your suggestions of creating a sustainable social media revenue model.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Hate Photography: Unpopular Opinion | Raghav</title>
+<meta name="description" content="There, I said it. I hate photography. Be it food, landscapes or myself (specially myself). I just don't like the idea of photographing every experience you come…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">I Hate Photography: Unpopular Opinion</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-02-27</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-02-27 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://i2-prod.manchestereveningnews.co.uk/incoming/article14444584.ece/ALTERNATES/s615b/409.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>There, I said it. <strong>I hate photography</strong>. Be it <strong>food</strong>, <strong>landscapes</strong> or <strong>myself</strong> (specially myself). I just don't like the <strong>idea</strong> of <strong>photographing</strong> every <strong>experience</strong> you come across. Ever since I was a kid, I just quite couldn't wrap my head around the logic behind this <strong>artform</strong>. If you are trying to connect my <strong>behavior</strong> with my <strong>awareness</strong> of concepts like <strong>self worth, self love</strong> etc., hold on for a moment. It has nothing to do with the fact how fat or slim I look in the photos. I have very <strong>specific</strong> <strong>reasons</strong> behind it and I plan to cover them all in today's blogpost. With the rise of <strong>smartphones</strong> and <strong>turbocharged</strong> <strong>cameras</strong> within, accompanied by <strong>endless storage capabilities</strong>, photography has taken a new shape in our lives. I am NOT OKAY with that personally.</p>
+<p>Today, I plan to pen down my rationale behind this mindset. So without further a due, let's get started on the saga of <strong>hating</strong> <strong>photography</strong> in general. Hate is a strong word you say? I agree. So are my feelings!</p>
+<h2>1. Awkwardness:</h2>
+<p>Is it just me or you <strong>don't</strong> <strong>know</strong> what to do with your <strong>arms</strong> when you are being clicked? Also, <strong>jaws clench and brows start drawing closer</strong> to each other. I don't know. Getting clicked is so awkward that I often resort to <strong>stupidity</strong> to <strong>cover</strong> that. I make faces, <strong>weird expressions</strong> and what not. Needless to say, in either case, I end up ruining my photos. Also, for the ones sharing the frame with me. I just can't help it.</p>
+<p>Also, are the concepts like '<strong>angle</strong>', '<strong>correct profile</strong>', real? I think I look the same from all sides.</p>
+<p><img alt="Awkwardness while getting clicked" src="https://i2-prod.manchestereveningnews.co.uk/incoming/article14444584.ece/ALTERNATES/s615b/409.png" /></p>
+<h2>2. Fake:</h2>
+<p>All of this just looks to <strong>fake</strong> to me. I am not saying that I do not enjoy the moment I am in. The photos just demand too much of that <strong>smile</strong> in order to look <strong>good</strong>. Anything less looks a little <strong>unearthly</strong>, may be <strong>creepy</strong> as well. And I tried to explore and <strong>rewire</strong> my <strong>brain</strong> on this. I started <strong>noticing</strong> the <strong>pictures</strong> of my <strong>friends</strong> who are so good with <strong>pleasant</strong> <strong>expressions</strong> and tried to <strong>replicate</strong>. I even started <strong>observing</strong> what <strong>gets them into this mode</strong>. Are these photos <strong>candid</strong>? Then, I found one case which changed my perception forever.</p>
+<p>I was on a birthday party of one of my friends. Right before someone was going to click her, she <strong>moved</strong> her <strong>arms</strong> in a certain <strong>fashion</strong> and <strong>got back with a huge smile</strong> on her face. She could do this <strong>repeatedly</strong>. I was so shocked because I <strong>admired</strong> that person for <strong>being</strong> (at least looking) <strong>happy</strong> in all her photos. I shared my <strong>distress</strong> with my <strong>spouse</strong> and she said that she knew it all along. She mentioned that that's how <strong>it has always been</strong> for everyone. That incident changed my viewpoint of photography forever. I can't fake to an extent to give others a FOMO/anxiety. Just not fair.</p>
+<p><img alt="Hating photography because its fake" src="https://pandatechie.in/wp-content/uploads/2021/02/1-14.jpg" /></p>
+<p>Apart from that, this incident <strong>questioned</strong> my <strong>intellect</strong> and <strong>knowledge</strong> of the <strong>real</strong> <strong>world</strong>. I have been so <strong>noob</strong> in <strong>social</strong> <strong>matters</strong> that I was the only one to whom this came as a shock. Sad!</p>
+<h2>3. Being in the Moment:</h2>
+<p>I don't think we talk about this enough. I believe your <strong>eyes</strong> are the one of the greatest <strong>assets</strong> god gave you. And you chose to <strong>relish</strong> a <strong>moment</strong> <strong>through a 6" screen</strong>? No camera whatsoever can capture the <strong>setting</strong> <strong>sun</strong>, the <strong>snow</strong> <strong>covered</strong> <strong>peaks</strong> and <strong>euphoria</strong> of a <strong>concert</strong>, the way your eyes can.</p>
+<p><img alt="" src="https://visitkochijapan.com/image/rendering/banner/155/trim.2000/2000/1000" /></p>
+<p>So may be <strong>keep that phone aside</strong>, for a moment <strong>quit thinking about social validation</strong> the photo will garner, and <strong>immerse yourself</strong> in the experience? No one? Call me old but my entire focus is on <strong>painting a stronger and everlasting picture</strong> of the view in my brain. There are tons of photos on the internet any way in case you want to recollect a picturesque scenery.</p>
+<h2>4. My Food, Hunger and Photography:</h2>
+<p>I am totally up for culinary arts and <strong>acknowledge</strong> the <strong>effort</strong> that goes behind making the food <strong>tasty and visually appealing</strong> as well. But in the end, it is meant to be <strong>eaten</strong>. Do you go to restaurant when you're not hungry? No right? Similarly, I decide to <strong>dine</strong> <strong>in</strong> with a totally <strong>empty stomach</strong>. With all the <strong>aroma</strong> and <strong>food</strong> around you, it's really <strong>hard</strong> to wait. And when the moment finally arrives, someone just <strong>slaps the back of your hand</strong>. The hand that was reaching out for that cheese loaded nacho.</p>
+<p><img alt="" src="https://nrai.org/wp-content/uploads/2017/12/eaters-collective-129481-759x500-660x400.jpg" /></p>
+<p>Thus begins a <strong>stream</strong> of "<strong>kaching-kaching</strong>" and you are just sitting there like a fool waiting for all this to end. Defeats the very purpose you were there for. You can see it, right there, but can't eat it.</p>
+<h2>5. Selfies:</h2>
+<p>My hate for photography won't hit the <strong>Nirvana</strong> before <strong>venting</strong> <strong>out</strong> on the most <strong>toxic</strong> form of photography: <strong>Selfies</strong>. Nothing says that you are <strong>self obsessed</strong> more than a selfie.</p>
+<blockquote>
+<p>Our insanity has been driving the smartphone industry and front facing cameras for years now. There are songs written about it, filters dedicated to feed your insecurities and tools like a selfie stick for god's sake to keep you intrigued.</p>
+<p><a href="http://twitter.com/share?&amp;text=Our%20insanity%20has%20been%20driving%20the%20smartphone%20industry%20and%20front%20facing%20cameras%20for%20years%20now.%20There%20are%20songs%20written%20about%20it%2C%20filters%20dedicated%20to%20feed%20your%20insecurities%20and%20tools%20like%20a%20selfie%20stick%20for%20god's%20sake%20to%20keep%20you%20intrigued.%20&amp;url=https://pandatechie.in/2021/02/27/I-Hate-Photography/">Tweet</a></p>
+</blockquote>
+<p>We probably <strong>glorified</strong> <strong>narcissism</strong> with the advent of selfies. People also caught into hype of obnoxious trends with the rise in popularity of the selfie culture</p>
+<ul>
+<li>The duck face <strong>selfie</strong></li>
+<li>The gym <strong>selfie</strong>.</li>
+<li>The #nomakeup <strong>selfie</strong>.</li>
+<li>The belfie.</li>
+<li>The bathroom <strong>selfie</strong>.</li>
+<li>The “I'm asleep” <strong>selfie</strong>.</li>
+<li>The "pout" <strong>selfie</strong>.</li>
+</ul>
+<p><img alt="" src="https://images.theconversation.com/files/196042/original/file-20171123-6020-aa3n9n.jpg?ixlib=rb-1.1.0&amp;rect=0%2C0%2C6720%2C3611&amp;q=45&amp;auto=format&amp;w=496&amp;fit=clip" /></p>
+<p>Of course it is <strong>harmless</strong> and doesn't bother anyone. But so is <strong>Dhinchak Pooja</strong>. So you take a call. People are already undergoing <strong>medical procedures</strong> to change the way they look. And before that takes an even worse route, someone has to put an end to this.</p>
+<h2>Conclusion:</h2>
+<p>The more I think about it, more <strong>concerned</strong> I get. I wonder how the <strong>upcoming</strong> <strong>generations</strong> are going to react to this. Are we going to <strong>do away with the physical experiences</strong> totally and lead a purely <strong><a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">digital</a></strong> life? Time will tell. Until then, I am better off without the photos.</p>
+<p>Do you also feel the same way or am I just overreacting?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

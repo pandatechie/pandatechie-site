@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Cryptocurrency Journey: How it all began? | Raghav</title>
+<meta name="description" content="We talk a lot about cryptocurrency on this blog. More so, lately. We'll come to the 'why' aspect of this change shortly in this blog. Before that, I wanted to s…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">My Cryptocurrency Journey: How it all began?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-07-10</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-07-10 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.paulekman.com/wp-content/uploads/2018/07/guilt-1280x720.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>We talk a lot about <strong>cryptocurrency</strong> on this blog. More so, lately. We'll come to the '<strong>why</strong>' aspect of this change shortly in this blog. Before that, I wanted to share my <strong>motivation</strong> behind writing this post. So, yesterday, I attended a 3 hour <strong>workshop</strong> on <strong>cryptocurrencies</strong> and <strong>blockchain</strong>. The workshop was conducted by <strong>Mr. Ajeet Khurana, Ex- CEO, <a href="https://pandatechie.in/2021/04/30/zebpay-a-crypto-phoenix-story/">Zebpay</a></strong>.</p>
+<p>There was something that caught my <strong>attention</strong> even more than the <strong>contents</strong> of the <strong>workshop</strong>. It was a <strong>poll</strong> that host ran before initiating the session. And those two questions are given below:</p>
+<p>https://poll.fm/10877412</p>
+<p>https://poll.fm/10877416</p>
+<p>While you can share your understanding level of cryptos with me, I would go ahead and reveal the <strong>demographics</strong> of the workshop. <strong>83% of the people rated themselves between 0-3 when it came to the knowledge about cryptocurrencies.</strong></p>
+<p>However, when these people were asked if they are invested in the the cryptocurrencies, <strong>only 19% of the audience was not invested</strong>. In effect, <strong>more than half</strong> of the audience was a part of this admitted to <strong>investing</strong> in <strong>crypto</strong> while having subpar knowledge about it. FOMO is indeed real my friend.</p>
+<p>But who am I to judge them? <strong>I myself was a part of this clan not so long ago</strong>. So where did I start? Have I made profits or a loss so far? Let's dive deeper in this today.</p>
+<p><img alt="" src="https://www.paulekman.com/wp-content/uploads/2018/07/guilt-1280x720.jpg" /></p>
+<h2>My Unflinching Fandom:</h2>
+<p>If you are an avid reader of this blog, this may not come as a surprise to you but I admire <strong>Elon Musk</strong> a lot. There's hardly any news about him that I miss. And rightly so. The man picks up earth shattering projects like:</p>
+<p><strong>Tesla</strong>: No introduction needed</p>
+<p><strong>Starlink</strong>: Where he plans to send out <strong>40000+ satellites</strong> (12,000 already sent up there) in the space to provide internet access to remotest parts of the world.</p>
+<p><strong>Neuralink</strong>: In this one, he is trying to make implantable brain-machine interfaces a reality. The first step towards making <strong>bio modified, supercharged version of</strong> humans.</p>
+<p><strong>SpaceX</strong>: Making <strong>space</strong> <strong>travel</strong> for <strong>civilians</strong> <strong>a</strong> <strong>reality</strong> using reusable rockets.</p>
+<p><img alt="" src="https://ih1.redbubble.net/image.1005461142.0092/st,small,845x845-pad,1000x1000,f8f8f8.jpg" /></p>
+<p>This is just a glimpse of it. So, when he lately started talking about <strong>cryptocurrencies</strong> on his Twitter account, I immediately got interested. As soon as he talked about a crypto called <strong>doge</strong>, the prices went up. So, riding on the back of our beloved FOMO, <strong>I opened an account with a famous crypto exchange</strong> and purchased <strong>Dogecoin</strong> worth of <strong>Rs. 5000</strong>.</p>
+<h2>And Then?</h2>
+<p><strong>Dogecoin was priced at Rs. 4</strong> at that time. Days passed and the price didn't fluctuate much. My 5000 would become 6,000 one day and come back to 4,000 the other. It was all sweet and fine until one day; Musk tweeted something about Doge and the prices went <strong>berserk</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/image-5.png" /></p>
+<p>The <strong>doge jumped to Rs. 32 within 48 hours of that tweet</strong>. That is an <strong>8x return</strong> on my investment within <strong>20 odd days</strong>. And as I realized that I have had more than I could chew, I decided to <strong>sell off my holdings</strong>. Of course I made a sweet profit with that sum and the story ended happily for me.</p>
+<p>For everyone else's reference, <strong>Doge also touched Rs. 56</strong> a few days later which could have given me a 14x return, but I was satisfied with my decision.</p>
+<h2>The Boasting Period and The Moment of Truth:</h2>
+<p>Stoked by my <strong>gargantuan</strong> returns, there began an era of <strong>bragging</strong>. I would talk to <strong>everyone</strong> about it. My friends, colleagues, family etc. This was that moment of <strong>pride</strong> where a <strong>well informed investment decision</strong> (in my head at least) paid off.</p>
+<p>During one such <strong>swanky session</strong> over a dinner with a few friends, I brought this topic up. Everything went as per the plan. However, as soon as they left our place, my wife pointed out something.</p>
+<p><img alt="" src="https://i.ytimg.com/vi/TlZQuoTUzcg/hqdefault.jpg" /></p>
+<p>She asked me a very innocent question. "<strong>Raghav, What is Dogecoin?"</strong>. While I was gathering some words to put it in a sentence, she continued. <strong>"If you don't know what it is, I think you stood an equal chance of losing all your money. It was a mere fluke that you made a decent return"</strong></p>
+<p>Now I am generally very <strong>loquacious</strong>. But this time, someone had <strong>waged</strong> a <strong>war</strong> against my <strong>ego</strong>. And they weren't wrong at all. I pondered over the words coming out of a <strong>passive investor</strong>- my wife. How could I go wrong with this one?</p>
+<h2>Finally:</h2>
+<p>The next day, the first thing I <strong>googled</strong> in the morning while doing my daily business was about <strong>Dogecoin</strong>. And that is when I understand that I invested in something called <strong>"Shitcoin"</strong> in crypto lingo. For the <strong>non crypto readers</strong>, it is something that has no <strong>underlying use case</strong> attached to it. It is essentially based on a <strong>troll</strong>, a <strong>meme, hype</strong>.</p>
+<p>That's when I was completely awestruck. This could have actually gone either way. Not that I feared losing 5k, I could have <strong>potentially put in much more once I got the taste of the success</strong> (getting lucky in reality)</p>
+<p>So, that's when I doubled down on this niche. Created a separate <strong>category</strong> on my <strong>blog</strong>, turned my <a href="http://instagram.com/thepandatechie">Instagram</a> into full blown <strong>crypto gyaan classroom</strong> and read as much as I could.</p>
+<p><img alt="" src="https://media.tenor.com/images/965c49a71e2f0b118268b017123cb5ac/tenor.gif" /></p>
+<p>At one point, I was spending up to <strong>4 hours a day</strong> simply going through crypto related resources.</p>
+<h2>Conclusion:</h2>
+<p>After months and months of crypto training, I still feel that I have touched the tip of the iceberg. Let's take this up using numbers. <strong>How many cryptocurrencies have you heard of?</strong> 5? 10? Okay may be 20 if you read about it. Do you know how many are actually there in the world? The number is to the <strong>north of 10,500</strong>.</p>
+<p>Yup. So even if we discuss one coin/token everyday, it will take us 28 years to end get done with.</p>
+<p>While I don't intend to do that, there is a lot more in store. So stay tuned. Have a burning question?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Crypto Year of 2022: Trends and Predictions | Raghav</title>
+<meta name="description" content="Ah! What a time to write this one eh? I know I am a little late to the party for a post like this. But hey, for those of you who predicted a magical 2022 with a…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span> <span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Crypto Year of 2022: Trends and Predictions</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-01-25</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-01-25 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://static.news.bitcoin.com/wp-content/uploads/2017/10/Russia-to-Block-Access-to-Cryptocurrency-Exchange-Websites.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Ah! What a time to write this one eh? I know I am a little late to the party for a post like this. But hey, for those of you who <strong>predicted</strong> a <strong>magical</strong> <strong>2022</strong> with all cryptos going to the <strong>moon</strong>, we've seen <strong>bloodshed</strong> in the past couple of days now. So, this ideally is the <strong>moment</strong> to take this with a <strong>pinch</strong> of <strong>salt</strong> and add some <strong>rationality</strong> to your <strong>vision</strong> of cryptoverse. As a result, in this blogpost, I am going to cover some general trends which will hold the <strong>centerstage</strong>. We'll also cover some <strong>predictions</strong> along the way. Let's begin: Crypto trends of 2022.</p>
+<h2>The Red Weekend:</h2>
+<p>Before we dive deeper into the future, a quick <strong>glimpse</strong> of what's happening in the <strong>marketing</strong> over this <strong>weekend</strong>. In that past 4 days, <strong>BTC</strong> has dipped more than <strong>25%</strong> and the entire market has lost about <strong>$1T</strong> in <strong>valuation</strong>. Crazy right? Key reasons for this?</p>
+<ul>
+<li><strong>Russia</strong> is likely to take the <strong>China</strong> <strong>route</strong> when it comes to <strong>cryptocurrency</strong>, and implement a total <strong>ban</strong>. Since a lot of <strong>mining</strong> is dependent on <strong>cold</strong> <strong>weathers</strong> of Russia, this is considered as a <strong>bad</strong> <strong>news</strong>.</li>
+</ul>
+<p><img alt="" src="https://static.news.bitcoin.com/wp-content/uploads/2017/10/Russia-to-Block-Access-to-Cryptocurrency-Exchange-Websites.jpg" /></p>
+<ul>
+<li>US fed has indicated that <strong>interest</strong> <strong>rates</strong> are likely to be <strong>increased</strong> in this year to a tune of 3x. Allow me to explain this:</li>
+<li>Whenever there is an <strong>economic</strong> <strong>slow</strong> <strong>down</strong> (like Covid), <strong>governments</strong> <strong>print</strong> <strong>more</strong> <strong>money</strong> to <strong>pump</strong> into the system. <strong>Borrowing</strong> <strong>rates</strong> are <strong>slashed</strong> <strong>down</strong> and banks are <strong>encouraged</strong> to <strong>lend</strong> more.</li>
+<li>Expectation is that this will make <strong>corporates</strong> <strong>borrow</strong> <strong>more</strong>, <strong>produce</strong> <strong>more</strong>, <strong>sell</strong> <strong>more</strong> and hence economy will get back on it's feet.</li>
+<li>Flip side? <strong>Inflation</strong>. If there's so much money floating around, easily <strong>accessible</strong>, the price of <strong>goods</strong> is likely to <strong>go up</strong>. Why? <em>Because there are now more buyers for same set of items.</em> (production has not increased, you see)</li>
+<li>So when <strong>government</strong> <strong>tames</strong> <strong>inflation</strong> by <strong>increasing</strong> back the <strong>rates</strong>, it is often bad news for money markets. Why? Because the <strong>listed</strong> <strong>companies</strong> aren't getting access to the <strong>easy</strong> <strong>capital</strong> as compared to earlier situation.</li>
+</ul>
+<h2>So What's Next?</h2>
+<p>Instead of focusing on the money aspect of crypto and trading stuff, let's zoom out today and see if there is a <strong>general trend</strong> which can be <strong>monetized</strong>. Now that reality has hit each of us real hard, I think it's time to talk about the narratives doing the rounds, in detail. So let's start with the biggest ones of 2021 and take it from there:</p>
+<h3>A. NFTs:</h3>
+<p>People managed to generate life changing wealth using NFTs in 2021. From generative art to digital art pieces, everything was selling.</p>
+<p>In 2022, my prediction is that <strong>PFP (profile picture)</strong> and <strong>flex</strong> related projects will <strong>mellow</strong> <strong>down</strong>. There is just too much hype and it would fade away soon. Even more so, after the crash.</p>
+<p>Does that mean it's an end for NFTs? Hell no! <em>NFTs are going to be a way of living in 5 years from now.</em> Everything would be tied to this. As a result, projects that are offering something <strong>tangible</strong> (utility based) will <strong>flourish</strong>.</p>
+<p><img alt="" src="https://media1.giphy.com/media/1gbqIc1fK8QgR3bHL7/giphy.gif" /></p>
+<blockquote>
+<p>Here's a quick example of the same: My wife recently baked a Bitcoin themed cake for my birthday. I put the photo of that cake as NFT on <a href="https://pandatechie.in/2022/01/03/the-birthday-nft-yet-another-use-case/">OpenSea</a>. The holder of the <a href="https://pandatechie.in/2022/01/03/the-birthday-nft-yet-another-use-case/">NFT</a> gets four cakes for free in 2022.</p>
+</blockquote>
+<p>Coming to some more popular examples like <a href="https://pandatechie.in/2021/12/27/lakshmi-nft-by-zionverse-indian-mythology-based-nfts/">Lakshmi NFT</a>, where the holder is entitled to a fixed interest rate per month varying between 18% to 108%.</p>
+<p>Some of the key NFT projects you can keep an eye on: Trimurti NFTs by <a href="https://pandatechie.in/2021/12/27/how-to-buy-lakshmi-nft-by-zionverse-risks-and-pitfalls/">Zionverse</a>, <a href="https://solpunks.com/">SolPunks</a>.</p>
+<h3>B. Metaverse:</h3>
+<p>Another domain that ripped all possible barriers of rationality in 2021 was <strong>Metaverse</strong>. Why? Mainly because one of the <strong>world's largest web2</strong> company, <strong>Facebook</strong> showed interest in this space by rebranding themselves to <strong>Meta</strong>. As a result, all <strong>decentralized</strong> <strong>counterparts</strong> of <strong>Metaverse</strong> immediately hit a <strong>4x</strong> soon after the news.</p>
+<p><img alt="" src="https://venturebeat.com/wp-content/uploads/2021/03/article23-1.jpg?w=1200&amp;strip=all" /></p>
+<p>I expect this to grow even <strong>bigger</strong> in <strong>2022</strong>. Why? Because even <strong>more</strong> <strong>brands</strong> would now jump in. Not necessarily because they <strong>believe</strong> in the <strong>growth</strong> of this space, but because it's a legit <strong>marketing</strong> <strong>opportunity</strong>. Especially when it comes to targeting the <strong>Millennial</strong> and <strong>GenZ</strong> customers.</p>
+<p>Just a couple of days ago, <em>Microsoft acquired Activision</em>, a gaming company to build it's own Metaverse. This was largest acquisition in the history worth <strong>$68bn</strong>.</p>
+<p>I expect a lot more of this happening. Either companies would start building their own version of Metaverse or joining bigger Metaverses.</p>
+<p>My bets are on the projects like <strong>Sandbox</strong>, <strong>Decentraland</strong> and <strong>Enjin</strong>. The land sales being a key part of these investment.</p>
+<h3>C. Web3</h3>
+<p>Web3 is the bigger <strong>umbrella</strong> of the <strong>cryptoverse</strong>. As crypto markets go mainstream, people will tend to move away from <strong>speculation</strong> and start <strong>exploring</strong> the actual <strong>dApps</strong> before investing in one. Apart from that <strong>privacy concerns</strong> will continue to drive people to apps developed on web3 business models.</p>
+<p><img alt="" src="https://livecodestream.dev/post/web3-intro-for-devs/featured.jpg" /></p>
+<p>If you are unsure how web3 helps people in ownership and privacy of their data, here's a post I wrote on <a href="https://pandatechie.in/2021/11/28/what-is-brave-browser-how-is-it-changing-the-ad-ecosystem/">Brave Browser</a> and <a href="https://pandatechie.in/2021/11/30/web3-0-and-india-the-chingari-pivot/">Chingari</a>. These are the perfect examples of how business models are tweaked to ensure that <strong>decentralization and customer privacy</strong> is of utmost importance while maintaining the <strong>profitability</strong>.</p>
+<p>In 2022, following projects are like to create ripples when it comes to web3:</p>
+<ol>
+<li>Arweave (AR)</li>
+<li>Audius (AUDIO)</li>
+<li>Basic Attention Token (BAT)</li>
+<li>Bittorent (BTTC)</li>
+<li>Filecoin (FIL)</li>
+<li>The Graph (GRT)</li>
+<li>Helium (HNT)</li>
+<li>Chainlink (LINK)</li>
+<li>Livepeer (LPT)</li>
+<li>Siacoin (SC)</li>
+<li>Theta (THETA)</li>
+</ol>
+<p><img alt="" src="https://messari.s3.amazonaws.com/images/agora-images/CA196C6B-Screen%20Shot%202021-02-02%20at%203.42.36%20PM.png" /></p>
+<h3>D. DAOs:</h3>
+<p><strong>DAOs</strong> or <strong>decentralized autonomous organizations</strong> are the newest narrative of cryptoverse. Think of a <strong>DAO</strong> like a <strong>group</strong> of <strong>people</strong> on the <strong>internet</strong>. Say, a <em>WhatsApp group but with a pool of funds</em>. All the members get to decide where the funds are allocated.</p>
+<p><img alt="" src="https://i2.wp.com/bitcoinke.io/wp-content/uploads/2021/07/DAOs.jpg?fit=640%2C359&amp;ssl=1" /></p>
+<p>Each member is working on their core competency with a <strong>common goal</strong> of DAOs betterment. They grow as the DAO grows. How does it work you ask? Well, in most cases, there is token called the <strong>governance</strong> <strong>token</strong>. Greater the number of <strong>tokens</strong> you <strong>hold</strong>, higher is your <strong>voting</strong> <strong>power</strong> in the DAOs decisions.</p>
+<p>Anyone can raise a proposal and people vote on it to decide the DAOs future.</p>
+<p>I believe that <strong>DAOs</strong> will soon become a <strong>narrative</strong> of <strong>interest</strong> for the <strong>entire</strong> <strong>industry</strong> in 2022. People will start creating and joining DAOs real soon.</p>
+<p>Top projects that are working as DAOs are <strong>Uniswap, Aave, MakerDAO, CurveDAO</strong> etc.</p>
+<h3>E. DeFi</h3>
+<p><strong>Decentralized</strong> <strong>Finance</strong> has always been the <strong>dark</strong> <strong>horse</strong> of <strong>crypto</strong> <strong>industry</strong>. I feel that <strong>DeFi</strong> is slightly more complicated and hence boring for a lot of people. Non sexy part of crypto industry, if I may. Which is why, it often doesn't get hyped as much as NFTs and Metaverse projects do.</p>
+<p>Don't believe me? <em>TVL (total value locked) of DeFi protocols moved from 18bn in December 2020 moved to 250bn in December 2021</em>. But you won't find that in headlines. <strong>It's not as raunchy as an ape jpeg selling for a million dollar</strong>.</p>
+<p><img alt="" src="https://miro.medium.com/max/8000/1*CC16-qoN5ow2E3mdQUl3Qg.png" /></p>
+<p>My prediction is that DeFi would show exponential growth in 2022 as well. <em>My rationale behind this is that a large chunk of people got exposed to crypto for the first time in 2021. These people would now exit centralized exchanges and venture deeper into DeFi space.</em></p>
+<h2>Conclusion:</h2>
+<p>In a nutshell, short term crashes are inevitable. But if you keep a long enough horizon and invest for a period of 4-5 years, crypto industry will reward your patience. I don't know about individual projects, but blue chips like BTC, ETH, SOL etc. are here to stay. So is blockchain and web3 revolution. Think big and stay calm.</p>
+<p>And most importantly, keep learning. Got questions?</p>
+<p>https://www.instagram.com/p/CY_yrp0vhZw/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

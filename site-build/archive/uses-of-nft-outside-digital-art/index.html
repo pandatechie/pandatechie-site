@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uses of NFT Outside Digital Art | Raghav</title>
+<meta name="description" content="We realize the fact that no matter how hard we try, some people still cannot wrap their heads around the fact that someone is paying millions of dollars for a m…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Uses of NFT Outside Digital Art</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-03-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-03-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://assets.website-files.com/5e2ec83c2ca1f7312b1ab1bd/5e680905d387907de16b20d8_provenance-logo.svg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>We realize the fact that no matter how hard we try, some people still cannot <strong>wrap</strong> their heads around the fact that someone is paying <strong>millions</strong> of dollars for a <strong>monkey</strong>. And to be honest, we don't blame you. Art is an extremely <strong>subjective</strong> topic. Hence the phrase, "<strong>Beauty</strong> lies in the eyes of the <strong>beholder</strong>." But at the same time, we have been vouching for the uses of <strong>NFT</strong> outside digital art.</p>
+<p>We agree that initial use cases are <strong>amorphous</strong> and <strong>frugal</strong> at best. But the advent of <strong>NFTs</strong> is all set to change the way we <strong>interact</strong> with the world. For all we know, <strong>Blockchain technology</strong> can power the next <strong>industrial revolution</strong>. It seems like a tall claim for a <strong>technology</strong> that is currently being put to use to buy <strong>pixelated</strong> characters. But trust us, by the end of this post, you would have a very <strong>fair idea</strong> of how powerful <strong>NFTs</strong> are.</p>
+<h2>What Makes NFTs Powerful?: A Recap</h2>
+<p>At <strong>Nas Academy</strong>, we have have been talking about <strong>NFTs</strong> for a while now. But for the uninitiated, here are a few inherent properties of <strong>NFTs</strong> that make them extremely powerful tools for <strong>innovation</strong>.</p>
+<h3>A. NFTs are Unique:</h3>
+<p>Each <strong>NFT</strong> is represented by an address and an owner of that address on the <strong>Blockchain</strong>. This makes each NFT completely unique as one address would hold one <strong>NFT</strong> only.</p>
+<p>As we would explore in the upcoming sections, uniqueness gives <strong>NFTs</strong> a lot of usability. One could use them in identity <strong>resolution</strong>, <strong>ownership</strong> etc.</p>
+<h3>B. NFTs are Non Interchangeable:</h3>
+<p>The term '<strong>non-fungible</strong>' highlights this property of <strong><a href="https://pandatechie.in/2022/03/20/how-to-mint-nft-on-opensea/">NFTs</a></strong>. Once again, this creates a whole variety of use cases for <strong>NFTs</strong> to take lead in. For example, <strong>concert tickets</strong>, music rights etc. Read on as we expand on to these use cases shortly.</p>
+<h3>C. NFTs are Traceable:</h3>
+<p>Because <strong>NFTs</strong> are nothing but immutable records on the <strong>Blockchain</strong> (<strong>Ledger</strong>), they hold a very strong proposition to act as a <strong>proof of ownership</strong>. One can always prove the ownership of an asset along with other details such as date and time of ownership transfer etc. through <strong>blockchain</strong>.</p>
+<p>This could be extremely handy to tackle <strong>plagiarism</strong> on digital content. One could prove that they came up with a digital piece of content before any one else if it were on the <strong>Blockchain</strong>.</p>
+<h3>D. NFTs Can Be Programmed:</h3>
+<p><strong>NFTs</strong> are programmable by the very nature of it. One can simply code a set of pre conditions and <strong>NFTs</strong> will abide by them at any <strong>cost</strong>. This could be as simple as <strong>fetching royalty</strong> whenever a <strong>digital piece</strong> is sold to a secondary or tertiary buyer OR something as complicated as our <strong>imagination</strong>.</p>
+<h2>Uses of NFT Outside Digital Art:</h2>
+<p>With the above <strong>explanation</strong> out of the way, we are good to dive deeper into various applications of <strong>NFT</strong> technology in the <strong>real world</strong>. A lot of these applications are already deployed in the <strong>real life scenarios</strong> and people are <strong>leveraging</strong> them for good. On the other hand, we are only limited by our <strong>imagination</strong> when it comes to putting <strong>NFTs</strong> to use. Therefore, use cases below is still a <strong>developing story</strong> and may include many more uses as we evolve:</p>
+<h3>A. Proof of Authenticity:</h3>
+<p>Since <strong>Blockchains</strong> can permanently store information on the <strong>distributed ledger</strong>, it is an extremely good way of tagging physical products with it so that it can we can verify the <strong>authenticity</strong> of these products. Below are a few examples of some industries that can use this:</p>
+<h4>A.1. Fashion Industry:</h4>
+<p><strong>Fashion industry</strong> is plagued with <strong>plagiarism</strong> and fake products. It is extremely difficult for someone to validate if they are purchasing an authentic product or not.</p>
+<p>This problem can be solved by issuing an <strong>NFT</strong> that is tagged with the physical product. That way, anyone could go to a <strong>blockchain explorer</strong> and find out if the product is real or not.</p>
+<p>On a similar note, <strong>NFTs</strong> could also prove the rarity of <strong>luxury items</strong>. For example, if a fashion brand claims that only 3 pieces of a limited edition shoes are made, one could actually vet if the piece they're considering is one of them or a <strong>counterfeit</strong>.</p>
+<h4>A.2. Watches and Luxury Items:</h4>
+<p><strong>NFTs</strong> can safeguard the interests of a buyer while purchasing a <strong>luxury item</strong> in the <strong>secondary marke</strong>t. For example, watches accrue value as they get older. However, one risk associated with purchasing used watches is of authenticity.</p>
+<p>Now a brand could issue an <strong>NFT</strong> along with the physical watch. As a result, buyer would also demand the transfer of <strong>NFT</strong> along with the physical watch. This way, he could check and validate if it is a legit purchase or not.</p>
+<h3>B. Provenance:</h3>
+<p>Another corollary of '<strong>Proof of Ownership</strong>' could be the Provenance. It might be important in some use cases to track the origin of a product. For instance, some people might want to make sure that they are not wearing clothes made out of <strong>cotton harvested unethically</strong>.</p>
+<p><img alt="" src="https://assets.website-files.com/5e2ec83c2ca1f7312b1ab1bd/5e680905d387907de16b20d8_provenance-logo.svg" /></p>
+<p>Similarly, they might want to validate if the grapes used in their wine are sourced from <strong>Napa Valley</strong>.</p>
+<p>Alternatively, it may be of importance to check if the <strong>diamonds</strong> used in their beloved jewelry are not the <strong>notorious blood diamonds</strong>.</p>
+<p><strong>NFTs</strong> can be really handy in all such use cases. A <strong>QR code</strong> storing all their data on the <strong>Blockchain</strong> could instantly reveal the entire journey of the product from farm to plate.</p>
+<h3>C. Real Estate:</h3>
+<p><strong>NFTs</strong> and real estate are a match made in heaven. <strong>NFTs</strong> hold so much potential in real estate industry to boost the speed, save time, effort in the transactions. Let us unfold this potential:</p>
+<h4>C.1: Escrow:</h4>
+<p>Currently, you mandatorily need a bank or <strong>government organization</strong> as an escrow to make sure that you are not defrauded during your <strong>transaction</strong>. The lack of trust is at its peak between the two transacting parties. To avoid this chicken and egg situation, one can create an <strong>NFT</strong> and code the terms of the agreement within them. This way, as soon as the payment will reflect in the <strong>seller's account</strong>, the rights of the property will be <strong>automatically transferred</strong> to the buyer.</p>
+<h4>C.2: Speed:</h4>
+<p>A few days ago, on 10th February, 2022, a house in <strong>Florida</strong> was auctioned for <strong>210 ETH</strong> ($6,54,309.60). This winner of this auction was awarded an <strong>NFT</strong> which acted as a proof of ownership to the property. Imagine the <strong>bureaucracy</strong> and paper trail it managed to cut through.</p>
+<h4>C.3: Tokenization:</h4>
+<p>There are some <strong>legendary properties</strong> in posh areas of metro cities that are just out of the reach of a retail investor. As a result, it reduces liquidity related to that property. But now, with <strong>NFTs</strong>, one could <strong>tokenize</strong> such properties and sell fragmented pieces of it to the interested individuals.</p>
+<p>This way, <strong>smaller investors</strong> could make a buck when the real house is actually sold at a higher price. From a <strong>seller's</strong> perspective, it gives them access to instant <strong>liquidity</strong> and also the ability to command higher prices.</p>
+<h3>D. Sports and Event Tickets:</h3>
+<p>Ever duped into purchasing <strong>fake tickets</strong> to a concert? Ever been a victim of <strong>exorbitant</strong> prices due to hoarders purchasing tickets in <strong>bulk</strong>?</p>
+<p>Well, if you observe closely, even tickets are <strong>non fungible</strong>. We book a certain seat in a theatre/stadium for a reason. We can’t just swap it with any <strong>other ticket</strong>. Therefore, it makes sense to use <strong>NFTs</strong> as tickets. One could check the <strong>authenticity</strong> of those tickets through immutable records on <strong>blockchain</strong>. This would also prevent someone from accessing multiple tickets as the ownership is digitally verified instead of physical copies.</p>
+<h3>E. Gaming and NFTs:</h3>
+<p>This may not make any sense for an average joe, but for those who <strong>love gaming</strong>, it is an extremely important use case. There are games like fortnight where you can buy add on weapons, skins for your character right? But the design has some inherent drawbacks:</p>
+<p><strong>A. Centralization:</strong> Whenever the <strong>creators</strong> of the game want, they can get rid of your favorite <strong>skin/weapon</strong>. <strong>NFTs</strong> can take away that control and give you the <strong>real ownership</strong> of your <strong>assets</strong>.</p>
+<p><strong>B. Trading:</strong> What if you could earn an in <strong>game asset</strong> with your skill and later trade it with newbies? <strong>NFT</strong> enables just that. Thus giving rise to a whole new era of <strong>play to earn</strong>.</p>
+<p>Similarly, there are <strong>games</strong> where your character virtually travels in a <strong>digital world</strong>. You can now own a <strong>piece of land</strong> in that world. Just like real world, it may appreciate in value over a period of time.</p>
+<h3>F. Certifications and Validation:</h3>
+<p>All key organizations could issue certificates as <strong>NFTs</strong>. This could lead to multiple benefits like:</p>
+<ul>
+<li>No need to create, seal, ship and store the physical, <strong>fragile certificates</strong>. It is there on the blockchain at your perusal. Always.</li>
+<li>Anyone who needs to validate your <strong>certifications</strong> (HR, Auditors, Universities) could simply access the Blockchain and find out your achievements. They need not double check it either because <strong>Blockchain</strong> <strong>technology</strong> has your back.</li>
+</ul>
+<h2>What Else?</h2>
+<p>As mentioned above, the use cases of <strong>NFTs</strong> are only limited by your imagination alone. This could take any shape <strong>dependent</strong> on the context you put it into. Do you want to really cut through the noise and try NOT missing this <strong>revolution</strong>?</p>
+<p>Well, keep on following us to stay up to date! For now, if you have any questions, let us know.</p>
+<p>https://www.instagram.com/p/CazXm1Pv0aj/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

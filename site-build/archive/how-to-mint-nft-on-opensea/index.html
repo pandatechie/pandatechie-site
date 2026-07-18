@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Mint NFT on OpenSea? | Raghav</title>
+<meta name="description" content="$5 Billion. No, that is not the GDP of Maldives for the past year. It is the volume of NFTs traded on Opensea in the month of January. With NFT craze refusing t…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Mint NFT on OpenSea?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-03-20</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-03-20 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2022/03/image-4.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>$5 Billion. No, that is not the <strong>GDP</strong> of <strong>Maldives</strong> for the past year. It is the <strong>volume</strong> of <strong>NFTs traded</strong> on O<strong>pensea</strong> in the month of January. With <strong>NFT</strong> craze refusing to mellow down, Public blockchain data collected by <strong>Dune Analytics</strong> shows that <strong>OpenSea</strong> had more than <strong>$4.95 billion</strong> of Ethereum trading volume in January, plus over <strong>$79 million</strong> on <strong>Polygon</strong>, a sidechain scaling solution for <strong>Ethereum</strong>. Both are single-month records for each respective platform. At an industry level, <strong>NFT</strong> market has grown from <strong>$350M</strong> from a measly <strong>$15M</strong> just an year ago.</p>
+<p>Getting <strong>FOMO'd</strong> already? Don't worry. Today we plan to equip you with the art of minting an <strong>NFT</strong> on <strong>OpenSea</strong>. By the end of this post, you would be able to come up with your first NFT on the most famous NFT marketplace in the industry. How to mint <strong>NFT</strong> on <strong>OpenSea</strong>. Let's get started.</p>
+<h2>What Are NFTs and Why Should You Learn About Them:</h2>
+<p>NFTs stand for <strong>non fungible tokens</strong>. These are <strong>non-interchangeable</strong>, unique records on the <strong>Blockchain</strong> that cannot be changed by anyone at will. This makes it an extremely powerful tool to validate the <strong>proof of ownership</strong> and authenticity.</p>
+<p>With immense potential and possibilities, various brands have fiddled with the idea of <strong>NFTs</strong> lately. For example, Nike acquired <strong>RTFKT</strong>, which is a company that manufactures digital shoes. Adidas did a collaboration with BAYC or <strong>Bored Ape Yacht Club</strong>.</p>
+<p>These gives us a fair indication that <strong>NFTs</strong> are here to stay. Its use cases may evolve over a period of time but the concept is not going anywhere, anytime soon.</p>
+<h2>What is NFT Minting?</h2>
+<p>This question comes across quite often. It is asked what is the difference between creating and <strong>minting</strong> an NFT. <strong>Minting</strong> is the process of <strong>tokenization</strong> of an asset using <strong>cryptography</strong>. In simpler terms, it is the process of creating a token that represents a <strong>digital asset</strong> (image, music, text etc.) so that it can be moved, stored and recorded on a <strong>Blockchain</strong>.</p>
+<p>When someone talks about creating an <strong>NFT</strong>, they are referring to the <strong>creation of the asset</strong> (image, music etc.). So, <strong>minting</strong> is the <strong>next step</strong> in series after creation of an <strong>NFT</strong>.</p>
+<p>There are multiple platforms out there that allow users to <strong>mint NFTs</strong>. Some of the key examples are <strong>Rarible, WazirX Marketplace</strong> etc.</p>
+<p>However, in this blogpost, we would discuss the marketplace with highest trading volume: OpenSea.</p>
+<h2>What is OpenSea and Why You Should DYOR Before Minting NFTs:</h2>
+<p><strong>OpenSea</strong> is the largest marketplace in the <strong>NFT</strong> space by trading volume. It connects the potential buyers with the digital art sellers. Although the frenzy makes one feel that they can millions by creating useless NFTs, one should note that currently the supply is way higher than the demand.</p>
+<p>The idea here is to inform you that if you plan to trade <strong>NFTs</strong>, you might need a strong research to back up your decisions. Apart from that, creating <strong>NFTs</strong> isn't just about putting them on a <strong>marketplace</strong>. As you would notice through this <strong>blogpost, minting</strong> an <strong>NFT</strong> is not a difficult task. However selling one requires some specific skills as follows:</p>
+<h3>A. Utility:</h3>
+<p>As the madness around <strong>NFT space</strong> takes a backseat, only the <strong>NFTs</strong> with some form of utility will sell in the market. For example, a famous NFT project called <strong>'veefriends'</strong> is created by entrepreneur <strong>Gary</strong> <strong>Vaynerchuk</strong>. On the face of it, these NFTs are hand drawn images of elephant, ant etc.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/03/image-4.png" /></p>
+<p>However, the real utility lies in the fact that these <strong>NFTs</strong> can be used as an entry ticket to annual '<strong>vee</strong>' <strong>conference</strong>. Some of the rare <strong>NFTs</strong> of this collection allow users to have a 1 to 1 session with <strong>Gary</strong> <strong>Vaynerchuk</strong>.</p>
+<p>On the other hand, <strong>NFTs</strong> that do not offer such utility are bound to fail at some point. Something like <strong>crypto punks</strong> might hold on to their value because they were one of the first implementation of <strong>NFT</strong> use case in <strong>digital art</strong>. Other projects that are just replicating them might never see light of the day.</p>
+<h3>B. Marketing:</h3>
+<p>A very big element of <strong><a href="https://pandatechie.in/2022/01/03/the-birthday-nft-yet-another-use-case/">NFT</a></strong> is marketing. You cannot simply list an NFT on <strong>OpenSea</strong> and expect it to sell just like that. The propensity of getting lost in the crowd is way higher if you take that route. A typical <strong>NFT</strong> <strong>project</strong> should have an element of <strong>marketing</strong> and community attached to it.</p>
+<p>Buyers should feel connected to the project and have a common feeling of belongingness to the clan that trusts that NFT project. <strong>Bored Ape Yacht Club</strong> or <strong>BAYC</strong> has completely nailed this aspect of community. These group of holders are so tightly knit together that they conduct offline meetups as well.</p>
+<h3>C. Roadmap:</h3>
+<p>You are unlikely to sell your <strong><a href="https://pandatechie.in/2022/02/26/how-are-crypto-and-nft-different/">NFTs</a></strong> until your <strong>community</strong> is aware of what is in store after you sell your entire collection. Think of <strong>NFTs</strong> like a loyalty card for your project. People will invest in it and stick around only if they see an incremental value of holding that card.</p>
+<p>This could take the shape of <strong>free airdrops</strong> in future, collaborations, share of revenue, entry to a <strong>exclusive community</strong> etc.</p>
+<p>The idea is to build a <strong>long term engagement</strong> rather than just selling and abandoning the project.</p>
+<h2>How to Mint NFT on OpenSea:</h2>
+<p><strong>NFTs</strong> are digital assets stored on <strong>Blockchain</strong>. That is what gives them immense potential. In order to start <strong>minting</strong> an <strong>NFT</strong>, you would need a <strong>decentralized</strong>, <strong>non-custodial</strong> (where ownership lies with you) wallet to get started. There are multiple wallets supported by <strong>OpenSea</strong>, but for this example, we'd use the most common and famous wallet: <strong>Metamask</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/03/image-5.png" /></p>
+<h3>Step 1- Create a Metamask Wallet:</h3>
+<p><strong>Creation of Metamask</strong> wallet is a fairly easy task. Simply head over to the website <strong><a href="http://metamask.io/">metamask</a>.io</strong> and hit the download button. The wallet can be downloaded as a browser extension or mobile application. For this particular tutorial, it is recommended to use a laptop throughout the process. Once you download the <strong>browser extension</strong>, simply follow the instructions of setting up a seed phrase and logging into your wallet.</p>
+<p>NOTE: <em>Make sure that you store this seed phrase in a safe location as losing it would mean losing your crypto.</em></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/03/image.png" /></p>
+<h3>Step 2- Connect Metamask Wallet to OpenSea:</h3>
+<p>First, go to<strong><a href="https://opensea.io/">opensea.io</a></strong>and navigate the top right bar – click on Profile. A new page will appear, prompting you to connect your wallet. Choose <strong>MetaMask</strong>.</p>
+<p><img alt="" src="https://cryptopotato.com/wp-content/uploads/2021/12/img1_nft.png" /></p>
+<p>You’ll go to multiple prompts for granting <strong>OpenSea</strong> the necessary permissions to use your wallet and funds. Next, a signing request will appear, and following the signing in, a “<strong>Connecting</strong>” screen will pop, which will link <strong>OpenSea</strong> to your wallet.</p>
+<p>Once the wallet is connected, you might be prompted to add funds. Please note, that even if you are planning to mint an <strong>NFT</strong> and NOT buy anything, you would need some funds to pay for <strong>gas fees</strong>.</p>
+<h3>Step 3- Create Your First NFT Collection:</h3>
+<p>Now that you have connected your <strong>Metamask wallet</strong>, its time to create your first <strong>NFT collection</strong>. For that, simply hit the 'create' button next to the profile tab as shown in screenshot.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/03/image-1-1024x99.png" /></p>
+<p>Once you hit the '<strong>create</strong>' button you would be asked to sign a transaction on <strong>Metamask wallet</strong>.</p>
+<p>After that, it is an easy task of filling a form. A few items that need a little attention while filling this form are as follows:</p>
+<p>A. <strong>Properties</strong>: Some textual traits that define your <strong>NFT</strong>. This could be gender, age etc.</p>
+<p>B. <strong>Levels</strong>: This makes sense for a collection with different characters. Think of it as <strong>tradeable sports cards</strong> with each card represented by a <strong>unique set</strong> of characteristics like speed, strength and agility.</p>
+<p>C. <strong>Unlockable Content</strong>: To add buzz and excitement around your project, you can add unlockable content which would be revealed once the NFT is purchased.</p>
+<p>D. <strong>Supply</strong>: You can create multiple copies of this NFT as well.</p>
+<p>Once you hit the create button after completing these details, you need to sign another transaction and that is it.</p>
+<p>You have <strong>successfully minted</strong> an <strong>NFT</strong>.</p>
+<h3>Step 4- List it for Selling:</h3>
+<p>Once you <strong>mint</strong> the <strong>NFT</strong>, you can hit the sell button to list it on <strong>OpenSea Market</strong>. Once you hit sell, you can simply quote a price in terms of <strong>ETH, MATIC</strong> or <strong>USD</strong>.</p>
+<h2>So Should I get Started?</h2>
+<p>Well technically yes and no. Why yes? Because you are now well versed with the theory behind creating an NFT. But we would suggest that you first learn how to <strong>evaluate NFTs for trading</strong>. That will give you a deeper context of how to create a successful <strong>NFT project</strong>.</p>
+<p>But hey, this was never a financial advice to begin with. So we'd be rooting for your success anyway.</p>
+<p>Until then, got questions?</p>
+<p>https://www.instagram.com/p/CbHnvt0rhVj/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

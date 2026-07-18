@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Unstoppable Domains? My First NFT Purchase | Raghav</title>
+<meta name="description" content="No. I did not purchase JPEGs of apes. Probably never will. Not because that might be outright illogical but also because I don't understand the art space. Not e…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Unstoppable Domains? My First NFT Purchase</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-12-01</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-12-01 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/12/image-4.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>No. I did not purchase <strong>JPEGs</strong> of <strong>apes</strong>. Probably never will. Not because that might be outright <strong>illogical</strong> but also because I don't <strong>understand</strong> the <strong>art</strong> <strong>space</strong>. Not even close! So what did I purchase? Well, that's primarily the topic of the day. What is <strong>unstoppable domains</strong>? And why did I spent about <strong>$100</strong> purchasing them.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-4.png" /></p>
+<p>Unstoppable domains is simply a <strong>NFT based domain name</strong> provider. Somewhat like you have <strong>GoDaddy</strong>, <strong>Big rock</strong> etc. in <strong>web2.0 space</strong>, we have <strong>ENS</strong> and <strong>Unstoppable</strong> <strong>Domains</strong> in <strong>web3.0</strong>. But hey, <strong>fundamentally</strong>, unstoppable domains are whole <strong>different</strong> beast. We'll explore more on it as we go along this post. But before we jump into the web 3.0 counterparts of domains, let's circle back and understand how <strong>traditional domains</strong> work. It'll give you a <strong>perspective</strong> to <strong>appreciate</strong> the <strong>ethos</strong> of unstoppable domains.</p>
+<h3>How Domain Names Work?</h3>
+<p>Each <strong>website</strong> (basically a computer/server) on the internet has an <strong>IP address</strong>. Each of these <strong>addresses</strong> are <strong>unique</strong> and are referred to reach out to that website.</p>
+<p>For example, Google's IP Address is <strong>172.217.10.14</strong>, <strong>CoinDCX's</strong> IP address is <strong>104.18.28.183</strong>. The problem with these addresses is that they are very <strong>machine oriented</strong> in nature. Say if I would ask you to <strong>remember</strong> 172.217.10.14 instead of <strong><a href="http://google.com">Google.com</a></strong> along with <strong>tons</strong> of other websites that you visit daily, wouldn't it be a huge problem for you or anyone else? It would be a massive <strong>bottleneck</strong> in the <strong>adoption</strong> of <strong>internet</strong>.</p>
+<p><img alt="" src="https://img.webnots.com/2014/03/Open-Website-with-IP-Address.png" /></p>
+<p>Which is why, people came up with <strong>domain</strong> <strong>names</strong>. So whenever you type in "<strong>Google.com</strong>" in your browser, it automatically figures out that this <strong>address</strong> (Google.com) is associated with <strong>IP 172.217.10.14</strong> and takes you there.</p>
+<p>For this to happen, these domain names have to be <strong>registered</strong> in the <strong>Domain Name System</strong>.</p>
+<p><img alt="" src="https://miro.medium.com/max/560/0*6h49NW7bPgwu4AwV.png" /></p>
+<p><strong>DNS servers</strong> are <strong>spread</strong> all over the world, and help <strong>browsers</strong> resolve <strong>domain</strong> names to <strong>IP addresses</strong>. Internet service providers then <strong>connect</strong> users to the <strong>appropriate</strong> <strong>IP</strong> <strong>address</strong>.</p>
+<p>There's a central authority called <strong>'Internet Corporation for Assigned Names and Numbers (ICANN)'</strong> that takes care of this entire <strong>architecture</strong> and <strong>overall</strong> <strong>system</strong>. Before Web3.0 knocked our doors, <strong>ICANN</strong> and <strong>DNS</strong> were the only ways to get a domain.</p>
+<p>The websites like Godaddy or Bigrock that I just mentioned are mere <strong>intermediaries</strong>. They <strong>rent</strong> <strong>out</strong> the domain you chose with ICANN/DNS and give you the <strong>ownership</strong> for a <strong>fixed</strong> <strong>time</strong> <strong>period</strong>. Since these websites don't <strong>own</strong> these domains, you have to <strong>renew</strong> it <strong>periodically</strong> by paying a <strong>fee</strong>.</p>
+<h2>Blockchain and NFT Domains:</h2>
+<p>In the story above, we realize that this <strong>entire</strong> <strong>ecosystem</strong> is managed by <strong>ICANN</strong>. Being a central authority, it can <strong>censor</strong> or <strong>limit</strong> the <strong>usage</strong> of certain domains. As always, we have <strong>blockchain</strong> to the rescue. In this realm, there's no <strong>intermediary</strong>. You <strong>own</strong> your <strong>domains</strong> as an <a href="https://pandatechie.in/2021/09/26/what-is-nft-why-are-nfts-so-valuable/">NFT</a> and the details of this are put in a <strong>public</strong> <strong>registry</strong> (ledger).</p>
+<p>Also, since your ownership is validated through immutable records in the blockchain, these domains can't be <strong>(a)</strong> taken away from you and <strong>(b)</strong> need not be renewed (at least in case of unstoppable domains) because you are now the <strong>owner</strong> and not the <strong>leaser</strong>.</p>
+<h2>Why Unstoppable Domains:</h2>
+<p>At this point, quite a lot of you would be like, "we understand the <strong>decentralization</strong>, <strong>censorship</strong> bit. But why is it <strong>worth a $100</strong>?" This section will specifically talk about the fact why I found <strong>value</strong> in <strong>purchasing</strong> unstoppable domains. Let's go:</p>
+<h3>A. Website Address:</h3>
+<p>That's the key use case here. As <strong>pandatechie</strong> evolves into the <strong>'go to'</strong> <strong>crypto</strong> <strong>blog</strong> for many, it is <strong>imperative</strong> that I <strong>put</strong> my <strong>money</strong> where my <strong>mouth</strong> is. Before someone else could, I wanted to <strong>register</strong> <strong>pandatechie</strong> domains through unstoppable domains. I always say, <em>Bitcoin isn't a currency, it's a movement.</em> And I see myself as the part of that revolution.</p>
+<p><img alt="" src="https://media0.giphy.com/media/rERg78R6dLB7rwDc7u/giphy.gif" /></p>
+<h3>B. Universal Wallet Address:</h3>
+<p>If you venture into the decentralized space you must have come across multiple wallets like <strong>Metamask</strong>, <strong>Trust</strong>, <strong>Phantom</strong> etc. These wallet addresses typically look something like this:</p>
+<p>My <strong>Metamask Wallet Address: 0x8aB4a886AdC5fFD8FAeC3324A303381028FF4f93</strong></p>
+<p>My <strong>Phantom Wallet Address: BK2Wf3ddc7upPCsRwhV1mRhooGMzNUVczxBkDDbJLUaY</strong></p>
+<p>Do you see a <strong>problem</strong> here? Just like early days of <strong>internet</strong>, <strong>IP addresses</strong> were <strong>non-human friendly</strong>, so is the case for these <strong>wallet</strong> <strong>addresses</strong> right now.</p>
+<p><strong>Blockchain</strong> <strong>domains</strong> solve this issue by becoming a <strong>universal</strong> <strong>address</strong> for all your wallets. I have configured my <strong>wallets</strong> in such a way that you can send all key <strong>cryptos</strong> like <strong>BTC, ETH, SOL, LTC, MATIC</strong> etc. to <strong>pandatechie.crypto</strong>.</p>
+<p>I need not open the wallet extension/app to copy my <strong>address</strong> and then share it with you. It's as simple as that.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image.png" /></p>
+<p>Adding different wallet addresses to Unstoppable Domains</p>
+<h3>C. Social Media Handles:</h3>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-5.png" /></p>
+<p>Another cool use case of buying unstoppable domains is that I could very well use my <strong>domain</strong> <strong>name</strong> as my <strong>social media handle</strong> as well. Why? Because I god damn <strong>own</strong> it. At this point, you might ask if the social media platform <strong>recognizes</strong> that <strong>ownership</strong> or not. A short answer is no. But it doesn't matter right? How many of you actually <strong>OWN</strong> the handle you are using on <strong>Twitter</strong>, <strong>Instagram</strong>?</p>
+<h3>D. Cost:</h3>
+<p>One of the key reasons to consider unstoppable domains out of all it's counterparts like <strong>ENS</strong>, was the <strong>cost</strong>. Unstoppable domains start from a <strong>minimum</strong> of <strong>$40</strong>. There is a sale going on currently that would give you a <strong>1+1 offer</strong> on the domains. I purchased a total of <strong>4 domains</strong>.</p>
+<p>On the other hand <strong>ENS are priced almost at the same level</strong> (may be a little cheaper) but they can be <strong>minted</strong> only on <strong>Ethereum</strong> blockchain. Which means that you are likely to pay a <strong>crazy gas fee</strong> while <strong>transferring</strong> the <strong>ownership</strong> of domains.</p>
+<p>Just as an example, here's how a random domain name would cost you on ENS. <strong><em>The gas fee is 15 times the domain name cost.</em></strong></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-1-1024x161.png" /></p>
+<p>On the other hand, you can use <strong>polygon</strong> to mint Unstoppable Domains. Being a L2 solution it costed me <strong>under a dollar</strong> to mint all four domains.</p>
+<h3>E. Ownership:</h3>
+<p>Unstoppable Domains give you a <strong>permanent</strong> <strong>ownership</strong> of the domains. Unlike <strong>ENS</strong> which still works on a <strong>leasing</strong> model. You could actually <strong>lease it for 100 years</strong> if you want, but that just <strong>adds</strong> <strong>up</strong> to the <strong>cost</strong>. So UD was a clear winner here as well.</p>
+<h3>F. Possible Token Airdrop:</h3>
+<p>Recently one of my friends purchased <strong>.eth domain on ENS</strong>. He spent about <strong>$60</strong> for that. A few months later, ENS decided to <strong>reward</strong> it's early <strong>adopters</strong> with their native token called <strong>ENS</strong> token. He got <strong>$11,000</strong> worth of <strong>airdrop</strong> in that event.</p>
+<p><img alt="" src="https://media4.giphy.com/media/p1v7773GGUJH2/giphy.gif" /></p>
+<p>Unstoppable domains may also follow a similar suite. There's <strong>no guarantee</strong> whatsoever but given all the benefits it has to offer, this is just cherry on the icing.</p>
+<h2>Drawbacks:</h2>
+<p>Now that we have established the power of Unstoppable domains not only as a new era of internet, but also as the <strong>strongest</strong> <strong>contender</strong> amongst competition, let's understand some <strong>drawbacks</strong>. This industry is <strong>still</strong> <strong>new</strong> and ever evolving. So, there are some <strong>issues</strong> that would have to be solved along the way:</p>
+<h3>A. DNS Configuration:</h3>
+<p>Our <strong>regular</strong> <strong>browsers</strong> are not <strong>equipped</strong> with opening <strong>.crypto, .bitcoin</strong> domain names as of now, by <strong>default</strong>. Of course this could be done by <strong>tweaking</strong> certain <strong>DNS settings</strong>. But until this is <strong>served</strong> on a <strong>plate</strong> to the <strong>masses</strong>, <strong>adoption</strong> of these <strong>domains</strong> is going to be a <strong>challenge</strong>.</p>
+<p><img alt="" src="https://www.lifewire.com/thmb/xu0jkFPan7bOG0VKxkgU8xr8Xu4=/2644x1133/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-585297068-52005387a57248a19e3ee29bc1af44b4.jpg" /></p>
+<p><em>I could change my domain name today to pandatechie.bitcoin but it won't make sense as most of the people won't be able to open it as of now.</em></p>
+<h3>B. Wallet Support</h3>
+<p>Not all <strong>wallets</strong> currently support <strong>sending</strong> and <strong>receiving</strong> of money through <strong>unstoppable</strong> <strong>domains</strong>. Website mentions that there are <strong>90+ wallets</strong> that do so, however out of the three key wallets that I use (<strong>Metamask</strong>, <strong>Phantom</strong> and <strong>Trust</strong>), only <strong>trust</strong> wallet supports it.</p>
+<h2>Conclusion:</h2>
+<p>I would say that all of this is still at a very nascent stage. So jumping in now would mean jumping into a high risk, high reward situation. As much of a blockchain evangelist I am, I am also a realist. Who knows if Unstoppable domains, ENS etc. would ever see light of the day or not.</p>
+<p>But at a measly $20, I think it's a bet that has enormous upside to it. What do you think?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

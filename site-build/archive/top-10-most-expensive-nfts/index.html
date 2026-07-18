@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 10 Most Expensive NFTs | Raghav</title>
+<meta name="description" content="2021 was an year of NFTs. Quite a lot of projects went to the moon, brands like Adidas, Nike jumped into the NFT business and holders of these NFTs generated ma…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Top 10 Most Expensive NFTs</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-04-01</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-04-01 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2022/04/top-10-most-expensive-nfts-1024x576.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>2021 was an year of <strong>NFTs</strong>. Quite a lot of projects went to the moon, brands like <strong>Adidas</strong>, Nike jumped into the <strong>NFT business</strong> and holders of these NFTs generated massive wealth for themselves. While we may think that frenzy is about to mellow down, but numbers narrate a different story altogether. <strong>OpenSea</strong> (Largest <a href="https://pandatechie.in/2022/03/26/uses-of-nft-outside-digital-art/">NFT</a> marketplace in the world) recently shared that they hit maximum <strong>trading volume</strong> of their life time in the month of February this year. Similarly, the number of web 2 brands jumping into <strong>NFTs</strong> increased multifold. And the biggest of them all? <strong>Instagram</strong> announced <strong>NFT integration</strong> on their platform. This is likely to pave the way for mass adoption of NFTs.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/04/top-10-most-expensive-nfts-1024x576.png" /></p>
+<p>Whenever we discuss <strong><a href="https://pandatechie.in/2022/03/20/how-to-mint-nft-on-opensea/">NFTs</a></strong>, we picture <strong>monkeys</strong> and <strong>pixelated GIFs</strong>. We also realize that there is a lot of money involved in purchasing these NFTs. But, in today's post, we plan to put a number against them. Yes they are expensive, but how expensive? It is all about <strong>top 10 most expensive NFTs</strong> today. Apart from that, we would also try to infuse some sense of why these NFTs are so expensive. Let us watch this space from a buyer's lens today.</p>
+<h2>Value of NFTs:</h2>
+<p>We recently charted out a framework of valuing <strong>NFTs</strong>. A similar framework could be applied here as well. For the uninitiated, here is a quick recap of what makes <strong>NFTs</strong> so valuable.</p>
+<p>First of all, we need to decouple the NFT and the image that represents it. People are not paying for the <strong>monkey image</strong>. Rather, it is about the immutable record in the <strong>Blockchain</strong> that certifies that person XYZ is the owner of a given NFT. Because these records are maintained on a <strong>Blockchain</strong>, they are secured by code and hence cannot be tampered with.</p>
+<p>Some of the reasons why NFTs could be valuable are as follows:</p>
+<h3>A. First:</h3>
+<p>Human beings value '<strong>Firsts</strong>' a lot. Your first salary, first kiss, first time you walked, everything. Therefore any NFT that has a significant type of 'first' attached to it, is extremely valuable. Our list of top 10 most expensive NFTs would feature a lot of these.</p>
+<p><img alt="" src="https://media2.giphy.com/media/3Gm15eZOsNk0tptIuG/giphy.gif" /></p>
+<h3>B. Unique and Rare:</h3>
+<p>And yet again something related to <strong>human psychology</strong>. You buy into <strong>expensive and luxury stuff</strong> because you realize that it is going to be rare. Not everyone would be able to afford it. The perceived value jumps even more when the brands assure their customers that they are buying into a unique product. There is a significant ego boost involved in purchasing something that no one else could, would be able to.</p>
+<h3>C. Utility:</h3>
+<p>Probably the most important value driver while selling NFTs. Any NFT which has physical world tangible benefits attached to it accrues more value. For example, there is an NFT project that is selling some <strong>degen turtles</strong>. Sure the turtles have a great back story and look amazing as profile pictures. On the other hand, there is a famous baker that is selling NFT for her <strong><a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/62738368700470463677062078370705094583230902079812005492048742978279287291905/">most loved cake</a></strong> and the buyer would get <strong>free supply</strong> of cake for lifetime. Which one of these are you most likely to buy?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/04/image.png" /></p>
+<p>Well, if you chose the latter, you decided to equate your money with a real life product and hence used '<strong>utility</strong>' to value the NFTs.</p>
+<h3>D. Ownership History:</h3>
+<p>Also, the NFTs which are previously owned by a famous personality become valuable. This also applies on the real life products too. Or else, why would there be a secondary market for weapons, artifacts, clothes etc. being held by some famous rulers, movie starts in the past.</p>
+<h2>Top 10 Most Expensive NFTs Sold:</h2>
+<p>Now you have a fair idea of how someone goes about valuing NFTs. Let us dive deeper into the top 10 most expensive NFTs:</p>
+<h3>10. Save Thousands of Lives:</h3>
+<p>Sold for $5.1 million, <strong>'save thousand of lives'</strong> is an NFT created by <strong>Noora Health</strong>. It is an organization that aims to save lives of at-risk patients in South Asia. This artwork was sold in May, 2021 for <strong>1337 ETH</strong>. All the proceeds from the sale of this NFT went to funding the <strong>Noora Health's program</strong> of saving the newborns.</p>
+<p><img alt="" src="https://pbs.twimg.com/media/FAZ3Jy0VEAkjRcQ.png" /></p>
+<p>If you observe closely, it is an NFT that has real life utility attached to it. This utility is in the form of <strong>philanthropy</strong> for the buyer of this art piece.</p>
+<h3>9. This Changed Everything:</h3>
+<p>An <strong>NFT</strong> of the source code of the earliest version of <strong>world wide web</strong>. This NFT was sold in June of 2021, for a whopping <strong>$5.4 million</strong> via an auction through Sotheby's.</p>
+<p><img alt="" src="https://cdn.shortpixel.ai/spai/w_771+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2022/01/img2_top10.jpg" /></p>
+<p>The NFT comes with several perks for the owner, like a letter written by Sir <strong>Timothy John Berners-Lee</strong>, an <strong>English computer scientist</strong> and the inventor of the internet, a digital poster of the code written by him, and time-stamped documents recording the history of the internet in its early days.</p>
+<p>Yet again, an NFT that had <strong>real life tangible</strong> benefits attached to it. Apart from that, this also falls in unique and rare category. Anyone could copy paste this source code. But the one minted and shared by the inventor of the internet himself, is just <strong>ONE</strong> of its kind.</p>
+<h3>8. Beeple Crossroad:</h3>
+<p><strong>Beeple</strong> is a famous digital artist who has managed to sell one of the most expensive <strong>NFTs</strong> in the world. While we would talk about that NFT in detail shortly, this one is Beeple's third most expensive NFT.</p>
+<p><img alt="" src="https://cryptopotato.com/wp-content/uploads/2022/01/img3_top10.jpg" /></p>
+<p>Sold for <strong>$6.6 Million</strong>, this NFT features an image of <strong>Donald trump laying on the field</strong>. This NFT was released around <strong>US elections</strong> and had extreme hype backing it up when <strong>Joe Biden</strong> took charge of the <strong>presidentship</strong> of the country.</p>
+<h3>7. Art Blocks, Ringers #109</h3>
+<p><strong>Ringers #109</strong> is a generative art collectible from the <strong>Art Blocks collection</strong>. It consists of a total of 99,000 <strong>Art Block NFTs</strong>.</p>
+<p><img alt="" src="https://cryptopotato.com/wp-content/uploads/2022/01/img4_top10.jpg" /></p>
+<p>Ringers #109 was sold for <strong>2,100 ETH</strong> worth <strong>$6.93 million</strong> in October 2021. Once again, the value is derived from that fact that <strong>generative</strong> art is kind of hot in the market right now. These are similar theme based artworks, which are given unique characteristics using code.</p>
+<h3>6. Right Click Save As Guy:</h3>
+<p>Again a unique story to back this purchase. By the way, this was purchased by <strong>Snoop Dogg</strong> back December 2021 for <strong>7.09 million</strong>.</p>
+<p><strong>'Right Click Save As</strong>' is a derogatory phrase used in the <strong>NFT industry</strong> to take a jab at the people who do not understand NFTs and simply suggest they could copy paste the images.</p>
+<p><img alt="" src="https://cryptopotato.com/wp-content/uploads/2022/01/img5_top10.gif" /></p>
+<h3>5. Cryptopunk #7804:</h3>
+<p><strong>Cryptopunks</strong> are one of the most hyped and famous crypto projects out there. Developed by <strong>Larva labs</strong>, <strong>Cryptopunks</strong> were given away for free but hold enormous value now.</p>
+<p><img alt="" src="https://www.dexerto.com/wp-content/uploads/2021/10/07/cryptopunk-7804-e1633622457563.jpg" /></p>
+<p>The reason <strong>Cryptopunks</strong> are so valuable because they were one of the first implementation of <strong>NFTs</strong>. Secondly, most NFTs are images stored on <strong>IPFS</strong> and records on blockchain. But <strong>cryptopunks</strong> are different. The entire punk is coded on to a <strong>Blockchain</strong>. This punk was sold for $7.6 million.</p>
+<h3>4. Crypto Punk #7523:</h3>
+<p>Sold for a staggering <strong>$11.75 Million</strong>, yet another <strong>crypto punk</strong> featuring in the list of top 10 most expensive <strong>NFTs</strong> ever sold.</p>
+<p><img alt="" src="https://cdn.shortpixel.ai/spai/w_450+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2022/01/img7_top10.jpg" /></p>
+<h3>3. Human One:</h3>
+<p>Yet another <strong>Beeple's</strong> masterpiece. This one was sold for <strong>$29.8M</strong> at an auction powered by <strong>Christie's</strong>. Human one features an astronaut who is wandering across shifting environments. <strong>Beeple</strong> also added an element of longevity to this art by promising to update the art form.</p>
+<p><img alt="" src="https://cdn.shortpixel.ai/spai/w_771+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2022/01/img8_top10.jpg" /></p>
+<h3>2. The First 5000 Days:</h3>
+<p>This one is yet again created by <strong>Beeple</strong>. Basically, he used to create a digital art everyday since 2008. <strong>First 5000 days</strong> is a collage of all those paintings. <strong>Beeple</strong> already had made ripples in this space. Therefore, immense popularity at an auction did not come as a surprise to the community.</p>
+<p><img alt="" src="https://cryptopotato.com/wp-content/uploads/2022/01/img9_top10.jpg" /></p>
+<p>What is surprising though is the price tag of <strong>$69 million</strong> attached to this art piece. It was purchased by <strong>MetaKovan</strong> who is the owner of <strong>Metapurse</strong> (an NFT investment fund).</p>
+<h3>1. The Merge:</h3>
+<p>The possibilities in the <strong>NFT</strong> realm are endless. <strong>The merge</strong> is a digital artwork created by a <strong>digital artist</strong> named <strong>Pak</strong>. The beauty of this artwork is that it could be <strong>fractionalized</strong> and the pieces could be sold further in the <strong>secondary market</strong>. With each piece called the '<strong>Masses</strong>', one could purchase multiple 'masses' to form a bigger mass.</p>
+<p><img alt="" src="https://cdn.shortpixel.ai/spai/w_771+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2022/01/img10_top10.jpg" /></p>
+<p>This unique concept lead to inflating the value of this NFT to a staggering <strong>$91.8 million</strong>, making it the most expensive NFT ever sold.</p>
+<h2>And Scene?</h2>
+<p>Bewildered by the crazy price tags associated with these NFTs? Well, the hype is real. So it takes a wise judgment to separate noise from value. How to get there you ask? Simple. Keep on following us and that should make it.</p>
+<p>Got questions?</p>
+<p>https://www.instagram.com/p/CbrXCCsrCsy/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

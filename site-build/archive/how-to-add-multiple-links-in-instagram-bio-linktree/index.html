@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Add Multiple Links in Instagram Bio: Linktree | Raghav</title>
+<meta name="description" content="Are you a content creator who is using Instagram to redirect traffic to your Blog/YouTube Channel? If you are someone who has less than 10k followers as of now,…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Add Multiple Links in Instagram Bio: Linktree</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-05-18</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-05-18 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/png;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Are you a <strong>content creator</strong> who is using <strong>Instagram</strong> to redirect <strong>traffic</strong> to your <strong>Blog/YouTube</strong> Channel? If you are someone who has less than <strong>10k followers</strong> as of now, it would be hard for you to divert people on your <strong>desired link</strong>. Yes, 10k is the minimum number of followers required to enable the <strong>"Swipe Up"</strong> feature of Instagram. So, the only option left with you is to <strong>play around with that one link which Instagram allows you to put in your bio</strong>. But, that is indeed a cumbersome task. How often do you plan to change your bio? Here are some issues with that arrangement:</p>
+<h2>1. Time Consuming:</h2>
+<p>This is coming from a personal experience. I write almost <strong>4 times</strong> a week. This goes up to 6 during some <a href="https://pandatechie.in/2021/05/04/blogchattera2z-challenge-the-transformation-within/">special occasions</a>. Changing the link in bio for these many times, is just a <strong>non value adding</strong> activity.</p>
+<h2>2. Lack of Relevance:</h2>
+<p>What if someone is dropping on your profile directly without having the <strong>reference of the post</strong> that asked people to click the link in bio? In that case, they would see a <strong>random page with no context</strong>.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<p>Apart from that, if you are changing the link four times a week, there's a <strong>high probability</strong> that the <strong>person viewing</strong> your past story/post may want to <strong>explore more</strong>, but now the link in bio is talking about something <strong>different</strong> altogether.</p>
+<h2>3. Aesthetical Nightmare:</h2>
+<p>Unless you use a URL shortener service like bit.ly, the link in <strong>bio is going to look bad</strong>. Adding something like <a href="https://pandatechie.in/2021/05/16/technology-and-nostalgia-what-does-a-90s-kid-miss/">https://pandatechie.in/2021/05/16/technology-and-nostalgia-what-does-a-90s-kid-miss/</a> to your bio would not look nice in any way.</p>
+<p><img alt="" src="https://wordynerdbird.files.wordpress.com/2019/02/4d5bd2ce-c31e-43bf-b7ae-7df25c799ef0.png" /></p>
+<p>So, how do you tackle all these issues? How to add multiple links in Instagram bio? The answer lies in the <strong>freesome software called Linktree</strong>. Launched in 2016, Linktree has been used by a lot of <strong>Instagrammers</strong> to manage their <strong>off-site content</strong>. Say you are a tech <strong>blogger</strong> and you have <strong>reviewed</strong> <strong>two</strong> <strong>products</strong>. Now instead of adding <strong>two separate links</strong> one after the other in a period of a few days, you can add a <strong>linktree link</strong> which can contain all the links you may want to add.</p>
+<h2>Key Features of Linktree:</h2>
+<p>Linktree is a feature packed platform with a very lean UI. It would hardly take you a few minutes to figure out how to use this platform. Let's explore some key features with screenshots in detail:</p>
+<h3>1. Adding Links:</h3>
+<p>Duh! That's what the platform is meant for. However, the sheer <strong>convenience</strong> and <strong>ease</strong> of completing this activity is worth a mention. All you have to do is press on '<strong>add new link</strong>' button, mention the <strong>name</strong> of the link, <strong>URL</strong> and viola! You are done.</p>
+<p>In case you want to remove a <strong>link temporarily</strong>, you may not need to delete it and reupload it later. You can add <strong>turn on or off</strong> a link at any given time.</p>
+<p>All of these links can be <strong>rearranged</strong> by simply <strong>dragging</strong> them to the required position. So, if you plan to <strong>revisit</strong> a <strong>blogpost</strong> through your <strong>stories</strong>, simply <strong>drag</strong> it to the top.</p>
+<p>You can also <strong>add thumbnai</strong>l to a link by either <strong>uploading</strong> it form your <strong>storage</strong> or <strong>connecting</strong> it with one of your social media accounts. A particular link can also be set to <strong>priority</strong> in which case it always stays on the top.</p>
+<p>There are some pro features which can be extremely handy:</p>
+<p>With linktree pro, you can add a <strong>leap link</strong> which would <strong>redirect customers</strong> to a <strong>website</strong> <strong>directly</strong>, surpassing linktree and <strong>Instagram</strong> altogether.</p>
+<p><img alt="Adding multiple links to your instagram bio using linktree" src="https://pandatechie.in/wp-content/uploads/2021/05/image-4.png" /></p>
+<p>You can also <strong>schedule a post in pro version</strong> for going live at a later date.</p>
+<p>And one feature that I really crave for is <strong>Linktree analytics</strong>. This would help you understand the number of clicks with a trend over a period of time.</p>
+<h3>2. Appearance:</h3>
+<p>There are <strong>multiple themes</strong> to pick an apt background for your <strong>linktree</strong>. The ones available in the basic version are limited to certain types. However, if you are a <strong>pro member</strong>, there are a lot of options to pick from. Not only you can tweak the background, but also <strong>buttons</strong>, <strong>fonts</strong>.</p>
+<p><img alt="Adding multiple links to your instagram bio using linktree" src="https://pandatechie.in/wp-content/uploads/2021/05/image-5.png" /></p>
+<p>You can also <strong>add bio</strong> to your linktree which will appear on the top. One can also add a <strong>display picture</strong> of your choice.</p>
+<p>Also, you can also share your <strong>linktree as a QR code</strong> to someone.</p>
+<h3>3. Mailing List Integrations:</h3>
+<p>This feature is again available to pro members only. What you can do is add a <strong>sign up button</strong> on your Linktree and <strong>integrate the sign ups with multiple platforms</strong>. You can integrate with <strong>Mailchimp</strong> directly. Alternatively, you can save the Email IDs in the <strong>excel format</strong> as well.</p>
+<p>Incase you are interested in knowing how to connect your Mailchimp account/Google Spreadsheet with Linktree, <a href="https://help.linktr.ee/en/support/solutions/articles/48000981291-email-sign-up-integration-mailchimp-and-google-sheet-">here's a tutorial</a>.</p>
+<h3>4. Other Features:</h3>
+<p>There are some additional features which may be relevant to you.</p>
+<p>You can add a <strong>support banner</strong> in case you want to promote a cause and want people to donate to a foundation. Currently there are two options available on Linktree: Covid Relief and Anti Racism.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/image-6.png" /></p>
+<p>You can also enable some <strong>commerce integrations</strong> to a supported payment provider to <strong>collect payments</strong> from <strong>visitors</strong> for everything from eBooks and digital content to donations and more!</p>
+<p>Apart from that, there is a possibility to mark your content sensitive so that users are intimated before viewing your content.</p>
+<h2>Downsides of Linktree:</h2>
+<p>No tool is perfect. Although, I personally use <a href="https://linktr.ee/pandatechie">Linktree</a>, I believe there is some scope of improvement. Here are some features that I wish Linktree had:</p>
+<h3>1. Custom URL:</h3>
+<p>All the linktree URLs are of the format link.tree/xyz. It would be better if we could start the URL with our <strong>brand name</strong> instead of a generic word.</p>
+<h3>2. Customization:</h3>
+<p>Although a few options are there, the <strong>customization</strong> options are pretty limited in terms of <strong>overall design</strong>. You would feel the crunch in case you are not using a pro membership.</p>
+<h3>3. Statistics:</h3>
+<p>Come on! I created content, put it up for the world to see for free. Now, I need to <strong>pay you</strong> to understand who <strong>dropped</strong> by? Basic analytics like <strong>number of visits and clicks</strong> are available in the free version. But it would be better to dive in deeper.</p>
+<h2>Conclusion:</h2>
+<p>My heart goes out to developers who solve a genuine problem like this. And this is why, Linktree successfully raised $10M a few months ago in 2020. (<a href="https://techcrunch.com/2020/10/26/linktree-raises-10-7m-for-its-lightweight-link-centric-user-profiles/">source</a>).</p>
+<p>Are you a user already? Or are you jumping in right away?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

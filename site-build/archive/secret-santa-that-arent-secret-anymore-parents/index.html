@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Santa That Isn't Secret Anymore: Parents | Raghav</title>
+<meta name="description" content="At some point in our lives, we have heard or actually realised the fact “Khwahisho ka koi ant nahi“ (there is no end to wishes). Every time I have some spare ca…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Secret Santa That Isn't Secret Anymore: Parents</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-12-25</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-12-25 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/parents.jpg?itok=9_YqIm5g" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>At some point in our lives, we have heard or actually realised the fact “<em>Khwahisho ka koi ant nahi</em>“ (there is no end to wishes). Every time I have some spare cash in hand, I can instantly make a list of 100 worldly possessions I can use it to buy. The same is applicable when you are praying. From the eyes of a semi-atheist, it looks like a complete <strong>transactional relationship</strong>. You buy something for the god, in lieu of some monetary (mainly) benefit.</p>
+<h3>It all started when. . .</h3>
+<p>The idea of this post came from a childhood event. Every Christmas <strong>I demanded some odd toys, stationary items</strong> I would never use, as a gift from my parents. And each year, on the <strong>night before Christmas</strong>, we would write a <strong>letter to Santa Claus</strong> and put it in a <strong>red cap</strong> (has to be red. Duh!). The next morning, <strong>letters would be gone and for some reason Santa had given us the exact gifts that we sought</strong>. Amazing right? This went on for a few years until. .</p>
+<p><img alt="" src="https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/parents.jpg?itok=9_YqIm5g" /></p>
+<p>Until, I found all those letters in my <strong>father’s wardrobe</strong>. Strangely, I wasn’t taken aback. It rather made me think that my <strong>parents have been a Santa Claus for me all my life</strong>. That pious gesture of not breaking my bubble and living with my fantasy was so genuine in its nature that till date I feel bad for seeking some random crap on Christmas.</p>
+<p>So this year around, <strong>I made a list of 3 things that I would want from Santa Claus</strong>. My parents have overdone their duty already so I am talking to the real Santa here. And believe you me, I have been a good boy. Always have been. But this year, I made sure that I wear mask before leaving home, I practiced social distancing and of course sanitized my hands. So may I?</p>
+<h2>1. Euphoria</h2>
+<p>Every morning, I wake up at 6 AM, write a blog, do some reading, brisk walking and get to work by 9AM. I am full of energy till 7PM. Post that, I am equally excited to binge on Netflix over the dinner with my spouse.</p>
+<p>No matter how normal it may seem, I am <strong>really excited to get up every morning and follow this routine</strong>. At times, I don’t even need an alarm. <strong>I wish this feeling stays with me foreve</strong>r. It’s addictive. It’s productive and its fun. I can see the <strong>smallest of gratifications cheering me up</strong>. A single like on my blog post would be enough to boost my confidence. A single appreciation mail from my boss would do the job. When I run through the events of entire day before I sleep, it makes me believe that I have done justice to myself.</p>
+<p><img alt="" src="https://lh3.googleusercontent.com/proxy/UsUo1xZha9jgUbRvVfJcVLYJhpPsHt5b5mfXb4NanoRJzU9a69tZdJsQbloASY7QYgdDS4zU8DXVMEvs_D0KLbWU6RF3JSrXfHQ9P39X0LJd_PbcJrcNes485vw" /></p>
+<p>And for all we know, this habit also can be credited to my parents DNA. I have never seen my father sleep beyond 5 AM in his life. So, if there is any real Santa, he can probably help me maintain this routine at least.</p>
+<h2>2. Financial Literacy</h2>
+<p>I recently read a quote on <a href="https://twitter.com/home">twitter</a> and it has been stuck in my head forever since. Conventionally, <strong>I would have asked for a lot of money from Santa in this demand. However, this time, I would just want the art of managing money.</strong></p>
+<blockquote>
+<p>Financial Literacy is not a side effect of money, rather money is the side effect of financial literacy.</p>
+</blockquote>
+<p>And probably that is the reason why most lottery winners blow up all the money and fall back to square one. I am off to a good start and really want to learn more about personal finance and money managing. It is so far the toughest subject I have come across and unfortunately, it isn’t optional either.</p>
+<p><img alt="How to save money" src="https://pandatechie.in/wp-content/uploads/2020/11/download-2.jpg" /></p>
+<h2>3. Good Health</h2>
+<p>Those who know me, would probably be rubbing their eyes in disbelief right now. But I finally have come in terms with the fact that <strong><a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">health</a> impacts you</strong>. A Lot! As I grow older and become more aware of myself and surroundings, the impact is pretty evident. <strong>I can feel the difference in my productivity as a function of food and physical exercise I have taken in the past few days.</strong></p>
+<blockquote>
+<p><em>If Money is gone, nothing is gone!</em></p>
+<p><em>If Character is gone, something is gone!</em></p>
+<p><em>If Health is gone, everything is gone!</em></p>
+</blockquote>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h2><strong>Conclusion</strong></h2>
+<p>There is a time in every child’s life where he acts like a <strong>rebel</strong>. He thinks that no one understands him. <strong>Everyone knows about this time, has gone through it and acknowledges it.</strong> But I think there another phase where you start relating to your parents and their actions. May be the ways in which they explained stuff to us were questionable (insert <em>chappal</em> here) but they were never wrong per se. This Christmas, as I plan to become whatever I have mentioned above, I would really want to thank my parents for all they have done. <strong>I would want to believe that real Santa is nothing but the thoughts and prayers of our parents converted to some real goodwill for us</strong>. What do you have in mind this Christmas? Let me know in the comment section below or on <a href="https://www.facebook.com/kaafi.pan.da.techie">Facebook</a>, <a href="https://twitter.com/panda_techie">Twitter</a> or <a href="https://www.instagram.com/pandatechie/">Instagram</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

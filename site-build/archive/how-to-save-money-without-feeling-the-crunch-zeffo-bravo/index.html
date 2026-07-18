@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Save Money without Feeling the Crunch: Zeffo (Bravo) | Raghav</title>
+<meta name="description" content="We are a generation of easily offended people. Every other day, I would see someone publicly shaming a company on social media. While, I’m totally okay with som…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Save Money without Feeling the Crunch: Zeffo (Bravo)</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-01</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-01 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://play-lh.googleusercontent.com/9QTVcqj6-NT4K8AQp-NFRO-wux4FILp8Axz0iIXt2XxVfNd58Om-F369NKQYh-7tpAra=s180-rw" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>We are a generation of easily offended people. Every other day, I would see someone publicly <strong>shaming</strong> a <strong>company</strong> on social media. While, I’m totally okay with someone leveraging the power of the platform to voice their opinions, we should also be <strong>vocal about the products that have helped us</strong> in some way.</p>
+<p>So this time around, I’m planning to tell you about one such product that <strong>brings a smile</strong> on my face every time I open it. Do you <strong>struggle with saving your money</strong>? What if I told you this <strong>application</strong> helps you with just that. “<em>Oh come on Raghav, we have tons of apps helping us do that</em>.” Just stay with me in this one. This will blow your mind.</p>
+<p>A few days ago, I covered a "<strong>Dad approved</strong>" <a href="https://pandatechie.in/2020/11/09/how-to-save-money/">quick trick</a> on how to save money. Ever since, I became a huge fan of <strong>quirky</strong> <strong>ways</strong> of <strong>saving</strong> <strong>money</strong>. The <strong>best savings</strong> are where you <strong>don't even realize that you are cutting down</strong>. Cherry on the top would be <strong>not</strong> <strong>only</strong> <strong>saving</strong> money, rather <strong>investing</strong> it. This fintech platform will help you achieve that state of happiness.</p>
+<h2>Which Application?</h2>
+<p>This crazy new born baby is called <strong>Zeffo</strong>. It’s so new that it just got a new name and was known as <strong>Bravo</strong> erstwhile (Hence the post 'B' of <a href="https://www.theblogchatter.com/">Blogchatter's</a> #BlogchatterA2Z Challenge). Born in the <strong>pandemic</strong>, the app derives it’s name from amalgamation of two words: <strong>Zero+Effort = Zeffo</strong>. The core proposition is in line with its name. It helps you in effortless investing.</p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/9QTVcqj6-NT4K8AQp-NFRO-wux4FILp8Axz0iIXt2XxVfNd58Om-F369NKQYh-7tpAra=s180-rw" /></p>
+<p>Zeffo</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-02-at-10.27.00-AM.jpeg" /></p>
+<p>Earlier Known as Bravo</p>
+<h2>How Does it Work?</h2>
+<p>So you visit a <strong>Kirana</strong> <strong>store</strong> nearby and purchase some regular stuff. The shopkeeper hands over the bill of <strong>Rs. 137</strong> to you. You give him a <strong>100 and a 50 rupee note</strong>. In return you get <strong>Rs. 10 coin and 3 toffees</strong>. That Rs. 10 coin is a <strong>logistical</strong> <strong>nightmare</strong>. I always tend to lose it. Also, 3 toffees are just <strong>extra</strong> <strong>calories</strong>.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>Eclairs is the new change</p>
+<p>Now what if I say, you not only get the <strong>entire Rs 13 back, but also get to invest it in a mutual fund</strong>. While this may sound <strong>crazy</strong> on the face of it, <strong>Zeffo helps you do exactly that</strong>. “<em>But, Raghav, cash is dead</em>”. Yeah, I know and so do the developers at Zeffo.</p>
+<p>Long story short, <strong>every money you spend from your account (UPI, PayTM, ABC Wallet, Credit Cards), is rounded to the next multiple of 50 and your beloved "<em>chillar"</em> (change) is invested in a safe mutual fund</strong>.</p>
+<p>Say you purchase a '<strong>Vada Pav</strong>' using <strong>PayTM</strong> for <strong>Rs. 17</strong>, the <strong>rounded up Rs. 33</strong> will be deducted from your account and invested in a mutual fund. Later, you go about <strong>purchasing</strong> a new <strong>top</strong> from <strong>H&amp;M</strong> for <strong>Rs. 1499</strong> using your <strong>Credit Card</strong>, the remainder of <strong>Re. 1</strong> will be given the same treatment.</p>
+<p>Convinced already? Hit the download button to get started.</p>
+<p><a href="https://play.google.com/store/apps/details?id=in.nucofinancial.bravoapp&amp;referrer=referral_code%3D24E14C713">Download Zeffo</a></p>
+<p>Nee a little more context? Go on!</p>
+<h2>What All Problems Does it Solve?</h2>
+<h3>1. Habit of Savings:</h3>
+<p>If you are keeping <strong>cash aside</strong> from your monthly salary, you know <strong>that it is hard</strong>. Harder when you are just <strong>getting started</strong>. Your brain keeps on telling you that what good Rs. 1000/month going to do in your future. Only once you see it <strong>build up</strong> over the <strong>years</strong>, you realize the <strong>real power of savings</strong>. That's what Zeffo does for you. You <strong>skip that difficult phase through seamless "chillar" savings and finally come to terms with this indispensable life trait.</strong> One of my teachers once said, we all know that savings are important, we just don't know the 'how to' save money part of it. Hopefully you now have a partial answer to that.</p>
+<p><img alt="Habit of Saving Money" src="https://miro.medium.com/max/1838/0*LKED1CPidkB4oqPe" /></p>
+<h3>2. Investing:</h3>
+<p>There are <strong>5000+ mutual funds</strong> in India. All of them loaded with jargons like <strong>NAV, Alpha, Beta, XIRR, CAGR</strong> and what not. Also, you don't trust your father's uncle any more who helped him with investing. What do you do?</p>
+<p><img alt="Mutual fund and its jargons" src="https://www.mymoneysage.in/blog/wp-content/uploads/2019/03/Jargon-1.jpg" /></p>
+<p>Let Zeffo handle it for you. The entire money saved from the '<strong>Change</strong>', is invested into <strong>ICICI Prudential liquid fund</strong>. This fund has historically given gains beating <strong>inflation</strong> and <strong>FD rates</strong>. Although past performance is not the only indicator of a fund's future, liquid funds generally lie at the low risk spectrum of the MFs.</p>
+<p>While this won't replace all your investment needs, it is a <strong>good starting point</strong> for someone trying to enter the <strong>mutual fund</strong> world or thinking of how to save money in general.</p>
+<h3>3. Redemption:</h3>
+<p>And what good are savings if you <strong>can't use them in the need of the hour</strong>? The fund selection by Zeffo combats that problem as well. As soon as you call the shots and hit the '<strong>withdraw</strong>' button, you get money in your account almost immediately.</p>
+<p>I did a redemption about a week ago and money was credited in my bank in <strong>less than 5 minutes</strong>. That's as fast as it could get in my opinion.</p>
+<p><img alt="" src="https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2019/01/04/Photos/Processed/iStock-515701644-kTLF--621x414@LiveMint.jpg" /></p>
+<h2>My Experience:</h2>
+<p>It has been <strong>over a month</strong> since I am using Zeffo (Bravo). After understanding the concept behind the app, you simply do a <strong>KYC by submitting some documents</strong>. Along with that, you <strong>issue a bank mandate</strong> to Zeffo. A mandate is an authorization to withdraw a sum (you can maintain the upper limit yourself) from your account. If you have ever <strong>invested</strong> in a <strong>SIP</strong>, you would know that this is a <strong>standard practice</strong>.</p>
+<p>Contrary to the existing notion, this process hardly takes <strong>5 minutes</strong>. I recently installed this <strong>application</strong> on my significant other's mobile and it took me <strong>under 10 minutes from sign up to setting everything up for her</strong>.</p>
+<p>Considering the time we spend on deciding what to eat in our next meal, this process happens at a <strong>pretty darn lightning speed.</strong></p>
+<p>Now, as much as we'd like all of this to happen in <strong>real time</strong>, there are some <strong>regulatory bodies</strong> involved in the process, which causes some <strong>delay</strong> in <strong>investing</strong> your <strong>roundups</strong> in the <strong>mutual fund</strong>. So, once your round ups are getting collected, <strong>Zeffo tries to open an account (of sorts) with ICICI</strong>. This entire process takes <strong>15 days</strong>. Then, <strong>SEBI guidelines don't allow you to deduct money within 7 days of getting the mandate</strong>. Apart from that, you <strong>need to inform the customer 2 days prior to deducting the money.</strong></p>
+<p><img alt="How to save money using Zeffo. " src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-02-at-10.38.43-AM-525x1024.jpeg" /></p>
+<p>Total savings till date with roundups on 31st March</p>
+<p><img alt="How to save money using zeffo" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-02-at-10.39.20-AM-529x1024.jpeg" /></p>
+<p>Roundups along with their current status</p>
+<p>In toto, the <strong>first deduction</strong> for me <strong>happened</strong> after <strong>10 odd days</strong> of making the expense.</p>
+<h3>After the Initial Debit:</h3>
+<p>Once it came into the a <strong>regular flow cycle</strong>, some <strong>money</strong> keeps on getting <strong>deducted</strong> from my account <strong>every</strong> <strong>day</strong> and I am duly <strong>notified</strong> of the same. This <strong>money</strong> may be of an <strong>expense</strong> you made a couple of days ago.</p>
+<p>Till date, I have saved about <strong>Rs.10,000+</strong> without putting in much effort. I know this <strong>might have been carved out</strong> of my <strong>Swiggy</strong> and <strong>Zomato</strong> but that's the beauty of it. <strong>Financial</strong> and <strong>Physical</strong> health, both in place. The answer to the age old question of "how to save money" hasn't been simpler.</p>
+<p><img alt="Zeffo Savings till date 10,315" src="https://pandatechie.in/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-08-at-12.32.37-PM-1024x986.jpeg" /></p>
+<p>So, where do I start? Well, right here my friend. Hit the download button.</p>
+<p><a href="https://play.google.com/store/apps/details?id=in.nucofinancial.bravoapp&amp;referrer=referral_code%3D24E14C713">Download Zeffo</a></p>
+<h2>You Call the Shots:</h2>
+<p>And this is perhaps where my experience went from <strong>great</strong> to <strong>phenomenal</strong>. Even if Zeffo is <strong>automating</strong> the entire process of <strong>deductions</strong> and <strong>investment</strong>, you are still in <strong>absolute control</strong>. How? Here are a couple of <strong>features</strong> added in the <strong>latest</strong> <strong>update</strong> that took it to another level:</p>
+<h3><strong>A. Pause/Unpause:</strong></h3>
+<p>Yup. You guessed it right. Need that little <strong>extra this month</strong> due to some <strong>unprecedented</strong> <strong>expenses</strong>? Just <strong>pause</strong> the <strong>deductions</strong>. You can turn them on or <strong>'un-pause'</strong> any time you like. Super flexible.</p>
+<h3><strong>B. Round-up Settings:</strong></h3>
+<p>To take it up a notch and make your savings even <strong>juicier</strong>, there are a <strong>bunch</strong> of <strong>settings</strong> you can <strong>play around</strong> with:</p>
+<h4><strong>Round-Up to Next:</strong></h4>
+<p>You may chose the <strong>next round up multiple</strong>. If you want <strong>smaller</strong> <strong>deductions</strong>, chose the multiple as <strong>'10'</strong>. If you want to go all out, chose it as <strong>'100'</strong>. So in a similar example of Vada pav we referred to, a <strong>17 buck snack</strong> will rake in an additional <strong>Rs. 83 to your savings</strong> instead of <strong>Rs. 33</strong>. It's like ensuring that your <strong>future self</strong> can continue to enjoy this snack, <strong>guilt free</strong>! (well, at least from a financial perspective)</p>
+<p><img alt="Zeffo round up settings" src="https://pandatechie.in/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-08-at-1.04.24-PM-1024x931.jpeg" /></p>
+<h4><strong>Multiplication Factor:</strong></h4>
+<p>Planning to put your savings on <strong>steroids</strong>? Welcome aboard. This setting allows you to <strong>multiply</strong> your rounded off <strong>amount</strong> by <strong>2x, 3x, 5x and 10x</strong>. I put this to use to <strong>cut down on my cheat meals</strong>. The best way to get rid of a habit is to make it <strong>unattractive</strong> (Source: Atomic habits by James Clear).</p>
+<p>So, a landscape where you are spending <strong>hours</strong> of <strong>research</strong> to find that <strong>one coupon code</strong> that will fetch you an <strong>additional</strong> <strong>50 bucks</strong> off, it is unlikely that you'd order at the same <strong>frequency</strong> if you are spending <strong>10x</strong> on the <strong>change</strong>.</p>
+<p>I actually saved a <strong>good sum of money</strong> initially and <strong>gradually</strong> started being <strong>conscious</strong> of my <strong>dietary</strong> <strong>habits</strong>. Killing two birds with one stone? Hell yeah!</p>
+<h4><strong>Booster:</strong></h4>
+<p>If you follow any kind of <strong>financial</strong> <strong>influencer</strong>, this shouldn't come as a surprise to you:</p>
+<p><em>"Rather than buying iPhone XX, if you had put similar money in a n Apple stock X years ago, you would be having $Y by now."</em></p>
+<p>Well, Zeffo kind of makes it a reality. How? If you often make <strong>big purchases</strong> (&gt;Rs. 2000), you can now ask Zeffo to <strong>deduct a percentage of it</strong> towards your savings, rather than a <strong>straight round up</strong>. This can be set to <strong>2% or 5%</strong>. So imagine buying that <strong>new top from Zara</strong> for <strong>Rs. 3,000</strong>. Now Zeffo, just like your mom, would <strong>ensure</strong> that you also <strong>save</strong> <strong>Rs. 600 (2%)</strong> along with that purchase.</p>
+<h3><strong>C. Monthly Goal</strong>:</h3>
+<p>You can also set up a <strong>cap</strong> to the round-ups using this <strong>feature</strong>. This is <strong>customizable</strong> and can be <strong>changed</strong> any give time. I like to set a new <strong>upper limit</strong> every month basis my <strong>budgeting activity</strong> in the month beginning.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-08-at-1.04.24-PM-1-1024x582.jpeg" /></p>
+<h2>Conclusion:</h2>
+<p>Innovation knows no bounds. This app is a true representation of this statement. You can download the <a href="https://play.google.com/store/apps/details?id=in.nucofinancial.bravoapp&amp;referrer=referral_code%3D24E14C713">app</a> from <a href="https://play.google.com/store/apps/details?id=in.nucofinancial.bravoapp&amp;referrer=referral_code%3D24E14C713">here</a> and get started right away. (Currently available for Android only). Until then, don't hesitate in saying, <strong>"Keep the Change"</strong></p>
+<p><a href="https://play.google.com/store/apps/details?id=in.nucofinancial.bravoapp&amp;referrer=referral_code%3D24E14C713">Download Zeffo</a></p>
+<p>So, when are you planning your next.. wait for it.. "Chillar Party"? Like literally! Okay that was the last one! Tell me more about your version of how to save money?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My First Technological Fasting Experience: A Step Towards Digital Wellbeing | Raghav</title>
+<meta name="description" content="My mornings are weird. I usually wake up by 6:30 AM and spend at least 30 minutes in the washroom. While you definitely didn't sign up for this level of informa…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">My First Technological Fasting Experience: A Step Towards Digital Wellbeing</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-03-04</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-03-04 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>My mornings are weird. I usually <strong>wake</strong> <strong>up</strong> by <strong>6:30 AM</strong> and spend at least <strong>30 minutes</strong> in the <strong>washroom</strong>. While you definitely didn't sign up for this level of information, bear with me for a moment. So, I usually catch up with the <strong>social media, mails and read some news</strong> in that period. However, one fine day, I decided to <strong>read</strong> a non-fiction. So, I began reading '<strong><em><a href="https://www.flipkart.com/ikigai-english-hardcover-garcia-hector/p/itm086b61e791a7b?pid=RBKFYXF7PTJGYBDG&amp;lid=LSTRBKFYXF7PTJGYBDG7X5OBE&amp;marketplace=FLIPKART&amp;cmpid=content_regionalbooks_8003060057_u_8965229628_gmc_pla&amp;tgi=sem,1,G,11214002,u,,,395332127672,,,,c,,,,,,,&amp;ef_id=Cj0KCQiAhP2BBhDdARIsAJEzXlFFyRKBdTiRBod6ZWlKYWSBPibGoZRPBQqpQfZ5CNzhtv9NZ7PZ_0caAmYyEALw_wcB:G:s&amp;s_kwcid=AL!739!3!395332127672!!!u!295092701166!&amp;gclid=Cj0KCQiAhP2BBhDdARIsAJEzXlFFyRKBdTiRBod6ZWlKYWSBPibGoZRPBQqpQfZ5CNzhtv9NZ7PZ_0caAmYyEALw_wcB&amp;gclsrc=aw.ds">Ikagai</a></em></strong>' (of course a digital version of it). While I was <strong>midway</strong> through the book, there was a lot of <strong>focus</strong> around the state of '<strong>flow</strong>'. Flow, or a state of <strong>no</strong> <strong>distractions</strong> can be achieved through <strong>multiple</strong> <strong>ways</strong>. And believe you me, I was doing <strong>exactly opposite</strong> of ALL the pointers mentioned in the book. So, I had a lot of <strong>corrections</strong> to be <strong>made</strong> in my life.</p>
+<p><img alt="Book cover of 'Ikagai' that talks about technological fasting" src="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg" /></p>
+<p>I decided to kick off my <strong>journey</strong> of attaining the <strong>flow</strong>, with a seemingly gargantuan task of '<strong>Technological Fasting</strong>'. It suggests that you <strong>do away with all the technology for a day in a week</strong>. Therefore, last <strong>Saturday</strong>, I kept my <strong>phone</strong>, <strong>iPad</strong> and <strong>laptop</strong> under <strong>lock</strong> and key at night and decided to give this digital fasting a shot, the next day. This one's all about my experience.</p>
+<h2>Start of the Day:</h2>
+<p>No exceptions were made here. I woke up at a usual 6:30ish. While heading out for the washroom, I had that really <strong>weird</strong> <strong>emptiness</strong> (no pun intended). As if my <strong>brain was wondering what to do</strong> all this time. I sat down and felt like it was <strong>90s all over again</strong>. Tried reading the <strong>labels</strong> on the <strong>shampoo</strong> <strong>bottles</strong> (BTW, do you know that Ketoconazole is the component meant for helping you in dandruff related issues?). Anyway, it was boring. For the first time in almost an year, I <strong>came out within 15 minutes</strong>.</p>
+<p><img alt="Garfield with cup of coffee in his hand" src="https://susieshy45.files.wordpress.com/2015/09/garfield1.jpg" /></p>
+<p>What Next? I had no idea what to do when I came out. Usually, I would go for a quick walk but what's <strong>walking</strong> <strong>without</strong> <strong>music</strong>? So sadly, I decided to skip. I felt <strong>asleep</strong> again and <strong>woke back up at 9:30 AM</strong>. I had to put myself to sleep forcefully just to pass time.</p>
+<h2>The Negative Space Void:</h2>
+<p>As I gained consciousness after an <strong>uneasy</strong> sleep, I decided to <strong>start</strong> my day. I got ready and decided to <strong>meet my very old friend</strong> I hadn't met in a while: <strong>television</strong>. See, we have evolved to an extent that <strong>TV isn't considered as technology any more</strong>. I'd like to highlight one observable change. There are <strong>negative</strong> <strong>spaces</strong> in our daily life. This is the <strong>time</strong> <strong>between</strong> <strong>two</strong> <strong>important</strong> <strong>tasks</strong>. For example, <strong>time</strong> <strong>spent</strong> in the <strong>elevator</strong>, in between two <strong>consecutive</strong> <strong>meetings</strong> etc. One such negative space is when <strong>advertisements are running</strong> on television. For most of us, <strong>phone</strong> <strong>occupies</strong> these <strong>negative</strong> <strong>spaces</strong> unconsciously. That's exactly what happened with me. At every interval, I found myself <strong>searching</strong> for my <strong>phone</strong> only to realize, a moment later, that today was not a regular day.</p>
+<p><img alt="Negative Space Example" src="https://miro.medium.com/max/1000/0*uUlT7O0maLMuciiQ.jpg" /></p>
+<p>An example of negative space in art</p>
+<h2>Living the Moment:</h2>
+<p>This Sunday our <strong>domestic help</strong> was on <strong>leave</strong> and I was feeling <strong>quite</strong> <strong>low</strong>. So, I decided to do something out of my league. And thus, the idea of cooking came by. My spouse was so happy with this transformation.</p>
+<blockquote>
+<p>On a usual Sunday, I would be lazing around with my eyes on the phone, ears on OTT and attention on neither.</p>
+<p><a href="http://twitter.com/share?&amp;text=On%20a%20usual%20Sunday%2C%20I%20would%20be%20lazing%20around%20with%20my%20eyes%20on%20the%20phone%2C%20ears%20on%20OTT%20and%20attention%20on%20neither.%20&amp;url=https://pandatechie.in/2021/03/04/my-first-technological-fasting-experience/">Relatable? Tweet It!</a></p>
+</blockquote>
+<p>This sudden <strong>shift</strong> was a <strong>welcoming</strong> change. We cooked a Sunday noon kind of food: <strong>Keema</strong>, together. Later, <strong>enjoyed</strong> it <strong>without</strong> <strong>TV</strong>. Now I don't know if my <strong>culinary</strong> <strong>skills</strong> are just <strong>exquisite</strong>, or food really <strong>tastes</strong> <strong>good</strong> without <strong>distractions</strong>. I ate <strong>slowly</strong>, with much more <strong>sense</strong> of what I am eating. It is just not <strong>possible</strong> to do so any more with <strong>office entering our homes</strong>. There's no <strong>standard</strong> <strong>break</strong> for everyone, like it used to happen back in the <strong>'old normal'</strong>.</p>
+<p><img alt="" src="https://gbc-cdn-public-media.azureedge.net/img84624.768x512.jpg" /></p>
+<h2>What Did I do the Entire day?</h2>
+<p>Most of it was centered around <strong>consciously</strong> <strong>avoiding</strong> <strong>screen</strong> exposure. I went out for <strong>grocery</strong> <strong>shopping</strong>, <strong>slept</strong> in the afternoon (that was new) and in the remaining time, <strong>tried</strong> to <strong>watch</strong> television. I watched this <strong>movie</strong> which was on my <strong>bucket</strong> <strong>list</strong> for quite a long time now- <strong>"Pursuit of Happiness"</strong>. Was it a really fine movie or I had undivided attention? In the past, I have complained that keeping me <strong>hooked</strong> for a <strong>couple</strong> of <strong>hours</strong> is just <strong>too much to ask</strong> from me. However, this time around, I never <strong>paid</strong> <strong>attention</strong> to the <strong>clock</strong> until the movie got over.</p>
+<blockquote>
+<p>I realized it on the fasting day that there's a very subtle way of finding out if you are really immersed in a show/movie you are watching. Just observe how often do you check how much time is left until the end.</p>
+<p><a href="http://twitter.com/share?&amp;text=I%20realized%20it%20on%20the%20fasting%20day%20that%20there's%20a%20very%20subtle%20way%20of%20finding%20out%20if%20you%20are%20really%20immersed%20in%20a%20show%2Fmovie%20you%20are%20watching.%20Just%20observe%20how%20often%20do%20you%20check%20how%20much%20time%20is%20left%20until%20the%20end.&amp;url=https://pandatechie.in/2021/03/04/my-first-technological-fasting-experience/">Tried and Tested? Tweet It!</a></p>
+</blockquote>
+<p><img alt="Image poster of pursuit of happyness" src="https://miro.medium.com/max/1200/1*Y8vXN1mJeEHyXWJtFICjiQ.jpeg" /></p>
+<p>Long story short, I didn't feel the need of <strong>touching</strong> the <strong>remote</strong> and only <strong>switched</strong> <strong>spots</strong> when the <strong>movie</strong> actually got <strong>over</strong>. That has not happened in a long time. Even when I am <strong>paying</strong> to watch movies (theatre halls), I usually get <strong>bored</strong> <strong>midway</strong> and at times <strong>go</strong> <strong>out</strong> after making some <strong>lame</strong> <strong>excuses</strong>. This time it was different. May be, it was the awareness that even if <strong>I move out, I still won't have my phone to bank on.</strong></p>
+<h2>The Conversations:</h2>
+<p>This is probably the <strong>biggest</strong> <strong>change</strong> I observed on the day of technological fasting. Most of us our guilty of <strong>talking</strong> to our <strong>significant</strong> <strong>others</strong> with <strong>cellphone</strong> in one hand and <strong>fiddling</strong> with it. Thanks to the <strong>new age games</strong> which can be <strong>played</strong> using one <strong>hand</strong> and can be done simultaneously along with other tasks (at least we think so). I never realized but I also had <strong>half baked</strong> conversations with my spouse. Quite often, she would <strong>claim</strong> that a <strong>topic</strong> has been <strong>discussed</strong> but I <strong>won't</strong> have any <strong>memory</strong> of it. Same is the case when I talk to my <strong>parents</strong>. On a video call, <strong>I would minimize the call in the floating thumbnail</strong> and do something else on my phone.</p>
+<p><img alt="Mindful conversations" src="https://cdn.mindful.org/Having-tough-conversations-reset-practice.jpg?q=80&amp;fm=jpg&amp;fit=crop&amp;w=1400&amp;h=875" /></p>
+<p>Until this day, I never realized that this could be a <strong>serious</strong> <strong>problem</strong>. Each of the <strong>conversation</strong> I had that day was so <strong>clear</strong>, <strong>mindful</strong> and <strong>enriching</strong>, I concluded that I have been <strong>missing</strong> <strong>out</strong> on a lot lately. Even my mother unknowingly said, "<strong><em>Aaj kaafi free hai tu</em></strong>" (You don't have much to do today). And guess what? We talked for a <strong>shorter</strong> <strong>duration</strong> as compared to a <strong>regular</strong> <strong>day</strong>. That's is indeed powerful.</p>
+<h2>The Downsides:</h2>
+<p>Let's not view this technological fast from the rose tinted glasses. There are a few downsides to it as well:</p>
+<h3>1. Hype:</h3>
+<p>I take sole responsibility of this. I have been <strong>pre</strong> <strong>occupied</strong> with my <strong>phone</strong> so much in the <strong>past</strong> that this <strong>event</strong> was a really a <strong>big deal</strong> for me. Even my <strong>spouse</strong> put it on <strong>social</strong> <strong>media</strong> and <strong>everyone</strong> was <strong>testing</strong> <strong>me</strong> by calling that day. So, this hype kind of made me <strong>uneasy</strong>. Especially in the first half of the day. I think I made it a <strong>big deal in my head</strong> and couldn't <strong>enjoy</strong> my digital fast as much as I could have. The very purpose of practicing <strong>calmness</strong> seemed to be <strong>defeated</strong> until I <strong>forcefully</strong> got rid of this <strong>thought</strong>.</p>
+<p><img alt="" src="https://lifeandtrendz.com/wp-content/uploads/2019/07/Insom1.jpg" /></p>
+<p>May be, these could be <strong>withdrawal</strong> <strong>symptoms</strong> as well. Never had them before, so I am not sure. But there was a <strong>definite</strong> <strong>restlessness</strong> surrounding me. Even when I got <strong>back</strong> to my <strong>phone</strong> for an <strong>hour</strong> at <strong>11 PM</strong> in the night, I had <strong>trouble</strong> in sleeping. May be I can define this feeling better in the future, but as of now, it's not good.</p>
+<h3>2. Learning:</h3>
+<p>I don't browse memes on my phone all day. <strong>Phone, laptop (especially), is a primary source of learning for me</strong>. I spend weekends reading about <strong>writing</strong>, <strong>blogging</strong> or any <strong>general</strong> <strong>topic</strong> of interest. This week, I found it missing. In other words, my Sunday wasn't <strong>productive</strong> when it comes to upskilling. There has to be a better way to go about it.</p>
+<p><img alt="" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/10/21/932782-4ac9b420-bca5-11ea-9ddf-6b0aae14e6d1.jpg" /></p>
+<h3>3. Extra Work</h3>
+<p>There are two aspects to this. One because <strong>I had nothing else to do and second: my wife was fully aware of this fact</strong>, I was <strong>handed</strong> over <strong>random</strong> household chores. As mentioned our maid was on leave this Sunday. That doesn't mean I'd take out the <strong>clothes from the washing machine and put them up for drying</strong>. Also, shelling out <strong>peas</strong> from the <strong>pod</strong> was something I never signed up for. <strong>Sundays</strong> are meant to be <strong>lazy</strong>. While this <strong>technological</strong> <strong>fast</strong> was supposed to boost that <strong>sloth</strong> <strong>mode</strong>, on the contrary, I had to work even more.</p>
+<p><img alt="" src="https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/very_big_1/public/feature/images/household.jpg?itok=wcpODXKi" /></p>
+<h2>Conclusion:</h2>
+<p>Before polarizing it between good or bad, I'd like to say that this was <strong>definitely worth a shot</strong>. If you are still reading this, there might be chance that you may feel that I am <strong>exaggerating</strong>. However, one has to <strong>experience</strong> it to know that this is <strong>NOT easy</strong>. You are spending the <strong>entire day</strong> without a <strong>thing</strong> that has been <strong>by your side 24x7</strong>. You wake up with it in the morning, you sleep with it in the night. And one fine day, it's just not there. Takes a while before that thought seeps in.</p>
+<p><strong>Will I practice this regularly</strong>? Yes, but with some modifications. I can probably do away with my <strong>phone</strong> the <strong>entire</strong> day and <strong>work</strong> on <strong>laptop</strong> completely. That way, I would not be <strong>diverting my attention</strong> with <strong>constant notifications</strong> and would stay off social media for sure. This'll help me <strong>hitting my learning goals</strong> too.</p>
+<p><a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/"><img alt="Digital wellbeing dashboard on technological fasting day" src="https://pandatechie.in/wp-content/uploads/2021/03/WhatsApp-Image-2021-03-04-at-9.02.45-AM-518x1024.jpeg" /></a></p>
+<p>My Sunday Cellphone Usage Vs Regular Days</p>
+<p>What are your thoughts on all this? Have you ever tried a technological fast before? Will you? I dare you!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

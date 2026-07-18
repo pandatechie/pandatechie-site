@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Create Strong Password in 2021? | Raghav</title>
+<meta name="description" content="Are you one of those whose passwords look like Name@1234? Oh, or may be you think Google Chrome will suggest a password and memorize it on your behalf so that y…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Create Strong Password in 2021?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-16</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-16 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.securedatarecovery.com/portals/0/images/resources/password-security.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Are you one of those whose passwords look like <strong>Name@1234?</strong> Oh, or may be you think Google Chrome will suggest a password and memorize it on your behalf so that you don't have to worry. Inception of passwords took place in <strong>1961 in Massachusetts Institute of Technology.</strong> And you'd be surprised to know about the first <strong>password breach</strong>. In the same year of 1961, a researcher printed out a password on piece of paper and handed it over to other users, internet recorded it's first breach ever. <strong>Ever since, passwords and cyberpunks are in a cat and mouse game.</strong> So what possibly could be a good strategy on "how to create a strong password in 2021?" Let's take it step by step.</p>
+<h2>Why am I Even Reading this?</h2>
+<p>So, if you are thinking, why is this article even worth my time, I don't blame ya. <strong>Most of us have a mindset that even if our passwords get compromised, there is nothing much that a hacker can gain out of it</strong>. "Oh, I don't have anything to hide on social media", I hear this all the time, especially from the older generation who is unaware of the fact: how much these tech companies know about them.</p>
+<p><img alt="Password Security" src="https://www.securedatarecovery.com/portals/0/images/resources/password-security.jpg" /></p>
+<p>For some perspective, recently <strong>Twitter accounts of Elon Musk, Joe Biden were compromised asking their followers to send some bitcoin to a specific address</strong>. So assuming that you are safe from this new age crime, that is the most noob mistake one can do.</p>
+<p>Everyone who isn't sensitive about their online privacy, please look up <strong>identity theft</strong> on Google. That might ring a bell. And if nothing else, at least ensure that your money safe. Let us start with understanding <strong>why is it all the more important in 2021 to care about the creation of a strong internet password</strong>:</p>
+<h3>1. Touch ID:</h3>
+<p>Today, most of the devices have a <strong>touch ID</strong> inbuilt in them. Also, most apps can now integrate with the touch ID and allow you to sign in using a thumb impression or some sort of facial recognition system. With these <strong>alternate ways of signing in, we have almost forgotten the art of remembering passwords</strong> and also <strong>changing them frequently</strong>.</p>
+<p><img alt="Touch ID and Fingerprint" src="data:image/png;base64,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" /></p>
+<h3>2. Internet Revolution:</h3>
+<p><a href="https://pandatechie.in/2020/12/28/harmful-effects-of-internet/">India is witnessing a rise in internet users like no other country</a>. Even with 600mn active users in 2021, we are just halfway there. While this is a positive sign for a nation, this also means that <strong>more and more crooks will now jump into the profession of hacking</strong> and try to dupe you. So, realizing the importance of a strong password is of utmost significance now.</p>
+<h2>How to Hackers Crack Passwords Anyway?</h2>
+<p>So while we embark on our journey of protection of our online privacy, it is important to understand the <strong>strategy of individuals on the opposite side of the fence</strong>. Here are some common methods using which a hacker can gain access to your passwords:</p>
+<h3>1. Brute Force:</h3>
+<p>This is one of the most common type of attacks. Brute force means <strong>using all the possible combinations</strong> for guessing your password. And with the increase in computing power by a factor of trillion, this <strong>job is getting easier</strong> by the day. This is why, websites/apps now put a minimum character length limit on the password.</p>
+<p><img alt="Password cracking using brute force" src="https://analyticsindiamag.com/wp-content/uploads/2019/04/markus-spiske-666905-unsplash.jpg" /></p>
+<h3>2. Phishing:</h3>
+<p>This technique involves <strong>driving you towards a website that resembles the "original" through modes like mail/SMS etc.</strong> For example, you may get a mail that says a friend of you has tagged in a photo on Facebook (call to action), and you may be redirected to a link that looks like Facebook. As soon as you try to login by putting in your credentials, you are done! Easy-peasy for a hacker if you aren't attentive enough.</p>
+<p><img alt="Hacking" src="https://www.synopsys.com/blogs/software-security/wp-content/uploads/2019/09/ethical-hackers-header.jpg" /></p>
+<h3>3. Dictionary Attack:</h3>
+<p>As the name suggests, this trick involves <strong>trying out all the passwords using words in dictionary</strong>. So if you are one of the lazy people who hate typing in a upper case/ lower case letters and numerical characters, you are prone to these kind of attacks. So if you are keeping your passwords as some regular word: you are just trying your luck.</p>
+<h2>What are Strong Passwords then?</h2>
+<p>So does a concept of strong password exist at all? If you follow certain guidelines, of course. So what are some go-to thumb rules you can use?</p>
+<p>After setting up enough context, should I still mention this? I think I should. <strong>Most common and weakest password list of 2020 by nordpass reveals that people hardly take passwords seriously.</strong> Here are top 3 for your reference. Interested in more stupidity? Here is a link to the complete <a href="https://nordpass.com/most-common-passwords-list/">list</a>.</p>
+<p><img alt="How to create a strong password: Top 3 weakest passwords of 2020" src="https://pandatechie.in/wp-content/uploads/2021/01/image-10-1024x218.png" /></p>
+<h2>1. Sets of Passwords:</h2>
+<p>As we surf internet more than ever, there are so many applications/websites that require a sign up. <strong>Remembering each one of them is just not humanly possible.</strong> Obviously, some of them are <strong>more important than others</strong>. Therefore, I try to <strong>create a set of resembling passwords for each purpose</strong>. Of course the password for my banking apps/social media cannot be remotely related to something like slideshare or other one time login sites. <strong>So passwords on one time login sites may look like <WebsiteInitials>@1234 while for my banking app, it may be something entirely different.</strong></p>
+<h2>2. <strong>Go Long:</strong></h2>
+<p><strong>To save yourself from a brute force attack, it is always advisable to go long when it comes to character length.</strong> In 2012, an industrious hacker unveiled a 25-GPU cluster he had programmed to crack any 8-character Windows password containing uppercase and lowercase letters, numbers, and symbols in less than six hours. It has the ability to try 350 billion guesses per second. Therefore, it is advisable to keep your passwords as long as <strong>15 characters</strong> if not more.</p>
+<h2>3. Mix it Up:</h2>
+<p><strong>Use a combination of upper case, small case, symbols, numeric for your passwords.</strong> The more complicated you make it, harder it is to crack it using brute force. Also, don't try to add a layer of complexity using leet (a hipster way of typing by replacing alphabet with numbers of special symbols. eg. a=@, B=3 etc.). That is not going to help.</p>
+<h3>4. The Secret Key:</h3>
+<p>You can set up <strong>some kind of rules and implement them as per the website/app you are creating password for</strong>. For example, I would <strong>pick first three letters of each word of the sentence and create a password by mixing it up.</strong> Say you are signing up for Facebook and sentence (key) you could think of is</p>
+<p><em>"Password for the Facebook application"</em></p>
+<p><strong>Applying the key, password can be Pasforthefacapp. Mixing it up, and you have P@s4theFACapp</strong>. You can make a <strong>universal key and set up a different, easy to remember, hard to crack password for each application/website.</strong></p>
+<h2>5. Password Generators:</h2>
+<p><strong>You can use password generators online to create random passwords.</strong> Example of one such generator is the inbuilt feature of Chrome.</p>
+<p><strong>Chrome acts as a password generator and password manager at the same time. Not only it will generate this password, but also sync it with all your devices logged in with the same ID.</strong></p>
+<p>However, with privacy and security being of utmost significance, I prefer to generate and remember my passwords without using Google's help.</p>
+<p><img alt="Chrome auto suggested passwords" src="https://www.chromium.org/_/rsrc/1394745053088/developers/design-documents/password-generation/GenerationUI.png" /></p>
+<h2>6. Password Managers:</h2>
+<p>And finally if you don't trust Google with your passwords, there are multiple password managers out there to help you memorize. I personally use LastPass as my password manager. You can check out the other alternatives <a href="https://in.pcmag.com/password-managers/36444/the-best-password-managers-for-2020">here</a>.</p>
+<h2>Conclusion:</h2>
+<p>Gone are the days when your <strong>online and in-person personas were mutually exclusive.</strong> It's high time that you <strong>consider them in unison and try to protect your online presence the way you'd do for your actual self.</strong> While you safeguard your passwords, ensure that your <strong>security questions</strong> are taken care of too. Your account can be equally vulnerable because of 'not thought through' security questions.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

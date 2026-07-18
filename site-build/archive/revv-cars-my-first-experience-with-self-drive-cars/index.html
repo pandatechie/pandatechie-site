@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revv Cars: My First Experience With Self Drive Cars | Raghav</title>
+<meta name="description" content="Travel. Your money will return. Your time won’t.
+
+Whimsy statements apart, I hate travelling. But before you go out on the streets to protest with brickbats and…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Revv Cars: My First Experience With Self Drive Cars</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-02-04</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-02-04 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://s3.india.com/wp-content/uploads/2019/01/Nilgiri-tea-estate.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<blockquote>
+<p>Travel. Your money will return. Your time won’t.</p>
+</blockquote>
+<p>Whimsy statements apart, <strong>I hate travelling</strong>. But before you go out on the streets to protest with brickbats and broken roof tiles, one small addendum: <strong>I love vacations</strong>. Who doesn't want a getaway every now and then. <strong>It's just the journey that bothers me a lot. Driving? Nope, Flights? Nada, Trains? Zilch</strong>. I think it has something to do with the hyper-excited mode, I instantly get into when it comes to holidaying. I picture myself sitting by the beach with a glass of Piña colada in my hand and until I actualize that picture, I am in this restless state.</p>
+<p>However, this time was a little different. After <a href="https://pandatechie.in/2021/01/30/how-to-use-google-to-translate-tamil-to-hindi-in-real-time/">learning to interact with localites in Tamil</a>, I was able to spare one day out of my four day work related trip and decided to explore the <strong>Nilgiris</strong>. And as an obvious option, I chose that one spot that was closest. <strong>Udamangalam (erstwhile Ooty) was a part of my bucket list since childhood</strong>. This time around, it was only <strong>2.5 hours away</strong> from our residence in Coimbatore. That’s what prompted me to take a rented self driven car in the form of revv cars. Today, I take you through all nitty gritty of the deal.</p>
+<p><img alt="The Nilgiris" src="https://s3.india.com/wp-content/uploads/2019/01/Nilgiri-tea-estate.jpg" /></p>
+<h2>Why Rented Vehicle?</h2>
+<p>Ooty is well connected with Coimbatore through <strong>bus, local taxis and trains</strong> as well. But I used the elimination technique to shortlist my preferred mode of travel.</p>
+<p><strong>Trains take 6.5 hours</strong> to reach Ooty and this is excluding last mile travel. Therefore, putting in an extra 4 hours (It takes only 2.5 hours by road) would further aggravate my travelling blues.</p>
+<p>Buses were out of question due to (A) <strong>Coronavirus times</strong> (I don’t trust private bus vendors to follow guidelines) and (B) <strong>Buses are known to cause nausea</strong> and sickness especially in hilly areas.</p>
+<p><img alt="Train to nilgiris" src="https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/1024px-The_Nilgiri_Mountain_Railway.jpg?itok=IYNqjhmQ" /></p>
+<p>But Raghav, you hate driving right? Why didn’t you hire a normal taxi? Well, the answer lies in <strong>privacy.</strong> More than I hate driving, <strong>I hate a talkative driver</strong>. And with <strong>language barrier</strong>, that could’ve taken a much worse shape.</p>
+<h2>Zoom Vs Revv?</h2>
+<p>Now that we've established that rented vehicle was the only way forward, it was time for comparing the only two players I had heard of in this industry. Since this was my first experience in renting out a car, I had <strong>price point as the only parameter</strong> in mind while comparing the two platforms.</p>
+<p>I read reviews on <a href="https://www.quora.com/What-is-your-review-of-Zoomcar">Quora</a> and as expected, <strong>there were dreadful stories dedicated to each of these services.</strong> I presume that people who are happy with the platforms, rarely go online to spread the word. Call it the recency bias, but I think we all are easily offended these days. Therefore, it is getting harder to please us.</p>
+<p>Not digressing from the topic, I started comparing the prices of Zoom and Revv cars. And as it turned out, <strong>Zoom car was much more expensive than Revv. There was a difference to the north of 20% in the prices of both the platforms.</strong> If you are one of those people who smashes the "Next" button until you reach the payment page, you are likely to miss this.</p>
+<p><img alt="Revv Cars vs Zoom Cars" src="https://entrackr.com/wp-content/uploads/2020/01/revv-zoomcar-merge-image-560x280.jpg" /></p>
+<p><strong>Revv Cars charge a refundable deposit of Rs. 2500 while Zoom cars only charges Rs. 499. Therefore, once you compare both the prices on the final page, Revv may look expensive, but is actually much cheaper.</strong></p>
+<p>Secondly, <strong>pick up/drop of the car from your location is FREE in case of Revv cars. However, Zoom charges Rs. 349 for the same service</strong>. Please note that I am comparing rates for Swift without fuel.</p>
+<h2>The Experience:</h2>
+<p>I will do a multi-facet review of different parameters of my journey that'll throw some light on my overall experience. Let's get started:</p>
+<h3>1. Timings:</h3>
+<p>The executive from Revv was on the dot at all times. I booked my vehicle for 9AM in the morning. Accidentally, I had forgotten to put my phone on charging in the night before qand when I woke up around 7:30 AM, my phone was switched off.</p>
+<p>The executive <strong>called me around 8:30 to inform me that he'll reach in 15 minutes</strong>. A few minutes later, I got a call from customer support asking that my phone was switched off in the morning and if the delivery agent was able to contact me or not. So, the journey incorporates the break points very well.</p>
+<p>Similarly, while handing over the car back, they were on time. I would rate this aspect 10/10.</p>
+<p><img alt="" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_931861836_2000133320009280226_410981.jpg" /></p>
+<h3>2. Car Cleanliness:</h3>
+<p>The car was <strong>neat and clean</strong>. There were <strong>paper mats on the floor like they put when car is just serviced.</strong> Also, <strong>car was washed</strong>. There were some specks of dust between the seat and head rest, but it was not a show stopper.</p>
+<p><img alt="Cleanliness of Revv Cars" src="data:image/jpeg;base64,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" /></p>
+<p>They claim that cars are <strong>sanitized</strong>, but I any way sprayed it with a disinfectant. After the onset of pandemic, <strong>safety</strong> has become a top <strong>priority</strong> for all brands. They bothered to <strong>share a YT <a href="https://youtu.be/8I2A7HQfzwk">video</a></strong> on the vehicle cleanliness at Revv. This video was sent as an attachment to the booking confirmation mail. I would give them 9/10 in this.</p>
+<h3>3. Condition:</h3>
+<p>The car I got had run for <strong>200,000 KMs</strong> already. Now I am not an automobile expert, but I think that this figure was a <strong>little overboard</strong> for a vehicle like Swift. What is the average running before you discard a vehicle anyway?</p>
+<p>Agent handed over the papers of the car and it showed that <strong>car was purchased in 2017</strong>. So, not that long in terms of ageing.</p>
+<h4>3.1 Power:</h4>
+<p>Car had a <strong>decent pickup</strong> and since I was going to a <strong>hilly terrain, with very little driving experience</strong>, I wanted to reaffirm. The delivery agent told me that every thing was just fine. In the entire travel, I did not find any problem with the pickup. However, I had to seek help of a professional driver to help us move out of the hotel premises (slope was very steep). This may be my lack of confidence with such terrains. I would rate Revv Cars 8/10 here.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h4>3.2 Exterior:</h4>
+<p>Car had some <strong>minor scratches</strong> on the body and a couple of them were a little deeper. There were also some <strong>minor dents</strong> at the back but barely noticeable to the naked eye. <strong>Tyres had a decent amount depth</strong> remaining to ensure that vehicle would not skid. Executive also insured to check the spare wheel which was unused at that point. In toto, it was a 9/10 experience for me.</p>
+<h3>4. Music System:</h3>
+<p>Road trip without music? Are you kidding me? The car seemed to have an elaborate feature rich music system. Since I was in Tamil Nadu, all <strong>local radio stations played Tamil music</strong> only, so I had no other option than playing music using my phone. However, <strong>Bluetooth functionality wasn't there</strong>. Apart from that <strong>USB couldn't recognize either of the phones</strong> we had in hand at that time. The only option left was an <strong>Aux cable, which was not given to us along with the car</strong>.</p>
+<p>So this is an area of improvement may be. So, we simply put in music on one of our phones while driving into the lush green Nilgiris. A 6/10 in the aspect.</p>
+<p><img alt="" src="https://i.ytimg.com/vi/VAS23aj58Cs/maxresdefault.jpg" /></p>
+<h3>5. Communication:</h3>
+<p>I would start this section with the rating first. It was a complete 10/10 for me. Ghosting out customers or keeping them under informed is the worst thing brands can do. However, Revv cars plugged in all these loopholes really well.</p>
+<p>It started with constant <strong>messages and emails</strong> regarding my booking. I was sent a <strong>reminder 1 day, 4 hours prior</strong> to pick up and drop of the vehicle. I got the <strong>details of the agent</strong> who was going to do the job much ahead of time.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/1-1-1024x513.png" /></p>
+<p>Email with Photos of the Vehicle</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-07-at-10.52.13-AM-1.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-07-at-10.52.13-AM-2.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-07-at-10.52.13-AM-3.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-07-at-10.52.13-AM-592x1024.jpeg" /></li>
+</ul>
+<p>SMS Confirmation at each step</p>
+<p>As mentioned above, there were a few scratches on the car. <strong>My dad was immediately concerned with the fact how would Revv confirm if these scratches are because of us or not</strong>. He insisted me to take pictures of the car. And as soon as I pulled out my phone to do so, the <strong>delivery executive said that he'll do it my behalf</strong>. The executive clicked <strong>about 35 photos of the vehicle from all the angles and shared them all over the mail with me.</strong></p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/1.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/2.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/3.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/4.jpeg" /></li>
+</ul>
+<p>Photos of the Car</p>
+<p>The Email also consisted basic details <strong>like odometer reading at the time of pickup and Fuel Level</strong>. The executive also mentioned that <strong>any additional fuel at the time of drop will be refunded</strong> along with the security deposit.</p>
+<h3>6. Dropping off/ Invoice</h3>
+<p>Once again, I was given <strong>constant reminders</strong> over the mail and SMS for drop off details. Executive called me two hours prior to the decided time to confirm his visit. <strong>All photos were taken yet again and shared with me over the mail for comparison.</strong> I was told that I had an <strong>additional petrol worth Rs. 500</strong> in the car and the same shall be refunded to me.</p>
+<p><strong>The agent gave me all the details of the refund</strong> and left. A couple of hours later, <strong>I got the invoice over the mail and confirmation of refund initiation via SMS as well</strong>. Super smooth.</p>
+<h2>Conclusion:</h2>
+<p>I think car renting industry is just getting started in our country and future seems to be really bright. Honestly, I didn't expect a solution so tightly knit together after all. Remember how we called up the local cabbie and he sent a car with flashy LED lights inside the cabin and the smell of tobacco all over the place? The times have surely changed. My overall experience with Revv Cars would be a very promising 9/10.</p>
+<p>P.S. This post is not sponsored and all views and opinions are mine.</p>
+<p>Have you given renting services a shot lately? How was your experience?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

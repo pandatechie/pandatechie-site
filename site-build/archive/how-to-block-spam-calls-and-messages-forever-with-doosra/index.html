@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Block Spam Calls and Messages forever: Doosra | Raghav</title>
+<meta name="description" content="I would narrate an incident that happened with me. This would paint a good mental picture.
+
+It's a Sunday afternoon and you just had your weekly wholesome meal …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Block Spam Calls and Messages forever: Doosra</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-05</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-05 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-05-at-6.25.47-PM-2-488x1024.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>I would narrate an incident that happened with me. This would paint a good mental picture.</p>
+<p>It's a <strong>Sunday</strong> <strong>afternoon</strong> and you just had your weekly wholesome meal of <strong>Biryani</strong>. While watching your favorite show on Netflix, you <strong>dozed off</strong>. It is probably the <strong>best sleep</strong> you have had in weeks. And that's when you get a call. You pick it up <strong>hastily</strong> and the lady on the other side says, <em>mai policybazar se Reema baat kar rahi hun</em>. (Call from a telemarketer).</p>
+<p>See how the entire experience was ruined? This happens way too often. As a matter of fact, <strong>India</strong> was one of the <strong>top ten countries affected by spam calls</strong> in 2020, according to the “Truecaller Insights" (<a href="https://www.thehindubusinessline.com/info-tech/india-among-the-top-10-countries-affected-by-spam-calls-in-2020-truecaller/article33280228.ece#:~:text=India%20was%20one%20of%20the,number%20of%20spam%20calls%20received.">source</a>). On a similar note, on an average, I receive <strong>12-15 spam texts</strong> each day. Back in the day, we used to handle this problem with our <strong>email IDs by creating a dummy mail ID</strong> for sharing with <strong>unwanted sites or for single time use</strong>. What if I tell you that you can have a similar telephone number too? Enter <a href="https://www.doosra.com/">Doosra</a>: <em>your answer to how to block spam calls and messages</em> and protect your privacy.</p>
+<p><img alt="How to Block Spam Calls and Messages forever: Doosra" src="https://pandatechie.in/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-05-at-6.25.47-PM-2-488x1024.jpeg" /></p>
+<p><strong>See? I feel completely comfortable in sharing my number online.</strong></p>
+<h2>What is Doosra?</h2>
+<p>First of all, it has nothing to do with cricket and Harbhajan Singh. Doosra is nothing but actually a <strong><em>doosra</em> (other/second) number</strong>. It is <strong>virtual mobile number</strong> you have in your pocket that runs normally without a SIM card. An <strong>e-Sim card</strong>, if you may. Doosra has the potential of <strong>replacing your mobile number</strong> while you are sharing it with <strong>e-Commerce sites, shopping malls, dating apps, delivery apps etc</strong>. Sharing your number with unknown sources means that you will get a <strong>constant supply of spam</strong> messages and calls every day. Also, who knows some <strong>creep over the internet gains access to your number and tries to bug you</strong>. So what all does Doosra have in store?</p>
+<h2>Features of Doosra:</h2>
+<p>At the very heart of the app, topmost feature would be <strong>blocking all incoming calls to Doosra number</strong> (No prizes for guessing that). However, a lot of thought has been put behind addressing the customer's pain points. Lets explore them quickly:</p>
+<ul>
+<li><strong>SMS Filtering:</strong> All incoming messages to Doosra number will sit quietly in a designated space on the application until you decide to revisit them. Peace!</li>
+</ul>
+<p><img alt="How to Block Spam Calls and Messages forever: Doosra" src="https://pandatechie.in/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-05-at-6.25.47-PM-1-492x1024.jpeg" /></p>
+<p><strong>Adios! Spammers</strong></p>
+<ul>
+<li>
+<p><strong>Unblocking:</strong> In case you expect an important call on Doosra, you have an option of <strong>unblocking all the calls for a fixed duration or at a specific location.</strong> A good use case of this feature would be signing up for Swiggy/Zomato using Doosra application and unblocking calls while you order something for delivery agents to reach out to you. You may use location based unblocking, if you have shared your number while entering a restaurant/pub and you are expecting them to call you while you are at that location. You may turn off call blocking totally as well, if required. (only available in pro mode)</p>
+</li>
+<li>
+<p><strong>Trusted Contacts and Services:</strong> You may maintain some contacts as <strong>trusted</strong> and Doosra would simply NOT block calls from them. Similarly, there are some services like <strong>Amazon, Ola, Urban Company, Swiggy, Zomato</strong> which are by default set as 'trusted'. You may disable calls from them as well, manually. if you that suits you.</p>
+</li>
+</ul>
+<p><img alt="How to Block Spam Calls and Messages forever: Doosra" src="https://pandatechie.in/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-05-at-6.25.47-PM-3-490x1024.jpeg" /></p>
+<p><strong>Trusted Services- Options to disable them</strong></p>
+<p><img alt="How to Block Spam Calls and Messages forever: Doosra" src="https://pandatechie.in/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-05-at-6.25.47-PM-493x1024.jpeg" /></p>
+<p><strong>Trusted Contacts- Yes, I do have trust issues.</strong></p>
+<ul>
+<li>
+<p><strong>Voice Mail:</strong> And even if above still doesn't work for you, <strong>all unknown callers are redirected to a voicemail.</strong> Your callers can record their message and it will reach you instantly. This feature can also be turned off.</p>
+</li>
+<li>
+<p><strong>Premium Number:</strong> This is a cherry on the top. You may not want to pick a boring Doosra number and you may chose to go for <strong>premium options</strong> as well. Of course these numbers are <strong>priced higher</strong> than the normal ones but more on pricing in the upcoming segments.</p>
+</li>
+</ul>
+<h2>My Experience and Uses?</h2>
+<p>I have been using Doosra for over a week now. I did share it with a <strong>restaurant</strong> I visited on <strong>30th December</strong>, <strong>2020</strong>. Just a week later, I am being offered <strong>Biryani at a 40% discount</strong> from that place. So, kind of, justifies my purchase of Doosra number. And I also think the <strong>more I share it, lesser would I get distracted from all those spam notifications.</strong> That is indeed a +1 for your <a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">digital wellbeing dashboard</a>. Some other things I did using Doosra were as follows:</p>
+<h3><strong>Free Trials:</strong></h3>
+<p>My <strong>Curefit subscription</strong> ended a month ago and let's be honest, I rarely used it. This time, since new year resolutions have to include this aspect, I was about to purchase one. However, I just realized Doosra would give me another <strong>7 day free trial</strong>. So if you want to give an additional shot to the app/service you just tried, Doosra can be really handy.</p>
+<h3>Free Referrals:</h3>
+<p>Another related use I could think of would be of referral discounts. I could use my <strong>primary number's referral code for Doosra number</strong> and get some freebies from multiple services on the internet. This would be possible using any other number, but again, Doosra will also block spam messages and calls when it is being used to avail those services.</p>
+<h3>Other:</h3>
+<p>One interesting case I saw over the internet for Doosra, which I intend to put to use, is on <strong>OLX</strong>. My experience with OLX is very bad. Ever since I showed interest in a product on OLX, a <strong>stupid fraud would try to act smart and make unnecessary calls every few days</strong>. Doosra would be really handy in protecting your privacy in such cases.</p>
+<h2>Pricing:</h2>
+<p>Doosra offers <strong>half yearly</strong> and <strong>annual subscription</strong> based pricing. Both these periodic packages are sub divided into two variants, <strong>Doosra</strong> and <strong>Doosra Pro</strong>. Comparison of the features can be found <a href="https://www.doosra.com/pricing-page">here</a>. I purchased <strong>Doosra half yearly basic plan</strong> which costed me <strong>Rs. 499</strong>. The similar package for <strong>annual plan costs. Rs. 699.</strong></p>
+<h2>Conclusion:</h2>
+<p>In toto, I think doosra tries to solve a problem which has been around for a while now. <strong>More than spamming related issues, this turns out to be a war against privacy concerns.</strong> Will I renew my Doosra subscription? Well, may be. Will you purchase one?</p>
+<p>Let me know in the comments section below or you can hit me up on <a href="https://www.facebook.com/kaafi.pan.da.techie">Facebook</a>, <a href="https://twitter.com/panda_techie">Twitter</a> or <a href="https://www.instagram.com/pandatechie/">Instagram</a>. If you find this article useful, please consider sharing it on social media using the links below.</p>
+<p>Until next time. . .</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

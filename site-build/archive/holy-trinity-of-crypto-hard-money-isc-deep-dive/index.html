@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holy Trinity of Crypto Hard Money: ISC Deep Dive | Raghav</title>
+<meta name="description" content="STABLE-COIN. Sounds like an oxymoron in the crypto space, right? Well, to quickly get this explainer out of the way, [stablecoins](https://pandatechie.in/2021/1…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Holy Trinity of Crypto Hard Money: ISC Deep Dive</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-02-09</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-02-09 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://arweave.net/dLz15h_lsMWYMNfHaFmNpJWFvQlqq3ESRYeF8T8DWro" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>STABLE-COIN. Sounds like an oxymoron in the crypto space, right? Well, to quickly get this explainer out of the way, <a href="https://pandatechie.in/2021/10/24/what-is-stablecoin-types-of-stablecoin-and-uses/">stablecoins</a> are a class of crypto tokens that mimic the price of a stable asset like USD etc. Think of it as a crypto version of fiat.</p>
+<p>This peg to USD can be maintained by different mechanisms. The three most common methods are:</p>
+<p>Fiat-collateralization, where the stablecoin is backed by a reserve of fiat currency and/or cash equivalents;</p>
+<p>Crypto-collateralization, where the stablecoin is backed by a reserve of cryptocurrencies;</p>
+<p>Algorithmic, where a combination of dynamic collateralization, dynamic minting and burning, and over-collateralization are employed to maintain the peg.</p>
+<p>Do not fret if this doesn't make sense, yet. Because that is what we are going to cover in this article. Here's what's coming your way:</p>
+<h2>History of Money: The Case for Bitcoin and Stablecoins</h2>
+<p>Let me guess. You are someone who entered the crypto space after encountering Bitcoin. One thing led to another and you found yourself exploring the realms of economics, politics, history of money and philosophy.</p>
+<p>You realize that the money you and your family has worked for, since forever, is all a sham. May be Bitcoin is the answer. But who would store their hard-earned money in an asset that is as volatile as your girlfriend's mood swings?</p>
+<p><img alt="" src="https://arweave.net/dLz15h_lsMWYMNfHaFmNpJWFvQlqq3ESRYeF8T8DWro" />Bitcoin crashes from ATH since 2012 Select an Image</p>
+<p>As a result, you think stablecoins could rescue you. After all, they are usually pegged to a dollar and offer you <strong>better flexibility, permissionless nature, speed and yield opportunities</strong> than traditional banks.</p>
+<p>But ser, is dollar the best underlying asset to an investment?</p>
+<p>The dollar has lost 98% of its purchasing power since its inception (Refer to the graphic below)</p>
+<p><img alt="" src="https://arweave.net/31byWf7c2GkzJzpfOiv3GsZhf7_e4xyY4CnUlbts1Zs" /></p>
+<p>How does dollar lose its value, you ask? After all $1=$1 (More real than 1 BTC = 1 BTC, as of now).</p>
+<p><strong><em>Enter: Story Time with Panda</em></strong></p>
+<p>Back in the day, there was a time when dollar was pegged to gold. This meant that US government could issue only as much dollar as the value of gold in their reserves.</p>
+<p>But then, in 1971, in order to address the country's inflation problem and to discourage foreign governments from redeeming more and more dollars for gold, President Richard Nixon moved away from this system of money printing.</p>
+<p>And thus began the era of centralized banks. The likes of Federal Bank in US and RBI in India got to decide the amount of money that needs to be pumped (quantitative easing) or withdrawn (quantitative tightening) from the ecosystem.</p>
+<p>Banks do this by controlling the price (interest) of borrowing. If it becomes cheaper to borrow, corporates/individuals take up more loans, expand further.</p>
+<p>Good vibes all around?</p>
+<p>Well, one downside of this is inflation.</p>
+<p>Since more money is now chasing the same amount of goods (expansion does not result in more production immediately), the prices go up.</p>
+<p>In a nutshell, these central banks are in a constant tango to balance between growth and inflation.</p>
+<p>With all due respect to the giga brains at work to maintain this balance, there have been multiple instances of goof ups. Think Zimbabwe, Argentina, Turkey, Sri Lanka, Pakistan.</p>
+<p>Fun Fact:Zimbabwe had to print a 1 Trillion Zimbabwean Dollar note to encounter the rampant inflation at one point. The inflation doubled every 6 hours in the country.</p>
+<p><em>And it is because of this printing, money (dollar in our example) loses its purchasing power. So while your $1 = $1, you can definitely NOT buy same amount of goods using $1 today as you could may be 10 years ago.</em></p>
+<p>In fact, creating money out of thin air is so addictive that countries often forget the economic havocs it can wreak. A metric to gauge this is <strong>debt to GDP ratio</strong> i.e. the amount of money printed per dollar of earning of a country. And US has been pretty brutal in this aspect. Check the table below.</p>
+<p><img alt="" src="https://arweave.net/3OTOkdjMiiM7ZaC_Uz4Q8IujWTtH9gC1G8lunH0lqoo" /> Select an Image</p>
+<p><strong><em>Thought Experiment:</em></strong></p>
+<p>Find a ₹500 currency note today (or any note for that matter).</p>
+<p>The currency note has a beautiful message written on it.</p>
+<p><em>"I promise to pay the bearer a sum of five hundred rupees"</em></p>
+<ul>
+<li>Undersigned, Governor, RBI</li>
+</ul>
+<p><img alt="" src="https://arweave.net/Oh01WEl7zmRUOwJZ7wn2O5z74-K_i7v29Hy2SB6O3f0" /></p>
+<p>Say you take this note and go to RBI office. You meet the governor, hand him over the note and ask him to pay you Rupees 500. After all he promised it, signed it.</p>
+<p>What do you expect in return? What is he going to give you back?</p>
+<p>Read till the end to find out the answer.</p>
+<h2>The Stablecoin Graveyard: TerraUSD</h2>
+<p>Alright. So we started with the fact that Bitcoin, albeit a store of value is volatile AF. Similarly, if you plan to use fiat pegged stablecoins, you may be betting on a depreciating instrument from day zero.</p>
+<p>Well, this problem is not new. In the past, attempts have been made to come up with a stablecoin which is free from the shackles of fiat.</p>
+<p>One such case that will standout in the gruesome history of crypto is project Terra-Luna.</p>
+<p>Terra Luna was created by Do Kwon, a South Korean entrepreneur.</p>
+<p>It consisted of two tokens: Luna, which is used for governance and staking, and TerraUSD, which is a stablecoin pegged to the US dollar. The project claimed to offer a decentralized and scalable payment system that could compete with traditional fiat currencies.</p>
+<p>However, Terra Luna faced a series of legal and technical challenges that led to its failure. In May 2022, Luna and TerraUSD collapsed spectacularly, losing almost all of their value and triggering a wider crash in the crypto market. The reasons for the collapse are not clear, but some factors include:</p>
+<ul>
+<li>Allegations of fraud and market manipulation by Do Kwon and his associates, who are facing criminal charges in the US, South Korea and Singapore.</li>
+<li>Technical flaws and vulnerabilities in the Terra Luna protocol, such as the lack of sufficient collateral backing TerraUSD and the reliance on a centralized oracle service for price feeds.</li>
+<li>A loss of confidence and trust among investors and users, who were misled by Do Kwon’s hype and false promises.</li>
+</ul>
+<h2>So What's Next?: International Stable Currency</h2>
+<p>To summarize what I mentioned above, this meme should be an accurate representation of your wealth so far:</p>
+<p><img alt="" src="https://arweave.net/tpzUp8Eg_hh4n0b7aIYCAJJHmFPPqc-0QZ4bhYkITsc" /></p>
+<p>Currently, the stablecoin market is dominated by USD backed stablecoins. The top 3 coins in this category have a combined market cap of $115B.</p>
+<p><img alt="" src="https://arweave.net/Wq49qguO5WDOT1afgX9ugiW43JoEY5UCoESaWR1_r8U" /></p>
+<p>With some serious utility and lack of alternatives, currently there isn't a safe haven to preserve the value of your moolah.</p>
+<p>You see, it is not just about the inflationary nature of USD that's a problem.</p>
+<p>With the usage of USDT, we are also relying on a non-regulated, centralized authority with our funds. With current supply of $85B, who knows if they are maintaining these reserves and in what form.</p>
+<p>Similarly, USDC is issued by Circle. It is a sister concern of a regulated entity called Coinbase. Who knows if one fine day some regulatory bug forces Circle to cease all withdrawals.</p>
+<p>I hate to be the harbinger of bad news but everything is possible.</p>
+<p>But what if we have a middle ground?</p>
+<p><strong>Enter: International Stable Currency.</strong></p>
+<p>ISC is an inflation-resistant stablecoin that is designed to steadily appreciate in value over time. Unlike USDT &amp; USDC, ISC is not pegged to the US Dollar. Instead, ISC is pegged to the value of a basket of real-world assets.</p>
+<p><img alt="" src="https://arweave.net/UL-P1f3jMlgNMpN5VRNxW7xQekBvlGd-m5lQ3x-_kWE" />If 'best of both worlds' had a face ISC would be it.  Select an Image</p>
+<p>This basket looks something like this:</p>
+<ul>
+<li>20% Global Cash</li>
+<li>20% Gold</li>
+<li>20% T-Bills</li>
+<li>20% Global Bonds</li>
+<li>20% Global Equity</li>
+</ul>
+<p>It does not take a degree in economics to realize that all these assets are inversely proportional to each other. This means it is an all-season basket.</p>
+<p>During the times of high inflation and quantitative tightening, T-Bills and Global bonds outperform others.</p>
+<p>Similarly, Gold and Equity takes the centerstage in <a href="https://www.notboring.co/p/the-appetizirp">ZIRP</a>.</p>
+<h2>Key Features of ISC:</h2>
+<p>After all, taking a $115B market head on, is kind of a big deal. Let us explore some of the key features of ISC that make me bullish.</p>
+<h3>1. Appreciating Stable Currency:</h3>
+<p>Wait what? Yes. You read it right. Unlike its peers, ISC can grow in value depending on the value of underlying assets.</p>
+<p>Say you invest a few thousand dollars in USDT. With no control over audits or regulatory oversight, you have absolutely no idea what happens to your money. For all we know, the team behind USDT might be degening at your cost. So while you bear the risk, they reap the benefits of investment.</p>
+<p>ISC is different. You are entitled to enjoy the benefits of growth with underlying assets.</p>
+<p>In fact, backtesting between 2000 and 2023 highlights ISC's strong performance: a 3.11x increase in value and a 5.06% annualized return. In this sense, ISC is crypto hard money because it is a currency supported by tangible, real-world assets.</p>
+<p>Select an Image</p>
+<h3>2. ISC Governance Token (IGT) and ISC DAO:</h3>
+<p>One of the core tenets of web3 is democratization of the wealth and power.</p>
+<p>Unless you are Jerome Powell, I am sure no one asks you about the federal bank interest rates for the quarter.</p>
+<p>Too bad that USDT/USDC do not care about your opinion either. Bummer.</p>
+<p>ISC recognizes this problem and ensures that the community has an equal say in the project.</p>
+<p>This is why ISC is governed by a token called IGT. All IGT holders become a part of ISC DAO and are entitled to vote on two aspects currently:</p>
+<h4>2.a Rights to improve the portfolio:</h4>
+<p>IGT holders can raise a proposal to increase or decrease the allocation in any of the assets in the basket.</p>
+<p>For example, during uncertain times if you feel that the reserves should be allocated to gold more than anything else, you can raise the proposal. If it is passed by the majority, changes will be executed.</p>
+<p>For that matter, you can go and raise a proposal to invest in silver instead. All you need is a majority vote and that would be it.</p>
+<h4>2.b Electing a community auditor:</h4>
+<p>Imagine this. You give your friend some money to keep it aside for the time being. Your friend happily takes the responsibility and claims that your money will be safe.</p>
+<p>Lo and behold, markets fluctuate and you want to check on your money.</p>
+<p>Your friend still claims that it is fine. But once every other acquaintance starts pointing fingers at your friend, you ask him some firm questions.</p>
+<p>He confidently says that he will get his wallet audited to assure you that your money is safe.</p>
+<p>The moment you start catching your breath, you realize that your friend has appointed his accountant friend to audit your funds.</p>
+<p>You realize that something is fishy but literally can't do anything.</p>
+<p>Without pointing out which friend I am referring to, IGT allows its holders to vote on the auditor of treasury.</p>
+<p>You can do this vote every 3 months and either continue or pick a new individual/firm that can come in and check the trade books of ISC. This auditor will write a public report of his findings for you.</p>
+<h2>How do I get IGT?</h2>
+<p>I know what you are thinking. Itching to get your hands on some IGT right?</p>
+<p>Turns out that IGT will be airdropped to all ISC holders. And the tokenomics is rather simple and interesting.</p>
+<ul>
+<li>
+<p>There are 1B IGT tokens in totality.</p>
+</li>
+<li>
+<p>35% of IGT or 350M is reserved for ISC users.</p>
+</li>
+<li>
+<p>There's no staking BS. Depending on the number of ISC tokens and the time you hold them for, you will be eligible for IGT airdrop.</p>
+</li>
+<li>
+<p>No printing. Ever. Fixed supply.</p>
+</li>
+<li>
+<p>Minimum of 30% of the revenue is committed towards burning IGT. So value goes up for the holders.</p>
+</li>
+<li>
+<p>Over the first 48 months after launching ISC, 5 million IGT tokens will be distributed to ISC holders each month. The amount of IGT airdropped to users will be proportional to the length of time and amount of ISC held by the user.</p>
+</li>
+</ul>
+<p>This is calculated as per the following formula.</p>
+<p>(ISCheld/ISCsupply)∗timeHeld∗5MIGT=IGTairdrop</p>
+<p>Calculated for each period since the last request, where each time period starts and ends when ISCheld or ISCsupply changes.</p>
+<h2>Summarizing Superiority:</h2>
+<p>Let us compare ISC with its peers:</p>
+<p><img alt="" src="https://arweave.net/zQ6Iway68WVJfBugcCAV8koCF2s2k9mz0Ydk61znaGY" /></p>
+<p>ISC looks like a promising candidate in this sea of blood.</p>
+<p>So, while the graveyard is real and the dead bodies will continue to grow, it is imperative to die multiple deaths just to resurrect. Because that's how innovation works.</p>
+<p><strong>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration with <a href="https://bohemianbibliophile.com/">Bohemian Bibliophile</a>.</strong></p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

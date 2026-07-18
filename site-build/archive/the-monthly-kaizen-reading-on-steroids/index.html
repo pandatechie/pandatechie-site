@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Monthly Kaizen: Reading on Steroids! | Raghav</title>
+<meta name="description" content="Nope. Not literally bruh! I don't do drugs (at least not now). So, it is that time of the month again! I pick up a small incremental change in the starting of t…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Monthly Kaizen: Reading on Steroids!</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-05-30</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-05-30 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media.tenor.com/images/447a3a950ccb16a1caaafdaa75708849/tenor.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Nope. Not literally bruh! I don't do drugs (at least not now). So, it is that time of the month again! I pick up a <strong>small</strong> <strong>incremental</strong> <strong>change</strong> in the starting of the month and <strong>try to live up to it</strong> for the <strong>entire month</strong>. And around this time, <strong>every</strong> <strong>month</strong>, I log my <a href="https://pandatechie.in/tag/kaizen/">experience</a> of that Kaizen.</p>
+<p>This month, <strong>Kaizen</strong> was a little <strong>more</strong> than the <strong>incremental</strong> change. I have never been an <strong>avid reader</strong> in my entire life. If I could go in the <strong>past</strong> and <strong>develop</strong> one <strong>habit</strong>, this would be it. <strong>Reading to the mind is what proteins are to body</strong>. Therefore, as I grew wiser (not correlated to my age in any way), I decided to <strong>inculcate</strong> this into my <strong>routine</strong>.</p>
+<h2>The Jittery Start:</h2>
+<p>I started off by <strong>listening to audio books</strong> first but there a slight <strong>drawback</strong> you see. I don't read <strong>fiction</strong> at all. Every book I have read (or decided to read) is some <strong>non-fiction (personal growth being my favorite).</strong> Therefore, it is of utmost importance that I carry the <strong>learnings</strong> of the <strong>book</strong> <strong>along</strong> <strong>with</strong> <strong>me</strong> if I really wish to reap some <strong>benefits</strong> out of it. But, when you <strong>listen</strong> to stuff rather than <strong>reading</strong> it, it gets <strong>buried down deep in your conscience</strong> and is hard to <strong>extract</strong>. More than often, listening to audio books is more of a <strong>multitasking affair</strong>. It is often coupled with some other task like <strong>exercise</strong>, <strong>driving</strong> etc.</p>
+<p>So, if I really had to <strong>learn something</strong> out of these <strong>endeavors</strong>, reading really didn't have any <strong>substitute</strong> per se. So, I started my journey of reading.</p>
+<p>It was super tough initially. I would often <strong>read pages without realizing that I am not actually grasping a single word of the text.</strong> So difficult. I actually finished reading a book called "The Intelligent Investor" like this. I made myself read the book rather than <strong>enjoying</strong> it. And now, I remember a very little of it. <strong>Disappointing</strong> much!</p>
+<p><img alt="" src="https://media.tenor.com/images/447a3a950ccb16a1caaafdaa75708849/tenor.gif" /></p>
+<h2>What is the Kaizen?</h2>
+<p>This time, I decided to do things <strong>differently</strong>. Everyone loves a <strong>hippy look</strong> with a <strong>paperback book</strong> wrapped in arms and it undoubtedly <strong>boosts</strong> your inner <strong>nerd ego</strong> at the <strong>airport</strong> as well. However, the <strong>conventional</strong> <strong>hard</strong> <strong>bound</strong> books have some shortcomings. Before you book lovers bash me, let me rephrase it. <strong>Reading books digitally has an upper edge</strong>. So my <strong>Kaizen was doing away with the reading physical books and only focus on doing it digitally</strong>. That has benefitted me a lot. Here's how:</p>
+<h2>1. Taking Notes, Like a Boss!</h2>
+<p>A key drawback of reading physical books was the <strong>inability</strong> to <strong>take</strong> <strong>notes</strong>. Obviously you have an option of taking notes using a <strong>pencil/pen and go back to them later</strong>. This does give you an <strong>upper hand</strong> over <strong>audio books</strong> but there's still something that's <strong>missing</strong>. What? It's the <strong>laborious</strong> <strong>task</strong> of <strong>revisiting</strong> them later. Imagine if I want to go back to a <strong>certain</strong> <strong>learning</strong> that I remember <strong>vaguely</strong> now. The only way to do it would be to <strong>sift through the entire book</strong> to cull out the <strong>highlighted piece of information</strong> you are looking for. A pure <strong>hit and trial</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/photo6168005270136008119-768x1024.jpg" /></p>
+<p>However, this is not the case with digital books. All the <strong>highlighted/bookmark texts can be found in a single glance on a tap of a button</strong>. In other words, my own version of <strong>summary</strong> of the <strong>book</strong> is <strong>generated</strong> through my highlights. Pretty cool right? Even if there is some gap between your two reading sessions, I could <strong>contextualize</strong> the <strong>upcoming</strong> sections much better by spending 5 minutes on the highlighted text.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/photo6168005270136008122-788x1024.jpg" /></p>
+<p>Apart from that, just the way we <strong>highlight</strong> <strong>paper</strong> <strong>books</strong> with <strong>different</strong> <strong>markers</strong> (if you are one of those), there is a possibility to do so in the digital format as well. So, I can now classify important pieces in a personalized criteria set by me.</p>
+<h2>2. Dictionary:</h2>
+<p>When I used to read the <strong>literature</strong> <strong>books</strong> in our school <strong>curriculum</strong> in the past, nothing was more annoying than <strong>reading a page</strong> and <strong>referring</strong> to a <strong>dictionary</strong> four times while doing that. Also, <strong>underlining the difficult words and mentioning it's meaning</strong> on the top was a part of one's book reading regime.</p>
+<p>I sometimes feel a similar urge while going through a paper book. But not anymore. Digital books provide you with the functionality to <strong>simply tap the word and get its meaning right there and then</strong>. How this helps me is that the <strong>linkage</strong> or <strong>flow</strong> is not brought down to a <strong>complete</strong> <strong>halt</strong> just to understand the meaning of a word. I can look up and continue on my journey within a matter of seconds. Isn't it just a super loaded kaizen?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/photo6168005270136008120-782x1024.jpg" /></p>
+<h2>3. Mobility and Flexibility:</h2>
+<p>Ever got stuck in a situation where you <strong>forgot your favorite book</strong> while you are travelling. I'll niche down this example a little more. <strong>Ever felt so lazy that you just didn't want to bring that book from the other room?</strong> I do! Turns out, now I don't have to. All the books I have started are <strong>synced across all my devices</strong> pretty seamlessly.</p>
+<p>I can even <strong>forget putting a bookmark</strong> on the page where I left off and technology will ensure that I start from there on any device I have. This also ensures that I make a proper use of my <a href="https://pandatechie.in/2021/03/11/time-management-the-intrinsic-value-of-time/">negative spaces</a>. James Clear, in his book, <a href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299">Atomic Habits</a>, talks a lot about "<strong>making it easy</strong>". One of the key steps in forming a habit. And I don't think anything could have simplified reading more than digitizing it could.</p>
+<h2>4. It is Feature Packed and Fun:</h2>
+<p>I am not trying to be a wannabe Gen-Z here but <strong>reading</strong> <strong>books</strong> on your <strong>Kindle/iPad</strong> is fun. It is not boring. You can read in <strong>absolute dark</strong> and there are <strong>multiple screen modes</strong> (sepia, dark, ambient etc.) depending on the lighting and your mood.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/photo6168005270136008118.jpg" /></p>
+<p>Apart from that, if you are starting out new like me, there are a lot of <strong>nudges</strong> that <strong>motivate</strong> you. <strong>Reminder</strong> to read, <strong>badges</strong> as you progress and shoutout on completion of set goals of reading. Hence the title, reading on steroids'.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/photo6168005270136008117-864x1024.jpg" /></p>
+<h2>Conclusion:</h2>
+<p>I believe there is no point running away from digital transformation. Even if old school book reading has some element of habit attached to it, I think in the long run, if you are into personal growth via book reading, digital readers will have an upper edge.</p>
+<p>Which side are you on? Also let me know if you believe in the theory of total quality management (Kaizen)</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

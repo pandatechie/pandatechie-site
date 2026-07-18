@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Bitcoin May Not be Decentralized? | Raghav</title>
+<meta name="description" content="Say what? I think in web3 culture, saying that Bitcoin is not decentralized is an equivalent of making fun of someone’s religion. The kind of fanaticism the BTC…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Why Bitcoin May Not be Decentralized?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-07-18</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-07-18 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/png;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Say what? I think in <strong>web3</strong> culture, saying that <strong>Bitcoin</strong> is not decentralized is an equivalent of making fun of someone’s religion. The kind of fanaticism the <strong>BTC community</strong> has is unparalleled.</p>
+<p>Before we  proceed further, a few disclaimers. (A) I am a part of this fanatic community just with a little more open eyes. (B) I am a big fan of the network effects created by the orange pill. So I have no intention of fighting with them.</p>
+<p>With that out of the way, let us talk about how <strong>Bitcoin</strong> may not be as decentralized as we thought it would be. And after all, why is <strong>decentralization</strong> important?</p>
+<h2>The Genesis of BTC:</h2>
+<p>Back in 2008, when the first block of BTC was mined, it had a message encoded in the raw data that said: "<strong>The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."</strong></p>
+<p>It is very clear that the ethos of BTC was to create a <strong>peer to peer</strong> transaction system without any intermediary in place. In other words, creating a network that is not owned by anyone but run by everyone. Thus the term ‘<strong>decentralized</strong>’ got a new meaning altogether.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<p>And to be honest, the idea is really novel. If banks are replaceable, why not do it? If money is an abstract concept, why can’t BTC replace it?</p>
+<p>A couple of days ago, an <strong>ECS debit</strong> hit my bank before the salary got credited. As a result the payment bounced and the bank levied a penalty. Why? Is there a cost involved with reconciliation of <strong>cheque</strong> bounces?</p>
+<p>What I am trying to say is that I am completely sold on the idea. But then, <strong>decentralization</strong> has so many layers attached to it. Let’s find out.</p>
+<h2>What is Decentralization?</h2>
+<p>As mentioned, the very ability of a network to be run by all the participants rather than a central authority is known as decentralization.</p>
+<p>When it comes to <strong>Bitcoin</strong>, there’s no company or organization running it. It is maintained by something called a node. These nodes are deploying computational power to validate and put the next block in the <strong>Blockchain</strong>. Best part? Anyone can become a <strong>node</strong>. Thus making the system completely <strong>democratized</strong>.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>But there’s often more than it meets the eye. Story doesn’t end here. Believers of <strong>BTC</strong> would say that BTC has about 16,000 nodes. Thus making it a fairly <strong>decentralized system</strong>. But here’s something that is often overlooked.</p>
+<h3>A. Client Decentralization:</h3>
+<p>Oversimplified definition incoming. Think of client <strong>codebases</strong> as pieces of software that help in <strong>mining</strong>. These are the softwares that would help you calculate <strong>hash</strong> and <strong>mine</strong> the blocks. Turns out that the most popular client codebase is Bitcoin core and <strong>Bitcoin</strong> unlimited is the second one.</p>
+<p>This means it would take very little effort to compromise BTC if either of these codebases are compromised with. Now, you tell me. Is it really <strong>decentralized</strong> if the validation mechanism is dependent on just two parties?</p>
+<h3>B. Geographical Dependence:</h3>
+<p>Another argument against <strong>decentralization</strong> is the fact that nodes are concentrated in a few countries with China being the largest player. If some of these countries decide to launch a 51% attack collectively, it is quite possible to compromise <strong>Bitcoin</strong>.</p>
+<h3>C. Ownership Centralization:</h3>
+<p>Although <strong>BTC</strong> is people’s money, we are very well aware of the fact that large corporations have a great influence on the prices of the orange coin. <strong>Microstrategy</strong> alone his one of the biggest hodler of <strong>BTC</strong> and one can imagine the mayhem it may cause if they ever decide to sell.</p>
+<p>We saw this live in action when <strong>Luna Foundation Guard</strong> decided to sell their reserves to safeguard <strong>UST</strong> peg. However, the only thing that came out of it was that <strong>BTC</strong> had touched $24K.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>What I am saying is that in case of such a transaction in stocks, there are rules set by regulators to inform beforehand. But with BTC being ‘<strong>decentralized</strong>’ people abuse their money to loot retail investors.</p>
+<h3>D. Dev Decentralization:</h3>
+<p>Another interesting lens to look at this. How many devs are working on <strong>BTC</strong>? We recently got a taproot upgrade, how many people contributed to it? Because if the number of people who understand the code and work on it is limited, we are yet again at their mercy. All of them might introduce something to BTC that non techies cannot even fathom.</p>
+<h3>E. Mining Pools:</h3>
+<p><img alt="" src="https://lh5.googleusercontent.com/Ml-we6JbUTtysAdSGjsCwX6WYwEvHhRFxquW9lEDHV_Su2aVIO2N8RQy081AB8OXLgOvIg_Fub1X2gP9Co9c9U_OvRBiHax0OTQJFm_t1kY85hadldjeJUiCcNY3CbuXrX_dY1Yx8h3Whioe8g" /></p>
+<p>The image says it all. What if these <strong>folks</strong> ever decided to do a 51% attack on Bitcoin? Where is your god now?</p>
+<h2>Which Means?</h2>
+<p>Well, everything aside, I feel <strong>BTC</strong> is still better placed than all other cryptocurrencies out there. Also, one should realize that <strong>decentralization</strong> is a spectrum and not a <strong>boolean</strong>. What that means is that you would always have elements of centralization in an ecosystem. So if you are interested in quantifying <strong>decentralization</strong> of a network, I would recommend you go through the theory of <a href="https://news.earn.com/quantifying-decentralization-e39db233c28e"><strong>Nakamoto Coefficient</strong></a>.</p>
+<p>Secondly, you take a call if decentralization matters to you or not. There might be cases where you still want speed and security while being decentralized.</p>
+<p>In the end, we all build our own narratives. What is yours?</p>
+<h2>Ethereum Push Notification System:</h2>
+<p>While decentralization will constantly be a moral dilemma more than a technical one, there is one project that solves a big web3 problem regardless.</p>
+<p>https://www.instagram.com/p/Cf66XkKvgCw/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

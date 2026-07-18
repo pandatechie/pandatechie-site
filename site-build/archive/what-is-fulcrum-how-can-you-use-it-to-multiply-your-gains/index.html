@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Fulcrum? How Can You Use it To Multiply Your Gains? | Raghav</title>
+<meta name="description" content="Trust me, if you stay long enough in the crypto space, money would become a side gig for you. No, I am not referring to the gains here. I am talking about the e…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Fulcrum? How Can You Use it To Multiply Your Gains?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-12-07</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-12-07 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://d1e00ek4ebabms.cloudfront.net/production/fb20e260-89ba-4ad5-bd62-9c33ef4bee22.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Trust me, if you stay long enough in the crypto space, money would become a side gig for you. No, I am not referring to the gains here. I am talking about the endless <strong>learning</strong> <strong>opportunity</strong> at hand that you would start <strong>caring</strong> <strong>lesser</strong> about <strong>money</strong> and start viewing the <strong>big</strong> <strong>picture</strong>. Think of it like this. Ever since I have got into crypto space, I have had an opportunity of learning some key <strong>economic</strong> concepts. I have got a slight idea of how <strong>databases</strong> work, <strong>supply</strong> <strong>chains</strong>, <strong>gaming</strong>, <strong>virtual</strong> <strong>worlds</strong> and what not. You pick any <strong>crypto</strong> <strong>niche</strong> and it should help you connect the dots.</p>
+<p><img alt="" src="https://d1e00ek4ebabms.cloudfront.net/production/fb20e260-89ba-4ad5-bd62-9c33ef4bee22.jpg" /></p>
+<p>One such domain that has been really intriguing for me is <strong>decentralized</strong> <strong>finance</strong>. This use case of <strong>blockchain</strong> has taken the <strong>traditional</strong> banks head-on. If you deal in <strong>stock</strong> <strong>market</strong>, this might not be a brand new piece of <strong>information</strong> for you. However, the way it’s executed in DeFi space is absolutely amazing. So, without further build up, let's find out what Fulcrum is!</p>
+<h2>What is Fulcrum (In General, Outside Crypto)</h2>
+<p>I wrote this <strong>blogpost</strong> on the fly, literally. While I started writing it, my wife, who was sitting next to me, mentioned, she knows about <strong>fulcrum</strong>.</p>
+<p>Probing a little deeper, she told me how we were taught about in <strong>8th standard physics</strong>. That’s when I drew <strong>parlance</strong> between this <strong>protocol</strong> and what it meant in real life. So I decided to share a quick summary of the same here as well so that each one of us could contextualize better.</p>
+<p><img alt="" src="https://letstalkscience.ca/sites/default/files/styles/width_800px/public/2020-03/first_class_lever_0.png?itok=UdthDV-W" /></p>
+<p>In simplest terms, its a way of <strong>lifting heavy objects with minimum force</strong>. This force is <strong>boosted</strong> by using a <strong>pivot</strong>. The image below will give you a <strong>fair</strong> <strong>idea</strong> of what I am talking about. So, the <strong>larger</strong> the arm, <strong>lesser</strong> is the <strong>force</strong> you have to <strong>apply</strong> to <strong>lift</strong> the <strong>heavy</strong> <strong>objects</strong>.</p>
+<p><img alt="" src="https://www.bajajfinserv.in/Margin_Trading_Blog_image_asset_margintrading.png" /></p>
+<p>And that’s primarily what Fulcrum does. It is a protocol that <strong>multiplies the money that you have into 2x, 3x, 4x etc.</strong> so that you gain much higher than what you originally had (if you had just invested your money in hand)</p>
+<p>As lucrative it may sound, its not risk free. And we are going to talk about all of that in detail in the upcoming section.</p>
+<h2>What is Fulcrum Protocol?</h2>
+<p>Fulcrum protocol is essentially something that allows you to trade on <strong>margin</strong> using crypto. You can have the power of <strong>2x,3x up to 5x using the protocol</strong>. It is an extremely useful tool for the traders that are really good at predicting the market swings or may have some inside knowledge. Let’s understand how is this beneficial or risky using a couple of examples:</p>
+<h3>Instance A:</h3>
+<p>Imagine that ETH is at $1000 and you purchase something called 5x long. Jargons aside, this means that if you had $100 to invest, this gives you that ability to invest $500 instead.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-8.png" /></p>
+<p>In this case, lets assume that goddess of fortune was on your side and ETH actually moved from a $1000 to $1500. That’s a 50% jump. Since you were long by 5x, your gains were actually 250%. How? Because you only had $100 to begin with. But instead of regular $50 profit that you could’ve made, you just made a whopping $250. Sweet right? Let’s checkout the flip side of this coin before concluding.</p>
+<h3>Instance B:</h3>
+<p>This time everything remains the same but the <strong>Ethereum</strong> price starts to tumble. So much so that it falls by 24%. Since your risky ass was long by 5x, you’re now experiencing a loss of 120%. At this point, the initial $100 that you had deposited is lost. This is also called liquidation. When you lose your initial holdings due to the market swing in opposite direction that you had intended.</p>
+<p>So, if you don’t know what you’re getting into, it’s better to stay safu than getting liquidated.</p>
+<h2>How Does Fulcrum Work?</h2>
+<p>I’m sure that if you’ve understood the theory so far, you must be etching to give it a try yourself. So how does Fulcrum protocol work? How do you create these so called long and short positions? That’s exactly what we’re about to discuss in this section.</p>
+<h3>Creating a Long Position:</h3>
+<p>Once again, people versed with stock market know how understand what this means. For the rest of us, you create a long position when you feel that asset you’re investing in is going up in price. You could also hear someone say, “I am long on ETH”. Which essentially means the same.</p>
+<p>So in case you plan to go long on ETH, you first buy some ETH from a centralized exchange like CoinDCX and transfer it to your wallet. Then you deposit that ETH into fulcrum. In return, Fulcrum allows you to take a loan of 80% of your deposited amount.</p>
+<p>Say ETH is worth $1000 and you buy and deposit 1 ETH in Fulcrum protocol and borrow $800 worth of USDT from Fulcrum. So, protocol now owes you 1 ETH and you owe them $800.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-9.png" /></p>
+<p>You take that $800, buy some more ETH and come back and deposit the entire lot to Fulcrum. Now, you can loan another $640 (80% of $800). You can basically repeat the process multiple times.</p>
+<p>At the end of the process, Fulcrum owes you 2.44 ETH and you owe them $1952. At the same time you have $512 worth of USDC in your wallet.</p>
+<p>Lucky for your ETH doubled. You make a handsome profit. As your ETH is now worth $4900. You originally had $1000 to invest. Despite ETH only doubling, you made a 5x on your investment.</p>
+<h3>Liquidation:</h3>
+<p>Now imagine that if ETH had moved in the other direction. At a point where you owed Fulcrum more than it owed you, you would have lost everything you deposited and got liquidated.</p>
+<p>In simple terms, the more times you carry out this process, higher is the risk and higher is the multiplier of your gains or losses.</p>
+<p><img alt="" src="https://blog.ipleaders.in/wp-content/uploads/2020/08/everything-to-know-about-company-liquidation.jpg" /></p>
+<h3>Creating a Short Position:</h3>
+<p>Short is exactly the opposite of a long position. It is situation wherein you would bet on the prices of an asset going down. Which is why, if prices go down, you profit and vice-versa.</p>
+<p><img alt="" src="https://images.financialexpress.com/2021/04/1-866.jpg" /></p>
+<p>For creating a short position on Fulcrum, you would do exactly opposite to what you’d do for a long position. This time, you’d deposit USDC and borrow ETH from the protocol and continue the same process over and over depending on your risk appetite.</p>
+<h2>Fulcrum as Passive Income Generator</h2>
+<p>For any platform that you invest in, simply try to ask one question before you dive-in. Where’s the money coming from? If you don’t get your answer, it’s better to stay put.</p>
+<p>Coming back to Fulcrum. How is Fulcrum able to provide you with margin? What’s their source of money? Well, that’s where this section is coming from.</p>
+<p><img alt="" src="https://blog.mint.com/wp-content/uploads/2020/01/HEADER-3.jpg?resize=1200,630" /></p>
+<p>As an individual, you can <strong>deposit</strong> your <strong>crypto</strong> to Fulcrum platform to help them <strong>lend</strong> it to other people. What do you get in return? That’s right. <strong>Interest</strong> <strong>income</strong>. Different cryptos have different APYs. The protocol then uses this crypto to lend it to people.</p>
+<p>Also, when you go 5x long/short on an asset, its not free of cost. You are <strong>charged</strong> at a price of <strong>12% APY</strong> for the same. So that’s the sweet little cycle of money that runs within the Fulcrum ecosystem. Helping traders and investors alike.</p>
+<h2>Conclusion:</h2>
+<p>Crypto investing is more like Start Up investing. You still don’t know how the project is going to pan out in the future. So the best possible way of building a narrative is to actually use the product and take a call.</p>
+<p>That’s what I intend to do in coming few days. I will be trying out different protocols in DeFi space to gather a perspective.</p>
+<p>Are you up for the game?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

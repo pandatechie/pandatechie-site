@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What are Flash Loans and it's Uses? | Raghav</title>
+<meta name="description" content="It's DeFi season at pandatechie and we couldn't be more excited about this one. Why? Because this takes my respect for blockchain backed decentralized finance e…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What are Flash Loans and it's Uses?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-10-10</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-10-10 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://hackingdistributed.com/images/2020/flash-loan.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>It's <strong>DeFi</strong> season at pandatechie and we couldn't be more excited about this one. Why? Because this takes my <strong>respect</strong> for <strong>blockchain</strong> backed <strong>decentralized</strong> <strong>finance</strong> ecosystem, up a notch. Whenever a new technology comes up it usually starts with very <strong>rudimentary</strong> use cases. These ones often involve <strong>mimicking</strong> the <strong>existing</strong> functionalities in the <strong>blockchain</strong> landscape. But every now and then, there would be something that would onlybe <strong>possible</strong> inthecryptoverse <strong>alone</strong>. <strong><em>Flash loans</em></strong> achieve that amazing feat for us. So let's find out <strong><em>what are flash loans and it's uses.</em></strong></p>
+<h2>What are Flash Loans?</h2>
+<p>In the DeFi space, flash loans are typically <strong>unsecured</strong> loans from the <strong>lender</strong> without any <strong>third</strong> <strong>party</strong> being involved. These loans are <strong>borrowed</strong> for a <strong>very</strong> <strong>short</strong> <strong>period</strong> of time (~10s) and are essentially <strong>borrowed</strong> and <strong>repaid</strong> in the <strong>same</strong> <strong>transaction</strong>.</p>
+<p>Technically speaking, it is a <strong>smart contract</strong> that enables <strong>borrowing</strong> of <strong>millions</strong> of <strong>dollars</strong>, <strong>performing</strong> a <strong>task</strong> with that <strong>money</strong> and <strong>repaying</strong> it (all in one go). When such a <strong>smart</strong> <strong>contract</strong> is created, it checks if the <strong>loaned</strong> amount is being put to the use where it can be <strong>repaid</strong> in time. Only after the <strong>validation</strong>, it gets <strong>executed</strong>.</p>
+<p><img alt="" src="https://hackingdistributed.com/images/2020/flash-loan.png" /></p>
+<p>But the question is, <em>why would someone loan money for such a short period of time?</em> Well, more on it as we explore the use cases of flash loans.</p>
+<h3>Traditional Loans:</h3>
+<p>Traditional loans are of two types: <strong>Secured</strong> and <strong>Unsecured</strong>. The ones that we usually are aware of are <strong>secured</strong> loans. In these types of loans a <strong>collateral</strong> is <strong>mortgaged</strong> before <strong>sanctioning</strong> a loan to the <strong>borrower</strong>. This collateral can be <strong>house</strong>, <strong>gold</strong> etc.</p>
+<p><img alt="" src="https://images.ctfassets.net/h0969ul5arsq/69vHWOBG4ZZubuBaeAIaW2/4a99d9ea1fabb3a43f2bcb1ee1a18589/Difference_Between_Secured_Unsecured_-_Large_header_730x300.jpg" /></p>
+<p>The other type of loan is <strong>unsecured</strong> <strong>loan</strong> or <strong>uncollateralized</strong> where you can get a <strong>small</strong> <strong>amount</strong> basis your <strong>credit</strong> <strong>history</strong>.</p>
+<p>Flash loans are <strong>uncollateralized</strong> and <strong>usually</strong> involve large sums.</p>
+<h2>Uses of Flash Loans:</h2>
+<p>This 10 second loan can put your conviction on steroids thus multiplying your profits manifold. Let's explore the best places to use them;</p>
+<h3>A. Arbitrage Opportunity:</h3>
+<p>As per <a href="https://www.investopedia.com/">Investopedia</a>, Arbitrage describes the act of <strong>buying</strong> a <strong>security</strong> in <strong>one</strong> <strong>market</strong> and simultaneously <strong>selling</strong> it in <strong>another</strong> <strong>market</strong> at a <strong>higher</strong> <strong>price</strong>, thereby <strong>enabling investors</strong> to <strong>profit</strong> from the <strong>temporary</strong> <strong>difference</strong> in <strong>cost</strong> per share.</p>
+<p>Say you find out that <strong>BAT</strong>, a famous cryptocurrency, is being traded at <strong>Rs. 10</strong> on <strong>Binance</strong> and at <strong>Rs. 11 on CoinDCX</strong>. You could now buy 1 BAT from Binance and sell it on CoinDCX. This way you would make <strong>Re. 1</strong> every time you do this right?</p>
+<p><img alt="" src="https://149494764.v2.pressablecdn.com/wp-content/uploads/2020/10/arbitrage.jpg" /></p>
+<p>Now imagine if you could write a smart contract to <strong>borrow Rs. 100M</strong>, buy <strong>BAT</strong> from <strong>Binance</strong> (<strong>for 100M</strong>) and sell on <strong>CoinDCX</strong> worth <strong>Rs. 101M</strong>. You could rake in a sweet <strong>Rs. 1M</strong> in the entire process. Even the fees is involved here is pretty low <strong>(~0.9%)</strong>. Isn't that crazy? You just paid Rs. <strong>9,000</strong> for making up to Rs. 1M.</p>
+<p><img alt="" src="https://www.forex.academy/wp-content/uploads/2021/01/5f5068f6d8589b3cfc2463e0_CeFi_vs_DeFi_SwissBorg_ARTICLE_thumb_510x255.png" /></p>
+<p>Such a use case is <strong>impossible</strong> to <strong>implement</strong> in the <strong>traditional</strong> <strong>finance</strong>. Also, please note that after the discovery of <strong>flash loans</strong>, people started making <strong>automated</strong> <strong>bots</strong> that would leverage such arbitrage. Therefore, now those loopholes are plugged and this is a rare use case of Arbitrage.</p>
+<h2>B. Self Liquidation:</h2>
+<p>Now that we know that we can <strong>borrow</strong> money by putting our <strong>crypto</strong> as <strong>collateral</strong>, let's take that up in an example. Say you put your <strong>ETH</strong> worth Rs. <strong>20,000</strong> in a platform like <strong>AAVE</strong> and borrow <strong>Rs</strong>. <strong>10,000</strong> using that. You use that <strong>10,000</strong> for <strong>buying</strong> a <strong>gift</strong> for your <strong>girlfriend</strong>. <strong>12 months</strong> later the ETH you deposited is now worth <strong>Rs. 50,000</strong> and you want it back.</p>
+<p><img alt="" src="https://www.jaxaauditors.com/sites/default/files/2019-12/how-to-liquidate-a-company-in-dda.jpg" /></p>
+<p>But you don't have that <strong>10,000</strong> you <strong>borrowed</strong> to pay back to unlock your Ethereum. Do you sell the gift? Probably not! So you can instead write a <strong>flash loan</strong> to <strong>pay back</strong> your <strong>loaned</strong> amount (of course for a <strong>small fee</strong>) and finally get back your <strong>Rs. 50,000</strong> worth of <strong>Ethereum</strong>.</p>
+<h2>C. Collateral Swap:</h2>
+<p>Collateral swap is often used by people involved in borrowing and lending of cryptos. Imagine this complext situtaion:</p>
+<ol>
+<li>You deposit your 500,000 worth of ETH on a lending protocol to borrow 400,000 worth of USDT.</li>
+<li>Now, you feel that ETH may fall any time so you want to switch your collateral to something that you believe in. What would you do?</li>
+<li>You would deposit back 400,000 USDT.</li>
+<li>Unlock your ETH worth 500,000</li>
+<li>Switch it with crypto of your choice</li>
+<li>Deposit the new crypto and borrow back 400,000 USDT.</li>
+</ol>
+<p>Well, thanks to flash loans and smart contracts, you can do all of this in one go. You could simply write a flash loan with above steps and without touching your 400,000 USDT, smart contract replaces your ETH collateral with say Litecoin (or anything else).</p>
+<h2>Conclusion:</h2>
+<p>If this isn't magic, I don't know what is. The world is rapidly marching towards a regime where the code is law. This law is so strong that without any KYC, credit history you could borrow millions of rupees in the form of flash loans. That's the real definition of trustless economy in my opinion.</p>
+<p>What do you think? Have you ever used flash loans? Planning to? Share the use case that comes to your mind.</p>
+<p>https://www.instagram.com/p/CUmEMfBozBg/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

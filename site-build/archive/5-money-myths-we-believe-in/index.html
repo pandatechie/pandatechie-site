@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Money Myths We Believe In | Raghav</title>
+<meta name="description" content="Money can't buy happiness, but it can buy the flashing latest iPhone Model and I think they are kind of same thing. Jokes apart, no matter if you love it or hat…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">5 Money Myths We Believe In</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-05-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-05-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://rwrant.co.za/wp-content/uploads/2019/03/Financial-Blunder.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Money can't buy happiness, but it can buy the flashing latest iPhone Model and I think they are kind of same thing. Jokes apart, no matter if you <strong>love it or hate it, money is very important</strong>. More than the worldly possessions, it impacts the <strong>quality of life</strong> we lead, gives us the <strong>independence of taking a decision</strong> and finally, the <strong>sense of achievement</strong>. But all this '<strong><em>Gyaan</em></strong>' that I just bestowed upon you all, didn't come up by the <strong>virtue</strong> of being <strong>born</strong> in a <strong>privileged family</strong>. Rather, that fact worked <strong>quite the opposite</strong> for me. I never had to <strong>think for money</strong> twice and hence, when I started <strong>earning</strong> (peanuts initially), I never <strong>realized how my dad survived</strong> all these years. So today, I disclose the <strong>top money myths</strong> I had in my mind when I started off.</p>
+<p><img alt="" src="https://rwrant.co.za/wp-content/uploads/2019/03/Financial-Blunder.jpg" /></p>
+<p>I already covered my <a href="https://pandatechie.in/2020/11/30/personal-finance-and-its-importance/">top financial blunders</a> a few days ago. And, when I reflect back on that post, I finally have an answer to all the mistakes I did. Schools, they don't teach personal finance? Family? I never had to go through this! So, there were a lot of money myths I had in mind which were shattered the hard way as I grew up. Excited? Let's get started.</p>
+<h2>1. Money and Money Matters:</h2>
+<p>I always <strong>coupled</strong> '<strong>money</strong>' and '<strong>learning how money works</strong>' together. Why do I need to <strong>kickstart</strong> my <strong>finlearning</strong> until I <strong>start</strong> <strong>earning</strong> it? Once I started earning, my thoughts were, <strong>it's not just enough</strong>. I can barely meet my expenses. Once I <strong>start making more than sufficient</strong>, I would <strong>learn how to manage</strong> it. Increments happened and my lifestyle expenditure followed the similar trajectory.</p>
+<blockquote>
+<p>Financial knowledge is not a by product of having surplus money. Rather, surplus money is a by product of financial knowledge.</p>
+</blockquote>
+<p>To prove the above quote, here is an interesting fact for you: <strong>Over 70% of the lottery winners declare bankruptcy within 3-5 years</strong>, of winning. (<a href="https://www.cnbc.com/2017/08/25/heres-why-lottery-winners-go-broke.html">Source</a>). <strong>Instant</strong> <strong>money</strong> won't bring the <strong>wisdom</strong> to manage it, it won't bring the <strong>health</strong> to <strong>enjoy</strong> it. Therefore, <strong>stop waiting</strong> for getting <strong>rich</strong> to learn about money. They have no connection whatsoever. If you think this is a chicken and egg situation, you are wrong. Rather, learning about money will set you up for achieving your goals.</p>
+<h2>2. I don't Need Personal Finance:</h2>
+<p>This one is pretty common amongst my peers as well. I tried to stall learning about <strong>money, taxation, insurance</strong> and <strong>investment</strong>. Why? Because <strong>I am not from a finance background</strong>. Since my <strong>work</strong> doesn't <strong>demand</strong> it, why do I need <strong>learn</strong> about these <strong>complicated</strong> <strong>terms</strong>? Once required, I would <strong>hire someone</strong> to do this on my behalf.</p>
+<p>Relatable much? For the ones who are thinking that there are financial advisors to assist them in their journey, let me break it out to you:</p>
+<p>(A) Undoubtedly, <strong>financial advisors can give you a decent advice</strong>. However, there is a reason it's called <strong>PERSONAL</strong> <strong>finance</strong>. Beyond the <strong>general thumb rules</strong>, there is <strong>plenty of room</strong> to <strong>customize</strong> the planning as per your requirement. Think about it, an advisor can help you plan for <strong>house</strong>, <strong>car</strong> etc. But would you seek one when you are planning to buy a <strong>new phone</strong>? <strong>Hospitalization</strong>? No right? In that case, you would need to <strong>understand</strong> and <strong>implement</strong> some <strong>basic</strong> <strong>principals</strong> yourself.</p>
+<p>(B) It's not that they are available for <strong>free</strong>. A good financial advisor would charge you a very <strong>hefty</strong> sum for <strong>managing</strong> your investments. Therefore, it's better to opt for them only when you have a substantial sum in hand to play around.</p>
+<p><img alt="" src="https://g.foolcdn.com/editorial/images/509683/mature-couple-talking-to-financial-advisor-poc.jpg" /></p>
+<h2>3. Credit Cards == Emergency Fund:</h2>
+<p>For years in my professional life, I lived with the fact that <strong>credit cards</strong> can replace my <strong><a href="https://pandatechie.in/2021/02/06/how-to-build-an-emergency-fund-why-to-have-it/">emergency fund</a></strong>. That is how we are taught right? <strong>Credit cards are bad</strong>. Even if you own one, it is <strong>meant for emergency</strong> situation. And I conformed to this thought process. I never worked on my emergency fund until last year and thought credit cards would take care of that.</p>
+<p><img alt="" src="https://www.aymag.com/wp-content/uploads/2020/05/emergency-fund.jpg" /></p>
+<p>Never had I been so wrong. We think of <strong>emergency</strong> as a <strong>one time expense</strong> that would <strong>come and go</strong>. However, some emergencies are <strong>prolonged</strong>. You can be under <strong>financial distress</strong> for <strong>months</strong>. Credit card companies would demand the <strong>money</strong> <strong>back</strong> in the very <strong>next month</strong>. What happens in that case? What about all that <strong>additional interest</strong> you'd have to pay? God forbids, if you <strong>default</strong>, you are up for a <strong>massive penalty</strong> and one of the <strong>most expensive debts</strong> available in the country.</p>
+<p>Also, I never believed in the <strong>concept of emergency</strong>. I thought that I have a <strong>term plan</strong>, <strong>health insurance</strong>, <strong>car insurance</strong>, everything. What kind of emergency could I <strong>anticipate</strong> after all? Turns out there are a lot. It would probably hit you when you least expect it. I'll give you a quick example from my life. Recently, with <strong>no cash in hand</strong>, <strong>no emergency fund</strong>, I had to take a trip to my <strong>hometown</strong> to meet my <strong>sick maternal aunt</strong>. I had to shell out <strong>Rs. 30,000</strong> from my <strong>non existent emergency fund</strong>. It took me <strong>6 months</strong> to recover from that <strong>one credit card swipe</strong>.</p>
+<h2>4. It is Okay to Not File Returns:</h2>
+<p>Sounds like a <strong>disaster</strong> right? I really wish I could say it is not true. For <strong>first 3 years</strong> of my professional life, a <strong>CA uncle</strong> (my father's friend) filed ITR for me. Since I had done <strong>absolute zero tax planning</strong>, he was able to <strong>fetch</strong> me a sum of about <strong>10k every year</strong> post that little trick. I never bothered to <strong>pay attention how he did it</strong> and if I could <strong>save even more</strong>.</p>
+<p><img alt="" src="https://psmag.com/.image/t_share/MTI3NTgyMTg0NDUzMzU5NjI2/prison-bars-shutterstock.jpg" /></p>
+<p>Until year fourth.. In the fourth year, situation turned upside down. He asked me to pay <strong>Rs. 34,000 as additional tax</strong>. What? And as a response, I thought it would be <strong>okay not to file the returns</strong> at all. After all I did not have any emergency fund.</p>
+<p>That is when Mr. CA told me that I could be <strong>put behind the bars</strong> for not doing this. I knew it already, but many people <strong>evade tax</strong> right? Why me? The answer is pretty simple. <strong>Do the right thing, even if no one's doing it.</strong></p>
+<h2>5. Financial Planning is too Complicated:</h2>
+<p>Everything aside, I would blame my <strong>laziness</strong> for not acquiring the much needed financial knowledge. The key reason <strong>behind this laziness</strong> was a <strong>mindset</strong> that assumed <strong>financial</strong> <strong>planning</strong> would be <strong>complicated</strong>. Trust me, I <strong>gave up</strong> five times before finally learning the <strong>components</strong> of my <strong>salary slip</strong>. One of my colleagues (senior) decided to teach me about it for free. And guess what, I refused! Much wow!</p>
+<p><img alt="" src="https://i.insider.com/578e24ef88e4a7531b8b8dbf?width=1200" /></p>
+<p>When I think about it now, I feel nothing but <strong>embarrassed</strong>. Financial planning has become an <strong>activity</strong> that I <strong>enjoy</strong> a lot now. Every month, I look forward to <strong>budgeting</strong>, <strong>evaluating</strong> and <strong>projecting</strong> my <strong>future</strong> <strong>expenses</strong>. I love to see my little <strong>investments</strong> <strong>grow</strong>. I spend a lot of time in researching about <strong>unconventional investment instruments</strong>. This hobby has helped me sow seeds of the future growth.</p>
+<h2>Conclusion:</h2>
+<p>With a red face and guilt that I started so late in my life, I am sure that many of you still believe in one or more myths that I mentioned above. Trust me, it is never too late to start good habits. If I can come out of it, of course you can too!</p>
+<p>With complete honesty, who all can relate?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

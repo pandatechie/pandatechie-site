@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyFi: Where DeFi Meets CeFi (WazirX Listing) | Raghav</title>
+<meta name="description" content="The cryptoverse in 2021 was dominated by a few keywords: NFTs, GameFI, Metaverse. But there was one niche that jumped into the mainstream without much attention…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">EasyFi: Where DeFi Meets CeFi (WazirX Listing)</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-01-05</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-01-05 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://techbullion.com/wp-content/uploads/2021/08/EasyFi-Network.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>The cryptoverse in 2021 was <strong>dominated</strong> by a few keywords: <strong>NFTs</strong>, <strong>GameFI</strong>, <strong>Metaverse</strong>. But there was one niche that jumped into the mainstream without much attention. Yes, I am talking about <strong>DeFi</strong>. I know a lot of you would say that DeFi was extremely hot topic throughout the year. As per <strong><a href="https://defillama.com/">defillama</a></strong>, the total value locked in these protocols jumped from <strong><em>$18B to $240B</em></strong> in the last year itself. Now tell me, was the noise up to this extent?</p>
+<p><img alt="" src="https://techbullion.com/wp-content/uploads/2021/08/EasyFi-Network.png" /></p>
+<p>But then what powered this huge leap in the DeFi space? Well, it was significant improvements in the <strong>protocols</strong> that powered <strong>finance</strong> without any <strong>central</strong> <strong>authority</strong> snooping in. Today, I am going to talk about one such protocol called <strong><em>EasyFi</em></strong>. We'd also discuss some problems this protocol is trying to overcome in DeFi space. Hang in till the end, as I may have a little <strong>surprise</strong> for you if at all you decide to invest in this project.</p>
+<h2>What is EasyFi?</h2>
+<p>Simply put, easyfi is <strong>lending and borrowing protocol</strong> in DeFi space. We've come across multiple such protocols namely <strong>Aave</strong>, <strong>Compound</strong> etc. in this space. So what's easyfi doing differently? Well, to begin with, it is <strong>chain agnostic</strong> and can run on <strong>BSC</strong>, <strong>Polygon</strong> and <strong>ETH</strong>. There goes my opportunity to crack gas jokes about ETH. Apart from that, there are some other features as well that we'd explore in the upcoming section.</p>
+<h2>Undercollateralized Lending:</h2>
+<p>If you have ventured into DeFi space, you might realize that this is a pretty big deal. For the uninitiated, let me take a shot.</p>
+<p>You see, when you take loans from a <strong>bank</strong>, you <strong>mortgage</strong> something of <strong>equal</strong> or <strong>high</strong> value. This is a far <strong>lesser</strong> <strong>risky</strong> proposition because there's an <strong>intermediary</strong> (bank) and you are <strong>KYCed</strong> to the core!</p>
+<p>But in a DeFi landscape, there's <strong>no KYC</strong> and <strong>intermediaries</strong>. So how do lending protocols work? Well, through something called <strong>overcollateralization</strong>. This means if you want to <strong>borrow</strong> $<strong>1000</strong> from a protocol, you may need to deposit a token like <strong>ETH worth $1200.</strong> If price fluctuates and ETH falls below $1050 (a <strong>liquidation</strong> price set by protocol), your <strong>tokens</strong> are <strong>sold</strong>.</p>
+<p><img alt="" src="https://media2.giphy.com/media/hZa9cGxm3Pi5iw3aiI/giphy.gif" /></p>
+<p>So far, that was the only way to lend money in a <strong>decentralized</strong> <strong>fashion</strong>.</p>
+<p>EasyFi brings a new twist to this. They have something called trust score, which is maintained for each user. It <strong>analyzes borrowers' activities</strong> on various lending platforms and determines the <strong>collateralization ratio</strong> required for each individual.</p>
+<h2>Building Creditworthiness Score:</h2>
+<p>Think of it as <strong>AI based lending</strong> that is taking conventional finance by a storm. Companies like <strong>Slice</strong>, <strong>Jupiter</strong> are already doing it for <strong>traditional</strong> <strong>finance</strong>. They check your <strong>past</strong> <strong>history</strong>, <strong>credit</strong> <strong>score</strong> and basis that offer you loans.</p>
+<p><img alt="" src="https://www.squareyards.com/blog/wp-content/uploads/2016/05/CIBIL-600x364.jpg" /></p>
+<p>There was no <strong>CIBIL in a decentralized world</strong>, but with this protocol kicking in, we might have something like it soon!</p>
+<p>This would incentivize the healthy borrowers by undercollateralized borrowing and meanwhile charge higher from the defaulters.</p>
+<h2>Smart Products:</h2>
+<p>This is yet another great attempt to <strong>mimic</strong> the <strong>traditional</strong> <strong>finance</strong>. Easyfi tries to come up with products like <strong>microlending</strong> (small loans borrowed for a fixed time) so that it can create <strong>mass</strong> <strong>adoption</strong> in this space. That would help the <strong>traditional</strong> <strong>small</strong> <strong>businesses</strong> to look at decentralized alternatives while looking for some <strong>working</strong> <strong>capital</strong>.</p>
+<h2>Token and Use Cases:</h2>
+<p>The typical functions of Easyfi native token EZ are as follows:</p>
+<ul>
+<li>Governance</li>
+<li>Protocol incentivization</li>
+<li>Staking</li>
+<li>Network Conesus</li>
+<li>Dual Farming: This is yet again an interesting approach to yield farming. Usually when LP tokens are staked, the yield is in the form of the native token itself. But here you can chose amongst different DeFi tokens for your yield.</li>
+</ul>
+<h2>WazirX Listing:</h2>
+<p>I told you we've got a surprise towards the end. So here goes:</p>
+<p>WazirX is launching this token real soon and is organizing a giveaway worth $47,510 for it's users.</p>
+<h3><strong>Giveaway Schedule</strong></h3>
+<ul>
+<li><strong>Tuesday, 4th January –</strong> <strong>Friday, 7th January –</strong><a href="https://wazirx.com/signup">Signup on WazirX</a> and receive free 0.5 EZ.</li>
+<li><strong>Tuesday, 4th January –</strong><a href="https://wazirx.com/blog/grand-ez-giveaway/#trivia">Trivia</a> on<a href="https://www.instagram.com/wazirx/">WazirX Instagram page</a> with prizes of $50. Play interesting trivia about EZ and win.</li>
+<li><strong>Tuesday, 4th January – Wednesday, 5th January –</strong><a href="https://wazirx.com/blog/grand-ez-giveaway/#quiz">Quiz</a> on our<a href="https://wazirx.com/blog/easyfi-quiz/">Blog page</a> with prizes of $500. Show off your EZ knowledge in a fun quiz session and win.</li>
+<li><strong>Wednesday, 5th January –</strong> <a href="https://wazirx.com/blog/grand-ez-giveaway/#ama">AMA</a> with Shantanu Sharma, VP, Growth &amp; Marketing. Learn everything about EZ and win total prizes of $300.</li>
+<li><strong>Thursday, 6th January</strong> <strong>–</strong> <a href="https://wazirx.com/blog/grand-ez-giveaway/#youtube">YouTube Live</a> with Ankitt Gaur, Founder &amp; CEO, EasyFi Network.</li>
+<li><strong>Monday,</strong> <strong>10th January – Thursday, 13th January</strong>– 72-hour long <a href="https://wazirx.com/blog/grand-ez-giveaway/#htk">Highest Trader Kaun Marathon</a> with prizes of ₹27,82,375 ($35,000) worth EZ for top 350 traders.</li>
+<li><strong>Friday, 14th January –</strong>EZ <a href="https://wazirx.com/blog/grand-ez-giveaway/#luckydraw">Trading Lucky Draw</a>. Lucky traders will draw additional prizes from a $10,000 Prize Pool.</li>
+</ul>
+<p><img alt="" src="https://wazirx.com/blog/wp-content/uploads/2022/01/EZ-100neww-1536x1024.jpg" /></p>
+<p>You can check out more details <a href="https://wazirx.com/blog/grand-ez-giveaway/">here</a>.</p>
+<h2>Conclusion:</h2>
+<p>Web3 is in it's nascent stage right now. While there are some frugal use cases like Jpegs selling for million dollars, there are some protocols that are trying to make a difference. Easyfi seems to be one of them. But the quantum of impact it will create, only time will tell.</p>
+<p>What do you think?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

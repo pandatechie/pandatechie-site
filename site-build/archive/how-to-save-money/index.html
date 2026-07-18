@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOW TO SAVE MONEY?: A quick trick | Raghav</title>
+<meta name="description" content="It may look like some clickbait, but stay with us. I actually saved a decent amount of money with this trick a few months ago and have been using it ever since.…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">HOW TO SAVE MONEY?: A quick trick</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-11-09</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-11-09 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/jpeg;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>It may look like some <strong>clickbait</strong>, but stay with us. <strong>I actually saved a decent amount of money with this trick a few months ago and have been using it ever since</strong>. Saving money is very important in one's life. <strong>Knowing how to save money, even more!</strong> Not only do you prepare yourself for any <strong>emergencies</strong> to come, but you also have a sense of <strong>confidence</strong>.</p>
+<blockquote>
+<p><em>Jab Jeb me money ho, to kundli me shani hone se kuch farak nahi padta</em></p>
+<p>-Harshad Mehta, Scam 1992</p>
+</blockquote>
+<p>From intangible benefits like <strong>piece of mind</strong>, savings open a lot of <strong>alternatives for you if you are stuck somewhere</strong>. Who wants to deal with life with no choices available just because other options were too capital extensive?</p>
+<p>We all have heard the famous saying of <strong><em>money making money</em></strong>. When I was a newbie in the world of investment, I used to ask myself, where will the initial <strong>money which would make more money come from</strong>? That is when I learnt some quick tricks from my father. Today, I am sharing one such trick on "how to save money".</p>
+<h2>Inspiration behind the trick!</h2>
+<p>Ever since I was a kid, I would see my father bring home, <strong>fresh new bundles of cash on his payday</strong> (thanks to my grandfather who is an ex banker). He very diligently took out the <strong>currency note ending with serial number "786"</strong> from that pile and put it in an earthen pot.</p>
+<p><img alt="How to save money" src="data:image/jpeg;base64,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" /></p>
+<p>My mother used to tell me that 786 is an auspicious number so we don't spend those notes. Time passed and this activity became a routine. As I grew older, my father allowed me to do this ritual. I felt really excited to pull out 786 notes from the fresh, crisp bundles each month.</p>
+<p>On November 8th, 2016, Modi Government announced <strong><a href="https://www.google.com/search?q=demonetisation&amp;rlz=1C1GCEU_enIN858IN858&amp;oq=demonit&amp;aqs=chrome.1.69i57j0i10i131i433i457j0i10i131i433l6.3397j1j9&amp;sourceid=chrome&amp;ie=UTF-8">demonetization</a></strong>. Amidst the total chaos, my father broke down those earthen pots of 786 notes. All 9 of them. When we counted, it amounted to a <strong>staggering ₹</strong> <strong>1.4Lacs</strong>. A simple habit could generate such a massive sum. <strong>I call it a <em>trick</em> because we all tricked our brains into doing it.</strong> <strong>We thought we are doing it for some auspicious reason, but in reality, my dad was saving.</strong> You can think of it as a feeling you have when you find a Rs. 500 note in the pocket of old stored shirt.</p>
+<h2>Tell us the Trick Already!</h2>
+<p>Okay so inspired by this and driven by the quest of how to save money, I wanted to do something similar. But I don't have access to bundles of cash. As a matter of fact, I hardly deal in cash. So how do I do it?</p>
+<p>As a daily routine, I paid ₹35 at a toll and got ₹65 in return. I do this twice a day while crossing Mumbai-Thane border. I always used to spend ₹100 bucks and got ₹65 in return. Eureka!</p>
+<p><img alt="Saving every Rs. 50 note I have" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/India_new_50_INR%2C_MG_series%2C_2018%2C_obverse.jpg" /></p>
+<p>This is when <strong>I decided to save every ₹50 note that hits my wallet</strong>. It can be any denomination for you, but ₹50 suited me best. <strong>Time passed and I started looking forward to 50 buck note.</strong> I would use my newly ordered <a href="https://pandatechie.in/2020/10/27/is-cred-app-safe-should-you-use-cred/">cred</a> wallet as my storage location.</p>
+<p>Now, I agree that I could never be as disciplined as my father (who never counted that amount until demonetization) so I took out that wallet after two months of the activity and guess what? <strong>I had ₹3050 in it</strong>. Amazing right? I never felt like I was cutting down on my expenses. I was not doing anything additional. Just constantly removing a specific denomination from my wallet.</p>
+<h2>Conclusion:</h2>
+<p><strong>I do plan to invest such a sum in a liquid MF which would be a part of my emergency fund.</strong> Although amount of saving has come down a lot post lockdown due to lesser travelling, but this hobby is here to stay. Hope you find value in this (literally).</p>
+<p>Until Next time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

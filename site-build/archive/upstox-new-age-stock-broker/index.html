@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upstox: New Age Stock Broker | Raghav</title>
+<meta name="description" content="Let us quickly recapitulate the ingredients of a thriving industry and hence the economy. High demand? Check. Driven by innovation? Check. Revenue Growth? Check…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Upstox: New Age Stock Broker</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-24</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-24 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/04/image-24.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Let us quickly recapitulate the <strong>ingredients</strong> of a <strong>thriving</strong> industry and hence the <strong>economy</strong>. High <strong>demand</strong>? Check. Driven by <strong>innovation</strong>? Check. <strong>Revenue Growth</strong>? Check. <strong>High margins</strong>? Check. That's all right? Did we miss anything? Yes. For any industry to constantly push out <strong>better products</strong> and <strong>customer</strong> <strong>service</strong>, a key requirement is: <strong>competition</strong>. When giants have constantly locked horns for a <strong>higher market share</strong>, the <strong>customers</strong> are <strong>benefitted</strong>. But why are we discussing this? Because I recently talked about <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha</a>. How the entry of <strong>Zerodha</strong> gave other <strong>brokers</strong> a run for their money. How it caused <strong>disruption</strong> across the industry and forced everyone else to <strong>slash their brokerage rates</strong>.</p>
+<p>However, fundamentally, Zerodha's model wasn't <strong>inimitable</strong>. Therefore many other brokers tried to replicate it. Some of them were actually quite <strong>successful</strong> as well. One such broker is <strong>Upstox</strong>. Our hero for this blogpost. This Rattan Tata backed fintech platform is quite <strong>successful</strong> in the <strong>discount brokerage model</strong> and is currently the <strong>second largest player</strong> in the industry with a market share of roughly <strong>11%</strong>. That is against 19% of Zerodha.</p>
+<p><a href="https://tradebrains.in/biggest-stockbrokers-india-with-highest-clients/"><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-24.png" /></a></p>
+<p>Broker Wise Market Share (Source)</p>
+<h2>Features and Key Facts about Upstox:</h2>
+<p>Upstox is a part of <strong>RKSV technologies</strong>. This company is a <strong>SEBI registered</strong> provider of <strong>financial services</strong>. Upstox provides <strong>low cost trading services</strong>. The <strong>equity delivery segment</strong> i.e. where you buy and hold the stock for more than 2 days, is <strong>free of cost</strong> on this platform. For all other trading segments like <strong>intraday, futures and options</strong> etc., Upstox charges a flat <strong>Rs. 20 per trade</strong> brokerage.</p>
+<p>Some key facts about Upstox are:</p>
+<ul>
+<li>Over <strong>1 Lakh customer</strong> and <strong>Rs 15 Cr daily turnover</strong> as of Nov 2018.</li>
+<li>Offering low-cost brokerage services since 2009. Trusted and reliable services.</li>
+<li>Registered member of SEBI, BSE, NSE, MCX, NSDL and CDSL.</li>
+<li>Offer simple flat rate trading plan (Rs 20 per executed order).</li>
+<li>In-house build trading platform available for free to all customers.</li>
+<li>Paperless instant account opening in less than 1 hour.</li>
+</ul>
+<p>Let's quickly evaluate the products of Upstox vis-à-vis their counterpart, Zerodha:</p>
+<h3>1. Upstox Pro:</h3>
+<p>Upstox pro is a trading platform developed by RKSV technologies. It can be used by investors or traders to buy and sell stocks on the exchange like NSE, BSE etc. This platform is available both on web as <strong>PRO web</strong> and mobile as <strong>PRO Mobile</strong>. This is in line with <strong>Zerodha's</strong> suite of products where both <strong>platforms</strong> for <strong>trading</strong> are available on <strong>web</strong> and <strong>phone</strong> as the <strong>KITE</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/1-10.jpg" /><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/2.png" /></p>
+<p>Swipe/Drag to Compare the UI of Upstox (L) and Kite (R)</p>
+<p>As a matter of fact, there are a couple of features that are available in Kite, but not in Upstox Pro. Kite has integrated the application with web platform and allows you to <strong>invest in IPOs</strong> from the <strong>app</strong> itself. This is missing in Upstox. Secondly, you cant see the <strong>portfolio summary</strong> from their application which is again <strong>possible</strong> in <strong>Kite</strong>.</p>
+<h3>2. Upstox Mutual Funds:</h3>
+<p>Upstox also helps the investors to invest in <strong>direct mutual funds</strong> of their choice. These direct mutual funds are much more cost effective than regular funds as the expense ratio is significantly lower in these funds. Once again, a Zerodha parlance of this product would be <strong>COIN by Zerodha</strong>, which has a similar offering.</p>
+<p><img alt="" src="https://www.adigitalblogger.com/wp-content/uploads/Mutual-Fund-min.jpg" /></p>
+<h3>3. Upstox DEV:</h3>
+<p>Upstox DEV is a platform meant for <strong>developers</strong> where they can build <strong>trading strategies</strong> using <strong>real-time data</strong> from APIs exposed by Upstox. Think of it this way: If a <strong>startup</strong> plans to <strong>develop</strong> their own <strong>trading</strong> <strong>platform</strong> with ability to <strong>execute</strong> <strong>orders</strong> in <strong>real time, manage portfolio, stream data</strong>. In that case, they don't have to go through the <strong>dirty work</strong> of developing the platform from scratch. They would simply use these APIs to get the job done.</p>
+<p>While you might think that this would definitely be a unique proposition of Upstox, Zerodha also has a similar offering under the name <strong>Kite Connect.</strong></p>
+<h2>Kite Vs Upstox:</h2>
+<p>I have been using Kite for over an year now and have never felt the requirement of switching. Although offerings and cost involved in Upstox is hardly any different, I would recommend that if someone is starting off, it is better to <strong>start</strong> with the <strong>market leader</strong>s. There is <strong>no actual merit</strong> in starting off from <strong>Upstox</strong> apart from the fact that account opening in <strong>Upstox is absolutely free</strong>. Zerodha charges you a one time fee of <strong>Rs. 200</strong> for the same. Also, annual account maintenance charges for both the companies are exactly same (Rs. 300 per year).</p>
+<p><img alt="" src="https://www.cashoverflow.in/wp-content/uploads/2020/03/Zerodha-vs-upstox-750x375.png" /></p>
+<h2>Conclusion:</h2>
+<p>We always complain that India has a very limited presence in the tech space. I am not talking about the likes of TCS, Accenture, Infosys etc. These companies are making their money from consulting primarily. I am talking about companies like Facebook, Amazon, Twitter that deal in tech products. These new age companies like <a href="https://pandatechie.in/2021/04/03/why-is-cred-valued-so-high-creds-valuation-conundrum/">Cred</a>, <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha</a> are challenging the status quo.</p>
+<p>Will these break out to become India's first global tech product?</p>
+<p>This blogpost is in association with <a href="http://theblogchatter.com">Blogchatter's</a> #BlogchatterA2ZChallenge</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

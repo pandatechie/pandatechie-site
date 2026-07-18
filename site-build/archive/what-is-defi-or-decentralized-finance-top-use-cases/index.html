@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is DeFi or Decentralized Finance?: Top Use Cases | Raghav</title>
+<meta name="description" content="While I intend to cover DeFi in depth in this post, I want to spare some lines to my favorite hobby i.e. bashing [centralized banking system](https://pandatechi…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is DeFi or Decentralized Finance?: Top Use Cases</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-10-05</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-10-05 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://miro.medium.com/max/860/1*kzgYgbr7CWaA6rmev8lqUg.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>While I intend to cover <strong>DeFi</strong> in depth in this post, I want to spare some lines to my favorite hobby i.e. <strong>bashing</strong> <a href="https://pandatechie.in/2021/09/11/flaws-in-traditional-banking-system-vs-cryptocurrency/">centralized banking system</a>. In the past we have always used <strong>centralized finance</strong> which is where there's a <strong>central authority</strong> that controls the <strong>flow of money</strong>. It is usually the <strong>government</strong> and the <strong>banks</strong> who are at the heart of this system. They can <strong>print</strong> as much of it as they want to. <strong>(A)</strong> They can stop you from <strong>borrowing</strong> it. <strong>(B)</strong> If they don't want you to they can even <strong>stop</strong> you from <strong>having</strong> a <strong>bank</strong> <strong>account</strong>. <strong>(C)</strong> Since it is a purely <strong>trust</strong> based system, they could <strong>literally</strong> do <strong>anything</strong> with your money because you gave it to them. While these scenarios may look like unlikely, but history shows that <a href="https://pandatechie.in/2021/09/01/value-of-money-and-trust-how-is-money-valuable/">governments have screwed up</a> time and again.</p>
+<p>Not only that. <strong>(D)</strong> Imagine that you're running a business, these <strong>banks</strong> can <strong>limit</strong> what you can do. For example if you are into growing of some <strong>"special" plants</strong>, for <strong>medicinal</strong> <strong>purpose</strong> of course, they can tell you not to bring in any of that <strong>money</strong> from the <strong>business</strong>. <strong>(E)</strong> Some <strong>banks</strong> also <strong>charge</strong> if you <strong>drop</strong> your <strong>balance</strong> from a preset threshold. On the other end, some may also <strong>put limits</strong> to the <strong>maximum</strong> you could <strong>hold</strong>. <strong>(F)</strong> One more thing <strong>traditional</strong> <strong>finance</strong> is quite <strong>expensive</strong>. Starting from <strong>home loans</strong> we have plethora of products in CeFi which can go up to a price of <strong>30% per annum</strong> (<a href="https://pandatechie.in/2020/12/03/advantages-and-disadvantages-of-credit-card/">Credit Cards</a>).</p>
+<p>Now you may think what <strong>alternative</strong> do we have right? Well, thanks to <strong>smart</strong> <strong>contracts</strong> and <strong>blockchain</strong>, now you do. Enter Decentralized Finance or DeFi. The hottest domain of cryptocurrency is here to rescue you.</p>
+<h2>What is Decentralized Finance a.k.a DeFi?</h2>
+<p><img alt="" src="https://miro.medium.com/max/860/1*kzgYgbr7CWaA6rmev8lqUg.jpeg" /></p>
+<p>What if I told you that there could be a world where there would be no banks. Only <strong>pieces of codes</strong> that can exactly do what banks can, but in a much more efficient way? How? These pieces of code or banks would be <strong>open 24x7</strong>. Open to anyone. There is <strong>no trust required</strong> because one could literally see the open source code to validate that everything's fine. This alternative is much <strong>cheaper</strong> and <strong>censorship</strong> <strong>resistant</strong>.</p>
+<p>There are three main pillars on which DeFi is based on.</p>
+<p>A. Cryptography</p>
+<p>B. Blockchain</p>
+<p>C. Smart Contracts</p>
+<h2>Top Use Cases of DeFi:</h2>
+<h3>A. Stable Coin:</h3>
+<p>Well, for making it a success, one first needs to <strong>bridge</strong> the <strong>gap</strong> between <strong>Centralized</strong> and <strong>Decentralized</strong> finance. For doing that, we have something called <strong>Stable Coins</strong>. Stable coins are <strong>cryptocurrencies</strong> that are <strong>pegged</strong> to <strong>fiat</strong> in <strong>1:1</strong> ratio. In other words, these coins <strong>mimic</strong> the price of a <strong>fiat</strong> currency like <strong>USD</strong>. Examples of such stable coins are <strong>USDT (Tether), USDC, BUSD, TUSD etc.</strong> Stable coins can also mimic other assets like Gold, Silver etc.</p>
+<p><img alt="" src="https://zipmex.com/static/64b740628c6dea3f6fe96723aa4b3563/09ff8/stablecoin.png" /></p>
+<h4>But why Stable Coins?</h4>
+<p>Say you own <strong>Ethereum worth Rs. 2000</strong> from an exchange. Your analysis says that Ethereum is going to dip. If you plan to <strong>sell your holdings in return of USD/INR</strong>, it may be subject to <strong>taxes</strong> and a lot of <strong>fees</strong> (exchange, banks etc.). Not to forget that it may <strong>take some time</strong> for your money to reflect in your account. as there are multiple parties involved here.</p>
+<p><img alt="" src="https://techstory.in/wp-content/uploads/2021/09/swissborg.jpg" /></p>
+<p>Now <strong>instead</strong> of USD/INR, you could convert your holdings into <strong>USDT</strong>. This entire <strong>process</strong> will be subject to <strong>minimum</strong> <strong>cost</strong> and can be <strong>completed</strong> within in <strong>5 minutes</strong>. Next time when the price has sunk and you want to enter back into the trade, simply <strong>exchange</strong> your USDT with ETH.</p>
+<p>While a lot of us may take banking services for granted, but if you have to transfer an amount greater than X, then bank has to be <strong>informed</strong> about that <strong>transaction</strong>. Don't forget the <strong>exorbitant</strong> <strong>fees</strong> that would follow.</p>
+<p>On the other side, <strong>crypto</strong> like <strong>USDT</strong> can enable a <strong>transaction</strong> of <strong>millions</strong> of <strong>dollars</strong> within a few seconds for as low as <strong>$5</strong> in fees.</p>
+<h3>B. Lending and Borrowing:</h3>
+<p>Lending and borrowing in fact a huge part of our current financial system. Why this works seamlessly is because banks usually ask you to put something like <strong>collateral</strong> on the line. If you default on your loan, banks <strong>liquidate</strong> that <strong>collateral</strong> to <strong>recoup</strong> the money. There could be other legal <strong>consequences</strong> involved too if you <strong>fail</strong> to pay back. All this is possible because there is a <strong>whole</strong> <strong>set</strong> of <strong>documents</strong> and <strong>KYC</strong> involved before <strong>disbursing</strong> the loan.</p>
+<p>How do you <strong>deal</strong> with the <strong>problem</strong> of <strong>defaulters</strong> in cryptoverse? There is <strong>no</strong> <strong>KYC</strong>. Anyone could make a small <strong>down payment</strong> and run away with the loaned amount.</p>
+<p><img alt="" src="https://academy.ivanontech.com/wp-content/uploads/2021/06/vr70cikwTbu4df91nsnI_finance.png" /></p>
+<p>The answer lies in <strong>overcollateralization</strong> and <strong>smart contracts</strong>. For <strong>borrowing</strong> fiat money worth <strong>Rs. 1000</strong> you may have to put <strong>Rs. 1200 worth of cryptocurrency</strong> as collateral. <em>One may ask why would I borrow if I already have the money?</em> Well, say you hold BTC worth Rs. 1000 and you strongly <strong>believe</strong> that it is going to <strong>jump higher</strong> in the coming days. In such a case, you would not <strong>sell</strong> your holdings and <strong>instead</strong> <strong>borrow</strong> money using that crypto. You can use that money to trade elsewhere and make some money, only to come back and repay your loan.</p>
+<h4>But How?</h4>
+<p>Well, once again, smart contracts are to the rescue. Say you have additional crypto lying around and you want to earn interest on it. So you go to a <strong>crypto lending platform like AAVE or Compound and deposit your crypto worth Rs. 10,000 in a smart contract</strong>. In return you get a <strong>different token</strong> (Lets call it X token) which is a <strong>representation</strong> of your <strong>crypto</strong> along with some <strong>pre decided</strong> interest.</p>
+<p><img alt="" src="https://research.aimultiple.com/wp-content/uploads/2020/05/smart-contract-featured-image.png" /></p>
+<p>Comes along another person who needs a <strong>loan of 10,000</strong>. He can put another <strong>crypto</strong> as a <strong>collateral</strong> (&gt;10,000 worth) into that <strong>smart</strong> <strong>contract</strong> and now if he tries to run away with that money, <strong><em>smart contract will automatically liquidate his holdings and pay you back.</em></strong></p>
+<h3>Flash Loan:</h3>
+<p>Flash loan is another interesting use case of crypto borrow and lending. It is a loan worth of <strong>millions</strong> of <strong>dollars</strong> given to you for about <strong>10 odd seconds</strong>.</p>
+<p><img alt="" src="https://hackingdistributed.com/images/2020/flash-loan.png" /></p>
+<p>If you could buy <strong>Ethereum for $10 on <a href="https://coindcx.com/">CoinDCX</a> and then sell it for $11 on</strong> Binance, theoretically you can make a <strong>dollar</strong> every time you did that and so you can use what we call is a <strong>flash loan</strong> to literally borrow millions of dollars. You don't have to put any money down you just <strong>write a flash loan to borrow 10 million dollars and tell it to go buy Ethereum for ten dollars and then immediately sell it for 11.</strong> Ten seconds later you pay back the original loan. This way, you made a <strong>million dollars minus the fees</strong> that you had to pay for borrowing. These fees are small because the lender knew that you would have to pay them back and that it was for a very short period of time. Performing such an <strong>arbitrage</strong> is impossible in traditional finance.</p>
+<h2>C. Decentralized Exchanges:</h2>
+<p>If you have travelled abroad, you would know the pain of <strong>converting INR into USD or Euro</strong>. The rates of conversion are as high as <strong>10%</strong> in some areas and you end up <strong>losing</strong> a lot of <strong>value</strong> of your <strong>money</strong> because of that. These <strong>exchanges are centralized</strong> and are managed by governments.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/image-1.png" /></p>
+<p>However, decentralized exchanges like <strong>Uniswap</strong> or <strong>Pancakeswap</strong> are running with zero intervention from the governments. One could swap multiple types of coins and tokens on these exchanges. People who want to earn interest on their crypto come and lock up their funds in these exchanges, thus creating liquidity pools. This enables seamless barter of coins with the help of code. (More on liquidity pools in upcoming blogs). The price is also less than 0.5% in most cases.</p>
+<h2>D. Insurance:</h2>
+<p>Let's zoom out and think. What is insurance at a fundamental level? Nothing but a <strong>series</strong> of <strong>ifs</strong> and <strong>buts</strong> right? <strong>If X event occurs, pay Y amount to the beneficiary</strong>. Insurance companies use algorithms and ML models to <strong>evaluate</strong> the past <strong>history</strong> of a <strong>driver</strong> and come up with a <strong>fixed cost</strong> of insurance called <strong>premium</strong>.</p>
+<p><img alt="" src="https://assets-global.website-files.com/5f5504366445c3972f45286e/6013fd6568f1fae5b52038da_Insurance-Defi.jpg" /></p>
+<p>Why can't we just automate this thing using smart contracts? Say a <strong>farmer</strong> wants to <strong>purchase</strong> <strong>crop</strong> <strong>insurance</strong>. We could code a smart contract that would say if the <strong>rainfall</strong> for the <strong>entire</strong> <strong>year</strong> was less than an <strong>average</strong> of <strong>90mm</strong>, the farmer will be <strong>paid a sum of 1L</strong>. Farmer could be charged Rs. 5000 for this insurance.</p>
+<p>But how does a smart contract measure rainfall? Well, its using something called oracles which connect real world to the cryptoverse. This definitely deserves another blogpost. For now, let's assume it is absolutely possible.</p>
+<h2>E. Margin Trading:</h2>
+<p>Before diving into how DeFi turbocharges the margin trading, for the uninitiated, let's cover what are we talking about.</p>
+<p>Say you want to buy a stock of <strong>Reliance</strong> which is trading at <strong>Rs. 1000</strong> right now. For buying this stock, you need a loan of <strong>Rs. 1000</strong>. You put a down payment of <strong>Rs. 200</strong> and <strong>borrow</strong> this money to buy a stock.</p>
+<h3>Scenario 1:</h3>
+<p>Say Reliance <strong>jumps</strong> to <strong>Rs. 1500</strong>. You book your profits, and pay back the <strong>remainder</strong> of <strong>loan</strong> of Rs. <strong>800</strong>. Your total profit becomes <strong>1500-800=Rs. 700</strong>. In other words, you almost <strong>tripled</strong> your money even though the stock only moved up by <strong>50%</strong>.</p>
+<p><img alt="" src="https://primexbt.com/for-traders/media/2020/08/image1-1.png" /></p>
+<h3>Scenario 2:</h3>
+<p>This time around say the stock starts falling. From a Rs. 1000, price starts <strong>falling</strong> to a level of 900, 850 and 800. At this point, bank asks you to <strong>sell the stock and pay back</strong> your <strong>entire</strong> <strong>debt</strong>. You finally end up losing your down payment of <strong>Rs. 200 and the loan fee</strong>.</p>
+<p>One thing is established here for sure. Margin is a really powerful tool to jumpstart.</p>
+<p>And just like every other domain, Defi margin is much better than traditional systems. Let's find out how:</p>
+<ul>
+<li>For margin in CeFi, the <strong>fees</strong> is usually quite <strong>high</strong> (&gt;5%). On the other hand, it is less than 0.5% in <strong>DeFi</strong>.</li>
+<li><strong>Margin</strong> isn't accessible to everyone in traditional finance. There are constraints like <strong>trader's profile, background etc</strong>. As you might've guessed, everyone's welcomed in DeFi</li>
+<li><strong>KYC</strong> is another factor hindering the mass adoption of margin in CeFi.</li>
+</ul>
+<p><img alt="" src="https://a.c-dn.net/c/content/dam/publicsites/igcom/uk/images/content-2-chart-images/margin.png" /></p>
+<h2>Conclusion:</h2>
+<p>Each one of these five use cases of Decentralized finance or DeFi deserve a blogpost of their own. This field is so vast and revolutionary that it is all set to overtake CeFi with a storm. I am super excited to see the developments here.</p>
+<p>What about you?</p>
+<p><strong>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and</strong> <strong><a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration with <a href="https://voxbox.club/">VoxBox</a>and <a href="https://journey-matters.myshopify.com/">Journery Matters</a></strong>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

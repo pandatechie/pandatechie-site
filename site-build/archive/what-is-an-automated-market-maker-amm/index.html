@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is an Automated Market Maker (AMM)? | Raghav</title>
+<meta name="description" content="Complicated term right? Well, the job it does isn't easy either. So buckle up and catch hold of the nearest chair. As always, I won't be using any fancy jargons…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is an Automated Market Maker (AMM)?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-10-09</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-10-09 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://exchange-support.blockchain.com/hc/article_attachments/360079367271/Screenshot_2020-12-10_at_13.30.25.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Complicated term right? Well, the job it does isn't easy either. So buckle up and catch hold of the nearest chair. As always, I won't be using any fancy jargons to explain this to you. Apart from that, once you wrap your head around this technology, it would feel no less than magic. A part of the <strong>complexity</strong> in the <strong>blockchain</strong> world is also because our <strong>mental</strong> <strong>models</strong> aren't equipped to come to <strong>terms</strong> with these new <strong>developments</strong> in <strong>Decentralized</strong> <strong>Finance</strong> (<strong>DeFi</strong>) world. The very fact that a <strong>piece</strong> of <strong>code</strong> is <strong>replacing</strong> an entire <strong>industry</strong> is just so <strong>overwhelming</strong>. Jumping right into it.</p>
+<h2>Centralized Exchanges and Order Book Model:</h2>
+<p>I am sure you must have traded <strong>stocks</strong> or <strong>crypto</strong> by now on your favorite <strong>exchanges</strong> like <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha</a>, <a href="http://coindcx.com">CoinDCX</a>. These exchanges are <strong>centralized</strong> in nature. This means that companies like <strong>Zerodha</strong> and CoinDCX store your stocks or cryptos with them.</p>
+<p>These type of exchanges work on an <strong>order book model</strong>. That means if you plan to buy a specific <strong>cryptocurrency</strong>, say BAT, you place an order at a <strong>specific</strong> <strong>price</strong>. The order book <strong>matches</strong> the price <strong>quoted</strong> by you to all the <strong>bids</strong> raised by the <strong>sellers</strong>. Whenever there is a <strong>match</strong>, your order gets <strong>executed</strong>.</p>
+<p><img alt="" src="https://exchange-support.blockchain.com/hc/article_attachments/360079367271/Screenshot_2020-12-10_at_13.30.25.png" /></p>
+<p>Supply and demand is automatically taken care of as the users themselves are quoting the best price of their assets. In other words, higher the demand, higher the price of an asset.</p>
+<h2>Decentralized Exchanges or DEX and Automatic Market Maker (AMM) Model:</h2>
+<p>Now the entire narrative of blockchain is developed around <strong>decentralization</strong>. But then what is the point of using a <strong>centralized</strong> <strong>exchange</strong>? Agreed that you are getting rid of <strong>governments</strong> snooping into your account, but what about the <strong>exchange</strong> itself? It is like placing <strong>trust</strong> in a <strong>different</strong> <strong>entity</strong> if not the government.</p>
+<p><img alt="" src="https://images.ctfassets.net/0idwgenf7ije/4x7WOEo3WbGqkrC5OddEa3/8c50159c033cdc83c1c0d471f2b0af24/Gemini-What_Are_Automated_Market_Makers_.png?fm=webp" /></p>
+<p>So the question that arises is that can we do it without anyone's <strong>involvement</strong> in a truly <strong>decentralized</strong> and <strong>trustless</strong> way? Well, the answer is yes. Enter <strong>Automatic Market Maker or AMM</strong> in short.</p>
+<p>AMM helps individuals exchange one cryptocurrency with the other using smart contracts and liquidity pools. Too much to digest? Let's take it from the top:</p>
+<h2>How do AMMs work?</h2>
+<p>Imagine it's year 1850. You are a <strong>farmer</strong>, living peacefully in a <strong>village</strong>. All of you <strong>grow</strong> <strong>potatoes</strong> for living. You can make <strong>fries</strong>, <strong>mashed potato</strong> etc. from that potato but now you are kind of <strong>sick</strong>. Your spouse is <strong>demanding</strong> <strong>something</strong> <strong>else</strong> to eat.</p>
+<p>At the same time, a <strong>trader</strong> comes from the other side of the world. He mentions that he knows of a <strong>village</strong> where people are <strong>sick</strong> of eating <strong>apples</strong> every day. He offered a <strong>deal</strong> where he could <strong>facilitate</strong> a deal to <strong>trade</strong> <strong>50,000</strong> <strong>apples</strong> <strong>against</strong> <strong>50,000</strong> <strong>potatoes</strong>. Since that's exactly you were looking for, all your villagers agree.</p>
+<p><img alt="" src="https://images.news18.com/ibnlive/uploads/2019/10/Untitled-design-2019-10-17T091045.576.png?impolicy=website&amp;width=0&amp;height=0" /></p>
+<p>The trader continues: he has a <strong>magic warehouse</strong> where all these <strong>apples</strong> and <strong>potatoes</strong> will be <strong>stored</strong>. Since there should be a balance between the value of <strong>apples</strong> and <strong>potatoes</strong>, the product of both these <strong>entities</strong> would be equal to <strong>2.5bn</strong> <strong>(50,000 apples X 50,000 potatoes)</strong>.</p>
+<p><img alt="" src="https://media.istockphoto.com/photos/balancing-scale-healthy-vs-unhealthy-picture-id518981951" /></p>
+<p>This way, if there are <strong>more</strong> <strong>potatoes</strong> than <strong>apples</strong> in the warehouse, each <strong>apple</strong> would <strong>cost</strong> <strong>more</strong> potatoes to buy. If this is clear, congratulations, you just learnt the basic principal of a <strong>constant product automated market maker.</strong></p>
+<p>It is based on the formula X * Y= k. In our case, X is apples, Y is potatoes and k is always a constant at 2.5bn.</p>
+<p>In the <strong>beginning</strong> the price of <strong>apples</strong> is equal to the price of <strong>potatoes</strong> because each of them is kept at a <strong>Re. 1 mark</strong>. However, as the trading (exchange) begins <strong>one might become more valuable than the other</strong> thus pushing it's price more than a dollar.</p>
+<h2>Calculations in Automated Market Maker:</h2>
+<p>Let's continue with our example. Our magical warehouse has began <strong>trading</strong> with 50,000 apples and 50,000 potatoes. Comes along a farmer with his produce of <strong>7,000 potatoes</strong> and wants to <strong>exchange</strong> it with <strong>apples</strong>. So let's calculate how many apples would he get in return:</p>
+<p>(Mathematics Time)</p>
+<p>Number of potatoes in the magic warehouse: 57,000 (50K+7K)<br />
+Number of Apples in the magic warehouse: 50,000  </p>
+<p>Using 'X' (apple) * 'Y' (potato) = k (2.5bn)  </p>
+<p>X * 57,000 = 2,500,000,000  </p>
+<p>This means that number of Apples that should be there in the warehouse to maintain a balance should be:  </p>
+<p>X = 2,500,000,000/57,000 = 43,859  </p>
+<p>So how many apples should he get in return?   </p>
+<p>50,000- 43,859 = 6140 Apples</p>
+<p><em>Since the number of potatoes in the warehouse was more than number of apples, farmer could fetch only 6140 apples for 7000 potatoes.</em></p>
+<p>Does our constant product AMM hold <strong>true</strong>? Yes it does <strong>(43,859 * 57,000 = 2.5bn)</strong></p>
+<h3>Rupee Cost of Potatoes:</h3>
+<p>Since we started with the cost of Re. 1 per potato, the cost would be <strong>constant</strong> at R<strong>s. 50,000 for the entire lot</strong>. Now that <strong>57,000 potatoes</strong> could be bought in <strong>Rs. 50,000</strong> the cost of each <strong>potato</strong> would be <strong>50,000/57,000 = 0.87p</strong>.</p>
+<p>On a similar note, the <strong>cost of apple</strong> would be <strong>50000/43859 = Rs. 1.14</strong></p>
+<p>Its basic supply and demand you see? Since someone brought more potatoes to the magic warehouse, the price of potato fell under a rupee and apple observed a contrary effect.</p>
+<p><img alt="" src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_904412189.jpeg" /></p>
+<h3>Example 2:</h3>
+<p>This time another farmer comes along and tries to add 10,000 more potatoes to the magic warehouse. Also, let's call this magic warehouse what it actually is: <strong>Liquidity pool</strong>. Let's quickly run through the numbers:</p>
+<p>Number of potatoes in the liquidity pool: 67,000 (57K+10K)<br />
+Number of Apples in the liquidity pool: 43,859  </p>
+<p>Using X(apples) * Y(potatoes) = K (2.5bn)  </p>
+<p>X * 67,000 = 2,500,000,000  </p>
+<p>The number of apples that should be in the Liquidity pool = 37,313  </p>
+<p>Apples he would get in return: 43,859 - 37,313 = 6,546</p>
+<p>Can you calculate the rupee cost of each Apple and potato now? Drop your answers in the comments section.</p>
+<p>I hope it's a lot clearer now. The rupee value of potatoes and apples would always be equal to 50,000 each in the liquidity pool. The pool will always maintain the ratio of value to 50:50.</p>
+<h2>The Real Liquidity Pool:</h2>
+<p>Jotting down a couple of differences from the above example when you are dealing with real liquidiuty pools:</p>
+<ul>
+<li>Unlike apples and potatoes, real liquidity pools can have <strong>millions worth of cryptocurrencies</strong> locked in it.</li>
+<li>Also, <strong>more</strong> the value locked in a liquidity pool, <strong>stable</strong> are the prices. When you are dealing with 5,000,000 apples and potatoes the impact of 5,000 may not be much right?</li>
+</ul>
+<h2>Who is Adding Value to the Liquidity Pool?</h2>
+<p>In real life, who is bringing those initial 50,000 apples and potatoes to the magic warehouse to get started? Well, its <strong>investors</strong> like you and me. And why would one do that? Because they are <strong>rewarded</strong> with a <strong>fee</strong> during each <strong>transaction</strong>. Even if this fee &lt;1% but the numbers add up really fast.</p>
+<p><img alt="" src="https://agcdn-2mrybbgckm7omi0k.netdna-ssl.com/wp-content/uploads/2019/09/alphagamma-7-surprising-ways-to-attract-new-investors-for-your-business-entrepreneurship.png" /></p>
+<h2>Conclusion:</h2>
+<p>Pay yourself on the back. It took me a while before grasping the concept of AMMs and articulating in a blog. Also, please don't judge me next time when I refer to any such technology as magic. Hopefully now, you know why!</p>
+<p>What do you think about AMMs?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

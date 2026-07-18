@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trader Vs Hodler. What is Better? | Raghav</title>
+<meta name="description" content="Everytime the topic of investment comes up, the world is split into two different types of people. The first type are the ones that believe that ‘in the long te…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Trader Vs Hodler. What is Better?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-07-11</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-07-11 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media3.giphy.com/media/eNLyUcVADm4jWVZdaq/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Everytime the topic of <strong>investment</strong> comes up, the world is split into two different types of people. The first type are the ones that believe that ‘in the long term, all of us would be dead’. Therefore, there’s no point waiting for longer periods to see your wealth grow. On the other hand there are people who are willing to hold an asset for their dear life. This difference becomes even more prominent when it comes to <strong>crypto</strong>. For some believe that crypto does not have any <strong>intrinsic value</strong> while others are convinced that it is indeed the future.</p>
+<p>So what category do you belong to? If you are on the fence, today, I’d try to help you out with this post. We would finally try to understand which of the either strategies is better.</p>
+<h2>Who is a Trader:</h2>
+<p><strong>Traders</strong> are the individuals that mainly rely on <strong>technical analysis</strong> of an asset to take bets on its future. This is often done for a short term which may vary from a few hours to days and even weeks in some cases. <strong>Traders</strong> usually do not care about the underlying asset much and intend to figure out patterns to make their moves.</p>
+<p><img alt="" src="https://media3.giphy.com/media/eNLyUcVADm4jWVZdaq/giphy.gif" /></p>
+<p>As crypto is an extremely <strong>volatile asset</strong> class, it gives a very good opportunity to the <strong>traders</strong> to <strong>leverage</strong> the crazy movements on either side to take long or short positions.</p>
+<h3>Benefits of Trading Crypto:</h3>
+<p>Before the <strong>HODL</strong> gang would try to bash me, here are a few reasons why <strong>trading crypto</strong> can actually be good</p>
+<h4>A. Increased Transparency:</h4>
+<p>If you are <strong>trading stocks</strong>, the chances of getting manipulated aren’t zero. This is despite the regulator being there to protect you. However, in the case of <strong>crypto</strong>, everything is happening <strong>on-chain</strong>. Therefore, you have a better chance of predicting the market moves.</p>
+<p>Let me share an example. Recently, one of my friends predicted a huge <strong>crash</strong> of <strong>&gt;6-7%</strong>. Why? Because he was able to track that <strong>BTC</strong> movement to <strong><a href="https://pandatechie.in/2022/05/26/how-centralized-exchanges-dug-their-own-graves-in-india/">exchange</a> wallets</strong> was the highest in 17 weeks. This meant that a lot of people brought their holdings to <strong>exchange</strong> to probably sell them.</p>
+<p>Similarly, one could clearly make out the backstory of <strong>Terra</strong> debacle through <strong>on chain activity</strong>. Thus, cryptos offer increased transparency to speculators.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h4>B. Newer Technology:</h4>
+<p>No matter what happens, <strong>Blockchain</strong> and <strong>crypto</strong> is still at a nascent stage. We are very early in this game. Therefore, if you are someone who doesn’t believe that <strong>Blockchain</strong> will make it big, you can still leverage its volatility to make some money in the short term.</p>
+<h2>Who is  a HODLer?</h2>
+<p>A <strong>hodler</strong> is someone who would buy and forget about the crypto. Their decision would often be based on <strong>fundamental analysis</strong> of a <strong>crypto</strong>. They are likely to evaluate future prospects of a project using various parameters such as revenue, business model, team, history of the project etc. Post the evaluation, they would take a long term punt on the projects.</p>
+<h3>Benefits of HODLing Crypto:</h3>
+<p>With that being said, let us understand what do you stand to benefit if you simply hold your <strong>coins</strong> to your dear life.</p>
+<h4>A. Noise Proof Gains:</h4>
+<p><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmg5WhZx1eKHvzmSbYNrmcS7B8JlJTaSUX2uLOLFMaRxH5ZtT_351kcarmrGj7VYd_EgQ&amp;usqp=CAU" /></p>
+<p><strong>Crypto markets</strong> are really noisy. So much so that it is really hard to follow the news. So if you plan to become a trader, it might hamper your full time job at some point. Alternatively, if you plan to simply hold the coins, you can rest in peace. There is no need to panic sell or <strong>FOMO</strong> buy. Simply do a <strong>SIP</strong> of sorts and keep on hoarding your favorite coins.</p>
+<h4>B. Exponential Returns:</h4>
+<p><strong>Crypto coins</strong> do not have any upper circuit to conform to. They can go up and down as much as the market suggests. If you are holding a coin for a longer period, the probability of making a 4x, 8x etc. on your <strong>holdings</strong> is much higher than someone who would book profits occasionally.</p>
+<h4>C. TDS:</h4>
+<p>Also, if you are in India, the government has started levying <strong>1% TDS</strong> on all crypto transactions. This means if you are trading on margin, you are likely to dry up all your capital in <strong>TDS</strong> real soon. Therefore, it is still a better bet to only buy and hold.</p>
+<h2>Which Strategy is Better:</h2>
+<p>Well, to be honest, there are <strong>pros</strong> and <strong>cons</strong> attached to both the styles of <strong>investing</strong>. An ideal investor would conduct <strong>technical</strong> and <strong>fundamental analysis</strong> both before getting into a trade. That’s how it should ideally work.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>However, it would still depend on your involvement. How? If you think you can give disproportionate time to reading, learning and <strong>analyzing charts</strong>, <strong>trading</strong> could be a great space for you.</p>
+<p>On the other end, if you know how to conduct due diligence and hence get that conviction of something becoming big, simply <strong>HODL</strong>.</p>
+<p>So which one are you?</p>
+<h2>Ethereum Push Notification Service:</h2>
+<p>It does not matter if you are a trader or a holder, you should definitely have a look at this promising project called Ethereum Push Notification Service (EPNS).</p>
+<p>https://pandatechie.in/2022/07/11/ethereum-killer-solana-commits-suicide/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

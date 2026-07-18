@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Management: The Intrinsic Value of Time | Raghav</title>
+<meta name="description" content="So who remembers the good old Bollywood song "Kya karein, kya na karein, ye kaisi mushkil haaye"? While I have no clue about the context of this song, the dilem…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Time Management: The Intrinsic Value of Time</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-03-11</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-03-11 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://res.cloudinary.com/people-matters/image/upload/w_624,h_351,c_scale,q_80/v1421171103/1421171102.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>So who remembers the good old Bollywood song "<em>Kya karein, kya na karein, ye kaisi mushkil haaye</em>"? While I have <strong>no</strong> <strong>clue</strong> about the <strong>context</strong> of this <strong>song</strong>, the <strong>dilemma</strong> is quite <strong>real</strong>. With so much <strong>information</strong>, <strong>resources</strong>, <strong>opportunities</strong> and <strong>vague</strong> <strong>tasks</strong> at our <strong>disposal</strong>, it is getting <strong>harder</strong> by the day to <strong>place</strong> your <strong>bets</strong> on the <strong>winning</strong> <strong>horse</strong>. How to put value on your time? Here is how I perceive the concept of <strong>time management</strong>.</p>
+<p><img alt="An image showing the quote to do or not do do. The biggest time management dilemma " src="https://res.cloudinary.com/people-matters/image/upload/w_624,h_351,c_scale,q_80/v1421171103/1421171102.jpg" /></p>
+<p>I think we have talked enough about the <strong>significance</strong> of <strong>alternate sources</strong> of income in our life. If nothing, <strong>pandemic</strong> has burst that bubble of <strong>pseudo</strong> sense of <strong>security</strong> and helped us realize that we live in an <strong>uncertain</strong> times. Therefore, having a <strong>side gig</strong> is important than ever. But how does one decide if the <strong>job is rewarding</strong> them adequately or not? Today, I share some <strong>tips</strong> I found really helpful in <strong>deciding</strong> weather or not, <strong>should you invest time in any given project</strong> or not. Also, this is <strong>applicable</strong> on <strong>every task you decide to pick up or let go</strong> in your life. Let's get started.</p>
+<h2>Why do I need this?</h2>
+<p>So, one may argue that why can't he/she pick every gig/freelance opportunity that comes their way. Also, what needs to be done, needs to be done. Why is it that you specifically need to evaluate and be picky about it. Answer is rather pretty straightforward.</p>
+<h3>(A) Time is Limited</h3>
+<p>If you already don't, please do yourself a favour and start <strong>believing</strong> that your <strong>time</strong> here is <strong>limited</strong>. If something is sucking out time and energy from you, it is essentially <strong>depleting</strong> a <strong>limited</strong> <strong>resource</strong> at your disposal. There are tons of analogies online to emphasize on this fact. I'll share my favorite one.</p>
+<p>Say, if I give you <strong>Rs. 86,400</strong> and ask you to spend it however you want. You would probably go out and fulfill those long suppressed desires. Now, what if I say that you have <strong>only one day to spend</strong> this money. Even if you <strong>don't spend it or lose it, every night you'd be back to zero</strong>. The next morning, you'd start afresh with a stash of Rs. 86,400. At this point, you would probably make some <strong>conscious</strong> <strong>efforts</strong> to <strong>park</strong> the <strong>money</strong> in some <strong>investments</strong> so that you don't end up losing it.</p>
+<p><img alt="A person's figure made of clocks representing that time is a limited resource" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS--k3Vekzm_se8CXWx6mmbYbx0a7zbuW0md3JVfPCR8MEGhqrRUYShz0nsWcGArRYpP4&amp;usqp=CAU" /></p>
+<p>That's what time is. You get <strong>86,400 seconds every morning</strong>. Why waste even a single second then? You can spend hours sleeping, watching OTT etc. but you should know that it costs you.</p>
+<p>So, you might want to evaluate your choices diligently rather than just picking up anything that comes your way.</p>
+<h3>(B) Opportunity Cost</h3>
+<p><strong>Opportunity cost</strong> is another concept that is generally used for <strong>money</strong>, but can be applied to <strong>time</strong> as well. Imagine running a <strong>business</strong> and <strong>making 3% return</strong> on it per annum. Would you do that business? No right. Because if you would have parked that <strong>entire</strong> <strong>investment</strong> in a <strong>bank FD</strong>, you could've <strong>garnered 4% return</strong> any way. That's your opportunity cost. So, while you are evaluating a <strong>side gig</strong>, think of it in the terms of opportunity cost. Can I do anything <strong>more valuable with my time</strong> while I do this? <strong>Upskilling</strong>, <strong>looking</strong> <strong>out</strong> for a better opportunity are all a part of the evaluation. If yes, then it's better off to let that opportunity go.</p>
+<p><img alt="Opportunity cost text with a balance" src="https://www.marketplace.org/wp-content/uploads/2013/06/opportunity-cost.jpg?fit=1800%2C1000" /></p>
+<h2>How to Derive Value of a Task:</h2>
+<p>The next obvious question that comes here is how do I derive the actual value of the task assigned to me. I recently read this idea somewhere and it has helped me a lot lately. So, we as humans, tend to <strong>understand</strong> the <strong>concept</strong> of <strong>value</strong> in <strong>monetary</strong> terms alone. That's how this technique is put forth.</p>
+<h3>1. Value of a Money Fetching Task:</h3>
+<p><strong>Calculate your per hour rate</strong>. It shouldn't be difficult if you are a working professional. As an example, let's assume that you earn <strong>100k a month</strong>. Your <strong>per day</strong> income comes out to be about <strong>3.3K</strong>. Now divide that by number of work hours you put in each day. Let's take a <strong>standard of 8</strong> <strong>hours</strong>. This brings your <strong>per hour rate to Rs. 420</strong> approximately. So that's how your company decides your worth. And because you accepted that offer in the first place, you would be pretty much in agreement with that worthiness. What next? You simply <strong>invest</strong> your <strong>time</strong> in something that <strong>pays more than Rs. 420</strong> an hour.</p>
+<p><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkf0CgPO9zCZA0Keb6sRDQsfVhLUhk-MTQ2g&amp;usqp=CAU" /></p>
+<h3>1.1 The Toll Plaza Example:</h3>
+<p>A few months ago I went to Daman. There wasn't much hype about <a href="https://pandatechie.in/2021/02/18/a-z-of-fastag-recharging-fast-tag/"><strong>FASTags</strong></a> at that time so <strong>I hadn't put any on my car</strong>. Now, as you know, you are <strong>charged double if you enter a FAStag lane</strong> without the sticker. The <strong>toll costed Rs. 110.</strong> When I reached the toll, the <strong>queue</strong> for the <strong>cash</strong> <strong>lane</strong> was about <strong>1KM long</strong>. It would have easily taken me about <strong>30-40 mins to cross that toll</strong>. So, rather than <strong>burning</strong> fuel and my <strong>time</strong>, I calculated that I would spend <strong>Rs. 110 on a penalty</strong>. This is <strong>less than what I would pay for 30 minutes of my time</strong>. Therefore, <strong>I paid the penalty</strong> and <strong>passed the toll in 5</strong> <strong>minutes</strong>. Was it the right thing to do? Let me know in the comments section.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h3>1.2 The Sunday Ruining Opportunity Example:</h3>
+<p>I was recently asked to <strong>judge a college event</strong>. Young students would come and <strong>showcase</strong> their <strong>projects</strong> and I would have to <strong>mark</strong> them. Only constraint? It was a <strong>5 hour long event with no breaks on a Sunday morning</strong>. While most of us would've thought of giving it a pass, I calculated <strong>my per hour rate</strong> and found the <strong>amount to be in line with that</strong>.</p>
+<p><img alt="" src="https://cdn-images-1.medium.com/max/2000/1*KiC1gf3x3Ia_2PBYqfkLBg.jpeg" /></p>
+<p>A usual Sunday</p>
+<p>In terms of opportunity cost, I had <strong>not</strong> <strong>planned</strong> <strong>anything</strong> extra ordinary for that <strong>Sunday</strong>. Even if I had, not for 5 long hours. So, <strong>getting paid was a much logical option</strong> for me.</p>
+<p>Ever since, this has been my go to technique for evaluation of any plan I make for the day.</p>
+<h3>2. Value of a Non Monitory Gain:</h3>
+<p>This is where things get really <strong>interesting</strong> while using this method. You now know how to <strong>evaluate</strong> a task basis <strong>money</strong>. But what if something is not paying you and seems important? And that's when you use your wits and try to put a qualitative value on the task.</p>
+<p>While the <strong>model</strong> we <strong>discussed</strong> above <strong>won't work</strong> here, what it does is, it makes <strong>you conscious about your choices</strong>. Let me give you an example. Say, I am <strong>planning</strong> to <strong>spend</strong> my <strong>evening</strong> <strong>watching</strong> <strong>TV</strong>. I know it is never going to pay me. But the realization that <strong>I have limited time</strong> in hand, I <strong>pick</strong> my <strong>shows</strong> <strong>wisely</strong>. So instead of <strong>spending the evening</strong> on a <strong>chick</strong> <strong>flick</strong>, I'd rather watch a <strong>podcast</strong> that may help me <strong>gain</strong> something. I also follow a <strong>10 minute rule</strong>. If a <strong>movie/show doesn't keep me intrigued for 10 odd minutes, it's time to switch.</strong></p>
+<h3>2.1 The Indian Idol Example:</h3>
+<p>And while we are on it, I would recommend everyone to <strong>watch the cable TV</strong> shows as well on <strong>OTT platforms</strong> only. Those platforms <strong>don't</strong> have <strong>advertisements</strong> and you can <strong>finish</strong> <strong>faster</strong>.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/Indian_Idol.png/250px-Indian_Idol.png" /></p>
+<p>I am guilty of being fond of <strong>Indian Idol</strong>. It is my love for <strong>music</strong> that draws me towards that show. But if I spend every <strong>weeknight</strong> watching <strong>Aditya Narayan do some stupid shit</strong> for two hours, it won't solve the purpose. So guess what? I watch <strong>Indian Idol performances on SonyLIV within 40 mins</strong>. That is a massive saving of 100 minutes.</p>
+<h3>2.2 Value of Learning:</h3>
+<p>An exception to all this discussed above is a <strong>learning</strong> <strong>opportunity</strong>. I wish someone told this to me earlier in life that <strong>any</strong> <strong>skill</strong> acquired over the time, any <strong>non fiction book read</strong> by you, <strong>never</strong> ever goes to <strong>waste</strong>. So, in case you are thinking is there anything better (non paying) I can do with my time other than learning. Nope! There isn't.</p>
+<h2>Conclusion:</h2>
+<p>The entire idea is to spend your time the way <strong>Jews spend their money</strong>. It is that one <strong>resource</strong>, which if used <strong>rightly</strong>, would <strong>generate</strong> <strong>income</strong> for you in the future. I would end it with one of my favorite quotes on time management.</p>
+<blockquote>
+<p>Time is a free resource, but you have to pay for NOT using it.</p>
+<p><a href="http://twitter.com/share?&amp;text=Time%20is%20a%20free%20resource%2C%20but%20you%20have%20to%20pay%20for%20NOT%20using%20it.&amp;url=https://pandatechie.in/2021/03/11/time-management-the-intrinsic-value-of-time/">Tweet</a></p>
+</blockquote>
+<p>Do you relate to this?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

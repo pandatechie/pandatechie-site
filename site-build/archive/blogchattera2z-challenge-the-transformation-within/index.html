@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlogchatterA2Z Challenge: The Transformation Within | Raghav</title>
+<meta name="description" content="It was a Sunday afternoon of March. Mumbai temperatures begin soaring around this time but they are still bearable. I was going through my SM feed where I found…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">BlogchatterA2Z Challenge: The Transformation Within</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-05-04</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-05-04 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-04-at-6.06.51-PM-378x1024.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>It was a Sunday afternoon of March. Mumbai temperatures begin soaring around this time but they are still bearable. I was <strong>going through my SM feed</strong> where I found this <strong>contest</strong> called <strong>#BlogchatterA2ZChallenge</strong>. This is an <strong>annual</strong> challenge by <a href="http://theblogchatter.com">Blogchatter</a>, India's <strong>largest</strong> <strong>blogger</strong> <strong>community</strong>. What I liked the most about this challenge was the fact that you had to <strong>write every day</strong> of the month (except Sundays) starting from a <strong>each letter of English alphabet</strong>. So 26 posts in all from A to Z.</p>
+<p>I am strong believer of the <strong>inner voice, a calling</strong>. Without giving it a lot of thought, I simply <strong>enrolled</strong> myself for the contest. What about <strong>content</strong>? Where would I get topics for <strong>26 blogposts</strong>? Well, I didn't have a <strong>damn</strong> <strong>clue</strong>. As always, <strong>procrastination</strong> and I were chilling together until the <strong>thought</strong> of this <strong>challenge</strong> <strong>struck</strong> <strong>back</strong>. I looked at Blogchatter's Instagram page and found many people are doing a <strong>theme reveal</strong>. The next <strong>Saturday</strong>, I spent the <strong>entire day</strong> reading <strong>FAQs</strong>, <strong>researching themes</strong>, <strong>content planning</strong> and finally decided that I would <strong>amalgamate</strong> the two things that I love the most. <strong>Finance</strong> and <strong>Technology</strong>. Our beloved <strong>Fintech</strong>! My theme for this challenge was decided.</p>
+<p>So this blogpost, is dedicated to the <strong>impact</strong> this <strong>challenge</strong> has had on my <strong>life</strong>. Saying that it was <strong>just fun</strong> would be an <strong>understatement</strong>. Let's find out how!</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-04-at-6.06.51-PM-378x1024.jpeg" /></p>
+<p>Content Plan for BlogchatterA2ZChallenge</p>
+<h2>The Routine:</h2>
+<p>I realized it at a right time that it <strong>won't be</strong> <strong>possible</strong> for me to <strong>complete</strong> this challenge if I <strong>don't stick to a routine</strong>. You know the thing about <strong>motivation</strong>? It is a <strong>feeling</strong>. And <strong>feelings</strong> are <strong>temporary</strong>. So it <strong>fades away</strong> pretty soon. What gets one going in life is <strong>discipline</strong>. If somehow discipline can be clubbed with motivation, it would become a deadly combo. However, until that happens, <strong>discipline will keep you afloat</strong>. So, in a <strong>mood</strong> or <strong>not</strong>, <strong>motivated</strong> or <strong>not</strong>, you had to <strong>show</strong> <strong>up</strong> every single day.</p>
+<h4>To achieve this a feat, I made a following high level routine:</h4>
+<ul>
+<li>I woke up at <strong>6 AM sharp</strong>.</li>
+<li>I used to run through the <strong>updates and SM</strong> during the Potty time till <strong>6:30</strong>. (Apologies in advance. I am sure you did not sign up for these intricate details)</li>
+<li>Later I exercised for <strong>1 hour till 7:30 AM</strong>.</li>
+<li>I used to start <strong>writing</strong> <strong>immediately</strong> after that, it took me about <strong>two hours</strong> to <strong>write</strong> and <strong>optimize</strong> a <strong>blog</strong>, provided I had <strong>researched</strong> for it and had the <strong>skeleton</strong> ready, the <strong>previous</strong> day.</li>
+<li>I started my office by <strong>9:30 AM and worked till 6:30 PM</strong>.</li>
+<li>In order to avoid <strong>distractions</strong>, I had a <strong>dedicated</strong> time allotted to <strong>social media</strong> and <strong>networking</strong>. So, from <strong>6:30 PM to 7:30</strong> <strong>PM</strong>, I used to read <strong>blogrolls</strong> (blogposts by other bloggers taking the challenge) and also <strong>networked</strong> with them. It widened my <strong>perspective</strong> so much. (more on it in a while).</li>
+<li>After <strong>dinner</strong>, I spent an hour <strong>reading /listening to a book</strong> and finally <strong>9PM to 11PM</strong> was meant for <strong>blog</strong> related <strong>research</strong> (topic for the next day).</li>
+</ul>
+<p>Looks <strong>difficult</strong> right? It was. Did I follow this <strong>routine</strong> for the <strong>entire month</strong>? Nope. There were some <strong>hiccups</strong> at least <strong>twice</strong> a week but I managed to get back on track <strong>almost</strong> <strong>every</strong> <strong>time</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-04-at-6.11.54-PM-1024x774.jpeg" /></p>
+<p>Also, I shared a <strong>copy</strong> of this <strong>Google note</strong> with my <strong>wife</strong> as well. I think that <strong>biggest mistake</strong> that we do is not <strong>aligning</strong> our <strong>partners</strong> on such endeavors. It is going to <strong>suck up time</strong> and when you are doing it <strong>parallelly with your full time job</strong>, this time has to be <strong>borrowed</strong> from '<strong>our time</strong>'. Therefore, it is always better to set the <strong>expectations</strong> right from the very beginning.</p>
+<h2>Impact:</h2>
+<p>So I have divided the impact the in two key categories. One on my <strong>personal growth</strong> and second on the <strong>tangible aspect</strong> of the challenge i.e. on the blog itself. Let's start with the personal front:</p>
+<h2>1. Understanding of Fintech:</h2>
+<p>Did I know about these <strong>26 fintech platforms</strong> already? Hell no! There were about <strong>10 platforms that I discovered for the first time</strong> while <strong>researching</strong> for them. This has had a tremendous <strong>impact</strong> on my <strong>understanding of the fintech</strong> <strong>ecosystem</strong> in India. Apart from that, I came across some amazing <strong>startups</strong> doing phenomenal <strong>work</strong> in this field. Also, my overall <strong>comprehensive</strong> <strong>abilities</strong> were boosted because of <strong>contextualization</strong>. Because I was reading about it daily, I could grasp the offerings of each platform quickly and easily.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/03/image-12.png" /></p>
+<h2>2. Discipline:</h2>
+<p>It'd be a lie if I'd say that I <strong>enjoyed</strong> writing all <strong>blogposts</strong> equally. There were days when <strong>work load</strong> was at it's <strong>peak</strong> and I had to <strong>start early</strong> or <strong>stay back late</strong>. I wrote a couple of my articles at <strong>5:30 in the morning</strong> and one was also published <strong>at 1 AM</strong>. Night owl or early bird, this challenge made me live both lives. One good thing was the fact that it got into a <strong>habit</strong> after <strong>10 odd days</strong>. When I wrote my <strong>last blogpost on 30th April</strong>, I felt so <strong>empty</strong> the <strong>next two days</strong>. It was the kind of <strong>feeling</strong> you have after <strong>binge</strong> <strong>watching</strong> an <strong>amazing</strong> series.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/image.png" /></p>
+<p>A lifelong learning from this challenge would be that famous quotes like, <strong><em>"Do what you love, that way you won't have to work for a day"</em></strong> are crap. No matter how much I love <strong>blogging</strong>, there were <strong>down moments</strong> when I just couldn't <strong>look</strong> at the <strong>screen</strong> any more. However, <strong>visualizing the end goal</strong> of <strong>finishing</strong> a task kept me going.</p>
+<h2>3. Networking:</h2>
+<p>I wanted 2021 to be an year of <strong>networking</strong>. While others may think that we are <strong>unable to travel</strong>, I see it as the <strong>biggest</strong> <strong>opportunity</strong> to network. You can network in Pyjamas for god's sake. What else do you want? And this challenge did exactly that for me. I came to know about so many bloggers and the great work they're doing. Connected with some of them outside blogosphere as well. I would like to endorse a couple of them; If you are into <strong>books</strong> and <strong>nature</strong>, I totally recommend going through <a href="https://www.yourlifemirror.in">Your life Mirror</a>. Also, if you are curious about the life of a <strong>professional content writer</strong>, I recommend <a href="https://satabdimukherjee.in/">this blog</a> by Mrs. Satabdi Mukherjee.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h2>4. Perspective:</h2>
+<p>I primarily write on <strong>technology</strong> and <strong>finance</strong>. This means that most of time goes in reading about these domains. So, I had developed a <strong>tech myopia</strong> of sorts. Once I started reading the <strong>blogrolls</strong>, I was amazed to <strong>discover amazing new niches</strong> everyday. There were blogs on <strong>Hindu Mythology and Sanskrit, Parenting, Image Management and Bollywood</strong>. This challenge reiterated the power of blogging in my mind.</p>
+<h2>Tangible Benefits:</h2>
+<p>For those of you who are left brained and are craving for numbers at this point, here it comes. The tangible benefits of participating in BlogchatterA2ZChallenge:</p>
+<ul>
+<li>My traffic originating from <strong>direct sources</strong> grew by a <strong>12%</strong> in the month of <strong>April</strong>.</li>
+<li>People coming from search engine generally get the job done and leave. However, someone coming from a platform like Blogchatter came with the intention of reading the entire post. Therefore, there was a <strong>drop of 18% in the bounce rate</strong>.</li>
+<li>April was also the month where I got <strong>most likes and comments on my blog</strong>. Ever. I crave feedback and this challenge gave me a plenty.</li>
+<li>
+<p>My <strong>Alexa rank</strong> was <strong>38,000</strong> when I started this challenge. It has come down to <strong>24,500</strong> as I am writing this.</p>
+</li>
+<li>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-05-at-12.05.39-AM-1-630x1024.jpeg" /></p>
+</li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-05-at-12.05.39-AM-666x1024.jpeg" /></li>
+</ul>
+<h2>Downsides of the Challenge:</h2>
+<p>While the entire exercise was an enriching experience, but I could find a couple of issues with it as well. Decided to quote them too:</p>
+<h3>1. Misunderstood Meaning:</h3>
+<p>I personally took this up to <strong>challenge</strong> <strong>myself</strong>. I wanted to <strong>improve</strong> my <strong>knowledge</strong> and <strong>skills</strong>. The Blogchatter <strong>algorithm</strong> gives you a <strong>popularity</strong> <strong>score</strong> basis the (a) <strong>blogposts</strong> <strong>submitted</strong> and (b )<strong>number of people</strong> interacting with your blog. Another key factor influencing this rating is (c) your <strong>engagement</strong> with other bloggers.</p>
+<p>I could see some people abusing this. I won't name them but they would just <strong>like your post for the sake of points</strong>. While I like to win at every challenge thrown at me, I chose my battles wisely. Some people just put everything out, including their souls, to stay at the top.</p>
+<p><img alt="" src="https://miro.medium.com/max/960/1*Ai7Kss48R4XM4IsLRREVmw.jpeg" /></p>
+<h3>2. Quality:</h3>
+<p>While some posts were an absolute delight to write, there were some where <strong>I could have done a little bette</strong>r. Now that I would be switching back to my posting regime of <strong>3-4 blogposts</strong> a week, I would spend some time fixing it.</p>
+<h2>Conclusion:</h2>
+<p>Well, it was not easy. At times I felt that my eyes were giving up. I am with some kind of screen the entire day. And during this challenge, there were no breaks. My Sundays were spent planning for the week ahead. But the million dollar question is if I would do this challenge again in 2022? I think yes! It was fun. Totally aligned with my strategy of 'Seek Discomfort'.</p>
+<p>If you haven't already, you can check out my posts of BlogchatterA2ZChallenge <a href="https://pandatechie.in/tag/blogchattera2zchallenge/">here</a>. Tell me what do you think?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

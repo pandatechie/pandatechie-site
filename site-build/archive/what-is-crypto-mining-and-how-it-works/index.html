@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Crypto Mining and How it Works? | Raghav</title>
+<meta name="description" content="All of us have heard that crypto is a decentralized form of money. It is a peer to peer transaction. If that is the case, there is no one safeguarding your inte…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Crypto Mining and How it Works?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-02-27</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-02-27 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://spectrum.ieee.org/media-library/illuminated-cryptocurrency-mining-farm-racks-in-russia.jpg?id=27400476&amp;width=3000&amp;height=2250" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>All of us have heard that crypto is a decentralized form of money. It is a peer to peer transaction. If that is the case, there is no one safeguarding your interests while you are transferring crypto. In a traditional banking ecosystem, you can reach out to bank if there is an issue with your funds. However, there are no banks involved in crypto world. So how does one ensure everything is working as expected?</p>
+<p><img alt="" src="https://spectrum.ieee.org/media-library/illuminated-cryptocurrency-mining-farm-racks-in-russia.jpg?id=27400476&amp;width=3000&amp;height=2250" /></p>
+<p>Enter: Miners. These miners validate the transaction and get rewarded with the tokens (BTC/ETH etc.) in return for that. Since they are doing some work to get these rewards, the process is called 'crypto mining'. So today, we plan to talk about what is crypto mining and how it works. The term mining has undergone a paradigm shift ever since crypto came into picture. It is like creating a crypto token out of thin air. Let us explore this in detail.</p>
+<h2>What is Crypto Mining?</h2>
+<p>As we all know, blockchain is made up of blocks of data. These blocks are stacked on the top of one another like Legos, hence forming a blockchain. However, a block cannot be added randomly to the blockchain. Before adding this block, all the transactions within this block have to be validated to ensure everything is fine. The process of validating these transactions to add the next block in the blockchain is known as crypto mining.</p>
+<p><img alt="" src="https://media1.giphy.com/media/Xtg9ygGsjvouF7vZ1w/giphy.gif" /></p>
+<p>With that explanation out of the way, the next logical question that comes to our mind is that how does one validate the transaction? What is really meant by validation? This cannot be a manual process for sure. You cannot expect a person to manually sit and calculate if these transactions are correct. So what is happening in the back ground? Let us try to understand.</p>
+<h3>Validating the transactions:</h3>
+<p>While venturing into crypto space, you must have come across this statement multiple times: 'Miners solve a complicated mathematical problem to add the next block in the blockchain.'</p>
+<p>This mathematical problem is based on a technical cryptography algorithm called SHA256.</p>
+<p>Without going into too much of details, think of it as a game of guessing using nothing but all permutations and combinations. Here's an example:</p>
+<p>Think of it in the form of a simple equation like this: A+B = C</p>
+<p>Miners are already aware of what A and C are. What they are trying to do is guess B. There is no way of guessing B without using numbers randomly from 0 to 1,2,3,4... and so on.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/02/unnamed-file-1024x576.png" /></p>
+<p>The one who solves this puzzle gets to win the rights to mine the next block and hence claim the rewards.</p>
+<h3>Consensus Algorithm:</h3>
+<p>But anyone can setup a node and take part in the Blockchain maintenance and validation. There are multiple 'nodes' (individual computers) that would want to earn some crypto rewards. So how do we decide who gets to mine the next block?</p>
+<p>Turns out that there are multiple ways of deciding the next miner.</p>
+<p><img alt="" src="https://i-invdn-com.akamaized.net/content/pic4b514c91a8c1c68c0827ed632501fec6.jpg" /></p>
+<p>A consensus algorithm is a procedure by which all the nodes in a network come to an agreement on the current state of the network. Simply put, it is the method by which everyone agrees to decide if the next block is worth stacking in a blockchain.</p>
+<p>Now depending on the Blockchain, this task is carried out in multiple ways.</p>
+<p>Back in 2008, when Blockchain technology emerged with the advent of Bitcoin, the consensus algorithm used was 'Proof of Work' or PoW in short.</p>
+<p>Later a lot of Blockchains moved to something called 'Proof of Stake' or PoS. Currently, there are about 9 different consensus mechanisms being used across different blockchains that exist today. However, 80% of these Blockchains use either of PoW or PoS.</p>
+<p><img alt="" src="https://www.rohasnagpal.com/style/images/mindmaps/_older/consensus-mind-map.png" /></p>
+<p>Interested in understanding what is PoW and PoS? Well, you have come to the right place. Let us dig deeper.</p>
+<h2>Proof of Work:</h2>
+<p>In a proof of work consensus algorithm, all the nodes compete with each other to find the answer to the mathematical puzzle discussed above.</p>
+<p>Think of it like a horse race. Only one of the horses is going to win the grand prize (which in our case is the crypto). However, all of them try their best to win it. Who is the eventual winner, you ask? The fastest of them.</p>
+<p>While speed of the horse has so many variables attached to it, for a Blockchain, it is rather simple. The node which can compute faster will reach the answer quickly. This solely depends on the processing power of the system deployed for mining.</p>
+<p>This is why you would see a lot of mining rigs have multiple graphic cards stacked together to extract the maximum potential and hence mine faster than everyone else.</p>
+<p><img alt="" src="https://en.bitcoinwiki.org/upload/en/images/thumb/5/55/Ea5b21f014547b4b44cf2dafcd76aad2.jpg/400px-Ea5b21f014547b4b44cf2dafcd76aad2.jpg" /></p>
+<p>Some of the blockchains that use proof of mining consensus algorithm are Bitcoin and Ethereum.</p>
+<p>If you are wondering how much rewards are we talking about here, it is currently at 6.25 BTC per block for Bitcoin. This number gets halved roughly every four years. Back in 2008, this number was 50. We would recommend you to not calculate the dollar value of this now as it will just hurt at this point.</p>
+<h3>Proof of Work and Environmental Concerns:</h3>
+<p>Another aspect that we wanted to highlight was around proof of work (BTC specifically) and environmental concerns.</p>
+<p>By now, you might have guessed what is this tussle about. While multiple nodes gun for the rewards, giving it their best shot, only one of them stands a chance to win.</p>
+<p><img alt="" src="https://specials-images.forbesimg.com/imageserve/5d234198142c500008c87aec/960x0.jpg?fit=scale" /></p>
+<p>What happens to the computational power spent by all the other nodes? You guessed it right. It goes to a waste. If you are still unable to connect the dots, this computational power is generated through electricity and that is where the environmental concerns start rising. For more information on what exactly is the impact of mining on environment, head over to this <a href="https://pandatechie.in/2022/01/30/blockchains-and-sustainability-how-green-is-blockchain-technology/">blogpost</a>.</p>
+<h2>Proof of Stake (PoS):</h2>
+<p><img alt="" src="https://en.bitcoinwiki.org/upload/en/images/thumb/e/e5/Proof%E2%80%93of%E2%80%93Stake_%28PoS%29.jpg/500px-Proof%E2%80%93of%E2%80%93Stake_%28PoS%29.jpg" /></p>
+<p>With growing concerns over environmental problems with the proof of work consensus algorithm, the industry came up an alternate way of reaching agreement. This time around the winner of the reward wasn't the one who solved the problem, fastest.</p>
+<p>Allow us to explain. In a proof of stake algorithm, only one node gets an opportunity to forge the next block. This means that there is no extra energy (electricity) being spent to validate the transactions.</p>
+<p>But if only one node is solving the mathematical problem, how do we ensure that this node doesn't dupe the network? More importantly, how is this node chosen?</p>
+<p>Turns out, in order to take part in the proof of stake consensus algorithm, you need to stake some of the native crypto to become eligible to validate the transactions (mine). This amount is generally kept a little higher with an intention to onboard only the serious players. So, when you have a skin in the game, it is highly unlikely that you would cheat right?</p>
+<p><img alt="" src="https://www.ledger.com/wp-content/uploads/2019/10/What-is-proof-of-stake-1.jpg" /></p>
+<p>The next miner is chosen on the basis of multiple factors like, amount staked, time spent in the network and an element of randomization.</p>
+<p>Now this race is being run by a single node (horse) and hence there is no need to rush and spend massive amounts of power to win it. But that doesn't mean that a node can now take its own sweet time and commit mistakes while validating.</p>
+<p>If anything goes wrong, network levies a penalty on that node and chances of it getting selected for the upcoming blocks decrease significantly.</p>
+<p>The image below will highlight the difference between PoW and PoS</p>
+<h2>To Mine or Not to Mine?</h2>
+<p>Technically, there is no eligibility criteria for someone to become a miner. Anyone with technical know how can start mining. However, unlike older times when people used personal computers to mine, things have changed significantly now.</p>
+<p><img alt="" src="https://media0.giphy.com/media/6fDQ3k4IOqnEA/giphy.gif" /></p>
+<p>This is because Bitcoin blockchain is made to evolve and adjust the difficulty of the mathematical problem every two weeks roughly. More the number of people which are mining (competition), the more difficult it gets to reach a solution.</p>
+<p>Therefore with existing scenario, it is very difficult to mine unless you invest in high power GPUs (Graphic Processing Units) which range from $500 to tens of thousands of dollars. Apart from that, one of these machines is probably not going to cut it.</p>
+<p>Today, Bitcoin mining hardware is almost entirely made up of ASIC machines, which in this case, specifically do one thing and one thing only: Mine for bitcoins.</p>
+<h2>Where's The Moolah?</h2>
+<p>While mining may seem like a profitable venture from a distance, the nitty gritty involved is just too much for a newbie. Therefore, if you are just starting out on your crypto journey, I would recommend that you buy it off from a centralized exchange like CoinDCX and HODL. That can be equally rewarding. Don't believe me? Just checkout the returns BTC and ETH have given in past 5 years.</p>
+<p>Until then, signing off. Got questions?</p>
+<p>https://www.instagram.com/p/CaFG6_FvNj_/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

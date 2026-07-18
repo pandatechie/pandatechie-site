@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Brave Browser? How is it Changing the Ad Ecosystem? | Raghav</title>
+<meta name="description" content="A few days ago, I was talking to my wife about buying an air fryer. Next moment, I start seeing ads about air fryers on my social media feed. And I am not alone…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Brave Browser? How is it Changing the Ad Ecosystem?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-28</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-28 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media0.giphy.com/media/SY2j8eBZjSPqv7Ggxt/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>A few days ago, I was talking to my wife about buying an <strong>air fryer</strong>. Next moment, I start seeing <strong>ads</strong> about air fryers on my <strong>social media</strong> feed. And I am not alone. Even you might've <strong>experienced</strong> searching for a <strong>product</strong> and getting <strong>ads</strong> related to it all over the internet. Well, that's how web2.0 works. Platforms like <strong>Facebook</strong> and <strong>Google track</strong> your <strong>activity</strong> and then <strong>sell</strong> it to <strong>brands</strong> to showcase <strong>targeted</strong> ads to you. But then, just like every other industry, <strong>Blockchain</strong> comes to the rescue. Today we talk about w<em>hat is Brave browser and how is it changing the very ecosystem</em> that I just mentioned.</p>
+<h2>Issues with Web 2.0 Advertising Model:</h2>
+<p>I use the terms web 2.0 and web 3.0 assuming that you are well versed with the difference. In case you aren't, <a href="https://pandatechie.in/2021/10/31/what-is-web3-0-how-is-different-from-web1-0-and-web2-0/">here's</a> something that can help. Anyway, so <strong>big tech giants</strong> like <strong>Facebook</strong> are using your <strong>data</strong> to <strong>make money</strong>. This model sounds <strong>crooked</strong> on the face of it. However, there might be some <strong>issues</strong> that you may not even realize. Let's talk about them:</p>
+<h3>A. Monetary Cost:</h3>
+<p>Yup. <strong>Ads</strong> cost you <strong>money</strong>. On an average, <strong>third party</strong> apps and <strong>trackers</strong> consume up to <strong>50%</strong> your <strong>mobile data</strong>. Well, if you are living in India, this might be a menial amount. However, consider this: every night you struggle for data because you have <strong>consumed</strong> your <strong>daily quota</strong>. If there were <strong>no ads</strong>, your day could have <strong>easily sailed</strong> by.</p>
+<p><img alt="" src="https://media0.giphy.com/media/SY2j8eBZjSPqv7Ggxt/giphy.gif" /></p>
+<h3>B. Time Cost:</h3>
+<p><img alt="" src="https://media3.giphy.com/media/5q3NyUvgt1w9unrLJ9/giphy.gif" /></p>
+<p>Since these ads <strong>load</strong> even <strong>before</strong> the actual <strong>website</strong>, you are <strong>wasting</strong> a significant chunk of your <strong>time</strong> while using the internet every day, all day. I am not even considering the fact if you get <strong>carried away</strong> by one of these ads and <strong>let go</strong> the task you were set out to do.</p>
+<h3>C. Battery:</h3>
+<p>Since every <strong>scroll</strong> now means <strong>additional</strong> queries or additional <strong>download</strong> of data, your phone's battery life is impacted. Statistically, this is at an <strong>average of 20%</strong>. Yes, your phone's battery capacity is impacted because you are served with ads all the time.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-32.png" /></p>
+<h2>What is Brave Browser?</h2>
+<p>Well, to counter the aforementioned issues, <strong>Brian Bondy</strong> and <strong>Brenden Eich</strong> developed a <strong>web</strong> and <strong>mobile</strong> browser called <strong>Brave</strong>. Brian has been a former employee of <strong>Khan Academy and Mozilla</strong> and Eich created <strong>Javascript</strong> and <strong>co-founded Mozilla</strong>. Can we just rule out our fears around credibility already? Who knows browsers better than these two gentlemen.</p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/I1foi2Irrv7tW9ee9kgP0wfnMzaVb6y17muvpKsFcUrKYsDlmCyWuTRh5m93KJZ24dY" /></p>
+<p>Brave is a <strong>fast and privacy first</strong> web browser and a <strong>blockchain</strong> based <strong>digital advertising</strong> <strong>platform</strong>. Brave aims to restructure the entire ecosystem of how <strong>users, advertisers and publishers</strong> interact with the internet.</p>
+<p>Since the Brave browser has <strong>inbuilt ad blocker</strong>, your privacy is put first. Secondly, since there are no ads, it is up to <strong>3x faster</strong> than other <strong>browsers</strong>.</p>
+<h2>How Does Brave Restructure Ad Economics?</h2>
+<p>I will explain this with the help of my <strong>blog</strong> and that could literally be applied to any other <strong>website</strong>. As a <strong>creator</strong> put in a lot of <strong>work</strong> to write these <strong>blogposts</strong>. Since I wanted to earn <strong>additional</strong> revenue, I signed up for <strong>Google Ads</strong>.</p>
+<p>Now Google has a lot of data about people visiting my site (or any other site for that matter). They <strong>package</strong> these <strong>preferences</strong> and <strong>sell</strong> it to <strong>brands</strong>. Whatever money these <strong>brands pay</strong> to run ads, I get about <strong>68%</strong> of it and Google takes the remainder <strong>32%</strong>.</p>
+<p><img alt="" src="https://lh3.googleusercontent.com/tg6UVQpgkAzyPujRKNoMkItDQ2AqUl4vA7AErMTvT6bFXyaSRGuHDo014GK5wEw-m8sHBPpl8E6tK_a0U8CW6cqBqLjISM-RcTT3=w1200-l80-sg-rj" /></p>
+<p>Now the two key challenges that I face are as follows:</p>
+<ul>
+<li>Readers may not like these <strong>snoopy ads</strong> ad thus <strong>ruining</strong> their <strong>experience</strong>. I could <strong>reduce</strong> the <strong>number</strong> of ads, but it would <strong>impact</strong> my <strong>revenue</strong> as well.</li>
+<li>Some savvy readers could install <strong>ad blocker</strong>. Thus, bringing down my <strong>revenue</strong> to <strong>zero</strong> for that visitor.</li>
+<li>Also, if a user actually likes an <strong>ad</strong> and <strong>clicks</strong> it, they don't get anything for their attention. Google basically used that very data to earn money. So a big piece of <strong>user</strong> remains unincentivized.</li>
+</ul>
+<h3>Brave Model:</h3>
+<p>Unlike big tech like Google and Facebook, <strong>Brave doesn't track</strong> you all over the <strong>internet</strong> to gather data about your preferences. As a matter of fact, if you are viewing this on <strong>Brave browser</strong>, you will get <strong>no ads</strong>. However, I can still get <strong>paid</strong> because I <strong>signed up</strong> for the <strong>creator program</strong>.</p>
+<p>As a user of Brave browser, you have full control of how many ads you want to see from <strong>10 per hour down to ZERO.</strong></p>
+<p><img alt="" src="https://brave.com/wp-content/uploads/2021/09/image1-1-1024x583.png" /></p>
+<p>So here's the secret sauce. Unlike Google and Facebook which invade your privacy in the name of targeted advertisement, Brave approaches this by <strong>tracking user attention</strong> and <strong>engagement</strong> in real time. They track what <strong>tabs</strong> are you <strong>working</strong> on and how you are <strong>interacting</strong> with each of them. This data is not sent back to some <strong>centralized</strong> server.</p>
+<p>This enables <strong>Brave</strong> to <strong>learn</strong> what kind of <strong>ads</strong> need to be <strong>shown</strong> basis your <strong>consumption</strong> of <strong>particular</strong> <strong>type</strong> of <strong>content</strong>. For example, if you are like me, you'd get <strong>crypto specific ads</strong> all the time.</p>
+<h3>Win-Win-Win Model:</h3>
+<p>The native cryptocurrency of <strong>Brave ecosystem is BAT</strong> or <strong>basic attention token</strong> and we are going to talk about it in much more detail in the upcoming blogposts. For now let's understand how this model is creating happy advertisers, content creators and users.</p>
+<p>When I <strong>publish</strong> a <strong>blogpost</strong>, a <strong>brand</strong> could <strong>reach</strong> out to me <strong>directly</strong> and pay me in <strong>BAT</strong> to <strong>run ads</strong> for them. Once I agree, these <strong>ads</strong> go live on the <strong>website</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-33.png" /></p>
+<p>Now using the <strong>attention</strong> and <strong>engagement model</strong> for the users we discussed above, these ads are <strong>pushed</strong> only to the <strong>relevant</strong> users. So <strong>brands</strong> get a <strong>chance</strong> to reach <strong>targeted</strong> audience.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-31.png" /></p>
+<p>BAT Logo and explanation</p>
+<p>Remember the missing piece we talked about? It's taken care of, here. As a user you can chose not to see any ads. But if you do, you would be <strong>rewarded</strong> in <strong>BAT</strong> as well. So basically, there's no <strong>middleman</strong> like Google or FB here. It's directly the <strong>brand</strong>, <strong>creator</strong> and the <strong>user</strong>. Some users earn up to <strong>$100 per month</strong>. Since I rarely <strong>click</strong> on any ads, my earning is limited to about <strong>$10</strong> per month.</p>
+<p>While we are on it, let me throw some attention on the BAT logo. This logo evolved from three sides of the equation: User, Creator, Brand. Hence the <strong>win-win-win</strong> model.</p>
+<h2>Conclusion:</h2>
+<p>Well, isn't that simply amazing? I always pondered over the fact if <a href="https://pandatechie.in/2021/05/08/does-sustainable-social-media-even-exist/">sustainable social media</a> exists or not. With Brave browser, I think we are getting closer to an answer. In the next blogpost, we talk about the tokenomics of BAT and how can you become a registered Brave creator. Meanwhile, if you are already convinced and plan to buy BAT, CoinDCX is offering it right now in India. Also, here's what I have saved using Brave browser, so far.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-34.png" /></p>
+<p>Until Next Time. Got a burning question?</p>
+<p>https://www.instagram.com/p/CWAKaFgPpXC/</p>
+<p>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration with <a href="https://tinyurl.com/Blogaberry">Mojo Box – A great way to sample brands before buying them</a></p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

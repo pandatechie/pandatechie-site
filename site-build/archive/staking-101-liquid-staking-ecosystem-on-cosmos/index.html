@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staking 101: Liquid Staking Ecosystem on Cosmos | Raghav</title>
+<meta name="description" content="Now we are just making it up. Really. The first time I typed liquid staking, my laptop picked it up as an incorrect word.
+
+And I believe most of the industry is…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">UNCATEGORIZED</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Staking 101: Liquid Staking Ecosystem on Cosmos</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-04-28</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-04-28 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/04/image.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Now we are just making it up. Really. The first time I typed liquid staking, my laptop picked it up as an incorrect word.</p>
+<p>And I believe most of the industry is guilty of this. We come up with hyper niche terms all the time and then complain about the mass adoption not happening.</p>
+<p>Today, we are about to de-jargonize a few other aspects of DeFi (or decentralized finance) and understand with examples how staking and related activities can help you extract the most out of your crypto. Let us take it from the top!</p>
+<h2><strong>What is Staking?</strong></h2>
+<p><em>Staking is a way to put crypto at work and earn more rewards</em> <em>on the top of it.</em></p>
+<p>Awesome. Now that we have your attention, here is a bummer. While a quick Google search on 'What is Staking' will tell you exactly what is mentioned above, that is NOT the real aim of staking. Remember! Whenever you are dealing in crypto, always ask yourself: where is the money coming from? Following the similar principle, let us understand where these so- called 'rewards' are being generated from?</p>
+<h2><strong>Evolution of Consensus Algorithms:</strong></h2>
+<p>It all started with Bitcoin and its power intensive consensus mechanism: <a href="https://pandatechie.in/2021/09/05/what-is-hash-function-in-blockchain-how-is-it-used-in-proof-of-work/">proof of work</a> (PoW). Think of it like this; In a centralized system, all computation is done centrally by a single authority.</p>
+<p>However, in a decentralized system, everyone is trying to do this computation in a bid to earn some rewards. But only one of them is going to make it. This means that a lot of energy is wasted in order to achieve consensus.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/04/image.png" /></p>
+<p>A real life analogy of this would be a horse race. 10 horses train throughout the year and put in all they have to win the reward money. However, only one is going to win in the end.</p>
+<h3><strong>Proof of Stake:</strong></h3>
+<p>To solve this problem, blockchains tried to evolve into an alternate consensus algorithm: Proof of Stake or PoS. Instead of everyone trying to validate the transaction, now only one opted node took a shot at it and won the rewards. Any one who wished to participate in validation needed to stake some native cryptocurrency of the network. This ensured that validators have skin in the game and do not defraud the system.</p>
+<p><img alt="" src="https://lh7-us.googleusercontent.com/ykr2dgGoOaoswNzI3q4ItQhRdOaKXkHv_pEGkS9hXOF8urg6IXcaFtff0q-sqX9zdZEqNvIzUIXRo5p5gXeO5FjAdXz5FAvT8FPpKcphTmIY-Maja4-kBkSIiB0HjG9UdbKoN9zpIoqHdgVDi67SZw" /></p>
+<p>Yet again, there is a problem here. You see, these nodes were chosen basis the amount of crypto staked by an individual. Thus, making it accessible to someone who has the ability to stake more, defeating the entire ethos of decentralization. Deeper pockets meant more rewards.</p>
+<h3><strong>Delegated Proof of Stake:</strong></h3>
+<p>As a result, there was an iteration to this consensus algorithm called delegated proof of stake or dPoS. What if instead of picking up someone with most number of tokens staked, one could vote for the node which would validate the transaction?</p>
+<p>That's exactly what dPoS tries to achieve. Using DPoS, you can vote on delegates by pooling your tokens into a staking pool and linking those to a particular delegate. You do not physically transfer your tokens to another wallet, but instead utilize a staking service provider to stake your tokens in a staking pool.</p>
+<p><img alt="" src="https://lh7-us.googleusercontent.com/aFh9_OJh79YIGw8u4SRNkk60yIHCgi527RLGC4ymKJsexV0rKHwqreIer9mUxUz3xa1VLqDL-pGi8JA2F4YV-9afCd3pp9G8vode5AUsiGPKl6LWOGyVVSTiXUjXLP8bbtnrp88OGAD8SY3nFcZy4A" />Image Courtesy: Researchgate</p>
+<p>If you would have noticed so far, decentralization is not just a function of the number of nodes in the system, but also the accessibility of setting these up. If more people can take part in the network security, it is better for the ecosystem. dPoS enables that possibility.</p>
+<h3><strong>What are Staking Rewards?</strong></h3>
+<p>Coming back to the rewards. So when a block is forged in the blockchain, the node is incentivized with the rewards and so is the delegator. Depending on the percentage (of total reward pool) of tokens staked, you get a reward in the same proportion.</p>
+<h3><strong>Why Stake?</strong></h3>
+<p>The next obvious question is that why would one stake their tokens? Obviously staking rewards is a big incentive but aren't tokens meant for spending on transactions within the ecosystem? Well, it turns out that staking is incentivized in more than one way by the network so that more and more tokens are locked up, decreasing the supply in the market. This in turn helps in pushing up the price.</p>
+<p>Also, this helps secure the network.</p>
+<p>Let's understand this with an example of staking $ATOM. Here are a few ways in which staking $ATOM could benefit you:</p>
+<h4><strong>A. Hedge against inflation:</strong></h4>
+<p>The annual inflation rate of $ATOM is anywhere between 7% to 20%. This means tokens deplete in value by this percentage when pegged to USD. This is because new $ATOM is being brought into the system at regular intervals.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/04/image-1.png" /></p>
+<p>Cosmos adjusts this inflation (or the number of new tokens coming in) by evaluating the staked quantity. So those who have staked their $ATOM have safeguarded their holdings against inflation, while others who haven't, lose on to their value.</p>
+<h4><strong>B. Airdrops:</strong></h4>
+<p>Airdrop is a promotional activity that involves sending tokens to different wallet addresses to raise awareness about a project. In this Cosmos ecosystem, projects often conduct airdrops to addresses that have staked $ATOM.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/04/image-2.png" /></p>
+<p>If you would have staked $ATOM and provided liquidity in Osmosis in 2021 then you have been airdropped a large array of these tokens which have added up to a substantial amount! Some of the main airdrops include Comdex, Stargaze, Desmos, Chihuahua, Lum Network, Bitsong, Shade Protocol, and EVMOS.</p>
+<h4><strong>C. Liquid Staking:</strong></h4>
+<p>"So I just buy $ATOM and stake it. That's it?" If that question is giving you a tough time, allow me to introduce you to liquid staking. Liquid staking allows you to get liquidity against your staked assets. Doesn't help much right? Let us try to unfold it with an example:</p>
+<p>https://www.youtube.com/watch?v=0i55V5Vl9Bs</p>
+<p>Imagine you buy 100 $ATOM. You can now stake it on a platform like Persistence. You would be eligible for rewards as usual. Apart from that, you would get 100 $stkATOM which is a representation of your staked assets. You could now use this $stkATOM anywhere in the DeFi ecosystem to earn a yield, borrow, lend etc.</p>
+<p>Bottom line: you used a single asset to get dual benefits of staking rewards and yield.</p>
+<h2><strong>Why Liquid Staking is an Integral Part of the DeFi Ecosystem:</strong></h2>
+<p>Well, the answer is right in front of our eyes. With so many benefits of staking $ATOM, why would someone just HODL it? But if everyone starts staking their $ATOM, the ecosystem will dry up pretty soon. Who is going to provide the liquidity to the protocols?</p>
+<p>Liquid staking helps a platform thrive. Apart from that, with liquid staking option, there is no reason for someone to NOT stake. Thus making the network even more secure.</p>
+<h2><strong>Conclusion:</strong></h2>
+<p>Well, conclusions are old fashioned and CTAs are overrated. So I am just going to end this one by asking you a very simple question.</p>
+<p>Wen Stake?</p>
+<p>That's all from our side on today's blogpost. We'd be back with another interesting, jargon free post soon.</p>
+<p>Until then, here is the <a href="https://medium.com/persistence-blog">link</a> some other kickass blogposts we did in the past.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

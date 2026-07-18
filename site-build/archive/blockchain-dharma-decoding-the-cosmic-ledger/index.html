@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blockchain Dharma: Decoding the Cosmic Ledger | Raghav</title>
+<meta name="description" content="I should not be saying this, but the current Indian political landscape seeks polarized stance on religion. So to get that out of the way, let me just get it ou…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Blockchain Dharma: Decoding the Cosmic Ledger</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-03-14</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-03-14 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/03/Chains-of-Faith-Hinduism-Blockchain.webp" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>I should not be saying this, but the current Indian political landscape seeks polarized stance on religion. So to get that out of the way, let me just get it out of my system. I was amidst a drinking session with my office colleagues when I got the idea to write this post.</p>
+<p><img alt="Blockchains are akin to Hinduism" src="https://pandatechie.in/wp-content/uploads/2024/03/Chains-of-Faith-Hinduism-Blockchain.webp" /></p>
+<p>Now that I have lost my 'Hindu' pass already, let us judge me on the fact how my drunk conversations also revolve around Blockchain.</p>
+<p>Done?</p>
+<p>Alright. This gives me a decent segue into the actual conversation now.</p>
+<p>We were discussing how Hinduism has stood the test of time and become a burgeoning religion over the years. And that led to a thought train. A train of how Blockchain, somehow follows the similar principles of Hinduism.</p>
+<p>Let us try to put some rationale behind this absurd analogy.</p>
+<h2>What is Hinduism?</h2>
+<p>It is hard to articulate a religion anyway. Top that with the mad respect I have for our gods (all one crore of them), it just makes it even harder. But I will still give it a shot.</p>
+<p><a href="https://tfhc.nt.gov.au/__data/assets/pdf_file/0014/252221/nt-hinduism-fact-sheet.pdf">Hinduism</a> is one of the oldest religions in the world, with roots and customs dating back more than 4,000 years. Today, it is the third-largest religion worldwide, with the majority of its followers in India and Nepal.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/DALL·E-Hindu-gods-illustration.webp" /></p>
+<p>This image is generated by Dall-E</p>
+<p>Hinduism is unique among the world religions because it does not have a single founder, a specific theological system, a single system of morality, or a central religious organization. Its complexity stems from its vast array of practices and beliefs, which have been influenced over centuries by cultural and historical developments.</p>
+<p>Let us talk about a few keywords that triggered this thought.</p>
+<p>Oldest?</p>
+<p>No single founder?</p>
+<p>Single system of morality</p>
+<p>and more...</p>
+<h2>What is Blockchain?</h2>
+<p>Internet is flooded with the definition of Blockchain. There are some good analogies too. But the idea to correlate it with the religion is borderline dangerous.</p>
+<p>However, I am willing to take that risk. Nothing so far has helped me drive this point home.</p>
+<p><em>A </em><em>blockchain</em><em> is a distributed ledger with growing lists of records (</em>blocks<em>) that are securely linked together via cryptographic hashes. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. Since each block contains information about the previous block, they effectively form a </em>chain<em>, with each additional block linking to the ones before it.</em></p>
+<p><img alt="" src="https://media2.giphy.com/media/fLtavCMl97i8UM0Zu8/giphy.gif" /></p>
+<p>Rage quit already?</p>
+<p>While it is important to have a technologist view, for a layman, I believe normies like ourselves (or maybe just you) will connect more if we talk about the fundamentals of what it is and what it can do.</p>
+<h2>Why Blockchains are Hinduism in Disguise?</h2>
+<p>If you have stuck with me so far, this is where it all starts making sense. Below are a few compelling reasons why I think Blockchains follow the principles of Hinduism effortlessly:</p>
+<h3>1. Democratic:</h3>
+<p>India is a secular country. I do not think that this is just by the virtue of a government policy. Instead, it is rooted into our core values ever since the evolution.</p>
+<p>Yuval Noah Harari suggests that polytheism, for example, is fundamentally open-minded because it tolerates the existence of multiple gods, even those from other cultures, which could be seen as an early form of religious inclusivity​​.</p>
+<p>Monotheism's emergence is portrayed as a transformation from polytheism, with monotheistic religions often retaining elements of earlier polytheistic beliefs.</p>
+<p>The earliest civilizations in this Indian subcontinent followed this theses and let everyone join us in the race of finding the ultimate.</p>
+<p>Blockchains are akin to this thesis.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/image-2-1024x627.png" /></p>
+<p>The network does not care if you follow to a particular religion, of particular age or gender.</p>
+<p>It is 'all encompassing' in its nature.</p>
+<p>So where traditional banks might have different requirements to onboard you as a customer, Blockchain networks just need an internet connection.</p>
+<p>I think this confidence stems from the strength of the fundamentals. In case of Hinduism, it was the cultural prowess, in case of Blockchains, system does not allow you to go rogue!</p>
+<h3>2. Forks:</h3>
+<p>Forking is yet another marvelous property of Blockchains.</p>
+<p>In case you are not happy with the network, forking allows you to take your data along with you and move elsewhere. No strings attached. No consequences.</p>
+<p>For example, some people did not comply with <a href="https://pandatechie.in/2021/08/08/top-5-bitcoin-facts/">Satoshi's</a> vision of Bitcoin, so they ended up creating Bitcoin Cash (BCH), Bitcoin Gold.</p>
+<p><em>Fun fact: The infamous meme coin, $Doge is a fork of Litecoin, which is a fork of Bitcoin.</em> <em>In a way, $DOGE is a grandson of $BTC.</em></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/image-3-1024x428.png" /></p>
+<p>A representation of how a fork works in Blockchain</p>
+<p>If you are interested in understanding how this happens, be my guest. Read more about forks <a href="https://pandatechie.in/2022/03/12/what-is-blockchain-fork-how-does-it-work/">here</a>.</p>
+<p>Now coming to Hinduism.</p>
+<p>Isn't it a physical manifestation of a Blockchain fork? I mean anyone can take the 'good' of this religion and spin off something of their own.</p>
+<p>History has countless examples of different religions stemming from Hinduism.</p>
+<p>This has happened in the past, and will continue to happen as long as the fundamentals are strong.</p>
+<h3>3. Resilience:</h3>
+<p>Nope. Not your typical blogpost that explores the tyrannies of west and middle-east.</p>
+<p>Long story short, there have been enough attempts to obliterate the history of Hinduism.</p>
+<p>However, it just thrived. Somehow, it stood against the test of time.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/image-4-1024x579.png" /></p>
+<p>Blockchains? Pretty similar.</p>
+<p>Imagine a system run by a bunch of individuals (computers or nodes). The system performs as expected until the last node is standing.</p>
+<p>And until the last node is surviving, the chances of revival are as good as any day.</p>
+<p>The entire system is designed in a way that it is beneficial to sustain the system even you are the only one doing it.</p>
+<p>And until a few years ago, governments hated Bitcoin. But then, why didn't they shut it? They have all the power, talent and money to do so!</p>
+<p>Well, simply because they couldn't.</p>
+<h3>4. Fundamental Layer:</h3>
+<p>And I believe all of this is possible only because Hinduism is not really a religion. It is a way of life.</p>
+<p>It is like someone teaches you how to fish rather than feeding you for a day.</p>
+<p>Harder in short run, much more sustainable in longer.</p>
+<p>Blockchains? Exactly that.</p>
+<p>You have basically enabled a network, independent of its creators.</p>
+<p>Anyone can leverage it the way they want.</p>
+<p>All the guidelines and rules have been defined on day zero with a constraint that they cannot be misinterpreted or tweaked in future.</p>
+<p>If rules have to change, then you must fork it, build something of your own and follow it. No questions asked.</p>
+<h2>Is Blockchain Secular?</h2>
+<p>In my head, this was a really positive post appreciating the intricacies and resilience of our mighty religion. However, some of you might get offended after reading this.</p>
+<p>Well, although it does not matter, my apologies in advance.</p>
+<p>And once again, just like the religion, Blockchain does not care about your religion, caste, colour and whatever.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

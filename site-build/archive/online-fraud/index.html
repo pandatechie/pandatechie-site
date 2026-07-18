@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Fraud: How Does it Happen, Prevention and Next Steps | Raghav</title>
+<meta name="description" content="In a very short period of time, India has become the second highest consumer of data, globally. Smartphone penetration is projected to reach to a staggering 820…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Online Fraud: How Does it Happen, Prevention and Next Steps</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-25</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-25 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/01/image-14.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>In a very short period of time, India has become the <strong>second highest consumer of data</strong>, globally. Smartphone penetration is projected to reach to a staggering <strong>820mn by 2020</strong> (<a href="https://economictimes.indiatimes.com/industry/telecom/telecom-news/indian-to-have-820-million-smartphone-users-by-2022/articleshow/76876369.cms?from=mdr">source</a>). With internet carrying so many benefits attached to it, we cannot overlook some <a href="https://pandatechie.in/2020/12/28/harmful-effects-of-internet/">downsides</a> of the same. One most prominent drawback: India has become a <strong>hotbed for online fraud</strong>. The NCRB's data stated that <strong>44,546 cases of cyber crimes</strong> were registered in <strong>2019</strong> as compared to <strong>28,248 in 2018</strong>. That is a <strong>rise of 63.5%</strong> in a single year. This feat takes us up on the <strong>third spot</strong> among <strong>top 20 cyber crime victims</strong> in 2020, <a href="https://www.newindianexpress.com/nation/2020/feb/23/india-stands-third-among-top-20-cyber-crime-victims-says-fbi-report-2107309.html">as per FBI report</a>.</p>
+<p><img alt="Online Frauds in India Statewise 2018" src="https://pandatechie.in/wp-content/uploads/2021/01/image-14.png" /></p>
+<p>Online Banking Frauds, Top 10 States, 2018</p>
+<p>I have personally experienced three such incidents in the span of two years where someone tried to dupe me or one of my acquaintances. In this blogpost, I would like to highlight the <strong>mode of operation</strong> of such <strong>frauds</strong>, how they set off an elaborate tango of events that traps an <strong>undoubting</strong>, <strong>innocent</strong> users. These incidents may help you or someone around you to quickly segregate a fraud from a genuine caller and save your hard earned money in the need of the hour. So let's explore these online fraud incidents.</p>
+<h2>1. The Flamboyant Tyre Purchaser:</h2>
+<p>One fine morning in January of 2019, I got a call from one of our channel partner ( selling tyres). He straight away asked me for my <strong>Google Pay ID</strong>. When I asked him why, he told that one of our <strong>customers wants to pay for tyres through Google Pay</strong>, and he hasn't set it up yet. While I refused to share my ID, I patiently <strong>guided him through the process of setting up GPay</strong> on his phone. He was stuck on a final step and I decided to visit him in person to help him close the deal.</p>
+<p><img alt="Google Pay Online Fraud" src="https://lh3.googleusercontent.com/lwZcDXiC9mRCZ9hGEMJnsy1Py51YYuqQ_9v2upxB655XKD3v86HY2K6y8v0vCGXVWw=w895-rwa" /></p>
+<p>As soon as I reached the showroom, one of the tech savvy managers at his shop welcomed me with a big smile on his face. He was happy that he could set up the UPI (Google Pay) without my intervention. I sat down and asked them, "where is the customer?" The owner told me that he was on his way to the showroom and will call back again for the tyre requirement.</p>
+<h3>The Call:</h3>
+<p>10 minutes into the showroom, we get a call. Number is <strong>NOT marked as spam</strong> on true caller. He puts him on speaker so that I can help them in the payment part if need be. The person on the other side asks what size of tyre is to be put in Swift Dzire and if it is available at the showroom.</p>
+<p>When the owner asked how many tyres is he looking for, our conman says that <strong>he wants all four replaced</strong> and asks us to wait for a second. Makes some kind of thumping sound (closing the car boot) and says, I would <strong>need a 5th spare tyre</strong> as well. "How much are you going to charge for it?", he asks.</p>
+<p>Channel partner quickly quoted a price and <strong>without any kind of bargain</strong>, "customer" says, he'll send the money with <strong>Google Pay right away</strong>. Because our channel partner also wanted to seal the deal straight away, he immediately shared his number with the fraudster.</p>
+<p><img alt="Online fraud call" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201511/phone-fraud-story-size_647_112215014403.jpg" /></p>
+<p>Next, the fraudster once again reaffirms the total price. He says <strong>there'll be a pop up on the application showing the amount and asks the channel partner to tap "pay" on his phone</strong>. This is the moment I intervened and innocently told him that <strong>he has accidently requested money, instead of paying us.</strong> <em>I thought he is the one who doesn't know how to operate Google Pay.</em></p>
+<h3>His Logic?</h3>
+<p>He corrects me and says, because you are using Google <strong>"Pay"</strong>, you need to press on <strong>"pay"</strong> to receive money. That is how app works. And that very moment, replacement of all 5 tyres (a very rare sight), advance payment all made sense to me.</p>
+<p>I immediately told him that I am handing over the number to the police. And kaboom! The call got disconnected and that number has never switched on again.</p>
+<h2>2. The Benevolent Amazon Executive:</h2>
+<p>This one happened with my brother during lockdown. We were sitting together and binging on Netflix one fine Saturday evening. There's a call from an unknown number (not marked as spam). He picks it up and a gentleman starts saying that he is from <strong>Amazon Gift Department</strong>. Next, he quotes <strong>last 5 purchases (all accurately)</strong> from his amazon account and tells him that <strong>Amazon wishes to reward him for his loyalty</strong>.</p>
+<p><img alt="Amazon Online Fraud" src="https://www.thestreet.com/.image/t_share/MTY3NTQxMzYzNzYwMDQ3NDk1/7-amazon-scams-and-how-to-protect-yourself-in-2018.png" /></p>
+<p>Later, "executive" gives him five gift options to chose from:</p>
+<ul>
+<li>Dell 15-inch laptop</li>
+<li>64GB iPhone 11</li>
+<li>Voltas air conditioner</li>
+<li>LG refrigerator</li>
+<li>Sony Bravia 33-inch television</li>
+</ul>
+<p><strong>The scheme requires us to make a purchase of minimum 5,000 on Amazon and we will get one of these items for free along with it.</strong> It looked a little off, so both of us decide to go ahead and check how it works.</p>
+<p>We pick Voltas AC as the preferred gift and the "Amazon Executive" <strong>sends us the Amazon link</strong> to the same. He wants us to <strong>add it to the card and share a screenshot with him</strong>. Apart from this, he wants us to <strong>add additional items worth Rs. 5000.</strong></p>
+<p>As soon as we do that, he asks us to <strong>make payment (only Rs. 5,000)</strong> to the <strong>account, he is sending in details for, through SMS</strong>. He asks us to use <strong>Amazon UPI</strong> for the same. When we ask him why can't I pay directly to the Amazon like other purchases, <strong>he says its because gift division is a separate unit</strong>.</p>
+<h3>His Logic?</h3>
+<p>When I add the details of his account to my Amazon UPI, the <strong>account name fetched is 'Amazon IN'.</strong> I told him that <strong>I cannot pay to someone outside Amazon</strong>. He replied that <strong>account name is indeed Amazon IN</strong>, how can it be outside the purview of retail giant?</p>
+<p>I told him that I can write <em>"Tera Baap"</em> in the account name as well and UPI application won't bat an eyelid. And he realizes that he has been caught and decides to hang up. A quirky format for online fraud.</p>
+<h2>3. The RBL Santa Claus</h2>
+<p>This happened with one of our associates back in 2019 in Gurugram (We'll call him Mukesh in this post). A young 23 year old chap had just started earning a few months ago. And as soon as FOMO kicked in, he got a beautiful credit card delivered to the office from RBL bank. Little did he know at that time, this may cost him much more than he thought. This guy was so scared of the credit card that he kept it on a temporary block (feature on RBL application) all the time.</p>
+<p><img alt="Online fraud santa claus" src="https://pandatechie.in/wp-content/uploads/2021/01/image-15.png" /></p>
+<h3>The Call:</h3>
+<p>One fine day, he gets a call from a lady that <strong>welcomes him to the RBL bank family</strong>. She <strong>verifies</strong> all details like <strong>Name, D.O.B., Addres</strong>s etc. When our young lad is totally convinced that he is actually talking to the bank, she drops in a good news. <em>"Have you redeemed Tanishq Vouchers which is given to all our members as a welcome gift?"</em></p>
+<p>Quite excited, he says no. <strong>She claims that she can help him do it online</strong> if he wants. "Yes, please", he said. The lady asks <strong>Mukesh to share his credit card number</strong>. Hastily, Mukesh checks out his wallet, and shares the <strong>16 digit number and CVV</strong> with the lady.</p>
+<p><img alt="RBL bank credit card" src="https://www.moneyvisual.com/wp-content/uploads/2019/08/rbl-bank-credit-card.jpg" /></p>
+<p>Next she says, <strong>there will be a verification code on your mobile</strong>, please share the same. As soon as Mukesh shares it, he gets a message saying the <strong>card is temporarily blocked</strong>. Innocent guy shares this message with the caller. Later, <strong>she guides him on how to unblock the card</strong>. And our beloved hero says that he knows how to do it. On a promise to call back in 1 hour, both of them disconnect the call.</p>
+<p>An hour later, similar steps, and this time <strong>Mukesh's card has been charged with Rs. 25,000</strong>. <strong>No traceability, no call backs possible</strong>. Classic online fraud.</p>
+<h3>What did we do?</h3>
+<p>After informing the bank, <strong>Mukesh and I visited the cybercrime police station in Gurugram</strong>. The officer immediately set our expectations straight and told us that although <strong>they'll write a complaint and investigate, chances of success are negligible</strong>. He went ahead and told us that <strong>government has told them not to waste their resources and time on the cases where OTP is shared by the victim</strong>. Enough communication has been done through multiple media to sensitize public on this.</p>
+<p><img alt="Cyber Police Station Gurugram" src="https://static.toiimg.com/thumb/msid-63209251,width-1200,height-900,resizemode-4/.jpg" /></p>
+<h2>How to Save Yourself from Online Frauds?</h2>
+<p><strong>Online fraud is that form of menace, where prevention is the ONLY cure</strong>. Therefore, it is extremely important to keep your eyes, ears open to get those subtle cues of a fraud in progress. Here's something that I can suggest:</p>
+<h3>1. Don't be Greedy:</h3>
+<p>No <strong>bank</strong>, <strong>company</strong>, <strong>organization</strong>, <strong>person</strong> in this world is going to give you <strong>something for free</strong>. Even if following this thumb rule means losing on to some opportunity, then be it. <strong>Anything that has been offered as a gift, discount, freebie needs to be questioned at every step while you claim it.</strong></p>
+<p><img alt="" src="https://res.cloudinary.com/vop/image/upload/v1524167319/greed_wzl4rn.jpg" /></p>
+<h3>2. Be Logical:</h3>
+<p>We tend to shut down our brains and indulge in materialistic attractions. In all the incidents quoted above, a pinch of logic would've been enough to catch the online fraud.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/1-8.png" /></p>
+<ul>
+<li><strong>Why would someone purchase all 5 tyres</strong>? When you are in such a situation, you tend to replace 5th wheel with the least damaged out of the working four. A tyre dealer would know it at least.</li>
+<li><strong>How on earth someone pays in advance</strong>? Would you do it? Have you ever paid before getting a service? Or even before reaching the showroom?</li>
+<li>Have you ever bought a product/service <strong>without bargaining</strong>?</li>
+<li>Amazon is surely a retail giant, but <strong>why would they ask you to pay outside</strong> their well developed ecosystem? Is this integration too big for their huge team of engineers dedicatedly working on the app?</li>
+<li>And Tanishq vouchers? Seriously? <strong>No bank offers Gold for signing up for their credit card</strong>. At least not at the welcome itself.</li>
+<li>Even if they would, <strong>why do they need your credit card number</strong>? Don't they have it already? Even if they don't why do you have to unblock your card for it?</li>
+</ul>
+<h3>3. Little Knowledge is very dangerous:</h3>
+<p>And finally, if some <strong>technology is too overwhelming for you, it is much better to stay away from it</strong>. That is something my grandparents have been doing for a while now. Whenever someone (even genuine) calls them for some scheme, offers. They tell them to call back when their grandson/ son will be around. Never have they entertained any such call even for a minute.</p>
+<h2>Conclusion:</h2>
+<p>In near future, I foresee a <strong>further jump in the incidents of online frauds</strong>. With more and more Indians going digital for the first time in their lives, it is a <strong>lucrative avenue for conmen to enter</strong>. If you want to dive deeper into the elaborate nexus of these gangs, I recommend watching <a href="https://www.imdb.com/title/tt11150912/">Jamtara</a> on Netflix.</p>
+<p>While signing off today, for some reason, I feel like Anup Soni from Crime Patrol.</p>
+<p><img alt="" src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2017/04/crime-1491199236.jpg" /></p>
+<p>Have you ever encountered such a situation? Were you able to save yourself?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

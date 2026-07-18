@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spot Vs Derivative Market: What is the Difference? | Raghav</title>
+<meta name="description" content="The world of Finance is pretty evolved. No matter if you are a buyer, trader or a mere speculator, there is a tool for you to leverage your skills. Whenever som…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Spot Vs Derivative Market: What is the Difference?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-03-15</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-03-15 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2022/03/spot-vs-derivative-market-1024x576.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>The world of Finance is pretty evolved. No matter if you are a buyer, trader or a mere speculator, there is a tool for you to leverage your skills. Whenever someone enters the stock/crypto market, it is a very overwhelming experience. You see charts and graphs everywhere and just don't know what to do about it. However, as the time passes by, you realize that there is no reason why someone would consider this market as 'evil'. Specially in the Indian culture, people are advised to stay away from the stock/crypto market.</p>
+<p><img alt="Spot Vs derivatives" src="https://pandatechie.in/wp-content/uploads/2022/03/spot-vs-derivative-market-1024x576.png" /></p>
+<p>However, if we would spend some time in understanding what these markets are all about, we would realize that it is rather intriguing how we can use them for generating wealth. One such confusion amongst my peers is the difference between spot and derivative markets. There, today we are going to talk about that. Let's go! Spot Vs Derivative Market</p>
+<h2>What are Spot Markets?</h2>
+<p>Spot markets, also known as cash or physical markets are the trading equivalent of a physical purchase. For example, you go to grocery store, you purchase some stuff here and there, pay for it and viola! End of transaction.</p>
+<p>That is exactly what happens in a spot market. You are simply purchasing some sort of equity stock, commodity in real time by paying for it upfront.</p>
+<p>The actual transfer of assets may take some time. For example, in a stock market, this is usually happening at T+2 days. This process of transfer completion is also known as settlement.</p>
+<p><img alt="" src="https://media1.giphy.com/media/dfEYhn5LpEezu/giphy.gif" /></p>
+<p>By now, you might have understood that there are alternatives where this settlement does not occur in lieu of instant cash. We would come to that later in this post.</p>
+<p>For now, let us explore some terminologies related to a spot trade.</p>
+<h3>Spot Price:</h3>
+<p>This is the current price of the asset under discussion. It is the price at which an asset can be bought or sold immediately. In highly liquid markets like equity, cryptocurrency, spot prices change by the second, as orders get fulfilled and new ones enter the marketplace.</p>
+<h3>Pros and Cons of Spot Market:</h3>
+<p>Spot markets are extremely important for any market to thrive. It is basically the current price of the asset that is going to decide the future price/demand of it. Therefore, it is a gateway to derivatives.</p>
+<p>With that being said, there is flipside to spot trading too. We are not saying that it is bad, but it is incomplete in terms of leveraging the trading ecosystem. Let us find out how:</p>
+<p><img alt="Spot Vs derivatives: Pros and Cons of Spot trading" src="https://cdn-images-1.medium.com/max/800/1*k-AFUtWJaVtRz8VkHioReQ.png" /></p>
+<h2>What are Derivative Markets:</h2>
+<p>As the name suggests, derivative is something who’s value is dependent on an underlying entity. Derivative market is a market where people are exchanging contracts with each other, the value of which is decided by the fluctuations in the underlying asset.</p>
+<p>Text book definition derivatives is a security with a price that is dependent upon one or more underlying assets. The derivative itself is a contract between two parties based on the asset or assets.</p>
+<p>These assets can be cryptocurrency, stocks, bonds and commodities.</p>
+<h3>Types of Derivatives:</h3>
+<p>Based on the types of transactions, derivatives can be further sub-divided into futures, forwards, swaps and options. Let us quickly explore each one of them:</p>
+<h3>A. Futures:</h3>
+<p>In a futures contract, two parties involved agree to buy or sell an underlying asset at a given price in an agreed point in future. This is used by traders to simply speculate value or to hedge risk.</p>
+<p>Let us understand this through an example. Imagine, in December, you plan to invest your annual bonus (due in March) in Bitcoin. But you somehow feel that at that time the price of <a href="https://pandatechie.in/2021/11/02/5-reasons-you-should-ditch-gold-and-buy-bitcoin-this-dhanteras/">BTC</a> would be much higher.</p>
+<p>So now, you get into a future contract with expiration in December at $40K apiece. Say, it is now March and the price is now at $50K. You can either take the delivery of <a href="https://pandatechie.in/2021/08/24/what-is-currency-is-bitcoin-there-yet/">BTC</a> at $40K or sell that contract to someone else for a profit.</p>
+<p><img alt="Spot Vs derivatives: Futures" src="https://economictimes.indiatimes.com/thumb/height-450,width-600,imgsize-257601,msid-74859606/stock-futures-getty.jpg?from=mdr" /></p>
+<p>As discussed above in the drawbacks of spot trading, in case of futures, either parties can close their position with an offsetting contract without the actual delivery of the physical commodity.</p>
+<h3>B. Forwards:</h3>
+<p>Forwards are types of future contracts that are traded on an OTC rather than an exchange. They are much more flexible and higher in stakes/risk as compared to futures.</p>
+<h3>C. Swaps:</h3>
+<p>Swaps are another common type of derivative, often used to exchange one kind of cash flow with another. For example, a trader might use an interest rate swap to switch from a variable interest rate loan to a fixed interest rate loan, or vice versa.</p>
+<h3>D. Options:</h3>
+<p>An options contract is similar to a futures contract in that it is an agreement between two parties to buy or sell an asset at a predetermined future date for a specific price.</p>
+<p><img alt="Spot Vs derivatives: Options" src="https://www.thestreet.com/.image/t_share/MTY3NTQxMjM0MzczNTAyMzQz/what-is-options-trading-examples-and-strategies-in-2018.jpg" /></p>
+<p>The key difference between options and futures is that with an option, the buyer is not obliged to exercise their agreement to buy or sell. It is an opportunity only, not an obligation, as futures are.</p>
+<p>As with futures, options may be used to hedge or speculate on the price of the underlying asset.</p>
+<h4>D.1 Put Option:</h4>
+<p>Let us take a similar example of ETH. Imagine that you own 10 units of ETH at a price of $3000 per unit. However, you are unsure of the market fluctuations and want to safeguard yourself from a potential downside.</p>
+<p>In such a case, you could buy something called a put option wherein you get into a contract to sell your ETH at $3000 if need be, at a future date (known as expiration date). This price is known as the strike price.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/03/image-2.png" /></p>
+<p>Say the price of ETH falls to $2700. Now if you execute the put option, you would only lose the cost involved to buy the put option and nothing else. This would be quite low as compared to $3000 you would have lost had you not purchased the put option.</p>
+<p>Think of it like an insurance against the down winds.</p>
+<h4>D.2 Call Option:</h4>
+<p>In this case, assume that you don’t own ETH at the moment. But you feel that its price may go up in the future (from the current price of $3000). You could buy a call option that is simply a contract that allows you to get a delivery of ETH at $3000 apiece on a fixed future date.</p>
+<p>Now say, ETH jumps up to $3500. You could simply execute the contract and make a sweet profit worth $500 (per piece) less the brokerage, cost of option.</p>
+<p>If the price of ETH goes in the other direction, the seller would get to keep the premium (cost of the contract) and the entire position would be closed.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/03/image-3.png" /></p>
+<h2>What Else?</h2>
+<p>Itching to give it a shot? Well, you are in luck. <a href="http://mcs.io">MCS</a>, a Singapore based exchange is a derivative only exchange that also offers leverage for these trades. Go give it a shot right away!</p>
+<p>Got Questions?</p>
+<p>https://www.instagram.com/p/CazXm1Pv0aj/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

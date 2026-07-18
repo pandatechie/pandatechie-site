@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethereum Killer Solana Commits Suicide | Raghav</title>
+<meta name="description" content="Well, not really. But I do realize it’s quite a gory title. It is what it is. Solana blockchain halted itself for the eighth time in the past 3 months. It has b…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Ethereum Killer Solana Commits Suicide</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-07-11</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-07-11 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/jpeg;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Well, not really. But I do realize it’s quite a gory title. It is what it is. <strong>Solana blockchain</strong> halted itself for the eighth time in the past 3 months. It has become a sort of a routine now. Something you don’t pay much attention to. However, when bearish sentiments are at its peak, nothing is spared. As a result, Solana has slipped from an <strong>ATH</strong> of <strong>$140</strong> to a measly $35 in the last three months.</p>
+<p>But why are so hell bent on killing <strong>Ethereum</strong>? Also, why is <strong>Solana</strong> considered to be a candidate? And why has it got some serious ground to cover? Let’s explore all of this.</p>
+<h2>Killing Ethereum:</h2>
+<p>If you have ventured into the <strong>DeFi</strong> world for a while, you would know this already. For the uninitiated, Ethereum is one expensive <strong>Blockchain</strong>. It may not matter much for bigger players out there. But if you are someone looking to invest a couple of hundred dollars in some <strong>protocol</strong> on <strong>Ethereum</strong>: Do not. Because the gas fee would almost be equal to your total <strong>investment</strong>.</p>
+<p>Apart from that, <strong>Ethereum</strong> is slow. It can process up to 12-15 transactions per second. Of course there are plans to fix it with <strong>ETH2.0</strong>. But for now, it is what it is.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>So any sane individual would obviously look for alternatives. And currently, they are spoilt for choices. Every new <strong>L1</strong> that pops up calls themselves as <strong>Ethereum killers</strong>.</p>
+<p>And the biggest contender of them all is <strong>Solana</strong>.</p>
+<h2>Why Solana?</h2>
+<p>Founded in 2017 by <strong>Anatoly Yakovenko</strong>, <strong>Solana</strong> was designed to solve the high costs and slow transaction speeds that limit the scalability of other <strong>blockchains</strong>, such as <strong>Ethereum</strong>. <strong>Solana</strong> can process a staggering number of transactions per second (<strong>TPS</strong>) of 3,000. For some perspective, Visa can only do 1700.</p>
+<h2>But Why Not Solana?</h2>
+<p><strong>Solana</strong> has grown tremendously over the last year. The token price went <strong>skyrocketing</strong> to <strong>$140</strong> in no time. However, <strong>Solana</strong> has now faced regular outages which has made people believe that it is <strong>centralized</strong> in nature. Here are a few reasons that this might be true:</p>
+<h3>A. Token Distribution:</h3>
+<p>The holding patterns of <strong>$SOL</strong> (native token of Solana) is rather odd. Our intention with <strong>web3</strong> has always been the <strong>democratization</strong> of <strong>wealth</strong>. However, founders of <strong>Solana</strong> may not feel the same way.</p>
+<p>As per the <strong>Messari</strong> report published last year in May, about <strong>50%</strong> of the tokens are held by <strong>VCs</strong> and <strong>Solana foundation</strong> (company owned by the founder himself).</p>
+<p><img alt="" src="https://lh6.googleusercontent.com/bm82ytlfymsMlhUd1Llc6MKLHEv2rqIOll432tXSPRFFMHDBhPgwkRRc5kdVQFD-LhsuZn2Vb_t8vSvBvEdSxkF8WAK2DhJDpNFRxATMEH5oR4iCDv6L8bhO69t6mWFF1b7u6tPgYeVxDGGmBw" /></p>
+<p>When compared with the likes of <strong>Ethereum</strong>, it is fair enough to say that <strong>Solana</strong> is a privately owned <strong>Blockchain</strong>.</p>
+<h3>B. Nodes:</h3>
+<p>A good measure of understanding the <strong>decentralization</strong> of a protocol is to find out how many <strong>nodes</strong> are actually contributing to validation of the transactions. For <strong>Solana</strong>, this number stands at 1447.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>Compare that with <strong>BTC</strong> which has <strong>16000+ nodes</strong> and <strong>Ethereum</strong> which has ~<strong>2500 nodes</strong>. Usually, when a participant validates the <strong>transactions</strong> incorrectly leading to problems on the network, the node is often penalized. This is known as slashing.</p>
+<p><strong>Solana</strong> does not have that slashing mechanism implemented.</p>
+<h2>Is Solana’s Game Over?</h2>
+<p>Well, that is a tricky question. But to give you some perspective, it is evident that <strong>Solana</strong> has compromised with the <strong>decentralization</strong> in order to give way to <strong>speed</strong> and <strong>security</strong>. These random outages have created a very bad reputation for <strong>Solana</strong>. Even more than ‘Centralization’ narrative ever could.</p>
+<p>Given the backing and the team, I am quite sure that it will be resolved sooner than later. Post that, it is a question that you have to ask yourself. Is <strong>centralization</strong> not a key evaluation metric for you? If not, <strong>Solana</strong> could be a good bet. If yes, keep distance!</p>
+<p>What are your thoughts on <strong>Solana</strong>?</p>
+<p>https://www.instagram.com/p/CfyWaKrO5vK/</p>
+<p>Will Solana become a mainstream project? I don't know. But what I know is that EPNS has been making some super solid strides in its goal of achieving web3 communication protocol.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Koo App: Why is India's answer to Twitter in news? | Raghav</title>
+<meta name="description" content="Developed in March 2020 by Aprameya Radhakrishna, Koo app is India's response to Jack Dorsey's Twitter. Having won Atma Nirbhar Bharat app challenge under socia…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Koo App: Why is India's answer to Twitter in news?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-02-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-02-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-12-at-10.33.15-AM-494x1024.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Developed in <strong>March 2020</strong> by <strong>Aprameya Radhakrishna</strong>, <strong>Koo app</strong> is <strong>India's response to Jack Dorsey's Twitter</strong>. Having won <strong>Atma Nirbhar Bharat app challenge under social category in August 2020</strong>, the application was simply a <strong>better looking cousin of Twitter</strong>. However, in <strong>last 24 hours, 3 million users have flocked</strong> to this new talk of the town and this is a 10x jump in its user base. But what is Koo App? Why has it happened? Are there any other concerns over the usage of Koo? Here's how KOO is trending as #5 top free app in social and way forward:</p>
+<h2>Indian Apps:</h2>
+<p>I don't know how many of you have noticed this before, but <strong>playstore</strong> already has an <strong>elaborate set of apps</strong> under the <strong>section</strong> called <strong>"made in India"</strong>. I feel really proud to see that app development scene in India is picking up and we would finally get to see some entrepreneurs in this space. Indians always had this in them, its just we used to <strong>do it for American Corporates instead of our own business</strong>. However, equally sad flipside of the coin is that <strong>most of us</strong> don't bat an eyelid to this section. The <strong>downloads aren't phenomenal</strong> either. Quick test would be to realize if you were aware of this section or not. If not, I don't think there's enough buzz around it.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-12-at-10.33.15-AM-494x1024.jpeg" /></p>
+<p><strong>We all our vocal</strong> about our local made products but <strong>unfortunately that is it</strong>. When it comes to <strong>actual purchase</strong>, we <strong>lean towards a cheaper alternative</strong>. Murdering our pseudo nationalism instantly. Don't believe me? How do you explain Xiaomi doing a record break sales of 200 crore on a single day for its ONE device Mi 10i (<a href="https://www.thehindubusinessline.com/companies/mi-10i-witnesses-sales-of-200-crore-says-xiaomi/article33557968.ece#:~:text=Xiaomi's%20Mi%20India%20on%20Tuesday,sales%20of%20%E2%82%B9200%20crore.">source</a>)?</p>
+<h2>So What Did Koo Do?</h2>
+<p>Koo entered the market with a <strong>different</strong> <strong>agenda</strong> altogether. Built on the <strong>basic</strong> <strong>premise</strong> that <strong>less than 10%</strong> of the people in India <strong>speak</strong> <strong>English</strong>, it wanted to give a <strong>voice to the thoughts of natives in their preferred language</strong>. As a result, the UI is also available in major dialects of our country. It was clearly an application build for the new entrants who have just joined this internet revolution.</p>
+<p>What is Koo app? <strong>Koo was just another joker in the pack of cards</strong>. A wannabe twitter in the Indian app stack. However, thanks to the blessing in disguise, our <strong>boycott</strong> <strong>culture</strong> and <strong>skewed</strong> <strong>freedom</strong> of <strong>speech</strong>, Koo emerged as the winner.</p>
+<h3>GoI vs Twitter:</h3>
+<p>A few days ago, <strong>government of India</strong> asked <strong>Twitter</strong> to <strong>block</strong> <strong>250</strong> <strong>accounts</strong> that were promoting some questionable content related to farmer's protest, as per them. <strong>Twitter agreed and later found itself in a difficult spot where protestors questioned their right of freedom of speech and Twitter had to roll back this decision</strong>. After restoration of these 250 accounts, government slapped with <strong>another list 1,178 accounts</strong> that were <strong>flagged</strong> by <strong>security</strong> <strong>agencies</strong> as accounts of Khalistan sympathizers or backed by Pakistan and operating from foreign territories and causing threat to public order in view of the ongoing farmers’ protests in some parts of India.</p>
+<p><img alt="Twitter Vs GoI" src="https://st1.bgr.in/wp-content/uploads/2021/02/Twitter-vs-Indian-gov.jpg" /></p>
+<p>While <strong>Twitter succumbed to pressure and deactivated 500 accounts</strong> of the list, <strong>they somehow chose to be on the right side of the freedom of speech and took a call to maintain the status quo on the other accounts.</strong> These accounts belonged to activists, journalists etc.</p>
+<p>To spicen up the things a little more, <strong>Mr. Dorsey was found "liking" several tweets made by “foreign celebrities” in support of the protests.</strong> “In view of this, defiance of Government orders by Twitter raised several questions. This raises questions about Twitter’s neutrality.</p>
+<h3>What Happened Next?</h3>
+<p>In this middle of this Tom and Jerry fight between our <strong>Ministry of Electronics and IT (MEIT) and Jack Dorsey</strong>, some of the <strong>renowned</strong> <strong>politicians</strong> and <strong>twitter handles of various government departments</strong> showed their resentment by moving to <strong>Koo</strong>. Since they were <strong>quite vocal about it</strong>, the word spread pretty fast and <strong>hence a surge</strong> in the user base. Some of the key names that moved to Koo are:</p>
+<p><strong>Policiticans</strong>: Sambit Patra, RS Prasad, Piyush Goyal, Giriraj Singh, Sanjay Dhotre , Shivraj Chouhan and BS Yediyurappa, CMs of Madhya Pradesh and Karnataka respectively.</p>
+<p><strong>Actor</strong>s: Anupam Kher, Kangana Ranaut</p>
+<p><strong>Sports Personalities</strong>: Anil Kumble, Javagal Srinath</p>
+<p>https://twitter.com/KanganaTeam/status/1359450551126269952?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1359450551126269952%7Ctwgr%5E%7Ctwcon%5Es1_c10&amp;ref_url=https%3A%2F%2Fin.mashable.com%2Fentertainment%2F20200%2Fkangana-ranaut-says-shes-leaving-twitter-and-moving-to-koo-tweeple-bid-her-farewell-with-memes</p>
+<h2>Twitterverse's Reaction:</h2>
+<p>As always lately, <strong>polarization</strong> is at it's peak. And in the middle of such a <strong>grim</strong> situation, <strong>memes</strong> are always on the dot to the rescue. Here are some amazing reactions by people who are happy after this decision.</p>
+<p>https://twitter.com/comedibanda/status/1359541100688535552?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1359541100688535552%7Ctwgr%5E%7Ctwcon%5Es1_c10&amp;ref_url=https%3A%2F%2Findianexpress.com%2Farticle%2Ftrending%2Ftrending-in-india%2Fkoo-app-memes-twitter-reaction-7183845%2F</p>
+<p>https://twitter.com/GreeshmaShukla/status/1359484838957309958?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1359484838957309958%7Ctwgr%5E%7Ctwcon%5Es1_c10&amp;ref_url=https%3A%2F%2Findianexpress.com%2Farticle%2Ftrending%2Ftrending-in-india%2Fkoo-app-memes-twitter-reaction-7183845%2F</p>
+<p>https://twitter.com/troubler_06/status/1359518565678817281?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1359518565678817281%7Ctwgr%5E%7Ctwcon%5Es1_c10&amp;ref_url=https%3A%2F%2Findianexpress.com%2Farticle%2Ftrending%2Ftrending-in-india%2Fkoo-app-memes-twitter-reaction-7183845%2F</p>
+<p>https://twitter.com/_shobhitdixit/status/1359548140739727368?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1359548140739727368%7Ctwgr%5E%7Ctwcon%5Es1_c10&amp;ref_url=https%3A%2F%2Findianexpress.com%2Farticle%2Ftrending%2Ftrending-in-india%2Fkoo-app-memes-twitter-reaction-7183845%2F</p>
+<h2>Is Koo App <a href="https://pandatechie.in/2020/10/27/is-cred-app-safe-should-you-use-cred/">Safe</a>?</h2>
+<blockquote>
+<p>With Great Power, Comes Great Responsibility</p>
+</blockquote>
+<h3>Data Leakage:</h3>
+<p>There is a <strong>French</strong> <strong>cybersecurity</strong> <strong>expert</strong> that goes by the name <strong>Elliot Alderson</strong> on Twitter. He has exposed some key <strong>vulnerabilities</strong> in the <strong>Aadhar system</strong> as well in the past. This time around, he accused Koo of <strong>leaking personal information including email, name, DOB, marital status, gender</strong>. In response to this, Mr. Radhakrishan tweeted the following:</p>
+<p><img alt="Tweet from Co Founder of Koo App" src="https://pandatechie.in/wp-content/uploads/2021/02/image.png" /></p>
+<p>What is the inside truth? Only time will tell.</p>
+<h3>The Chinese Connection:</h3>
+<p>A Chinese company named <strong>Shunwei</strong> (which is connected to Xiaomi and is a venture capital fund investing in start-ups), has also <strong>invested in Koo</strong>. However, <strong>Shunwei</strong> will now be <strong>exiting</strong> the company and will be selling its stake, making Koo a complete Indian entity. This has been confirmed by the Koo co-founder. Enough Masala already!</p>
+<h2>But How is Koo as an App?</h2>
+<p>Twitter was launched in 2006. In these 15 odd years, <strong>I haven't looked out for an alternate micro-blogging platform</strong>. However, ever since I have tried the Koo app, it is that <strong>feeling of infatuation that has evolved from boredom of my past relationship with Twitter</strong>. Over all app looks <strong>nice and clean</strong>. It has this <strong>yellowish</strong> theme (in contrast to twitter's blue).</p>
+<p>If you are well versed with Twitter and it's functionalities like retweet, like etc. Koo shouldn't be anything new. <strong>While currently it has a user base of people of one set of ideologies, I am sure as more and more users join in, it can be an effective medium to share your views.</strong> A worthy contender of being the next Twitter (at least in India)</p>
+<p><img alt="Koo App UI" src="https://pandatechie.in/wp-content/uploads/2021/02/8f3eb837-e93e-4be6-a612-7c342b05f6e5-492x1024.jpg" /></p>
+<p>Koo App UI</p>
+<h2>Conclusion:</h2>
+<p>Team at Koo app would be so happy with this unprecedented boom. Although reasons behind this success story are truly questionable, I think India needs more revolutions like these. As Harshad Mehta said, "<em>India pe laga do</em>", I am very optimistic about the future of tech in our country.</p>
+<p>Did you download Koo app yet (<a href="https://play.google.com/store/apps/details?id=com.koo.app&amp;hl=en_IN&amp;gl=US">Android</a>/<a href="https://apps.apple.com/us/app/koo/id1515425674">iOS</a>)? What do you think about this fiasco?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

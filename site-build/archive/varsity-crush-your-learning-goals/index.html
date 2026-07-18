@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varsity: Crush your Learning Goals | Raghav</title>
+<meta name="description" content="Okay. Very quickly. How many of you can relate? You are a young to middle aged individual between 20-35 years of age. Since lockdown 1.0 you have a major FOMO o…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Varsity: Crush your Learning Goals</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.talkspace.com/blog/wp-content/uploads/2020/10/i-give-up-depression-anxiety_1200W-800x500.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Okay. Very quickly. How many of you can relate? You are a <strong>young</strong> to <strong>middle</strong> aged <strong>individual</strong> between <strong>20-35 years</strong> of <strong>age</strong>. Since <strong>lockdown</strong> 1.0 you have a major <strong>FOMO of investing in stock markets</strong> because all your <strong>friends</strong> have been doing it. Apart from that, you are well versed with the <strong>pros and cons of investing without proper knowledge</strong>. There is also a <strong>general consensus</strong> amongst your peer group that <strong>learning curve of stock market is quite steep</strong>. After all, you don't have the time to read the <strong>"The Intelligent Investor"</strong>. The book has no images and is 700 pages long for god's sake.</p>
+<p><img alt="" src="https://www.talkspace.com/blog/wp-content/uploads/2020/10/i-give-up-depression-anxiety_1200W-800x500.jpg" /></p>
+<p>So, what do you do? <strong>Give up</strong>? What if I tell you that there is a <strong>fun way</strong> out there to <strong>learn</strong> about stock <strong>markets</strong>? That is what today's fintech platform all about. <strong>Varsity</strong> is a our fintech giant <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha's</a>  baby. It is a free to use tool that will help you <strong>learn</strong> <strong>about</strong> stock markets from <strong>scratch</strong>. Zerodha Varsity can be accessed through it's <a href="https://zerodha.com/varsity/">website</a> or it's app on <a href="https://play.google.com/store/apps/details?id=com.zerodha.varsity&amp;hl=en_IN&amp;gl=US">Android</a> and <a href="https://apps.apple.com/in/app/varsity-by-zerodha/id1474610753">iOS</a>.</p>
+<p>At this moment, if you are thinking that there are <strong>tons of resources</strong> out there to learn about stock market, you are absolutely right. Then why is Zerodha's varsity <strong>so special</strong>? Here are a some <strong>quirkiest</strong> <strong>propositions</strong> of this product which are <strong>hard</strong> to <strong>replicate</strong> and are not available elsewhere in the market:</p>
+<h2>1. Comprehensive and Structured:</h2>
+<p>Varsity has a very <strong>detailed</strong> course. The course is nicely <strong>structured</strong> and takes you through the <strong>prerequisites</strong> of learning about stock markets as well. There is a bit of <strong>economics</strong> and <strong>factors</strong> that <strong>impact</strong> <strong>stock</strong> <strong>markets</strong>. A little bit about the <strong>human behavior</strong> and how it <strong>influences</strong> the <strong>price</strong> of a stock.</p>
+<p>You would also learn about the <strong>trading tool itself and how to use it</strong>. Introduction of the stock market will also tell us about the <strong>regulator</strong> and their <strong>role in the market</strong>. What are <strong>IPOs, clearing</strong> and <strong>settlement process</strong>.</p>
+<p>Other modules include, <strong>technical analysis</strong>, <strong>fundamental analysis</strong>, All about futures and options, how <strong>taxation</strong> is handled in the markets, trading in <strong>currency</strong> and <strong>commodities</strong>. They have also thrown in a module for <strong>personal finance</strong> and <strong>psychology</strong> of <strong>trading</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-26-at-11.25.31-PM-551x1024.jpeg" /></p>
+<h2>2. Gamification:</h2>
+<p>That is where the fun begins. Varsity <strong>gamifies</strong> your learning experience so that you don't <strong>feel the boredom</strong>. There are <strong>learning goals</strong> and <strong>notifications</strong> to remind you about them. You all make Snapchat streaks, but the <strong>streaks on Varsity</strong> are really going to add some value to your life (like literally).</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-26-at-11.25.31-PM-2-518x1024.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-26-at-11.25.31-PM-1-570x1024.jpeg" /></li>
+</ul>
+<p>You also get some <strong>points</strong> for completion of a course to <strong>keep you going</strong>. Completing of an entire <strong>module</strong> will also lead to getting a <strong>fancy certificate</strong> on your way.</p>
+<h2>3: Bite Sized:</h2>
+<p>Another USP of this <strong>application</strong> is that it <strong>caters</strong> to our <strong>shortened</strong> <strong>attention</strong> <strong>spans</strong> rather than <strong>fighting</strong> with it. With the onset of <strong>trends</strong> and <strong>culture</strong> that <strong>celebrates</strong> 30s videos, it has actually become <strong>harder</strong> for us to stay <strong>focused</strong> for <strong>longer</strong> <strong>intervals</strong>. Therefore, entire app and all it's <strong>courses</strong> are <strong>divided</strong> into <strong>bite sized</strong> content called <strong>cards</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-26-at-11.25.31-PM-3-384x1024.jpeg" /></p>
+<p>A typical card has no more than <strong>150 words</strong> and can be consumed rather quickly. You can put up a <strong>reminder</strong> to open the app. I had <strong>synchronized</strong> the same with my <strong>morning</strong> <strong>routine</strong>. As soon as I started my <strong>washroom drill</strong>, I spent good <strong>20 minutes</strong> in going through these cards one after the other. Imagine <strong>coming out lighter and smarter</strong>. What a combination!</p>
+<h2>4. Cliffhangers:</h2>
+<p>The content is also made in a way that you <strong>remain hooked for a longer period.</strong> Rather than plain texts of information, there are beautiful <strong>graphics</strong> and each card ends into a <strong>cliffhanger</strong>. I found myself completing the entire modules in one sitting because of that.</p>
+<h2>5. The Wall:</h2>
+<p>Thing about the world of finance is that once you are done with the <strong>basics</strong>, it becomes <strong>addictive</strong>. Therefore, as you learn about <strong>stock markets</strong> and it's <strong>related stuff</strong>, there an <strong>entire section</strong> called <strong>The Wall</strong>, that brings about top <strong>financial</strong> <strong>news/article per week</strong>. These articles are well researched and fun to read. You might get an opportunity to apply one of your learnings from the modules in this article. Trust me, the real magic happens when you do that.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-26-at-11.30.01-PM-2-504x1024.jpeg" /></p>
+<h2>Conclusion:</h2>
+<p>Gone are the days when <strong>learning</strong> was entirely <strong>optional</strong> and <strong>responsibility</strong> of the <strong>learner</strong> alone. With the advancement in <strong>technology</strong> and <strong>UI/UX techniques</strong>, the onus lies on the <strong>course provider equally</strong> to make the content more <strong>intuitive</strong>. The Varsity app by Zerodha truly achieves that feat.</p>
+<p>Have you given it a shot yet?</p>
+<p>This Blogpost is in association with <a href="http://theblogchatter.com">Blogchatter's</a> #BlogchatterA2ZChallenge</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

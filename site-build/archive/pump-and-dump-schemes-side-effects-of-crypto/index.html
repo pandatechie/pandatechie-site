@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pump and dump schemes: Side Effects of Crypto | Raghav</title>
+<meta name="description" content="As I write this, our beloved asset, Bitcoin, has soared above $60k. I clearly remember that eventful year.
+
+TerraLuna crashed to zero, then 3AC announced bankru…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Pump and dump schemes: Side Effects of Crypto</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-02-29</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-02-29 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/02/image-34-1024x468.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>As I write this, our beloved asset, Bitcoin, has soared above $60k. I clearly remember that eventful year.</p>
+<p>TerraLuna crashed to zero, then 3AC announced bankruptcy, soon Celsius joined the party, then Vauld screwed up and all of this culminated into a grand crash of FTX. Those were the days.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-34-1024x468.png" /></p>
+<p>Soon, everyone started explaining how crypto is a scam of epic proportions. Bitcoin crashed to $16k at one point. Everything was over.</p>
+<p>And yet. Here we are! Back again.</p>
+<p>Does this mean that I am a 100% sure that there will be no mistakes made this time?</p>
+<p>Heck no. And that is exactly why I am writing this.</p>
+<p>As the gold competitor (Bitcoin) rises and shines, all the scammers would be activated. And this is when greed will takeover the logic.</p>
+<p>Men, hungry for profits will throw money at any garbage they find.</p>
+<p>Only to blame crypto a few months later.</p>
+<p>Are you one of those people? No, right? Read carefully then.</p>
+<p>Today, we talk about pump and dump schemes.</p>
+<p>What are these schemes and how are they operated? Why seasoned investors fall pray to these tricks? And most importantly, how can we avoid them?</p>
+<h2>What is Pump and Dump?</h2>
+<p>While the name encapsulates the mode of operation pretty charmingly, but the devil is in the details. Usually in a pump and dump scheme, the operator pumps the price of an asset or security through multiple techniques like fake news, PR, social media etc. And once the price skyrockets, the operator sells their security at this artificially inflated prices to the retail investors.</p>
+<p>This leads to a rapid decline in the prices of the security as dumping is often completed in a short period of time. This is an illegal activity in the regulated market.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-35-1024x437.png" /></p>
+<h2>How does pump and dump work?</h2>
+<p>In a traditional stock market setup, penny stocks are more prone to such tricks as they have a higher chance of slipping under the nose of regulators and have comparitvely less strict listing requirement. On the other hand, in crypto space, lack of a regulator makes it extremely easy for manipulators to pump and dump.</p>
+<p>Now there are multiple ways to operate a pump and dump scheme but the underlying technique is often the same. It usually starts with creating a token and then marketing it as a revolutionary game changer.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/DALL·E-Feb-29-Pump-and-Dump.webp" /></p>
+<p>The operators add <a href="https://pandatechie.in/2021/12/11/what-are-degen-yield-farms-the-crypto-gambling/">liquidity</a> for people to come and deposit their useful token (ETH/USDx etc.) and exchange it for this newly launched token. Once enough people trade their tokens, the project team abandons the project, withdraws the liquidity and runs away.</p>
+<p>Here is something to relate better.</p>
+<p>Back in early 2021, a Netflix Korean show called Squid Games took the world by a storm.</p>
+<p>As a result, someone decided to come up with a token called Squid. The whitepaper claimed that they would eventually create a 'play-to-earn' game based on the TV show.</p>
+<p>But as soon as people bought their token: $SQUID, they raked in a sweet $12M and crashed the token by 99.9% within a few minutes. All their social media accounts were no where to be found after that.</p>
+<h2>Types of Pump and Dump Schemes:</h2>
+<p>Yes. Don't be surprised. Even the manipulators and scammers are getting innovative by the day. So, there are more than one ways a pump and dump scheme can be executed.</p>
+<p>While the underlying principal remains the same, the art of spreading it amongst the masses, changes. Also, this is not new. As far as Indian stock market is concerned, the OG pump and dump scheme was conducted by the likes of Harshad Mehta back in early 90s. Let us explore the latest tricks in the trade:</p>
+<h3>A. Classic Pump and Dump:</h3>
+<p>Classic pump and dump schemes involve manipulation of information around a stock or cryptocurrency. For example, back in 2017, crypto markets encountered an ICO boom. ICO stands for initial coin offering (an IPO in traditional finance). During this period, a lot of projects came up with fake white papers that were simply promises with no intention of execution.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/image-37.png" /></p>
+<p>Squid: The most short lived token ever</p>
+<p>This was coupled with the media publications and paid influencers talking highly of the project. The process of massive implicit promotion of a coin is also known as 'shilling' which took its worse shape during this era.</p>
+<p>I mean even I <a href="https://pandatechie.in/2021/11/06/how-to-create-your-own-cryptocurrency-under-rs-500/">created my own token</a> once. Sincethis blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration with <a href="https://bohemianbibliophile.com/">Bohemian Bibliophile</a>. I could use it as a distribution mechanism to inject the initial interest.</p>
+<h3>B. Boiler Room:</h3>
+<p>A boiler room is a small brokerage firm that sells investments to its clients. This technique involves rigging these firms to sell your stock to the clients. This brokerage firm sells stocks to the users by cold calling them.</p>
+<p>Rings a bell? Yes. This is the technique that was portrayed in the famous Hollywood movie, the Wolf of Wallstreet. Leonardo DiCaprio runs a boiler room in that movie.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/02/DALL·E-cautionary-call-center.webp" /></p>
+<p>The boiler room holds a major portion of this stock, sells it as much as possible, pumps up the price and later sells it to makes profit.</p>
+<p>In a crypto context, there are no boiler rooms. But there are crypto influencers that launch their own crypto, then shill it shamelessly before dumping it on the retail users as the price rises.</p>
+<h3>C. "Wrong Number" Scheme:</h3>
+<p>This is a new one in the scamming scene and I must admit, I really liked it in the first go. This involves dropping a 'crypto tip' on your phone via Telegram/Whatsapp/Instagram etc. It is made to look like it was not meant for you and some poor insider accidentally shared it with you.</p>
+<p>But then, it was totally meant for you and if you went and purchased that crypto, you have already fallen prey to their sly tactics.</p>
+<p>It may not seem much initially but if you drop this on millions of users, you are likely to see some traction in the price of the asset.</p>
+<h2>How to avoid pump and dump schemes</h2>
+<p>Hopefully, you have not fallen for any of the tricks mentioned above. Even if you have, it is important to note how to navigate through these schemes as scammers are constantly evolving. And if you are someone who is new in this space, it is important to incorporate this into your framework while you are evaluating cryptocurrencies for investment. Here are a few techniques that can be deployed to identify a typical pump and dump:</p>
+<h3>A. Research Research Research:</h3>
+<p>Did I put enough emphasis on it? One of the best way to avoid the pump and dump trap is to research thoroughly about the project. Now most people end up following the price movement to take a short term trade on the crypto. Others try to figure out the use case and decide if it is worth investing or not.</p>
+<p>Very few people take it up a notch by actually spending some time in the discord servers of the project. This is where the community hangs out. One key aspect of crypto pump and dumps is that the project communities usually have fake, purchased following. Therefore, simply knowing the quantum of community is not enough. One must evaluate the quality as well.</p>
+<p><img alt="" src="https://media1.giphy.com/media/3orieUe6ejxSFxYCXe/giphy.gif" /></p>
+<p>Other overlooked aspect of research is the founding team. If the team of founders have worked on some projects in the past, it gives a good indication of the future of the project under evaluation. For example, founder of failed ecosystem, Luna, Do Kwon was previously associated with another failed stablecoin project. This news would have saved millions of people who lost money in the Luna debacle.</p>
+<h3>B. Valuation:</h3>
+<p>When we are evaluating a stock, we spend so much time in understanding the company details. Once we have doubled down on a stock, we try to find out if the future growth has already been factored in the stock. This is done by comparing the price to earnings ratio of the stock with its peers.</p>
+<p>But then, when we are evaluating cryptocurrencies, I hardly find someone going into such detail. For example, if you are evaluating the purchase of MATIC (Native token of Polygon), isn't it prudent to evaluate the usage of Blockchain? One should find out the number of transactions that happen on the chain, how does it compare to other layer 2 solutions.</p>
+<p>If you evaluate a metric that compares the amount of transaction fee collected by a protocol, you can instantly find the multiple of price it is demanding. This would lead to a clear analysis and comparison of cryptocurrencies.</p>
+<p>Another important question to ask about the project is that why is it so hyped all of a sudden. If something is doing rounds in the news, you should always address this question before jumping on to it.</p>
+<h3>C. Urgency:</h3>
+<p>A typical characteristic of a pump and dump scheme is that it is coupled with a sense of urgency to create fear of missing out or FOMO.</p>
+<p><em>"It's now or never"</em></p>
+<p><em>"Buy now or regret later"</em></p>
+<p>Usually it is a red flag to watch-out for. Even if the crypto space is moving faster than traditional markets, there is almost nothing urgent about investing in a token.</p>
+<h3>D. Avoid Tips:</h3>
+<p>Have you ever been fed the dreams of riches simply by following price tips of a so called crypto researcher? They would often give you a couple of tips for free and then ask you to become a member of their paid channel to continue.</p>
+<p>The way this works is that each tip is divided into two parts: buy and sell. Half of the audience is fed with buy and the other half is asked to sell. As the actual outcome happens, one of these groups have a stronger faith in this tipper. And that is how they build an entire business around it.</p>
+<p>Therefore, the best research you can have hands on should be done by you and no one else.</p>
+<h3>E. Use Common Sense:</h3>
+<p>The world of crypto changes completely during a bull run. Almost everything looks real and gives returns. Therefore, it is easy to fall in the trap of overnight rags to riches story.</p>
+<p>If something looks too good to be true, it probably is. One must never part ways with a realist mindset while investing in crypto. It is easier said than done. It is harder specially when teenage folks around you are minting millions with absurd NFTs. But stick to your ground and make a rational decision with a long term perspective in mind.</p>
+<h2>Conclusion:</h2>
+<p>The purpose of this post was not to demoralize you to invest in crypto. Rather, it is a newly emerging technology and for the first time in the history, retail investors can take part in its success. Earlier, this privilege was limited to VCs and insiders.</p>
+<p>But then, if you do not have time to spot a pump and dump scheme, it is better to offload your investment decisions to an expert.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

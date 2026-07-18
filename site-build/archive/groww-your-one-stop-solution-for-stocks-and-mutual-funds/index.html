@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groww: Your one Stop Solution for Stocks and Mutual Funds | Raghav</title>
+<meta name="description" content="Groww is everywhere. If you are remotely connected to the world of stocks or investment, it would be impossible for you to spend entire day without hearing abou…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Groww: Your one Stop Solution for Stocks and Mutual Funds</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-08</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-08 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://images.livemint.com/img/2021/04/07/original/Growwchart_1617816379736.JPG" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Groww is everywhere. If you are remotely connected to the world of stocks or investment, it would be impossible for you to spend entire day without hearing about Groww. Coincidentally, it is a great day to write about it. This morning, Groww attained it's <strong>unicorn status</strong> (A startup that is valued over $1bn). It is the <strong>second</strong> <strong>Indian</strong> <strong>fintech</strong> platform to achieve this rare feat this <strong>week</strong> after Kunal Shah's <a href="https://pandatechie.in/2021/04/03/why-is-cred-valued-so-high-creds-valuation-conundrum/">Cred</a>. Company successfully raised <strong>$83mn today</strong> at a valuation of north of $1bn.</p>
+<p><a href="https://groww.in/">Groww</a> is a platform that enables it's users to <strong>buy and sell stocks</strong>, <strong>mutual funds</strong>, <strong>digital gold</strong> etc. It would also help you <strong>invest in US stocks</strong>. So essentially, it operates as a <strong>SEBI registered broker</strong> and enables <strong>seamless</strong> transactions with NSE and BSE on your behalf. The <strong>speed</strong> at which this company has moved their way to the top is also no less than a magic. Founded in <strong>2016, within 5 years</strong> company has posted some tremendous numbers.</p>
+<p><img alt="" src="https://images.livemint.com/img/2021/04/07/original/Growwchart_1617816379736.JPG" /></p>
+<p>Inforgraphic Source: ET</p>
+<h2>Reasons Behind Groww's Success:</h2>
+<p>How did this company become one of the fastest growing fintech platforms in India? Here are few reasons that I can think of:</p>
+<h3>1. Experienced Leadership Team:</h3>
+<p>Oh and did we talk about the fact that <strong>Groww is co founded</strong> by our very own <strong>Ishan Bansal, Lalit Keshre, Harsh Jain and Neeraj Singh</strong>. In case that does not ring a bell, <strong>Ishan Bansal is the one who co-founded India's first e-commerce startup, Flipkart.</strong> Harsh and Neeraj were also his <strong>counterparts</strong> at Flipkart looking after <strong>product</strong> <strong>management</strong> and <strong>solutions</strong> <strong>engineering</strong> respectively. Lalit Keshre is an AMFI registered <strong>Mutual fund advisor</strong>.</p>
+<p><img alt="" src="https://images.yourstory.com/cs/2/a9efa9c02dd911e9adc52d913c55075e/oieDbX9aRDE9I9s-1599650037402.jpg" /></p>
+<p>As you might have noticed by now, they have an entire package up their ally. <strong>Thinkers, executers, implementers and someone from the industry itself is a part of the core team.</strong> This makes a very strong pitch in front of the investors as well.</p>
+<h3>2. Market Size:</h3>
+<p>Okay, catch hold of a chair nearby before I drop this one. In India, <strong>only 25mn people</strong> invest in <strong>stocks</strong> and <strong>mutual</strong> <strong>funds</strong> as of now. Out of some <strong>1.3bn people</strong>, this count amounts to about <strong>2% of the population</strong>. The key reason behind not investing in equity and MFs is not the lack of money, but rather the lack of knowledge and access to the investment options. This will change as <strong>financial</strong> <strong>literacy</strong> becomes mainstream.</p>
+<p><img alt="" src="https://images-gmi-pmc.edge-generalmills.com/c8bfdd71-ed78-41a2-9a4e-f02b72be3afe.jpg" /></p>
+<h3>3. Digitization:</h3>
+<p>Consider this scenario. You decide to invest Rs. 5000 in a mutual fund every month. However, <strong>you can't do it through your phone</strong>. You have to <strong>visit a bank</strong> with Rs. 5000 cash each month to keep your SIP running. Would you do it? Most people won't . With fintech and it's ease of usage coming in, this loophole is being plugged. Therefore, everyone is giving investing a thought now.</p>
+<p>When that thought strikes their mind, they find the likes of Groww with open arms.</p>
+<p><img alt="" src="https://mk0kizeocom9ydb8nunw.kinstacdn.com/wp-content/uploads/2018/08/Digitization-Kizeo-Forms.jpg" /></p>
+<h3>4. Knowledge Bank:</h3>
+<p>In order to generate demand, Groww has adopted a <strong>brilliant</strong> <strong>strategy</strong>. They try to <strong>educate</strong> maximum number of customers on various <strong>aspects of investing</strong>. So they have a <strong>top ranking blog, a YouTube Channel</strong> and presence on other <strong>social media</strong>. In a way, if you start searching for <strong>answers to any of your finance related query, you are likely to encounter Groww</strong> on your way.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-4-1024x220.png" /></p>
+<p>Groww Traffic Stats: Source: Ubersuggest</p>
+<p>As a part of this policy, Groww also covers products in their blog which they aren't even selling. So even if the question is related to insurance, government schemes, they have your back. For pro investors and stock market traders, there is a dedicated channel where you'd get the top stocks of the day, news etc.</p>
+<h3>5. Pandemic:</h3>
+<p>Get ready for some economic bombs. While everyone was adjusting with the pandemic (Lockdown 1.0), governments across the globe <strong>decided to print more money</strong> and push it in the system in order to revive the economy. How does it help? <strong>You put more money in the hands of the people</strong>, <strong>disincentivize</strong> <strong>savings</strong> by slashing the interest rates, so what do they do? <strong>Spend it</strong>. And once that begins to happen, <strong>production increases, jobs increase</strong>. This is overly simplified, but you get the idea.</p>
+<p><img alt="" src="https://www.sciencenewsforstudents.org/wp-content/uploads/2020/03/1030_coronaviruspandemic-1028x579.png" /></p>
+<p>So once, liquidity improved, people rushed towards equity market and opened demat accounts left right and center. Companies like Groww managed to reap benefits of this situation.</p>
+<h3>6. Lower Cost:</h3>
+<p>Investing through offline brokers incurs a higher cost as they usually invest through <strong>regular mutual funds</strong>. However, when you invest using the likes of Groww, you invest in <strong>direct mutual funds</strong>. What is the difference? It is the <strong>expense ratio</strong>. For a regular fund the expense ratio would be in the range of 1.5-2%. However for a direct fund it would be less than 1.5% in the most cases. You must be thinking that what difference could 0.5% make? <a href="https://pandatechie.in/2020/11/28/what-is-expense-ratio-in-mutual-funds/">Here's an article</a> that will shock you. Long story short, you may end up losing an amount equivalent to your entire invested principal if you don't care about this.</p>
+<p><img alt="" src="https://i0.wp.com/pandatechie.in/wp-content/uploads/2020/11/a1-7.jpg?w=899&amp;ssl=1" /></p>
+<h2>Conclusion:</h2>
+<p>What do I use for investing in stock markets? Is it Groww? Well, no. This is the 'G' post of <a href="https://www.theblogchatter.com/">Blogchatter's</a> #BlogchatterA2Z challenge. I will reveal the apps I use for investing in subsequent letters. For now, I can say that Groww has a lot to offer.</p>
+<p>Are you an investor? Do you use Groww?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay rent with credit card: Could I be any more millenial? | Raghav</title>
+<meta name="description" content="With the onset of the pandemic, a lot of us have been lesser fortunate when it came to jobs and salary cuts. Tough times call for tougher solutions. Remember ho…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Pay rent with credit card: Could I be any more millenial?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-10-28</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-10-28 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201028-084407-497x1024.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>With the onset of the <strong>pandemic</strong>, a lot of us have been <strong>lesser fortunate</strong> when it came to <strong>jobs</strong> and <strong>salary cuts</strong>. Tough times call for tougher solutions. <strong>Remember how oil plunged to negative for a short period</strong>? The idea we are going to discuss today is <strong>far less crazy</strong> than that (well, at least). <strong>Paying rent with credit card?</strong> What?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201028-084407-497x1024.jpg" /></p>
+<p>CRED RentPay</p>
+<p>So, we cannot deny we never gave it a thought? With a staggering <strong>28% of urban population</strong> living in <strong>rented</strong> accommodation these days (<a href="https://www.livemint.com/Politics/ixPbHQK7HGSOpUnoZnu7lO/Only-28-of-Urban-India-lives-in-rented-houses-Economic-Sur.html">source</a>), it is highly like that we may think of using our <strong>credit cards to pay rent</strong>. But how? And is it smart to do that? Let's get started.</p>
+<p>There are a few platforms available which enable you to pay rent by credit card.</p>
+<ul>
+<li>CRED RentPay</li>
+<li>NoBroker</li>
+<li>Housing</li>
+<li>Redgirraffe</li>
+</ul>
+<p>I will cover step by step guide for paying rent with <strong>cred</strong> and <strong>compare</strong> all four services.</p>
+<h4>Step 1:</h4>
+<p>Download cred from playstore (for full review of cred app, click <a href="https://pandatechie.in/2020/10/27/is-cred-app-safe-should-you-use-cred/">here</a>) and head over to the section that says "Pay Rent".</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201028-084342-492x1024.jpg" /></p>
+<p>Section to pick for paying rent</p>
+<h4>Step 2:</h4>
+<p>Enter the amount you want to pay as your rent.</p>
+<h4>Step 3:</h4>
+<p>Enter the full name of your landlord. In the next page, enter account number, IFSC code of landlord. At this point, you may use <strong>UPI ID</strong> as well if you are <strong>not sure</strong> of the <strong>bank details</strong>.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201028-084420-504x1024.jpg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2020/10/Screenshot_20201028-084551__01-501x1024.jpg" /></li>
+</ul>
+<p>Entering the amount (L) Choosing the CC to pay with (R)</p>
+<h4>Step 4:</h4>
+<p>Cred confirms address, pin code, state and city of the landlord.</p>
+<h4>Step 5:</h4>
+<p><strong>Choose the credit card you want to pay with</strong> and voila! You have paid your rent on credit.</p>
+<p>For all of you who are thinking that this is great. Let us now discuss <strong>why should you think twice before doing this.</strong></p>
+<p>Since credit card payments are <strong>charged at some rate</strong> by the government, <strong>platform</strong> will not bear it and would <strong>charge a service fee</strong> for completing this transaction. Table below compares the <strong>service fee levied per transaction</strong>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform</td>
+<td>Service Charge</td>
+</tr>
+<tr>
+<td>CRED</td>
+<td>~1.5%</td>
+</tr>
+<tr>
+<td>Housing</td>
+<td>1.3%</td>
+</tr>
+<tr>
+<td>NoBroker</td>
+<td>1-2%</td>
+</tr>
+<tr>
+<td>RedGirraffe</td>
+<td>0.39%+GST</td>
+</tr>
+</tbody>
+</table>
+<p>Platform wise service charge for using CC to pay rent</p>
+<p>I have never used <strong>Redgirraffe</strong> but a lot of online reviews say that <strong>UI is pathetic and there are tons of physical documents that need to be uploaded</strong> in order to enable this, hence the low price.</p>
+<h2>Should I use my credit card for paying rent?</h2>
+<p>The short answer is, <strong>it</strong> <strong>depends</strong>. I will give a <strong>quick step by step mathematics</strong> of how I'd go about it.</p>
+<ol>
+<li>
+<p>I pay a rent of <strong>30k</strong> (an average figure for someone living in Mumbai suburbs).</p>
+</li>
+<li>
+<p>For paying <strong>30k rent</strong>, cred would charge me approximately <strong>Rs. 450</strong> as service charge.</p>
+</li>
+<li>
+<p>This in return will give me <strong>600 points</strong> (I get 1 point for Rs. 50 spent on the card)</p>
+</li>
+<li>
+<p>Value of a point depends on where you use it. In this case I'd assume that <strong>we'll use it simply to knock off our outstanding</strong>. So, in that case per point price is Rs. <strong>0.25</strong></p>
+</li>
+<li>
+<p>That means I would get <strong>Rs. 150 in return</strong>. Along with this I will get <strong>30,000 cred coins</strong> as well.</p>
+</li>
+</ol>
+<p>I leave it up to you to decide if <strong>30,000 cred coins are worth Rs. 300 or not</strong>. And this is just to break even.</p>
+<h2>Conclusion</h2>
+<p>So, in toto, totally depends on <strong>what type of credit card you hold</strong>, <strong>what is the reward program</strong> you are enrolled in and <strong>how much rent</strong> you are actually going to pay. Not to forget, that if you <strong>miss the payment next month</strong>, you will be charged with an interest of <strong>~3-4% per month</strong> (which is very expensive).</p>
+<p>As far as I am concerned, I always follow the good old rule of spending and investments, <em>"When in doubt, stay out"</em>. So I will give a pass on this scheme.</p>
+<p>Until Next time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

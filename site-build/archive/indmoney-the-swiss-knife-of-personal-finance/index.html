@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndMoney: The Swiss Knife of Personal Finance | Raghav</title>
+<meta name="description" content="Anyone remembers that good old time? You go to the playstore to download something and your phone would just give up on you. You either clear some memory or cry…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">IndMoney: The Swiss Knife of Personal Finance</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-10</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-10 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-2.37.49-PM-1-549x1024.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Anyone remembers that good old time? You go to the <strong>playstore</strong> to <strong>download</strong> something and your <strong>phone</strong> would just <strong>give up</strong> on you. You either <strong>clear some memory</strong> or <strong>cry</strong> yourself to sleep. Well, with <strong>64/128/256GB</strong> becoming the <strong>new</strong> <strong>normal</strong> in the <strong>smartphone</strong> <strong>industry</strong>, we envisaged that it will <strong>solve</strong> all our <strong>problems</strong>. To an extent, it did. But, it brought a set of <strong>whole new issues</strong> with it. With increased storage, there was an <strong>app for almost everything</strong> in our phones. Even I downloaded an application that <strong><a href="https://pandatechie.in/2020/10/24/stay-hydrated-a-reminder-that-changed-my-life/">reminded me to drink water</a></strong>. One fine day, when I <strong>consciously</strong> scrolled through my <strong>app drawer</strong>, I realized, something is horribly <strong>wrong</strong>. Phone needs to be free of <strong>clutter</strong>. That is when I realized, the power of the <strong>multipurpose</strong> apps. Enter <strong>IndMoney</strong>.</p>
+<p>INDMoney is our home grown <strong>fintech</strong> <strong>platform</strong> that has been growing at a phenomenal pace. Every YouTuber, Finance Blogger would be <strong>endorsing</strong> it at one point. I myself am a <strong>user</strong> and a <strong>fan</strong> of this application. So today, I share why is this is a must have application in your phone.</p>
+<h2>What is INDMoney?</h2>
+<p>INDMoney is a fintech platform founded in <strong>2011</strong> by <strong>Ashish Kashyap</strong>. For those of you don't know, Ashish was India's first country head for <strong>Google</strong>. Later, he co-founded <strong>Goibibo</strong> and finally expanded his portfolio by including <strong>INdMoney</strong> in it.</p>
+<p>INDMoney helps you <strong>track</strong> your existing investments, <strong>goal</strong> <strong>planning</strong>, carrying out <strong>new</strong> <strong>investments</strong> and a <strong>knowledge</strong> <strong>bank</strong> at the same time. Apart from that, they have recently ventured into <strong>lending</strong> space as well. If you want, you can trade <strong>US</strong> <strong>stocks</strong> too on their application. If you start using the application once, trust me, there is no going back.</p>
+<p>When I learnt the history of the founders, I was <strong>curious to know how they landed up in fintech space</strong>. After all, you may think that some sort of finance background is a must before you plan to make a living out of it. Therefore, I decided to reach out to Kashyap on LinkedIn. And his reply was absolutely crisp and on point:</p>
+<blockquote>
+<p><em>"Not being from the old world of Finance, we are able to give a fresh perspective to Finance where we want to enable customers to get control, transparency and better financial future."</em></p>
+<p>-Ashish Kashyap</p>
+</blockquote>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-2.37.49-PM-1-549x1024.jpeg" /></p>
+<p>My Conversation with Ashish Kashyap</p>
+<h2>What Problems does INDMoney Solve?</h2>
+<p>According to me, there are a ton of features which are indispensable to my investment journey now. There are some which are good to have while there are others which I can live without. Let us explore a few of them:</p>
+<h3>1. Tracking Your Investments:</h3>
+<p>INDMoney has nailed this functionality like no other application could. If you are an avid investor, you know the importance of <strong>diversifying your portfolio</strong>. In order to achieve that, you invest in <strong>bonds</strong>, <strong>mutual funds, liquid funds, gold, government schemes like PPF, NPS, FDs</strong> etc.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-4.30.08-PM-1024x922.jpeg" /></p>
+<p>Investment Tracker</p>
+<p>The next big problem is how to track them from a single platform? Let's be honest, none of us likes to maintain an <strong>excel sheet</strong> of our investments. Therefore, <strong>INDMoney will help you track all of that + a lot more type of investments.</strong> Even if you have invested outside their platform, they would be happy to <strong>connect to your Email,</strong> look out for your <strong>mutual fund statement</strong> and <strong>sync</strong> it with the interface.</p>
+<p>It can also show your <strong>account balance</strong> basis the SMS you have received last from the bank.</p>
+<p>Did I tell you that it also <strong>integrates</strong> with all key stock brokers like <strong>Zerodha</strong>, <strong>Groww</strong>, <strong>Upstox</strong>, <strong>ICICI Direct</strong> etc. to give you <strong>live</strong> <strong>updates</strong> on the stocks present in your portfolio?</p>
+<h3>2. Expense Management:</h3>
+<p>Your <strong>net worth</strong> is made of two components, <strong>assets</strong> and <strong>liabilities</strong>. So tracking your <strong>expenses</strong> and <strong>liabilities</strong> in the same app makes sense right? You can connect INDMoney with your <strong>SMS application</strong> and it will <strong>auto detect any debit</strong> messages from banks, UPI apps, wallets etc. It will show your <strong>expenses</strong> for the <strong>week</strong>, <strong>month</strong> and run some <strong>analytics</strong> on it as well if you want.</p>
+<p><img alt="INDMoney Expense Tracker" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-2.48.18-PM-2-1024x970.jpeg" /></p>
+<p>Expense Tracker</p>
+<p>Apart from that, it will keep a track of your loans and credit cards. It will also auto fetch your <strong>CIBIL score</strong> every month to inflict <strong>financial</strong> <strong>discipline</strong> in you. Finally it would show your net worth on the top basis these two components.</p>
+<h3>3. Goal Planning:</h3>
+<p>Planning for a goal like education, child's marriage, retirement, travel etc.? INDMoney has your back. You can simply put in the anticipated cost of that goal and INDMoney will help you know how much additional you need to save today in order to achieve that goal in time.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-2.53.12-PM-1024x857.jpeg" /></li>
+</ul>
+<p>Goal Planning
+* <img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-2.50.23-PM-2-1024x878.jpeg" /></p>
+<p>Shortfall Calculator</p>
+<p>It will also incorporate your existing investments so that you have a clearer picture and can take a better call regarding prioritization of your goals.</p>
+<h3>4. Family Dashboard:</h3>
+<p>You can <strong>never plan</strong> your finances in <strong>silos</strong>. You need to discuss every <strong>plan</strong> with your <strong>wife</strong> and <strong>kids</strong> once they grow up. I am not trying to be <strong>pessimistic</strong>, but ask yourself this question. If you <strong>die tomorrow</strong>, will your <strong>family</strong> be able to <strong>access</strong> your hard <strong>earned</strong> money <strong>easily</strong>? If not, what is the point of it?</p>
+<p>INDMoney allows you track your family finances as well from a single place. <strong>This is a paid feature though</strong>.</p>
+<h3>5. Knowledge Bank:</h3>
+<p>You can go ahead and <strong>research</strong> endlessly for your suitable <strong>mutual</strong> <strong>funds</strong> in this application. You would be able to see the <strong>break up of that mutual fund instrument wise</strong>. It will also show what <strong>weightages are held by key stocks</strong> in that mutual fund.</p>
+<p>Apart from that, they have something called INDMoney Advisory. <strong>Advisory will share some recommended actions to fix your portfolio</strong>. Eg. switching from regular to direct mutual funds to save on expense ratio. Also, it will keep you updated regarding <strong>markets</strong> on a regular basis (you can chose the frequency), <strong>RBI Monetary policy</strong> updates and it's <strong>interpretation</strong>.</p>
+<p>You also get some custom notifications basis the stocks that you are holding. They claim that they have <strong>VGQM (Volatility, Growth, Quantity, Momentum) model</strong> that uses <strong>AI to predict the next best steps</strong> for your portfolio. However, this particular feature is again meant for prime members only. I used it when it was free about 3 months ago and found it pretty helpful for the people who are into trading etc. However, as a retail, value investor, I couldn't derive much value from it.</p>
+<p><img alt="INDMoney advisory Section" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-10-at-3.02.23-PM-488x1024.jpeg" /></p>
+<p>Advisory</p>
+<h2>Conclusion:</h2>
+<p>My experience with INDMoney has been <strong>delightful</strong>. Onboarding for <strong>investing</strong> on their platform is very <strong>simple</strong>. Setting up mandates is also a <strong>digital</strong> affair. At each step, you will find their support team just an <strong>email</strong> away. Recently, I installed INDMoney on my father's phone as well. Turns out he found a couple of matured investments he was not sure if they existed.</p>
+<p>So, what are you waiting for? Go install this and share your experience with me.</p>
+<p>This post is in association with <a href="http://theblogchatter.com">Blogchatter's</a> #BlogchatterA2ZChallenge.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

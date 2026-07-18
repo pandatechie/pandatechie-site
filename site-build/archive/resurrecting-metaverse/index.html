@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resurrection of the Metaverse | Raghav</title>
+<meta name="description" content="Why Enterprises should think beyond the hype
+
+There was a time. A time when calling yourself a virtual estate owner qualified as a legitimate portfolio diversif…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Resurrection of the Metaverse</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2023-10-15</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2023-10-15 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2023/10/image-1.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><em>Why Enterprises should think beyond the hype</em></p>
+<p>There was a time. A time when calling yourself a virtual estate owner qualified as a legitimate portfolio diversification. We witnessed world's largest social media company rebrand itself. Every boardroom was supposedly discussing their 'Metaverse Strategy'. And startups? Well, some of them attained the coveted unicorn status based on this narrative.</p>
+<p>Today? Let's say things are a little different. Some of those 'unicorns' find it hard to hit a <a href="https://www.theverge.com/2022/10/13/23402418/decentraland-metaverse-empty-38-users-dappradar-wallet-data">DAU of 10,000</a>. Meta is reportedly questioned by its investors about its $10B bet on Metaverse hardware, that still costs $500 or above.</p>
+<p>In a nutshell, we are forced to believe that there is some fault in our stars. And I feel that someone needs to address the elephant in the room. The idea for this post sparked from <a href="https://www.decentralised.co/p/revisiting-the-metaverse">Joel's</a> article on Metaverse.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/10/image-1.png" /></p>
+<p>While Joel presumes that a web3 <a href="https://pandatechie.in/2022/11/29/why-metaverse-may-succeed-future-of-workplace/">Metaverse</a> is far away from maturity (with some equally compelling arguments), the optimist inside me begs to differ. Given a few niche use cases, we could still make this thing work.</p>
+<hr />
+<h2>How it all began?</h2>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/10/image-2-1024x504.png" /></p>
+<p>Can you connect this non-exhaustive list of TV shows/movies/games above? Well, no prizes for guessing, all of them have an element of virtual worlds attached to them. Something beyond the reality, per se.</p>
+<p>But we see some of this stuff from early 2000s and late 90s as well. (For my millennial friends, this is 20 (and NOT 10) years ago).</p>
+<p>So what makes Metaverse so real today?</p>
+<p>If you have not spent the prime hours of your youth in sorting through land parcels on one of these platforms, allow me to explain. Turns out that the quality of graphics and gameplay is definitely better. But the delta is not enough to command 100x valuations than their older peers.</p>
+<p>What led to the meteoric rise of Metaverse then? Well, as per me, there are three key reasons.</p>
+<h3>A. Pandemic:</h3>
+<p>With too much free time in our hands, we started looking for novel ways to interact with our peers. And if you remember, this was a time when we assumed that there is no going back to the normal. So it seemed pretty intuitive to learn about these platforms if you wanted a seamless transition to the then version of the 'new normal'.</p>
+<h3>B. FOMO:</h3>
+<p>One of the worst reasons to ape into an initiative but heavily at play during the last year. With <a href="https://www.axios.com/pro/media-deals/2022/04/20/metaverse-mentions-earnings-calls">500+ mentions</a> of Metaverse in the earnings report of 170 odd brands, everyone wanted a piece of this attention pie.</p>
+<h3>C. Ownership:</h3>
+<p>This is where the tables turn. Let us do a quick thought exercise here.</p>
+<p>I always like to ask some hedonistic individuals about why they prefer to own an LV bag. After a few layers of facade, I am sure you would agree that its just a status symbol.</p>
+<p>Now if I were to introduce a new virus in this world which mandatorily ensures everyone works from there home, would you still buy an LV?</p>
+<p>Just because you cannot flaunt it anymore, the physical counterpart looses its sheen and all of a sudden, the digital version of the bag becomes way more valuable.</p>
+<p>While digital version may not look as good, it ensures that a lot more eyeballs can see it.</p>
+<p>But what if this digital version could be copied just like that?</p>
+<p>And that is where Blockchains and NFTs kick in.</p>
+<p>NFTs could prove the ownership and provenance of the multi thousand dollar bag your avatar is adorning in the Metaverse.</p>
+<p>And it is this little nuance that seems to pioneer the meteoric rise of the concept of Metaverse in 2021-22.</p>
+<h2>How are we doing?</h2>
+<p>Please tell me it is not just me who thinks of the following meme as soon as someone gives me the rationale presented above.</p>
+<p><img alt="" src="https://bpmn2.ru/wp-content/uploads/2022/09/sounds-good-doesnt-work.gif" /></p>
+<p>Well, it is sort of true. Because the entire thesis was based on a dystopian assumption of being stuck in our homes forever. Even for some of my favourite movies, TV shows mentioned above (Ready Player Me and Upload), Metaverse was a thing because it was the only possible way of interaction between humans. The plot plotted for Metaverse to work.</p>
+<p>With things getting back to the old normal, we barely cared about the ownership element and the experience took precedence above everything else.</p>
+<p>Web3 Metaverses optimised for ownership and economy whilst ignoring the humble gameplay which can make or break a customer experience.</p>
+<p>But now that we have established we are so early in the day, do we wait for another pandemic?</p>
+<p>I am sharing an excerpt from Joel's article below:</p>
+<blockquote>
+<p>Whenever a new medium comes around, it takes decades before it changes society. In 1440, when Gutenberg released the printing press, he could not have known that his invention would fuel the Protestant Reformation in 1517.   </p>
+<p>Similarly, television took the world by storm in the 1950s. But it was not until the 2010s that short-form video content became mass-produced by everyone. The medium existed for decades but disrupted the world through TikTok and cat videos decades later.</p>
+<p>Revisting Metaverse, Decentralised.co, Joel John.</p>
+</blockquote>
+<p>Basically, tl;dr, the situation is kind of bad. Really really bad.</p>
+<h3>Wake me up when September Ends:</h3>
+<p>If you are still reading, you must be expecting a twist in the tale by now. Not so soon, fren. Turns out before we could deliver on the inflated expectations, Gartner predicted that Metaverse is probably going to take 10+ years to become mainstream.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/10/image-3-1024x647.png" /></p>
+<p>Gartner Hype Cycle</p>
+<p>While I do not intend to comment on the accuracy of Gartner's hype cycle, but a lot of corporates use it as a reference to decide where to invest. So if Metaverse makes sense in 2030, when do we deploy our gun powder?</p>
+<p>Let us give it a deeper thought through an example.</p>
+<p>Asian paints bought its first supercomputer in 1970 for ₹8 Crore. This was 10 years before ISRO and IIT Powai had it. Also, this was like 9 years before even Gartner existed.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/10/image-5.png" /></p>
+<p>This supercomputer has helped Asian Paints predict demand for specific paint types on particular days in specific locations. This precise forecasting means that paint reaches retailers just when they need it. This results in roughly 30% of savings due to lesser middlemen, hence translating to huge margins.</p>
+<p>Now imagine that data science as a subject caught the attention of Indian corporate diaspora only in late 2000s. Meta moved to algorithmic feeds only in 2014.</p>
+<p>What I am trying to say is that Asian paints took a bet on the unknown which now feels like a no brainer in the hindsight.</p>
+<h2>How Early is Too Early?</h2>
+<p>If we take cues from Asian paints, we are a tad bit late to the Metaverse party.</p>
+<p>One may argue that the virtual worlds are different from AI systems as they improve with data and hence the compounding effects of being early are at play.</p>
+<p>However, extrapolating the fundamentals of early movers, I can see the following trends panning out:</p>
+<h3>User Behaviour and Insights:</h3>
+<p>Companies that invest early in the Metaverse technology and related applications might indeed gain a competitive advantage. They can learn about the technology, experiment with different applications, and understand customer behaviors and preferences within the Metaverse space.</p>
+<p>Early entrants can also gather valuable data and user insights, enabling them to refine their offerings and tailor experiences based on user behavior and preferences.</p>
+<h3>Diversification of Services:</h3>
+<p>Companies in the Metaverse may not be limited to the core use cases of gaming and entertainment; they could include education, healthcare, social interaction, virtual workplaces, and more. Diversifying services within the Metaverse can be a strategy for long-term sustainability.</p>
+<p>Early players can also forge valuable partnerships and collaborations with other companies, developers, and content creators, expanding their reach and capabilities.</p>
+<h3>Regulatory Challenges:</h3>
+<p>As the Metaverse develops, there might be regulatory challenges, particularly concerning user privacy, digital rights, and intellectual property. Companies will need to navigate these challenges adeptly.Early movers often get to shape these policies directly or indirectly.</p>
+<p><img alt="" src="https://images.axios.com/42W_IM5XUrYCsXVrqxAhG3d0fF0=/0x0:3556x2667/1920x1440/2023/05/16/1684250661960.jpg" /></p>
+<p>Mr. Altman advising congress to regulate open source after creating a closed blackbox with a potential to destroy mankind</p>
+<h3>Brand Differentiation and Talent:</h3>
+<p>Being at the forefront of Metaverse adoption can differentiate a company's brand, signalling innovation, forward thinking, and a willingness to embrace emerging technologies.</p>
+<p>Early adopters often attract top talent eager to work on cutting-edge technologies, fostering a creative and skilled workforce.</p>
+<p>If nothing, one can also start by considering this from a Macro lens. If you feel Metaverse is ever going to be a reality, the cost of getting started now will be far lower than what it would be when the time is ripe. And unlike real estate, this probably needs to renovations.</p>
+<h2>What's Next?</h2>
+<p>Well, at <a href="https://rpggroup.in">RPG</a>, we have taken a few baby steps to test the waters. We are soon launching a web3 compliant Metaverse platform (<a href="http://udemo.comearth.ly/rpg">Commearth</a>) that enables students from different B-Schools to interact with each other while interacting with the brand RPG.</p>
+<p>In the long run, the idea is to use this platform to find the right fit for our business verticals. I will probably talk a lot more about this in the coming posts soon after we put it to test.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/10/image-4-1024x639.png" /></p>
+<p>For now, it is a fun place to hangout and do college stuff, but virtually.</p>
+<p>While I am super excited about this initiative, there is a definite feeling of fear. But guess that is probably what boardroom of Asian Paints must be feeling when they approved a multi-crore budget in the humble 70s.</p>
+<p>On to the next big thing!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

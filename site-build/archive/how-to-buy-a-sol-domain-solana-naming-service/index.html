@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Buy a .sol Domain?: Solana Naming Service | Raghav</title>
+<meta name="description" content="My web3 shopping spree continues. I purchased and [blogged](https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/) about my recen…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Buy a .sol Domain?: Solana Naming Service</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-12-27</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-12-27 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media3.giphy.com/media/BPcL0fnVqoBGwfcJxs/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>My web3 shopping spree continues. I purchased and <a href="https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/">blogged</a> about my recent purchase of an <strong>Unstoppable</strong> <strong>Domain</strong>. This time around, I switched the blockchain and purchased yet another domain name: <strong>pandatechie.sol</strong>.</p>
+<p>Difference? The <strong>unstoppable</strong> <strong>domain</strong> purchase was made on <strong>polygon</strong> <strong>chain</strong>. This means, it covered the entire <strong>Ethereum</strong> and <strong>L2 ecosystem</strong>. However, with other <strong>blockchains</strong> catching up fast, I think each one of them would come up with their own <strong>DNS solution</strong>. If you have been following me for a while, you must know that I just love <strong>Solana</strong>. I call it my <strong>SOLmate</strong>. Get it? No?</p>
+<p><img alt="" src="https://media3.giphy.com/media/BPcL0fnVqoBGwfcJxs/giphy.gif" /></p>
+<p>Solana is <strong>fast</strong>, <strong>cheap</strong> and very <strong>tidy</strong> as compared to dApps built on other blockchains. So when something like this was built on Solana, I had to claim <strong>pandatechie.sol</strong> before anyone else.</p>
+<p>In this blogpost, we would <strong>discuss</strong> some key reasons behind <strong>purchasing</strong> this domain, some <strong>differences</strong> and <strong>shortcomings</strong> when compared to <strong>UD</strong> (Unstoppable Domains) and finally, how to buy one if you make up your mind. Let’s get started.</p>
+<h2>Why .sol Domain?</h2>
+<p>We have talked about this in the past as well. Current domain names are <strong>centralized</strong> and <strong>managed</strong> by <strong>ICANN</strong>. Likes of <strong>Godaddy</strong> and <strong>Blackrock</strong> simply rent these out on our behalf and charge an annual fees for the same.</p>
+<p><img alt="close up shot of a typewriter" src="https://pandatechie.in/wp-content/uploads/2021/12/pexels-photo-4160089.jpeg" /></p>
+<p>Photo by Markus Winkler on <a href="https://www.pexels.com/photo/close-up-shot-of-a-typewriter-4160089/">Pexels.com</a></p>
+<p>Decentralized domains are different. They transfer the ownership to the <strong>buyer</strong> and anyone can <strong>validate</strong> it from the <strong>immutable</strong> <strong>records</strong> on <strong>blockchain</strong>.</p>
+<p>You see <strong>web3</strong> is all about the real <strong>ownership</strong> of your <strong>assets</strong>. And that’s what products like <strong>Bonafida</strong>, <strong>ENS</strong> and <strong>UD</strong> are powering on multiple blockchains.</p>
+<p>And then of course using this name as your <strong>twitter</strong> <strong>handle</strong> and a <strong>common</strong> <strong>wallet</strong> address is always there. We covered these features in depth <a href="https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/">here</a>.</p>
+<h2>How Does it Work?</h2>
+<p>It is rather <strong>simple</strong> to create a <strong>.sol domain</strong>. All you need to do is pay a <strong>minimal</strong> <strong>gas</strong> fee. This means a domain could be yours under <strong>$0.1</strong>. This created a <strong>problem</strong> in itself. If that is the case, anyone could purchase <strong>bulk</strong> of them and <strong>impersonate</strong> to be someone else.</p>
+<p>Which is why, to make it a legit purchase, <strong>Bonafida</strong> works on an <strong>auction</strong> <strong>mechanism</strong>. Once you decide to buy a <strong>domain</strong> <strong>name</strong>, there is an <strong>auction</strong> run on it for <strong>next 3 days</strong>. If no one <strong>outbids</strong> you, you are allowed to buy the <strong>domain</strong> on the <strong>base price</strong>.</p>
+<p><img alt="" src="https://media0.giphy.com/media/W3gKK0gbNmBtDBHzdf/giphy.gif" /></p>
+<p>Apart from that, there are certain domains which are at a <strong>higher</strong> <strong>risk</strong> of <strong>impersonation</strong>. Therefore, they are kept in something called <strong>Bonafida</strong> <strong>Reserved</strong> <strong>Category</strong>. You need to <strong>prove</strong> your ownership to be a part of it.</p>
+<h2>How to Buy a .sol Domain?</h2>
+<p>Let’s take it from the top assuming that this is your first every transaction in a decentralised world:</p>
+<h3>Pre-Requisites:</h3>
+<p>A few things that need to be in place before you get started are as follows:</p>
+<p><strong>A</strong>. <strong>Create</strong> a <strong>Phantom</strong> <strong>wallet</strong> account. It’s extremely simple. All you need to do is head to this <a href="https://phantom.app/">link</a> and add this <strong>extension</strong> to the <strong>browser</strong> that you are using.</p>
+<p>Once this extension is installed, you can simply <strong>sign up</strong> and follow the steps. It’s simply going to ask you for a <strong>password</strong> and ask you to <strong>remember</strong> and <strong>re-enter</strong> a seed phrase.</p>
+<p>Once again, <strong>seed</strong> <strong>phrases</strong> are extremely <strong>sensitive</strong> information. If you lose/compromise your seed phrase, you lose your crypto. Forever!</p>
+<p><img alt="" src="https://phantom.app/img/phantom-og.png" /></p>
+<p>B. Next step is to go and buy <strong>$SOL on a Centralized Exchange like CoinDCX</strong> etc. As you know for all <strong>decentralized</strong> <strong>transactions</strong> which are happening on the blockchain, you need <strong>gas</strong> <strong>fees</strong>. On Solana ecosystem, this job is done by $SOL.</p>
+<p><img alt="" src="https://support.okcoin.com/hc/article_attachments/360080042811/Screen_Shot_2020-12-06_at_9.31.22_PM.png" /></p>
+<p>You need about $25 worth of Solana for buying domain. This is assuming that no one <strong>outbids</strong> the domain that you have picked.</p>
+<h3>Step 1: Transfer Solana to Phantom</h3>
+<p>We transferred crypto from a <strong>CEX</strong> to <strong>wallets</strong> like <strong>Metamask</strong> in the past. The process is exactly the same here as well. Open your <strong>phantom</strong> <strong>wallet</strong> as shown in the screenshot and <strong>copy the address</strong> of depositing SOL.</p>
+<p>Go to your <strong>Centralized Exchange</strong> where you have purchased this token and hit <strong>withdraw</strong> button. Enter the <strong>address</strong> that you just <strong>copied</strong>, verify the details, OTP related formalities and you’re done!</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-27.png" /></p>
+<p>Transferring SOL is really cheap as compared to something like ETH. I transferred my holdings to Phantom under Rs. 50.</p>
+<h3>Step 2: Choosing <strong>You</strong>r Domain</h3>
+<p>Head over to <a href="https://naming.bonfida.org/#/">Bonafida</a> and <strong>pick the domain</strong> <strong>name</strong> that you want to buy. At this point, there could be three options.</p>
+<p><strong>A.</strong> The domain that you have picked is <strong>already taken</strong>. You can see the wallet address of the holder but that’s the end of story.</p>
+<p><strong>B.</strong> Domain could have been <strong>unclaimed</strong> but already <strong>undergone</strong> an <strong>auction</strong>. At that point, you simply <strong>pay</strong> the <strong>highest</strong> <strong>bid</strong> amount and claim it.</p>
+<p>C. There might <strong>not</strong> have been an <strong>auction</strong> for that <strong>domain</strong>. In that case, you place the <strong>minimum</strong> <strong>bid</strong> (varies for each domain) and <strong>wait for 72 hours</strong> to see if someone outbids you.</p>
+<p><em>The steps below highlight what should be the next course of action if you have to initiate the bid for your domain.</em></p>
+<h3>Step 3: Buying $FIDA for Auction:</h3>
+<p>The auction bidding happens in <strong>$FIDA</strong>. This is the native token of Bonafida platform. Each $FIDA is currently trading at <strong>$4.5</strong>. So in this step, let's understand how to exchange your <strong>$SOL for $FIDA</strong>.</p>
+<p>Head over to <a href="https://raydium.io/">Raydium</a> which is a <strong>decentralized</strong> <strong>exchange</strong> on Solana ecosystem. <strong>Connect</strong> your <strong>wallet</strong> and select the '<strong>Swap</strong>' tab from the top.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-28-1024x426.png" /></p>
+<p>In the "From" section, enter SOL and in the "To" section enter FIDA. To ensure that you are buying the correct token and not a scam, you can enter this contract address: EchesyfXePKdLtoiZSL8pBe8Myagyy8ZRqsACNCFGnvp (I picked it from <a href="https://coinmarketcap.com/currencies/bonfida/">Coinmarketcap</a>)</p>
+<p>Once both <strong>'from' and 'to'</strong> are sorted out, enter the amount of FIDA you need for the transaction (discovered in previous step)</p>
+<p>Hit <strong>swap</strong> and <strong>sign</strong> the transaction from Phantom wallet. Real soon, you would be able to see $FIDA tokens in your wallet.</p>
+<h3>Step 4: Placing a Bid</h3>
+<p>It's pretty simple from there on. You can now hit the place bid option and put in the required $FIDA. Make sure you have some SOL left after purchasing $FIDA or else you won't be able to pay the gas fees.</p>
+<h3>Step 5: Recheck and Claim</h3>
+<p>This is one area of improvement for web3. There's no notification if someone outbids you or the auction has ended. You have to repeatedly check and make your moves accordingly.</p>
+<p>For pandatechie.sol, there was no other bidder so after 3 days, I simply headed back to the site and claimed the domain.</p>
+<p>By claiming it is simply meant that you pay a little gas fee and transfer the ownership to yourself.</p>
+<h2>Conclusion:</h2>
+<p>I have said it before, I will say it again! Web3 is coming. Are you game for it? A wilder use case of Solana Name service would be to flip domains. That's what a lot of people did back in early 2000s when internet was starting off. You could buy something like flipkart.sol and wait. If flipkart ever goes web3, you could make a fortune out of this.</p>
+<p>Possibilities are endless. What weird use case do you have in mind?</p>
+<p>Oh, by the way, the MCS year end trading competition is still live. It's a one time chance to make some money as you trade from a pool of $200,000. Check out the details <a href="https://pandatechie.in/2021/12/18/mcs-year-end-trading-tournament-all-you-need-to-know/">here</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

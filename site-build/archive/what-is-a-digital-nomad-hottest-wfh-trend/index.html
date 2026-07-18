@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is a Digital Nomad? Hottest WFH Trend! | Raghav</title>
+<meta name="description" content="Recently, I was scrolling through my [LinkedIn](https://pandatechie.in/2020/11/08/what-is-linkedin-premium-and-is-it-worth-it-in-2020/) feed. Everything was as …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is a Digital Nomad? Hottest WFH Trend!</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-03-02</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-03-02 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Bedscha.jpg/250px-Bedscha.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Recently, I was scrolling through my <strong><a href="https://pandatechie.in/2020/11/08/what-is-linkedin-premium-and-is-it-worth-it-in-2020/">LinkedIn</a></strong> feed. Everything was as usual, until I found a person whose <strong>job title</strong> said, '<strong>Digital Nomad</strong>'. On the face of it, you do realize what is this all about but turns out there is much <strong>more</strong> to this <strong>lifestyle</strong> than I ever knew. Having heard this term for the first time, I was totally intrigued by an elaborate thinking that had gone behind developing it. So, today, we talk about what is digital nomad? Is there any <strong>upside</strong> to it? Why you should <strong>consider</strong> <strong>being</strong> <strong>one</strong> yourself.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Bedscha.jpg/250px-Bedscha.jpg" /></p>
+<p>With the world being forced to work from home after the pandemic struck, our <strong>work lives</strong> have <strong>changed</strong> <strong>forever</strong>. For some, it is an <strong>absolute delight to work from home while others aspire to go back to the office</strong>. However, there is a surge in the number of <strong>people</strong> who <strong>extracted</strong> the most out of this <strong>situation</strong>. Enter, the latest hype in the workspace called <strong>WFA or work from anywhere</strong>. I recently came across this <a href="https://indianexpress.com/article/trending/trending-in-india/three-friends-cycle-from-mumbai-to-kanyakumari-without-missing-office-7154760/">story</a> of <strong>three</strong> <strong>friends</strong> who traveled from <strong>Mumbai</strong> to <strong>Kanyakumari</strong> on <strong>cycle</strong> without <strong>missing</strong> a day of office. More such stories are likely to pop up as more companies deciding to enable remote working even after we are done with the Coronavirus.</p>
+<h2>What is a Digital Nomad?</h2>
+<p>A digital nomad is a person who <strong>relies</strong> on the <strong>modern</strong> day <strong>wireless</strong> capabilities to work to <strong>earn</strong> a <strong>living</strong> and live their lives in a <strong>nomadic</strong> manner. <strong>Travelling</strong> from one place to the next and often found working from hotel <strong>lobbies</strong>, <strong>coffee</strong> <strong>shops</strong>, public <strong>libraries</strong> and recreational <strong>vehicles</strong>. While this was limited to freelancers earlier, post pandemic it is a possible lifestyle choice for almost anyone.</p>
+<p><img alt="photo of person holding ceramic mug" src="https://pandatechie.in/wp-content/uploads/2021/03/pexels-photo-6801874-1024x737.jpeg" /></p>
+<p>As per <a href="http://wikipedia.com">Wikipedia</a>, One of the earliest known uses of the <strong>term</strong> digital nomad originally was in <strong>1997</strong>, in the book <strong>Digital Nomad</strong>. It was the title of a book published by publishing company <strong>Wiley</strong> and written by <strong>Tsugio Makimoto</strong> and <strong>David Manners</strong>. It is unknown if the phrase was coined in this book or if they took a term that had already existed.</p>
+<h2>Characteristics of a Digital Nomad:</h2>
+<h3>1. Remote Working:</h3>
+<p>The digital nomads adopted remote working before it was cool. Today, with the <a href="https://pandatechie.in/2020/12/28/harmful-effects-of-internet/">internet revolution</a>, all <strong>work</strong> <strong>related</strong> <strong>tasks</strong> can be taken care of, from <strong>anywhere</strong>. The phrase "<strong>There's an app for that</strong>" has taken a new shape and become a <strong>reality</strong> for us. <strong>Meetings</strong>, <strong>conferences</strong>, <strong>payment</strong> <strong>collection</strong>, <strong>account management</strong>, <strong>support</strong>- every function can be enabled remotely. Digital nomads leverage this ecosystem to keep switching locations without letting their work getting hampered.</p>
+<p><img alt="" src="https://3kcz333h8wih3px3rh3vhfv3-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/remote-working.jpg" /></p>
+<h3>2. Minimalism:</h3>
+<p><img alt="" src="https://apicms.thestar.com.my/uploads/images/2020/02/21/570881.jpg" /></p>
+<p>Digital nomads tend to <strong>sell off</strong> a lot of <strong>materialistic</strong> possessions so that it is <strong>easier</strong> for them to <strong>move</strong> from one place to another. A typical asset I can envisage, a nomad having, is a <strong>specialized</strong> <strong>vehicle</strong> which can be used for travelling. Location independence is prioritized over all other aspects and it's a fair trade off in my opinion. Imagine attending a meeting at a sunset point one day and in the snow covered peaks on the other.</p>
+<h3>3. Unsettling:</h3>
+<p>It is not like your <strong>conventional</strong> <strong>holiday</strong> wherein you travel and may be work a little in the process and end up, so called, '<strong>rejuvenating</strong>' yourself. A digital nomad <strong>doesn't</strong> have a <strong>home</strong> per say. He/she is into <strong>constant</strong> <strong>travelling</strong> understanding that they may have to <strong>stay</strong> <strong>anywhere</strong> on a given <strong>particular</strong> night. So think of this as a long term project and not something that you can give a <strong>shot</strong> for a <strong>month</strong> and then <strong>switch</strong> <strong>back</strong> to your normal routine (unless you have a lot of money at your disposal).</p>
+<p><img alt="" src="https://forums-images.oneplus.net/attachments/590/590858-b43143f8916f71afdd613becb6cc8205.jpg" /></p>
+<h2>Benefits of Digital Nomad Lifestyle:</h2>
+<h3>1. Work Life Balance:</h3>
+<p>So most of us complain that they are not able to keep up with the <strong>personal</strong> aspects of life because of <strong>work</strong>. However, when you are on road the <strong>entire</strong> time and <strong>encounter</strong> a <strong>picturesque</strong> scenery every now and then, it is hard to complain. You are almost <strong>carving</strong> <strong>out</strong> <strong>work</strong> from a <strong>life</strong> <strong>long</strong> <strong>vacation</strong> and not the other way round. Of course it takes <strong>discipline</strong> and <strong>time management</strong>, but once you strike a balance, there's no looking back.</p>
+<p><img alt="" src="https://blog.ipleaders.in/wp-content/uploads/2019/10/Blog-6-Work-Life-Balance-page-001-1024x550.jpg" /></p>
+<h3>2. Productivity:</h3>
+<p>When did you go on a vacation last time? Okay, let us think why <strong>organizations</strong> these days ask you to <strong>mandatorily</strong> <strong>avail</strong> the <strong>leave</strong> quota? Obviously because your <a href="https://pandatechie.in/2020/11/02/pomodoro-technique/">productivity</a> <strong>shoots</strong> <strong>up</strong> after taking a few days off. Now imagine you are able to do that <strong>every</strong> <strong>single</strong> night? There is no <strong>monotony</strong> related to going back to the <strong>same place</strong> after work and <strong>coming back</strong> again tomorrow, with a nomadic lifestyle.</p>
+<p><img alt="" src="https://i1.wp.com/pandatechie.in/wp-content/uploads/2020/11/time-management.png?w=700&amp;ssl=1" /></p>
+<h3>3. Adaptability:</h3>
+<p>A digital nomad is likely to be more <strong>adaptable</strong> to <strong>real</strong> <strong>life</strong> situations than an average Joe. Mainly because you are travelling all the time and most likely <strong>dealt</strong> with some <strong>uneasy</strong> <strong>situations</strong> as well along your way. One may be able to <strong>analyze</strong> and come up with <strong>alternatives</strong> <strong>faster</strong> because of this lifestyle. I can totally see this trait becoming really handy at work.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<h3>4. Networking:</h3>
+<p>The biggest downside of WFH is that you are not able to <strong>connect</strong> with your <strong>peers</strong> and <strong>everyone</strong> else at the office. This leads to lack of <strong>visibility</strong>. You are <strong>unable</strong> to <strong>polish</strong> your <strong>networking</strong> skills because of this. However, this domain of remote working (WFA) can help you tackle that problem. As you <strong>travel</strong>, there are many <strong>opportunities</strong> that are likely to come your way. You are bound to meet <strong>different</strong> types of <strong>people</strong>, from <strong>varied</strong> spheres of life. This will also give a boost to your perspective in general.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h2>Who Should NOT be A Digital Nomad:</h2>
+<p>Let's not view this lifestyle from rose tinted glasses and try to understand some downsides of being a nomad as well:</p>
+<h3>1. Comfort Lover:</h3>
+<p>If you need your <strong>8</strong> <strong>hours</strong> of sleep with no <strong>distractions</strong>, a <strong>mint</strong> by your <strong>plushy</strong> <strong>pillow</strong> on your <strong>8" mattress</strong>, you might want to give this lifestyle a pass. When you don't know where you are going to spend the night, it is highly likely that you may have to compromise with the comfort at some point.</p>
+<p><img alt="" src="https://images.onhealth.com/images/slideshow/sleep-positions-s3.jpg" /></p>
+<h3>2. Risk Aversive:</h3>
+<p>Especially in India, a lot of areas are <strong>unsafe</strong> when it's <strong>dark</strong>. So, unless you are ready to take that <strong>risk</strong>, a digital nomad role may not be for you. The <strong>risk of unknown</strong> is too damn high in these situations, therefore one must be ready to face it all. There are some people who get that <strong>adrenaline rush</strong> when it comes to the <strong>mysterious</strong> climaxes. You need to be one of them to make it work.</p>
+<h3>3. Financially Unsound:</h3>
+<p>Unless you hit the <strong>nomadic</strong> <strong>vibe</strong> completely, a digital nomad can be a <strong>costly</strong> <strong>affair</strong>. Spending nights in <strong>different</strong> <strong>locations</strong>, <strong>investing</strong> a <strong>specialized</strong> vehicle, <strong>fuel</strong> costs are something that you need to consider. Also, you might want to consider a good <strong>travel</strong> <strong>insurance</strong> if you are willing to jump in. With that being said, it is important that you <strong>plan</strong> it out completely from all aspects. The entire purpose of this <strong>exercise</strong> to <strong>reduce</strong> <strong>stress</strong> and <strong>experience</strong> a whole new <strong>dimension</strong> to <strong>work</strong> life. However, money can single handedly take the entire project down if not dealt with.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h2>Pointers to be Considered:</h2>
+<p>Convinced that you can give this lifestyle a shot? Here are some tips that might be handy:</p>
+<ul>
+<li><strong>Plan</strong> your finances and make a <strong>budget</strong>. Stick to it.</li>
+<li><strong>Align</strong> your <strong>work</strong> and learn to <strong>manage</strong> time. No travel during office hours.</li>
+<li>Plan for the <strong>worst case</strong> scenario.</li>
+<li><strong>Cellphone connectivity</strong>, necessary recharges, roaming packs to be taken care of.</li>
+<li>Learn a few words from the <strong>local</strong> <strong>language</strong>.</li>
+<li><strong>Research</strong> the <strong>destinations</strong> ahead.</li>
+<li>Draw cash</li>
+</ul>
+<p>And if you are really serious, I would recommend joining some <strong>social network</strong> dedicated to digital nomads. That might leave you in a better place to take a call. Examples of such networks are <a href="https://nomadlist.com/">Nomadlist</a> and <a href="https://www.couchsurfing.com/">Couchsurfing</a>.</p>
+<h2>Conclusion:</h2>
+<p>The very idea of <strong>nomadism</strong> sounds really <strong>interesting</strong> to me personally. Some day I might give it a shot. However, I plan to do it after I have <strong>enough</strong> funds to manage a <strong>rented</strong> apartment in my <strong>work</strong> town, and ability to <strong>purchase/rent an expensive specialized vehicle like a vanity van</strong> for a fixed duration. I would like to <strong>return back to normal after I have had enough. At the same time, I do not want to define what's enough</strong>. You get the idea.</p>
+<p>What do you think about being a digital nomad? One of my acquaintance recently gave it a shot for about 15 days and the photos are giving me a FOMO big time.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

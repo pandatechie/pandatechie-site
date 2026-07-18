@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology Challenges Gen-Z Kids Won't Know | Raghav</title>
+<meta name="description" content="Feeling old yet? Wait till this post ends. We have been lucky enough to be a part of the period where tech has crossed all leaps and bounds. With the exponentia…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Technology Challenges Gen-Z Kids Won't Know</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-12-19</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-12-19 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://i.imgur.com/TOIPFmW.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Feeling old yet? Wait till this post ends. We have been lucky enough to be a part of the period where <strong>tech has crossed all leaps and bounds</strong>. With the exponential growth in the computing power over the last 50 years (&gt;trillion times), we have come a really long way. Apart from that, I don't see the <strong>growth graph making a top and flattening any time soon</strong>. As a matter of fact, we might just be getting started for all we know. But, seeing how things changed in the last couple of decades, it is fair to believe that there would there are some <strong>technology challenges Gen-Z kids would never know.</strong></p>
+<p>Recently, I found my three year old niece crying standing in front of the television. When I asked her what happened, she explained it to me in her typical semi-gibberish. She wasn't able to change the TV channel by swiping the the television screen. While I chuckled at this humongous issue she was facing, I realized that she has <strong>never operated a device in her life that cannot be interacted with, using touch</strong>. Strange, but true. So what are other problems Gen-Zers and kids of her age group are likely unknown to?</p>
+<h2>1. Dial Up Connection:</h2>
+<p>Next time you see a frustrated Gen-Z kid because his movie download is taking a lot of time, take him down the memory lane. Show them the <strong>real struggles</strong> of our generation.</p>
+<p>Tell them that loading the photo of your favorite actress on Google was something like this:</p>
+<p><img alt="Loading Image on Dialup connection" src="https://i.imgur.com/TOIPFmW.gif" /></p>
+<p>Dial-Up Connection and Wallpaper Downloads</p>
+<p>I strongly believe that our generation is much more <strong>calm and patient</strong> than these kids would ever be. Possibly because of dial-up connection. Do you remember those transfer speeds hitting a max of 5kb/s. Seems unreal when you think about it now.</p>
+<p>Not to forget that it was not as simple as joining a Wifi connection in those days. <strong>You had to wait for the line to be clear (no body using the phone) and then listen to the below music to get started</strong>.</p>
+<p>The Great Old Dial Up Connection and It's Sound Effects</p>
+<h2>2. Favorite Music</h2>
+<p>If you ask a 15 year old today that how does he access the music by his favorite artists, he'll probably name some apps like <a href="https://www.spotify.com/in/free/?utm_source=in-en_brand_contextual_text&amp;utm_medium=paidsearch&amp;utm_campaign=alwayson_asia_in_premiumbusiness_core_brand+contextual-desktop+text+exact+in-en+google&amp;ds_rl=1270915&amp;gclid=Cj0KCQiAw_H-BRD-ARIsALQE_2MD5Gkh-Vq4Y9dgo4q_nWCsdGZWQ2-n2QbSz5x3B5bjlSHQ4cjwZcQaAkIOEALw_wcB&amp;gclsrc=aw.ds">Spotify</a>, <a href="https://gaana.com/">Gaana</a> and <a href="https://www.apple.com/in/apple-music/">Apple Music</a>. Someone please burst their bubble and tell them that they have it really easy. A new album by their favorite band is <strong>just a download away</strong> now. Earlier, we had to call a <strong>physical store</strong> to enquire if the new album was out. Then we <strong>actually had to go their</strong> and <strong>collect it in the form of physical CDs</strong>.</p>
+<p>Every household had this beautiful case to store all those valuable CDs.</p>
+<p><img alt="Case to store CDs" src="https://images-na.ssl-images-amazon.com/images/I/4138e4NmIFL.jpg" /></p>
+<p>As a matter of fact, I believe music and it's storage has changed a lot in past couple of decades. We started with <strong>CDs, moved to pen drives, phone storage and finally to the cloud</strong>. One heck of a journey!</p>
+<h2>3. Landline</h2>
+<p>Wait what? You guys had to sit at one spot to have a conversation? Well, back then, that was least of our concerns. I have faced <strong>so many embarrassing situations because of landline</strong>. So the thing is, that you could <strong>connect multiple phone sets with a single line and unfortunately one could eavesdrop on any conversation going on, at the moment they pick up the phone</strong>. Not going to narrate the anecdote but Gen-Y readers know exactly what I am talking about.</p>
+<p><img alt="Landline telephone GenZ Kids would not relate to" src="https://images.jdmagicbox.com/quickquotes/images_main/b07gnrvv96-pyle-vintage-classic-style-corded-phone-retro-design-landline-telephone-ppretro25bl-143603115-x0or4.jpg" /></p>
+<h2>4. Connecting with People</h2>
+<p>With the rise of <strong>social media platforms</strong> and internet, it has become easier than ever to connect with people. I am not against this at all and in fact, advocate expansion of one's network. However, for some reason, new age modes of connecting lack that charm and excitement behind it. May be because, unlike gen-z kids, we had to connect to the <strong>dialup, login to yahoo messenger, enter a chat room and patiently wait for a meaningful conversation</strong> with someone. <strong>The idea of talking to someone sitting <em>saat samundar paar</em> (overseas), was never heard of</strong>. I am grateful to the times we live in, but, I also miss those butterflies in my belly.</p>
+<p><img alt="Yahoo Messenger" src="https://qrius.com/wp-content/uploads/2018/06/DfLZR-AXcAUTcND.jpg" /></p>
+<h2>5. Internet Prices and it's consumption:</h2>
+<p>India has the world's cheapest internet. At approximately <strong>Rs. 17 per GB of internet</strong>, I can say that some a wholesome meal is more expensive than a gigabyte of data. All thanks to the Jio and it's deep pockets that enabled this disruption. However, things were a little different about 3-4 years ago. I remember getting a <strong>Rs. 255 recharge done for 1 GB of data</strong>. <strong>1GB was enough to survive for a whole month</strong>. Lo and behold, I often hear my mother complaining that her <strong>quota for 1.5GB a day has got over which is why her video is blurred during the call</strong>. Times surely have changed with a possible 45x surge in the internet usage of an average joe. Gen-Z kids appreciate this luxury much less than previous generations as they didn't have to go through dial up.</p>
+<h2>Conclusion:</h2>
+<p>From the times when internet was a luxury to the times we are actually trying to <a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">monitor and curb our screen time</a>, we have actually come a long way. My grandfather tells me stories of the time where they had to pay <strong>10x the cost for a lightning call</strong> which would connect two people immediately. <strong>Regular calls would require a request to be raised and you would enter a queue which would possibly take hours before you could talk to the other party</strong>. Little did I know that I too, would have many such tales to narrate when I'd grow old.</p>
+<p>Until Next time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is NFT? Why are NFTs so Valuable? | Raghav</title>
+<meta name="description" content="I don't understand. What's is this buzz around NFTs? Why are people buying images of rocks for a million dollars? Am I missing on to something? Well, you have c…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is NFT? Why are NFTs so Valuable?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/09/NFT-1024x1024.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>I don't understand. What's is this <strong>buzz</strong> around NFTs? Why are people buying <strong>images</strong> of <strong>rocks</strong> for a <strong>million</strong> <strong>dollars</strong>? Am I missing on to something? Well, you have come to the right place today. This newest fad of cryptoverse is taking over everything else with a storm. Suddenly, everyone is talking about <strong>NFTs</strong>. Until early 2021, it was all a distant phenomena which could safely be put on a back burner without wrapping my head around it. But now, <a href="https://timesofindia.indiatimes.com/business/cryptocurrency/blockchain/amitabh-bachchan-launches-his-nfts-with-beyondlife-club-guardianlink-collaboration/articleshow/86040434.cms#:~:text=NEW%20DELHI%3A%20Amitabh%20Bachchan%20has,launch%20their%20first%2Dever%20NFTs.">Mr. Bachchan is coming up with his NFT collection</a>. If an 80 year old man <strong>understands</strong> this new age business, it is <strong>imperative</strong> for you to at least know that <strong>basics</strong> right? So what is NFT? And why are they so valuable? Let's get started.</p>
+<h2>What is NFT?</h2>
+<p>NFT stands for <strong>non fungible token</strong>. Non fungibility is the ability of an asset to possess <strong>unique features</strong> thus making it <strong>non interchangeable</strong>. Think of it like this. When I give you a <strong>Rs. 100 note</strong>, you can <strong>return</strong> <strong>back</strong> any other <strong>Rs. 100 note</strong> without impacting the <strong>quality</strong> of our <strong>transaction</strong>. In other words, currency notes are fungible. Similarly, if me and my brother both decide to <strong>draw a portrait of our mother</strong>, it couldn't be replaced with each other. Even though we were drawing the <strong>same</strong> <strong>person</strong>, the value of each would be much different in terms of <strong>emotions</strong>, <strong>drawing</strong> <strong>skills</strong>, <strong>effort</strong> <strong>deployed</strong> <strong>etc</strong>. Think of NFTs as the <strong>digital version</strong> of such paintings.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/NFT-1024x1024.png" /></p>
+<p>As per Wikipedia, <strong>non-fungible token</strong> (<strong>NFT</strong>) is a <strong>unit of data</strong> stored on a <strong>digital ledger</strong>, called a <strong>blockchain</strong>, that certifies a <strong>digital asset</strong> to be <strong>unique</strong> and therefore not <strong>interchangeable</strong>.</p>
+<h2>What do you mean by buying an NFT?</h2>
+<p>This is where most of us get <strong>confused</strong>. Buying NFT simply means buying <strong>rights</strong> to a particular <strong>digital</strong> <strong>asset</strong>. Currently, these rights are <strong>NOT backed by any government legislation</strong>. However, they are stored in the form of <strong>immutable</strong> <strong>records</strong> on a <strong>blockchain</strong>. This means that although you can <strong>instantly</strong> <strong>prove</strong> the <strong>ownership</strong> of a digital asset, <strong>government</strong> <strong>may</strong> or <strong>may</strong> <strong>not</strong> chose to <strong>recognize</strong> it.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/NFT-Ownership-1024x1024.png" /></p>
+<p>Also, NFT simply represents a <strong>piece of data</strong> with an <strong>address</strong>. This address may point towards an <strong>external server</strong> which carries the <strong>actual NFT asset</strong> (Image, GIF, Video etc.). Whosoever has the <strong>key</strong> (password) to this <strong>address</strong> becomes <strong>owner</strong> of this <strong>data</strong>. So technically, owning a NFT means <strong>writing</strong> on a <strong>blockchain</strong> that you <strong>own</strong> the <strong>item</strong> placed on address X. The image above will help you visualize this.</p>
+<p>The <strong>authenticity</strong> of this address is verified through blockchain. The legitimacy of ownership and history can be seen and validated by anyone.</p>
+<h2>Where's the Catch?</h2>
+<p>As I mentioned, this piece of data on the blockchain is just an <strong>address</strong>. You are merely <strong>owner</strong> of this <strong>address</strong>. The <strong>asset</strong> to which this address is <strong>pointing</strong> could be <strong>stolen</strong>, <strong>replaced</strong>, <strong>hacked</strong> by anyone. So what are we missing here? For all we know, it could be <strong>lying</strong> on a <strong>centralized</strong> <strong>server</strong>, defeating the <strong>purpose</strong> of <strong>blockchain</strong>. Back to square one eh? I'll help you out.</p>
+<h2>What makes NFTs so Valuable?</h2>
+<p>All this time while you were wondering that why would a picture of rock sell for $1.3mn, you missed on a key aspect of NFTs. <strong><em>It's not the image, GIF or the video that is valuable. Rather, it's the story behind it.</em></strong> Let's explore the framework to decide the net worth of NFT. In other words, where does the actual value of NFT (Digital collectible) lies:</p>
+<h2>A. First:</h2>
+<p>Why is Bitcoin so popular? Why does it have a <strong>market dominance of over 60%</strong>? Because it's the <strong>first</strong> <strong>ever</strong> <strong>cryptocurrency</strong>. It all started with it. Whosoever will enter the world of crypto will have to come through Bitcoin. Similarly, all the NFTs which are first of a kind would be extremely valuable.</p>
+<p><img alt="" src="https://assets.foundation.app/Rm/o5/QmQ7HXw5jo8rqBaYNrhYq4WEZGHPFZ8wC4882S6vbtRmo5/nft.jpg" /></p>
+<p>Vishal Malhotra NFT</p>
+<p>Example? A <strong>not so famous</strong> Indian daily soap actor <strong>Vishal Malhotra</strong> was able to <strong>sell</strong> his NFT for <strong>Rs. 4L</strong>. Why? Because it was first ever NFT by an Indian celebrity. So rather than riding on the back of his own fame, he took the NFT hype train instead.</p>
+<p>In another example if government of <strong>India decides to mint NFT of Indian flag</strong>, it will be extremely valuable. Because it'll be the <strong>first</strong> <strong>ever</strong> <strong>flag</strong> minted by any <strong>government</strong> body.</p>
+<p>Fun fact: First project to feature ERC721 token (protocol for NFTs) is called su squares. Read more about their crazy story and price <a href="https://opensea.io/collection/su-squares">here</a>.</p>
+<h2>B. Utility: Real World Benefits</h2>
+<p>If I were to buy a digital collectible ever, this would probably the most important deciding factor. If an NFT has a <strong>real use case</strong> attached, it becomes instantly valuable. For example, Mr. Bachchan launches an NFT of his photo. One may not purchase it as it's <strong>not</strong> <strong>unique</strong>. However, if Mr. Bachchan claims that he would have a <strong>dinner</strong> <strong>twice</strong> an year with the <strong>holder</strong> of that <strong>NFT</strong>, the price will skyrocket.</p>
+<p><img alt="" src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202108/amitabh-sixteen_nine.jpg?size=948:533" /></p>
+<p>In an example closer home, say <strong>Myntra mints an NFT</strong> of one of their <strong>exclusive designs</strong>. They could say that whosoever holds this <strong>NFT</strong> will also get a <strong>Rs. 5000 worth voucher</strong> from them. This gives NFT a real life use case.</p>
+<h2>C. Unique and Rare:</h2>
+<p>Economics 101 any one? Lesser of something, more is it's value. So NFTs which have an <strong>element</strong> of <strong>scarcity</strong> attached to them are <strong>valuable</strong> in nature. Let's take a real world instance. Everyone knows about <strong><em>Monalisa</em></strong> right? There are thousands of copies of Monalisa floating in the market. However, the most <strong>valuable</strong> of them is the one which is hung in <strong>Musee du Louvre</strong> in <strong>Paris</strong>. Why? Because it was painted by <strong>Leonardo Da Vinci</strong>. Now you may get the <strong>world's best artists</strong> and try to <strong>replicate</strong> it. They may even make a <strong>100% replica</strong> of that painting but the <strong>real value</strong> still lies in the one <strong>painted</strong> <strong>originally</strong> because it's <strong>unique</strong> and <strong>only one</strong>!</p>
+<p><img alt="" src="https://img.theweek.in/content/dam/week/news/sports/images/2020/4/2/dhoni-siz.jpg" /></p>
+<p>Coming back to the virtual world. Now think of that glorious moment where MS Dhoni hit a six off the last ball to win World Cup for India (Damn, those goosebumps!). If he decides to <strong>mint 3 copies of that image and sell them as NFTs</strong>, it would sell like hot cakes. People may <strong>copy</strong> it, <strong>reproduce</strong> it but the ones <strong>minted</strong> by the <strong>man</strong> <strong>himself</strong> are only three.</p>
+<h2>D. Ownership History:</h2>
+<p>I am also a low key painter. Just kidding, the best I could do is stick figures. However, say one of my <strong>stick</strong> <strong>figures</strong> catches the eye of <strong>Shahrukh Khan</strong> (beauty lies in the eyes of beholder eh?) and he decides to <strong>buy</strong> it and <strong>hang</strong> it in his house. A few years later, he <strong>clicks</strong> a <strong>photo</strong> of that <strong>painting</strong> and puts it up as <strong>NFT</strong>. What do you think would happen?</p>
+<p><img alt="" src="https://images.newscientist.com/wp-content/uploads/2021/03/10105315/non-fungible-tokens-nft-2efx290.jpg" /></p>
+<p>That NFT is not famous because I painted it. It's famous because of it's history of ownership. Mr. Khan owned it.</p>
+<h2>Conclusion:</h2>
+<p>So what do we learn here? Real value of NFT lies in some sort of underlying feature and not the actual NFT. But guess what? Digital collectibles is just one of the use cases of NFT. There's a lot more to explore. But that's a topic for another day.</p>
+<p>What is your PoV on this madness?</p>
+<p>https://www.instagram.com/p/CUB8XMtIkGF/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

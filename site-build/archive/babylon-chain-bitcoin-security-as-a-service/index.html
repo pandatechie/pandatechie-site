@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Babylon Chain: Bitcoin Security as a Service | Raghav</title>
+<meta name="description" content="Last week, I woke up and chose violence. Yes. I decided to take the Bitcoin community head on by claiming that modern day [Bitcoiner](https://pandatechie.in/202…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Babylon Chain: Bitcoin Security as a Service</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-06-02</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-06-02 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/06/Bitcoin-Warriors-1.webp" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Last week, I woke up and chose violence. Yes. I decided to take the Bitcoin community head on by claiming that modern day <a href="https://pandatechie.in/2024/05/26/the-evolution-of-bitcoiner-not-just-hodling/">Bitcoiner</a> is evolved and wants to go beyond the HODLing narrative.</p>
+<p>As expected, my peers were split in two groups.</p>
+<p>One side agreed that it is such a waste of massive liquidity if one were just to sit on it. Others are still delulu about the world currency being replaced by $BTC where they will use their sats to buy condoms (I really wish they don't reproduce).</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/Bitcoin-Warriors-1.webp" /></p>
+<p>Tad bit of prompting and even AI can portray the war waging Bitcoiners</p>
+<p>Anyway, doubling down on that narrative, today I want to dive deeper with you on how likes of Babylon chain are enabling a future where staunchest of hodlers can keep on hodling while the water-tight security of Bitcoin is leveraged by everyone.</p>
+<p>Here's a quick rundown of what to expect:</p>
+<ol>
+<li>Why and why not PoS</li>
+<li>Why Bitcoin is ripe for this disruption</li>
+<li>What is Bitcoin staking: BTCfi using Babylon</li>
+<li>Technicalities of Babylon</li>
+</ol>
+<h2>PoS: The Smarter Cousin of Consensus</h2>
+<p>If you have been around for a while, you would know how PoS is a better consensus algorithm when it comes to environmental concerns.</p>
+<p><img alt="PoS vs PoW" src="https://pandatechie.in/wp-content/uploads/2024/06/image-2-1024x519.png" /></p>
+<p>This is why all the key players in the market are powered by it. In fact, the second largest PoW player Ethereum also moved to PoS in 2022.</p>
+<p>But then, there is a slight catch.</p>
+<p>Just like you need to prove computational prowess to validate the next block in PoW blockchains like Bitcoin, in PoS, your intent is determined by your stake.</p>
+<p>This means, the entire premise of ensuring that your incentives are aligned with the system, you got to stake the native crypto of the chain.</p>
+<p>This signals that you are equally invested in the growth of the ecosystem (hence the token price).</p>
+<h3>Problems in PoS:</h3>
+<p>Now if you dig a little deeper, you'd realize that someone has to lock their token to secure the network.</p>
+<p>This problem can choke the liquidity which is detrimental for any financial ecosystem.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-3-673x1024.png" /></p>
+<p>Early days of PoS - Conundrum of staking vs DeFi</p>
+<p>Therefore, the concept of <a href="https://pandatechie.in/2024/04/28/staking-101-liquid-staking-ecosystem-on-cosmos/">liquid staking</a> evolved. You could now have a representation of your staked amount as a token and still use it in the DeFi realm. Strongly recommend checking out <a href="http://pstake.finance">pStakedotfinance</a> for this.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-4-690x1024.png" /></p>
+<p>Post Liquid staking Era</p>
+<p>Anyway, but then solved the liquidity problem assuming that liquidity was always there.</p>
+<p><strong>What if there's a problem of liquidity?</strong></p>
+<p>Every other day new infra project is popping up in crypto that needs liquidity to secure the chain.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-5-1024x810.png" /></p>
+<p>Number of PoS Blockchains popping up each year (There are multiple other projects, these made it to the headlines)</p>
+<p>With decentralization slowly becoming a function of money, I think it is hard to achieve the same output for all players. This leads to a chaotic, incentive led GTM which in turn creates an army of hunters and farmers instead of actual folks who care about the ecosystem security.</p>
+<p>https://twitter.com/tristan/status/1796399493929476210</p>
+<p>Issue of Infra projects popping up</p>
+<p>So what do we do in this case?</p>
+<h3>Restaking:</h3>
+<p>Thus began the <a href="https://www.eigenlayer.xyz/">Eigen Layer</a> frenzy, the era of restaking.</p>
+<p>Restaking involves using already staked assets (e.g., staked ETH) to secure additional networks or protocols. This allows for the same capital to be utilized multiple times, enhancing the overall capital efficiency within the blockchain ecosystem.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-6-1024x589.png" /></p>
+<p>By restaking, validators and stakers can earn additional rewards from multiple networks or protocols. This compounding effect can lead to higher returns compared to traditional staking, where rewards are limited to a single network.</p>
+<p>While the platform's security is yet to be battle tested, on the face of it, the economics looks quite good.</p>
+<p>This solves for the money problem to protect Blockchains.</p>
+<h2>But Bitcoin is a Giant:</h2>
+<p>Now this is borderline cringe.</p>
+<p>As I write this, Bitcoin's market cap is a gargantuan $1.3T. That is half the GDP of India.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-1024x531.png" /></p>
+<p>Roughly 6 months ago, Bitcoin hit its <a href="https://www.theblock.co/post/265051/bitcoin-velocity-hits-historically-low-level-as-standard-chartered-renews-laser-eyed-forecast">all-time-low</a> velocity.</p>
+<p>Velocity is the measure of how fast sats exchange hands. This is a key metric for financial health of any currency. Greater the velocity, higher is its acceptance.</p>
+<p>However, Bitcoin's velocity is low because of the following reasons:</p>
+<ul>
+<li>Cost Prohibitive Transactions (Interventions like lightning are solving it)</li>
+<li>HODLer mindset. People want to hold Bitcoin in anticipation of greater returns. This is aligned with the digital gold narrative.</li>
+</ul>
+<p>So for the purpose of this article, I am going to assume that HODLer narrative stays. Even with the institutional adoption kicking, the idea sold to boomers is around new asset class that is a strong hedge against fiat, safe as gold. They might not even know the transactional capability (and intent) of Bitcoin.</p>
+<p>So what do we do now if people are unwilling to spend their beloved BTC?</p>
+<h3>Bitcoin's Case for DeFi:</h3>
+<p>Despite the Bitcoin's adamant fanbase, there are a few things that this magical protocol does better than anyone else. Let us dig deeper into that.</p>
+<h4>1/ Decentralization:</h4>
+<p>Depending on the context, you might see conversations around decentralization of the likes of Solana and Ethereum.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-7.png" /></p>
+<p>Whenever Bitcoin and Decentralization come up in the same sentence</p>
+<p>However, Bitcoin? It is a gospel truth that Bitcoin is as decentralized as it gets. There's barely any doubt about it.</p>
+<h4>2/ Security:</h4>
+<p>Bitcoin is battle tested for over a decade now. With an uptime of 99.98%, Bitcoin is one of the world's most performant network.</p>
+<p>Compare that with its peers and you might develop deeper appreciation for Bitocoin.</p>
+<h4>3/ Regulations:</h4>
+<p>While there is a tussle between SEC/CBFT and whatnot on weather or not Ethereum is a security, Bitcoin is clear of these conversations. This is why Bitcoin ETF found the light of the day earlier than anyone else.</p>
+<h4>4/ Decreasing Volatility:</h4>
+<p>According to data from Glassnode, Bitcoin's realized volatility on a 1-year rolling basis has dropped to around 30% as of May 2024, the lowest level since 2017.</p>
+<p>This metric shows that Bitcoin's price fluctuations have become less extreme compared to its earlier years.</p>
+<p>In 2023, Bitcoin's 90-day annualized volatility dropped below 50%, while broad equity benchmarks like the S&amp;P 500 were below 20% over the same period. This narrowing gap in volatility suggests Bitcoin is becoming more stable relative to conventional asset classes.</p>
+<p>The implied volatility derived from the Bitcoin options market, which reflects market expectations of future volatility, has also been declining.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-8-1024x622.png" /></p>
+<p>Narrowing gap between BTC and NASDAQ</p>
+<p>According to data from Skew, Bitcoin's 1-month implied volatility has dropped from over 100% in 2021 to around 60% in early 2024</p>
+<p>With all of that in place, extrapolating restaking on Bitcoin is only a function of technicalities. Everything else is aligned.</p>
+<h2>Babylon Chain:</h2>
+<p>What if some protocol could enable staking your Bitcoin and therefore lending the security of underlying asset (the mighty BTC) to any chain out there?</p>
+<p>Bitcoin staking creates a two-sided marketplace: PoS chains seeking security and Bitcoin holders seeking yield.</p>
+<p>The protocol provides strong security guarantees to both PoS chains and Bitcoin holders.</p>
+<p><img alt="Two sided market enabled by babylon chain" src="https://pandatechie.in/wp-content/uploads/2024/06/image-10-1024x465.png" /></p>
+<p>Two-sided market</p>
+<p>That is exactly what Babylon chain is upto.</p>
+<p>The core proposition includes:</p>
+<h3>1/ Fully slashable security:</h3>
+<p>If there is a safety violation on the PoS chain, one-third of the staked Bitcoin is guaranteed to be slashed.</p>
+<p>As long as two-thirds of the Bitcoin stake follows the PoS protocol honestly, the PoS chain remains live and secure.</p>
+<p>This is inline with the existing dPoS consensus mechanism where the defaulters are punished monetarily.</p>
+<h3>2/ Staker Security:</h3>
+<p>Honest Bitcoin stakers are guaranteed to be able to withdraw their funds.</p>
+<p>The protocol ensures that only those who violate the protocol lose their staked Bitcoin. The unbonding process for staked Bitcoin is designed to be secure and fast, without requiring social consensus.</p>
+<p><img alt="Plane of control: Babylon chain" src="https://pandatechie.in/wp-content/uploads/2024/06/image-11-1024x428.png" /></p>
+<p>Babylon as a middleware between PoS Blockchains and Bitcoin</p>
+<p>This property ensures that Bitcoin holders can quickly and safely withdraw their staked Bitcoin when they choose to unbond.</p>
+<h3>But Can I Just Stake my wBTC?</h3>
+<p>If you have reached here, it is good to punch some holes in the concept right away. I mean chains are flooded with wrapped Bitcoin on all chains, what stops people from staking them instead?</p>
+<p><strong>Why do you even need a Babylon chain?</strong></p>
+<p>Well, there are UX, security and adoption challenges at play.</p>
+<p>This approach to Bitcoin staking involves bridging Bitcoin to the PoS chain and enforcing slashing rules there. However, this approach has security limitations due to the reliance on centralized custodians or multisig bridge committees.</p>
+<h2>So how does Babylon Chain Work?</h2>
+<p>In addressing the implementation challenges of Bitcoin staking, Babylon has opted for the <strong>remote staking approach</strong>. This approach avoids the need to bridge bitcoins to the Proof-of-Stake (PoS) chain, thereby maintaining the security and trustlessness of the Bitcoin staking process. Here’s a detailed breakdown of how Babylon has implemented this approach:</p>
+<h3>1/ Locking Bitcoins in a Contract:</h3>
+<p>Bitcoins are locked in a self-custodian vault on the Bitcoin chain through a staking transaction. This transaction creates a UTXO (Unspent Transaction Output) with specific spending conditions.</p>
+<h3>2/ Staking Contracts via Bitcoin Covenant Emulation:</h3>
+<p>Since Bitcoin does not support smart contracts, Babylon uses Bitcoin's scripting language to emulate staking contracts. This involves creating transactions with conditions that can only be spent in certain ways, such as unbonding after a timelock or burning the funds in case of a protocol violation.</p>
+<h3>3/ Automated Slashing via Accountable Assertions and Finality Gadgets:</h3>
+<p>To ensure that protocol violators are penalized, Babylon employs extractable one-time signatures (EOTS). If a staker signs two conflicting blocks, their private key is leaked, allowing anyone to slash their stake by sending a slashing transaction to the Bitcoin chain.</p>
+<p>This mechanism is implemented using accountable assertions from cryptography and finality gadgets from blockchain consensus, ensuring that all safety violations can be reduced to equivocations that result in private key leakage.</p>
+<h3>4/ Fast Unbonding via Bitcoin Timestamping:</h3>
+<p>To enable fast and secure unbonding, Babylon uses Bitcoin timestamping. This technique records PoS block hashes and the staker set on the Bitcoin chain, ensuring tight synchronization between the PoS chain and the Bitcoin chain. This prevents attackers from exploiting out-of-date staker sets and allows for rapid unbonding without the need for social consensus</p>
+<p>By choosing the remote staking approach, Babylon has successfully created a trustless Bitcoin staking protocol that enhances the security of PoS chains while providing yield opportunities for Bitcoin holders.</p>
+<p>This approach leverages advanced cryptographic techniques and innovative consensus mechanisms to ensure both security and liquidity, making it a robust solution for integrating Bitcoin into the PoS economy.</p>
+<h3>Wen Babylon?</h3>
+<p>BTC staking testnet is live on <a href="https://babylonchain.io/ecosystem">Babylon</a>.</p>
+<p>Closer to home, key player in IBC, Persistence is becoming more Bitcoin-aligned.</p>
+<p><img alt="Babylon chain with IBC" src="https://pandatechie.in/wp-content/uploads/2024/06/image-12-1024x681.png" /></p>
+<p>Bitcoin timestamping testnet with 31 IBC chains</p>
+<p>Consuming security from Babylon Chain. Bitcoin holders can secure persistence. This gives more visibility to Persistence and introduces Bitcoin holders to XPRT.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

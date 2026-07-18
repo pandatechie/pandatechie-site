@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Are Credit Cards Evil? Are there any Disadvantages of a Credit Card? | Raghav</title>
+<meta name="description" content="Ever since I started earning, I've been in a financial mess. It is only until a few years ago I took the charge of the situation and came out of the dreaded deb…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Are Credit Cards Evil? Are there any Disadvantages of a Credit Card?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-12-03</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-12-03 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://images.indianexpress.com/2017/10/creditcards-759.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Ever since I started earning, I've been in a financial mess. It is only until a few years ago I took the charge of the situation and came out of the dreaded <strong>debt trap</strong>. I did mention it in <a href="https://pandatechie.in/2020/11/30/personal-finance-and-its-importance/">my top financial blunders</a> that I cut my credit card in two halves out of frustration. So, was it a naïve move? Or did I take the right call? Let us explore if there are any <strong>real disadvantages of a credit card</strong>.</p>
+<p><img alt="Disadvantages of credit card" src="https://images.indianexpress.com/2017/10/creditcards-759.jpg" /></p>
+<h2>Someone Lends You Money, and You Call Them Evil! Why?</h2>
+<p>You borrow money from the bank for a month (credit period) and later give it back on your next payday. Everyone's happy. So why are we considering credit card as evil. The answer lies in our country's history. Our parents are from the time when many people were from <strong>business backgrounds, rather than jobs</strong>. At that time, they might've borrowed some amount from bank and may have had <strong>troubles repaying it</strong> (due to irregular income). Ever since it was engraved in their DNA that <strong>debt is bad</strong>. They ensured that they pass this piece of information on to the next generation. And somewhere, in our minds, we think that way too.</p>
+<p>But then we repay the credit taken every month? So that is the happy path we are considering. Real fun begins when <strong>we don't have enough to repay</strong>. In that case we go ahead with the <strong>minimum payment and the cycle never seems to end</strong>. Same story every month!</p>
+<p>OR</p>
+<p>You may choose to buy something on <strong>EMI from the credit card</strong>. With all those lucrative offers everywhere, it is a hard to resist deal. In either of the cases, I am still convinced <strong>you should own a credit card</strong>. Let's understand why.</p>
+<h2>Who Should Not Own A Credit Card?</h2>
+<ul>
+<li><strong>If you lack financial discipline</strong>, credit cards are definitely NOT for you. If you are one of those <strong>impulsive buyers and cannot control yourself</strong>, you will soon end up in a debt trap the way I did. And we need to understand that it is not only with the credit card. If you spend your cash in hand recklessly, you will end up in a sticky situation anyway.</li>
+</ul>
+<p><img alt="Debt trap" src="data:image/jpeg;base64,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" /></p>
+<p>Debt Trap</p>
+<ul>
+<li><strong>If you don't understand how credit card works</strong>, you are probably better off without it. It is not a 'swipe and go' kind of facility banks usually advertise. There are tons of <strong>booby traps and hidden charges</strong> you need to know upfront before enrolling into one. Here are a <strong>few examples</strong> of these hoodwinks, I learnt the hard way:</li>
+<li><strong>Cash Withdrawal</strong>: Very casually I used to withdraw cash from my credit card (Dumb Move). Cash withdrawals on credit cards are charged at a <strong>20-40% interest</strong>. That is <strong>highest</strong> in all debt instruments (even higher than a personal loan). Had I known this, I would surely have been more careful.</li>
+<li><strong>Exceeding the Credit Limit</strong>: I still remember, my first credit card had a limit of 25k. I once swiped it, aware of the fact that transaction may fail because, I am very close the the max out. And to my surprise, transaction was successful. Happy as I could be, I never bothered to check back. Once I got the statement, bank had charged <strong>Rs. 500 under the head 'One time limit exceed'</strong>. Stupid move right? I bought something for Rs. 350 with that last swipe which costed me a premium of Rs. 500.</li>
+</ul>
+<p><strong>So, this time around, when someone asks you to <em>please read the offer documents carefully</em>, actually DO IT!</strong></p>
+<h2>Who Should Own A Credit Card?</h2>
+<p>Short answer would be '<strong>everyone</strong>' who has the <strong>above mentioned sorted out for themselves</strong>. Given the credit period and deals credit cards offer, you can really earn a bang for your buck if you use them correctly. Ready for some quick mathematics backed logic?</p>
+<p><img alt="Cash or credit card? Disadvantages of credit card" src="https://www.cardrates.com/images/uploads/2015/05/Common-Credit-Card-Blunders-2015-Dangers-of-Using-Only-Cash-or-Only-Cards.jpg?width=300&amp;height=200" /></p>
+<p>Cash or Credit?</p>
+<ul>
+<li>Say I have a credit card whose statement gets generated on 20th of every month. I have time till 10th of next month to pay the bill. For the sake of simplicity, lets assume statement was generated on 20th November and I have to pay back by 10th December.</li>
+<li>On 23rd of a November, I decide to buy something. Should I pay in cash or use my credit card instead?</li>
+<li>Credit Card it is. I have to pay for this in the next cycle i.e. 10th of January. Which means a credit period of almost 45 days.</li>
+<li>Along with that, I will get some reward points on my purchase. So, I am literally getting paid for taking a loan.</li>
+</ul>
+<h2>Conclusion:</h2>
+<p>It is always <strong>lack of your knowledge</strong> of personal finance that is hazardous and NOT the credit card itself. I learnt it the hard way. <strong>When government of India, Credit Agencies, Banks trust you with the fact that you are a responsible spender, it is high time you should behave like one</strong>. Go ahead and claim that Credit Card you are being offered and swipe away!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

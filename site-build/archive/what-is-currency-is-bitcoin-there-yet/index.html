@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Currency? Is Bitcoin there Yet? | Raghav</title>
+<meta name="description" content="How do you tell someone that you're Indian without telling them you're Indian? When they ask you what is money, you reply that it is "Haath ke mail". Relatable …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Currency? Is Bitcoin there Yet?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-08-24</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-08-24 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://cdn.corporatefinanceinstitute.com/assets/currency-1024x682.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>How do you tell someone that you're Indian without telling them you're <strong>Indian</strong>? When they ask you what is money, you reply that it is <strong><em>"Haath ke mail"</em></strong>. Relatable much? Well, the generation of my <strong>grandparents</strong> <strong>despised</strong> money. The believed it to be a <strong>root of all problems</strong>. The next gen, my <strong>parents</strong>, didn't actually despise it but believed in the fact that it should be <strong>earned to a certain limit</strong> only. Earning more than what you could spend is not <strong>desirable</strong>. And then came <strong>Millennials</strong>. We don't feel sad about making money. It could be shit <strong>loads</strong> of it. <strong>Gen Zs</strong> have a <strong>different</strong> approach altogether here. <strong>Money</strong> is treated like a <strong>disposable</strong> asset by them. They tend <strong>splurge</strong> and make more out of it. Unlike all the previous generations, they aren't <strong>clingy</strong> with money.</p>
+<p><img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/currency-1024x682.jpeg" /></p>
+<p>But enough about us and our <strong>love hate relationship</strong> with money. Let's try to dig deeper into the fact what is money or even at a more <strong>fundamental</strong> level, what currency is? Did we always use <strong>green</strong> <strong>pieces</strong> of <strong>paper</strong> or was it something else? Jumping right away into today's topic, <strong><em>what is currency and is bitcoin it?</em></strong></p>
+<h2>History of Money:</h2>
+<p>Back in the time, when human needs were limited, we used to <strong>transact</strong> in <strong>kind</strong>. This was called <strong><em>barter system</em></strong>. You wanted some <strong>apples</strong> while you grew <strong>potatoes</strong>, so you simply <strong>swapped</strong>. Getting apples in lieu of potatoes. But as you might have guessed, this wasn't <strong>sustainable</strong>. Think of one guy in the past going <em>"Enough! I already have loads of rice bags at home"</em></p>
+<p>So mankind resorted to a <strong>common</strong> <strong>mode</strong> of <strong>payments</strong>. And god knows it took multiple <strong>shapes</strong> and <strong>kinds</strong>. Let's discuss about some <strong>bizarre</strong> forms money took:</p>
+<h2>A. Rai Stones of Yap:</h2>
+<p>Yap is a small country to the north of Philippines. Back in the day, about <strong>500 years ago</strong>, tribes of this remote group of islands <strong>traded</strong> in <strong>Rai Stones</strong>. Imagine carrying this big stone along with you when you are off to purchase a few <strong>coffee</strong> <strong>beans</strong> for the <strong>morning</strong>.</p>
+<p>These stones could be as huge as <strong>12ft in diameter and weight up to 8 tons</strong>. They also symbolized <strong>status</strong> and power of a particular village. Relatable eh?</p>
+<p><img alt="" src="https://media.npr.org/assets/img/2010/12/09/yap_wide-412d287159d04fad716e48d0b70267820eaa26e4.jpg?s=1400" /></p>
+<h2>B. Tea Bricks:</h2>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/08/image-1.png" /></p>
+<p><strong>Tea</strong> lovers assemble. For all of you who <strong>live</strong> on tea day in and day out, you could have been a <strong>millionaire</strong> in the past. Yes. <strong>Chinese cultures used to trade in cakes made of tea.</strong></p>
+<p>From 9th century to all the way till 19th, tea was so <strong>valuable</strong> that it was used as <strong>currency</strong> throughout Asia.</p>
+<p>The people of <strong>China</strong>, <strong>Mongolia</strong> and <strong>Tibet</strong>, in particular, made <strong>tea bricks</strong> by compressing <strong>tea leaves</strong> and casting them into metal molds.</p>
+<h2>C. Edible Currency:</h2>
+<p><strong>Salt</strong> is the world's <strong>oldest</strong> form of <strong>currency</strong>. In fact the word <strong>salary</strong> comes from Latin word "<strong><em>Salarium</em></strong>" which was <strong>money</strong> paid to <strong>Roman</strong> <strong>soldiers</strong> to buy salt. It was main form of currency in S<strong>ahara desert</strong> and was used extensively throughout <strong>East Africa</strong> in Middle ages.</p>
+<p><img alt="" src="https://media.istockphoto.com/photos/salt-in-bag-and-pieces-of-salt-picture-id931308432" /></p>
+<h2>D. Squirrel Pelts:</h2>
+<p><img alt="" src="https://qph.fs.quoracdn.net/main-qimg-ccec0f9c63195fdd5bd6176a052c945e" /></p>
+<p>Okay. Any guesses which countries would be using <strong>animal skins</strong> to trade? <strong>Nordic</strong> cultures were known for using <strong>squirrel</strong> <strong>pelts</strong> as a common currency for exchange. In fact it was so common that <strong>snouts</strong>, <strong>claws</strong> and <strong>ears</strong> were used as change. That's a different level of '<em><a href="https://pandatechie.in/2021/04/01/how-to-save-money-without-feeling-the-crunch-zeffo-bravo/">Chillar</a></em>' we are dealing with.</p>
+<h2>E. Bottle Caps of Cameroon:</h2>
+<p>In a much recent example, in 2005, a <strong>brewery</strong> in <strong>Cameroon</strong> started <strong>printing</strong> <strong>prizes</strong> under <strong>bottle</strong> <strong>caps</strong> to boost sales. Competitors followed the suit to the extent that it was almost <strong>certain</strong> to find something from a <strong>pint</strong> of <strong>beer</strong> to a <strong>sports</strong> <strong>car</strong> as a <strong>reward</strong> under the bottle cap.</p>
+<p><img alt="" src="https://cdn.shopify.com/s/files/1/2785/6868/products/41271_B_x700.jpg?v=1592592715" /></p>
+<p>Soon enough, people started to trade in those <strong>bottle caps</strong>. They used to pay <strong>cab</strong> <strong>drivers</strong> in that format and similarly, these drivers used to <strong>bribe</strong> <strong>police</strong> <strong>officers</strong> using these very caps. Within months, these caps became a significant part of the economy.</p>
+<h2>What is Currency then?</h2>
+<p>Well, I am not resorting to a textbook language even now. In it's simplest terms, <strong>currency</strong> is what people <strong>believe</strong> in. Confused? Here's something that can help.</p>
+<p>You most definitely would be a part of some kind of <strong>loyalty program</strong>. Example, <strong>credit card points, Starbucks loyalty card, shopper's stop, Jet Miles,</strong> you get the idea. That is a currency within that eco system. If you and I both love <strong>Starbucks</strong> <strong>coffee</strong>, I could, in theory, pay you in <strong>Starbucks</strong> <strong>points</strong> right?</p>
+<p><img alt="" src="https://www.cardexpert.in/wp-content/uploads/2016/01/jetprivilege-world.png" /></p>
+<p>Now zoom out on this at a <strong>real life level</strong>, you come up with <strong>something</strong> everyone <strong>agrees</strong> on as a <strong>medium</strong> of <strong>exchange</strong>. It can be as absurd as a <strong>piece</strong> of <strong>paper</strong>, but we believe in it.</p>
+<p><img alt="" src="https://images.hindustantimes.com/img/2021/08/18/1600x900/gold1_1629261155703.jpg" /></p>
+<p><strong>Fun Fact</strong>: All currencies of the world, are not <strong>pegged</strong> to any kind of <strong>underlying</strong> asset. We think that our <strong>currency</strong> is <strong>backed</strong> by <strong>gold</strong> <strong>reserves</strong> but that is not true. So entire <strong>paper</strong> <strong>money</strong> derives its value from the <strong>trust</strong> that you <strong>place</strong> in it and in <strong>stable</strong> <strong>central</strong> <strong>bank</strong> (RBI, Federal Bank).</p>
+<p>Now that we know what is <strong>currency</strong>, here's something that'll help us <strong>articulate</strong> few properties of money. I will also cover if <strong>Bitcoin</strong> has these <strong>properties</strong> in this section.</p>
+<h2>A. Store of Value:</h2>
+<p>For anything to be called a currency, it should be <strong>future</strong> oriented. One should be able to <strong>store that currency</strong> (and it's <strong>value</strong>) <strong>digitally</strong> or <strong>physically</strong> and later be able to use it to <strong>buy something similar</strong> which they could have in the <strong>present</strong>.</p>
+<p>Imagine a situation where you stored <strong>physical</strong> <strong>notes</strong> of <strong>Rs. 1,000</strong> and one fine day they <strong>ceased</strong> to be a <strong>legal</strong> tender. Oh Wait! That already happened in 2016. Jokes apart, whatever money you are <strong>saving today</strong> comes with an unsaid <strong>hope</strong> that this will <strong>appreciate</strong> in it's <strong>value</strong> and you would be able to use it after whatever time we deem fit.</p>
+<p><img alt="" src="https://photos.demandstudios.com/getty/article/34/29/90311089_XS.jpg" /></p>
+<p>Bitcoin is very much a <strong>store of value</strong>. Not only you can maintain it's <strong>existing</strong> <strong>value</strong>, it's <strong>value</strong> <strong>appreciates</strong> insanely. In the last decade, BTC has appreciated in value more than any other asset class.</p>
+<h2>B. Medium of Exchange:</h2>
+<p>Any currency should be a <strong>common transacting mode</strong> between two parties. You should be able to <strong>produce</strong> that <strong>currency</strong> whenever required (in return of goods/services) and the seller should be accepting it.</p>
+<p><img alt="" src="https://images.ctfassets.net/vrrt8fsfwf0e/2VxCQ7fVSqSiFAu62xuYUN/f87668dbb71d65e859f62da0ab5506dd/medium_of_exchange_ART_1.svg" /></p>
+<p>BTC is slowly moving to this stage. With companies like <strong>Tesla</strong> accepting it (they removed it later) in exchange for their cars and countries like <strong>El Salvador</strong> accepting it as <strong>legal tender</strong>, Bitcoin is moving towards incorporating this property.</p>
+<h2>C. Unit of Account:</h2>
+<p>Money also acts as a unit of account, providing a <strong>common measure</strong> of value of goods and services being exchanged. Knowing the <strong>value</strong> of goods or services, in terms of money, enables both <strong>supplier</strong> and <strong>purchaser</strong> to make decisions about how much of the goods are to supply or purchase.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<p>It also creates a <strong>level playing field</strong> while one is evaluating something.</p>
+<p>BTC, unless adopted by masses, won't be able to reach tis stage. We aren't calculating our expenses in Bitcoin as of now.</p>
+<h2>Conclusion:</h2>
+<p>Isn't it just crazy that we used to work so hard for that piece of paper but today we get to see it from a very different lens? If enough people refuse to accept money as we know of today, it will lose it's value eventually. I am not making this up. This has happened in the past in countries like Venezuela and Zimbabwe.</p>
+<p>What do you think about your <em>hath ki mail</em>?</p>
+<p>https://www.instagram.com/p/CRN0bYkrgAw/</p>
+<p><strong>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/"><strong>Cindy D’Silva</strong></a> and</strong> <strong><a href="https://nooranandchawla.com/">Noor Anand Chawla</a> and sponsored by <a href="https://bakezbydaizy.in/">Bakez by Daizy</a></strong>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Monthly Kaizen: Self Care | Raghav</title>
+<meta name="description" content="It is a Sunday afternoon and Monday morning blues are yet to hit me. Therefore, I decided to spend some time writing before the thought of next day overpowers t…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Monthly Kaizen: Self Care</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-28</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-28 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>It is a Sunday afternoon and Monday morning blues are yet to hit me. Therefore, I decided to spend some time writing before the thought of next day overpowers the creative juices. So, you know that I am big fan of the Japanese Kaizen theory. These are small seemingly incremental changes in one's life that eventually have a great impact. Not only I hear this term a lot in my office, I read a book called '<em>Ikagai</em>' that reinforced this concept in my brain. Ever since, I try to make small changes throughout the month and blog about it.</p>
+<p>Last month, this change was regarding <a href="https://pandatechie.in/2021/02/19/an-example-of-a-life-changing-kaizen/">changing the location of the television</a>. This month, I touch upon a rather serious topic of 'Self Care'. Why serious you ask? Because of fault in our upbringing. Ever since childhood, men are expected to be tough. While we do everything possible under the sun to mask our feelings, physical manifestation of the same leads to lack of personal hygiene and self care.</p>
+<h2>My Story:</h2>
+<p>The moment I hit mid teens, I developed this weird habit of skipping showers. And god would testify, if you are one such person, you know there's no going back to daily bathing. While this may sound gross on the face of it, I used to justify it in the veil of manhood. A very common proverb back home says, "<em>Sher bhi kabhi muh dhote hain?</em>" (Lions need not wash face). So, in a nutshell, this validated the broken belief set I carried.</p>
+<p>At this point I could reveal some shocking number backed facts that involve longest stretch without bathing etc. but that isn't the essence of this article. This habit soon become a part of my routine and all the jokes around it started becoming funnier. The trend continued until I stayed single, when one fine day, I met someone. For all the men who are in a relationship, if you aren't living together, you won't know!</p>
+<p>So, I would see my significant other spending hours taking care of her skin, nails, hair and what not. As I watched her putting some edible crap on her face every other day, I felt nothing but irritated.</p>
+<p>Fast forward to 2020, on our anniversary in the lockdown period we couldn't go anywhere. Amidst all the gloom my wife proposed to put some 'Multani Mitti' on my face. For the lack of better activity at that time, I agreed. That one moment single handedly changed my perception towards self care forever.</p>
+<p>Our society believes that it is girlish to take care of yourself and indulge in self care practice. I used to think the same until that moment. Cut to today, I am very particular about what goes on my skin and face. There is a constant effort to look more presentable.</p>
+<h2>But What's the Kaizen?</h2>
+<p>This month, I decided to go old school for my skincare. Everything that we have around is processed. Even the food that goes inside us. Therefore, finding out what is being put on our body is of utmost importance to me. Hence, I switched to this Tamil Nadu based made in India company: "Deyga Organics".</p>
+<p>Deyga is a home-grown brand with a strong belief that our traditional rescue for skin and hair will always make one's life easy &amp; satisfied. Each product that they manufacture has the touch of tradition. I use the following products for the entire month and have seen very positive changes in my hair quality, skin:</p>
+<h3>1. Charcoal Bath Bar:</h3>
+<p>We have plethora of products that claim to have activated charcoal in them. However, the essence of it gets lost while achieving the scale. The product made by <a href="https://deyga.in/collections/combo/products/mens-kit">Deyga organics</a> is different. The soap feels very premium and has a very neutral fragrance. I personally don't like strong soaps with a strong after fragrance.</p>
+<h3>2. Coconut Milk Shampoo Bar:</h3>
+<p>Men have a love and hate relationship with their hair. Either they fall off, or they grey out. But when you think about it, this all started when we our reliance on shampoos increased. One of my uncles still has jet black hairline. He doesn't use a shampoo, rather uses the old school bar we had as kids called 'Kesh Nikhar'.</p>
+<p>Therefore, I decided to give a similar concept a shot. This coconut milk shampoo bar is an absolute bliss. Once again, a neutrally odorized product that helped boost the smoothness and quality of my hair.</p>
+<h3>3. Hair Growth Oil:</h3>
+<p>In a world of gels and hair sprays, it is very important to resort back to traditional methods of giving your scalp a much deserved 'Champi'. I use this hair oil from Deyga for the same. With the goodness of coconut, castor, grapeseed etc., this has tremendously helped my hair grow.</p>
+<h3>4. Lip Balm:</h3>
+<p>Currently, Mumbai is facing a dry summer. To protect my lips from drying off, I use this lip balm. Yet again, it is not over fragrant. Also, your lips won't be giving off a glare the way it does with other products.</p>
+<h2>Conclusion:</h2>
+<p>The price point of the products is a little steep but it is totally worth it. Apart from that, it is our moral responsibility to support made in India, small businesses. A lot of effort is put into making these products. Unlike big players who hire a consultant to gain consumer insights, brands like Deyga Organics know the on ground reality.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

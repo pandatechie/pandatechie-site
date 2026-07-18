@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Great Franklin Templeton Wind Up Conundrum | Raghav</title>
+<meta name="description" content="2020 in it's entirety has been a unique experience for the entire world. With smallest examples of Google shutting down for a while to the bigger ones like Wimb…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Great Franklin Templeton Wind Up Conundrum</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-12-23</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-12-23 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/jpeg;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>2020 in it's entirety has been a unique experience for the entire world. With smallest examples of <strong>Google shutting down for a while to the bigger ones like Wimbledon and Olympics being postponed</strong>, the world has seen it all. This post is dedicated to one such noteworthy incident that occurred on <strong>April 23rd, 2020</strong> when <strong>Franklin Templeton, shut down 6 of it's schemes</strong>. With entire investing fraternity being shocked to the core, there were many twists and turns in this story. I plan to take you through it from the top! Let's get started.</p>
+<h2>How Do Mutual Funds Work Anyway?</h2>
+<p>So, <a href="https://pandatechie.in/2020/11/28/what-is-expense-ratio-in-mutual-funds/">mutual funds</a> rely on a very basic premise. You as an average joe, know nothing about the markets. You don't have access to inside information, technical analysis isn't your forte and fundamental analysis is too confusing. So what do you do? You give your money to a fund house which pools money from many people like you and invests on your behalf. A part of the returns is given to you and everyone's happy.</p>
+<p><img alt="Franklin Templeton Mutual Fund" src="data:image/jpeg;base64,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" /></p>
+<p>However, what if you market swings make you hypertensive? In other words, you have a low risk appetite. Well, there is a set of mutual funds which has a solution to address that problem. Instead of investing in stocks, they would lend it to companies and seek an interest in return for the same. Share of this interest or yield, as they call it, is shared with you. Since companies are bound by a contract (called bonds), they are unlikely to default on payment.</p>
+<p>That was equity (former) and Debt (latter) mutual funds 101 for you.</p>
+<h2>How Debt Mutual Funds Handle Redemption Requests?</h2>
+<p>Now, as an investor, you are usually not bound by a <strong>lock in period in these funds</strong>. So you can seek your money back whenever required (you may have to pay an exit load for early redemption in some cases).</p>
+<p>And how do Mutual Fund companies manage this, you ask? Simple, they have <strong>reserve cash set aside</strong> from each of your investment. So a part of your and multiple other clients' investment is set aside and when you grow up to a sizeable portion, it is easy to handle redemption requests.</p>
+<p><strong>There is another methodology used here called laddering</strong>. Mutual fund companies like Franklin Templeton do not invest in bonds maturing on the same day. So some bonds would mature in the near future while others take a little longer. This way, they ensure a constant supply of money coming in. That money can be used to invest further or cater to the redemption requests.</p>
+<h2>What went wrong?</h2>
+<p>So far, all this seems pretty normal right? So <strong>why did Franklin Templeton had to shut down 6 schemes overnight?</strong> Here's the catch. A fund manager, no matter how smart cannot <strong>precisely predict the amount that needs to be kept aside</strong>. If he sets aside too much, he loses on opportunity to earn yields and on the other hand if he sets aside too less, how is he going to handle to redemption request?</p>
+<p>Normally his experience and hunch does the job for him. But when <strong>lockdown</strong> happened, everyone was <strong>cautious about the future</strong>. Everyone wanted their money back. And that is when hell broke loose. They could cater to the requests by cash pool set aside initially and later with the laddering they had done. But once everything went haywire, they had no other option to sell bonds.</p>
+<p>But, cash is always the king. <strong>Who wants to own bonds in the middle of a pandemic?</strong> Specially the risky deals. So they had no option apparently than to shut it all down. No incoming of money, no outgoing of money. Just a total shutdown of the scheme.</p>
+<h2>What Next?</h2>
+<p>About 9 months down the line now, all of us are curious what are the next steps? Well, I had this opportunity to attend a live session with the man himself, <strong>Mr. Sanjay Sapre, President, Franklin Templeton, India</strong>. The session was organized by one of the India's largest blogger community, <a href="https://www.theblogchatter.com/">blogchatter</a>. Sanjay sensitized the attendees about the current situation and guidelines from Supreme Court on the way ahead. <strong>The trustees of the fund have been asked by Supreme Court to seek a consent from the investors on the winding up of the funds.</strong></p>
+<p><img alt="Confusion" src="https://images.sadhguru.org/sites/default/files/media_files/iso/en/48257-confusion-clarity-spiritual-path.jpg" /></p>
+<p>This weekend starting from <strong>26th December, 9AM to 28th December 6PM</strong>, investors in these schemes have an important decision to make. They will be asked to caste a <strong>"Yes" or "No" vote</strong> on the future of the schemes (more about it in a while). There are some key points that Mr. Sanjay highlighted during the conversation.</p>
+<ul>
+<li>Voting is to be done electronically to reach maximum investors.</li>
+<li>Supreme Court has guided SEBI to act as an observer to check and govern the entire voting process.</li>
+<li>Result are likely to be declared by Supreme Court in the <strong>third week of January</strong>. Franklin Templeton would not be allowed to declare results as soon as the voting ends. They would rather submit the results along with the auditor's report in a sealed envelope to SC which will review it and declare the results by <strong>18th December.</strong></li>
+<li>KFintech will be the service provider and process owner of the voting.</li>
+<li>There will be a law firm appointed that would act as a scrutinizer.</li>
+<li>Post voting, six different unit holder meetings will take place from <strong>9 AM to 6PM in the evening on 29th December for all six schemes.</strong></li>
+</ul>
+<h2>What is Yes or No?</h2>
+<p><strong>A "YES" vote would mean that schemes would remain closed for redemption as they are right now</strong>. For Franklin Templeton, this would mean that there is <strong>no pressure to sell the securities and investors would be paid back as and when these papers/bonds mature</strong>. This would allow the fund managers to chose the best suited fate for the bonds in their portfolio. You need not place a redemption request any more. As an example, if a paper has a 20% weightage in the AUM of the portfolio, whenever it is sold on maturity, you would get back 20% of your invested amount. There'll be a proportionate distribution of money.</p>
+<p><img alt="" src="https://humanwindow.com/wp-content/uploads/yes-or-no-button.jpg" /></p>
+<p><strong>A "NO" vote would mean that schemes would become open for redemption</strong>. In this case, no one would be able to anticipate the quantum of incoming redemption requests. Given the fact that schemes were illiquid for past 6 months, it is likely that there'll be rush of investors wanting to redeem. So, fund managers will be forced to sell securities at a discount, thus hampering your returns. Imagine, that everyone knows what papers are held by Franklin Templeton and there is no option available to them other than selling it. The pricing power no longer stays with them.</p>
+<h2>Conclusion:</h2>
+<p><strong>In my opinion, investors are stuck between a devil and a deep sea in this case.</strong> However, if I were an investor, <strong>I would have casted a 'yes' vote</strong>. There is no way this can be fixed and rushing out for redemption will only worsen the situation. Debt funds are generally known for lesser risk and this incident proved to be a total game changer. It would be remembered by the fraternity for many years to come. For now, please pay attention to the 5x sped up voiceover that says:</p>
+<blockquote>
+<p><a href="https://pandatechie.in/2020/10/20/algorithm-based-investing-in-mutual-funds-alpha-sip/">Mutual Fund</a> Investments are Subject to market risks. Please read the offer document carefully before investing.</p>
+</blockquote>
+<p>Until Next Time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

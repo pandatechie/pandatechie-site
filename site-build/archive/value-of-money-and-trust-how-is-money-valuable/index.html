@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Value of Money and Trust: How is Money Valuable? | Raghav</title>
+<meta name="description" content="Well, a couple of days ago, I wrote a post about [history of money](https://pandatechie.in/2021/08/24/what-is-currency-is-bitcoin-there-yet/). As I posted that,…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Value of Money and Trust: How is Money Valuable?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-01</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-01 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/08/image-7.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Well, a couple of days ago, I wrote a post about <a href="https://pandatechie.in/2021/08/24/what-is-currency-is-bitcoin-there-yet/">history of money</a>. As I posted that, one of <strong>comments</strong> in the comment section had a rather intriguing <strong>question</strong>. What would happen <strong>if all of us stopped trusting our currency?</strong> While trying to answer it, it took me good <strong>250 words</strong> to do <strong>justice</strong> to that <strong>query</strong>. Perhaps that's the <strong>reason</strong> I was asked to write a <strong>separate</strong> post on it. So, here I am. Today, we <strong>dive</strong> <strong>deeper</strong> into a seemingly <strong>simple</strong> but somewhat <strong>spiritual</strong> topic, the real <strong>value</strong> of money.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/08/image-7.png" /></p>
+<p><a href="https://satabdimukherjee.in/">https://satabdimukherjee.in/</a></p>
+<p>In this blogpost, I would discuss what makes <strong>money</strong> <strong>valuable</strong>? What is <strong>driving</strong> the <strong>value</strong> of <strong>money</strong> and is it possible for <strong>money</strong> to <strong>lose</strong> it's value? If yes, then how? So put on your <strong>economist</strong> hats, because this ride is going to be <strong>thought</strong> <strong>provoking</strong>. Let's get started;</p>
+<h2>What is Currency or Money?</h2>
+<p>If you still haven't, I would highly recommend you to read my last <a href="https://pandatechie.in/2021/08/24/what-is-currency-is-bitcoin-there-yet/">post</a> that talks in detail about the evolution of money and the functions it is destined to serve.</p>
+<p><strong>Text Book Definition:</strong></p>
+<p>As per <a href="https://www.investopedia.com/">Investopedia</a>, Currency is medium of exchange for goods and services. In short, it's money, in the form of paper or coins, usually issued by a government and generally accepted at its face value as a method of payment.</p>
+<p>But that's not it. Things are much more <strong>interesting</strong> than they look on the face of it. When <strong>gold</strong> was used by different <strong>kings</strong> and <strong>dynasties</strong> in our country as a <strong>medium</strong> of <strong>exchange</strong>, thigs were quite <strong>different</strong>. You see, even if the kings <strong>died</strong>, kingdoms <strong>ruined</strong>, dynasties <strong>wiped</strong> <strong>off</strong>, that currency <strong>still held it's value</strong>.</p>
+<p>Why? Because gold had other use cases too:</p>
+<ul>
+<li>Utensils</li>
+<li>Jewelry</li>
+<li>Dentistry</li>
+<li>Surgeries</li>
+</ul>
+<p>But what about our <strong>paper</strong> <strong>currency</strong>? Let's consider that with an example. Back in <strong>2016</strong>, ruling government introduced <strong>demonetization</strong> of <strong>Rs. 500 and Rs. 1000</strong> notes. A lot of us found these <strong>currency</strong> <strong>notes</strong> in our old <strong>clothes</strong> after the <strong>swapping</strong> period was over. What do you do with these <strong>notes</strong> now? Are you able to put them to any <strong>use</strong>? If you have found a way to use them, let me know in the comments section below (asking for a friend, obviously).</p>
+<p><img alt="" src="https://www.leftovercurrency.com/app/uploads/2017/05/500-indian-rupees-banknote-gandhi-no-date-obverse-1.jpg" /></p>
+<h2>But then what is the value of money?</h2>
+<p>Okay, we get it. Unlike <strong>precious</strong> <strong>metals</strong> or may be <strong>rice</strong> <strong>bags</strong>, <strong>wheat</strong>, <strong>salt</strong> etc. (which had some <strong>real life value</strong>), our <strong>paper</strong> <strong>currency</strong> is, well, just <strong>paper</strong>. Then why do we consider it so <strong>valuable</strong>? Time for another shocker.</p>
+<p><img alt="" src="https://qph.fs.quoracdn.net/main-qimg-0d034a431c7fe02949f27268734470d2.webp" /></p>
+<p>Kya hua... Tera wada?</p>
+<p>Imagine you go to <strong>Reserve bank of India</strong> and meet Mr. Governor. You give him a note of <strong>Rs. 500</strong>. Now that he has mentioned on the currency, "<strong><em>I promise to pay the bearer a sum of Rs. 500</em></strong>", he should give you <strong>something</strong> in <strong>return</strong>?</p>
+<p>After all he <strong>signed</strong> that note. You should be expecting <strong>something</strong> in return of that promise? <strong>Gold</strong>? Because most currencies are pegged against it? <strong>Silver</strong>? It seems to be of real value.</p>
+<p>Well, the answer is that you get <strong>nothing</strong>. Sorry! All the currency that we use are <strong>promissory</strong> <strong>notes</strong>. No underlying asset governing <strong>backing</strong> it's value.</p>
+<p>In principal, if you <strong>trust government</strong> and hence the <strong>RBI</strong> and it's <strong>policies</strong>, you <strong>trust</strong> <strong>money</strong>. And that's what creates it's <strong>value</strong>.</p>
+<p>All of us trust that this <strong>Rs. 500 note will fetch me stuff worth Rs. 500</strong>. Since buyer and seller have a similar trust in this note, things are all good.</p>
+<p><img alt="" src="https://i.pinimg.com/originals/cc/a0/e6/cca0e6453d0398d623d90ca41bbcae27.jpg" /></p>
+<h2>Will we ever lose trust?</h2>
+<p>Let's get those <strong>rose tinted glasses</strong> off. Reality check time. Before we try to <strong>answer</strong> will we lose trust in the <strong>currency</strong>, let's <strong>understand</strong>, why is it likely to happen?</p>
+<p>Since our money is NOT <strong>pegged</strong> to any <strong>underlying</strong> <strong>asset</strong>, we have a doubled edged sword at hand. How?</p>
+<ul>
+<li>We don't have to <strong>worry</strong> about <strong>maintaining</strong> the <strong>equivalent</strong> underlying asset before <strong>printing</strong> <strong>more</strong> <strong>money</strong>. So if <strong>government</strong> <strong>needs</strong> more money, they can <strong>print</strong> it freely. The best example of this would be <strong>excess printing during pandemic to kick start the economy</strong>.</li>
+<li>However, if government <strong>prints too much of it</strong>, money would <strong>lose it's value</strong>. Why? Economics 101. If <strong>anything</strong> is available in <strong>excess</strong>, less <strong>valuable</strong> it <strong>becomes</strong>, given all other <strong>factors</strong> remain the <strong>same</strong>.</li>
+</ul>
+<p>Confused? This flow chart could help:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/08/image-5.png" /></p>
+<p>Courtesy: <a href="http://readon.in">ReadOn</a></p>
+<p>So, if government becomes <strong>greedy</strong> or there's a <strong>miscalculation</strong>, you can risk <strong>ruining</strong> <strong>currency</strong> of a nation. No I am not just making this up, here are a few examples of how this happened in the past:</p>
+<h2>Zimbabwe:</h2>
+<p>About a <strong>decade</strong> ago, <strong>Zimbabwean</strong> <strong>government</strong> found itself in a tough spot. With <strong>corrupt</strong> <strong>politicians</strong> in the center, they had to <strong>fund</strong> some key <strong>military operations</strong>. Adding cherry on the top, they were already in <strong>debt</strong> and the <strong>economic</strong> <strong>output</strong> was at an all time low. So what did they do to <strong>rescue</strong> themselves? <strong>Print more money</strong>. Duh!</p>
+<p>Soon after a <strong>short</strong> <strong>sighted</strong> relief, <strong>inflation</strong> was recorded at <strong>79,600,000,000%</strong>. What impact did it have on the economy?</p>
+<p>Good news, you'd be <strong>paid</strong> that most <strong>coveted</strong> <strong>billion dollar salary</strong>. Bad news, it would still be <strong>worthless</strong>. At this point, the <strong>inflation</strong> (or drop in money's value) was so acute that <strong>prices</strong> <strong>doubled</strong> every <strong>6 hours</strong>. Imagine buying a <strong>loaf</strong> of <strong>bread</strong> in the morning and paying about <strong>4 times</strong> of that price in the <strong>evening</strong>.</p>
+<p><img alt="" src="https://m.media-amazon.com/images/I/71j-2+22P+L._AC_SX425_.jpg" /></p>
+<p>There's no merit to <strong>save</strong> <strong>money</strong> either right? Since your money is <strong>constantly</strong> losing it's <strong>value</strong>, no matter what return you are fetching on your investments, it won't be enough to beat the inflation rate.</p>
+<p>Another crazy fact: <strong>Government</strong> had to print a <strong>trillion</strong> <strong>dollar</strong> note to <strong>ease</strong> the <strong>transactions</strong>.</p>
+<p>In a more recent example, this is happening in Venezuela as we speak. Yes. <strong>A cup of coffee costs 10,00,000 Venezuelan currency</strong>. Interested in the back story? Read <a href="https://readon.substack.com/p/5500-inflation-in-venezuela-why">here</a>.</p>
+<h2>Solution?</h2>
+<p>First of all, no matter how <strong>tight</strong> <strong>rope</strong> walk, currency <strong>management</strong> is, in my opinion, <strong>Reserve Bank of India</strong> is doing a good job. (I am no economist to say this, but I believe in India's growth story). Secondly, if I were to get <strong>paranoid</strong> and for all the <strong>right</strong> <strong>reasons</strong> that <strong>global</strong> <strong>economy</strong> is interconnected, I invest a <strong>sizeable chunk</strong> in <strong>deflationary</strong> assets.</p>
+<p>What are these assets? <strong>Gold</strong>. Since it is fixed in supply and <strong>no one can create it</strong> at <strong>mercy</strong> of any government <strong>policy</strong>, it will <strong>continue</strong> to <strong>increase</strong> in <strong>value</strong>.</p>
+<p>But there are some inherent <strong>drawbacks</strong> of <strong>Gold</strong>. (A) It can be <strong>counterfeited</strong> (B) It can be <strong>stolen</strong> (C) It is a <strong>pain</strong> to <strong>store</strong> it in <strong>physical</strong> format.</p>
+<p><img alt="" src="https://images2.markets.businessinsider.com/60301c94623bd30012bcc4a5?format=jpeg" /></p>
+<p>Therefore, I also invest in <strong>Bitcoin</strong>. How is BTC compared to gold? Well, you will find your answer <a href="https://pandatechie.in/2021/08/02/why-is-bitcoin-deflationary/">here</a>.</p>
+<h2>Conclusion:</h2>
+<p>As a kid, I used to be <strong>blasphemous</strong>. My mother always <strong>countered</strong> my <strong>arguments</strong> with one statement:</p>
+<p>"<em>Na maano to patthar hai, maano to bhagwaan</em>" (It's a piece of rock if you don't believe in it, and god if you do)</p>
+<p>Little did I know that it'll <strong>come back</strong> to me like this.</p>
+<p>While I discussed this with my <strong>wife</strong>, here's an <strong>analogy</strong> she could relate to very easily. <strong>Diamond or Zirconia</strong> are almost similar to the <strong>non</strong>-<strong>professional</strong> eye. But while we could <strong>kill</strong> each other for one (<em>Andaz Apna Apna</em> much?), the other one is <strong>worthless</strong>. It's basically all in our head and our <strong>tendency</strong> to <strong>conform</strong> with the <strong>society</strong> that we <strong>live</strong> in.</p>
+<p><img alt="" src="https://www.jewelryshoppingguide.com/wp-content/uploads/2017/07/CZ-vs-diamond.png" /></p>
+<p>Did this post help you widen your perspective about money?</p>
+<p>https://www.instagram.com/p/COt7LM0DGjr/</p>
+<p>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> and powered by <a href="https://deyga.in/">Deyga</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

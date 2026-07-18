@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Are we Really Building Web3.0? A Counter PoV on the Current State | Raghav</title>
+<meta name="description" content="Who lives under a pineapple, in the sea? It’s you if you have not heard of the latest buzz word of the tech industry, named ‘web3.0’. It is the internet powered…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Are we Really Building Web3.0? A Counter PoV on the Current State</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-06-11</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-06-11 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://lh6.googleusercontent.com/rICIstDtvJYFBkibGwfxZdE7nuPvHpqTz-vP42b2yNLzialy15x-ZDXHlHRl4TqFSZvAm1ov9b55VjvC1UQtS00bi6o3OFdjq4QLyA2FnIrFwpDN9ox4DwktvoPDFcxTA6auzfVawWnzrybV2g" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Who lives under a pineapple, in the sea? It’s you if you have not heard of the latest buzz word of the tech industry, named ‘<strong>web3.0</strong>’. It is the internet powered by <strong>Blockchains</strong> and <strong>cryptocurrency</strong> that enables its users to govern, maintain and run the network. Thus, overthrowing the dominance of <strong>big tech</strong>.</p>
+<p>The idea here is rather simple. You give up your personal data in lieu of entertainment and utility on platforms like Instagram, Twitter etc. These companies then use this data to show you relevant <strong>advertisements</strong>, tweak your opinions and change your behaviour. What do you get? Well, nothing. <strong>Web3.0</strong> plans to change it by changing the value creation model.</p>
+<p>Here’s how value is impacted in a <strong>web2.0</strong> and <strong>web3.0</strong> system.</p>
+<p><img alt="" src="https://lh6.googleusercontent.com/rICIstDtvJYFBkibGwfxZdE7nuPvHpqTz-vP42b2yNLzialy15x-ZDXHlHRl4TqFSZvAm1ov9b55VjvC1UQtS00bi6o3OFdjq4QLyA2FnIrFwpDN9ox4DwktvoPDFcxTA6auzfVawWnzrybV2g" />
+<img alt="" src="https://lh5.googleusercontent.com/B3f8Q27Tk2_WcmrAsc19KDZT2GZTgsp_gW-SwFYuPd01ZW0UzF17JV9r570LzYsrn8fOT3rVbCi4yCwZ6zS7DSFNV6gAjfapRR8ylwiEsoqbGOG5x37bY79o_hrJxRkgVlA6DK9R57_pxY2N7A" /></p>
+<p>While theoretically it looks like a transformational idea that would eventually democratize wealth in an ecosystem, there are few hurdles that need to be jumped before we go full <strong>web3.0</strong>. And that is what I intend to talk about today.</p>
+<h2>A. Technical Vs Political:</h2>
+<p>Some people believe that <strong>web3.0</strong> is trying to solve a political problem using technology. They would argue that technology was never a hindrance in creating a democratic <strong>value chain</strong>. It is rather the intention of <strong>VCs</strong> and big tech who control this industry.</p>
+<p>Let’s dive in deeper. <strong>Web3 projects</strong> ensure equal distribution using an economy based around tokens and <strong>NFTs</strong>. Think of it like this. You post a video on Instagram that goes viral. You earn a lot of <strong>social currency</strong> from it (likes/comments). However, the owner of the video is Instagram. You cannot directly monetize that video.</p>
+<p>However, <strong>NFTs</strong> on <strong>Blockchain</strong> give you the provable <strong>ownership</strong> rights to that video. You could now raise money (in the form of tokens) by selling the rights to that video. People could tip your good work using those tokens too.</p>
+<p>Now the question arises is if you could do this without <strong>Blockchain</strong>? Of course <strong>Blockchains</strong> help in managing the <strong>ownership rights</strong> and tokens way more efficiently than any other existing technology. But, big tech could have done it without Blockchain as well right?</p>
+<p>So, <strong>web3</strong> seems to be a redundant technology which is headed in the wrong direction.</p>
+<h2>B. Who Pays?</h2>
+<p>Agreed that companies are <strong>monetizing</strong> our data and making billions out of it. But in lieu of that, we are also getting free access to their platforms. You upload tons of photos on Instagram, lengthy videos on YouTube etc. Has someone ever asked for money to store that data on your behalf?</p>
+<p>Imagine paying <strong>$0.5</strong> each time you upload an HD photo on <strong>Instagram</strong> OR <strong>$10</strong> per video uploaded on <strong>YT</strong>.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>While <strong>decentralization</strong> seems to be a good idea, it surely comes with a cost. And at this point, it is very unclear how many of us are willing to pay up for <strong>safeguarding</strong> our <strong>data and privacy</strong>.</p>
+<p>Think of it from your own perspective. Are you willing to pay up? Would you rather safeguard your privacy or pay for sharing a moment with your friends and family? Tricky eh?</p>
+<h2>C. Censorship</h2>
+<p><strong>Self <a href="https://pandatechie.in/2022/02/26/what-is-web-3-how-is-it-different-from-web-2/">censorship</a></strong> sounds like a raunchy idea. But we are not sure how that is going to pan out in the woke, sensitive world that we live in. Recently, platforms like <strong>FB/Twitter</strong> banned Donald Trump as they considered him to be a threat to national peace. What happens when nobody owns the <strong>network</strong>? Do we let such incidents happen?</p>
+<p>Okay, so one obvious view point is that we let community decide if someone should be a part of the platform or not. But I feel that our collective intelligence might yield some good results but then it has to be collective.</p>
+<p><img alt="" src="https://media2.giphy.com/media/yZQ9jMAwHgjFDe8A8a/giphy.gif" /></p>
+<p>Look at social media right now, gen 'Z' are absolutely crushing it. But at the same time there are some dumb nuts that would use IG filters for:</p>
+<ul>
+<li>Checking if their teeth are yellow</li>
+<li>Checking if their skin needs sunscreen</li>
+<li>Checking if their face is symmetrical</li>
+</ul>
+<p>If the population skew on this so called 'web 3' platform is going to be the same, we may have doomsday closer than we thought.</p>
+<h2>D. We have come a complete circle:</h2>
+<p>A little context of the history of the internet shows that it was always supposed to be a <strong>decentralized</strong>, peer to peer network. All protocols that evolved in the late 90s followed that. But, we hit a roadblock when it came to <strong>scalability</strong>. That is why some companies rose to the occasion, set up a massive infrastructure and eventually took the internet to the average household.</p>
+<p><img alt="" src="https://media3.giphy.com/media/t7sEnf5w7wJ1CEPyy7/giphy.gif" /></p>
+<p>Today, we’re standing at the same point yet again. This time, we want to take back control of our <strong>data</strong> and go back to the old regime. Are <strong>Blockchains</strong> well equipped to handle this? Only time will tell.</p>
+<h1>So Where are We?</h1>
+<p>I think given the use cases that have evolved so far, we have got a long way to go. There are many variables that need to be solved for. However, one thing is for sure. We are building <strong>web2.5</strong> at least. What I am trying to say is that we are somewhere in the middle.</p>
+<p>Until we cross this <strong>long bridge</strong>, all we can do is root for the <strong>decentralized world</strong>. Because no matter the current situation, the vision seems pretty fair to me.</p>
+<p>What is your evaluation of the current situation?</p>
+<p>https://www.instagram.com/p/CdtCYiVvwC9/</p>
+<p><strong><em>'This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/"><strong>Cindy D’Silva</strong></a> and</em>* </strong><a href="https://nooranandchawla.com/">Noor Anand Chawla</a>.'***</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

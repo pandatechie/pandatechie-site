@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use Google Maps? Hidden Handy Features! | Raghav</title>
+<meta name="description" content="While pandemic may have impacted its sheen to some extent but I am sure when things get better, this piece of software called Google Maps is going to be a life …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Use Google Maps? Hidden Handy Features!</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-06-08</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-06-08 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://stuffofsummer.files.wordpress.com/2013/02/tumblr_m9hkatyrst1qg35tio1_500.gif?w=349" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>While pandemic may have impacted its sheen to some extent but I am sure when things get better, this piece of software called <strong>Google Maps</strong> is going to be a <strong>life saver</strong> yet again. If you know me, you might know that <strong>I suck big time at directions.</strong> I just can't remember them.</p>
+<p><img alt="" src="https://stuffofsummer.files.wordpress.com/2013/02/tumblr_m9hkatyrst1qg35tio1_500.gif?w=349" /></p>
+<p>I did feel bad about it momentarily until I realized, that I just might get away with it. Google maps is such a powerful tool that I can completely <strong>outsource</strong> my <strong>navigational</strong> <strong>requirement</strong> to it. However, some people still have a hard time wrapping their heads around it. So this post, is specifically dedicated to <strong>how to use google maps</strong>. There are some hidden features which can prove to be no less than a boon and I shall specifically focus on such features.</p>
+<p>Born in <strong>February</strong> of <strong>2005</strong>, Google maps was launched as a <strong>desktop</strong> <strong>application</strong> which would help people look for directions from point A to point B. Currently, it has a <strong>billion</strong> users jumping on it <strong>every</strong> <strong>month</strong>. Being one such user, I am a big fan of making the most out of a piece of tech available to us. Therefore, I tend to fiddle with every possible <strong>feature</strong> on the application. So, what are these features? Here you go!</p>
+<h2>1. Navigation:</h2>
+<p>Before you go Duh! Let me put this functionality on steroids' for you all.</p>
+<p>I was once discussing about a trip with one of my friends. One of those which we are extremely enthusiastic about but it never comes to fruition. So, we were in <strong>Delhi</strong> and were planning a road trip from <strong>Mumbai to Matheran</strong>.</p>
+<p>While understanding the <strong>time taken</strong> and <strong>distance</strong> between the two places, he tried making a <strong>search</strong> on <a href="http://google.com">Google</a>. Whereas, I opened the <strong>maps</strong>. He asked me <strong>how could I search for a route from Mumbai whilst not being in Mumbai myself.</strong></p>
+<p>Henceforth, I decided to add this functionality to the list. You can search for distance and routes between <strong>any two points</strong> in the world.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-11.31.54-AM-1-505x1024.jpeg" /></p>
+<p>Next time you search for a place, simply tap on directions as shown in the screenshot below, and you'd enter a screen where you may edit origin/destination location.</p>
+<h2>2. Adding Stops:</h2>
+<p>And if that was not enough for you, do you know you can <strong>add stops to your trip</strong>? You can find out the <strong>detour</strong> and check how <strong>route works out</strong> for you with multiple stops in between.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.24-AM-472x1024.jpeg" /></p>
+<p>Conventionally, one would search for route between <strong>Point A to B and then B to C</strong>. Drawback? You never knew what best option could be there.</p>
+<p>Google can rescue you in such a situation.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-11.41.24-AM-491x1024.jpeg" /></p>
+<p>Simply click on three dots as shown in the screenshot and select 'Add Stop'. You can drag and rearrange your desired intermediate location. Google will show you the entire route. Pretty handy right?</p>
+<h2>3. Future Traffic</h2>
+<p>A very common problem statement. You are new in town and want to <strong>catch a flight</strong> next morning. <strong>What time</strong> do you <strong>leave from your hotel</strong> to ensure that you don't miss it?</p>
+<p>Alternatively, you might want to know if you <strong>leave place A by 3 PM</strong> in the afternoon, what time would it take vis-à-vis when you leave at 5 PM?</p>
+<p>Well, Google Maps FTW.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-1-1-490x1024.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-2-1-472x1024.jpeg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-3-472x1024.jpeg" /></li>
+</ul>
+<p>Simply tap on the three dots and select <strong>'set depart or arrive time'</strong>. Pick if you wish to chose the <strong>departing</strong> time from the <strong>origin</strong> or the <strong>arrival</strong> time for your <strong>destination</strong>. Maps will give you a time range within which you should be leaving or <strong>expected to arrive</strong>. Voila!</p>
+<h2>4. Parking location:</h2>
+<p>A few months ago, I shared a solution to <a href="https://pandatechie.in/2020/10/26/parking-lot-story/">keep a note of your parking location</a>. If you reach to a <strong>location</strong> using <strong>Google maps</strong>, the moment you stop your car, beloved <strong>Google saves your parking location</strong> automatically. So next time of you are scared of getting lost in the parking lot, like I usually am, worry not! Google's got your back.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-3-1-494x1024.jpeg" /></p>
+<p>Please note that Google is also keeping a <strong>track of the time since you have parked. This would help you from getting overcharged (just in case).</strong></p>
+<p>You can simply set the directions to this location and walk back safely to your beloved vehicle.</p>
+<h2>5. Pin Dropping:</h2>
+<p>When Google Maps became a way of life for me, next big question that came up was how to <strong>memorize</strong> <strong>locations</strong> that are <strong>not on the maps</strong>. And believe you me, I was in a sales job. A typical channel management profile where <strong>visiting</strong> <strong>different customers</strong> was a daily routine. These customers resided in <strong>smallest</strong>, <strong>remotest</strong> areas of the town at times. So, how did I manage to reach them all every single time?</p>
+<p>By <strong>dropping a pin</strong> at their location. I visited an <strong>important location</strong> and <strong>dropped</strong> a <strong>pin</strong> there. <strong>Labelled</strong> the <strong>pin</strong> with the relevant name and next time if I was required to go there, I would simply navigate.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-4-489x1024.jpeg" /></li>
+</ul>
+<p>Recalibrating Current Location
+* <img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-5-498x1024.jpeg" /></p>
+<p>Dropping the pin and labeling it
+* <img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-6-494x1024.jpeg" /></p>
+<p>Accessing the saved labels</p>
+<p>All you have to do for this is tap on the <strong>icon</strong> shown in the screenshot. This will <strong>recalibrate</strong> you to your current location. Next, long press on that location and voila!</p>
+<p>You can now tap on the <strong>label</strong> icon to give it whatever name you like.</p>
+<p>You can tap on <strong>saved tab</strong> in the application to access these labels later.</p>
+<h2>6. Quick Link Buttons:</h2>
+<p>Maps is capable of suggesting <strong>certain key points</strong> on your route. The most used button for me here is <strong>petrol</strong> <strong>pump</strong>. There are other buttons like <strong>ATMs, restaurants, hotels, hospitals etc</strong>. Simply tapping one such button will <strong>populate</strong> all the <strong>options</strong> available in your vicinity. You can also explore this while your navigation to a destination is on and it will suggest you the nearby facility with the <strong>detour</strong> it is expected to cost you.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-11.31.54-AM-1024x494.jpeg" /></p>
+<p>A true life saving functionality for careless kids like me if you ask.</p>
+<h2>7. Changing Navigation Icon:</h2>
+<p>A lot of my friends think that this came out of my habit of tinkering with the system and it is purely for aesthetic purpose. However, they are partially true.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-13-at-10.51.23-AM-7-494x1024.jpeg" /></p>
+<p>By changing the <strong>iconic</strong> <strong>blue</strong> navigation mark (which merges into the background), I have changed it to a <strong>red</strong> car. This gives me <strong>better visibility</strong>.</p>
+<p>Planning to do the same? Simply tap the icon while navigation is turned on and pick the icon of your choice.</p>
+<h2>Conclusion:</h2>
+<p>This doesn't end here. There are multiple other features that are not relevant to me, but might be of some use to you. There is a way Google can suggest best <strong>public transport</strong> options for your destination. Then there is <strong>terrain/satellite</strong> view.</p>
+<p>There is also an <strong>updates</strong> section that will show you the <strong>most visited places</strong> nearby. This can be pretty handy if you are <strong>visiting a town</strong> for the first time and want to pick places for <strong>eating</strong>, <strong>sightseeing</strong> etc.</p>
+<p>The question now arises is, how well versed are you with the Google Maps? How many features mentioned above have you used already?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best New Year Resolution: Finance Version | Raghav</title>
+<meta name="description" content="2020- The year of terrors, is finally coming to an end. With vaccine on the horizon, I would love to believe that pandemic is a thing of past now and we can get…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Best New Year Resolution: Finance Version</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-12-22</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-12-22 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://cms.hostelworld.com/hwblog/wp-content/uploads/sites/2/2016/12/12339301_10156418876675165_6982707928657414417_o.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>2020- The year of terrors, is finally coming to an end. With vaccine on the horizon, I would love to believe that pandemic is a thing of past now and we can get back to our "<strong>Old Normal</strong>". However, criticism apart, this <strong>global pandemic has taught us a lot of valuable lessons</strong>. With reduced expenditure on <strong>vacations</strong>, <strong>food</strong> and other <strong>earthly possessions</strong>, most of us have finally come to a conclusion that this <strong>isn’t as bad as we thought</strong>. We could finally draw a clear line between <strong>necessary and luxury expenses</strong>. Therefore, even after we get out of Covid-19 thing, I would carry some of the <strong>characteristics developed in these 10 odd months with me for years to come</strong>. Therefore, I have worked on my top new year resolution ideas for a better financial life.</p>
+<p>2020 was definitely an year of learning for me. I learnt the long overdue <strong>basics of personal finance</strong>. For the first time in my life <a href="https://pandatechie.in/2020/11/30/personal-finance-and-its-importance/">I could predict what my salary for the next month is going to be</a>. I always thought that <strong>financial literacy is a side effect of money</strong>. So, when I'll start earning more, I'll probably learn how to manage it. However, in reality, <strong>money is a side effect of financial literacy</strong>. Though I learnt it the hard way, my new year resolution is based on this theme only.</p>
+<h2>1. Spending on experiences rather than products</h2>
+<p>Rather than spending on the products that I may not even use after a few days of purchase, I would rather spend on experiences that can teach me something. There is a reason we have practical exams in school and college. And I am not giving this year to theory.</p>
+<p><img alt="Spending on experience: new year resolution" src="https://cms.hostelworld.com/hwblog/wp-content/uploads/sites/2/2016/12/12339301_10156418876675165_6982707928657414417_o.jpg" /></p>
+<p>On a similar note, I have been observing for past two years that I often go to many short trips. This year, I went to Goa, Daman and Lonavala. I would want to change this. <strong>Instead of spending 20-25k on a short trip, I think it would make much more sense to spend 80k for a longer vacation</strong>. Every final day of our short trip, me and my spouse had those <strong>'back to work' blues</strong>. I think a longer trip may help us with that situation a bit.</p>
+<h2>2. Stepping up SIP:</h2>
+<p>Hopefully, we all would get increments this year. Last year may be a total washout for most of us, but hope kept us going. And with the <strong>pace of economic recovery improving steadily</strong>, I think we can expect some bonus as well. This year, <strong>my portfolio will get an increment in the similar proportion</strong>. I would rebalance and <a href="https://pandatechie.in/2020/12/05/what-is-step-up-sip-and-how-to-calculate-it/">step up the winner SIPs</a> in my portfolio. Not only that will help me realize my goals faster, I would <strong>automatically spend less on 'not so important' stuff</strong>.</p>
+<p><img alt="Step up SIP" src="https://pandatechie.in/wp-content/uploads/2020/12/business-man-working-with-digital-tablet-smart-phone-running-toward-top-blue-business-graph-can-be-used-workflow-layout-banner-diagram-step-up-options-web-design-timeline-infographic-template_3248-3531.jpg" /></p>
+<h2>3. Using Credit Card for necessities instead of luxury expenses:</h2>
+<p>In 2020, I established that <a href="https://pandatechie.in/2020/12/03/advantages-and-disadvantages-of-credit-card/">credit cards are NOT evil</a>. It is our sheer <strong>lack of financial literacy</strong> that would make us believe that way. This year, I would learn <strong>more about "relevant" offers applicable on my credit card and try to use them for my benefit</strong>. For example, my SBI BPCL card gave me 2k worth of free diesel this month. I also bought a free office chair for me using SC Landmark reward points.</p>
+<p><img alt="Spending on CC:  New year Resolution" src="https://imgk.timesnownews.com/story/1569653930-Credit_Card.jpg?tr=w-560,h-292,fo-top" /></p>
+<p>This would also mean that <strong>I'll have to give all those lucrative 'No Cost EMI' offers from Amazon and Flipkart, a pass</strong>. Again, the line between <strong>necessity and luxury is very fine and debt trap is very real.</strong> One needs to be disciplined. This new year resolution means that I will use CC for my best and not let CC companies use me instead. There will be a thumb rule governing this: <strong>if there is an expense which could've been avoided if I didn't have a credit card, I would avoid it any way.</strong></p>
+<h2>4. Creation of a hobby budget:</h2>
+<p>This is in line with my learning goal. For the past 5 years now, <strong>I wanted to pick up a new hobby but never had money to nurture it</strong>. This new year resolution will force me to account for all such expenses. I will create a <strong>separate hobby budget</strong> for me and my spouse. I'm thinking something on the lines of 10k per person for the entire year. So all those <strong>instruments I wanted to give a shot, her bakery course, blogging, Udemy, Coursera, everything is back on charts</strong>. Also, I'll ensure that this gets spent. I would want both of us to exit 2021 with a new skill in our pockets.</p>
+<p><img alt="Hobbies" src="https://fjwp.s3.amazonaws.com/blog/wp-content/uploads/2020/02/29113959/hobby-money.png" /></p>
+<h2>5. Continuing the Learning and Blogging Journey</h2>
+<p>Getting new hobbies shouldn't mean that you let go the older ones. This year, I want to <strong>dive deeper into the world of personal finance and spread the word at an equivalent pace</strong>. The more I learn, more I am equipped to help others. <strong>Learning is a never ending journey</strong> and this new year resolution will ensure that I realize that.</p>
+<h2>Conclusion:</h2>
+<p>Unlike past years and many of us, I haven't picked any <strong>unrealistic goals</strong> for 2021. Also, I haven't come up with these new year resolution ideas while writing this article. I have been thinking about them for a long time and have a 'well thought of' plan in place to achieve them. I hope new year brings us the aspired financial freedom or sets us on that path at least. What are your new year resolutions?  Let me know in the comment section below or on <a href="https://www.facebook.com/kaafi.pan.da.techie">Facebook</a>, <a href="https://twitter.com/panda_techie">Twitter</a> or <a href="https://www.instagram.com/pandatechie/">Instagram</a>.</p>
+<p>Until Next Time. . .</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

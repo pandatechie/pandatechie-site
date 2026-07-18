@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Should You Learn Web 3? | Raghav</title>
+<meta name="description" content="Web 3, the latest avatar of internet is all set to create ripples in internet based business models. Centered around the theme of data privacy and ownership, [w…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Why Should You Learn Web 3?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-03-13</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-03-13 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="data:image/png;base64,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" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><strong>Web 3</strong>, the latest avatar of internet is all set to create ripples in internet based <strong>business models</strong>. Centered around the theme of data privacy and ownership, <strong><a href="https://pandatechie.in/2022/02/26/what-is-web-3-how-is-it-different-from-web-2/">web 3</a></strong> is here to stay. The revenue models of <strong>web 2</strong> internet companies like <strong>Facebook</strong> and <strong>Apple</strong> have raised a lot of eyebrows over the past few years. This is mainly because of <strong>monetization</strong> of user data. Billions of unwitting users have flocked on to the platforms created by these companies in the past.</p>
+<p>If you understood where this conversation is headed, it should not come as a surprise to you that <strong>web 3</strong> is going to be very big. So, in this post, we discuss why you should learn about <strong>web 3</strong>. Even more importantly, we will discuss where to learn web 3 from.</p>
+<h2>Why Should You Learn Web 3?</h2>
+<p>Well, unless we run you through the potential of <strong>web 2</strong>, it is hard to convince you to learn on this relatively <strong>new technology</strong>. Therefore, it is time to dive deeper into why one should even consider learning about <strong>web 3</strong>:</p>
+<h3>A. History Repeats Itself:</h3>
+<p>When <strong>internet</strong> came into being, a lot of us were too young and naïve to realize its potential. Some companies took over the charge of making it <strong>mainstream</strong>. In this process, these companies made a fortune and the founders of these companies are currently the <strong>wealthiest people</strong> on the <strong>planet</strong>.</p>
+<p>It was definitely not easy for them to push against the odds. Barring a few <strong>early adopters</strong>, masses used to think that <strong>internet</strong> is going to ruin their lifestyle. People presented use cases like <strong>gambling</strong>, <strong>pornography</strong> and <strong>hate crimes</strong> to prove their point. All of that happened, but upside was too huge for this <strong>trade off</strong>.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<p>Today, internet has revolutionized our <strong>education, work, healthcare, travel, shopping</strong> etc. Everyday newer and pleasant experiences are being generated using the <strong>magic of internet</strong>.</p>
+<p>With <strong>web 3</strong> just around the corner, we are on the cusp of a similar disruption. Do you want to miss out on this one the way we missed <strong>web 2</strong>? No right?</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<p>Similarly, <strong>web 3</strong> is even more focused on distribution of power. It is essential that this sentiment is <strong>leveraged</strong> to equally empower everyone in the <strong>network</strong> as compared to a few individuals running the show.</p>
+<h3>B. Moral Value:</h3>
+<p><strong>Web 3</strong> tries to break free from the <strong>capitalist mindset</strong> while maintaining a balance between <strong>capitalism</strong> and <strong>socialism</strong>. <strong>Social media companies</strong> are worth billions right now by selling <strong>'you'</strong> as a <strong>product</strong>. Do you think that this is fair? Agreed that they provided us with extremely engaging and smooth user experience, that too for free. But does that mean they can <strong>monetize</strong> the very <strong>fabric</strong> of our existence, our personalities?</p>
+<p><img alt="" src="https://media2.giphy.com/media/3oKIPdQnwoQJilRHji/giphy.gif" /></p>
+<p>Apart from that, <strong>social media companies</strong> have also started leveraging <strong>artificial intelligence</strong> and pattern recognition techniques to feed you with the content that keeps you hooked on to their platform for longer. Why? Because more you stay on these <strong>platforms</strong>, greater the number of ads that can be fed to you. Do you think it is okay to play with your brain in order to make money off it?</p>
+<p>Well, if these situations make you contemplate harder on the future of the mankind, <strong>web 3</strong> is your <strong>friend</strong>.</p>
+<p>With the revenue model shifting away from <strong>monetizing</strong> users to actually allowing them to <strong>monetize</strong> their <strong>content</strong>, these problems are likely to go away.</p>
+<p><img alt="" src="https://www.bkacontent.com/wp-content/uploads/2020/06/website-monetization-with-a-marketing-content-writer.jpg" /></p>
+<h3>C. Monetary Value:</h3>
+<p>Early adopters of any novel idea have been rewarded exponentially in the past. Think of <strong>Bitcoin</strong>. Those who invested in it are sitting on massive piles of cash. A more recent example would be of a project called ENS or <strong>Ethereum Name Service</strong>. People who invested about <strong>$100</strong> to purchase a <strong>decentralized domain</strong> name (.eth) from their platform were rewarded with thousands of dollars as a giveaway for being early adopters.</p>
+<p><img alt="" src="https://media1.giphy.com/media/67ThRZlYBvibtdF9JH/giphy.gif" /></p>
+<p>So far, we have discussed about the benefits of being a part of a <strong>web 3</strong> project. What if you take it up a notch and build one? Yes. Web 3 developers are in high demand right now due to huge <strong>demand</strong> and supply gap. Median salary of a <strong>web 3</strong> developer is significantly higher than a web 2 based developer.</p>
+<p>Don't know how to code? <strong>Web 3</strong> still has space for you. Skills like <strong>content creation</strong>, <strong>meme creation</strong>, <strong>graphic design</strong> are some of the most in-demand skills of this era.</p>
+<p>So who is stopping you from jumping in to test the waters?</p>
+<h3>D. Technology:</h3>
+<p><strong>Money</strong> always is and should be the by product of doing something you love. In the case of <strong>web 3</strong>, the biggest magic lies in the technology powering it. <strong>Blockchains</strong> have the potential of changing every industry that we know of. Therefore, it is imperative that one learns about this technology sooner than later. Let us face it, read or not, <strong>Blockchain technology</strong> is going to impact our life.</p>
+<p>Apart from that, the overall technology seems to be quite intriguing as it is solving some biggest problems of the modern times. Unequal distribution of power and money, <strong>centralization</strong>, lack of scarcity of <strong>digital assets</strong> and prevention of duplication of money on the internet. These are some of the issues being tackled by the <strong>web 3 technology</strong>.</p>
+<h3>E. Saturating Web 2:</h3>
+<p>After the immense success of <strong>web 2</strong> companies, there is finally a moment where people believe that the growth might be plateaued. Earlier this month, <strong>Facebook</strong> stock price tumbled by a <strong>gargantuan 25%</strong>. To put this into perspective, Facebook lost its <strong>market cap</strong> equivalent to the <strong>GDP</strong> of <strong>New Zealand</strong>.</p>
+<p>But why did it happen? It is because for the first time in 18 years, <strong>Facebook</strong> showed a decline in the number of users coming to its platform. Does that mean <strong>web 2 social media</strong> has reached its top and it is all downhill from hereon?</p>
+<p>Let us evaluate it from a different lens. If social media model was working so well, why did <strong>Mark</strong> Z<strong>uckerberg</strong> rebranded the company as <strong>Meta</strong>? Why did they pivot into <strong>virtual world</strong>.</p>
+<p><strong>Web 3</strong> must hold something which is why Meta has acquired <strong>Oculus</strong>. A company that manufactures <strong>VR</strong> <strong>headsets</strong>.</p>
+<p>Apart from that, other <strong>web 2</strong> giants like <strong>Nike, Gucci, LV</strong> have been found foraying into <strong>NFT</strong> and <strong>Metaverse world</strong>.</p>
+<h2>But What Should I Do?: An Example Problem</h2>
+<p>Well, cut through the noise and you would realize that there are still many problems that need to be addressed before web 3 goes mainstream. There are problems like scalability, interoperability, UX etc. which need to be solved for. People who will acknowledge these problems and come up with a solution would generate a lot of wealth for themselves.</p>
+<p>One example of such a problem is of notifications.</p>
+<p>Yes, you heard it right. It may sound as a measly concern on the face of it, but it is actually a huge experience driver in web 2 space. Let me give you an example. Say you post a picture of yourself on Facebook. Now imagine you have to open the application each time to check the engagement on your image (likes and comments).</p>
+<p><img alt="" src="https://media1.giphy.com/media/wBvdVGaSsamOxPy5qY/giphy.gif" /></p>
+<p>How inefficient would that be. So to solve for that problem, Facebook sends you notifications.</p>
+<p>Apply the similar principle on WhatsApp. What if you had to stay on the application to continue your chat and there was no way to know it right from the lock screen.</p>
+<p>These notifications are handled by APNS (Apple Push Notification System) and Android Push Notification system for iOS and Android Ecosystems respectively. These centralized authorities lay down the norms for sending notifications.</p>
+<h3>Web 3 Variant?</h3>
+<p>Oh, but web 3 is not run via Android or iOS. So how do projects send keep their users notified? For example, who is going to tell you that you are about to get liquidated. You just cannot spend your entire time on the dApp watching the price movements.</p>
+<p><img alt="" src="https://mojkripto.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-10-at-17.36.14.jpeg" /></p>
+<p>One project that solves for problems like these is EPNS or Ethereum Push Notification System. EPNS allows you to receive notifications from the decentralized world and also get incentivized for it.</p>
+<p>Basically, what we are trying to say is that even menial problems have immense value potential. You are only limited by your imagination.</p>
+<h2>See You on the Other Side:</h2>
+<p>Now you understand the importance of learning <strong>web 3</strong> the best way to learn it is venture and fiddle around with Decentralized applications out there. What else? Stick around with pandatechie to keep up with learning.</p>
+<p>Got Questions?</p>
+<p>https://www.instagram.com/p/Ca2RnPsvCUf/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

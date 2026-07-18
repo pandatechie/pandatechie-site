@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What should Persistance do to Win Solana Liquid Staking? | Raghav</title>
+<meta name="description" content="Who lives under the rock, in the sea? It could be you if you do not know that our beloved Persistence, the liquid staking pioneer on Cosmos, is soon making its …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">UNCATEGORIZED</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What should Persistance do to Win Solana Liquid Staking?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-05-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-05-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media4.giphy.com/media/3ornjZLITGcFQVRbxK/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Who lives under the rock, in the sea? It could be you if you do not know that our beloved Persistence, the liquid staking pioneer on Cosmos, is soon making its debut on Solana. Yes! Very soon, you will be able to stake your SOL and get a representative token to use within the Solana DeFi ecosystem.</p>
+<p>Can't believe that I am saying this, but folks at Pstake finance came up with the most comical way of announcing their arrival on Solana. The entire campaign was centered around your PP size.</p>
+<p>For the boomers and fellow millennials, yes, we are still talking about a legitimate financial product. Not just some random joe but something that has literally made a difference in the industry.</p>
+<p>Did my PP spark your curiosity?</p>
+<p><img alt="" src="https://media4.giphy.com/media/3ornjZLITGcFQVRbxK/giphy.gif" /></p>
+<p>No? Checkout the thread below. Yes? Get yourself checked.</p>
+<p>https://twitter.com/pandatechie_/status/1780216896492601561</p>
+<p>Bragging my 69 Size PP</p>
+<p>Yo, the Panda next door also managed to win some moolah out of this submission on Superteam.</p>
+<p>But today, the blog will assume that you understand what is liquid staking and why is it one of the most important aspects of Blockchain ecosystem. If you are still catching up, I recommend that you read <a href="https://pandatechie.in/2024/04/28/staking-101-liquid-staking-ecosystem-on-cosmos/">this</a> blogpost on the 'what' and 'why' of the topic in discussion.</p>
+<p>For now, let us understand what Persistence needs to do to win this meme fest named Solana.</p>
+<h2>Why Persistence Chose Solana?</h2>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/image-7.png" /></p>
+<p>While the fam at Persistence have had a vision of a multichain future ever since their inception, that does not mean that you will end up partnering with every Layer 69 Tom, Dick and Harry in the market.</p>
+<p>So the evident question here is: Why Solana?</p>
+<p>Well, there are some fundamentals that must be working in favor of this decision, as follows:</p>
+<h3>1. Not Just a Meme Shit Show:</h3>
+<p>Contrary to popular belief, Solana is not solely about meme coins. The community here likes to have some fun and I agree we can go overboard at times (most times, okay!) but then there is also a serious vision to build the decentralized finance hub on Solana Blockchain.</p>
+<p>All this TPS, Speed, Low Gas Fees was not designed just so you could run your $MUDIJI atop it. There is a lot of meaningful stuff happening.</p>
+<p><img alt="pump.fun screenshot" src="https://pandatechie.in/wp-content/uploads/2024/05/image-2-1024x640.png" /></p>
+<p>pump.fun: A no-code platform to launch meme coins</p>
+<p>And to give credit where its due, our meme work is pretty lit as well. Don't believe me? Check out the revenues generated by your marquee DEX Uniswap Vs Pump Fun.</p>
+<p>https://twitter.com/based16z/status/1787767348419535303</p>
+<p>LOL?</p>
+<p>Probably now you can understand why PP sizes are a best way to enter this burgeoning ecosystem.</p>
+<p>Anyway, with that criticism out of the way, Solana is also a major DeFi player.</p>
+<p>A quick snapshot of <a href="https://defillama.com/chains">DeFi Llama</a> reveals that your meme lord chain is currently standing at rank 4 when it comes to TVL.</p>
+<p>With $4B in value locked and headwinds for Binance, I believe this flippening is due anytime for the 3rd position.</p>
+<p><img alt="DeFi Llama screenshot to show Solana liquid staking ecosystem" src="https://pandatechie.in/wp-content/uploads/2024/05/image-3-1024x545.png" /></p>
+<p>As you can see from the snapshot, it is already doing more volumes than its peers.</p>
+<p>So, the DeFi maturity is on Solana, albeit nascent, is ripe for a boom.</p>
+<h3>2. Current Liquid Staking on Solana:</h3>
+<p>Despite the state of DeFi, Solana is a laggard in terms of liquid staking. This can be attributed to lack of knowledge or the maturity of the ecosystem.</p>
+<p>Probably all those memes are coming back to bite you.</p>
+<p>While I have covered this in detail in this <a href="http://pandatechie.in/2024/05/05/why-solana-needs-liquid-staking">blogpost</a>, here's a quick tl;dr.</p>
+<p>According to <a href="https://dune.com/cz_5052/etherum-eth">Dune</a>, 26% of ETH is staked. About 39% of this is done through liquid staking.</p>
+<p>On Solana, <a href="https://dune.com/cz_5052/etherum-eth">67.3% is staked</a> but only 5.1% (of the 67) is done through liquid staking.</p>
+<p>So there is definitely a scope of the entire market expanding.</p>
+<h2>State of Solana Liquid Staking:</h2>
+<p>As an investor, the best way to figure out what's going to work and what isn't is by understanding the competitive landscape.</p>
+<p>Currently, Solana has four major players covering roughly 80% of the market:</p>
+<ul>
+<li>Jito</li>
+<li>Overclcock</li>
+<li>Marinade Finance</li>
+<li>Blaze Stake</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/Tom-Wan-tweet-image-1024x380.jpeg" /></p>
+<p>While Jito is currently leading the market with roughly 46% share, this wasn't always the case.</p>
+<p>Starting from humble beginnings, Jito held only a 13% market share about a year ago.</p>
+<p><img alt="Jito Liquid Staking TVL on Solana" src="https://pandatechie.in/wp-content/uploads/2024/05/image-4-1024x608.png" /></p>
+<p>This meteoric rise in Jito's success can be attributed to three main factors. They followed in the footsteps of Lido (the biggest player in this space) to win Solana. Let us break it down.</p>
+<h3>1. Liquidity:</h3>
+<p>The whole purpose of this game of liquid staking is to maintain the liquidity in the ecosystem. And to do that, this is often prioritized by Jito.</p>
+<p>This is done specifically by providing liquidity on JitoSol/Sol pairs. Why?</p>
+<h4>1.A Ease of conversion:</h4>
+<p>A native token pair allows users to easily convert between the staked and unstaked versions of the token. For example, a SOL/JitoSOL pair allows users to swap their staked JitoSOL tokens back to regular SOL whenever they want, providing flexibility and liquidity.</p>
+<h4>1.B Stability:</h4>
+<p>Deep liquidity in the LST/native token pair helps maintain the price of the LST closely pegged to the native token. Without sufficient liquidity, the LST price could deviate significantly from the native token, making it less attractive to use.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/1520079724386.jpeg" /></p>
+<p>Apart from that, LPs would use this pair to safely park their assets without worrying about <a href="https://pandatechie.in/2021/10/16/what-is-impermanent-loss/">impermanent loss</a>.</p>
+<h4>1.C Composability:</h4>
+<p>Many DeFi protocols and dApps on the blockchain are built around the native token. Having a liquid native token pair allows the LST to be used seamlessly in place of the native token across the ecosystem, as a collateral asset, trading pair, etc. This composability is key to driving demand and adoption for the LST.</p>
+<h2>2. Partnerships:</h2>
+<p>Having robust utilities for the LST tokens makes it easier to onboard new users to the platforms. As adoption grows, it becomes more compelling to pitch these tokens to potential partners and institutions for integration.</p>
+<p>Lido Partnerships:</p>
+<ul>
+<li>Lido has integrated stETH with top DeFi protocols, expanding its utility across the ecosystem.</li>
+<li>Lido has been listed on major crypto exchanges like Bybit, increasing accessibility.</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/05/image-8.png" /></p>
+<ul>
+<li>BitDAO, one of the largest decentralized autonomous organizations (DAOs), has onboarded and supports Lido.</li>
+<li>Blast, a new Ethereum layer 2 network, has integrated Lido, helping drive further growth. This goes on to show us that this is a never ending journey. In a speculative market, people will jump onto the next big thing. Therefore, as the custodian of security and liquidity, you need to be present before the customers.</li>
+</ul>
+<p>On the similar lines, Jito partnerships are as follows:</p>
+<ul>
+<li>jitoSOL, Jito's liquid staking token, is integrated with leading protocols on Solana such as Marginfi, Solend, Kamino Finance, and Drift Protocol.</li>
+<li>Jito has gained support from top ecosystem partners like Multicoin Capital, a major crypto investment firm that has invested in Jito.</li>
+</ul>
+<p>Having strong token utilities through DeFi integrations, exchange listings, and partnerships with DAOs/projects makes LSTs more attractive and facilitates user onboarding. Prominent partnerships signal legitimacy and create network effects, thereby driving further adoption of these liquid staking solutions.</p>
+<h2>3. Multichain:</h2>
+<p>While Solana is a monolithic giant, I believe it will become extremely important for these protocols to hop chains so that liquidity can move from one place to the other. This will ensure that liquidity does not get staggered and different ecosystems can share it amongst themselves.</p>
+<p>A few glimpses in this direction are already evident.</p>
+<p>Lido has gained a first-mover advantage by expanding to leading L2 networks like Optimism and Arbitrum.</p>
+<p>With this expansion, Lido's wrapped staked ETH token (wstETH) has become the dominant liquid staking token on these L2 networks as well.</p>
+<p>Integrating with L2s early allows Lido to capitalize on the growing DeFi activity and demand for liquid staking solutions on these scalable networks.</p>
+<p><img alt="Jito Liquid Staked Sol bridged using Wormhole" src="https://pandatechie.in/wp-content/uploads/2024/05/image-5-1024x969.png" /></p>
+<p>Jito Multichain with Wormhole</p>
+<p>At the same time, Jito has also partnered with Wormhole to bridge jitoSOL, their liquid staking token, to Arbitrum. Currently, the demand and volume of jitoSOL bridged to Arbitrum is less than $1 million, indicating it's still early days.</p>
+<p>However, as jitoSOL gets integrated more widely on Arbitrum, the bridge volume will grow significantly.</p>
+<p>While the Solana ecosystem is growing rapidly, there are interesting "blue chip" DeFi protocols on Ethereum worth partnering with.</p>
+<p>Expanding to Ethereum L2s allows Solana-based projects like Jito to tap into the mature Ethereum DeFi ecosystem and its user base. Cross-chain integration and bridging assets between ecosystems are seen as crucial strategies for growth and adoption.</p>
+<h2>Finally:</h2>
+<p>A lot of people treat DeFi as a pure play technology game, whereas it has a lot more nuances than that. The partnerships and BD happens in the offline world just like a regular web2 product. That's what makes it super exciting.</p>
+<p>Will Persistence live upto the expectations of this crowded chain? You tell me!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JusPay: The Fintech behind the Scenes | Raghav</title>
+<meta name="description" content="Gone are the days when we preferred to visit a brick-and-mortar store to buy something. World has been moving online at a steady pace, more so after the pandemi…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">JusPay: The Fintech behind the Scenes</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-12-at-4.53.55-PM-1024x662.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Gone are the days when we preferred to visit a <strong>brick-and-mortar store</strong> to buy something. World has been moving <strong>online</strong> at a steady pace, more so after the <strong>pandemic</strong>. While we lay back in our <strong>comfortable</strong> <strong>sofa</strong> and order something online, we overlook the <strong>elaborate tango</strong> our "<strong>submit</strong>/<strong>pay</strong>/<strong>proceed</strong>" button sets off in the eco system. Although we are <strong>conscious</strong> about the effort <strong>delivery</strong> <strong>executives</strong> put in to deliver our favorite <strong>food</strong> on <strong>time</strong>, there is another set of people that is often <strong>ignored</strong>. Yes, I am talking about the <strong>developers</strong> that enable these beautiful <strong>systems</strong>. Our money is no more <strong>physical</strong>. India Inc. processed <strong>electronic</strong> transactions worth <strong>INR 29.5 trillion</strong> in <strong>FY2019</strong>.</p>
+<p><img alt="JusPay page on Swiggy" src="https://pandatechie.in/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-12-at-4.53.55-PM-1024x662.jpeg" /></p>
+<p>JusPay Page on Swiggy</p>
+<p>With that being said, it is fair to assume that a simple <strong>barter</strong> of <strong>physical</strong> <strong>money</strong> in exchange <strong>goods</strong> is not working any more. So someone has to step up and <strong>integrate</strong> the complex <strong>cards</strong>, receiver's <strong>banks</strong>, sender's banks, so that you can order your <strong>Pizza</strong> seamlessly. And if you do it on a regular basis, you must have come across our today's hero of the article, <strong>JusPay</strong>. Still unsure? Next time while you are paying for food on <strong>Swiggy</strong> through a <strong>card</strong>, lookout for the page shown in the <strong>image</strong>.</p>
+<h2>How does Online Payment Happen?</h2>
+<p>To appreciate the entire system of payments, let's dive a little deeper on <strong>how these payments actually happen</strong>? What is brewing in the <strong>backend</strong> after all? For this, I would go ahead with the example of <strong>Swiggy</strong>. Let's assume you are paying through <strong>HDFC bank</strong> debit card here while ordering your favorite food.</p>
+<p><img alt="Flow of online payments through JusPay" src="https://pandatechie.in/wp-content/uploads/2021/04/Yellow-and-Blue-Enrollment-Process-Flowchart-2.png" /></p>
+<p>Flow of Online Payments</p>
+<p>As we see, in the above example, if we <strong>remove</strong> the likes of <strong>JusPay</strong> from the system, the <strong>onus</strong> will lie on the <strong>receiver's</strong> bank to <strong>verify</strong> all the <strong>details</strong>. That is exactly what happened back in 1990s. But as we all know, the <strong>quantum</strong> of <strong>payments</strong> processed then and now is not even comparable. Think of it this way. If you would bring someone from 1920s to 2020s, they would probably start worshipping us. We transact without moving, we fly, we talk to each other with videos despite being thousands of kilometers away. Coming back to JusPay, hope this throws a light on the <strong>indispensability</strong> of the platform.</p>
+<p>Another drawback of banks doing it instead of third party softwares like JusPay is that banks in that case won't be <strong>Customizable</strong>, <strong>Scalable</strong> and <strong>Standardized</strong>. There are so many banks in India. Imagine depending on the merchant and your bank account, each one of them would have to come up with it's <strong>own version of payment gateway</strong>.</p>
+<h2>About JusPay?</h2>
+<p>The platforms that integrate merchants with banks to <strong>enable seamless payments</strong> are called payment gateways. JusPay is one such payment gateway. As per <a href="https://www.investopedia.com/">Investopedia</a>, a <strong>payment gateway</strong> is a technology used by merchants to accept <strong>debit or credit card purchases</strong> from customers. The term includes not only the <strong>physical card-reading</strong> devices found in brick-and-mortar retail stores but also the <strong>payment</strong> processing portals found in online stores.</p>
+<p>You can find JusPay's software on some key online platforms like <strong>RedBus.in, Snapdeal, Freecharge, Swiggy, Amazon, Airtel, Flipkart, Big Basket etc</strong>. Company touts of processing <strong>100mn transactions</strong> each day with a total transactions of <strong>4.1bn</strong> till date.</p>
+<p>Also, if you are thankful for the fact that your phone now <strong>auto fetches the OTP</strong> from messages while you are trying to make a payment, please take a moment to thank them as they have been pioneers of such innovations.</p>
+<p>The company was founded back in <strong>2012</strong>. The founder of the company is <strong>Vimal Kumar</strong>. Vimal has worked Amazon in the software development and later headed Bank Bazar's IT as Chief information officer.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-5.png" /></p>
+<p>Auto capture OTP</p>
+<h2>JusPay's Data Breach:</h2>
+<p>While the story so far seems to be very happy, not everything is roses and sunshine here. Whenever there is <strong>money</strong> involved, there has to be <strong>crooks</strong> in the picture too. And when you are processing <strong>millions</strong> of transactions daily, you are essentially a <strong>hotbed</strong> of <strong>fraudulent</strong> activities.</p>
+<p>About three months ago in <strong>January 2021</strong>, JusPay was a victim of a <strong>cyberattack</strong> that <strong>leaked</strong> the information of <strong>3.5 crore</strong> <strong>users</strong> on the dark web, making this the <strong>biggest data breaches in India</strong> so far.</p>
+<p>The statement released by JusPay after the incident and it's interpretation below:</p>
+<p><img alt="" src="https://securitytoday.com/-/media/SEC/Security-Products/Images/2018/07/costofdatabreach.jpg" /></p>
+<p><em>“Juspay was victim of a malicious and unlawful cyberattack on August 18, 2020. Our threat response system immediately detected the breach and we were able to terminate the attack. Our immediate audit post the incident narrowed the breach to an isolated system containing non-sensitive masked card primarily used for display purposes on merchant UI. While we estimate information of 35 million customers to be breached – it is important to note that customers’ full card numbers, order information, card PINs, or passwords are secure. The compromised data does not contain any transaction or order information. The claim that data of 100 Mn Indians was breached is grossly incorrect,” as per the statement.</em>"</p>
+<p>What JusPay is trying to say here is that although the data for 35mn people was leaked, but it was only the <strong>masked credit card numbers</strong> that you see on your e-commerce sites in the form of <strong>XXXX XXXX XXXX 4325</strong>. All other details like PINs, passwords etc. are safe.</p>
+<p>So, while we have come a long way in making our lives easier and paying anything with a click of a button, so have these <strong>low lives</strong> who <strong>attempt</strong> to access <strong>sensitive</strong> <strong>customer</strong> information just to <strong>sell</strong> it for <strong>money</strong>.</p>
+<h2>Conclusion:</h2>
+<p>I always believe that <strong>gratitude</strong> is a powerful emotion. While some of us practice it regularly, I am sure that none of us tries to <strong>express it to the tech systems running 24x7</strong> to make our lives simpler. So today, let's give a heart felt '<strong>Arigato</strong>' to systems like these who <strong>bridge the gap between our Pizza and us, one transaction at a time</strong>.</p>
+<p>What do you think about this? Am I crazy or does it make sense?</p>
+<p>This Blogpost is in association with <a href="https://www.theblogchatter.com/">BlogChatter's</a> #BlogchatterA2ZChallenge. As a part of this challenge, I write on fintech everyday for each letter of English alphabet. Read other posts <a href="https://pandatechie.in/tag/blogchattera2zchallenge/">here</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

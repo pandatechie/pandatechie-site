@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Redirect Your Unstoppable Domain to a Traditional Website? | Raghav</title>
+<meta name="description" content="A few days ago, I [purchased my first NFT](https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/). No it was not a JPEG of an ape…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Redirect Your Unstoppable Domain to a Traditional Website?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-12-20</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-12-20 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/12/image-18.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>A few days ago, I <a href="https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/">purchased my first NFT</a>. No it was not a JPEG of an <strong>ape</strong> or <strong>Donald Trump</strong>. It was my first <strong>web3 purchase</strong> of a <strong>domain name</strong>. When you make a purchase in the web3 world, it is stored in the form of <strong>immutable records</strong> on <strong>blockchain</strong>. For this to happen, you need to pay a gas fees for this transaction. This is in addition to the <strong>domain purchase fees</strong>. Since <strong>gas fees</strong> on <strong>Ethereum</strong> can be out of bounds at times, <strong>Unstoppable domains</strong> introduced the <strong>functionality</strong> of <strong>minting</strong> on <strong>Polygon</strong>. Polygon is a L2 solution that is solving the scalability problems of <strong>Ethereum Mainnet</strong>.</p>
+<p>Long story short, while I purchased the <strong>domain</strong> for <strong>gas fee &lt;$1</strong>, there were a lot of <strong>features</strong> that were <strong>under development</strong>. These features were already made live on <strong>domains</strong> purchased on <strong>Ethereum</strong> Blockchain but <strong>not</strong> on <strong>Polygon</strong>. One such feature was <strong>website management</strong>. I have listed other shortcomings (which will get resolved in future) for unstoppable domains <a href="https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/">here</a>.</p>
+<p>After waiting for about 15 days, I finally got a mail from the Unstoppable Domains team. <strong>Website Management</strong> is <strong>NOW LIVE</strong> for Polygon. So in today's blogpost, I am going to walk you through the steps of doing so. How to Redirect Unstoppable Domain to a Traditional Website?</p>
+<h2>What is Website Management?</h2>
+<p>As mentioned in the previous <a href="https://pandatechie.in/2021/12/01/what-is-unstoppable-domains-my-first-nft-purchase/">blogpost</a>, one of the reasons to purchase an Unstoppable domain was to <strong>run</strong> this <strong>website</strong> on the top of it. There are couple of options when it comes to website management on an unstoppable domain:</p>
+<p><strong>A.</strong> You could either <strong>build</strong> a <strong>new website</strong> from the scratch and then launch it.</p>
+<p><strong>B</strong>. You could <strong>redirect</strong> your unstoppable domain to a <strong>traditional</strong> https domain.</p>
+<p><em>I chose the latter option because of the following reasons:</em></p>
+<p><strong>A.</strong> For starters, browsers are still <strong>unable</strong> to open the <strong>websites</strong> that end with <strong>.crypto, .bitcoin, .x</strong> etc. Especially for the domains minted on <strong>Polygon</strong>, you need an <a href="https://unstoppabledomains.com/extension?utm_campaign=20211216_Newsletter&amp;utm_content=20211216_Newsletter&amp;utm_medium=newsletter&amp;utm_source=email">extension</a> for browser to open these sites.</p>
+<p><strong>B.</strong> Even if you manage to do that, there is still no way for someone to <strong>run</strong> these <strong>websites</strong> on <strong>mobile</strong> which is the highest <strong>traffic generator</strong> when it comes to online content.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-18.png" /></p>
+<p>With that explainer out of the way, let's understand how to redirect your unstoppable domains to a traditional website. In this example, I redirected pandatechie.crypto (NFT Domain) to pandatechie.in (Traditional blog URL).</p>
+<h2>Entering Web3, One Step At a Time:</h2>
+<p>While there is already a tutorial available on Unstoppable Domains to guide you on how to do this, I would like to share it in my words with special <strong>emphasis</strong> on <strong>points</strong> where I got <strong>stuck</strong>. This would help you avoid those pitfalls from the very beginning.</p>
+<h3>Step 1: Navigate to Manage Website:</h3>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-11-1024x391.png" /></p>
+<p>Go to My Domains as shown in the image</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-12-1024x318.png" /></p>
+<p>Go to manage against the domain that you want to work on</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-15-1024x559.png" /></p>
+<p>Go to the website section as shown in the screenshot</p>
+<h3>Step 2: Creating Index.HTML</h3>
+<p>Don't worry when pandatechie is here! You won't have to code at all. Just follow simple steps as mentioned below:</p>
+<h4>2.A: Copy the following code and paste it in Notepad:</h4>
+<!DOCTYPE html>
+<html>  
+<head>  
+<title>HTML Meta Tag</title>  
+<meta http-equiv = "refresh" content = "1; url = **YOUR WEBSITE URL HERE**" />  
+</head>  
+<body>  
+<p>**YOUR WEBSITE DESCRIPTION HERE** </p>  
+</body>  
+</html>
+
+<h4>2.B: Replace the bold parts with what they are:</h4>
+<p>YOUR WEBSITE URL HERE (https://pandatechie.in) (Don't miss the HTTPS) and YOUR WEBSITE DESCRIPTION HERE (This is an awesome website).</p>
+<h4>2.C: Saving the file:</h4>
+<p>Once you have made the changes, save the file as index.html.</p>
+<p>Pitfall alert! Once you save the file it has the tendency of getting saved as index.html.txt at times. What needs to be done in such a case? Go to the folder/drive containing the file and press on 'view' tab from the navigation bar. Check mark the box that says "Hidden Items".</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-16-1024x158.png" /></p>
+<p>Post that, you should be able to see the file extension for all the files in that folder. Simply rename your index.html.txt to index.html.</p>
+<h3>Step 3: Linking the Website:</h3>
+<p>As soon as you go the <strong>website management</strong> area, the <strong>second pitfall</strong> awaits. While it may seem very <strong>tempting</strong> to <strong>click</strong> on the <strong>third option</strong> of <strong>custom website</strong> linking to <strong>redirect</strong> your <strong>NFT domain</strong> to a <strong>traditional</strong> website, it just isn't the way!</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-14.png" /></p>
+<p>So head over to the second option that says <strong>upload</strong> files to <strong>IPFS</strong>. Simply browse your <strong>HTML</strong> file and hit <strong>upload</strong> button. Hit on launch website as soon as you are done (Screenshot below)</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-17.png" /></p>
+<h3>Step 4: Metamask</h3>
+<p>As soon as you hit "launch website" you would be prompted to connect your wallet. While there are multiple wallet options, we are going to use the most popular one; Metamask, here.</p>
+<p><img alt="" src="https://media2.giphy.com/media/BT1jo7gHsq9IRRGHgk/giphy.gif" /></p>
+<p>Sign in to your <strong>Metamask wallet</strong> and get ready to <strong>sign multiple transactions</strong>. This is just you giving the authority to Unstoppable domains to make certain changes to your NFT (Domain).</p>
+<p>It should take a few seconds before the transaction completes and changes reflect.</p>
+<h3>Step 5: Go Flex</h3>
+<p>Oh this one is just to mess with you all. There is no step 5. Only thing left is to pat your back as you venture into web3 like a boss. Also, if you haven't already, go change your social media handles with your domain name. You own it for god's sake!</p>
+<h2>Conclusion:</h2>
+<p>Talking of flexing, do you mind visiting pandatechie.crypto OR pandatechie.bitcoin to check if everything is in place? Make sure that you install the <a href="https://unstoppabledomains.com/extension?utm_campaign=20211216_Newsletter&amp;utm_content=20211216_Newsletter&amp;utm_medium=newsletter&amp;utm_source=email">extension</a> first. As web3 goes mainstream, we would not need any extensions or plugins any more. That's when I would actually create a website on it instead of just redirecting.</p>
+<p>Until then, happy to help my peers! If you are one of those who have not yet purchased an Unstoppable domain, go to a CEX like CoinDCX and move that MATIC to Metamask and get started. <a href="https://unstoppabledomains.com/?ref=3a3a0e5c63994aa">Here's $10 credit for you!</a></p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

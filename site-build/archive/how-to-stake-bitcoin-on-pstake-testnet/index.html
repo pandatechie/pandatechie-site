@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Stake Bitcoin on pStake Testnet? | Raghav</title>
+<meta name="description" content="Imagine a world where your Bitcoin isn't just sitting idle in your wallet but actively working for you, earning rewards while still being available for trading …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span> <span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">UNCATEGORIZED</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Stake Bitcoin on pStake Testnet?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-06-23</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-06-23 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/06/1686059168845-1-1024x390.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Imagine a world where your Bitcoin isn't just sitting idle in your wallet but actively working for you, earning rewards while still being available for trading and other financial maneuvers. Sounds like a dream, right? Well, welcome to the future of Bitcoin with liquid staking!</p>
+<p>Liquid staking has been a revolutionary concept for Proof-of-Stake (PoS) blockchains, and now it's making its way into the Bitcoin ecosystem. This guide will walk you through the ins and outs of Bitcoin liquid staking on the testnet, helping you unlock the full potential of your BTC.</p>
+<p>So, let us put some faucets under stress and load some test stash for a better tomorrow. And if you don't understand what I just said, chuck it. Sometimes it is really hard for me to contain the excitement.</p>
+<h2>Bitcoin Liquid Staking Testnet Guide</h2>
+<p>Bitcoin, the granddaddy of all cryptocurrencies, is stepping into the liquid staking arena. Yes, you heard it right. Liquid staking, which has been a game-changer for PoS blockchains, is now making waves in the Bitcoin ecosystem. So, what’s the deal with Bitcoin liquid staking, and how can you get started on the testnet? Let’s dive in.</p>
+<h3>What is Liquid Staking?</h3>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/1686059168845-1-1024x390.png" /></p>
+<p>Liquid staking, also called tokenized staking, is a method that allows individuals to stake their assets and receive rewards while maintaining liquidity.</p>
+<p>It involves staking a cryptocurrency asset to secure a blockchain network and earn staking rewards. However, instead of the staked assets being locked up for a specific period, individuals receive a liquid representation of those staked assets in the form of tokens.</p>
+<p>These tokens can be freely traded or used in decentralized finance (DeFi) applications, allowing individuals to utilize their staked assets for other financial opportunities.</p>
+<h3>Why Liquid Staking for Bitcoin?</h3>
+<p>Bitcoin has traditionally been a Proof-of-Work (PoW) blockchain, where mining is the primary method of securing the network.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/bitcoin-data-mining-2.png" /></p>
+<p>However, with the advent of liquid staking, Bitcoin holders can now participate in staking without giving up liquidity.</p>
+<p>This means you can stake your BTC, earn rewards, and still have the flexibility to trade or use your staked assets in DeFi applications.</p>
+<p>I know this sounds alien, but trust me, chads at PStake have thought this through. You can learn more about 'how is this even possible' and 'why is this the only way forward in BTC ecosystem' from <a href="https://pandatechie.in/2024/06/02/babylon-chain-bitcoin-security-as-a-service/">here</a>.</p>
+<h3>Getting Started with Bitcoin Liquid Staking on Testnet</h3>
+<p>Honestly, if you are doing this for a while, it is a cakewalk. For others, here's a step by step guide.</p>
+<h3>Step 1- Set Up Your Wallet:</h3>
+<p>First things first, you need a wallet that supports Bitcoin liquid staking. For our testnet, that happens to be OKX. Images below will help you understand the setup process.</p>
+<ul>
+<li>Head over to the official <a href="https://www.okx.com/web3">OKX Wallet</a> website and click “Download Chrome Extension</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-24.png" /></p>
+<ul>
+<li>On the following Google Page, click “Add to Chrome”:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-25.png" /></p>
+<ul>
+<li>Then, click “Add Extension”:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-26.png" /></p>
+<ul>
+<li>Once installed, you will be greeted with the following notification, requesting to create your wallet. Let’s go ahead and click “Create Wallet”:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-27.png" /></p>
+<ul>
+<li>Select “Seed Phrase,” or choose hardware wallet if you would like to connect your Ledger or Trezor:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-28.png" /></p>
+<ul>
+<li>On the next screen, set your password:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-29.png" /></p>
+<ul>
+<li>Then, be sure to note down your seed phrase and keep it in a secure location:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-30.png" /></p>
+<h3>Step 2- Know your Signet Bitcoin Address:</h3>
+<p>The pSTAKE Bitcoin Liquid Staking solution uses the native Segwit address format, which begins with a TB1Q address. Therefore, we will also need to point the wallet to the correct testnet network before connecting to the pSTAKE Bitcoin Liquid Staking dApp.</p>
+<p>Let’s first start by adding the sBTC asset to our wallet and pointing it to the right network before loading it with sBTC tokens.</p>
+<ul>
+<li>First, head to your wallet and scroll to the bottom of the dashboard and click “Manage Cryptos”</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-17.png" /></p>
+<ul>
+<li>Here, we can search for “sBTC” and click the “+” icon to add it to our wallet:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-18.png" /></p>
+<ul>
+<li>Once added, you will see the asset in your list of tokens. Let’s go ahead and click sBTC so we can select the correct default address type for the testnet:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-19.png" /></p>
+<ul>
+<li>Once on the sBTC page, let’s click the icon in the top right corner to set the default address format:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-20.png" /></p>
+<ul>
+<li>Here, we need to look for the Native Segwit address that starts with “tb1q” which is compliant with the pSTAKE Bitcoin Liquid Staking testnet network:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-21.png" /></p>
+<ul>
+<li>Once selected, your address will change to a tb1q address. This will be the address required to send sBTC tokens for testing, so let’s copy the address for the next step:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-22.png" /></p>
+<h3>Step 3- Acquire sBTC:</h3>
+<p>You’ll need some sBTC to get started. You can obtain sBTC from a faucet.</p>
+<p>Either you can head over to <a href="http://signetfaucet.com">signetfaucet.com</a>. This method took 8-10 tries before I could get my hands on some sBTC.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-23.png" /></p>
+<p>Or, you could simply hop on to <a href="https://discord.gg/babylonglobal">Babylon's</a> discord. There is a channel called faucet which can help. For me personally, it failed every single time citing busy servers as the reason.</p>
+<h3>Step 4- Connect and Stake:</h3>
+<p>Once you have your sBTC, connect your wallet to the pstake <a href="https://app.btc-testnet.pstake.finance/">staking platform</a>.</p>
+<p>You may need an invite code to enter. The invite code will be refreshed every 24 hours and announced on the pSTAKE <a href="https://t.me/+mS1rPHA9dcQ4N2Vl">Telegram</a>and <a href="https://discord.pstake.finance/">Discord</a>, providing everybody with an equal chance to have the opportunity to test the Bitcoin liquid staking solution.</p>
+<p>So, be sure you’re part of the community to have the chance to get access to the testnet.</p>
+<ul>
+<li>Navigate to the staking section of the platform and deposit your testnet sBTC.</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-32.png" /></p>
+<ul>
+<li>To make a deposit, enter the amount of sBTC to deposit in Box F (mentioned above) and hit “Deposit Funds.” Please note that there is a minimum deposit amount of 0.0001.</li>
+<li>For this tutorial, we will enter 0.001 sBTC and hit Deposit:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-33.png" /></p>
+<ul>
+<li>A wallet notification will appear, asking you to confirm the deposit. Please hit “Confirm”:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-34.png" /></p>
+<ul>
+<li>You should see the following notification appear on the dashboard to confirm the transaction has been executed. Please click the hyperlink in the notification to track the status of your deposit:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-35.png" /></p>
+<ul>
+<li>You can also track the status of your deposit on the “<a href="https://app.btc-testnet.pstake.finance/dashboard">Dashboard</a>” section – located on the left menu.</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-36.png" /></p>
+<ul>
+<li>After one confirmation on the blockchain, the dashboard will update your “Wallet Balance” and will display the deposit in the “Transaction History”</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-37.png" /></p>
+<ul>
+<li>After three block confirmations, your deposit will be displayed in “Balance on pSTAKE”:</li>
+</ul>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/06/image-38.png" /></p>
+<h3>Benefits of Bitcoin Liquid Staking</h3>
+<p>In the current version (V1) of this testnet, there is no yield. However, in the upcoming V2, pstake is planning to launch a product where you can deposit BTC into Babylon’s Bitcoin shared-security protocol, which will generate a yield through economic security.</p>
+<p>This yield will be distributed to pSTAKE depositors.</p>
+<p><strong>Unlocked Liquidity</strong>: Liquid tokens can be traded, transferred, and used in lending or as collateral for borrowing in DeFi protocols instead of remaining locked for a fixed period.</p>
+<p>As a result, the value and utility of the underlying cryptocurrency increase, thereby boosting liquidity.</p>
+<p><strong>DeFi Composability</strong>:</p>
+<p>By serving as derivatives for the staked tokens, LSTs are usable across countless DeFi platforms. Specially when this derivative is of BTC, it adds an additional weight of security to the PoS blockchain.</p>
+<p><strong>Reward Opportunities</strong>:</p>
+<p>This form of staking reduces the opportunity cost of staking by allowing users to earn staking rewards while still leveraging the value of their staked tokens. Thus, the LST can be used on other platforms to earn additional rewards on the same investment.</p>
+<p>It is time to change BTC HODL narrative for good. A currency without velocity is no good for the ecosystem.</p>
+<h3>Conclusion:</h3>
+<p>Liquid staking on Bitcoin is an exciting development that opens up new possibilities for BTC holders. By enabling staking without sacrificing liquidity, it combines the best of both worlds.</p>
+<p>As the ecosystem evolves, we can expect to see more innovative applications and integrations emerge, making liquid staking a staple in the crypto world.</p>
+<p>Got questions? Want to take it to the next level? Reach out to me using your preferred platform from the links below.</p>
+<p>Until next time, happy staking!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

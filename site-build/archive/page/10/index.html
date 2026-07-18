@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Log — Page 10 | Raghav</title>
+<meta name="description" content="Raghav — writer and facilitator, cross-industry.">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<section class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-center mb-16">
+<div>
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4">The full log</h2>
+<h1 class="font-headline-lg text-headline-lg">303 posts, 2020 to now</h1>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-fulcrum-how-can-you-use-it-to-multiply-your-gains/">What is Fulcrum? How Can You Use it To Multiply Your Gains?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Trust me, if you stay long enough in the crypto space, money would become a side gig for you. No, I am not referring to the gains here. I am talking about the e…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-12-07</span>
+<a href="/archive/what-is-fulcrum-how-can-you-use-it-to-multiply-your-gains/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-a-dex-aggregator-example-of-1inch/">What is a DEX Aggregator? Example of 1inch</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">The year 2021 has seen an exponential growth of Decentralized Ecosystem. I was checking [defillama](http://defillama.com) a few days ago and I realized that TVL…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-12-05</span>
+<a href="/archive/what-is-a-dex-aggregator-example-of-1inch/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/how-to-track-your-crypto-portfolio-using-delta/">How to Track Your Crypto Portfolio using Delta?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Every time I hit the refresh button on my social media feed, there's someone who is saying that you should buy bitcoin because it's still very early. While they…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-12-05</span>
+<a href="/archive/how-to-track-your-crypto-portfolio-using-delta/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-unstoppable-domains-my-first-nft-purchase/">What is Unstoppable Domains? My First NFT Purchase</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">No. I did not purchase JPEGs of apes. Probably never will. Not because that might be outright illogical but also because I don't understand the art space. Not e…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-12-01</span>
+<a href="/archive/what-is-unstoppable-domains-my-first-nft-purchase/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/web3-0-and-india-the-chingari-pivot/">Web3.0 and India: The Chingari Pivot</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">I come from two Indias. One where a mass sell-off is initiated owing to the panic created by upcoming regulation bill. A bill, that allegedly proposes banning a…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-30</span>
+<a href="/archive/web3-0-and-india-the-chingari-pivot/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-are-different-types-of-cryptocurrency/">What are Different Types of Cryptocurrency?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">First thing first, the question asked above is completely incorrect. This has single handedly created so much confusion in the minds of new investors and I was …</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-28</span>
+<a href="/archive/what-are-different-types-of-cryptocurrency/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-brave-browser-how-is-it-changing-the-ad-ecosystem/">What is Brave Browser? How is it Changing the Ad Ecosystem?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">A few days ago, I was talking to my wife about buying an air fryer. Next moment, I start seeing ads about air fryers on my social media feed. And I am not alone…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-28</span>
+<a href="/archive/what-is-brave-browser-how-is-it-changing-the-ad-ecosystem/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-basic-attention-token-bat-how-can-you-sign-up-for-creators-program/">What is Basic Attention Token (BAT)? How Can You Sign Up for Creator's Program?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">A few days ago we talked about the magical [Brave Browser](https://pandatechie.in/2021/11/28/what-is-brave-browser-how-is-it-changing-the-ad-ecosystem/) and how…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-27</span>
+<a href="/archive/what-is-basic-attention-token-bat-how-can-you-sign-up-for-creators-program/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-mcs-and-why-should-you-consider-using-it/">What is MCS and Why Should You Consider Using it?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Coins may come and coins may go! But, it's the exchanges that list the coins that come and go.
+
+Well, I came across this quote recently and realized that exchan…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-25</span>
+<a href="/archive/what-is-mcs-and-why-should-you-consider-using-it/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/how-to-create-mint-your-own-nft-and-list-it-under-1/">How to Create (Mint) Your Own NFT and List it under $1</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">A few days ago, I created my own cryptocurrency called the "[PandaToken](https://pandatechie.in/2021/11/06/how-to-create-your-own-cryptocurrency-under-rs-500/)"…</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-22</span>
+<a href="/archive/how-to-create-mint-your-own-nft-and-list-it-under-1/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/unfolding-the-trolls-whats-up-with-meme-coins/">Unfolding the Trolls: What's Up with Meme Coins?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Cadbury is selling happiness since time immemorial. Hindustan Unilever is building relationships with it's users. Procter and Gamble is carving their own niche …</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-22</span>
+<a href="/archive/unfolding-the-trolls-whats-up-with-meme-coins/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
+<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/what-is-the-difference-between-coin-and-token/">What is the Difference Between Coin and Token?</a></h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">BitCOIN, Basic Attention Token are two very famous cryptocurrencies. Is it just by chance that one of these cryptos is called a coin and the other one a token? …</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label-sm text-label-sm text-outline-variant">2021-11-22</span>
+<a href="/archive/what-is-the-difference-between-coin-and-token/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+</div>
+</article>
+</div>
+
+<div class="mt-20 flex justify-center items-center gap-4">
+<a href="/archive/page/9/" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-gray transition-colors"><span class="material-symbols-outlined">chevron_left</span></a>
+<span class="font-label-md text-label-md px-4">Page 10 of 26</span>
+<a href="/archive/page/11/" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-gray transition-colors"><span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+</div>
+</section>
+</main>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

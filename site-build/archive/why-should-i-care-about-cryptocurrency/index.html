@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Should I Care About Cryptocurrency? | Raghav</title>
+<meta name="description" content="Well, it's not particularly hard, but its definitely overwhelming. That's the thing with blockchain technology. It popped up right at the brink of information e…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Why Should I Care About Cryptocurrency?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.biometrica.com/wp-content/uploads/2021/05/cryptocurrency-1200x800.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Well, it's not particularly <strong>hard</strong>, but its definitely <strong>overwhelming</strong>. That's the thing with <strong>blockchain</strong> <strong>technology</strong>. It popped up right at the <strong>brink</strong> of <strong>information</strong> <strong>explosion</strong>. Whenever a newer technology was born in the past, it took a <strong>significant</strong> time to reach the <strong>masses</strong>. However, with <strong>cryptocurrencies</strong>, this phase of expansion was rather <strong>short</strong> <strong>lived</strong>. I am <strong>not</strong> saying that <strong>cryptoverse</strong> is <strong>adopted</strong> by masses yet, but the <strong>speed</strong> at which it is <strong>spreading</strong> is lightning <strong>fast</strong>. So, that question of the day is, <strong><em>why should I care about cryptocurrency?</em></strong> I am okay with my current money situation. Why do I spend my <strong>energy</strong> and <strong>time</strong> in this seemingly <strong>complicated</strong> domain of finance?</p>
+<p>No judgement. If you are one of those people, it's absolutely fine. Many people have <strong>adopted</strong> <strong>web 2.0</strong> (Google, Facebook, Microsoft) wholeheartedly without even knowing what <strong>goes behind it</strong>. They can do the same with <strong>cryptocurrencies</strong> too.</p>
+<p>After all, when all this become too <strong>big</strong>, likelihood of it being <strong>served</strong> to you on a <strong>plate</strong>, ready to <strong>consume</strong>, without caring about what lies <strong>underneath</strong>, is much higher.</p>
+<p><img alt="" src="https://www.biometrica.com/wp-content/uploads/2021/05/cryptocurrency-1200x800.jpg" /></p>
+<p>But what if you are on the <strong>other</strong> <strong>side</strong> of the spectrum? You want to <strong>understand</strong> how <a href="https://www.bbc.com/news/technology-58343062">12 year old kids are making millions using NFTs,</a> why is everyone all gung ho about <strong>Bitcoin</strong>? Why are <strong>governments</strong> talking about it suddenly? Today, I would try to add some <strong>fuel</strong> to your quest. If you are on the <strong>edge</strong> of <strong>jumping</strong> into <strong>cryptoverse</strong> and <strong>blockchain</strong>, this post would be it. Without any further build up, let's dive in: <strong>5 reasons why you should care about cryptocurrencies</strong>.</p>
+<h2>A. Technology:</h2>
+<p>I always say that <strong>money</strong> is just a <strong>by product</strong> of this game. The real <strong>magic</strong> lies in the <strong>technology</strong> that goes behind powering cryptocurrencies. Even if you are from a <strong>non-tech</strong> background, you should consider wrapping your head around blockchain.</p>
+<p><img alt="" src="https://cdn.builtin.com/sites/www.builtin.com/files/styles/blog_medium/public/blockchain-companies.jpg" /></p>
+<p>Ever wondered what is the <strong>fundamental</strong> issue with <strong>digital</strong> <strong>money</strong>? Well, just like everything online, it could be <strong>replicated</strong>. One <strong>DigiCoin</strong> (A hypothetical digital cryptocurrency) could be copied and pasted by you endlessly to become a millionaire. But even then, it doesn't happen with <strong>Bitcoin</strong>? How could someone change very <strong>fundamentals</strong> of <strong>how</strong> <strong>internet</strong> works? If you are up to challenge your <strong>gray matter</strong> with many such larger than life questions, dive in. <a href="https://pandatechie.in/2021/07/29/how-does-bitcoin-work/">Here's</a> how you can get started.</p>
+<h2>B. Real Ownership:</h2>
+<p>What's your <strong>net worth</strong> right now? If you have played your cards right you must have <strong>diversified</strong> your <strong>investments</strong> in <strong>mutual funds</strong>, <strong>stocks</strong>, <strong>fixed deposits</strong>, <strong>cash</strong> savings etc. But do you ever realize that all of this is at the <strong>mercy</strong> of an <strong>intermediary</strong>? In case of <strong>stocks</strong>, you rely on a <strong>stock broker</strong> who in turn coordinates with <strong>NDSL</strong> to keep your holdings safe. In case of <strong>mutual funds</strong>, a <strong>fund house</strong> is managing your money. Don't even get me <strong>started</strong> on what <strong>banks</strong> do with your FDs.</p>
+<p>In a nutshell, if either of these <strong>intermediaries</strong> were to <strong>screw up</strong>, your hard earned money is at <strong>stake</strong>. Cryptocurrencies take that element of <strong>accountability</strong> and <strong>ownership</strong> and make you the <strong>real</strong> <strong>owner</strong> of your <strong>assets</strong>. If you are <strong>dealing</strong> in <strong>decentralized</strong> <strong>exchanges</strong>, the <strong>wallet</strong> you store your cryptos in, is totally your responsibility.</p>
+<p><img alt="" src="https://probonoaustralia.com.au/wp-content/uploads/2019/05/person-handing-over-keys.jpg" /></p>
+<p>Imagine how banks can <strong>freeze</strong> your <strong>accounts</strong> on <strong>failure</strong> to meet certain <strong>conditions</strong>. They could also set some <strong>rules</strong> around <strong>minimum</strong> <strong>balance</strong> and <strong>penalize</strong> if you didn't comply. If you give it a thought, your banks are basically <strong>laying</strong> down rules to <strong>facilitate</strong> the money you <strong>worked</strong> <strong>really</strong> <strong>hard</strong> for. Questionable much! Nevertheless, you won't face such a situation in cryptocurrencies. You are the owner of your holdings.</p>
+<h2>C. Growth Prospects:</h2>
+<p>When it all started in 2008 with Bitcoin, people <strong>disregarded</strong> the idea of BTC. Later, when it started hitting new highs, it was <strong>labelled</strong> as a <strong>bubble</strong>. Come <strong>Ethereum</strong> in 2015, a similar treatment was given to it. Ever since then, there have been <strong>new</strong> <strong>developments</strong> in this space at a <strong>galactic</strong> speed.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-5.png" /></p>
+<p>Let's compare this with the journey of <strong>internet</strong>. It started with basic <strong>functionalities</strong> like <strong>Email</strong>, <strong>file</strong> <strong>transfer</strong>. Later it evolved to <strong>chat messengers</strong>. Sooner than we realized, it turned into this <strong>AI powered</strong> giant called <strong>social media</strong>.</p>
+<p>The blockchain technology <strong>isn't</strong> the <strong>next</strong> <strong>big</strong> <strong>thing</strong> or <strong>use</strong> <strong>case</strong> of internet. It is the <strong>next incarnation</strong> of <strong>internet</strong> instead. We call it <strong>web 3.0</strong> for a reason. And with less than <strong>1%</strong> involved actively in cryptos, I think it is an <strong>explosion</strong> waiting to happen.</p>
+<h2>D. Professional Growth:</h2>
+<p>Crypto space grew <strong>exponentially</strong> in a very short period of time. Which means there is an <strong>acute shortage</strong> of <strong>resources</strong> right now. And what happens when <strong>demand &gt;&gt; supply</strong>? Moolah! So if you are planning to hit that <strong>reset</strong> button on that <strong>9 to 5</strong> and want to do something you are <strong>passionate</strong> about, <strong>opportunities</strong> in this space are a plenty.</p>
+<p>Apart from coders, architects and program managers, I have personally found a couple of job profiles which I had not heard of in the past. Here are a few examples:</p>
+<ul>
+<li><strong>KOL</strong>: Key opinion leaders refer to the crypto evangelists with a community. They are often paid to engage with a crypto project to create awareness about it.</li>
+<li><strong>Community Managers</strong>: These people manage large communities on behalf of projects, exchanges and other crypto based startups.</li>
+</ul>
+<p>There is a lot of social element attached to cryptos and these profiles are indispensable part of that ecosystem.</p>
+<p><img alt="" src="https://www.cleanlink.com/resources/editorial/2019/24316-growth.png" /></p>
+<p>And if you are into active coding, I would recommend you to learn the likes of Rust and Solidity and jump into this ecosystem. You'd be amazed to see the type of money people are ready to pay.</p>
+<h2>E. Money:</h2>
+<p>Yes I know. Your palms would be itching big time by now. So yes. Although a by product, but money is a <strong>significant</strong> output of indulging in crypto space. Did I tell you that back in 2012, one person thought that Bitcoin was <strong>worthless</strong>. So he <strong>tweeted</strong> that he is willing to pay <strong>10,000 BTC</strong> to someone for a <strong>couple</strong> of <strong>large</strong> <strong>pizzas</strong>. One man from <strong>Papa Jones</strong> agreed and delivered the same.</p>
+<p>Today, that would be <strong>Rs. 33,70,94,30,000</strong>. So yes. Returns are indeed <strong>monumental</strong>. Every week I would find one or the other crypto giving returns to the tune of 300%. But don't forget to <a href="https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/">DYOR</a>. Also, make sure you are in it for the <strong>long run</strong>. This isn't a <strong>get rich quick</strong> scheme.</p>
+<h2>Conclusion:</h2>
+<p>Once again. It's fine if you would simply ignore the noise around cryptocurrencies and go to sleep. But I just want you to imagine the possibilities if you were to rise up to the occasion.</p>
+<p>Changing your mind?</p>
+<p>https://www.instagram.com/p/CR-1acDoEKF/</p>
+<p>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> and powered by <a href="https://deyga.in/">Deyga</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

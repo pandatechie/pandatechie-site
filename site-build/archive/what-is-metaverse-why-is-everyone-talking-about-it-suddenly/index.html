@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Metaverse? Why is Everyone Talking About it Suddenly? | Raghav</title>
+<meta name="description" content="A few months ago, world's largest social media company took a very interesting leap of faith. Yes, Facebook inc, changed its name to 'Meta'. This move validated…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Metaverse? Why is Everyone Talking About it Suddenly?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-03-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-03-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Impact_event.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>A few months ago, world's <strong>largest social media</strong> company took a very interesting leap of faith. Yes, <strong>Facebook inc</strong>, changed its name to <strong>'Meta'</strong>. This move validated the hypotheses of millions who were <strong>betting</strong> on <strong>Metaverse</strong>. A little known fact is that on the same day, all <strong>Metaverse</strong> based crypto tokens quadrupled in price. When a man who runs a platform that has <strong>2 billion</strong> daily active users, believes in Metaverse, there must be something in store.</p>
+<p>So today, we are going to unfold exactly that. What is <strong>Metaverse</strong> after all? Also, why does it hold so much value? Why are people spending <strong>millions of dollars</strong> to buy a piece of land that does not exist in real life? Well, to be honest, that is one question a lot of us have trouble with. Not any more though.</p>
+<h2>Is Metaverse a Brand New Concept?</h2>
+<p>For those of us who were born in the 90s, we must have grown up with a game called '<strong>second life</strong>'. It was an online multimedia platform that allows people to create an <strong>avatar</strong> for themselves and have a second life in the <strong>virtual world</strong>.</p>
+<p><strong>Mankind</strong> has fiddled with the idea of a digital identity for a while now. Some movies that have explored this idea are <strong>Matrix (Early 2000s)</strong>, <strong>Ready Player one (2018)</strong> etc. <br />
+But if there is already so much content around the notion of <strong>Metaverse</strong>, why is it being talked about so much right now?</p>
+<p>Well, here is our three point hypotheses of sudden hype around <strong>Metaverse</strong>.</p>
+<h3>A. FOMO</h3>
+<p><strong>FOMO</strong> or fear of missing out is real. No one wants to miss out on <strong>NFTs</strong> the way they missed out on Bitcoin. There is a general sense of greed that Metaverse may yield returns of Bitcoin's magnitude. Therefore, a lot of Generation <strong>'Z'</strong> audience is bullish on the overall concept of <strong>Metaverse</strong>.</p>
+<p>economy. As a result, there was a lot of cash at people's disposal. Apart from that, most of them were working from home so they found <strong>stocks</strong> and <strong>crypto markets</strong> as an avenue to vent out.</p>
+<p>The kind of returns these people generated in the past two years have been phenomenal. All these <strong>investors</strong> now have a benchmark <strong>ROI</strong> in their mind which is driving this craze further. What they do not realize is the fact that market has never given similar kind of returns ever in the history. For some perspective, the crash of 2008 took about 6 years for the index to reach back to the same level.</p>
+<h3>B. Pandemic:</h3>
+<p><strong>Pandemic</strong> and <strong>Covid</strong> induced lockdowns have further aggravated this situation. <strong>Digital</strong> has replaced everything we used to do physically. Work, attending weddings, festivals, all have been confined to a digital interface.</p>
+<p>People believe that <strong>Coronavirus</strong> is not the last virus that has hit the world. Also, the fear of <strong>climate change</strong> is looming upon us.</p>
+<p>As we go deeper into remote <strong>style of living</strong>, Metaverse will become more valuable each day. More and more people will flock on to these platforms to satisfy their craving for a social interaction.</p>
+<p>Some people who believe in <strong>Metaverse</strong> envision the world confined in a pod someday where we don't get to go out because of a <strong>catastrophic event</strong>. Hence making your digital life even more valuable than your <strong>physical existence</strong>.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Impact_event.jpg" /></p>
+<h3>C. NFTs:</h3>
+<p><strong>FTs</strong> or non fungible tokens are one of the hottest narratives of the <strong>Blockchain space</strong>. <strong>NFTs</strong> enable the <strong>'proof of ownership'</strong> for the holder. This proof is stored as immutable records on the <strong>Blockchain</strong> and hence verifiable in real time by anyone.</p>
+<p>There was some form of <strong>Metaverse</strong> existing earlier as well but your <strong>virtual assets</strong> belonged to the creators of the environment and not you. This also meant that you had to repurchase all the assets if you moved to <strong>another Metaverse</strong>.</p>
+<p>This was completely change with the advent of <strong>NFTs.</strong> You could now hold your assets in a platform agnostic wallet and carry your assets with you.</p>
+<h2>What is Metaverse?</h2>
+<blockquote>
+<p><em>“What is the </em><em>metaverse</em><em>?” — “It’s a </em><em>virtual environment</em><em> where you can be present with people in </em><em>digital spaces</em><em>. You can kind of think of this as an embodied internet that you’re inside of rather than just looking at.”</em></p>
+<p>Mark Zuckerberg</p>
+</blockquote>
+<p>At this point, <strong>Metaverse</strong> is an amorphous idea at best. There is no clear demarcation of what constitutes of <strong>Metaverse</strong>. But at a very high level, it is a combination of technologies such as AR (augmented reality), <strong>Virtual Reality</strong> (<strong>VR</strong>), <strong>Mixed Reality</strong> (<strong>MR</strong>) etc.</p>
+<p>Here is an example much closer to home. With the onset of <strong>Pandemic</strong> we moved to working in a <strong>remote</strong> style of working. Our conference rooms turned into <strong>Zoom</strong>, <strong>Teams</strong> etc.</p>
+<p>But that is still interacting with a screen at best. Now try to take it up a <strong>notch</strong> in your imagination and think of <strong>immersing yourself</strong> in that <strong>environment</strong>. This way, instead of just interacting with a screen, your <strong>avatar</strong> could be in it. You could interact with objects in that environment, move around etc.</p>
+<p>In other words, you managed to create a <strong>digital twin</strong> for yourself. This twin could mimic you in a digital environment. Thus, breaking the barriers of emotional connect between you and your <strong>avatars</strong>.</p>
+<h2>What Makes Metaverse So Valuable?</h2>
+<p>Coming back to the question of the day. Why are people betting big time on <strong>Metaverse</strong>? Is buying a <strong>virtual land</strong> worth it? In this section we try to share a few instances which will highlight the value proposition of the <strong>virtual world</strong>:</p>
+<h3>A. Network Effects:</h3>
+<p>Last year, WhatsApp released a statement that they would be <strong>sharing</strong> the <strong>data</strong> generated by <strong>WhatsApp</strong> with <strong>Facebook</strong> for <strong>smarter targeted advertising</strong>. This statement created a lot of noise in India where people started <strong>tweeting</strong> about <strong>boycotting WhatsApp</strong>.</p>
+<p>In fact, a lot of them downloaded <strong>alternative applications</strong> like <strong>Signal</strong> and <strong>Telegram</strong> to show their <strong>solidarity</strong>. This took off in such a manner that <strong>Signal</strong> saw <strong>highest downloads</strong> of its lifetime during that short period.</p>
+<p>Fast forward to today, no one is using Signal any more. <strong>WhatsApp</strong> still implemented what they wanted to.</p>
+<p>Why do you think this happened? Well, it is pretty straight forward. No one wants to <strong>hang out</strong> on a <strong>platform</strong> all <strong>alone</strong>. They want to be where there friends are. And that is what is driving the value up for <strong>Facebook</strong> and its <strong>acquired companies.</strong></p>
+<p>On a similar note, <strong>Metaverses</strong> are bound to capture a lot of value if people start <strong>hanging</strong> out on these platforms. If going out physically really becomes difficult, more and more people will start meeting virtually like this. Therefore, a <strong>Metaverse</strong> that is able to acquire <strong>maximum</strong> number of <strong>users</strong> would win this value race.</p>
+<h3>B. Bragging Rights:</h3>
+<p>Imagine you just bought a shiny <strong>Rolex</strong> for yourself. At a fundamental level that <strong>Rolex</strong> is not capable of doing anything more than what a <strong>$100</strong> watch could do. However, there is a sense of pride attached to that <strong>Rolex</strong>. There is a definite <strong>swagger</strong> attached to <strong>flaunting</strong> that watch in front of your peers.</p>
+<p>Now think of a situation where <strong>you cannot</strong> <strong>go out anymore</strong>. What good is that watch? Obviously you cannot <strong>wear</strong> it at home while doing <strong>chores</strong>. In such a case, the value of the <strong>physical watch</strong> drops instantly because at that point it is as good as any other watch out there.</p>
+<p><img alt="" src="https://media3.giphy.com/media/2WGDD1PJvjE8ZT6mhT/giphy.gif" /></p>
+<p>If only there was a way to still flaunt that expensive watch. Well, <strong>Metaverse</strong> is the answer. Companies could now issue digital copies of that watch as <strong>NFTs</strong>. As an owner your avatar in <strong>Metaverse</strong> could own that watch and flaunt it yet again. This time, to a much larger audience may be. Why? Because you only meet a limited number of people offline. Whereas this limit is removed when you go online.</p>
+<h2>The Future?</h2>
+<p>Just like everything else in this fast paced world, all we could do is make a decent guess. With corporations like <strong>Meta, Microsoft, Apple, Google, Nike, Adidas, Gucci,</strong> <strong>LV</strong> trying to devise a <strong>Metaverse</strong> strategy for themselves, it is safe to assume that this is not just a geeky fad.</p>
+<p>Apart from that, a future where every brand has its own Metaverse to promote their product is not really far fetched. It could easily become what <strong>website</strong> (.com) was during the <strong>web 2</strong> realm.</p>
+<p>https://www.instagram.com/p/CazXm1Pv0aj/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

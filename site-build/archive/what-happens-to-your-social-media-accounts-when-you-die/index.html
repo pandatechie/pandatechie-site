@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WHAT HAPPENS TO YOUR SOCIAL MEDIA ACCOUNTS WHEN YOU DIE? | Raghav</title>
+<meta name="description" content="Back in 2004, Marc Zuckerberg launched Facebook with his college roommates. Little did we know at that time that this tool would change the way we engage with e…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">WHAT HAPPENS TO YOUR SOCIAL MEDIA ACCOUNTS WHEN YOU DIE?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-11-17</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-11-17 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/11/image-21.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Back in 2004, Marc Zuckerberg launched Facebook with his college roommates. Little did we know at that time that this tool would change the way we engage with each other, forever. All of this, did start as a hobby for us, but today, many people earn a living off the social media accounts. The likes of influencers, social media experts etc. are growing each day. <strong>Our digital identities are as relevant as our physical personalities these days</strong>. So, I thought it'd make sense to discuss <strong>what happens to your social media accounts when you die</strong>?</p>
+<p><strong>An oxford study estimates that number of dead will outnumber the living on Facebook by 2070</strong>. Given the surge in penetration of Facebook around 2010-2015, it can be presumed that people who were early adopters of the platform may not be around during 2070s as suggested by Oxford study. So, let's quickly try to explore what's next!</p>
+<h2>What happens to your social media accounts when you die?</h2>
+<p>Since no one (including the platform owners) thought of such a situation, there isn't much thought given to this. However, while surfing the web, I could find that <strong>Facebook, Instagram and Twitter have some sort of death policy</strong> (more on that in a while). However, <strong>LinkedIn, doesn't offer any such provision</strong> and your account remains active even after you have risen much above all this <em>Moh Maaya</em> (Worldly possessions).</p>
+<p>Digging into the death policy for key social networks and how to set it up if need be:</p>
+<h2>Facebook:</h2>
+<p>There is something called <strong>memorialization settings</strong> on Facebook. Simply head over to settings and privacy--&gt; settings--&gt; memorialization settings to access this.</p>
+<p>In this section you have a couple of options:</p>
+<ul>
+<li><strong>Nominating someone to look after your account:</strong></li>
+<li>You can <strong>pick a trustworthy contact to manage</strong> social media on your behalf after your death.</li>
+<li>Access to your profile is restricted in this case and the nominee can only <strong>change your profile picture, manage tribute posts, tweak privacy settings, delete posts and remove tags</strong>.</li>
+<li>Nominee can also <strong>request for removal of your account and respond to friend requests on your behalf</strong>.</li>
+<li>You can also chose if you want the <strong>nominee to be able to download all the content of your profile (photos, videos and about section)</strong></li>
+</ul>
+<p><img alt="What happens to your social media accounts when you die: Facebook" src="https://pandatechie.in/wp-content/uploads/2020/11/image-21.png" /></p>
+<p>Memorialization Settings of Facebook</p>
+<p>Once you pick a contact, a messenger text is sent to them intimating them.</p>
+<p><img alt="What happens to your social media accounts when you die: Facebook" src="https://pandatechie.in/wp-content/uploads/2020/11/image-22.png" /></p>
+<ul>
+<li><strong>Deleting your account</strong>:</li>
+<li>There is a <strong>possibility of deleting your account after your death</strong>. Your nominee may be able to do so on your behalf.</li>
+<li>Facebook seeks <strong>death certificate as a proof of your demise</strong>. Once submitted, your entire profile will be deleted forever.</li>
+</ul>
+<p><img alt="What happens to your social media accounts when you die: Facebook" src="https://pandatechie.in/wp-content/uploads/2020/11/image-25.png" /></p>
+<h2>Instagram:</h2>
+<p>Instagram also offers you two alternatives:</p>
+<ul>
+<li><strong>Memorializing</strong> the account:</li>
+<li>Instagram allows you to <strong>memorialize</strong> one's account once you share the proof of their death such as a link to an obituary or news article.</li>
+<li>You need to access the <a href="https://help.instagram.com/contact/452224988254813">contact us</a> page of Instagram to highlight this.</li>
+</ul>
+<p><img alt="What happens to your social media accounts when you die: Instagram" src="https://pandatechie.in/wp-content/uploads/2020/11/Screenshot_20201117-120159__01-494x1024.jpg" /></p>
+<p>Memorialized Account</p>
+<ul>
+<li><strong>Removing Account</strong>:</li>
+<li>Verified immediate family members may request the <strong>removal of a loved one’s account from Instagram. When you submit a request for removal, Instagram requires a proof that you're an immediate family member of the deceased person</strong>, such as:<ul>
+<li>The deceased person's birth certificate.</li>
+<li>The deceased person's death certificate.</li>
+<li>Proof of authority under local law that you are the lawful representative of the deceased person, or his/her estate.</li>
+</ul>
+</li>
+</ul>
+<h2>Twitter:</h2>
+<p>Apart from the death policy, which is somewhat similar to other social networks we have discussed, twitter also has a provision of <strong>deleting the account for an incapacitated person</strong>. The procedure is pretty much the same wherein you provide <strong>proof of death, proof of relationship with the deceased and copy of a Power of Attorney authorizing you to act on the account holder’s behalf</strong>.</p>
+<p>Twitter only <strong>offers deletion of account as an alternativ</strong>e and NOT memorialization.</p>
+<h2>Finally..</h2>
+<p><strong>Instances of identity theft are on a rise</strong>. Since there is no provision of passing your digital assets to your heirs as of now, it is advisable to plan for the inevitable when it comes to social media. <strong>You never know what shape a deceased person's account could take. It is always better to be safe than sorry.</strong></p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

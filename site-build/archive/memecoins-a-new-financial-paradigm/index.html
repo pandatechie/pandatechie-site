@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memecoins: A New Financial Paradigm? | Raghav</title>
+<meta name="description" content="Bitcoin has breached $100K.
+
+One inadvertent consequence of these run ups is revival of long lost friendships.
+
+With peaking retail interest in crypto, one such…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">UNCATEGORIZED</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Memecoins: A New Financial Paradigm?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-12-22</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-12-22 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/12/image-819x1024.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Bitcoin has breached $100K.</p>
+<p>One inadvertent consequence of these run ups is revival of long lost friendships.</p>
+<p>With peaking retail interest in crypto, one such friend happened to share this meme with me.</p>
+<p>After a series of awkward exchange and a bit of introspection, I realized this is where we digress from the common narrative of 'transforming traditional finance'.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-819x1024.png" /></p>
+<p>$FARTCOIN Stands at $800M MCap as I write this</p>
+<p>After all, when was the last time you saw a hedge fund manager or an equity investor betting on cats, dogs, and frogs?</p>
+<p>But if you take a closer look at this multi-billion-dollar meme coin mania, you'll find there’s actually a method to the madness.</p>
+<p>And that, my friend, is exactly what I’m going to yap about today!</p>
+<p>This article covers:</p>
+<ol>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#what-is-a-meme">What is a Meme?</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#history-of-memecoins">History of Memecoins</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#memecoin-utility-or-the-lack-of-it">But why are Memecoins worth Billions?</a><ol>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#b-low-barriers-to-entry">Low Barriers to Entry:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#c-celebrity-and-influencer-endorsements">Celebrity and Influencer Endorsements:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#d-fomo-fear-of-missing-out">FOMO (Fear of Missing Out):</a></li>
+</ol>
+</li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#where-and-how-to-exchange-trade-or-discover-memecoins">I am in: What's Next?</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#creation-of-memecoins">Creation of Memecoins:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#exploring-and-trading-memecoins">Exploring and Trading Memecoins:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#the-ever-changing-narratives">The Ever Changing Narratives:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#found-it-how-do-i-evaluate">Found it: How do I Evaluate?</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#memecoins-101-do-s-and-don-ts">Memecoins 101: Do's and Don'ts</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#study-the-meme-s-cultural-context">Study the Meme’s Cultural Context:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#beware-of-botted-engagement">Beware of Botted Engagement:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#token-s-technicality">Token's Technicality:</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#don-t-overcommit">Don't Overcommit</a></li>
+<li><a href="https://pandatechie.in/2024/12/22/memecoins-a-new-financial-paradigm/#memecoins-a-glorified-gambling">Memecoins: A Glorified Gambling</a></li>
+</ol>
+<h2>What is a Meme?</h2>
+<p>Before we start with the financial aspect of it, let us do a quick primer on what in god's name is a meme?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-11.png" /></p>
+<p>After we are past the phonetic wars of 'mee-mee' or 'may-may', you will realize that memes are older than internet itself.</p>
+<p>In fact, the term “meme” itself originates in the field of evolutionary biology, introduced by Richard Dawkins in his 1976 book <em>The Selfish Gene.</em> Dawkins coined the word “meme” (derived from the Greek word “mimema,” meaning “something imitated”) to describe a cultural unit of information that spreads from person to person, evolving and mutating over time, much like genes do in biological evolution.</p>
+<p>In essence, memes were conceived as the cultural equivalent of genes—ideas, behaviors, or styles that spread and evolve through imitation and adaptation within a society.</p>
+<p>These memes existed as cultural print media, folklores, catchphrases in the pre-internet era.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/replicate-prediction-q5xegxek2hrge0ckvt1v0g1p5r.png" /></p>
+<p>The first ever meme created in 1921</p>
+<p>With the advent of the internet, memes found a new medium that supercharged their spread. The early days of the web saw the birth of the first digital memes, laying the foundation for the viral culture we know today.</p>
+<p><em>As a result, modern day memes are all about riding the attention curve—they hit hard, spread fast, but burn out just as quickly</em>.</p>
+<p>Keep that in mind as this trait can singlehandedly elevate your memecoin strategy!</p>
+<h2>History of Memecoins</h2>
+<p><em>Then, a few years later, crypto happened.</em></p>
+<p>What was once dismissed as a fleeting fad is now recognized as a revolution in moving money across borders at the speed of the internet.</p>
+<p>Marry it with internet culture, and you have a layer of financialization turbocharging it.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-13.png" /></p>
+<p>A meme to explain memes: Peak degen behaviour</p>
+<p>As we saw in the previous section, memes have always been a part of our culture. We often leveraged these memes to elevate our communication because of their relatability. This has helped us build a clout in pop culture.</p>
+<p>Crypto enables you to do more than just observe trends—it lets you profit from them.</p>
+<p>Something catching everyone's eye? Why not place a quick bet on it before the buzz fades?</p>
+<p>Take memecoins, for example. These tokens, rooted more in internet humor, cultural waves, or quirky mascots rather than grounded in a serious technological mission.</p>
+<p>While Bitcoin, Ethereum, Solana etc. emerged from a vision of decentralized finance and programmable contracts, memecoins take a wildly different path. It typically starts from a meme, a joke, or a viral nuggets of internet culture, and then take on a life of its own in the crypto markets.</p>
+<p>You might see them named after dogs, cartoon frogs, or even random catchphrases—anything that sparks online enthusiasm and drives a community following.</p>
+<p>The earliest and most iconic memecoin is <strong>Dogecoin (DOGE)</strong>, launched in 2013. Dogecoin began as a parody of the burgeoning crypto scene, featuring the popular "Doge" Shiba Inu meme.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-12-1024x585.png" /></p>
+<p>Initially, it had no serious intent other than to spread fun, tip creators on social media platforms, and make crypto more approachable and friendly.</p>
+<p>But thanks to Dogecoin’s fiercely loyal community and its unbeatable meme-game, what started as a joke evolved into an asset with real, unexpected value.</p>
+<p>Enter the imitators: $SHIB, $WIF, $PEPE, $BONK, and a myriad of other meme-coins who followed suit - riding hypes, social media momentum, celebrity endorsements, and internet forums to astronomical growth periods—only to crash back down with the same jaw-dropping speed.</p>
+<h3>But why are Memecoins worth Billions?</h3>
+<p>Now, before you start comparing it with all the groundbreaking innovation happening in crypto, let's address the elephant in the room.</p>
+<p>Memecoins have ZERO utility.</p>
+<p>So, why do memecoins hold any value at all? Let’s dive into the madness:</p>
+<h4>Low Barriers to Entry:</h4>
+<p>Memecoins often kick off at rock-bottom prices, sometimes just a fraction of a cent. This ultra-low entry point is a magnet for financial nihilists looking to try their luck without diving too deep into blockchain intricacies.</p>
+<p>Thanks to emerging platforms (more on it in a while), spinning up a memecoin is now a no-code, one-click game—practically child’s play in the crypto world.</p>
+<p>So supply and demand are both solved for.</p>
+<h4>Celebrity and Influencer Endorsements:</h4>
+<p>Every now and then, a public figure or celebrity will mention a memecoin, triggering waves of excitement (and, let's be honest, a lot of speculative buying) within the community.</p>
+<p>However, most celebrity-endorsed memecoins have ended in disaster, leaving holders feeling, well, totally scammed. The latest case in point? The $TUAH memecoin by the notorious <a href="https://www.hindustantimes.com/world-news/us-news/hawk-tuah-girl-hailey-welch-could-be-arrested-for-crypto-scam-heres-how-101733463330336.html">Haliey Welch</a>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/cxczcz-1024x519.png" /></p>
+<h4>FOMO (Fear of Missing Out):</h4>
+<p>Rapid price surges create a “hype cycle,” where potential investors panic about missing out on the next big move. This emotional drive often pushes people to buy in without doing their due diligence.</p>
+<p>If you think you're not that type of trader, think again! You might just be a victim of the FOMO trap without realizing it.</p>
+<h2>I am in: What's Next?</h2>
+<p>Ah, made it this far? A true degen, indeed.</p>
+<p>So, what are the rules of this game? Honestly, dynamic af!</p>
+<p>As we speak, there are memecoins runningautonomously using AI, and they're worth $1B.</p>
+<p>Yes, you heard that right. Before you rub your eyes and read that again, let's rewind a bit.</p>
+<p>Back in the day, memecoins were created, traded on-chain, and thenlisted on exchanges. That's when they got maximum attention and volume.</p>
+<p>This thesis has now changed thanks to the launch of platform like <a href="https://pump.fun">pumpdotfun</a>.</p>
+<h3>Creation of Memecoins:</h3>
+<p>Pumpdotfun has completely democratized the launch of memecoins on Solana. This is evident from the staggering number of about 30,000 memecoins being launched daily.</p>
+<p>Out of these, about 1% manage to garner enough attention to cross a threshold of market cap, post which they are listed on a decentralized exchange like <a href="https://raydium.io">Raydium</a>.</p>
+<p>Once listed, if they continue to rise, a further fraction of it (typically less than 5 coins) make it to big centralized exchanges.</p>
+<p><strong>The harsh reality? A staggering 99% of them fade into oblivion before even touching a DEX.</strong></p>
+<p>For those daring enough to dive in, you can simply login to pumpdotfun, connect your wallet and explore this fast paced world of culture X finance.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-2-1024x650.png" /></p>
+<p>A screenshot of pumpdotfun homescreen</p>
+<p>In fact, memes were discarded as illicit, non-serious activity. Now most exchanges, explorers have a dedicated section for people to review them.</p>
+<p>Love em', hate em', they are here to stay.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-3-1024x577.png" /></p>
+<p>TL (CoinMarketCap), BL (CoinGecko), R (Okto Wallet) - All featuring a memecoin section</p>
+<h3>Exploring and Trading Memecoins:</h3>
+<p>Depending on your risk appetite, you can nitpick your stage of memecoin trading.</p>
+<p>From the conception stage to getting listed on big exchanges like Binance, memecoins go through a roller coaster. The odds of riding this entire wave to glory are bleak (around 0.3%)</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-4-1024x566.png" /></p>
+<p>Stages of memecoin graduation</p>
+<p>So, if you are someone who is just testing the waters, it is better to stick with Memecoins like $DOGE, $WIF and $PEPE. They have a decent history attached to them.</p>
+<p>But hey, if you're confident in decoding cultural vibes and tracking those whale moves, why not try catching them early? Coz sometimes, being in on the joke pays off.</p>
+<p>I personally rely on sniper bots for this. With over 30,000 tokens launching daily, manually tracking them is impossible.</p>
+<p>That’s why I follow a risk-adjusted investment framework and automate the entire buying process using a sniper like <a href="https://zotto.io">Zotto</a>. (There are a bunch of snipers, feel free to use any)</p>
+<p>All you need to do is set your boundary conditions—amount, token count, and preferred types—and the bot handles the rest.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-5-607x1024.png" /></p>
+<p>Zotto Sniping Bot</p>
+<h3>The Ever Changing Narratives:</h3>
+<p>Have you ever doom scrolled Instagram/TikTok, only to enjoy a particular trend and hate it later? Why? Simple—boredom kicks in.</p>
+<p>The same dynamic plays out with memecoins. On-chain traders have low attention spans, constantly hopping from one narrative to the next. And, naturally, the money flows wherever the hype goes.</p>
+<p>Memes is an attention game. And now, we’re witnessing the collision of two attention-driven worlds—Web2 and Web3.</p>
+<p>To ride the memecoin wave, you’ve got to stay plugged into real-world events, trending topics, and the latest viral memes. Spot something buzzing in the cryptosphere? Dive in and give it a shot. That’s exactly how breakout stars like ChillGuy and Pnut have turned casual traders into overnight winners.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/Web3-is-Dead-1024x576.jpg" /></p>
+<p>Beyond pop culture, the market is throwing serious cash—billions, in fact—at AI agents these days. These aren’t just your average bots; they’re trained to tweet, reply, and basically act like the Elon of crypto without the lawsuit risk.</p>
+<p>Some of the biggest examples in this category are $GOAT, $BULLY, $AIXBT etc. In fact, Virtuals Protocol, just like pumpdotfun, allows people to launch tokens which can be converted into autonomous agents upon graduation.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-6-1024x645.png" /></p>
+<p>Homepage of Virtuals Protocol - All active AI Agents being traded</p>
+<p>Also, remember there is no set script; it's just an attention market that keeps changing its nature. So, you need to be hyperactive on social media, forget your sleep for a few months.</p>
+<h2>Found it: How do I Evaluate?</h2>
+<p>Eureka! Congratulations on finding your first potential 100x.</p>
+<p>Its time to evaluate it now.</p>
+<p>Since it's purely an attention game, the metrics involved for a fundamental analysis need to measure that.</p>
+<p><strong>Step 1:</strong> Go to <a href="http://holderscan.com">Holderscan</a> to figure out the onchain interest of the token. In this screenshot, I’m diving into the data for $KENDU, dissecting its traction and holder interest.</p>
+<p>Data shows that number of holders are more or less stable. (Growing is better)</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-7-731x1024.png" /></p>
+<p><strong>Step 2:</strong> Go to social media page's of that token. Figure out what's happening with the handle. In the screenshot below, I can see that the number of followers are growing rapidly, despite a decrease in tweeting activity. This means an organic inflow is on the cards.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-9-1024x649.png" /></p>
+<p>Social Analysis through Social Blade</p>
+<p><strong>Step 3:</strong> Once evaluated, you can get into typical TA for figuring out right entry point.</p>
+<p>With that, you complete a well rounded analysis of a memecoin. Remember, attention is the only product. Do NOT look for utility whatsoever!</p>
+<h2>Memecoins 101: Do's and Don'ts</h2>
+<p>Having fun so far? Below are a few cute little tips to enhance your memecoin trading journey. Let us go through them quickly!</p>
+<h3>Study the Meme’s Cultural Context:</h3>
+<p>Before diving into a memecoin, understand the cultural phenomenon it’s based on. Is the meme referenced still relevant, or has its moment passed?</p>
+<p>Memecoins tied to an outdated jokes may lose steam quickly, while those tapping into the ongoing cultural narratives can sustain the interest longer.</p>
+<h3>Beware of Botted Engagement:</h3>
+<p>So naive of you to think that attention can't be synthetic.</p>
+<p>Look beyond the raw numbers (like follower counts on social media) and pay attention to the quality of the community's engagement. Is it organic, or is it flooded with bots and shills?</p>
+<h3>Token's Technicality:</h3>
+<p>I almost forgot to mention - yes, these tokens could be coded in a way that they are designed to rug you. Imagine putting in money and never being able to sell.</p>
+<p>Sounds far-fetched? Unfortunately, not at all.</p>
+<p>A memecoin need not have a grand utility, but a responsible team will at least ensure that the code is secure and that investors are not vulnerable to straightforward scams.</p>
+<p>I use <a href="https://dexscreener.com">DexScreener</a> for this.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/12/image-10-1024x640.png" /></p>
+<p>Screenshot of DexScreener - Everything about every token</p>
+<h3>Don't Overcommit</h3>
+<p>This may sound basic, but it’s crucial. Memecoins are speculative bets with flimsy fundamentals. Avoid investing more than a tiny fraction of your portfolio, and accept in advance that your wager may well end up worthless. Treat any money placed in a memecoin as “fun” or “entertainment” funds rather than a serious investment.</p>
+<h2>Memecoins: A Glorified Gambling</h2>
+<p>Gambling? Yes—that wicked indulgence sequestered for sinful souls in the dim, fight-club-like corners of the city.</p>
+<p>Well, memecoins are no different. Just that by the virtue of crypto, they have the capability of tapping into collective conscience at the speed of internet. The allure of memecoins may be no different from a dice game in a shady back alley—a flash of luck in the night, fleeting as the punchline of a forgotten joke.</p>
+<p>Wager wisely, for beneath the laughter lurk the quiet echoes of risk and regret.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

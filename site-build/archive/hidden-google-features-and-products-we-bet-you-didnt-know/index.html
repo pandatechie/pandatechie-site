@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidden Google features and products we bet you didn't know! | Raghav</title>
+<meta name="description" content="One cannot be a techie and not admire Google at the same time. In all likelihood, it is safe to assume that if you have an internet connection (which is how you…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Hidden Google features and products we bet you didn't know!</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-10-19</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-10-19 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/10/eefed208-3cec-4637-b9de-e57fe28c9c1c.jpg?w=576" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><strong>One cannot be a techie and not admire Google at the same time</strong>. In all likelihood, it is safe to assume that if you have an internet connection (which is how you reached here) you have interacted with a Google product and may be doing it on a daily basis. (unless you are from C.H.I.N.A).</p>
+<p>Just to give you a picture, <strong>if 100 searches are made on the internet, 92 of them are made through Google.</strong> So what makes me write this blog? You all know Google. Pfftt.. I mean who doesn't. Well, over the years, I found some hidden Google features that most of my colleagues/friends weren't aware of. So, I decided to share them all with you. Let's get started:</p>
+<h2>1. Add me to search</h2>
+<p>I came across this feature by Google in <strong>August 2020</strong>. Google allows you to create a <strong>virtual business card</strong> for yourself so that whenever someone searches for your name, instead of Facebook, LinkedIn profiles, your  <strong>business card pops up</strong>. Pretty handy right? Now I can fulfil my age old dream wherein if someone asks me about my details, I can simply say "Google Me".</p>
+<p>For some reason this works only on searches made through phone and not laptop which makes sense as this is likely to be used while having a conversation with someone on the go.</p>
+<p><img alt="hidden google feature add me to search" src="https://pandatechie.in/wp-content/uploads/2020/10/eefed208-3cec-4637-b9de-e57fe28c9c1c.jpg?w=576" /></p>
+<p>How to create your virtual business card? Just head to Google and type <strong>"add me to search"</strong> (works on phone only). Fill in the required details and voila! You can add links to your social media accounts like LinkedIn, Facebook, Instagram etc. That is what we call a truly connected world right?</p>
+<h2>2. Earworm Recognizer</h2>
+<p>Okay, before you google the name and start bashing me, this name was given by me. Bear with me, I have a logic behind it. So have you ever been in a situation where a <strong>damn song is stuck in your head and you are just NOT able to recall the lyrics?</strong> It is so annoying at times that you aren't able to sleep properly (at least I have this issue). Yes, we name <strong>such songs as earworms.</strong></p>
+<p>What do you do then?</p>
+<p>Well, this hidden Google feature has an answer. You simply open your Google virtual assistant (assuming you have one) and say, "Recognize this song". Now you have option of humming as well. Just that good ol' Ta Da Da Duru ruu' is enough for Google to rescue you.</p>
+<p>Watch this in action below. Yes it is a 90's classic hit song massacred brutally by Arman Malik recently.</p>
+<p>https://videopress.com/v/asSRzdoz?preloadContent=metadata</p>
+<p>Google Song Recognition from humming</p>
+<p>Go ahead give it a shot.</p>
+<h2>3. Google photoscan</h2>
+<p>Yes, this one is available if you search by its name. This is an old application of Google but rarely talked about. I recently visited my native place during lockdown and realized there are tons of <strong>old photographs rotting away</strong>. These images are <strong>too precious</strong> to be taken for granted like this. Millennials may not relate to it but those were tough times. You had to wait for at least a week before you could see if you are looking fat or fine in the photograph.</p>
+<p><img alt="Hidden feature of google photoscan" src="https://pandatechie.in/wp-content/uploads/2020/10/image-8.png?w=1024" /></p>
+<p><strong>Photoscan</strong> will help you to <strong>digitize</strong> these old photographs and save them safely in your <strong>Google Drive</strong> or <strong>Gallery</strong> or whatever. Conventional problem with clicking picture from a picture is that it <strong>leaves a glare or reflection</strong> on the photo and borders are never right. They solve that problem by asking you to click photos from <strong>5 different angles</strong> and stitching it together. It is almost like something you actually took from your phone.</p>
+<p>You can download this hidden gem from Google from:</p>
+<p>Android: <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos.scanner&amp;referrer=utm_source%3Dlanding">https://play.google.com/store/apps/details?id=com.google.android.apps.photos.scanner&amp;referrer=utm_source%3Dlanding</a></p>
+<p>iOS: <a href="https://apps.apple.com/app/apple-store/id1165525994">https://apps.apple.com/app/apple-store/id1165525994</a></p>
+<h2>4. Google 3D</h2>
+<p>Now this is one of those features which <strong>don't enhance your productivity or don't have any utility per se</strong>. But yes they are <strong>fun to use</strong>. Google uses virtual reality to make certain animals come to life.</p>
+<p>It is super simple to enable this. Simply search for an animal. I have tried it with <strong>dog, panda, tiger, cheetah</strong>. You will find an option in the Google search itself to <strong>view it in 3D.</strong></p>
+<p><img alt="hidden feature of google 3D" src="https://pandatechie.in/wp-content/uploads/2020/10/screenshot_20201019-102257.jpg?w=412" /></p>
+<p>In case you don't see this option in your search, chances are that you need to update/install Google AR.</p>
+<p>Head over to<a href="https://play.google.com/store/apps/details?id=com.google.ar.core&amp;hl=en_IN&amp;gl=US">https://play.google.com/store/apps/details?id=com.google.ar.core&amp;hl=en_IN&amp;gl=US</a> for that.</p>
+<p>Here are a few pictures to see this in action:</p>
+<p><img alt="" src="https://i2.wp.com/pandatechie.in/wp-content/uploads/2020/10/screenshot_20201019-102125.jpg?ssl=1" /><img alt="" src="https://i2.wp.com/pandatechie.in/wp-content/uploads/2020/10/screenshot_20201019-102154.jpg?ssl=1" /></p>
+<p><img alt="" src="https://i2.wp.com/pandatechie.in/wp-content/uploads/2020/10/screenshot_20201019-102139.jpg?ssl=1" /></p>
+<h2>Conclusion</h2>
+<p>So were you aware of all these hidden features of Google? I would request you all to try these out and let me know in the comments section how'd you find them. I can do a another blogpost for more such features.</p>
+<p>Until Next Time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

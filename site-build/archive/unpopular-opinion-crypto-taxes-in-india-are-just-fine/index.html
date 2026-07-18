@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unpopular Opinion: Crypto Taxes in India are Just Fine | Raghav</title>
+<meta name="description" content="Recently, I got myself into yet another conversation around taxation. It was on a Telegram group of crypto enthusiasts. There was this usual rant around governm…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Unpopular Opinion: Crypto Taxes in India are Just Fine</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-05-13</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-05-13 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://economictimes.indiatimes.com/thumb/msid-77525190,width-1200,height-900,resizemode-4,imgsize-112483/tax.jpg?from=mdr" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Recently, I got myself into yet another conversation around taxation. It was on a Telegram group of crypto enthusiasts. There was this usual rant around government imposing draconian crypto taxation regime. So after convincing them for a while, I started getting backlash. At this point, I asked one of them that how much tax are they willing to pay. To my surprise they mentioned something to the tune of 2-5%.</p>
+<p><img alt="" src="https://economictimes.indiatimes.com/thumb/msid-77525190,width-1200,height-900,resizemode-4,imgsize-112483/tax.jpg?from=mdr" /></p>
+<p>Now here's the problem. Our expectations are too damn high. For your reference, we pay somewhere around 10-20% <a href="https://pandatechie.in/2021/03/20/taxation-of-income-earned-through-selling-shares/">capital gains</a> tax on our equity holdings as well. I agree there is a margin for improvement in terms of offsetting of losses, some initial exemption etc. But if you believe that the government will let you off this hooks with a measly 2%, well, you might be in a wrong country altogether.</p>
+<p>And while this was fresh in my head, yesterday, the <strong>GST</strong> council of India hinted at imposing a <strong>28% GST</strong> on crypto transactions. This is in addition to the <strong>30% tax</strong> already levied by the <strong>government</strong> on all gains made on <strong>digital assets</strong>. While <strong>#GSTonCrypto</strong> trended on <strong>Twitter</strong> for a while, the noise around <strong>bear market</strong> was enough to suppress it soon.</p>
+<p><img alt="" src="https://lh5.googleusercontent.com/WLqtweztvxa4whvfwiyHQTEDrRCpHF4FUXF5HezKYyl2Y6wUUEE0AH-B_M49jPDqeHcogSjDylvlYd25qWMZ4XNRkKUxptbxlLIveEVhZpIgSxUuJ2ED9AkYU65-UjoCaVVq-pxkq95SsUFs7Q" /></p>
+<p>Out of all the brilliant memes that came out of this conversation, one of them particularly caught my eye. (Refer to the image)</p>
+<p>While it looks like a hearty attempt to take a jab at the current <strong>tax situation</strong>, I wanted to highlight that this is far from reality. Even the understanding around <strong>GST</strong> on <strong>crypto</strong> is half baked at best right now.</p>
+<h1>Some Common Misconceptions Around Taxation:</h1>
+<p>Every time the topic of taxation pops up, I can see the pent up anger inside a person's soul. And I understand. Who like taxes after all. But the problem with anger is that it often blinds you. So today, I will try my best to share certain misconceptions that I have come across and throw some light on them.</p>
+<h2>A. 30% of What?</h2>
+<p>Let’s take it from the <strong>top</strong>, shall we? I have had multiple <strong>conversations</strong> where people think that their entire principal amount is going to be taxed at <strong>30%</strong>. They would often say that their <strong>portfolio</strong> is up by 25% and the government is going to take away all of it.</p>
+<p><img alt="" src="https://media4.giphy.com/media/4JVTF9zR9BicshFAb7/giphy.gif" /></p>
+<p>Well, if you are one of those people, I have good news for you.</p>
+<p>The tax is applicable on the <strong>profits</strong> made by you. So if you invested <strong>$100</strong> in a digital asset and exited with <strong>$150</strong> in hand, the government is going to charge you <strong>30%</strong> of <strong>$50</strong> i.e. <strong>$15</strong>.</p>
+<h2>B. TDS Makes it 31%:</h2>
+<p>There’s another notion that states <strong>1% TDS</strong> is over and above <strong>30% tax</strong>. Well, that is not correct. <strong>TDS</strong> by name stands for ‘tax deducted at source’. You could get a rebate of TDS while you are <strong>filing</strong> your <strong>taxes</strong>. So that 1% which catches the eye is a part of the <strong>30%</strong> mentioned above. Government usually puts TDS in place to <strong>track funds</strong>.</p>
+<p><img alt="" src="https://babatax.com/wp-content/uploads/2020/08/download-3-1.jpg" /></p>
+<h2>C. GST will take it all from us:</h2>
+<p><img alt="" src="https://economictimes.indiatimes.com/thumb/msid-90027796,width-1200,height-900,resizemode-4,imgsize-13958/gom-on-rate-rationalisation-for-raising-5-gst-slab-to-7-18-to-20-report.jpg?from=mdr" /></p>
+<p>Finally coming to the <strong>28%</strong> we have just heard about. I believe that <strong>28%</strong> is going to be levied on <strong>maker</strong> and <strong>taker</strong> <strong>fee</strong>. It is not going to eat a chunk out of your <strong>profits</strong>. For the uninitiated, the government already levies <strong>18% GST</strong> on these transactions. They are proposing to increase it to <strong>28%</strong> now.</p>
+<h1>Are these Taxes Going to Kill Crypto?</h1>
+<p>Well, there is a long and a short answer to this question. I would start with the longer version. In my opinion, it is very difficult to regulate an asset like <strong>crypto</strong> for a country of our size. Compare it with China which has a similar population. They banned <strong>crypto</strong> outright.</p>
+<p>So here are a few reasons I think crypto taxation is in a way a good move:</p>
+<h2>A. Acknowledging Crypto's Existence:</h2>
+<p>The Indian <strong>government</strong> has at least taken steps to regulate this <strong>asset class</strong>. It would have saved them a ton of time, money and effort to simply put a blanket <strong>ban</strong> on <strong>crypto assets</strong>.</p>
+<p><img alt="" src="https://media3.giphy.com/media/zzQKrTT326GZG2s8O9/giphy.gif" /></p>
+<p>I think this is a step in the right direction. It clearly shows the intent of the <strong>government</strong> to understand and regulate this space. After years of ignorance, they have finally come to acknowledge the <strong>existence of crypto</strong>.</p>
+<h2>B. Regulation Safeguards You:</h2>
+<p>A few months ago there was some glitch at NSE. This led to halting the trading for a few hours. Post that, some experienced, advanced chaps exploited this situation and made money out of it. A few days later, government stepped in and penalized the players at fault.</p>
+<p><img alt="" src="https://cmitsolutions.com/wp-content/uploads/2017/05/6_ways_to_Protect_Your_Data_Your_Devices_and_Your_Digital_Identity-02.png" /></p>
+<p>Now let's talk about crypto. Every time there is a market crash and an opportunity to arbitrage, WazirX, CoinDCX and CoinSwitch Kuber halt the INR deposits. Don't you want them to be answerable? If yes, they got to come under the government radar.</p>
+<h2>C. Tracking Money Trail:</h2>
+<p>Now this may sound like snooping. But I think in order to track illicit funds, government needs to have systems in place that would help them track the money. By taxing the cryptocurrency, government is ensuring the KYC AML regulations are in place.</p>
+<h2>The Flip Side of Taxation:</h2>
+<p>I agree that <strong>30%</strong> is a tad bit much. We could have lived with a lesser bracket too. However, it’s not written in hard stone. <strong>Government</strong> can reconsider it in the upcoming <strong>budgets</strong> as well.</p>
+<p><em>For your reference, when </em><em>income tax laws</em><em> were formulated after independence, the </em><em>highest tax slab</em><em> was fixed at </em><em>97.75%</em><em>.</em></p>
+<p>With that being said, there is a significant <strong>chunk</strong> of the <strong>population</strong> that would face severe implications because of this.</p>
+<p>Yes, traders might find it really difficult to manage the <strong>1% TDS</strong> for their daily transactions. I would not deny the fact that this <strong>tax structure</strong> might be specifically aimed at reducing speculation and hence trading.</p>
+<h1>Final Take:</h1>
+<p>To summarize everything, just like <strong>Blockchain</strong> and <strong>Cryptocurrency</strong> space, everything is evolving right now. Who knows what narrative takes over in the upcoming days, months or years.</p>
+<p>Nonetheless, we’d all agree on one fact. It is an exciting area to be in. I’d like to quote <strong>Sandeep Nailwal</strong>- <strong>Founder of Polygon</strong>.</p>
+<p><em>“A month in crypto is equivalent to 3 normie months”</em></p>
+<p>What are your views about the taxation?</p>
+<p>https://www.instagram.com/p/Cc19XUIr6MU/</p>
+<p><strong><em>'This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/"><strong>Cindy D’Silva</strong></a> and</em>* </strong><a href="https://nooranandchawla.com/">Noor Anand Chawla</a>.'***</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

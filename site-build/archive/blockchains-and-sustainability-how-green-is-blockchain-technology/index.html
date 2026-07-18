@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blockchains and Sustainability: How Green is Blockchain Technology? | Raghav</title>
+<meta name="description" content="Sustainable Business Management; Technology 5.0 And Sustainable Development
+
+ Introduction:
+
+It won't be wrong to say that blockchain technology has taken over …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Blockchains and Sustainability: How Green is Blockchain Technology?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-01-30</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-01-30 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media0.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<blockquote>
+<p><em>Sustainable Business Management; Technology 5.0 And Sustainable Development</em></p>
+</blockquote>
+<h2>Introduction:</h2>
+<p>It won't be wrong to say that <strong>blockchain technology</strong> has taken over the world by a storm. Thanks to the cryptocurrency realm and it's massive success, blockchains are soon becoming a mainstream phenomena. While the likes of <strong>Bitcoin</strong> have garnered enormous popularity amongst the investors and speculators alike, a very small portion of them actually understand the technology behind it. In fact, Bitcoin's success can be partly attributed to the general narrative of <strong>'Us' (Bitcoin Investor) vs 'State'</strong>. This has attracted a lot of young <strong>Generation 'Z'</strong> kids who are jumping into this realm.</p>
+<p><img alt="" src="https://media0.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" /></p>
+<p>This lack of understanding of technology has created issues like undue <strong>speculation</strong>, <strong>capital loss</strong> etc. While these issues are more at a personal level, there is something that has taken a <strong>global centerstage</strong>: Sustainability and Environmental Concerns.</p>
+<p>So, in this paper, author would attempt to share an abstract of why <strong>Bitcoin</strong> is considered detrimental to the <strong>environment</strong>. We'd also touch upon the fact if something is being done to fix it. And finally, what's the way forward from here.</p>
+<h2>Quantum of the Problem:</h2>
+<p>If we focus on<strong><em>Cambridge Bitcoin Electricity Consumption Index</em></strong> from Cambridge University, Bitcoin’s bad impact on the environment raises – compared to the <strong>Digiconomist’s Index</strong> – to an electric consumption of <strong>133.68 TWh</strong> per year.</p>
+<p>That makes Bitcoin’s impact on the environment equivalent to a country like Sweden’s and its <strong>131.80TWh</strong> annual electricity consumption. Or similar to the consumption of countries like Poland (<strong>152.57TWh/year</strong>) Egypt (<strong>150.58TWh/year</strong>), Malaysia (<strong>147.21TWh/year</strong>), Ukraine (<strong>128.81TWh/year</strong>), or Argentina (<strong>125.03TWh/year</strong>).</p>
+<p><img alt="" src="https://youmatter.world/app/uploads/sites/2/2021/05/bitcoin-bad-environment-768x376.png" /></p>
+<p>Image credits: Cambridge Centre for Alternative Finance (https://cbeci.org/cbeci/comparisons)</p>
+<p>The dilemma involved here is very real. Should we consider <strong>Bitcoin</strong> as a parallel currency and compare it with the likes of <strong>State Bank of India</strong> (which probably consume way more energy than Bitcoin)? Or shall we deem it as an asset class and rethink if we wish to sacrifice our future for some decent returns on investment.</p>
+<p>To put the energy consumed by the Bitcoin network into perspective we can compare it to another payment system like <strong>VISA</strong>. According to<strong><a href="https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/">Statista</a></strong> (May 2021), one Bitcoin transaction alone spends, on average <strong>1200.86 kWh</strong>, while <strong>100,000 VISA</strong> transactions spend only <strong>148.63 kWh</strong> – it’s a huge difference.</p>
+<p>The problem doesn't end here. <strong>Mining Bitcoin</strong> (more on it in a while) requires specialized hardware. This hardware can be <strong>graphic cards</strong>, computers etc. Multiple such devices are pooled together to create a mining ring. Once these devices break down, they cannot be recycled. Thus generating enormous electronic waste.</p>
+<p><em>The </em><em>Digiconomist</em><em> suggests the amount of electronic waste Bitcoin produces: 11 kilotonnes/year.</em></p>
+<p><img alt="" src="https://youmatter.world/app/uploads/sites/2/2021/05/electronic-waste-generation-by-country-annualized-kilotonnes-1-768x237.png" /></p>
+<h2>Why is Bitcoin (Blockchain) Consuming So Much Electricity?</h2>
+<p>In order to look for alternatives efficiently, one needs to understand how <strong>Bitcoin</strong> works. This would give you a perspective of how it is leading to a <strong>gigantic carbon footprint</strong>.</p>
+<p>Let's rewind a little bit to understand how Bitcoin works. That should serve as a perspective of why there is so much power required to run this network.</p>
+<p>So blockchains in essence are nothing but a <strong>chain</strong> of <strong>blocks</strong>. These blocks can store data: <strong>text</strong>, <strong>images</strong>, <strong>videos</strong>, <strong>transactional data</strong>, anything.</p>
+<p>Now let’s consider the blockchain that runs <strong>Bitcoin</strong>. All transactional data is stored on to this blockchain. So if Person A pays Person B a sum of <strong>1BTC</strong>, it is stored on a block with these details.</p>
+<p><strong>USP</strong> of the <strong>blockchain technology</strong> is the fact that it is <strong>decentralised</strong>. This means that there is no single, central authority running the show. How blockchains typically operate is through nodes.</p>
+<p>These nodes are computers with high end <strong>configuration</strong> that help maintain the system. Every node has the copy of the entire <strong>blockchain</strong>.</p>
+<p><img alt="" src="https://www.simon-kucher.com/sites/default/files/styles/670xh/public/2020-09/Blockchain%20abstract%20image.jpg?itok=61g9eTRN" /></p>
+<p>Now if anyone tries to cheat on the system, there copy of the <strong>blockchain</strong> becomes different than the other copies. Therefore everyone else comes to know of this <strong>fraudulent</strong> activity and that copy of <strong>blockchain</strong> is simply shunted out of the system.</p>
+<p>So far so good right? But then if changing the blockchain is so easy, everyone would come up with their own version of <strong>blockchain</strong> and it would become impossible for anyone to guess which <strong>blockchain</strong> has the <strong>legitimate data</strong>. In other words, we would end up with <strong>multiple blockchains</strong> with no way to pin point the correct one.</p>
+<h3>Proof of Work</h3>
+<p>Just to solve for that problem, a concept of ‘<strong>Proof of Work</strong>’ was introduced. This means that if people had to work hard to create a new block (basically change the <strong>blockchain data</strong>), they would think twice before tampering with the system.</p>
+<p>Without going into too much of technicality, this is achieved through making people solve a complicated <strong>mathematical puzzle</strong>. If you are interested in understanding how this <strong>puzzle</strong> works I would recommend that you read this <a href="https://pandatechie.in/2021/09/05/what-is-hash-function-in-blockchain-how-is-it-used-in-proof-of-work/">post</a>.</p>
+<p>In order to solve this puzzle, people spend their <strong>computational resources</strong> and hence electricity in the process. Why would some do that you ask? Because they would get rewarded in <strong>BTC</strong> if they successfully validate a transaction.</p>
+<p>Now, what happens in a proof of <strong>work mining system</strong> is that every node would try to solve for the <strong>mathematical puzzle</strong> in order to win rewards. And the one which would solve it first, would win the rights to forge the next block and hence the rewards.</p>
+<p><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQhRS-GqtCRLuOe6OBO-bBqdowHU9KRbBp-g&amp;usqp=CAU" /></p>
+<p>Think of it like multiple computers racing towards a single reward. While the winner gets it all, others who participated simply waste electricity and get nothing.</p>
+<p>‘<strong>Proof of work</strong>’ is called a <strong>consensus mechanism</strong> (as it is helping the entire blockchain decide on the legitimacy of the next blog) and the <strong>nodes</strong> who run in this race are called <strong>miners</strong>.</p>
+<p><em>Note: </em><em>No miners = No validation = No security = No blockchain</em>**</p>
+<h2>The Solution:</h2>
+<p>With that explanation out of the way, let’s try to understand how can this problem be solved.</p>
+<p>But before we get into that, a quick disclaimer: ‘<strong>Proof of work</strong>’ has stood against the test of time and has made <strong>BTC</strong> an extremely secure <strong>blockchain</strong>.</p>
+<h3>A. Renewable Modes of Mining:</h3>
+<p>One obvious thought that comes to the mind is the fact that why can’t we use the electricity produced by <strong>renewable modes</strong>? After all, electricity isn’t our enemy. It’s the way it is produced that’s a cause of concern right? So if you could use solar, <strong>hydro energy</strong> to mine <strong>Bitcoin</strong>, it should be on the right side of the environment.</p>
+<p>A lot of thought is being given to this niche. In fact, <strong>El Salvador</strong>, world’s first country to recognise <strong>BTC</strong> as a <strong>legal tender</strong>, has decided to pioneer this innovation.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>The country has started harnessing the power of volcanos in the region to mine <strong>Bitcoin</strong>. <strong>President Nayib</strong> <strong>Bukele</strong> has even given it a cool name: ‘<strong>Volcanode</strong>’.</p>
+<p>The electricity produced by using the geothermal energy would be used for mining green Bitcoin.</p>
+<p>In a more recent news, a Texas based startup called Lancium has just closed a round worth <strong>$150m</strong> to mine Bitcoin using green energy sources.</p>
+<p><strong>Lancium</strong>, founded in 2017, describes itself as a <strong>carbon neutral cloud computing company</strong>. It plans to build and operate technologically advanced data centers that will promote renewable energy growth.</p>
+<h3>B. Changing the Consensus Algorithm:</h3>
+<p>What if there was another way to <strong>validate</strong> the transactions and create the <strong>next block</strong>. What if every node in the system wouldn’t compete for the rewards? Well, that’s exactly the ethos behind another <strong>consensus</strong> <strong>algorithm</strong> that is now gaining popularity with every day.</p>
+<h2>Proof of Stake:</h2>
+<p>Unlike proof of work, there is a subtle difference in this <strong>consensus algorithm</strong>. Imagine everything else remains the same but now, system picks up an individual node that would validate the transaction and hence forge the next block.</p>
+<p>That's the basic premise behind '<strong>Proof of Stake</strong>' consensus algorithm. But what if the node selected decides to dupe the system? Well, that's why each of these nodes are asked to stake a certain sum of money before going ahead. For example for becoming a node in <strong>Ethereum</strong>, one needs to stake a minimum of <strong>64ETH</strong>. Since now the nodes have a skin in the game they have zero incentive to cheat the system.</p>
+<p>In a <strong>PoS algorithm</strong>, system assigns the mining rights to single node on the basis of following parameters:</p>
+<ul>
+<li>Time since node is present in the system (<strong>older nodes</strong> are given a precedence)</li>
+<li>Total amount <strong>staked</strong> by the <strong>nodes</strong></li>
+<li>An element of randomization</li>
+</ul>
+<p>Apart from that, any node that forges the block incorrectly is also penalized in the form of currency and future consideration for <strong>mining decisions</strong>.</p>
+<p>This <strong>consensus mechanism</strong> has become quite popular now. All next generation blockchains like <strong>Tezos</strong>, <strong>Polkadot</strong>, <strong>Near</strong> run on <strong>Proof of stake</strong>. Even the largest blockchain <strong>Ethereum</strong> is all set to switch from proof of work to proof of stake within this year.</p>
+<p><img alt="" src="https://cd.blokt.com/wp-content/uploads/2019/05/proof-of-stake.jpg" /></p>
+<h3>Delegated Proof of Stake Algorithm:</h3>
+<p>But once <strong>PoS</strong> started gaining traction, the next concern was around <strong>decentralization</strong>. Blockchains are all about democratizing wealth. However with exorbitant sums required to become a node, it was almost impossible for a retail investor to take part in staking. Therefore, a work around was formulated in the form of <strong>dPoS</strong> or delegated proof of <strong>stake algorithm</strong>.</p>
+<p>In a <strong>dPoS</strong> algorithm, apart from the algorithm's input to decide on the next validator, there is an additional input. Retail investors can also bet on a <strong>node's</strong> probability to successfully validate the transactions. And more the backers of a <strong>node</strong>, more is the amount staked by it, more are the chances of getting the rights to validate. With that, everyone can stake smallest portions of their coins to a node to earn a proportion of rewards in return.</p>
+<h2>Conclusion:</h2>
+<p>While the <strong>blockchain technology</strong> is new, the <strong>consensus algorithms</strong> other than proof of work are even newer. As the general narrative and selling proposition of blockchain is <strong>decentralization</strong> and security, proof of stake has it's own set of challenges too.</p>
+<p>As the Co-founder of <strong>Ethereum</strong> foundation suggests that blockchain <strong>trilemma</strong> is real. Which means out of three metrics, decentralization, security and scalability, only two can be chosen.</p>
+<p>With that being said, it's too early to conclude that <strong>BTC</strong> is degrading the environment because as per the stats about <strong>52%</strong> of the miners are using electricity generated by the sustainable sources. With remainder <strong>48%</strong> still leaving behind a significant <strong>carbon footprint</strong>, Bitcoin should be facing the wrath of another set of non-adopters in the society.</p>
+<p>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration.</p>
+<p>https://www.instagram.com/p/CZhMl4bPM5s/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

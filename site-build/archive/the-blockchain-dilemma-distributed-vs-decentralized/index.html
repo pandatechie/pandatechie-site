@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Blockchain Dilemma: Distributed Vs Decentralized | Raghav</title>
+<meta name="description" content="Before sleeping every night, I tend to mellow down a little bit by listening to soft music on my [Amazon Echo Dot](https://pandatechie.in/2020/10/21/top-use-cas…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Blockchain Dilemma: Distributed Vs Decentralized</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-04</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-04 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/10/gettyimages-1134270597-scaled-1.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Before <strong>sleeping</strong> every night, I tend to <strong>mellow</strong> <strong>down</strong> a little bit by <strong>listening</strong> to <strong>soft</strong> <strong>music</strong> on my <a href="https://pandatechie.in/2020/10/21/top-use-case-of-amazon-echo/">Amazon Echo Dot</a>. This had become an <strong>integral</strong> part of my <a href="https://pandatechie.in/2020/10/23/unable-to-sleep-how-to-sleep-fast/">routine</a>. However, I never <strong>evaluated</strong> the <strong>flip</strong> <strong>side</strong>. What if I cannot get that '<strong><em>mindgasm</em></strong>' some day? Is it going to be a <strong>disturbed</strong> sleep? Turns out <strong>YES</strong>. For past <strong>couple</strong> of <strong>days</strong>, we are facing an <strong>electricity</strong> <strong>outage</strong> every <strong>night</strong> for <strong>30</strong> <strong>minutes</strong> due to some <strong>repair</strong> <strong>work</strong> nearby. That also means, I couldn't <strong>operate</strong> my beloved <strong><a href="https://pandatechie.in/2020/12/08/alexa-and-my-grandmother/">Alexa</a></strong>. For some reason, my phone <strong>ditched</strong> me as well in <strong>terms</strong> of a <strong>constant</strong> <strong>data</strong> <strong>supply</strong>. And that's when there's nothing to do, my brain gets <strong>activated</strong>. Activated to the extent that I can light up one with <strong>mug</strong> of <strong>coffee</strong> <strong>searching</strong> for <strong>answers</strong> all night!</p>
+<p><img alt="Unable to sleep" src="https://pandatechie.in/wp-content/uploads/2020/10/gettyimages-1134270597-scaled-1.jpg" /></p>
+<p>On most days, these questions are more <strong>spiritual</strong>. I often <strong>think</strong> <strong>myself</strong> to <strong>sleep</strong> while <strong>pondering</strong> over them. However, there are days when these <strong>questions</strong> take a much <strong>practical</strong> form. That's when the <strong>urge</strong> to find <strong>answers</strong> is at it's peak. Today, I plan to share one such question that <strong>kept</strong> me <strong>awoke</strong> for a while last night. Don't worry, I was able to <strong>find</strong> answer a couple of hours later. I won't keep you up all night. So we keep on hearing two words in the blockchain parlance. It is a <strong>distributed</strong> and <strong>decentralized</strong> network of nodes. This words are used <strong>interchangeably</strong> in almost every sense. But do they mean the same? Let's settle this out for once. <strong>Distributed</strong> Vs <strong>Decentralized</strong>.</p>
+<h2>The Game of Antonyms:</h2>
+<p>The entire thought started with me looking for <strong>antonyms</strong> of <strong>random</strong> words (Crazy right?). When my brain stumbled upon the word '<strong>Decentralized</strong>', I quickly came up with '<strong>Centralized</strong>'.</p>
+<p>On a similar note, when I thought of the word '<strong>Distributed</strong>', the best <strong>guess</strong> I could make was again '<strong>Centralized</strong>'.</p>
+<p>So does it mean that <strong><em>Decentralization == Distributed</em></strong>?</p>
+<p>And I kept on <strong>scratching</strong> my <strong>head</strong> on this question for a while. Is <strong>blockchain</strong> <strong>decentralized</strong> or is it a <strong>distributed</strong> <strong>ledger</strong>? Is it <strong>both</strong>? Do these <strong>terminologies</strong> mean the same?</p>
+<p><img alt="" src="https://mammothtech.io/wp-content/uploads/2018/02/1_u-myj-ci879BETVPsh8yag.png" /></p>
+<p>Let's explore the in depth meaning of each of these terms.</p>
+<h2>What does Decentralization Mean?</h2>
+<p>In <strong>usual</strong> terms, whenever <strong>someone</strong> <strong>talks</strong> about <strong>decentralization</strong> and <strong>centralization</strong> aspect of <strong>blockchains</strong>, they refer to the <strong>authority or governance</strong> of the <strong>system</strong>. In a centralized system, a <strong>single</strong> <strong>authority</strong> would be <strong>responsible</strong> for all the <strong>decisions</strong> pertaining to the system. However, in a <strong>decentralized</strong> world, this <strong>authority</strong> is <strong>spread</strong> across multiple <strong>nodes</strong>. <em>No single node can decide the fate of the blockchain.</em></p>
+<p><img alt="" src="https://www.avatier.com/blog/wp-content/uploads/2020/02/blog-Centralized-vs-Decentralized-Access-Management.jpg" /></p>
+<p>The best example of a <strong>decentralized</strong> system is <strong>Bitcoin</strong>. There is no <strong>central</strong> <strong>authority</strong> governing the transactions. For each <strong>transaction</strong> to be <strong>validated</strong>, there has to be a <strong>consensus</strong> from at least <strong>51% of the nodes</strong>.</p>
+<h2>What does Distributed Mean?</h2>
+<p>When someone talks about <strong>distributed</strong>, they are generally <strong>referring</strong> to the <strong>physical</strong> <strong>locations</strong> of the <strong>servers</strong> governing the system. A <strong>distributed</strong> system is usually <strong>adopted</strong> to make the <strong>infrastructure</strong> more <strong>reliable</strong>. How? If there is a <strong>failure</strong> at one node, all other nodes would still be <strong>up and running</strong>, hence <strong>preventing</strong> the entire <strong>system</strong> from <strong>collapsing</strong>.</p>
+<p><img alt="Centralized Vs distributed networks" src="https://img.favpng.com/16/22/8/computer-network-diagram-distributed-networking-local-area-network-distributed-computing-png-favpng-s79S27yst0mLVC30w6KmySeiz.jpg" /></p>
+<p>Also, the <strong>overall load</strong> on the <strong>network</strong> gets <strong>distributed</strong> amongst various nodes, making it <strong>efficient</strong> and <strong>scalable</strong>.</p>
+<p>One <strong>noteworthy</strong> point would be that the <strong>nodes</strong> involved in the system can be <strong>either centralized or decentralized</strong>. Which means a single authority might chose to spread the system in various geographies to prevent a global outage or <strong>mitigate</strong> <strong>political</strong>, <strong>legal</strong> <strong>risks</strong> of operating from one location.</p>
+<p>Few key examples of a distributed system would be <strong><a href="http://amazon.in">Amazon</a></strong>, <strong><a href="http://facebook.com">Facebook</a></strong>, <strong><a href="http://google.com">Google</a></strong>. While these tech giants call the shots on the day to day functioning of the company, their servers are still set up in various locations.</p>
+<h2>Decentralized Vs Distributed:</h2>
+<p>The decentralized and distributed are usually used <strong>interchangeably</strong> in blockchain and crypto space because <strong>blockchain</strong> technology is actually <strong>both</strong> of <strong>them</strong>. All the nodes are <strong>geographically</strong> placed <strong>across</strong> the world (distributed) with <strong>no single node</strong> having the <strong>authority</strong> over the <strong>blockchain</strong> (decentralization).</p>
+<p><img alt="Image showing centralized vs distributed vs decentralized networks in form of node diagram" src="https://blockchainengineer.com/wp-content/uploads/2019/01/0.png" /></p>
+<p>However, in a non blockchain landscape, these two words are quite different. You can think of <strong>decentralization</strong> as a <strong>subset</strong> of <strong>distributed</strong>. That would mean that <strong><em>all decentralized networks are distributed in nature by default, however all distributed networks may not be decentralized</em></strong>. Still scratching your head around it? Refer to the image which was really helpful for me in dissecting these concepts.</p>
+<h2>Conclusion:</h2>
+<p>Good night may be? Finally I know the difference between these close cousins. I hope it provided you the sense of satisfaction and 'Zen' that it did to me. Now what are you waiting for? Go ahead and nail those dining table conversations by dropping this question in front of everyone. Distributed vs Decentralized networks anyone?</p>
+<p>Or is it just me who is absolutely NO fun at the parties? E</p>
+<p>https://www.instagram.com/p/CRX9Z9KLfkc/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

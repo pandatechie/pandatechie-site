@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is the Difference Between Crypto and Stocks? | Raghav</title>
+<meta name="description" content="When I started my [crypto journey](https://pandatechie.in/2021/07/10/my-cryptocurrency-journey-how-it-all-began/) I was made to believe that it is very similar …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is the Difference Between Crypto and Stocks?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-11</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-11 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.indiafilings.com/learn/wp-content/uploads/2016/09/Procedure-for-Listing-on-BSE-SME-Exchange.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>When I started my <a href="https://pandatechie.in/2021/07/10/my-cryptocurrency-journey-how-it-all-began/">crypto journey</a> I was made to believe that it is very similar to <strong>investing</strong> in <strong>stocks</strong>. Okay, the market might be a lot more <strong>volatile</strong>, but the underlying <strong>principle</strong> remains the same. You pick a <strong>fundamentally</strong> <strong>sound</strong> <strong>crypto</strong>, <strong>invest</strong> and <strong>wait</strong> for your <strong>gains</strong>. Three years down the line, I wish it were that easy. Correlating <strong>stocks</strong> and <strong>cryptos</strong> for drawing a <strong>parallel</strong> <strong>conceptually</strong> is absolutely fine. We do that because <strong>stock</strong> <strong>markets</strong> are way <strong>older</strong> than <strong>crypto</strong> and everyone can relate to those <strong>terminologies</strong>. However, considering both these <strong>assets</strong> as <strong>absolutely</strong> <strong>similar</strong> to each other is a <strong>rookie</strong> <strong>mistake</strong>. So today, we talk about some <strong>key elements</strong> that reflect the <strong>stark</strong> <strong>difference</strong> between them. What is the difference between <strong>crypto</strong> and <strong>stocks</strong>? Let's get started.</p>
+<h2>A. Issuing Authority:</h2>
+<p>Filing for an <strong>IPO</strong> is a <strong>herculean</strong> <strong>task</strong> in our country. Even globally, one cannot simply get their company <strong>listed</strong> in the <strong>stock</strong> <strong>market</strong>. There is an elaborate standard operating procedure <strong>governing</strong> that.</p>
+<p>For example, in India, <strong>SEBI regulates the stock market</strong> and has laid down the following <strong>process</strong> for getting listed on Bombay stock exchange.</p>
+<p><img alt="" src="https://www.indiafilings.com/learn/wp-content/uploads/2016/09/Procedure-for-Listing-on-BSE-SME-Exchange.jpg" /></p>
+<p>Image Courtesy: India Filings</p>
+<p>There is a significant <strong>money</strong> and <strong>preparation</strong> involved for <strong>filing</strong> an <strong>IPO</strong> in the stock market.</p>
+<p>When it comes to cryptocurrencies, any one can come up with a token. Don't believe me? Here is a list of five cryptocurrencies that had no chance of getting listed if someone were to <strong>audit</strong> them:</p>
+<ul>
+<li>PornRocket</li>
+<li>CumRocket</li>
+<li>Useless Ethereum Token (UET)</li>
+<li>TrumpCoin</li>
+<li>PutinCoin (PUT)</li>
+</ul>
+<p>Even our favorite cryptocurrency <a href="https://pandatechie.in/2021/06/25/bitcoin-vs-dogecoin-what-to-buy/">Dogecoin</a> was <strong>developed</strong> by two <strong>bored</strong> <strong>engineers</strong> who wanted to make <strong>fun</strong> of <strong>digital</strong> <strong>money</strong>. Cryptos are launched in the market through various modes like <strong>ICO</strong> (initial coin offering), <strong>IEO</strong> (Initial exchange offering), <strong>IDO</strong> (Initial DEX offering). More on these modes in another blogpost. For now, let's focus on the fact that no <strong>government</strong> <strong>agency</strong> is involved in doing the <strong>due diligence</strong> of these <strong>launches</strong>. So, they are relatively riskier.</p>
+<h2>B. Ownership:</h2>
+<p>When you purchase the stock of <strong>Apple</strong>, you become a <strong>part owner</strong> of the company. Depending on the <strong>amount</strong> of <strong>shares</strong> you hold, you become an actual <strong>partner</strong> of <strong>X%</strong> of the <strong>company</strong>.</p>
+<p><img alt="" src="https://blog.ipleaders.in/wp-content/uploads/2020/06/Shareholder-Definition-Characteristics-And-Types-Of-Shareholders-2-1-scaled.jpg" /></p>
+<p>Whenever a key strategic decision is due, as a <strong>shareholder</strong>, you can also cast your <strong>vote</strong> on it. This <strong>empowers</strong> the <strong>shareholders</strong> and ensures that they have a <strong>skin in the game</strong>.</p>
+<p>On the other hand, cryptocurrency <strong>wouldn't</strong> give you <strong>ownership</strong> of the project in any way. All you have is a <strong>token</strong> that is somehow being put to use in that <strong>cryptocurrency</strong> <strong>ecosystem</strong>.</p>
+<p>Complicated much? Let's take an example of biggest <strong>public</strong> <strong>blockchain</strong>: <strong>Ethereum</strong>. When you hold <strong>ETH</strong>, which is the <strong>native</strong> token of the <strong>blockchain</strong>, you don't get to own a <strong>piece</strong> of <strong>Ethereum blockchain</strong>. Instead, you have a token which <strong>fuels</strong> the <strong>projects</strong> <strong>running</strong> on <strong>Ethereum</strong> <strong>blockchain</strong>. This also means that if the <strong>demand for ETH&gt;supply</strong>, your <strong>token</strong> will <strong>appreciate</strong> in <strong>value</strong>. You are not making money on <strong>profits</strong> or <strong>losses</strong> of the ETH blockchain, but on it's popularity instead.</p>
+<h2>C. Fractional Buying:</h2>
+<p>Blockchains, especially <strong>Bitcoin</strong>, intend to <strong>democratize</strong> money. This trait is perhaps the best example of it. As I am writing this, <strong>one</strong> <strong>share</strong> of <a href="https://finance.yahoo.com/quote/BRK-A/">Berkshire Hathaway</a> is about <strong>$420,285</strong>. It is almost <strong>impossible</strong> for a retail investor like me to invest this <strong>amount</strong> of money in a <strong>single</strong> share. Therefore, only <strong>rich</strong> would have <strong>access</strong> to <strong>stocks</strong> like these.</p>
+<p><img alt="" src="https://images.ctfassets.net/lnmc2aao6j57/016NbeaP4P3ibsiKTAhU9X/c898e6bf4e0fe0b3a94fc0730ce063a2/info_fractional-shares_mobile.png" /></p>
+<p>On the other hand, one BTC costs <strong>$46,000</strong> currently. But I don't have to buy <strong>one complete Bitcoin</strong>. I can own as low as a <strong>tenth of Bitcoin</strong> (called <strong>Satoshi</strong>). Same applies for all the <strong>cryptocurrencies</strong>. Some <strong>exchanges</strong> allow you to start your <strong>journey</strong> with as <strong>low as Rs. 100</strong>.</p>
+<h2>D. Regulations and Frauds:</h2>
+<p>Stock markets are regulated across the globe via local bodies. For example, <strong>SEC</strong> does this job in <strong>USA</strong>, <strong>SEBI</strong> is the stock market watchdog in <strong>India</strong>.</p>
+<p>For crypto market, I wouldn't say it is <strong>unregulated</strong>, but rather <strong>self regulated</strong> by the virtue of <strong>underlying</strong> <strong>blockchain</strong> <strong>technology</strong>. However, since <strong>government</strong> body is <strong>not</strong> <strong>involved</strong> here, <strong>risk</strong> <strong>increases</strong> manifold. It would be <strong>hard</strong> to <strong>trace</strong> your <strong>stolen</strong> <strong>funds</strong> in a decentralized ecosystem.</p>
+<p><img alt="" src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/26/full/1582659983-1071.png" /></p>
+<p>With that being said, no surprises for guessing that <strong>stock</strong> <strong>markets</strong> are relatively <strong>safer</strong> when it comes to <strong>fraudulent</strong> activities. Crypto market is full of <a href="https://pandatechie.in/2021/09/10/bitpay-crypto-scam-my-personal-experience/">scams</a> and more often than not, innocent advisors lose their money.</p>
+<h2>E. Fundamentals and Valuation:</h2>
+<p>Stock markets are very mature. BSE started way back in 70s and NSE began trading in the 90s. This means a lot of work has been done to <strong>evaluate</strong> the <strong>companies</strong> listed in these exchanges. There are <strong>mathematical</strong> models, <strong>valuation</strong> <strong>techniques</strong> which can help you <strong>determine</strong> if a <strong>stock</strong> is <strong>overvalued</strong> or <strong>undervalued</strong>. This is possible mainly because the underlying <strong>asset</strong> of a <strong>stock</strong> is a <strong>company</strong>. This <strong>company</strong> runs a <strong>business</strong> which in turn <strong>posts</strong> <strong>profits</strong> or <strong>losses</strong>. All <strong>financial ratios</strong> (audited by agencies) for these companies are available on a <strong>public</strong> <strong>domain</strong>.</p>
+<p><img alt="" src="https://i.marketsmojo.com/blog/2020/12/business_valuation_easy.jpg" /></p>
+<p>Coming to cryptos. It is just a <strong>decade</strong> old phenomenon. Most of the crypto projects don't have a <strong>headquarter</strong> or <strong>office</strong> for that matter. <strong>Interesting fact:</strong> world's largest cryptocurrency exchange, <strong>Binance</strong>, does not have any <strong>address</strong> attached to it.</p>
+<p>Rather than relying on the <strong>financial</strong> <strong>ratios</strong> (like stocks) a lot of <strong>underlying</strong> <strong>value</strong> is determined by the <strong>social</strong> <strong>influence</strong> attached to the project. A <strong>trash</strong> <strong>project</strong> can be a huge <strong>hit</strong> if some <strong>billionaire</strong> tweets about it. Therefore, whatever money you put in <strong>cryptocurrency</strong> can be called <strong>speculation</strong> at best.</p>
+<p>Of course there are some <strong>metrics</strong> which could give you a <strong>rough idea</strong> on <strong>valuating</strong> a <strong>project</strong> but who knows if the information available in public domain regarding those assets is correct or not.</p>
+<h2>F. Volatility and Rewards:</h2>
+<p>Stocks generally exhibit <strong>stable</strong> trends. I remember when the <strong>SENSEX</strong> fell about <strong>20%</strong> during the <strong>pandemic</strong> <strong>panic</strong>, everyone was talking about it. On the other side of the spectrum, <strong>Bitcoin</strong> crashed about <strong>40% from it's top</strong> lately, and everyone seemed to be <strong>okay</strong> with it. Of course a lot of people list money, but the overall sentiment was fine(ish).</p>
+<p>Which brings me to the next difference. Crypto markets aren't for the faint hearted. On <strong>7th September 2021, 7PM IST</strong>, Bitcoin came <strong>crashing</strong> down from <strong>$53,000 to $42,000</strong> within an hour. A total of 3L+ investors got rekt. By <strong>10 PM</strong> it moved back to <strong>$47,000</strong>. If this isn't roller coaster ride for real, I don't know what is.</p>
+<p><img alt="" src="https://i0.wp.com/blogs.cfainstitute.org/investor/files/2017/09/When-Does-Volatility-Equal-Risk.png?resize=940%2C575&amp;ssl=1" /></p>
+<p>But just like every asset class, <strong>higher the risk, higher are the rewards</strong>. Every week I would find some or the other <strong>crypto</strong> giving <strong>300% returns</strong>. This is unheard of in stock markets. Not to forget that <strong>SEBI caps</strong> the <strong>movement</strong> of <strong>stocks</strong> in either direction using something called <strong>circuits</strong>. This prevents sudden <strong>spurts</strong> in <strong>prices</strong> by <strong>halting</strong> the <strong>trading</strong> for a <strong>certain</strong> <strong>period</strong> when this <strong>circuit</strong> (or <strong>cap</strong>) is hit. This is also called <strong>cooling off</strong> period.</p>
+<h2>G. Trading Sessions:</h2>
+<p>Another difference that makes crypto markets even more serious is the trading session. Stock markets in India operate for about <strong>250 days</strong> in a year from <strong>9AM till 3:30 PM</strong> in the noon.</p>
+<p>In contrast, crypto markets are open <strong>365 days a year, 7 days a week and 24 hours a day</strong>. Since you don't need a person/organization/authority (<strong>decentralization</strong>) to to run these markets, they can operate all the time.</p>
+<p><img alt="" src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202104/stocks8_660_020421110601.jpg?size=1200:675" /></p>
+<h2>Conclusion:</h2>
+<p>if you still haven't realized this, we belong to a generation where our parents consider <strong>stock market as gambling</strong>. They are in absolute love with their <strong>fixed deposits</strong> and <strong>real estates</strong>. Good luck <strong>convincing</strong> them for your <strong>crypto</strong> <strong>endeavors</strong>.</p>
+<p>Secondly, I would suggest each one of you to <strong>start your crypto journey</strong> after <strong>understanding</strong> about <strong>blockchains</strong>. <strong>Money</strong> is a <strong>by product</strong> of this future changing technology. If you are well versed with it, opportunities would be ample.</p>
+<p>Were you aware of these differences between crypto and stocks?</p>
+<p>https://www.instagram.com/p/CRquXWGrL5Q/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

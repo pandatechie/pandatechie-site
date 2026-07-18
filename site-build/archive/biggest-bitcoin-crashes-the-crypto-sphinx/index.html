@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biggest Bitcoin Crashes: The Crypto Sphinx | Raghav</title>
+<meta name="description" content="I usually don't believe in motivational quotes. However, there's one that has been sticking in my head for a while now. It's a dialogue from the movie Rocky (ft…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Biggest Bitcoin Crashes: The Crypto Sphinx</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-08-29</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-08-29 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/08/image-3.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>I usually don't believe in <strong>motivational</strong> <strong>quotes</strong>. However, there's one that has been <strong>sticking</strong> in my head for a while now. It's a dialogue from the movie <strong>Rocky</strong> (ft. Sylvester Stallone)</p>
+<blockquote>
+<p>It's a very mean and nasty place, and I don't care how tough you are. It will beat you to your knees and keep you there permanently if you let it.</p>
+<p>But, it ain't about how hard you hit, it's about how hard you can get hit and keep moving forward.</p>
+<p>How much you can take and keep moving forward.</p>
+<p>That's how winning is done.</p>
+<p>-Rocky balboa</p>
+</blockquote>
+<p>But why are we discussing this today? Especially for a <strong>crypto</strong>-<strong>junkie</strong> like me, it is <strong>indeed</strong> an <strong>unusual</strong> start to a <strong>blogpost</strong> right? A couple of minutes and I might be able to change your mind. <strong>Bitcoin's journey</strong> hasn't been much different from the <strong>excerpt</strong> mentioned above. In fact, it is the only <strong>asset</strong> in the world that has <strong>fallen</strong> to a <strong>rock</strong> <strong>bottom</strong> and then risen <strong>back</strong> to a <strong>new high</strong> each time.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/08/image-3.png" /></p>
+<p>For the uninitiated, let me give you an example from the <strong>stock market</strong>. When markets <strong>crashed</strong> in <strong>2008</strong>, it took <strong>S&amp;P 500</strong> about <strong>6 years</strong> to <strong>reach back to the pre crash levels</strong>. And your beloved <strong>BTC</strong> is just over a <strong>decade</strong> old and it has already seen deeper crashes and higher highs! So today, let's acknowledge those moments which really segregated the <strong>loyalists</strong> from <strong>trolls</strong>. Biggest crashes of Bitcoin with key details:</p>
+<h2>The Summer of 2011:</h2>
+<p>Bitcoin just started gaining <strong>popularity</strong>. Primarily due to it's <strong>association</strong> with the <strong>crime</strong> <strong>world</strong>, people started discussing about this <strong>newly</strong> <strong>emerged</strong> <strong>medium</strong> of <strong>exchange</strong>. As a result, the price of <strong>Bitcoin rose to $32</strong>. However, in June 2011, it came <strong>tumbling</strong> down to <strong>$2</strong> which was a gargantuan <strong>94% fall</strong>. Imagine if someone would have <strong>sold</strong> at that time, they would have missed millions.</p>
+<p><img alt="" src="https://ahseeit.com/finance/king-include/uploads/2021/01/137248823_447320309763790_3364178571768307121_n-8721471382.jpg" /></p>
+<p>For the ones who <strong>held</strong> BTC even then, things weren't as <strong>rosy</strong> either. Bitcoin <strong>didn't return</strong> to it's <a href="https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/">ATH</a> of $32 for <strong>two</strong> complete <strong>years</strong> after that.</p>
+<h2>The Fiasco of 2013:</h2>
+<p>Bitcoin started getting <strong>attention</strong> of <strong>mainstream</strong> media and <strong>investors</strong> came <strong>buzzing</strong> around into this new <strong>asset</strong> <strong>class</strong>. Eventually, this <strong>euphoria</strong> took BTC to a <strong>high of $260</strong>. But (there's always a but), Bitcoin became a <strong>victim</strong> of it's own <strong>success</strong>.</p>
+<p>Trading was so intense that at it's <strong>peak</strong>, <strong><em>Mt. Gox</em></strong>, a crypto exchange from Tokyo <strong>couldn't handle the volume</strong> and <strong>crashed</strong>. Amidst this crash, <strong>hackers</strong> attacked the <strong>vulnerability</strong> (which typically means <strong>hacked</strong> the <strong>exchange</strong>). This forced Mt. Gox to <strong>shut down</strong> it's <strong>operations</strong> and there was a <strong>panic sell off</strong> in the market. Bitcoin came down from a high of <strong>$250 to $50</strong>. Yup. That's wiping of <strong>80%</strong> of your <strong>wealth</strong> within a short span of a <strong>week</strong>.</p>
+<p><img alt="" src="https://cdn.vox-cdn.com/thumbor/moiM-RC2XRjj3QxCyJD0gjQLs1I=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/assets/4023651/DSCF4053.jpg" /></p>
+<h2>Harvesting Season of 2017:</h2>
+<p>Soon after, <strong>Bitcoin</strong> started it's <strong>insane</strong> <strong>rally</strong> and this time to hit the <strong>five</strong> <strong>digit</strong> <strong>mark</strong> price. 2017 was a <strong>landmark</strong> year for Bitcoin where it broke all records and made a high of <strong>$20,000</strong> a piece.</p>
+<p><img alt="Bitcoin crash meme" src="https://ahseeit.com/finance/king-include/uploads/2021/02/153324995_114168317348239_368995805105220706_n-7500602909.jpg" /></p>
+<p>But, on December 27th, 2017 there was a <a href="https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/">FUD</a> which led to a narrative that Bitcoin is a <strong>bubble</strong> and will <strong>burst</strong> soon. As a result, long time <strong>investors</strong> who jumped in early, <strong>decided</strong> to book their <strong>profits</strong> and <strong>leave</strong>. Thus, <strong>harvesting</strong> season led to <strong>84% crash</strong> in the market taking the price back at <strong>$12,000</strong>.</p>
+<h2>The Pandemic:</h2>
+<p>After the profit booking of <strong>December 2017</strong>, BTC pretty much <strong>stabilized</strong>. The price settled around <strong>10k</strong> and didn't move much. But just like all of us, pandemic didn't spare Bitcoin either.</p>
+<p>In March 2020, Bitcoin corrected over <strong>50%</strong> with prices hitting a rock bottom of $4000. Ouch!</p>
+<p><img alt="Bitcoin crash due to coronavirus" src="https://www.fda.gov/files/Coronavirus_3D_illustration_by_CDC_1600x900.png" /></p>
+<h2>The Elon Gate:</h2>
+<p>We all know what happened in <strong>2021</strong>. Bitcoin touched <strong>newer heights</strong> with big <strong>corporates</strong> like <strong><a href="https://www.tesla.com/">Tesla</a></strong> and <strong>billionaires</strong> like <strong>Mark Cuban, Kevin O'Leary</strong> and <strong>Elon Musk</strong>, vouching for it. At this point, Bitcoin had reached an <strong>ATH of $64000</strong>. That's just massive.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/08/image-4.png" /></p>
+<p>However, a couple of factors ruined it for all of us.</p>
+<p>A. <strong>Chinese government</strong> posed <strong>stricter</strong> <strong>bans</strong> on <strong>investing</strong> and <strong>mining</strong> of cryptocurrencies.</p>
+<p>B. Elon Musk suddenly realized that <strong>Bitcoin</strong> isn't a <strong>green</strong> <strong>technology</strong> and hence declared that <strong>Tesla</strong> would not accept <strong>Bitcoin</strong> as a b of <strong>payment</strong> anymore (they started accepting BTC a couple of months ago).</p>
+<p>With this we again saw a drop of <strong>50%</strong> in the market with prices forming a bottom of <strong>$30,000</strong>.</p>
+<h2>Conclusion:</h2>
+<p>After the recent fall of April 2021, Bitcoin has again been on the rise. After staying at a level of $30k for a while, it has touched $50k twice and as I am writing this one, it's moving between $46k and $48k. Where does it go from here? Well, if you were to listen to the "Experts", half of them would predict a big crash while the other half is looking at $100k.</p>
+<p>As I always, say, in the end, one has to make their own narrative. What's yours? Do you have <a href="https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/">diamond hands or paper hands?</a></p>
+<p>https://www.instagram.com/p/CRWRMp_rMFv/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

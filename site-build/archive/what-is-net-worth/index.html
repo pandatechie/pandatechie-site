@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is net worth? | Raghav</title>
+<meta name="description" content="Elon Musk has entered the Guinness Book of records. Yet again. But not for sending reusable rockets to space or providing satellite internet to the remotest loc…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">UNCATEGORIZED</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is net worth?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-03-08</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-03-08 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/03/DALL·E-Infographic.webp" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Elon Musk has entered the Guinness Book of records. Yet again. But not for sending reusable rockets to space or providing satellite internet to the remotest locations of the world.</p>
+<p>Tesla's chief has broken a record for the largest net worth lost by one person. He lost $180B to $200B since November 2021. But then, we don't see him all that devasted.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/DALL·E-Infographic.webp" /></p>
+<p>In fact, he cashed out $3.6Bn worth of Tesla shares in December 2022. What's happening? Is he rich or is he poor? What is net worth? And is it different from the cash in hand?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/image-1024x681.png" /></p>
+<p>Well, that is exactly what I am going to talk about today. And while we are at it, we would also try to figure out our individual net worth. No, we aren't seeking sadistic pleasure out of it. But the intention is to find out ways to increase that figure. Let's get started.</p>
+<h2>What is Net Worth?</h2>
+<p>Simply put, net worth is defined as your assets minus liabilities. Jargon much? Okay. How about everything you own minus everything you owe? Calculating net worth can be really helpful in evaluating the overall financial health of an individual or a company.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/03/image-1-1024x649.png" /></p>
+<p>Oh, for the example I just talked about above; Elon Musk's biggest asset is his shares in his company, Tesla. So when he lost $200B, that's because the share price of Tesla tanked about 70% during that year. In fact, his worth fluctuates every moment as $TSLA is traded in the market. But then, as you could imagine, this is very different from the cash in his hand.</p>
+<p>Positive net worth is a sign of good financial health and vice-versa.</p>
+<h2>Net worth calculation explained</h2>
+<p>The calculation of net worth is fairly simple. All you need is the variables involved in the equation like assets and liabilities. However, it is often tricky to bucket your possessions into these categories. For example, how would you treat your car? Is it an asset or is it a liability as it is not generating any income for you? So it is worthwhile that we dive deeper into understanding these nuances.</p>
+<h3>Assets:</h3>
+<p>Assets include everything that has a quantifiable and tangible value attached to it. Let us start with the car example above. Your car, although depreciating in value, has still a quantifiable number attached to it.</p>
+<p><img alt="" src="https://media2.giphy.com/media/20ClY91VQsaYxiytfh/giphy.gif" /></p>
+<p>On the other hand, possessions like a piece of art, the house might appreciate over a period. Regardless of the future value, anything that can be liquidated is considered an asset. This would also include your bank balance, insurance policies, stocks and other investments.</p>
+<p>Would your clothes and furniture be an asset? Most likely no. Because you can't put a price on them and sell them in a standardized open market if need be.</p>
+<h3>Liabilities:</h3>
+<p>Liabilities are financial obligations. This includes loans, rent, bills or mortgages. Once again, while calculating the net worth at a given point, one needs to consider the current obligations and not the ones that are due in the future. This means even something as rent can be treated differently depending on the use case.</p>
+<p>If the rent is paid monthly, you need to count it only once, if it is a fixed lease with a lock-in period, you might want to take the entire period as a liability.</p>
+<h3>Net Worth:</h3>
+<p>Once you have the aforementioned data, it is simply a matter of subtracting liabilities from assets. Please note that this activity will yield different results at different periods. Hopefully, your investments would be growing and loan EMIs would be coming down over a period and hence impacting your net worth positively. One can do this activity quarterly to assesAs financial health.</p>
+<p>So now that we have learnt to calculate the net worth of an individual, let us try to put it to some use. Let us try to find out how auditors use net worth to calculate income of an individual.</p>
+<h3>Net Worth Method:</h3>
+<p>This is an indirect balance sheet method to estimate the income of an individual. It is usually put to practice by accountants, specially when there is a litigation involved regarding concealing of income sources for evading taxes. This method involves calculating the net worth of the individual on two different dates to find out if there is any unreported income.</p>
+<p>Let us try to formulate this process. The current net worth is denoted as NWc and the past net worth is denoted as NWp. Please note that the exact same methodology needs to be used to arrive at these individual figures. The difference between these figures is denoted as NWI or net worth increase.</p>
+<p>Any non-deductible living expenses are added to NWI to arrive at the income value.</p>
+<p>After arriving this value, the declared income is compared with it and one can easily identify the undeclared income.</p>
+<p>A key factor to consider here is that income from legitimate sources like gifts/loans should be declared beforehand to make sure that the assessment is accurate.</p>
+<p>NW (Net Worth) = Assets - Liabilities</p>
+<p>NWI (Net worth increase) = NWc - NWp</p>
+<p>Income = NWI + Living expenses</p>
+<p>Income from undeclared sources = Income - Funds from declared sources</p>
+<h2>What Is the Average Net Worth?</h2>
+<p>As discussed above, the net worth is a dynamic value. Therefore, a smart choice would be to compare individuals/companies with the average net worth. This will give you a fair picture of the financial health.</p>
+<p>For example, current net worth of someone who is in their 50s would be much better than someone who has just started earning. This is usually because the latter individual have a lot of debts and low levels of income. Therefore, a good move would be to find out the overall average.</p>
+<p>However, some statisticians disapprove of average as the reliable metric to compare anything. This is because it is highly skewed due to outliers. For example, if at any point someone had taken a loan with lesser levels of income, the net worth figure would be brought down tremendously.</p>
+<p>Therefore a better metric to evaluate is the median. Median is calculating by picking the middle value of the data set when the entire values are arranged in ascending order.</p>
+<h2>How to Increase Your Net Worth - Quick tips to follow</h2>
+<p>Now that you know how to evaluate your financial health, it is time to explore ways to improve it. Regardless of your current situation, a good financial behaviour will allow you to preserve the existing riches and create newer avenues for your future self. Let us find out.</p>
+<h3>A. Budgeting:</h3>
+<p>I strongly believe that it is impossible to improve something that you cannot track. Therefore, if you plan to improve your net worth, you need to boost your savings.</p>
+<p><img alt="" src="https://media0.giphy.com/media/fRhSHzQ4NXOdrHIZJd/giphy.gif" /></p>
+<p>And a precursor to that is to cut down on your expenses. Maintaining a budget will help you find out some avenues where you can optimize your spends. Once identified, you can work towards fixing them.</p>
+<h3>B. Early Payment:</h3>
+<p>In India, stock market index generally gives a return of 12% annually. Barring the stock specific action, this is less than a lot of debts that you are going to carry. For example, a credit card debt can charge you anywhere between 24 to 36 percent of interest. Therefore, it is prudent to deploy all your additional funds to repaying your debt rather than saving it or even worse, spending it elsewhere.</p>
+<h3>C. Saving:</h3>
+<p>The best of financial planning is often boring. If you do not have significant debts looming over your head, it is advisable to save your money. This involves dividing your money across different asset classes like crypto, stocks, mutual funds etc.</p>
+<p><img alt="Piggy bank clipart, finance, savings" src="https://pandatechie.in/wp-content/uploads/2024/03/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvam9iNjg0LTI2My12LmpwZw.jpg" /></p>
+<p>However, one of the key missions before you embark on financial planning journey is to maintain an emergency fund wchatorth 6-12 times of your monthly expenses. This will ensure that you don't have to stop your portfolio compounding if need be.</p>
+<h3>D. Start Early:</h3>
+<p>This is very important. Even starting early by just 5 years can yield a crore worth of difference over a 25 year period.</p>
+<p>Mant people try to innovate with their investments in a bid to out run the market. However, if you simply let compounding work, it should be good enough to sustain you in the long run.</p>
+<h2>Conclusion:</h2>
+<p>The net worth of an individual is also impacted by the network of people they surround themselves with. But then, we will stick to a more quantifiable version of net worth that simply puts your assets and liabilities in perspective. A good way to boost your net worth is by diversifying in different asset classes. Cryptocurrencies have been a talk of the town and some tools allow us to invest in them even if we have only have a thirty thousand feet view of the space.</p>
+<p><em>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration with <a href="https://madscookhouse.com/">Mads' Cookhouse</a>.</em></p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

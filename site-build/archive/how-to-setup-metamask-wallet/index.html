@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Setup Metamask Wallet? | Raghav</title>
+<meta name="description" content="Not your keys, not your crypto.
+
+Ever heard of this quote while venturing into cryptoverse? Turns out that this truth is learnt by the crypto heads the hard way…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Setup Metamask Wallet?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-07-23</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-07-23 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2022/07/image-7.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<blockquote>
+<p><em>Not your keys, not your crypto.</em></p>
+</blockquote>
+<p>Ever heard of this quote while venturing into cryptoverse? Turns out that this truth is learnt by the crypto heads the hard way. With the current onset of the dominos effect in crypto where Celsius, 3AC and Vauld have fallen after the great demise of the Terra ecosystem, it is extremely important that you own your crypto in the true sense. Ownership lies at the heart of any <a href="https://pandatechie.in/2021/10/31/what-is-web3-0-how-is-different-from-web1-0-and-web2-0/">web3</a> ecosystem.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-7.png" /></p>
+<p>Well, if you are confused about the rant above, let me help you out with some context. Did you ever buy crypto off an exchange and felt like a proud owner of this new digitally savvy and hot asset class? Well, think again. Because what you just purchased, was not even a Blockchain transaction. Yes. It is exactly what your banks do when you send over some money to your friend. A debit here, a credit there and viola! This is very similar what a centralized exchange does while you buy your favourite crypto.</p>
+<p>In a nutshell, your crypto wallet is held safely (at least they claim so) with the exchange. They are running the show on your behalf. So the next obvious question is how do I get back in control. And that's exactly what we intend to discuss today. How to set up your first ever self-custody wallet: Metamask.</p>
+<h2>What is Metamask:</h2>
+<p>First thing first. While a lot of people call it a wallet, it is actually not. It is a UI frontend that shows what cryptos are associated with your private keys. Your crypto is stored on Blockchain and not the wallet. Moving on, likes of Metamask are called custodial wallets. Why? Because you own the private keys of this wallet. Every time a transaction happens, you sign it. If you don't transaction cannot go through.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-8-1024x1017.png" /></p>
+<p>Here's another fun fact. Since you are in total control of the assets (Crypto/NFT) in your wallet, no one can take them from you. Not even governments! GM right? Let us find out how to setup Metamask wallet.</p>
+<h2>How to Setup Metamask wallet?</h2>
+<p>Metamask sits as a browser extension in your Chrome/Brave/Firefox/Opera browser. Therefore it is very easy to install it.</p>
+<h3>Step 1: Download and Install</h3>
+<p>Let us take it from the top, eh? We start by downloading this wallet. Head over to this <a href="https://metamask.io/download/">link</a> and based on your system, hit the 'Install MetaMask for XYZ' button.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-2-1024x624.png" /></p>
+<p>Once installed, it will subtly slide into your extension bar. It is advised to pin it to the toolbar so that you can see it all the times.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-3.png" /></p>
+<h3>Step 2: Create the wallet</h3>
+<p>Once you tap on your newly installed extension, you would enter a URL that looks something like the one shown below:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-4-1024x551.png" /></p>
+<p>If you are existing user (which at this point you may be not) you need to select the 'import wallet' option. For now, please go ahead with 'create wallet'.</p>
+<p>Post that, you would be asked to agree with a small disclaimer and prompted to setup a password. This password might be way more important than your social media password as it has monetory implications. So it is advised to write it down on a piece of paper rather than storing it digitally.</p>
+<p>Every time you open your Metamask wallet, you would have to use this password.</p>
+<h3>Step 3: Secret Recovery Phase</h3>
+<p>Welcome aboard. This is where the fun begins. In this screen you would be shown a 12 word secret phrase comprised of random words. This secret phrase is of utmost importance as it can make or break your wallet. If you wish to move your wallet to a different device, this secret code is a must have.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-9-1024x677.png" /></p>
+<p>Now please don't be another noob who saves this code on their desktop. Please write it down on a piece of paper with multiple copies to store it.</p>
+<p>In the very next step, you would have to reproduce this phrase to ensure that you have noted it down in a safe place.</p>
+<h3>Step 4: Adding Binance Smart Chain to Metamask</h3>
+<p>If you are still following, congratulations! You have successfully setup your Metamask wallet. But it currently shows Ethereum Blockchain only. And as you know, Ethereum is notorious for exorbitant gas fee. So let us add something that is easy on the pocket. Enter: Binance Smart Chain or BSC.</p>
+<p>Unless you add BSC, needless to say, you cannot transact in BEP20 tokens. ERC20 is going to be your only friend.</p>
+<h4>Step 4.1:</h4>
+<p>Tap on the metamask icon and press 'add network' button.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-5-617x1024.png" /></p>
+<p>It is going to take you to a window that looks something like the image below:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/07/image-6-1024x738.png" /></p>
+<p>Here are the exact details that need to be filled in each of these columns.</p>
+<p><strong>Network Name:</strong> Smart Chain</p>
+<p><strong>New RPC URL:</strong> https://bsc-dataseed.binance.org/</p>
+<p><strong>ChainID:</strong> 56</p>
+<p><strong>Symbol:</strong> BNB</p>
+<p><strong>Block Explorer URL:</strong> https://bscscan.com</p>
+<p>Once done, click on save and viola! You have added BSC to your Metamask wallet.</p>
+<p>Go nuts, do whatever. Most importantly, stay safe and have fun.</p>
+<p>Got questions?</p>
+<p>While the wallet helps you manage your crypto, it is missing an important layer. Wouldn't it be nice if your wallet could send you important notifications? Some quick updates. That's exactly what EPNS does!</p>
+<p>https://www.instagram.com/p/CgUuDwNPNm4/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

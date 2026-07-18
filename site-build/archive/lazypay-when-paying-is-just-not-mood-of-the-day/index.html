@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LazyPay: When 'Paying' is just NOT Mood of the Day | Raghav</title>
+<meta name="description" content="Most of us are fortunate enough to have access to credit all the time. We own credit cards, leverage home loans, car loans etc. Apart from that, there are so ma…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">LazyPay: When 'Paying' is just NOT Mood of the Day</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-14</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-14 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.inventorsdigest.com/wp-content/uploads/2018/01/lazy-sloth.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Most of us are <strong>fortunate</strong> enough to have <strong>access</strong> to <strong>credit</strong> all the time. We own <strong>credit</strong> <strong>cards</strong>, leverage <strong>home</strong> <strong>loans</strong>, <strong>car</strong> <strong>loans</strong> etc. Apart from that, there are so many <strong>platforms</strong> in the market today that are ready to <strong>lend</strong> you money on the <strong>click</strong> of a <strong>button</strong>. However, the basic premise for borrowing money from these modes is the <strong>requirement</strong>. You simply <strong>borrow money because you need it</strong> and want a <strong>financial</strong> <strong>cushion</strong> of some sort. You <strong>pay back</strong> the financial institutions with some <strong>premium</strong> over the <strong>principal</strong> <strong>borrowed</strong> and that is how both parties remain happy.</p>
+<p><img alt="" src="https://www.inventorsdigest.com/wp-content/uploads/2018/01/lazy-sloth.gif" /></p>
+<p>But what if I told you that there is <strong>another reason</strong> behind <strong>borrowing</strong> money. As bizarre it may sound but it is your good <strong>old sin of sloth</strong>. Yes. You have the money in the bank, at least for purchasing your next meal online. But for some reason, you think, <strong>who will enter in the card details, OTP and what not</strong>. Instead, you chose <strong>someone</strong> <strong>else</strong> to <strong>pay</strong> on your behalf and then you two, <strong>settle</strong> it out later some day. Welcome, <strong>LazyPay</strong>. When this service first launched in <strong>2017</strong>, this was the <strong>core</strong> <strong>proposition</strong> it came with. Although the entire product has <strong>evolved</strong> now, I still use it for it's <strong>USP</strong> around being <strong>lazy</strong>.</p>
+<h2>Services offered by Lazypay:</h2>
+<p>The key feature of this fintech platform is the <strong>fastest</strong> access to credit. It is almost like seeking money from another person and getting it instantly. The services across the fintech platform are mainly divided into three categories as follows:</p>
+<h3>1. Shop Now, Pay Later:</h3>
+<p>This feature enables you to <strong>purchase</strong> anything <strong>online</strong> in a jiffy. <strong>No OTPs, no UPI PIN</strong>, simply <strong>one tap</strong> payment in it's truest sense. There is no <strong>interest</strong> levied on the <strong>borrowed</strong> money, if it is <strong>paid back within 15 days</strong>. In case it is not, they charge you <strong>Rs. 10 per day</strong> for the delay. At this point, you might be thinking that this is a win win deal. However, in case you <strong>default</strong> on your <strong>payment</strong> or <strong>miss</strong> the <strong>deadline</strong>, Rs. 10 might seem to be a <strong>meagre</strong> amount but can probably mount to <strong>most expensive credits</strong> ever taken by you.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>For example, you borrow <strong>Rs. 10,000 from Lazy Pay</strong>. At Rs. <strong>10 per day, a 30 month delay will be Rs. 300</strong>. Which amounts to <strong>3% per month i.e. 36% per year</strong>. This is <strong>in line with the credit card loans</strong> which are known to be the <strong>most</strong> <strong>expensive</strong> <strong>debt</strong> instruments in the <strong>industry</strong>. In this particular example, I considered your borrowed amount to be Rs. 10,000. Imagine what the <strong>interest rates would be if you had defaulted on a payment of Rs. 1000 only.</strong></p>
+<p>This option can be further enabled via multiple modes:</p>
+<h4>1.A Direct Shopping</h4>
+<p>Lazypay has partnered with <strong>250+ merchants</strong>. These merchants list 'LazyPay' as a <strong>mode of payment</strong> while checking out. You can simply tap on Lazypay with your account and use this functionality. A few examples of merchants they have tied up with are <strong>Swiggy</strong>, <strong>Bookmyshow</strong>, <strong>IRCTC</strong>, <strong>Zomato</strong>, <strong>Dunzo</strong>.</p>
+<p><img alt="" src="https://www.globalblue.com/business/images/article926851.ece/BINARY/TFS_Article_2019_970x643.jpg" /></p>
+<h4>1.B LazyPay UPI Scan and Pay</h4>
+<p>This is quirkiest feature of this application. You can actually make a <strong>UPI payment by scanning a barcode</strong> by using <strong>credit</strong> from <strong>lazypay</strong>. Cool right? This feature makes Lazypay a <strong>mainstream</strong> <strong>mode</strong> of payment. As soon as you register with the application, you are <strong>given your own unique lazpay UPI ID</strong>.</p>
+<p><img alt="" src="https://assets-global.website-files.com/5cb303852da2ad609e57122e/5eda2b684bc6a527220f5241_Scan%20%26%20Pay.png" /></p>
+<h3>1.C LazyPay UPI Online</h3>
+<p>Just the way you would scan and pay, LazyPay UPI ID can also be used to <strong>make payments anywhere, online</strong>. You know the drill. Enter the UPI ID and punch in your 4 digit UPI PIN and voila! You just paid someone with borrowed money.</p>
+<h2>2. Personal Loan</h2>
+<p>LazyPay also offers a <strong>personal loan of up to 1L rupees</strong>. In this fast paced world, we hate to wait. The lending fintech companies know this very well. Lazypay touts the fact that their loans are <strong>processed</strong> at a <strong>fastest</strong> rate in the industry. The <strong>documentation</strong> required is <strong>minimal</strong> and requires <strong>no</strong> <strong>physical</strong> <strong>copy</strong> whatsoever.</p>
+<p>You don't even need a <strong>collateral</strong> to apply for a personal loan with them. What lazypay is offering here is essentially a <strong>line of credit</strong> rather than a loan per se. Think of it this way. <strong>They would allocate a kitty sum, worth your loan amount to you. As and when you withdraw money from that kitty, you will be charged interest.</strong></p>
+<p><img alt="" src="https://cdnblog.etmoney.com/wp-content/uploads/2019/05/personal-loan-1.jpg" /></p>
+<p>The loan is given at a rate of interest from <strong>18% - 25%</strong> which is again pretty <strong>high</strong>. A <strong>bank</strong> would <strong>lend</strong> you a <strong>cheaper</strong> loan. However, chances of Lazypay approving your loan would be much higher than a bank.</p>
+<p>You can check the EMI and interest paid on the loan amount from their website <a href="https://lazypay.in/personal-loan">here</a>.</p>
+<h2>Conclusion:</h2>
+<p>With a splurge in fintech startup ecosystem in India, access to credit has never been simpler. However, one should conduct their due diligence before borrowing money. Easily available money is often the hardest to repay. Lazypay is another lending fintech packaged rather beautifully.</p>
+<p>Have you availed any service from LazyPay in the past?</p>
+<p>This blogpost is in association with Blogchatter's #BlogchatterA2ZChallenge. In this challenge, I write on a fintech platform DAILY for the month of April. You can check out the other articles of this series from <a href="https://pandatechie.in/tag/blogchattera2zchallenge/">here</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

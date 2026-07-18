@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Take a Screenshot on iPhone: Bet You Didn't Know | Raghav</title>
+<meta name="description" content="When I got into college, back in 2010, iPhones used to be a pathway to glory and respect. Owning an [iPhone](https://pandatechie.in/2020/10/14/iphone-12-the-new…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Take a Screenshot on iPhone: Bet You Didn't Know</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-11-18</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-11-18 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone8/iphone-home-button-take-screenshot.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>When I got into college, back in 2010, <strong>iPhones used to be a pathway to glory and respec</strong>t. Owning an <a href="https://pandatechie.in/2020/10/14/iphone-12-the-newest-addition-to-the-apple-family/">iPhone</a> would immediately mean that you belong to an <strong>elite family</strong>. With the passage of time, and increased focus of Apple on Indian market, iPhones started becoming a <strong>household phenomena</strong>. A big credit also goes to some of the world's largest grey markets in India which enabled this change at a nominal cost.</p>
+<p>Apple has been an <strong>innovation powerhouse</strong> ever since it's inception. In point of fact, <strong>iPhone was the first device to integrate the screenshot functionality on a mobile</strong> in 2007. Android followed the suit later in 2011 (<a href="https://www.vice.com/en/article/ep4zg7/screenshot-computer-storia">source</a>). So <strong>how to take a screenshot on iPhone?</strong> I am sure most of you reading this would find this question ridiculous, but bear with me. <strong>I recently found an amazing way to achieve this while playing around with my brother's phone</strong>. Without any further delay, let's explore the <strong>conventional</strong> and the <strong>new means</strong> to achieve this!</p>
+<h2>The Boring Way!</h2>
+<p>This has been around ever since the launch of iPhones. You <strong>click home button and volume up button (on older iPhones)</strong> and Voila! Screen is captured. With <strong>latest enhancements in iOS you can edit it right away</strong> and share with your contacts.</p>
+<p><img alt="" src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone8/iphone-home-button-take-screenshot.png" /></p>
+<p>How to take screenshot on older iPhones</p>
+<p>On newer models (from iPhone X), apple got rid of the home button for good. Now, you need to <strong>press the lock button on the side and volume up simultaneously</strong>, to take a screenshot.</p>
+<ul>
+<li><img alt="Screenshot editing on iPhone" src="https://pandatechie.in/wp-content/uploads/2020/11/WhatsApp-Image-2020-11-18-at-7.19.34-PM-473x1024.jpeg" /></li>
+</ul>
+<p>Screenshot editing on iPhone
+* <img alt="How to take screenshot on iPhone X and above" src="https://pandatechie.in/wp-content/uploads/2020/11/iphone-x-and-later-take-screenshot.png" /></p>
+<p>How to take screenshot on iPhone X and above
+* <img alt="" src="" />
+* <img alt="" src="" />
+* <img alt="" src="" /></p>
+<p>There are some disadvantages of this way though:</p>
+<ul>
+<li>Although it is fairly simple, for some reason, <strong>my parents and grandparents have a really hard time doing this</strong>! Insert <parents clicking phone screen with another phone> joke here.</li>
+<li>In older phones, there is no '<strong>single handed way</strong>' of taking a screenshot.</li>
+<li>And we all may agree, in newer phones as well, you need to get in an <strong>awkward hand position</strong> to take a screenshot.</li>
+</ul>
+<h2>Just Tap that Apple logo: The cool method!</h2>
+<p>This feature was launched with <strong>iOS 14</strong>. Latest firmware version from Apple lets you <strong>tap the back of the iPhone to take specific actions</strong>. You may chose the required action from a full blown list. In this post, <strong>I'll cover how to enable the tippy tap method for taking screenshots</strong>. Steps below:</p>
+<ul>
+<li>
+<p>Quickly head over to settings app. Tap on accessibility.</p>
+</li>
+<li>
+<p>Select the options under the section <strong>physical and motor</strong> named: <strong>Touch</strong></p>
+</li>
+</ul>
+<p><img alt="How to take screenshot on an iPhone" src="https://pandatechie.in/wp-content/uploads/2020/11/c2085337-6ca3-4847-bd37-3e5f42419de1-472x1024.jpg" /></p>
+<p>Touch in Physical and Monitor Section</p>
+<ul>
+<li>Scroll down and find: "<strong>back tap</strong>". Toggle it 'on' and pick "<strong>screenshot</strong>" from the picklist under the section, '<strong>double tap</strong>'.</li>
+</ul>
+<p><img alt="How to take screenshot on an iPhone" src="https://pandatechie.in/wp-content/uploads/2020/11/00356eff-676f-4f6e-97f9-86ab01457a9c-473x1024.jpg" /></p>
+<p>Options under double tap</p>
+<ul>
+<li>Now simply tap the back of your screen twice with your index finger. Lo and Behold, your screenshot is captured.</li>
+</ul>
+<h2>And Finally:</h2>
+<p>It is simple stuff like this that I love about gadgets around me. You may use double tap or triple tip for enabling multiple functionalities like <strong>zoom, voiceover, Siri etc</strong>. Fun right? I immediately <strong>enabled double tap for screenshots and triple tap for Zoom on my father's phone</strong>. Do share your favorite use cases in comments below.</p>
+<p>Until Next Time...</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

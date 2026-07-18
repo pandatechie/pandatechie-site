@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New India's Perception of Hindu Gods | Raghav</title>
+<meta name="description" content="I have been meaning to talk about it for a while now. And I think there's no better medium than my very own [pandatechie](https://pandatechie.in/). Before I sta…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">New India's Perception of Hindu Gods</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-28</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-28 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.calendarsfromindia.com/productimg2021//5-pushpanjali-prayers-of-gods-1.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>I have been meaning to talk about it for a while now. And I think there's no better medium than my very own <a href="https://pandatechie.in/">pandatechie</a>. Before I start sharing my views on this seemingly controversial topic, I want to share my <strong>religious inclination</strong>. I am <strong>NOT an atheist</strong>, but at the same time <strong>I don't believe in the concept of 'god' per se</strong>. I am in congruence with the fact that there is a <strong>supreme power</strong> that governs this universe. Its just hard for me to define it. For some reason, I believe that is the beauty of it.</p>
+<p>Also, when I try to <strong>visualize a god like figure</strong> while I am praying, its mostly a <strong>Hindu god</strong>. This may be by the virtue of my <strong>past experience</strong> and <strong>family values</strong>.</p>
+<p>May be not while praying, but I think most of us have seen Hindu Gods. Considering a skewed religion mix, at 80% Hindu population, we have a <strong>temple</strong> in most of the <strong>neighborhoods</strong>. Also, there is a huge market for religion in India, so you may encounter them on <strong>calendars, posters, car dashboards or being sold by a street vendor</strong>. If nothing, you must've seen the infamous <strong>Mahabharata and Ramayana</strong> as kids (and as adults in lockdown). Although CGI looks absurd in today's world, but these <strong>sagas surely carry wonderful messages.</strong></p>
+<p><img alt="" src="https://www.calendarsfromindia.com/productimg2021//5-pushpanjali-prayers-of-gods-1.jpg" /></p>
+<p><img alt="" src="https://i.ytimg.com/vi/OikCbAoZ5_Y/maxresdefault.jpg" /></p>
+<p>A visual of a demon from Ramayana</p>
+<p>With that thought in mind, let us discuss, why I think perception of Hindu gods is changing with each passing day.</p>
+<p><em>Disclaimer: These are purely my views and observations. It is totally okay to disagree with it. I do not aim to harm anyone's feelings with this post.</em></p>
+<h2>Perception Then:</h2>
+<p>You must have heard or read at one point in your life that <strong>perception is reality</strong>. We all perceive and approach different situations in life uniquely. We have set character sketch of each person we meet in our head. However, by the virtue of <strong>folktales, scriptures, religious texts</strong> there is some element of <strong>commonality</strong> in case of <strong>gods</strong>. Here's how most of us view them:</p>
+<h3>Lord Rama:</h3>
+<p>Bringing back the thought of epic Ramayana, lord Ram is shown as <em>'Maryada Purshottam'</em>. A man of <strong>righteousness</strong>. Without uttering a word, the man <strong>gives up his kingdom</strong> and goes to live in a <strong>forest</strong> for next 14 years of his life, just to <strong>honour</strong> his <strong>father's</strong> <strong>commitment</strong>. He fought one of the longest wars in history, relentlessly, for his <strong>spouse's prestige</strong> just to <strong>let her go</strong> to later because that's what his <strong>duty as a king</strong> demanded. Living such a difficult life requires <strong>courage</strong>. And every iota of Lord Rama exhibits that trait.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/1-11.png" /></p>
+<h3>Lord Hanuman:</h3>
+<p>Similarly, lord Hanuman is shown as epitome of <strong>strength</strong>. Exhibiting immense <strong>love</strong>, <strong>loyalty</strong> and <strong>devotion</strong> towards his god. Even after being portrayed as the most powerful man in the universe (he picked up a mountain for god's sake), there is a <strong>subtle modesty</strong> to his personality. He renounces <strong>materialistic possessions</strong> and seeks serving lord Rama with <strong>selfless humility</strong>.</p>
+<p><img alt="" src="https://imgeng.jagran.com/images/2020/apr/hanumanji1586244971144.jpg" /></p>
+<h3>Lord Shiva:</h3>
+<p>And, when you talk about <strong>calmness</strong> and <strong>serenity</strong>, you'd always think about Lord Shiva. The iconographical attributes of Shiva are the serpent around his neck, the adorning crescent moon, the holy river Ganga flowing from his matted hair, the third eye on his forehead. The first image of Shiva, one paints in his mind would be of him, meditating on an ice slab, somewhere in the mountains. <strong>Peace</strong>.</p>
+<p><img alt="" src="https://static.toiimg.com/photo/msid-70324373/70324373.jpg" /></p>
+<h2>Perception Now:</h2>
+<p>The times have surely changed since Ramayana and Mahabharat aired on TVs in 1987 and 1988 respectively. And with changing times, there is a <strong>shift in the construct of religion</strong>. This has caused a <strong>drift in the personality</strong> of Hindu gods as we perceive. I am not questioning the morality or correctness of this perception. Just observing and acknowledging the shift that has happened from the eyes of a keen observer. Here's some facts that make me think about it.</p>
+<h3>Lord Rama:</h3>
+<p>In recent times, the persona of the <strong>King of Ayodhya</strong> has taken a new shape. It may be all this news that keeps on challenging our belief system but <strong>lord Ram is now "Ram Lalla "</strong>. From a <strong>vigorous</strong> <strong>majesty</strong> who led an entire army to teach <em>Raavana</em> a lesson, lord Ram is now <strong>seeking support</strong> of it's devotees to build a place for themselves, in order to worship him.</p>
+<p>I am not going to touch upon the entire controversy around the issue. It is just the image of a god that this incident has created, bothers me. For the first time, a <strong>human figure has surpassed the aura of the ones that apparently created him</strong>. It seems as if without his support, lord Ram would be nowhere today. And I have seen people supporting this unsaid claim.</p>
+<p><img alt="" src="https://mc.webpcache.epapr.in/mcms.php?size=large&amp;in=https://mcmscache.epapr.in/post_images/website_13/post_17581073/thumb.jpg" /></p>
+<p>Just to be clear, my family also celebrated this event. We lit up earthen lamps in our balcony and were genuinely happy with the Supreme Court ruling. However, it was <strong>not a victory</strong> per se. It was <strong>justice</strong> delivered. <strong>Definitely NOT looking down upon other religious groups. Most definitely NOT doing a favour to the god.</strong> Unfortunately a big chunk of people don't resonate with the the latter stream of thoughts.</p>
+<p><img alt="" src="https://gumlet.assettype.com/freepressjournal%2F2020-04%2F29cc9d55-2a36-40d4-9e0a-d7ebdf9aa091%2FEVU0oTWXkAE_oMl.jpg?w=1200" /></p>
+<h3>Lord Hanuman:</h3>
+<p>Now I don't know if it had something to do with the above personification of lord Rama. But, our beloved <strong>loyal</strong> and <strong>humble</strong> Hanuman turned into a <strong>ferocious</strong> and <strong>vexed</strong> individual. I no more see Lord Hanuman <strong>sitting on his knee with folded hands</strong> in front of Lord Rama. I see him painted in Saffron colour, <strong>irked</strong> as one could be.</p>
+<p>Now I am totally up for standing for one's rights. However, emotions like these being drawn from someone who is supposed to guide you to in you life, seems a little off. I recently saw a series on Netflix named '<strong>Vikings</strong>'. The entire community worships gods like <strong>Odin</strong>, <strong>Thor</strong> etc. Since they portray them as <strong>gods of war, gods of storms</strong> etc., they indulge in practices like <strong>sacrificing people</strong> to please these gods, <strong>killing people of other belief systems</strong> and what not.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/2-8.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/3.jpg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/4.jpg" /></li>
+</ul>
+<p>Hence, I conclude that for the people who <strong>may not understand the real motive behind an emotion</strong> may pick it up as a <strong>general trait</strong> one must carry and that eventually causes troubles. We are observing the lowest levels of tolerance already. I am not sure what future holds in store for us.</p>
+<h3>Lord Shiva:</h3>
+<p>Till 2017, I spent 7 years of my life in Noida. Out of these 7 years, last two were mostly spent in <strong>Ghaziabad</strong>, where I had my office. Every year in July, we observe an <strong>auspicious month of <em>"Shravan"</em></strong>. Thousands of Devotees dress up in saffron clothes, take up a daunting journey on foot, known as <em>'Kaanvad Yatra'</em>.</p>
+<p><img alt="" src="https://tfipost.com/wp-content/uploads/2018/08/KANWARIYAS.jpg" /></p>
+<p>According to the ritual, the <em>kanwariyas</em> (people taking the journey) collect holy water of River Ganga from places like Haridwar, Gangotri, Rrishikesh in pots and carry the covered pots on a beautifully decorated kaavad or pole, balancing it by carrying it across their shoulders.</p>
+<p>However, since I have seen this up and close, I know that the flip side of this devotion. In the name of Lord Shiva, these people would do <strong>drugs</strong> like <strong>opium</strong>, <strong>weed</strong> and what not. And if someone tries interrupt in the <strong>hooliganism</strong> they resort to, after getting high, they <strong>gang up</strong> and beat the person. All in the name of <em>"Shiv Shambhu"</em>. There's a slogan that they chant while doing all this: <em>"Bhole ki fauj, karegi mauj"</em> (Army of Shiva, will have fun").</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/5-1.jpg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/7.jpg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/8.jpg" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/8-1.jpg" /></li>
+</ul>
+<p>I am not even getting started on the nuisance they create by jamming the roads. The best part? Raise your voice and get humiliated publicly. What kind of religion teaches that?</p>
+<h2>Conclusion:</h2>
+<p>I am not speaking for any one else, but this state of affairs dampens the spirit of the country. Coming from a small town and living in a metro city, I am totally perplexed. <strong>There is one side of me that is optimistic about India being the next super power. There's this other side which realizes that majority of the youngsters that we are betting on may have different priorities in life altogether.</strong></p>
+<p>May be I am just overthinking (I wish..)</p>
+<p>Do you resonate with my opinion on this matter?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

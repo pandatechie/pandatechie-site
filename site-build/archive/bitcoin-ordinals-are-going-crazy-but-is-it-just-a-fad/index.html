@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Ordinals Are Going Crazy But is it Just A Fad? | Raghav</title>
+<meta name="description" content="Chai is drunk daily (if not more than once) in India. So why shouldn't the crypto news be delivered to you in a similar fashion? Just like you have got endless …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Bitcoin Ordinals Are Going Crazy But is it Just A Fad?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2023-05-02</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2023-05-02 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2023/05/image-3-1018x1024.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><em>Chai is drunk daily (if not more than once) in India. So why shouldn't the crypto news be delivered to you in a similar fashion? Just like you have got endless variants in Chai, so does web3. This is one of the first attempts to write daily 'Crypto Chai'</em>.</p>
+<p><em>Do share your feedback.</em></p>
+<p>Remember how we traded monkey JPEGs and pixelated dudes like there’s no tomorrow? Well, a random crypto bro would tell you that NFTs are powerful because they are immutable.</p>
+<p>What if we separate doodh from paani to break out the bad news? They are NOT.</p>
+<p>No wait. Before you start burning my effigy, <a href="https://pandatechie.in/2021/10/03/what-are-the-uses-of-nft-top-use-cases/">NFTs</a> are immutable but the artwork we see being touted on billboards at NFT NYC is not.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/05/image-3-1018x1024.png" /></p>
+<p>An NFT is simply an address pointing towards your image, usually stored on a centralized server. If someone wanted to, they could change that image and all you would be left with is an immutable alphanumeric string of numbers (address). Ouch!</p>
+<p>Now that you have had a moment of enlightenment, would you pay for something where media is as immutable as the address?</p>
+<p>Enter Bitcoin Ordinals!</p>
+<h2>WTF is a Bitcoin Ordinal?</h2>
+<p>Back in the day, I remember my dad’s salary was paid in cash. The moment my dad got his salary, he used to pull out the currency note with serial number ‘007’ at the end of it.</p>
+<p>Not that he was a mafia, he just felt that 007 is a lucky number for him.</p>
+<p>Now if you would ask him how much he values a  ₹100 bill that ends in 007, he will probably quote a number higher than ₹100.</p>
+<p>Think of this exact situation in a digital currency like <a href="http://bitcoin.com">Bitcoin</a>.</p>
+<p>1BTC = 1BTC</p>
+<p>But is 1 Satoshi = 1 Satoshi, if that Satoshi was a part of the genesis block? Prolly not!</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/05/image-2-1024x523.png" /></p>
+<p><em>Bitcoin NFTs — aka Bitcoin ordinals, aka digital artifacts — are a way to inscribe digital content on the Bitcoin blockchain.</em></p>
+<p>Skipping the big brain explanation, just remember that a past few upgrades to the Bitcoin protocol now allow you to:</p>
+<ol>
+<li>Add a serial number of sorts to each Satoshi</li>
+<li>Add media (image/text/video) to the block data</li>
+<li>Chai out the entire situation by creating an NFT-like ecosystem for Bitcoin</li>
+</ol>
+<p>Take that maxis!</p>
+<p>But remember Jack Dorsey’s first tweet being sold as NFT for $48M? Yes. That was relisted for sale and ended up fetching a staggering $280 as its highest bid.</p>
+<p>Take that too Maxis!</p>
+<p>So is Bitcoin ordinal going to face a similar feat? How do we know? We sell chai. But here’s what we think.</p>
+<p>Bitcoin ordinals were launched in January 2023. Once the hype kicked in February, the number of inscriptions doubled every week for a few weeks.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/05/image-1-1024x516.png" /></p>
+<p>But we think just like most things in web3, Ordinals could be seasonal. Here’s a 5-point chai quality parameter check of the situation:</p>
+<h3>1. Infrastructure:</h3>
+<p>Just like milk production requires happy cows and farmland, NFT ecosystem requires infrastructure and ease of minting to foster. Unfortunately, ordinals do not have that in place yet. And with the speed at which we switch trends here, we are afraid that it may fall behind.</p>
+<h3>2. Tasting Blood:</h3>
+<p>We are all about milk. But miners are not. In the past, miners were simply relying on block rewards for sustaining. But with ordinals coming in, miners get a lot of transaction fees for processing the blocks.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/05/image-1024x565.png" /></p>
+<p>Tl;dr: graph goes up, miners partaaay.</p>
+<p>This is not perceived well within the community that expects Bitcoin to be the ultimate hedge against inflation, the best store of value to ever exist. Nothing more, nothing less.</p>
+<h3>3. Pay up biatches!</h3>
+<p>Adding ordinals to blocks means increasing the number of blocks for other work. (basic math). As more such applications kick in, the transaction fee is likely to shoot up. Remember how our big brother bitcoin isn’t scalable enough?</p>
+<p>We are likely to stick to transferring value in such a scenario rather than moving penguin jpegs.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/05/image.gif" /></p>
+<p>Bitcoin Miners: Final Draft</p>
+<h3>4. So close, yet so far:</h3>
+<p>Yeah. Remember how we sold this entire article in the name of decentralization and immutability? Ordinals are not immutable either. Not completely.</p>
+<p>You see, for every transaction, picking up the inscribed media is optional for a miner. They could simply process the transaction with the movement of Sats instead of transferring the ordinal.</p>
+<p>Well that is a bummer indeed.</p>
+<p>So, why don’t you tell us if we should come up with 'CHUSKordinals'? Get it? Alright, I’ll show myself out!</p>
+<p>Oh while we are at it, heard of Push Protocol?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

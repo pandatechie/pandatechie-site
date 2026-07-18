@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Centralized Exchanges Dug their Own Graves in India? | Raghav</title>
+<meta name="description" content="The year was 2018ish. RBI had imposed a blanket ban on all banks on interacting with centralized exchanges. As a result, all the banks stopped the movement of I…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How Centralized Exchanges Dug their Own Graves in India?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-05-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-05-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2022/05/image-8-1024x221.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>The year was <strong>2018ish</strong>. <strong>RBI</strong> had imposed a blanket ban on all banks on interacting with <strong>centralized exchanges</strong>. As a result, all the banks stopped the movement of <strong>INR</strong> from bank accounts to your <strong>CEX wallets</strong>. Later, these exchanges filed a case in the <strong>Supreme Court</strong>. The ground was that one cannot stop anyone from conducting a legal business in the country. The Supreme court asked the <strong>RBI</strong> if <strong>crypto</strong> was <strong>illegal</strong>. Once they said no, deposits were resumed. However, soon enough the industry was hit by a <strong>bear run</strong>. Specifically during the Covid.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2022/05/image-8-1024x221.png" /></p>
+<p>But then something unprecedented happened. Yes. That word comes up quite often in the post covid world. <strong>2020</strong> saw a massive <strong>dip</strong> and an even <strong>harder pump</strong>. Both <strong>stocks</strong> and <strong>crypto</strong> started rallying like never before. A lot of it could be attributed to excessive <strong>liquidity</strong> in the market. When more <strong>money</strong> was given in the hands of the general public, it was expected that they would spend it. Instead, they invested.</p>
+<p>And the obvious side effect of this was a rise of the great <strong>Indian fintech ecosystem</strong>. A lot of fintech startups attained the coveted unicorn status. One such startup was <strong>CoinDCX</strong>. For the uninitiated, it is an Indian, <strong>centralized crypto exchange</strong>.</p>
+<p>But whatever happened after that, was uncalled for. These startups started spending the VC money in a quirkiest way possible. Let's find out what went haywire for them.</p>
+<h2>A. Advertising:</h2>
+<p>Okay. A lot of <strong>startups</strong> do it. And that’s fine. However, the way <strong>Indian exchanges</strong> did it was unique. They picked up the hottest <strong>slots</strong> in most watched television shows. And started selling the dream to the common man.</p>
+<p><img alt="" src="https://media1.giphy.com/media/yG2NEPAA7n6n6d0sHn/giphy.gif" /></p>
+<p>Once again, so far so good. But if you look closely, the theme behind these ads had the potential to offend our already <strong>sensitive government</strong>. Let’s find out how.</p>
+<h2>A.1: WazirX</h2>
+<p>https://www.youtube.com/watch?v=1ZT4YXJmvLo</p>
+<p>Okay. So what do we have here? A very good <strong>market research</strong> conducted by them. They found out that people believe it is really hard to invest in <strong>cryptocurrencies</strong>. Bang on. What next? How do you get them to invest? Yup. <strong>FOMO</strong>. 10 out of 11 teammates invest in cryptocurrencies. That’s representing a staggering 90% adoption.</p>
+<p><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsoQcOPtjoqOlJKYA9gc0J7vIB8A5VHVrplsEb4Y4ldtYWHgqvBMOhc1cnBEpNqOIIUDg&amp;usqp=CAU" /></p>
+<p>Now we all know that the worst way to get into any investment is <strong>FOMO</strong>. Yet you chose to encash it. Also, do you know how many people in India invest in direct <strong>equity</strong>? Less than 2%.</p>
+<p>Your intentions might be on point, however, my friend, you just promoted a <strong>gambling outlet</strong> for the retail investor.</p>
+<h2>A.2: CoinDCX:</h2>
+<p>https://www.youtube.com/watch?v=jzGo0-HEaog</p>
+<p>Don’t even get me started on this one. You can’t sell <strong>crypto</strong> to people by saying that it is safe and guaranteed. Even <strong>fixed deposits</strong> have some risks associated with it. And god knows that <strong>crypto</strong> is an extremely <strong>unchartered territory</strong>.</p>
+<p>Did I just hear <strong>Ayushman Khurana</strong> saying that all the cryptos on the platform are audited and safe? You had <strong>Luna</strong> and UST on the platform a week ago. I am not saying that you could have predicted it anyway, but you cannot tell a <strong>retail</strong> folk that it is safe.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>The <strong>4xed voice</strong> over claiming that cryptocurrencies are unregulated and not a legal tender in India, didn’t help either.</p>
+<h2>A.3: CoinSwitch Kuber:</h2>
+<p>https://www.youtube.com/watch?v=oQizW6pRTp8</p>
+<p>What comes to your mind when you think of ‘<strong>hard</strong>’. No pun intended. If you are a bollywood fan, <strong>Ranvir Singh</strong> and his ‘gully boy’ created a lot of ripples in the market.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>Then for some reason, the team at <strong>CoinSwitch Kuber</strong> decided to plug it with ease of buying crypto on their platform. Fair enough. But what does it mean when Ranvir Singh says, “<strong>Lag ja, kuch to badlega</strong>” (Get on to it, something will change for good).</p>
+<p>How do you expect to get away with that? For god’s sake, the regulator is watching your each move specifically.</p>
+<h2>B. The Referral Scheme:</h2>
+<p>Once you get the mindshare of people, what is next?</p>
+<p><em>“Yes, they are now talking about </em><em>BTC</em><em>. But we need a final nail in the coffin.”</em></p>
+<p>This was indeed a <strong>master stroke</strong>. Most of the newbies I met always used to think how expensive <strong>BTC</strong> is. It kept them away from this space. However, these exchanges started giving Rs. 100 worth of <strong>BTC</strong> for free.</p>
+<p>Not only that, it was coupled with a few referral schemes so that you could now earn while bringing your friend to the party.</p>
+<p>How can any government in the world accept that? You are essentially creating <strong>hooks</strong> for the general public to flock on to your <strong>platform</strong> with no potential downside. All this while you are completely aware of the <strong>gambling tendency</strong> of <strong>cryptoverse</strong>.</p>
+<h2>C. UI/UX:</h2>
+<p>One good thing that came out of the <strong>VC money</strong> is impeccable user experience. Buying <strong>crypto</strong> was seriously made simpler. Some of these <strong>exchanges</strong> also came up with <strong>crypto</strong> parlances of traditional finance products like <strong>SIP</strong>.</p>
+<p>But all bells and whistles on the platform were intended to celebrate your arrival, <strong>purchase of crypto</strong>. It had an unconscious impact on the user's mind. They would have rather introduced nudges at each step to warn the user of what they are getting into.</p>
+<p>And if you think it is detrimental to their own cause, check out <strong>Kite</strong> by <strong>Zerodha</strong>. Platform has introduced features like ‘Kill Switch’ that prevents users from <strong>over-trading</strong>.</p>
+<h2>In a Nutshell:</h2>
+<p>The Indian <strong>government</strong> has taken notice of this madness. They introduced <strong>1% TDS</strong> to essentially kill trading and hence these exchanges in the country.</p>
+<p>Recently, they also banned all <strong>celebrity endorsements</strong> in crypto. After all, they have a huge influence on the masses.</p>
+<p>Best way to approach this <strong>space</strong> would have been through education. Most of these <strong>exchanges</strong> have dedicated arms for that. However, it should be prioritized over <strong>revenues</strong>. You conduct your due diligence and then invest. Not the other way round!</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

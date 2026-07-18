@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Gratitude? | Raghav</title>
+<meta name="description" content="If you have been following pandatechie, this may come as a setback to you. I usually write on [tech](https://pandatechie.in/technology-trends/), [finance](https…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Gratitude?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-11-19</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-11-19 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_493800479_332110.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>If you have been following <strong>pandatechie</strong>, this may come as a <strong>setback</strong> to you. I usually write on <a href="https://pandatechie.in/technology-trends/">tech</a>, <a href="https://pandatechie.in/category/finance/">finance</a> and <a href="https://pandatechie.in/category/lifestyle/">lifestyle</a>. Where does <strong>quasi spiritual concept</strong> of <strong>gratitude</strong> fit in? <strong>What is gratitude</strong> after all? So I had once read the famous book by <strong>Rhonda Byrne</strong> called "<a href="https://www.amazon.in/Secret-Rhonda-Byrne/dp/1847370292">The Secret</a>" but never paid attention to it. Until.. Now..</p>
+<p><img alt="Gratitude synonyms" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_493800479_332110.jpg" /></p>
+<p>Recently, there was a session organized at my workplace where this <strong>concept</strong> kind of <strong>came back to me</strong>. Much <strong>harder</strong> and <strong>stronger</strong> this time. Session was taken by a lady from Juno Clinic. Full disclosure, it was one of those sessions where <strong>I had couple of other tasks in hand</strong> and had <strong>planned to multitas</strong>k intermittently. But, first 5 minutes of the session caught my attention.</p>
+<p>In this post, I want to unclutter the mess around this concept in a way a <strong>non-religious</strong>, <strong>non-spiritual</strong> person would perceive it.</p>
+<p>What I really liked about the session was that it didn't portray <strong>gratitude as an utopian notion</strong>. It acknowledged the fact that <strong>even if I fail</strong> to exercise gratitude in the beginning, it is <strong>abso-freakin-lutely NORMAL</strong>. Here are my learnings from the session!</p>
+<h2>What is Gratitude?</h2>
+<p>First of all, it is <strong>not equivalent of your regular 'Thank You'</strong>. So next time you thank everyone at the end of a virtual meeting, that is NOT exactly gratitude.</p>
+<p>From a scientific perspective, <strong>gratitude is not just an action: it is also a positive emotion that serves a biological purpose</strong>. It is a <strong>deeper appreciation for someone (or something) that produces long lasting positivity</strong>.</p>
+<p>Jargons aside, I perceive it as as an <strong>act being thankful to every small thing in your life</strong>. An act of <strong>acknowledging events</strong>, <strong>things</strong> around you. It is about feeling abundant and bountiful. In a very <em>common mannish</em> example, remember how <strong>our teachers asked us to thank for a couple of seconds before we opened our lunchboxes</strong>? That is gratitude!</p>
+<h2>How to Exercise Gratitude:</h2>
+<p>So I could comprehend two techniques out of the session which were really practical:</p>
+<ul>
+<li><strong>Gratitude Journal</strong>: There were a couple of ways to achieve this. The best one I found was to <strong>write three things you feel thankful about on 'post-its</strong>' and put it in a box. This is where the doc mentioned that you may be repeating stuff early on but eventually, it will make sense.</li>
+</ul>
+<p><img alt="What is gratitude journal" src="https://www.rd.com/wp-content/uploads/2017/12/02-This-Is-What-a-Gratitude-Journal-Really-Looks-Like-Matthew-Cohen-rd.com_.jpg" /></p>
+<ul>
+<li><strong>Gratitude Rock:</strong> Catch hold of a rock. Any shape, size would be okay. Place it in an accessible corner of your house. <strong>Whenever you touch that rock, think of something you are thankful about</strong>. Pretty handy right?</li>
+</ul>
+<p><img alt="gratitude rock" src="data:image/jpeg;base64,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" /></p>
+<h2>Health Benefits:</h2>
+<p>A blogpost is incomplete with WIIFM. So here are some <strong>key health benefits I could recall from the session</strong>:</p>
+<ul>
+<li>Increased happiness and positive mood</li>
+<li>More satisfaction with life</li>
+<li>Less materialistic</li>
+<li>Less likely to experience burnout</li>
+<li>Better physical health</li>
+<li>Better sleep</li>
+<li>Less fatigue</li>
+</ul>
+<h2>Some Gratitude Statements You Can Relate To:</h2>
+<ol>
+<li>If you are reading this blog, congratulations, you are <strong>amongst 77% of literate Indians</strong>.</li>
+<li>Congratulations on the fact that you own a <strong>decent phone, laptop to reach this page</strong>.</li>
+<li><strong>Only 40% of India can access internet</strong> currently, you are one of them.</li>
+<li>You have <strong>time</strong>, to read this.</li>
+<li>You have just <strong>learnt</strong> something new right now.</li>
+</ol>
+<h2>Conclusion:</h2>
+<p>A couple of days in practice, I feel I am a <strong>little less cranky</strong> when workload is at its peak. Although my spouse is yet to confirm this (I don't think she ever will) but I feel <strong>more present</strong> at my work. I am <strong>not denying</strong> that it can be a <strong>placebo</strong> as well. But I am willing to explore more.</p>
+<p>Until Next Time.. Thank You for your time! (Ah! Again!)</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

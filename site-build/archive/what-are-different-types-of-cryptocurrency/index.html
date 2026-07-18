@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What are Different Types of Cryptocurrency? | Raghav</title>
+<meta name="description" content="First thing first, the question asked above is completely incorrect. This has single handedly created so much confusion in the minds of new investors and I was …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What are Different Types of Cryptocurrency?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-28</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-28 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media4.giphy.com/media/ioopmOHLqIDfGxLLKG/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>First thing first, the question asked above is completely incorrect. This has single handedly created so much <strong>confusion</strong> in the minds of new investors and I was <strong>no exception</strong> to it. When you use the word '<strong>Currency</strong>' with something, our mind immediately <strong>considers</strong> it as a <strong>medium of</strong> <strong>exchange</strong>. However, that's absolutely untrue. Secondly, there is a <strong>huge difference</strong> between a <strong>coin</strong> and a <strong>token</strong>. I covered that in the <strong>blogpost</strong> last week <a href="https://pandatechie.in/2021/11/22/what-is-the-difference-between-coin-and-token/">here</a>. If you haven't read it yet, I would recommend that you go through it first.</p>
+<p><img alt="" src="https://media4.giphy.com/media/ioopmOHLqIDfGxLLKG/giphy.gif" /></p>
+<p>Now that we have the basics sorted, let's find out what actually is meant by <strong>different types of cryptocurrency</strong> (as mentioned, more accurate term would be <strong>crypto</strong> and not '<strong>currency</strong>'). When people generally ask this question, they are basically <strong>referring</strong> to the different type of <strong>tokens</strong> out there. Why? Because there's a subtle difference between the two. (Explained <a href="https://pandatechie.in/2021/11/22/what-is-the-difference-between-coin-and-token/">here</a>) So in today's blogpost we are going to talk about just that. <strong>What are different types of cryptocurrency or to be technically correct, different types of tokens out there?</strong></p>
+<h2>A. Platform Tokens:</h2>
+<p>These are the tokens which are created to <strong>support</strong> a <strong>decentralized application</strong>. For example, <a href="https://pandatechie.in/2021/10/15/what-is-uniswap-and-uni-token/">Uniswap</a> is a decentralized exchange meant for swapping different ERC20 tokens. However, Uniswap also his it's own token called <strong>UNI</strong>. Right now UNI has <strong>no specific use case</strong> and is intended to be a governance token (more on it in a while), but it is handed out to people who invest in the <strong>liquidity pools</strong> and later can be used for <a href="https://pandatechie.in/2021/10/23/what-is-yield-farming-in-crypto/">yield farming</a> etc.</p>
+<p><img alt="Uniswap Logo" src="https://pandatechie.in/wp-content/uploads/2021/10/uniswap-1024x614.jpg" /></p>
+<h2>B. Wrapped Tokens:</h2>
+<p>For the normies who are well versed with stock markets, think of these like <a href="https://pandatechie.in/2020/10/22/is-it-the-right-time-to-buy-gold-how-to-invest-in-gold/">ETFs</a>. Imagine that you plan to buy <strong>gold</strong> but don't have the <strong>money</strong> to <strong>buy</strong> an <strong>entire gram</strong> (or whatever the minimum unit is). In that case, you could <strong>purchase</strong> a <strong>tokenized</strong> form of gold for as <strong>low as Rs. 100</strong>. That way you don't have to care about <strong>minimum investment</strong> and other factors like <strong>storage</strong>, <strong>counterfeits</strong> etc.</p>
+<p><img alt="Different types of Cryptocurrency: Wrapped Token" src="https://pandatechie.in/wp-content/uploads/2021/11/image-30.png" /></p>
+<p>Now take that example and expand it to all the <strong>assets</strong> you could think of. <strong>Silver</strong>, <strong>Copper</strong>, <strong>Iron</strong> etc. etc. So basically you could <strong>WRAP</strong> an asset in a packet and <strong>trade</strong> using it <strong>securely</strong> through blockchain.</p>
+<h2>C. Stable Coins:</h2>
+<p>Well, this is another blogpost in itself and guess what? I did write about it a few days ago. <a href="https://pandatechie.in/2021/10/24/what-is-stablecoin-types-of-stablecoin-and-uses/">Here's</a> where you can explore more.</p>
+<p><img alt="Different types of Cryptocurrency: Stablecoin" src="https://forumpay.com/d_content/Las-stablecoins-pueden-ser-una-defensa-contra-la-inflacion.jpeg" /></p>
+<p>For the rest of us, <strong>stable coins</strong> are mostly like wrapped tokens but <strong>instead</strong> of a <strong>commodity</strong> they <strong>mimic</strong> the price of a <strong>fiat</strong> <strong>currency</strong>. This could be Dollar, <strong>Yen</strong>, <strong>Euro</strong>, you get the idea. Some of the examples of stable coins would be DAI, USDT, USDC etc.</p>
+<h2>D. Utility Token:</h2>
+<p>I will instead start with an example which would instantly make it clear. There's a Bangalore based startup called <a href="https://www.drife.io/">Drife</a>. It's a <strong>Decentralized Uber</strong> based on <strong>Blockchain</strong>. The $<strong>DRIFE</strong> token is used to <strong>pay</strong> the <strong>drivers</strong> for rides.</p>
+<p>Another one? There's a <strong>metaverse</strong> project called <strong>Decentraland</strong>. People use the currency of that <strong>metaverse</strong> called $<strong>MANA</strong> to <strong>purchase</strong> virtual land.</p>
+<p>I hope you get the idea. Utility coin is something that has a <strong>purpose</strong> within the <strong>project ecosystem</strong>. This purpose could be anything <strong>tangible</strong> in nature.</p>
+<p><img alt="Different types of Cryptocurrency: Utility Coin" src="https://miro.medium.com/max/830/1*daXNKxGj6nlVtZiGQjbjxw.png" /></p>
+<p>Oh, and if you still haven't figured out, <strong>Fuel Coins</strong> are the biggest examples of utility tokens. For example <strong>ETH, SOL</strong> are used as <strong>gas money</strong> for all <strong>transactions</strong> on <strong>Ethereum Mainnet</strong> and <strong>Solana</strong> blockchains respectively.</p>
+<h2>E. Governance:</h2>
+<p>Are you into stock market? If yes, then you must be aware about the <strong>annual general meetings</strong> companies conduct regularly. As a <strong>share holder</strong> you are free to <strong>join</strong> these meetings and also <strong>vote</strong> on certain decisions. <strong><em>More the number of shares you hold, greater is the value of your vote</em></strong> OR so to say, 1 Share = 1 Vote.</p>
+<p><img alt="Different types of Cryptocurrency: Governance" src="https://assets-global.website-files.com/5f5504366445c3972f45286e/5fd3b6ade5a9dcbad51a69d5_201210%20Illustrations_Price%20Change%20Logos.jpg" /></p>
+<p>In a crypto parlance, this is what a <strong>governance</strong> <strong>token</strong> can achieve. In the example that I quoted above, <strong>UNI</strong> might take the shape of a <strong>governance token</strong> in the future. So if one fine day <strong>Uniswap decides</strong> to <strong>increase</strong> the <strong>swapping fee</strong> from <strong>0.3%</strong> to <strong>0.6%</strong>, these token holders will be able to vote on that decision.</p>
+<h2>Conclusion:</h2>
+<p>Even before you get into tokenomics, it is very important to understand the actual use case of the token. It gets a lot easier if you try to approach it by categorizing it in one of the above categories. Are you planning to kickstart your crypto journey? CoinDCX provides a highly user friendly and safe platform for beginners.</p>
+<p>So, did I miss anything? What accprding to you are different types of cryptocurrency?</p>
+<p>https://www.instagram.com/p/CWZ80FDIiBs/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

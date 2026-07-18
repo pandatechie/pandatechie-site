@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoneyTap: Borrowing in a Jiffy | Raghav</title>
+<meta name="description" content="Hindu mythology believes that a person's character is dependent on his name. There is an entire ceremony around naming your kids. And believe me, there is a lot…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">MoneyTap: Borrowing in a Jiffy</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-15</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-15 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/04/Literature-Comparison-Infographic-1-451x1024.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Hindu mythology believes that a person's <strong>character</strong> is <strong>dependent</strong> on his <strong>name</strong>. There is an entire <strong>ceremony</strong> around <strong>naming</strong> your kids. And believe me, there is a lot of <strong>thought</strong> that goes <strong>behind</strong> this. A name has to be <strong>synonymous</strong> with the <strong>aspirational</strong> <strong>behavior</strong> and <strong>characteristics</strong> of the child. Talking of that, I found a <strong>Fintech</strong> platform that is doing something very similar. <strong>MoneyTap</strong>, an application that gives you <strong>money</strong> on a <strong>tap</strong> of a <strong>button</strong>. We have discussed this in the past as well, <strong>Fintech</strong> is shaping the <strong>lending</strong> <strong>landscape</strong> of India bigtime. With <strong>tech</strong> enabled, <strong>paperless</strong> solutions to help out <strong>borrowers</strong> in need, <strong>Lend</strong> <strong>Tech</strong> in India is shaping rather beautifully.</p>
+<h2>What is MoneyTap:</h2>
+<p>Founded by <a href="https://www.crunchbase.com/person/anuj-kacker">Anuj Kacker</a>,<a href="https://www.crunchbase.com/person/bala-parthasarathy">Bala Parthasarathy</a>,<a href="https://www.crunchbase.com/person/kunal-varma">Kunal Varma</a> (IIT/ISB Alumni) in 2015, MoneyTap is a <strong>Bangalore</strong> based startup. MoneyTap aims to provide a <strong>quick</strong> <strong>borrowing</strong> <strong>solution</strong> to the <strong>millennial</strong> and <strong>Gen-Z</strong> population in <strong>tier 1 and 2</strong> cities of the country (for now). They intend to achieve this by providing the customers with a <strong>line of credit</strong>. Now, a line of credit is <strong>different</strong> from a loan. Let us understand the key differences between the two below:</p>
+<p><img alt="Differences between loan and line of credit " src="https://pandatechie.in/wp-content/uploads/2021/04/Literature-Comparison-Infographic-1-451x1024.png" /></p>
+<p>Key differences between a loan and line of credit</p>
+<p>MoneyTap recently appointed a new <strong>chief product officer</strong>, Ashutosh Dabral. In one of his media interactions, he mentioned that MoneyTap continues to <strong>focus</strong> on <strong>new</strong> <strong>age</strong> <strong>products</strong> that suit the needs of <strong>Millennials</strong> and <strong>GenZers</strong> alike. If you are a <strong>boomer</strong> or even a <strong>millennial</strong> who hasn't realized this yet, just pause for a moment and notice. New age people <strong>hate loans</strong>. At the same time, <strong>they are not afraid of borrowing</strong>. <strong>Credit cards</strong> and platforms like <strong>MoneyTap</strong> are on the rise. Therefore, there is <strong>dramatic</strong> <strong>shift</strong> in how we want to access credit. Rather than focusing on the <strong>transactional</strong> or <strong>functional</strong> aspect, people are experimenting a lot with <strong>interactions</strong> – the <strong>emotional</strong> and <strong>cognitive</strong> aspect of <strong>finances</strong>.</p>
+<h2>How to Avail Line of Credit from MoneyTap?</h2>
+<p>The process of availing a credit from <strong>MoneyTap</strong> is super simple. As a first step, you fill out a form which will seek your basic details like <strong>PAN</strong> <strong>number</strong>, <strong>job profile</strong>. Individuals earning between <strong>15,000 and 9,99,999</strong> only are allowed to borrow money from MoneyTap as of now.</p>
+<p>I put in some <strong>dummy</strong> <strong>details</strong> and using my <a href="https://pandatechie.in/2021/01/05/how-to-block-spam-calls-and-messages-forever-with-doosra/">Doosra number</a> to complete the form. Of course there is a <strong>validation</strong> based on your <strong>PAN</strong> <strong>card</strong> and <strong>details</strong> that you enter. Once you are done with that, a <strong>limit</strong> is <strong>generated</strong> for you. For me, it was 1,56,000.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-9.png" /></p>
+<p>The next obvious step is to <strong>complete your KYC</strong> wherein you mention why do you need the money and submit photo identification documents. Once all the documents are submitted, bank processes them and eventually, a <strong>limit is established</strong> in your application.</p>
+<p>Now, each time you need money, all you have to press the '<strong>Get Money Button</strong>'. That will take you to the <strong>requirement</strong> <strong>screen</strong>. Depending on the <strong>amount</strong> of <strong>money</strong> <strong>borrowed</strong> and the duration, you will get a <strong>summary</strong> of the entire transaction. This will give you a <strong>detailed breakup</strong> of all the charges on the transaction.</p>
+<ul>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-10.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-11.png" /></li>
+<li><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-12.png" /></li>
+</ul>
+<p>Homepage after approval (1)) Fund Transfer Screen (2) Breakup of Charges (3)</p>
+<h2>Credit Card Vs MoneyTap:</h2>
+<p>Although the interest at which the line of credit is offered <strong>(~15%) is quite low as compared to credit cards (~30%)</strong>. But if you are <strong>borrowing</strong> a small amount, keep a track of <strong>processing</strong> <strong>fees</strong>. Also, they charge something called '<strong>one time setup'</strong> fees of <strong>Rs. 500</strong> to extend the line of credit.</p>
+<p>So let's evaluate with a quick example. Say you borrow <strong>Rs. 10,000 from a credit card at 30% rate of interest</strong>. This means that at the end of the year, you would pay <strong>13,000</strong>.</p>
+<p><img alt="bank blur business buy" src="https://pandatechie.in/wp-content/uploads/2021/04/pexels-photo-259200-1024x682.jpeg" /></p>
+<p>Photo by Pixabay on <a href="https://www.pexels.com/photo/bank-blur-business-buy-259200/">Pexels.com</a></p>
+<p>Coming to MoneyTap, at rate of <strong>15%+ Rs. 500 (one time setup fee) + Rs. 500 (Processing Fee)</strong>, the total cost comes out to be <strong>12,500</strong>.</p>
+<p>As you can see, higher the amount, benficial would it be to opt for a line of credit. Because that would take care of the <strong>fixed charges of Rs. 1000</strong>.</p>
+<h2>Conclusion:</h2>
+<p>I am not a big fan of borrowing money just to cover an irregular month. This just shows financial indiscipline. However, in the need of emergency, it is important to evaluate the cost of loan. At that point, if something like MoneyTap wins the race, I am up.</p>
+<p>Have you used any such platform in the past?</p>
+<p>This blogpost is in association with <a href="http://theblogchatter.com">Blogchatter's</a> #BlogchatterA2ZChallenge.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

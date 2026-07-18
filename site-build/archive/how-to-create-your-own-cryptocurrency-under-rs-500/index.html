@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Create Your Own Cryptocurrency Under Rs. 500 | Raghav</title>
+<meta name="description" content="Back in college, I used to Jailbreak iOS devices for fun (and may be a little side income). I also used to flash Symbian devices too just for the sake of it. An…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span> <span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">How to Create Your Own Cryptocurrency Under Rs. 500</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-06</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-06 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/11/image.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Back in college, I used to <strong>Jailbreak</strong> iOS devices for fun (and may be a little side income). I also used to <strong>flash Symbian devices</strong> too just for the sake of it. And I once <strong>bricked</strong> my <strong>HTC</strong> device by <strong>flashing</strong> an <strong>unsupported custom ROM</strong>. Had to cook a story to convince the <strong>service center</strong> guys that I had nothing to do with it. The real question is not how, but, why? Because it gave me that <strong>subtle dopamine hit</strong>. When screen went <strong>blank</strong> and for a <strong>moment</strong> your <strong>device</strong> worth thousands was <strong>worthless</strong>, those <strong>chills</strong> were <strong>addictive</strong>. But as I grew older, that hit <strong>vanished</strong> from my life.</p>
+<p>Only until a few days ago, I tried making my own <strong>cryptocurrency</strong>. That's when I <strong>relived</strong> the sheer <strong>joy</strong> of my college days. So today, I hope I would be able to ignite that spark in you too. Let's find out <strong><em>how to create your own cryptocurrency under Rs. 500</em></strong>. Once again, this would be a completely <strong>non technical</strong> way to do it. You <strong>don't</strong> have to be from a <strong>coding</strong> <strong>background</strong> to make it happen. Also, from start to end it isn't going to cost you a fortune to come up with it. Let's take it step by step.</p>
+<h2>Step 1: Create a Metamask Wallet</h2>
+<p>If you are an <strong>active user</strong> of <strong>web3.0</strong>, you must have come across the words like <strong>Metamask</strong> or <strong>Trust Wallet</strong>. If you already don't have a <strong>wallet</strong> created on <strong>Metamask</strong>, here's how you can do it under 30s.</p>
+<p>Head over to the website <a href="http://metamask.io">metamask</a>.io and hit the <strong>download</strong> button. The wallet can be downloaded as a <strong>browser extension</strong> or <strong>mobile application</strong>. For this particular tutorial, it is recommended to use a laptop throughout the process. Once you download the browser <strong>extension</strong>, simply follow the <strong>instructions</strong> of setting up a <strong>seed phrase</strong> and <strong>logging</strong> into your wallet. <strong><em>Make sure that you store this seed phrase in a safe location as losing it would mean losing your crypto.</em></strong></p>
+<p><img alt="Screenshot of Metamask Wallet to show how to add custom RPC " src="https://pandatechie.in/wp-content/uploads/2021/11/image.png" /></p>
+<h2>Step 2: Add BSC Network to Metamask</h2>
+<p>Since Metamask originally supported only <strong>Ethereum</strong> based tokens, it is defaulted at <strong>Ethereum network</strong> only. However, you can also add <strong>Binance Smart Chain</strong> network to it as well. You can do it by following these quick steps:</p>
+<h3>2.1</h3>
+<p>Go to your Metamask wallet and select add custom RPC as shown in the screenshot</p>
+<p><img alt="Screenshot of Metamask Wallet to show how to add custom RPC " src="https://pandatechie.in/wp-content/uploads/2021/11/image-1.png" /></p>
+<h3>2.2</h3>
+<p>Once you select the custom RPC, you would be required to fill a form. Copy paste the following details for the same:</p>
+<p><strong>A. Network Name:</strong> Binance Smart Chain</p>
+<p><strong>B. New RPC URL:</strong> https://bsc-dataseed.binance.org/</p>
+<p><strong>C.</strong> <strong>ChainID:</strong>0x38</p>
+<p><strong>D</strong>. <strong>Symbol:</strong>BNB</p>
+<p><strong>E.</strong> <strong>Block Explorer URL:</strong>https://bscscan.com/</p>
+<p>Hit save once you are done.</p>
+<p>Congratulations, you just added BSC network to your Metamask.</p>
+<h2>Step 3: Transfer BNB to your Metamask Wallet:</h2>
+<p>Now go to a <strong>centralized exchange like <a href="http://coindcx.com">CoinDCX</a></strong> or <strong>Binance</strong> and purchase BNB worth <strong>Rs. 500</strong>. That's all you are going to need for this mini project. For this activity, I would be using <strong>Binance</strong> for purchasing <strong>BNB</strong> and <strong>adding funds</strong> to the <strong>Metamask</strong> Wallet.</p>
+<p>Once you purchase the BNB, next step is to send it to your Metamask wallet. For that, simply head over to <strong>Metamask</strong> and <strong>copy</strong> your <strong>BNB address</strong> as shown in the screenshot below:</p>
+<p><img alt="How to copy wallet address from Metamask" src="https://pandatechie.in/wp-content/uploads/2021/11/image-3.png" /></p>
+<p>Once you are done, head over to Binance and find your purchased BNB in your funding wallet. Select Withdraw (underlined in the screenshot below)</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-4-1024x75.png" /></p>
+<p>On the <strong>screen</strong> that appears post that, enter the address that you <strong>just copied</strong> from <strong>Metamask</strong> in the step above. Choose the <strong>network</strong> as <strong>Binance Smart Chain (BSC) BEP20</strong>.</p>
+<p>This will cost you a <strong>withdrawal fee</strong> of <strong>0.0005 BNB OR ~ Rs. 20</strong>.</p>
+<p>Once you withdraw your BNB, the remainder should reflect in your Metamask wallet within a couple of minutes.</p>
+<h2>Step 4: Creating Your Cryptocurrency</h2>
+<h3>4.1 Coding:</h3>
+<p>Coding time! Don't worry, for people like us, it is mainly going to be a <strong>copy paste</strong> thing. Now, I want you to head over to this <a href="https://github.com/jklepatch/eattheblocks/blob/master/screencast/308-create-bep20-token-bsc/Token.sol">link</a></p>
+<p>This link contains the <strong>source code</strong> of a <strong>token</strong> that runs on <strong>Binance Smart Chain</strong>. All you need to do is <strong>copy paste</strong> that token <strong>source code</strong> and head over to the <strong>Token Launcher</strong> <a href="https://remix.ethereum.org/">here</a>. Follow the steps mentioned in the screenshot below:</p>
+<p><img alt="How to create a new smart contract" src="https://pandatechie.in/wp-content/uploads/2021/11/Select-Contracts-1024x512.png" /></p>
+<p>Once you have created a new contract, a <strong>blank window</strong> should appear. <strong>Paste the code</strong> copied from the <strong>link</strong> above here. Now all you have to do is tweak a few settings highlighted in the screenshot below.</p>
+<p><em>Select the total supply for your token, the name of your token and the ticker symbol you want</em>. I personally kept the supply of my token at 100,000,000. The name I opted for was "ThePandaToken" (Duh!) and the symbol I doubled down on was "PND".</p>
+<p><img alt="How to create a new smart contract" src="https://pandatechie.in/wp-content/uploads/2021/11/image-5-1024x435.png" /></p>
+<p>Aaaaanddd that was it. You're done with the "Coding" part of this activity.</p>
+<h3>4.2 Compiling:</h3>
+<p>Time to compile the code, follow the images below to quickly complete that step.</p>
+<p><img alt="How to create a new smart contract" src="https://pandatechie.in/wp-content/uploads/2021/11/1-1024x512.png" />
+<img alt="Compiling the code for a new token" src="https://pandatechie.in/wp-content/uploads/2021/11/2-1024x512.png" />
+<img alt="Compiling the code for a new token" src="https://pandatechie.in/wp-content/uploads/2021/11/image-7.png" /></p>
+<p>Please note that you may get a couple of warnings while trying to compile the code but that's okay. You can still run the code.</p>
+<h3>4.3 Deploying:</h3>
+<p>This step involves money. <strong>It will cost you about 0.0044BNB to deploy your code in real time environment</strong>. This will amount to be Rs. 110 approximately. Once you approve the transaction, your code should be deployed. Refer to the image for the next steps:</p>
+<p><img alt="Compiling the code for a new token" src="https://pandatechie.in/wp-content/uploads/2021/11/image-8.png" /></p>
+<p>Once your code is deployed, you need to <strong>claim</strong> them. Think of it like this. You have created your tokens now, but no one <strong>holds</strong> them. They are out there in the open. So how do you claim them now? Refer to the image below:</p>
+<p><img alt="Compiling the code for a new token" src="https://pandatechie.in/wp-content/uploads/2021/11/image-10.png" /></p>
+<p>Once again this is going to cost you about <strong>0.000167BNB</strong> which is about Rs. 7. So hit that transact button.</p>
+<p><img alt="Compiling the code for a new token" src="https://pandatechie.in/wp-content/uploads/2021/11/image-9-1024x493.png" /></p>
+<h2>Step 5: Do Whatever the Heck You Want:</h2>
+<p>If you have followed all the above steps diligently, by now you must have your tokens in your wallet. Now you can send them to your friends and family by simply asking for their BNB Metamask address.</p>
+<p><em><strong>Please Note</strong>: At this point, general public won't be able to trade with your cryptocurrency. For that you would have to provide liquidity on famous exchanges like Pancakeswap, Uniswap etc.</em></p>
+<p>Do you want me to cover another tutorial on how that's done? Let me know in the comments section below.</p>
+<p><strong>I have added PND to Pancakeswap and you can buy it if you're interested using the address: 0xB7e78d2843e65851BBBd5426D4eE423ebbAf871</strong></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-11.png" /></p>
+<p>Pandatoken in my Metamask Wallet</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-12.png" /></p>
+<p>Pandatoken on Pancakeswap</p>
+<h2>Conclusion:</h2>
+<p>While it will certainly quench your geek thirst, there's a lesson to learn here as an investor too. If you and I can create a cryptocurrency at a menial cost of Rs. 300-500 within 20 odd minutes, everyone else can too. Therefore, next time you try to be a part of the Squid Games Token like noise, please <a href="https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/">DYOR</a> and then take a call.</p>
+<p>For now, you can buy all of the PandaTokens at a very cheap rate (JK, they don't have any real value and I don't intend to take it anywhere).</p>
+<p>What crypto are you planning to make?</p>
+<p>https://www.instagram.com/p/CVekrTrvdjV/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

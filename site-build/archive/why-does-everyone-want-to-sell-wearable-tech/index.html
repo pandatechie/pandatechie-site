@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why does everyone want to sell wearable Tech? | Raghav</title>
+<meta name="description" content="Wearable tech a.k.a wearables is a subset of electronic devices, that can worn as accessories, stitched into your clothing, implanted in your body or tattooed o…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Why does everyone want to sell wearable Tech?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-06</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-06 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://cdn.datafloq.com/cache/blog_pictures/1200x630/webpnet-resizeimage_21.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Wearable tech a.k.a wearables is a subset of electronic devices, that can worn as <strong>accessories</strong>, <strong>stitched</strong> into your <strong>clothing</strong>, <strong>implanted</strong> in your <strong>body</strong> or <strong>tattooed</strong> on your <strong>skin</strong>. And currently, there is a explosion in this division of technology. Wearable technology has come straight out of fictional bond movies and has become a reality for us. While there is abundance of content on <a href="https://www.toptal.com/designers/ui/the-psychology-of-wearables">how wearable tech works</a>, <a href="https://www.marketsandmarkets.com/Market-Reports/wearable-electronics-market-983.html">why is it so popular</a> and <a href="https://www.forbes.com/sites/bernardmarr/2020/06/08/5-predictions-for-wearable-technology-from-fitness-trackers-to-humans-20/">future of wearable tech</a>, this time around, I wanted to cover <strong>why every tech giant wants a piece of this pie</strong>.</p>
+<p><img alt="Wearable tech image" src="https://cdn.datafloq.com/cache/blog_pictures/1200x630/webpnet-resizeimage_21.jpg" /></p>
+<p><strong>What makes this space so lucrative from a manufacturer's standpoint?</strong> In Q4, 2020, <strong>Apple's revenue</strong> from wearables was <strong>12% of it's total revenue</strong> ($7876mn in $64,698 mn). On a similar note, Samsung, Oppo, Mi, Realme and soon to join the party, OnePlus, are brutally gunning for their share in this space. Of course <strong>higher revenue</strong> is something they are targeting, but <strong>is there more to this story</strong>? Let's speculate.</p>
+<h2>Eco System Lockdown:</h2>
+<p>This is one of the key reasons why everyone wants to sell a wearable tech. Once you purchase an <strong>Apple watch, set of Airpods etc., you have just locked yourself in the <a href="https://pandatechie.in/2020/10/14/iphone-12-the-newest-addition-to-the-apple-family/">Apple</a> ecosystem.</strong> My brother recently broke his iPhone 11. I instantly asked him to switch to Android this time around. But that would render his <strong>Airpods and Apple watch completely useless.</strong> Of course these devices may work with an Android device but the experience would not be even half as good. <strong>Seamless integrations, using all the features like ability to connect as soon as Airpods are pushed out of the box, checking out Messages/WhatsApp on your watch-- All gone for a toss</strong>.</p>
+<p><img alt="Wearable tech: Apple Ecosystem" src="https://images.macrumors.com/t/Pu54ME5LdS8YDDwLE-VXuKB4iCc=/1600x/http://images.macrumors.com/article-new/2018/12/appleproductlineup.jpg" /></p>
+<p>So, tech companies ensure that you <strong>remain their loyal customers</strong> and upgrade to the handsets manufactured by them only. Neat right? Next time you find someone boasting about the Apple watch, Airpods, iPhone, iPad all together, make sure you ask them, what if they ever want to switch. They'll most probably say they wouldn't, but ask them just for the fun of it.</p>
+<h2>Data:</h2>
+<p>Data is the new fuel. We all know this. Ever since the inception of social media, our <strong>behaviors are constantly being tracked</strong> on multiple platforms online. What if tech giants also gain access to the data related to your <strong>body vitals</strong> as well. That is <strong>highly personalized</strong> data. Even you may not be aware of this information. Wearables know your <strong>height, weight, age and medical history</strong> ever since you set them up for the first use. Later they come to know your <strong>heartbeat, blood oxygen levels, SPO2 levels, sleeping patterns</strong> and what not. Once a trend emerges, it is so convenient for them to reach out to a <strong>pharma giant</strong> and give them the top customers they can focus on.</p>
+<p><img alt="Wearable tech: Apple watch measuring heartrate" src="https://cdn2.techhq.com/wp-content/uploads/2019/08/shutterstock_371803501-861x484.jpg" /></p>
+<p>Of course this data can also be used to develop robust healthcare systems but I don't think that's a priority right now. Similarly, <strong>mattress companies, fitness industry</strong> etc., all would be ready to shed away any amount for this type of targeted customer set.</p>
+<h2>Diversification:</h2>
+<p>And obviously a straight business benefit of venturing out in wearable space is diversification. If you follow tech news keenly, you may realize that from the past few years, <strong>new mobile phones hardly create a buzz</strong>. Those long queues to purchase the latest iPhone are a thing of past. Therefore it makes sense for tech manufacturers to enter a new avenue. <strong>Cellphone industry has cut throat competition any way</strong>. Price sensitive or luxury, high end phones, the entire spectrum is saturated at the moment. So they decide to fight it out in a different arena all together.</p>
+<h2>Conclusion:</h2>
+<p>It is quite evident from the emerging trends that wearable tech industry is here to stay. With like of <strong>glasses</strong>, <strong>smart jewelry, smart gloves</strong> etc. I think we are just getting started indeed. Do you think of any other key reason why tech industry is fanatic about wearables? Let me know in the comments section below or you can hit me up on <a href="https://www.facebook.com/kaafi.pan.da.techie">Facebook</a>, <a href="https://twitter.com/panda_techie">Twitter</a> or <a href="https://www.instagram.com/pandatechie/">Instagram</a>. If you find this article useful, please consider sharing it on social media using the links below.</p>
+<p>Until next time. . .</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

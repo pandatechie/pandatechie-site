@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Bitcoin it?: Questioning Our Existence | Raghav</title>
+<meta name="description" content=""Oh don't worry. It will fade away."
+
+That is often how I convince (fool) myself to ignore my intrusive thoughts. Before you call 9-1-1 on me, these thoughts ar…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Is Bitcoin it?: Questioning Our Existence</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2024-07-14</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2024-07-14 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2024/07/image-7.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>"Oh don't worry. It will fade away."</p>
+<p>That is often how I convince (fool) myself to ignore my intrusive thoughts. Before you call 9-1-1 on me, these thoughts are mainly about the future of technology. Nothing more.</p>
+<p>Humans are walking paradoxes. The more we know, the more we know what we don't know. I often rely on Duning-Kruger effect to gauge where am I in this massive ocean of knowledge.</p>
+<p>However, there's one slight difference. I don't think there exists a peak as represented in above image. One lifetime is just too short to achieve the technological marvels we were shown (or not yet shown) by Sci-fi movies.</p>
+<p>Anyway, of late, these intrusive thoughts are about Bitcoin. Yes the very own magic internet money mocked by some, adopted by some.</p>
+<p>So think of this piece as a thought gathering exercise on what's happening in Bitcoin space and why everything else may be NGMI.</p>
+<p>Here goes.</p>
+<h2>Is Bitcoin It?</h2>
+<p>I started my journey in crypto back in 2017. Bought my first bitcoin to shut a friend up and change the topic of the conversation. That's it.</p>
+<p>A few years later, Mr. Musk and his $DOGE-shilling made me re-enter this space. This time with much more sincerity. Sounds ironical, right? Memecoin and sincerity, huh?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-7.png" /></p>
+<p>Anyway, I went down the rabbit hole to realize how someone built the world's most resilient digital technology under the hoods and then just vanished. Bizarre if you think about it.</p>
+<p>But I was never a maximalist. I always thought that these staunch saffron bag hodlers are just lazy to march towards the final frontier of technology.</p>
+<p>And hence my exploration to EVMs, SVMs and Cosmos of the world never stopped.</p>
+<p>Until..</p>
+<h3>The Chronology:</h3>
+<p>This is my second (serious) cycle in crypto. And I think I have a pattern at hand.</p>
+<p>It all starts with a lull phase waking up to a euphoric event. Last time it was asset inflation due to Covid induced ZIRP. This time it was ETFs et all.</p>
+<p>This creates a domino effect in the entire industry where every other narrative just starts pumping. Last time it was DeFi summer, this time it was memecoins for god's sake.</p>
+<p>And finally as euphoria hits its peak, everything falls crumbling down. Last time it was FTX and Luna, this time, I don't know yet.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-8-1024x552.png" /></p>
+<p>The infamous crash of FTX and Luna that shook system to the core</p>
+<p>But the commonality is not just in the way market moves. Its also what developers gravitate towards.</p>
+<p>Every cycle I see newer Bitcoin narratives catching steam, some non Bitcoin projects joining forces and the ecosystem coming back where it all started.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-1-1024x579.png" /></p>
+<p>The data supports the idea that Bitcoin's development and related activities tend to pick up momentum during market recoveries, highlighting the resilience and continuous evolution of the Bitcoin ecosystem even through market downturns.</p>
+<p>Here's how:</p>
+<p><strong>2018-2019 Bear Market Recovery:</strong></p>
+<ul>
+<li>After the 2017 bull run and subsequent 2018 bear market, we see the Lightning Network beginning to gain traction in 2019 with a significant increase in BTC locked, indicating renewed interest and development during the market recovery phase.</li>
+</ul>
+<p><strong>2020-2021 Bull Market and New Innovations:</strong></p>
+<ul>
+<li>Leading up to and during the 2021 bull market, the number of Bitcoin Core developers and the BTC locked in the Lightning Network increased significantly. This period also saw increased innovation and interest in new protocols like Ordinals and BRC-20 tokens.</li>
+</ul>
+<p><strong>2022-2024 Bear Market Recovery:</strong></p>
+<ul>
+<li>The explosive growth of Ordinals and the significant activity in BRC-20 tokens and Runes protocol from 2022 to 2024 suggest that new narratives and innovations often emerge during or just after bear markets, leading to renewed enthusiasm and activity in the ecosystem.</li>
+</ul>
+<h2>The Use Case Conundrum:</h2>
+<p>And for the longest period, I thought I am the only one. The pessimist in this burgeoning space laden with enormous enthusiasm. It almost felt like a crime to question the usability of some of the products these peeps were coming up with.</p>
+<p>Until I found this recently. 👇</p>
+<p>https://twitter.com/Arthur_0x/status/1811798514365817103</p>
+<p>Spare some time to go through the comments on this post. And it shall give you some peak in my brain. What are we actually gunning for?</p>
+<p>No one has clearly defined mass adoption. Moreover, out of all the degenerate use cases, we have found PMF in (i) sovereign, borderless money and (ii) speculation.</p>
+<p>And guess which crypto could do both from the day zero? Yup. The badass ₿,</p>
+<p>Once again. I completely understand what made you sway away from Bitcoin in the name of innovation. After all, it may not be the best network when it comes to lifting the load of global financial system.</p>
+<p>For some, it may not even fit in the environment ethics.</p>
+<p>Nonetheless, it just works. I haven't seen a decade and a half old financial ecosystem with 99.9% uptime.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-4-1024x365.png" /></p>
+<p>Compare that with your 'superfast' chain - Solana and you would know that uptime &gt;&gt; speed.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-3.png" /></p>
+<p>X represents Solana outages in the past 3 years</p>
+<p>And after all, what else do you want to use Blockchains for? Decentralization narrative was DOA and any attempts to revive it will face a crushing defeat. People do NOT care about decentralization enough. Interested in deeper rant on this subject? <a href="https://pandatechie.in/2024/01/16/revisiting-delta-4-framework-why-india-can-never-adopt-public-blockchains/">Here's some food for thought.</a></p>
+<p>Oh wait. Even if you are gung-ho about decentralization, I know of a chain which is an absolute source of truth. Guess what? You know it too.</p>
+<p>People want control over very selective things in life, money being one of them.</p>
+<h2>Maximalism Meets Rationalism:</h2>
+<p>So what are we actually left with?</p>
+<p><strong>Option A</strong>: Burn the world and let Bitcoin assert its dominance. <br />
+<strong>Option B</strong>: Wait and watch the world burn slowly with enormous pointless developments</p>
+<p>Well, a closer look into the current space might pave way for an option C.</p>
+<p>How about we continue this experimentation but with Bitcoin as an anchor? It may not have been possible in the past far but things have changed quite a bit since then.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-9.png" /></p>
+<p>The Bitcoin Layer 2 landscape has flourished since the introduction of the SegWit and Taproot upgrades.</p>
+<p>SegWit improved memory efficiency in 2017, while Taproot introduced improvements in privacy, efficiency and smart contracts functionality in November 2021.</p>
+<p>As a result of these landmark upgrades, developers have been working hard to introduce a variety of Layer 2 solutions that address Bitcoin’s scalability and programmability issues.</p>
+<p>For the past few years, Bitcoin has witnessed with following developments:</p>
+<h3>1. Bitcoin Scaling L2s:</h3>
+<p>Now, dozens of Bitcoin Layer 2s are emerging, each with its own unique implementation designed to address composability or scalability for the main Bitcoin blockchain.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-10.png" /></p>
+<p>Furthermore, each Layer 2 or sidechain brings its own unique Bitcoin derivative token, spawning an entire ecosystem of Bitcoin-related derivatives and wrapped versions of the native asset.</p>
+<p>The following list contains just a few of the many prominent Layer 2s or side chains on the market right now with their BTC derivative:</p>
+<ul>
+<li>Lightning Network</li>
+<li><a href="https://www.stacks.co/">Stacks</a> – SBTC and xBTC (wrapped Bitcoin)</li>
+<li><a href="https://rootstock.io/">Rootstock</a> – rBTC</li>
+<li><a href="https://liquid.net/">Liquid Network</a> – L-BTC</li>
+<li><a href="https://fbtc.com/">FBTC</a> – FBTC</li>
+<li><a href="https://github.com/renproject">Ren</a> – renBTC</li>
+<li><a href="https://www.interlay.io/">Interlay</a> – iBTC</li>
+<li><a href="https://www.mbtc.network/">Merlin</a> – mBTC</li>
+</ul>
+<p>And if you are wondering the strategic choices that would lead someone to build on Bitcoin, here are a few numbers.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-5-1024x696.png" /></p>
+<p>To gauge the potential of Bitcoin L2, let’s look at Ethereum, the largest smart-contract L1, which focuses on L2 scalability.</p>
+<p>Ethereum’s market cap is ~$446B, with ~$45B in total value locked (TVL) in L2s, making up ~10% of its value.</p>
+<p>In comparison, Bitcoin, valued at ~$1.4 trillion, has L2 solutions with a TVL of ~$2B, or ~0.13% of its value. This suggests significant growth potential for Bitcoin L2s.</p>
+<h3>2. Lending Bitcoin Security:</h3>
+<p>Blockchains have always attempted to solve scalability trilemma. This means out of security, decentralization and scale, only two can be achieved.</p>
+<p>While our beloved BTC has managed to achieved decentralization and security, it lacks scale.</p>
+<p>And other PoS blockchains while scale faster, they lack the security and decentralization.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-11-1024x334.png" /></p>
+<p>Recent idea involves using Bitcoin's security and decentralization while using other chains for scale.</p>
+<p><a href="http://coredao.org">Core</a> and <a href="http://babylonchain.io">Babylon</a> are attempting this.</p>
+<p>If this is successful, hodlers may stake their BTC to any PoS chain to yearn yields. And this could give birth to yet another liquid staking ecosystem powered by the likes of <a href="https://pandatechie.in/2024/06/23/how-to-stake-bitcoin-on-pstake-testnet/">pStake</a>.</p>
+<h3>3. Bitcoin Digital Assets:</h3>
+<p>Why should ETH have all the fun, right? The Bitcoin ecosystem is experiencing a renaissance of innovation with the emergence of native digital assets. These assets, created and managed directly on the Bitcoin blockchain, are pushing the boundaries of what's possible on the world's first and most secure cryptocurrency network.</p>
+<p>Two groundbreaking protocols at the forefront of this movement are Ordinals and Runes, each offering unique capabilities for creating and managing digital assets on Bitcoin.</p>
+<h4>3.1 Ordinals:</h4>
+<p>Launched in January 2023 by developer Casey Rodarmor, the Ordinals protocol introduced a novel way to create non-fungible tokens (NFTs) directly on the Bitcoin blockchain.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-13-1024x448.png" /></p>
+<p>Ordinals work by attaching data such as images, videos, or other digital content to individual satoshis – the smallest unit of Bitcoin. This innovative approach allows for the creation of unique, verifiable digital assets without requiring changes to the Bitcoin protocol or additional layers.</p>
+<h4>3.2 Runes:</h4>
+<p>Building on the momentum of Ordinals, the Runes protocol, also developed by Casey Rodarmor, aims to revolutionize fungible token creation on Bitcoin. Runes offers a more efficient and streamlined approach to issuing and managing tokens directly on the Bitcoin blockchain.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-12.png" /></p>
+<p>By leveraging Bitcoin's native UTXO (Unspent Transaction Output) model, Runes promises to reduce network congestion and transaction costs compared to previous token standards.</p>
+<h2>4. BTCFi:</h2>
+<p>The biggest roadblock in BTCFi is interoperability. With numerous Bitcoin Layer 2 solutions and BTC derivatives emerging, each operating in its own ecosystem, it's challenging for users to move assets between different networks.</p>
+<p>This lack of seamless interaction between various Bitcoin-based tokens and platforms is hindering the growth and potential of the BTCFi ecosystem.</p>
+<p>The solution to this problem is being developed by Persistence One.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2024/07/image-14-1024x955.png" /></p>
+<p>They're creating a unified platform for cross-chain trading of all forms of BTC. This interoperability solution aims to enable fast, zero-slippage atomic swaps for BTC assets across different Layer 2 networks.</p>
+<p>By leveraging a Cross-chain Order Book methodology and Bitcoin's security, Persistence One's platform seeks to simplify the process of moving Bitcoin and its derivatives between various ecosystems, potentially accelerating the growth and adoption of BTCFi.</p>
+<h2>Back to Square One:</h2>
+<p>Let us paint an optimistic scenario. If all of this works as expected. Why do we need thousands of chains? We can have one chain known for its paramount security. The other chains built around to whatever the fuck they want. And a layer of interoperability between these chains.</p>
+<p>This probably could lead to the coveted, undefined mass adoption much faster.</p>
+<p>But hey. Who am I to judge? I am a part of the rat race. Just enlightened momentarily on some sleepless nights. Right?</p>
+<p>https://twitter.com/pandatechie_/status/1812025327960342567</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

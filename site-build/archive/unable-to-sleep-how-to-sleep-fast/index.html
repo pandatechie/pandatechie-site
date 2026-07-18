@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unable to sleep? How to sleep fast? Here's how Tech can help! | Raghav</title>
+<meta name="description" content="[![Unable to Sleep?](https://pandatechie.in/wp-content/uploads/2020/10/gettyimages-1134270597-scaled-1.jpg)](https://pandatechie.in/web-stories/unable-to-sleep/…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Unable to sleep? How to sleep fast? Here's how Tech can help!</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2020-10-23</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2020-10-23 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2020/10/gettyimages-1134270597-scaled-1.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><a href="https://pandatechie.in/web-stories/unable-to-sleep/"><img alt="Unable to Sleep?" src="https://pandatechie.in/wp-content/uploads/2020/10/gettyimages-1134270597-scaled-1.jpg" /></a></p>
+<p>Do you find yourself in a situation where you keep switching in search of <strong>cold side of the pillow</strong>? Do you spend time thinking <strong>why am I sleepy the entire day but cannot sleep at night?</strong> Before you stop reading further, this is NOT one of those posts that will ask you to drink chamomile tea and do some exercises that would help.</p>
+<p>In this article, I would simply share <strong>some tried and tested ways in which tech can help</strong>. We have all been concerned currently, regarding the way <strong>technology impacts our sleep</strong>, <strong>screentime and sleep pattern disruption.</strong> Well, here is how I use the very same technology to my advantage when it comes to sleeping:</p>
+<h2>Bedtime Mode:</h2>
+<p>So it shouldn't come as a surprise any more to you that <strong>blue light in the screens</strong> keep you awake. Also, being a veteran <a href="https://pandatechie.in/2020/10/15/digital-wellbeing-how-to-strike-a-balance/">screen zombie</a> myself I won't deny using phone for a long period before I actually fall asleep. So what is the solution? I use an out of the box Android feature called <strong>"Bedtime Mode"</strong></p>
+<p>Bedtime mode actually makes a sequence of changes to your phone.</p>
+<ul>
+<li><img alt="&lt;strong&gt;Enabling&lt;/strong&gt; Bedtime Mode " src="https://pandatechie.in/wp-content/uploads/2020/10/3bb9f659-5c10-41ee-9dd0-f407a174f881.jpg?w=472" /></li>
+</ul>
+<p><strong>Enabling</strong> Bedtime Mode
+* <img alt="Bedtime Mode Settings" src="https://pandatechie.in/wp-content/uploads/2020/10/dd37a7a7-ddbb-4acf-8cc3-48ef143ac383.jpg?w=493" /></p>
+<p>Bedtime Mode Settings</p>
+<p>Bedtime Mode Settings (R)</p>
+<ul>
+<li>First it puts your phone in <strong>greyscale</strong> mode. Black and White screen not only <strong>restricts the blue light</strong> I mentioned earlier, but also makes the phone <strong>screen in sync with the dark surroundings</strong> hence helping me fall asleep quicker.</li>
+<li>Secondly, it enables <strong>Do Not Disturb</strong> on my phone. This would mean that there will be <strong>no notification sounds</strong>. So, if I have fallen asleep already, there is <strong>nothing distracting me</strong> any more.</li>
+</ul>
+<p>Bedtime mode can actually me <strong>automated</strong> in the settings on the basis of a <strong>fixed schedule</strong> or whenever you put your <strong>phone on charge after a specified time</strong>.</p>
+<h2>Zen Mode:</h2>
+<p>This is a feature specific to Oxygen OS (<a href="https://www.oneplus.in/">OnePlus</a> Devices). More on it, in a different blogpost. In the context of my sleep, say I have decided to go to bed finally, I quickly turn on <strong>Zen mode</strong> for next <strong>20 minutes</strong>. This would mean that even if I <strong>change my mind now</strong> and want to use my phone again, I <strong>won't be able to</strong> do it. At least for a 20 minute period. This comes in really handy <strong>because 20 minute period is enough to give a decent shot at sleeping.</strong></p>
+<ul>
+<li><img alt="Enabling Zen Mode" src="https://pandatechie.in/wp-content/uploads/2020/10/21569e0d-1f23-487d-bae8-ac7e69afb8d0.jpg?w=472" /></li>
+</ul>
+<p>Enabling Zen Mode
+* <img alt="Zen Mode " src="https://pandatechie.in/wp-content/uploads/2020/10/cf991bbf-5447-4c2b-a49f-fc15a10c2339.jpg?w=497" /></p>
+<p>Zen Mode
+* <img alt="Zen Mode" src="https://pandatechie.in/wp-content/uploads/2020/10/f0f9f073-cb4c-4163-834d-74f7cdbd3811.jpg?w=493" /></p>
+<p>Zen Mode</p>
+<h2>Echo Dot</h2>
+<p>Remember my friend <a href="https://pandatechie.in/2020/10/21/top-use-case-of-amazon-echo/">Alexa</a>? Yes she helps me sleep too. So I have <strong>set a routine that starts with the keyword, Alexa! Goodnight</strong>. As soon as that routine is triggered, very nicely would <strong>she turn on the night light and start playing some sleep sounds (a skill available for free).</strong> And right after 20 minutes she would go to sleep as well, the way, I must've. Sweet right?</p>
+<p><img alt="How Alexa helps me to sleep fast" src="https://pandatechie.in/wp-content/uploads/2020/10/bb45b908-c702-4c2e-9c5e-f7e9584a3623.jpg?w=565" /></p>
+<h2>Sleep Tracker</h2>
+<p>This one is totally <strong>optional</strong> but a definitely good to have feature. If you use any of the track bands right now (Mi, FitBit, AmazFit) most of them have this feature these days. Though they <strong>directly do not contribute to your sleep, but they do provide some valuable insights in terms of how well you are sleeping.</strong></p>
+<p>I use AmazFit which would give me sleep score and provide data points such as</p>
+<ul>
+<li>Deep Sleep Hours</li>
+<li>Sleep time as compared to others</li>
+<li>Periods when my sleep was impacted</li>
+<li>Ideal time to go to bed</li>
+</ul>
+<p><img alt="How to sleep fast and track it using AmazFit" src="https://pandatechie.in/wp-content/uploads/2020/10/xiaomi-mi-band-4-review-mi-fit-app-sleep-screenshots-3.jpg?w=512" /></p>
+<p>This gives me a sense of control and somewhere in the back of mind I feel the importance of going to bed on time and leave my phone aside.</p>
+<h2>Conclusion</h2>
+<p>In almost all my posts, I try to ensure that you get a <strong>bang for your buck</strong> whenever you <strong>spend on technology</strong>. These methods definitely work but that doesn't mean they are enough. With WFH kicking in, we need a decent amount of exercise as well. But I am not a fitness enthusiast. Never have been. At least not enough to preach. <strong>I wish you a very good sleep tonight and for nights to come.</strong></p>
+<p>Until Next Time..</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blockchain? Bitcoin? How to Invest?- A Dummy's Guide | Raghav</title>
+<meta name="description" content="So naïve of you to think that [blogchatter's](http://theblogchatter.com) BlogchatterA2Z can be completed without touching upon the hottest trend of current time…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span> <span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Blockchain? Bitcoin? How to Invest?- A Dummy's Guide</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-27</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-27 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.accountancyknowledge.com/wp-content/uploads/2018/02/1.-general-ledger-template.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>So naïve of you to think that <a href="http://theblogchatter.com">blogchatter's</a> #BlogchatterA2Z can be completed without touching upon the <strong>hottest</strong> <strong>trend</strong> of current times. Yes, we are talking about <strong>cryptocurrency</strong>. Today, we shall learn a few basics about cryptocurrency in a <strong>humanish language</strong> (<strong>No jargons</strong>, promise). Apart from that, we would address the star of this blogpost, <strong>WazirX</strong>. That is how I <strong>personally invest</strong> in Crypto.</p>
+<p>So, what are we waiting for? I am so excited, and you should be too!</p>
+<h2>What is Blockchain?</h2>
+<p>First thing's first. <strong>Blockchain is NOT BITCOIN</strong>. We use these terms <strong>interchangeably</strong>, which is absolutely <strong>wrong</strong>. <strong>Blockchain is a technology</strong>. Think of it as something as <strong>big</strong> and <strong>fundamental</strong> as the <strong>internet</strong>. Internet has so many <strong>use</strong> cases: <strong>Emails, Social Media, E-Commerce</strong> etc. right? Similarly, the technology- <strong>Blockchain</strong> has it's own <strong>uses</strong> too. If you say that <strong>Bitcoin is blockchain</strong>, that would be equivalent to saying that <strong>Internet is Emails</strong>.</p>
+<p><img alt="" src="https://www.accountancyknowledge.com/wp-content/uploads/2018/02/1.-general-ledger-template.jpg" /></p>
+<p>Example of a Ledger</p>
+<p>Whatever field of work you are in, you must have come across a <strong>ledger</strong>. A basic <strong>register</strong> that has <strong>entries</strong> of all <strong>transactions</strong>. Some <strong>credits</strong>, <strong>debits</strong> etc. Entire <strong>banking system</strong> works on this ledger. It was maintained <strong>physically</strong> once, and now, <strong>electronically</strong>.</p>
+<p>If I <strong>send</strong> you <strong>Rs. 100</strong>, there will be an <strong>entry</strong> in my ledger of <strong>debiting</strong> this amount. <strong>You</strong> (receiver) will have a <strong>similar</strong> <strong>entry</strong> of <strong>credit</strong>. However, <strong>between</strong> our ledgers, there will be <strong>bunch of other ledgers</strong> of <strong>banks</strong>, <strong>regulators</strong>, <strong>intermediaries</strong>, <strong>enablers</strong> etc.</p>
+<h3>What's the Issue?</h3>
+<p>If you think about it, there are some issues related to this system of <strong>maintenance</strong> of ledgers:</p>
+<p>A. This is not <strong>cost effective</strong>. Because <strong>each ledger maintaining intermediary</strong> will have to be <strong>compensated</strong> for it's work.</p>
+<p>B. It is <strong>time consuming</strong>. All ledgers have to be <strong>reconciled</strong> in order to <strong>validate</strong> the <strong>transaction</strong>.</p>
+<p>C. It is <strong>centralized</strong> i.e. a central authority (Banks) in our case maintain it. So there is a <strong>lack</strong> of <strong>transparency</strong>. Apart from that, if banks fail, there is <strong>no way</strong> you would ever be able to <strong>retrieve</strong> your ledger <strong>information</strong>.</p>
+<p><img alt="" src="https://evergreencomputing.com/FCKfiles/Image/wp-content/2014/11/Problem-solution.jpg" /></p>
+<p>Now imagine, if there were just one <strong>single ledger</strong>. Once you make a transaction, <strong>everyone</strong> having <strong>access</strong> to that ledger will <strong>validate</strong> it. Therefore, only <strong>one entry would be sufficient</strong> to keep a record. Since <strong>involved individuals</strong> validated it, it would be <strong>faster</strong>, <strong>cheaper</strong> and <strong>decentralized</strong>.</p>
+<p>We call this <strong>entry</strong> (or <strong>details</strong> related to this entry) as a <strong>block</strong>. Every <strong>new transaction</strong> gets added as a <strong>block</strong> to this <strong>chain</strong> and hence the name <strong>Blockchain</strong>. If you are still with me, we just finished a fundamental explanation of what in god's name blockchain is.</p>
+<p><strong>Textbook Definition</strong>: Blockchain is a <strong>system</strong> of <strong>recording</strong> <strong>information</strong> in a way that makes it difficult or <strong>impossible</strong> to <strong>change</strong>, <strong>hack</strong>, or <strong>cheat</strong> the system. A blockchain is essentially a <strong>digital ledger</strong> of transactions that is <strong>duplicated</strong> and <strong>distributed</strong> across the <strong>entire network</strong> of <strong>computer</strong> systems on the blockchain.</p>
+<h2>Properties of Blockchain:</h2>
+<p>Now that you know what a blockchain is. Let's explore a few more of it's properties:</p>
+<h2>A. Immutable and Secure:</h2>
+<p>As you have seen, that each block is added as a <strong>part of this chain</strong>. So, there's a <strong>linkage</strong> between the <strong>current block</strong> and the <strong>previous block</strong> and the <strong>one before</strong>. Which means that if a <strong>hacker</strong> tries to <strong>manipulate</strong> the <strong>transactions</strong>, he would have to <strong>change the entire chain</strong>. Which is just <strong>not possible</strong>. That means, <strong>blockchains cannot be tampered with</strong>. They are <strong>extremely</strong> <strong>secure</strong>. These blockchains are also governed by <strong>strongest cryptographic algorithms</strong> which are <strong>theoretically</strong> impossible to crack.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<p>Immutable and Secure</p>
+<h2>B. Traceable:</h2>
+<p>Once again, due to the linkage between the blocks, one can easily <strong>trace back the root of a transaction</strong> easily. Every event is recorded and can be accessed by everyone. Therefore, traceability is a key feature of blockchains.</p>
+<h2>C. Decentralized:</h2>
+<p>No one <strong>owns a blockchain</strong>. There is no bank or an individual maintaining a chain. So how does it run? <strong>Maintenance</strong> of blockchain requires resources like <strong>electricity</strong>, <strong>computing</strong> <strong>power</strong> etc. Why would someone provide it for <strong>free</strong>? Therefore, when <strong>Satoshi Nakamoto</strong> invented this technology in <strong>2008</strong>, he introduced a <strong>concept of currency</strong>. This currency would <strong>incentivize people</strong> who <strong>maintain</strong> and <strong>validate</strong> the <strong>transactions</strong> happening on a <strong>blockchain</strong>.</p>
+<p>This <strong>currency</strong> was called <strong>Bitcoin</strong> and people who work to earn this currency are called <strong>miners</strong>. Hence the term, <strong>mining bitcoin.</strong></p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<h2>D. Distributed Trust:</h2>
+<p>I heard about this amazing analogy from a <strong>Ted Talk by Jaspreet Bindra</strong>. Imagine a <strong>kitty party of 10 women</strong>. Each women <strong>puts in a Rs. 1000 each</strong>. Every month, some woman would win a sum of Rs. 10,000 through a lucky draw. By the end of 10 cycles, there is <strong>no return on the investment</strong> but everyone has had a <strong>chance</strong> of using the <strong>consolidated</strong> <strong>fund</strong> in one go.</p>
+<p><img alt="" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhIWFRUXGBcWGBgYGBoYHhgVFxcXFxcYFhYYHSgiHRolGxcYITEhJSkrLi4uFx8zODUtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMoA+QMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABIEAACAQIDBAcFBAgDCAEFAAABAgMAEQQSIQUxQVEGEyIyYXGBUpGhscEHFHLRIzNCYoKSovAkssIVQ1Nz0uHi8TQWF2OTs//EABoBAAIDAQEAAAAAAAAAAAAAAAACAQMEBQb/xAA0EQABBAAFAQUIAgICAwAAAAABAAIDEQQSITFBUSJhcaHwBRMyQoGRsdHB4SPxFKIzUmL/2gAMAwEAAhEDEQA/AO10mjBo6gi0I6FI3eVLqkik6FChQqEIUKFChCOokmOjWRY2cB2Fwp4i9vn76l1zyXHrJtKSeUlYMMrC53MUYqoX2ryXIGusdC1YXCmfN3AnTrs0fU0F0OoDbYw4bIZ4g1wLZ1vc7ha++swExW0dbthsIdw/3kq8/I+78VN7c2PgcNHlMbySspEZbO5JFgO6VAALDQWploZgYw8RyOJeflYM1eJsDTkA6Dc8LWY3akMSh5HCgv1YOp7evZ7IOuhoYvakUZRXcKZTlTQnMfQabxvrnBlSNMPhmjn0ZZ5F6uzySFlGgbUgRh1133HLS0m2p96xsf8Ah574ftiPKoa+pZmzEWFzDYX/AO8WtDvZIab1LaeSdBoNGkX1O51GvVdBoqhYDFs5YNC8ZU2GbLZhzBUnlu8qnUy4zmlpo/kHzCFQsVtKKMhZJEVjuW/aPko1PurKYjac2M60xyHD4SLPmlHfkyi5y7iBbXTmL8RUboFsGORGmkUsGYqmYnX2iQLaX01vexqF0f8AgNjjc+d1FtdkCzZ2BJ0B5I1Nb0tPg+lGDkbKs6ZibAHMtzyUuAD6VdVSYzYmCWNusghRADdsoUgfjGtF0SmZsMtyWsWVWbe0asQhb962h8RUKiaOEsMkOagQDmrkHYjw1FffWrs0KBqv2rtWPDqrSZrMcoygnXfbTdULMxjnuDWiyeBundoY+OBDJK2VRYE2J3kAaAE7zT8MoZQym4IBB5g7qxHSja4xCx4cRzLnOaxjys1uyoQE69o38l9+owWNYsEOGkjXLozZbC37JysbG1C1S4R0cTXOFON2CRsKqhuTd3v+VZ0KFChY0KFChQhChQpBoAtCBoZRyo6Org0BLajqbbt3L8qfU31FQJSQ9x7IuOepp6KS+o9RTltKtr705Uqk7vKgjX3UqlItOCjoUjdS6oIpOhQoUKEKNtHEiKKST2EZ/wCUE1zXoTgUxUzfeGJyAMsR3OFJ7TDwZybc2PjWw6eYsR4Rr37TIum/fnO/wQ38L1V7b6NS2jxGDOSdArMgsA7Be8v72pBB7w+Mrtez3NjgILshkJAf0ygfa8xF8eC3FqzPSLaUoxWFw8LFS7Z3awPYB1GoO8B/cKY2ft3FzjqvujRS5SGkfMqIdRmsV14HLfW++wvTOKinGPlYRlmMHV4drHIt7ZmdxoLHMbHU3sN9Ss8GFMUjve5bDXEAkEXsCdxQJzeAvbVL2C6S4vE4q9wnYzcAB7PKypr+K/Gi6IspGKxliczvv3kL2zl/d1UAfu1XbCinXBT4VMO4mPW5i65BlZbDtHV3I0FuY1Ao4pZxs0xRYeQMiMJSyGPe1iEFrs1jcm24HW+lFrbNh7L2Ndu5jBqNGDnwNCuPJXWwNqSjBticUxNyzKLAHKLBVAG8ltBx1FH0Nx088cks7aGRgqkAZQLZraXIBuNeVUm3cX/h4gucxRmJIyVN5plF2YLa7KFVgNLFnHKtDhcC8saI4aOEb00Dykm5M1u6pJJKA3N9TvWi1mxETGxuc5obnd0+EDXKB1N6/Y1TlUdMJYoMIIoGCCaS4Cm4Kk/pCpvotyu7nu1qxwG2Y1jSLCwTTBVAVlTIhtYXztYam5uPGophE21SrAFMPCLLbTMbW0t+/wD0j01wFtBuqEs72RxMje0uJ7Zs8u2uhZ7IGtjcrOLsaWZs+NdSgsRCl8q5Tm7TaXO++lVn+1Zf0s6OIsJCMsaLGo6xl3KVI0BBFrW0ZdxBrR9Jkc4WYRKS5QgAbzfRreOW9ZvaWBmfZ5WKNwVVDlKkNI5IaaTLa43kAaX7WndoTYZwkAMmWi4NrSmg1ZAN0SKGY6/EdaKsej07zYJnxT9mUuL3y2QkIACAN7ZrcdRvqn6TbJBkgwyyzSyuwbNLIWyRi4JAFtd5vv7HM3rQbNgzrEmR0hhVLCRSrPKgGUlW1yrvuRq1jw1qcOJvv+IcwMZD2IWYHq1juAXZ91hluFGpLkab6O9NBKWTSPYQKzOy6AC9Gj6Xbh0FHlPbOSObaLtcv93QR3JvlZRlseZJaQ345fCpuw8fNJPimckQxuUQEADs6MQ1r2st9fb8KpujP3iH7xH1DtiGkZg7LZCLd9pOIzZiFG/NpbUhqHEFcE0dnH6x8SzhtO0QIMxAu7HIp5AsdL1BVsuGzFzG0QAxjTvQ+IuG25FDrdblWmwdrzYjFykEiBFFlKjW+ite17tq2/dYVp4pVYkKwOU2Njex32PI61l+jcUskCquaJWAzykBWayhbQrbQEAdsjibDW40uEwyRoERcqjcPqSdSfE6mhc/HBgkIaAKoUK4G5PU9N+tbKRQoURNCxJJNKAoAUVXNbSUm0dFmHOmXe+7d86GQcqZKSAmJe/6fU0UI7Z8qOXv+n1NCHvHyFXcLL8ye3ajf86eR7/lUXGLdfUfOigYm99448/Oqy3lXtfZoqZRCije/gaUaQttWgpVCm7nlehmb2T8KpoprULbGyo8TGY5AbXDAi11YXsRcEcTvFtTVhScx9k/ChmPsn4UUpzuLQ0nQXQ8d/vScoUjMfZPwoZj7J+FNRSpdQtpYsRJmKliSFVV3s7GyqPz4AE8KlZj7J+FRMdhRKAGDAqcyspAZGsVzKedmI9TQmbkzDPt69dautVlI4Hn2koklLiBTIQNEWW47CG2oF0Nzckqd24bmqjYuxEw2bJnZnILO5DMbbhcW0FWmY+yfhRS04ydsjmhnwtAA0rqSa4sk13UiES5s2UZrWvbW3K/Klmk5j7J+FFmPsn4UUVkTlFSMx9k/ChmPsn4UtFFpdCm8zeyfhQzN7J+FFFTaTiJ1RGdyFVQWYngoFyfdWI6S9ZiZIIGZk65kbqbdyEHvS/vnU2vYZLanWtpiYesRkdCVYEEX3g+INVeA2Akc7TkySSNexkZTlBsDlAA4AC/IUUVtwU8UBMh+IXl05rTw11J30AG6u1FhYbhp6Uqm8x9k/D86Fz7NvdRRWFKJoAUYFJZrVa1tKLRk2qJisQANfRefnTup1P/AKqBbs3OpPGrGttUvky7KwoqOipkiYl7/p9TQh7x8hQl7/p9TQh7x8hTHZJ8yXid3qPnScNx8/pSsVu9RScNx8/pRwp5TaykE5tRfQ8R/wBqmpJwO/51Afj+L61IxUmUXtfUf2PGlc1OyTqpcfHz/Kl1Hw84IGu/UeXj40szre3H1pKV1hO0KaecDQ/Wsx0x6cQYFe0C7m4AQocrWNs9zcDTeFNqhStZQrjux/tsWxGKw5BCHKY/2nDaXB7oKnXfbKd9wK6hsnbUOIiE0TqykXNiCR4MBexoQdFZ0VVWK2/h45BGz9o5dysQoY5VLkCygtoCa51tn7Tp2lZcNGEjViAzKSzgftbwFB5b/Gq3ytburooHy/CF1qhXHoPtPxKoyFFd76SMDZRxGUWv5399WHRn7QpTKFxTLkb9oLbL55eHG/h6hBiWWArDgpQCV1GhVXszb0E4cxMSEYoSVYAkeySLEeVWDzgb9KvGosLKRRop2ipvrxa/DnQWcHUbqFFpyhTSTg7taCzgmwOtTSmwnaFNiYE24igs4JIG8b6KUWnKTLu9RSBOCbX1pMswseY19KKRYRySW86h4tmsLHfe5/KhBKWY8BbTnv3mhi+HrTtbrqqnyWNE7hx2V8h8qifsVLh7o8h8qifsU7VU7hT6KhQpE6Yl7/p9TQh7x8hQl7/p9TQh7x8hTHZJ8yVit3qKLDcfP6UrE7vUUnDftef0o4U/MmW4/i+tP4zu+o+dMHj+L609jO4fMfOjolGxSsPuXy+lKYdr3UWH3L5fSjbve6kKtGyqumOOEOEmlK5ssb6acuOY7vf5GvLchBZmChbkmw4XN7V6a6fbEGLwkkf6TMFLII2y5nGqqw7rAmw1+G+vNu0sBJBNJBKLSRsUYDUXHI8Qd4PIikcrmcpiNbkDdfwJ+Cgn3A10T7Ldg4uLHRyxleqKuJSrXDJltldSAQcxUi44e/FdG0viYuwH7V8pGYEWO8EHT0PvtXaNmCLCmSaPLFmAzkkBbAmwPhdj8OQrJLiPdOFj1a0MhMjTSqPtKmgXEyMk2WVUTOhVgCbCwjkGmfKwOXlresK2PU2UX10vyrsPT3om2PjjaJwpQl2GW5kGQWy/vgCwv7VcSwsyxzBihKq3aRrE5dzKbgC9r7xRNC3Na6OCfmiAGpHC2e0Np7LfAl41KSR9WmiEEysDbMdzKcj3Y8udgctsjaBS1r9okA7xra49/wA66fhNmYI4e+FwyyxT2YgCwLIeyG0JRlN99ra3rN9OYv8AFQww4dnSEXbKmjM1jlvly2AA8Lsb8ayRFpOVoP69FNG5w0dt4qV9nvSGYSGCFBL1hzlGfLkVWCyOt9MxDA24hD4V2GYbq5r0KwmGwwWeVD96IZSwVtEZrgFVATPlsCwH5nV4rpbCiliWsP8A8b11ImlraXLxZa+Qlv8AtXzGyUqBdNRa9NQSWVWfVmFwFB3HXQH51IQNvaw5Df7z+VPazBiZw/H0+tCIdo+vzo8Px/vnRRbz6/OmCU7oR95qEfeb0o4+8aKLvN6UKAkFwpufGo5xwZmUDW3E1G27jOrUlRmfUqt9+/f8fWqHAbVZskjx9WxZSVJ3AsAfgTvrk47FTMkyxkAaXsStcELXNshaaFmU3K3Frab/AHU9iTcKRSZJ9CdwHypMjbvf76fA4tz5Mj3Xe2iqniDWWBSkw90eQ+VRB3PSpcPdHkPlUQdz0rrtWR3CnChQFCkTpiXv+n1NCDvN6fWhL3/T6mjg7zen1pjsk+ZKxO71FJw37Xn9KVid3qKThv2vP6UcKeUyeP4vrT+M7p9PnTB4/i+tO43uH0+dSeEo2KXhtyeX0pTd73UnD7l8vpSn73upCFaNkc28f3xrM9K+gmDxjtLKhWV0ydYpIIK6o9txYbtd40O4Wu9uTtHDJIihnRHZQb2LKLgG2upFYTZvTXGyO/WwRJHGhL5Q+ZCRcA3Y9oDtFbXA32OlI9wa3M7ZaIoJJASzjvWXk+z5sKxkjxhzxhiSsS62ubAMSAbabjrW7wOxJpIbSRDKwIOdwSw3EuABv3+vCpuy8MJSSwuAASed93ga0yjse/51zYIjiRnk246+ui0SSiHss35RQWA5WsPhVPtTCYG6yYhMNmZggeQR3Zj3VDNvJ4CsV0w6XsuMRYTdIWIYcGc6Pe3Ad0eN60HSHZMONgSJmkBzRygplLLImpyAqb2uRc2FapJi14bQrrev2Vkns+WCJkj9M4JA6eP0I9BPbKwKxxKqoItNQot7wONFh8MjZ8yKe2w1AO63OrJmQ2aNg6m9iNQdSN4rPbTxksWOwca26mfr1cWH61I+sQg7wTYj0rDBiMszzJuencP6SyNtgrZWv3CL/hJ/KKrOkcESQN+hQk6AZRvvv9KtYsQCGbgGZfPKbaetx6VVbajMkbKDZiMzH2EH14DxrrNIIsKhzS00VtsG1ig5xj+m3/VUqbh51CU2ELfhHoy2+dqmS8PP86hVqLh+P986OLf7/nRYbj/fOmy5HdXMddLgceZpwqjunY+8aEZ7TVSYPaM8spCBEXXVgz7vIrxDa+HnUhtmu7ktKp3bkI93bNUmUluaMX5JnMLDRVZ0oSUzRFSojyyZ7i7FrrlCngN5J8BWdxzooILAvYkKN4sL3I4etb84KNrK6hwLjtC/zrKdLdhxRXliRUzhYiqgAXZgQbDjYEegrBjMO7tS300W3DTtoMPrlaSI5g3iWFJibRL8iPUf+jTODm4c3b5UbPZiOAYEfxE3+dcrDS5JWP7x5/0plZmYR3K1h7o8h8qiDuelS4O6PIVEHc9K9cFyHcKcKFAUKRWJiXv+n1NHB3m9PrRS98eX1pUHeb0+tNwk5QxO71FFhv2vP6UeJ3eoosN+15/QVHyqfmTJ/wBX1rC7S+1bCriHg6tzErZeuUggsD2iEtcrfiCb8qs/tH2391wUrKbSSN1UfMFr3YeSgnztXINu7IWOHC5VszYWOYn2jIXY39LD+EVLitOGiYRcmxND+SvRGzMUkscckbh0ZQQym4ItUiTvD0+defPs86aPgJQrkthnPbXfkJ06xBz5jiPG1d+hxCSBZI2DowVlZTcFTqCDSqZoTFpxwo3SRZTh5RAbTZG6s6d7gBfQE7gTuJFZDZ+xzhYxAxzsO07b8zv2n146m1zwFb6fh/fKsQcYJGc31zMR4qSSPd+Vc72if8YHff2/2tGEce03jT9D11UHodtX7vPJg5DopBjJ4wnVBfiUvby8q0/TLbn3XCMwP6R7pH+I3u38I187c65z07gZDDi49HjOUnw3rfwvcfxVVbW2/Jj3jBW2TLGqjXeb38zce4U+GcTFm4Pkefv8Xja7GF9nsxWJY91ZdS76cfXnuQ6O4IzTZieypEjseQa9ifMfOrHpd0sEWHSaG5zS5RvXMFJLa7wD791S8XgzFh1wsf6yXWRvZXTPfw3KOetc3+0HGAvFBH+qiU2/ecntsfcPjzqlgE0gf028Bz9Tt4JfantAzSlzfhALR9dz67ubS8D9oGKhOWKSTqwAqq0hYgDiSRYk/hHpVo32lTTZVdXzBlMZTIWLWZchOW4Vs2pXXQW31zitz0F2YEmhlcdouhW/7K5wC3nWwxsvMQL8FiwxxE7TG2srRZJaDQbrvV61QF67bLt0YCIgUdlQEReLG1r+Z/Ojx8WSCS+rMLsfHkPAbhUjCJmPWEabkHJfa8z8qRtr9S/lV1LCSSSTuVom/Ui28IjDzUXHyqcxuARz+lVsmICxHUZupWwPE2NtKzWyds4wyQJIFEbSJGuguV6uV2vrcG0Y95rO7EMbIIzuVLIy5pcOFr8Nx/vnRQ7/AH/OhhuNCLf7/nWkLMd1W9Gx2DffmYeIs24+pPvqyi7zelU2OmOHmMoF43NnHI+0PGrbBzK92Q3U2saphND3Z3Hq/XgrZRZzjY+q9eKWne99UHSgZ2jUEWRw7DmQOyL7t5qbtbEOtsugN9ePl4VSu2nxNcn2nj8twNGvN/x+1rweGsCQnwUNtrlJVFhlBBb132PCwrTkRSKskbB1a9mVrg2PAg8CPhXNtrznqpn45T/Wyp8mPurRfZvIfuaKfbkZfLNY/wBQNacDho8tvaDryL/KTGuIPZ0oLbwd0eQqKO56VKg7o8hUUdz0rrhcx3CmihQFCkTpiXvjy+tCDvN6fWhL3x5fWjw/eb0+tNwk+ZHid3qKLDftef0FHid3qKZfErFHJI5sqBnY8lVbn4Co+VT8y4n9su1+sxfUA9mAG/8AzJLMfcuUepq06dYHLBs9wNDhUj/kVSP85rmu08a080sz952Zz4FiTb03eldr6e4TNsrDP/wxCfRo8vzK0rl0sQz3bGM8fxquIzx5WYcj8OHwruv2QbNlhwKtKzWlbrI0O5IzuI5Zu9bxHEmuYdHujv3zHwwnuMOskI4RoSG99gv8Qr0PkAIAFgAoAHADQAVKMVNmja3rRKrOlu1Ew2HaSRwoPYB17zbrAeFz6VxHbHSdmkQwXURtmUnezDS5Hs2JFvGr77YekHW4hcMhukHe8ZGGv8osPMtWS6NdH5sbMIoh4s57sa8z48hx95pPdNc4OdrX2XSwUDIYfeP518B6/K6LhcRFj8KeAdSrDeUf8wbEelFsvYUcJDhbZRYcbc3/ABEVWYbpRhsLF91iwZGRmvIZBmdwcpZuxxtu4aWo06axEEPhnbylC/6DXKfhZWksjPZPes7cYGhwaSAfwkdJNoWusY7bixPEJwHmbn3mudbS2LiMTL+hhZlRbFu6L6mwZrAndoK6HhelWGjLMmCYuSDeSUPqOIvFodeFRdvfaPKMnU4eFL5s2cGS+61rZbcedb8Ph3NaGMIvvtU4mWF7miJrtBqbAvwHGveb0XJoMGxkETAqc1mBFiLam4PG16630PwkcmIMb9kkHJpftAgjQ89fhWdm6d4ljmMWFB5/d0J97XqjgmmeXrFZusvfOOyQb3vcWtrut6VrdhC4dojzT4XECOGaJ7TTwBYNEVfhY11F6jQ6FehosA6DL17HMdLqCb+BpuXZrMpRp2sWtqoJJ5X5ViNldOJlhiScGaSO/wCkzWLdq4v2dSBYX42qfiOn+ffh7altH4m37vhWf3TBoPyf2uZlcG5L09c7rWPscs+Z5GI4KBlHhuN6i7I7eIhGYsqSFw1rZrQzJc+r1Wf/AHMFv/i2Nt/Wcefdqrh6ZZWzJCqHW1rC1734X4njxrNJg2GRj2UKNnc3/CeH/Fm0u11bDcahPtOJCczi4voNTv5Cudv09mIICqL6X1v/AJquuhm0IsTKyGC2Vc9y2a+oFrW8a0uL9mV9UNDd3X9FfS7YhcNmSQxt2S2XT51nsPtFsNIerbOhO46Bhw8mrcRKMxFhblw91U20OjySFjHZG5fsn04elZ5oZTTmmyPof19/ur4ZoxYIoH6j9/b7JibbkUwyqGu2uumU7/WqzHtaNvK3v0+tQ3hfDv2ksdfI+INIx+NDoALjW5riYwSSztc4bUOneujA1jGU3ZVO1o74Sc8ur+DgmtZsSERYHCAEZwgcjj+k7ZB/mqgm2rDh2XDyBmnkQyiJVLFlsxUXPZBOWwBO+qzGY7aMylz1WzYOMkpV5LeR7K+Rsa7UNtjylc+anPsFdawUwZARyt5GmR3PSsJ0V2kmHySxTtPh8RKyu7Em0pYqrJm3IWXJl11ZLaXNbwdz0rdE/MFgmZlKmChQWhUoTMveHlRwb29PrTc2YsMqk6b/AFpeHifUkAXtbX51NilAab2R4nd6isP9q+1ep2e8YPancRD8Nsz+llt/FW7lwxYWJtrfSuG/bRjgcYmHQkrCl21v+klsx/oCe+oB0pacNCXSgnYarnzbjXorb8PWbHIAvbDxN/IEf/TXnVtxr0ou1cOMAkbyrmbDKuVe012iA1Vbkb+NQ40tuNFhv1VJ9kkK/d2cRgv1pRnAF8gVWVSd9gWJt41c9OukX3KBpAP0jdiK/F9dSOSjU+g41kfst2/1Ec0RikkJZX/R5Ta65TfMw9kVkPtC6RnG4kkArHHdEU2uMveJsSLluXACoYbNKvB4YTy67DU/r6/i1QwQSTyqi3d5XAF97O53k+ZuTXecBg8NsrDRo7qlz25GIXrJSNT+Q4AVwnYu0nw06Tx5S8dyMwuLlSu7wvRY3aU0tutmkexJGd2axO8gMdKsIXZxWFdiCGk03zJ/Gneug9KekGzYZQsGBgxF1DvIJLDMxN10BueJ86e2HJg8ZBIf9nxwtcxhlYsRdQcy3A1F65dXSugShMHmJADO7EnwAX/TWTGvMcVtOthUS4GCKMaWetn/AF5KRh+iWFXUq7n952+S2HwrH/aTgY45YFiQLdGJA49pQK6XHIGUMNx110051znauIONxJI0jXRfwA7/ADY6/wDqsGBmkEvvHEkAG9eoIWGQBopo1KzWztjvKbAX562A82+gq/h2CyssbTBSysVCrcdm2Ya217QPv5VeYWFRZFAAHDw4/P41B6WLIEhlitnjlVtTa6lWDC/I7qvkxssrw0aJjA1rcz9aTR6NykgLOtyf2gVHqRen1xRwziPHYNLbhIg1PjocreljV9hoyxUWIzWNjwBF/lVptXCpJGVdQynQg/AjkfGs3/Ld8L/LQ+SHYdtgs/YUbCYHCSAMkaMDqPH41YQ4HDDfhYW9CPkfpWDwbtg5+qYkwubgnhybwI3H0NbHD4+2jajny86SQyxG2OJB2KlrGvGo1G4UPbO3MDg3AxGzLxt3JI2DA81IYrZhyvu+EnYPT/Y8bZkVoCRYkxMdLg2JTMOFWIKsODA+oquxHRrBynt4aK54hch96WNaovacbW/5WmxyD/B/f2VRwoJ0K02F6d7OZiRjIQOGZwvwaxqq219qGBw+cxv94f8AZWLUE/vSd0D3nwrN4r7OcG3cMsf4XDD+sE/GqfaH2YkC8GIufZkW1/413fy1fF7VwDz2nEeI/kWlOBeF0iXHLiVWUC6Oiso8GGb60zgNh53JFyqi5XTU8Bc8L/Kq3ohhpY8JHFOuV48yHUEZQxyEEbxlI91Xse0XguY41kLWWzP1Y882Vvlxrgwud/zjmNguPgd6+mgW2QZYOzpQ9fyq7ETsMfNE91LQxOgJ3gNIslh4Xjv+IVito/Z6ZZDLi9oSOgubsACq8s7MVX0UDwqxxG1o8ZjJFxcZVAxZWjLs8DKqxtkeKzZCV1tbfWk2P0d2U5B61Z2BuOtdnYHwE7Eg+QFegIOYkLmAigFR4HBriFhwmBjP3WN0dptcrdW4lCxMdXYuAWk7oF9STp0aMWjA8KnQ4NFHZWw8KabZq2sGYet/nV0QDd1TMC7ZOruFHQ6sjdY0rKeVPYSZSnaJjYXOg51lpNr4yTuJHAOZ/SN9FB9DUObZwY3xMzzHkx0v4RjT3CqS8K+lfYrpNhkNhJ1jcogX9Mw7I9TXnPpfNI+NxLyqVdpWax3hT3B/JlrvMKBRaOOw5ns/Df8ACst066JRYlTiHkySpG1soFnCqSqsCbnXjyPuGya6q/DvDHa8ri53V6C6OxKMNB1cWpijJJ7IuUF9+p91efeFehtgRXwkBZiR1MZtuFsg321PrTS8K/F7Bc16P7S+7Ym7EhCWjfL7N9/oQD76zGMhZHZW3gkHx8b8Qd9+N6sgrSPZFLFiSFUXOpvYAVdw9CsZIATCF5Z2A08r3FM1wbulwWLEBNiwVjKFbaXoBiFGoh13AOxJ8AMutRcb0OxUS5mguBqStmt5ga/Cm961dA+1I+Gny/ayYUnQC5rVQTyxYWFSCMzSZVYEWsw1txvm3+FaX7Pdskk4cqma2aNsqjQd4NYDNbeOO/WlfaRhwrYVrkks9yd51j9w8KqkIfTXDvWTEe0DKzK0V33/AEnuk0/VYVgN7ARj1Fj/AEg1m9i4M5VCi7Odw437o/vnVv01NzEnMsfkB8zWh6N7M6mMzuvaItGvIHQerGw8j41zIWEwgf8AsST4KsuDXlx40CL/AGKFgdRqyC5POTRnt4BbAetY/bw/Qt5r8wPrXVMNDlUKdTxPMnVj6kmue9JNnkdbEouf2RzFwy/lVj2hr2O4sKInlzHtO9Wr3D4cARvxMUX/APNB79D76XKy9w7yDbzG6/rpS8JE2VE3kKi/yqB7tKr7FcVlk9rIfwtoPgb1jP8Aklz8WrGghtXqAqTb2D6yMi3aXtL6bx6j6Vb9FY4sXh0L3SZOxnU2LZRcX4N2SLqwINM4tMrMvIke40rocipisRB+wwEi8LWIItyID/01twriWlp4VWKABDhyr9dlqneJB9tdAfxpuHy8qcfBldb5h4flU5HIOV/Rva8Dyb5/AZT7QNpGCJYomKmW9wOCC18vK5NtPGiXCslBbsTz63VbZ3NN3auQw5ilgVy/YnRyfE6xKoUftMco9OJ9BWkToNilHZxQB5AuPjcVzz7FraT/AK/2tAx3/wA+f9LXiqrbu2lw0TNoZGBVF/ePEj2Rv9LVn5OjGP3Liix9kyyKfS+h99UG09g4qK7SxPbi/fHmWF/jV+G9me7kD3OGnFJJcXmYWgbq3+zhCcS5B1ER363uy763eKwET/rYhf2lHzI199YH7On/AMUVvbNG1rcwVPyvXSs5HeF/EfUb/nXUfusYVbHsfJrBK6D91yo/pNj6in0xuNj/AN8rjlKg/wA8eX41KyKdVNvEfXgfWjuw3i/iN/upQVKCdJ5V/XYQke1E4f1ytl+Zp3/6vh/4WI//AF/+VMKqndofDT3j86Pqz7R9w/KmzFFIyh3s2nh2R79/xpKOB3Fv4jQerHf8aWsA3nU8zr7uApxmA1JsKVCayMd7W8F/6j9LVC28FjwuIYDdDKb7z3G3k61N60nui/idB+Z/vWo21NlieGSKR2tIpUkWGW4tcDd771AUir1XnPh6V3e5TZauzHTCrYDQXMYC34nUjw8K59tD7Mcar5YjHKh0DZslhzZW3el63XTZhDs9YAbseqjHiFsTp/D8avkIdVLViXtcBRSfs22cEw5mIGaRiAeIRdLfzA/CtT1xb9Xu9o7vT2j8PGomydnZIY433IirlG64Gpbmb3PKrB3Ci5NgKpJs2siTFCF13sd7Hf8A9h4CkdYX0Q2Xi/PwT/q93gWQv3hZPZ4t+LkP3ffyqH0g2g8Cw9WFJknihOYE2VybkWI10oAtM0WaWI2thRgtpxOgsjMrjwDkpIPn7xWi6ewBzhtR2XY2/lt8bVnen+0OuZbJl6p2UG+pvz9Vp+DEPiJkke7XK8NAACwHgLA1VLL2AW94/atii7Xa4o/rzUzEwiTH4dGFxa5HkXb/AEitnJ2pFXgnbP4joo+Z9BWTw5A2jGx3CJmPkA961uDQ5bnvMcx8L7h6Cw9KiH/xN8FXJ8Z8VIrM7QiLYlmO5QAPxWHw1q9xeMSMDOyrmOVQSBmaxOVb7zYHTwrDdJukEMc8cM03V9YC7ZQxY6hUTsAlQxub6aIRxqvEGx7sbn8BWQijm4WuwcYBiYG+e/lYrmH+X41W9K4MrJKPI+Y1H191J6N7UjmhUJIrmKRQcrBrByQL2OnePuqx6UlRhnZiFClTcmwHaA1J86Cwe5oDjzUtdlm1PNKg25+tcjjZv5lB+tO4tBDtDDvuDx5W8wpXX+n3UwXWVobEEMqKSDfcch3eVS9vLafCA65ZcuvFGy2v7iPSpw47Tj65U4g9lo9dFp5EBFiLiuZdKomxG0VgDXtkjueAPbYnxAY+dq6RAcpyHzU815eY+VqxfReATbRxcrC4RnUX/eYqP6UPvrU3TVZitlFgkVFRVsqABbaEW5GhnK97Ue0P9Q+o+FGGKaHVeB5eDfn7/F6lQkOgYa2I3j8wabsy7u0OR3+h4+vvozDbVNPDgfyPiKNJb6HQ8j9OYoQsHPCsG1omQZVkI0taxcMjC34tfWt/WR+0OGywYgb4pBc+Bsfmo99agMw17w3+NvkfhTHYICU8QOu48x/evrRXYbxccxv935UpHB3H+/EUZqEJFlbx+Y+oour/AHm+H5UpkB8+fGk9WfaPw/KhCPOx7osObfRd/vtRrCL3PaPM8PIbhTgo6EIUCbamm3lsbAXbkPqeAohFfV9eQ4D04nxPwqEIZy3d0HtEf5R9T8azfSPDh8Vg4Brd2me+pIQAi59CPWtVWdhu+0ZmAv1UKRDkC5Lkk+XzqQgrQSyhfEncBvJ8KTHEScz7+A4L+Z8aOKK2pN2O8n5DkPCnRUIR1munGPSBMNJJcquJjYgbyFVzoD6VpayfT7B9aMOMhcdY9xa4/VsQTyGm+pBrVXYeveDNt/Swm1No9e7spBSQFxzV1OdgePdufStx0esMLFbiqsfFrWJNMN0QiXAyhUtIQJQd5DILgXPAi4tyaoHQqXFyGKMxp93A75vfKL6A5tSTpurPiIs0YDDzzpx+fytWdj3kt2A57tvz5K7kw3+Ow4P7UTE+IBZrfIVfbXgmeMrBN1MlwQxQONN6sp4HwsaqcUP8ZhZeD9ag/CE7Pv1PrWiq8NDWgdAsBNm1zHphs7aM3VrNheu16smKS8TK5FnKN24ZFazBwGsMwJIrPdKNmJFNhkzZ5Ew6PLI2rPKxYKWY66KNBwGWu14h7Kx5An3CmosFHYXjQmygkqCdABqSPCpZTdkEkrE7AxOSadPaCyettPjCf5q1vSVh91l8Vt7yK5rtfoFtQ4xpYcSnVl7qesZMsYYsqtGBqBci2t/Wtl0z2bjMVhI0wUiI5Kl8xtdchFgbHW5FVNjLWZbVr5GufmWdw2J6qBJFXuIrBRYXNgQB5sfjWl6Qzq64SYD/AH6Xtw3lh71rAQSOYk2eWY4pj1KuVORiH76SAWZUUXvv7HOtN0ewrx4XDxSOZHTHyKWNyWySSLfUk65edRAwtJvr6KbEPa4DwW6lTMBY671PI8D5fQ1mfs7S8M0nGSZj6AD6k1oVOXMnAAsv4eI9D8CKo+hcOTBQuOIZmHMF2IPmPlerhss60rCo98m/u8/Z8/Dx4U+DxoGoQipLoDv/APXkabtk/D/l/wDH5fJ0GhCp+k+EaTCzIRm7JYHiCvaFxx3bxT3RzE9ZhYH5xqD5gZT8QasiKzvRGEpFJEDYwzSJ4Fb5luPJt9NwjlX7xg+fMb6Rdhv1HMb/AFH5UpZNbEWPz8jxpVQhErA7qOkNGN+48x/etFlb2vh/3qbQnWYAXJsKbuzbuyOfE+Q4Uj/er/fGpNQhJRABYD+/HxpdFTOO7h9PmKhCMyFtF3cW+i8z47hUPYmC6ppwTdnlMl9e6QAo132AqxFR4/1rfhWhClUYoqMUIQqLPKCwUmygi/i28L9T6VKqnxX6pfxn60IVtL3TfkflWV6KYWSGMwO6m+iFb3CnV735akHxFaI/qP4PpVNgv/kJ5N8xRQKkEi1ZbVw2Z8PlsMkob+EKQQPQ1Y1Gn/WR/wAXyqTQoTGO/VsOYt/MQPrUio+M7o/En+dafoQhWf2lg8Y4UYWeKNVzqwdHYkhzaxVhYWtQxMh6w6nvHj41MxHdP/Mb5ChSDWyx3R3opJFjo55JYxlLkxxRsitIUZM5BcjN2jrbjWnXZ1jHZrgYqWU6e2ZCAPItTI71WUfdT/m/nQgkndScfEWQ5e8Abe4gj1FR+jkOTCwpe+WNRccSBr8asDUDYn6v+JvnQoUhOycv7J7vgeK/UevKnjTON7jfi+op40IRUyVy6jVeI5eI/KnjQoQiBvqKrtn4XLPiJAezIU05Mi5WN/HT3VMg/b8x9Ka2fub8bVNoUh1B0NN6j94fEfn86doUISVYHUUdNnvnyNLqUL//2Q==" /></p>
+<p>If you think about it, <strong>who manages that money</strong>? The entire premise of this system is <strong>trust</strong>. Trust, not placed on an <strong>individual</strong>, but a <strong>group of people</strong>.</p>
+<p>Similarly, Bitcoin works on the same principal of <strong>distributed trust</strong>. If you were supposed to <strong>cheat the system</strong>, you would have to <strong>influence</strong> <strong>multiple</strong> <strong>people</strong>. Therefore, making the <strong>system stronger</strong>.</p>
+<h2>What is Bitcoin?</h2>
+<p>There are multiple use cases of blockchain technology. You could put your <strong>country's real estate</strong> on a <strong>blockchain</strong> and hence would be able to <strong>trace the history of a piece of land</strong>. You could potentially <strong>claim ownership of a digital art piece</strong> by listing it on a blockchain (<strong>NFTs</strong> (Topic for another day)). There are so many of them that it'll take another blogpost of it's own. Therefore, in this one, I <strong>focus</strong> on something that we all are most interested in. The <strong>Cryptocurrency</strong>. Bitcoin primarily.</p>
+<p><img alt="" src="https://www.aljazeera.com/wp-content/uploads/2020/11/2020-11-24T133928Z_788862449_RC2P9K9XL48K_RTRMADP_3_CRYPTO-CURRENCIES.jpg?resize=770%2C513" /></p>
+<p>As mentioned, bitcoin is a cryptocurrency which is earned by maintaining the bitcoin blockchain. Alternatively you can get some bitcoin if some one gives it to you, or you buy it from someone.</p>
+<p>Each Bitcoin is <strong>basically a computer file</strong> which is <strong>stored</strong> in a '<strong>digital</strong> <strong>wallet</strong>' app on a <strong>smartphone</strong> or <strong>computer</strong>. People can <strong>send Bitcoins</strong> (or part of one) to your <strong>digital</strong> <strong>wallet</strong>, and you can send Bitcoins to <strong>other people</strong>. Every <strong>single</strong> <strong>transaction</strong> is recorded in a public list called the <strong>blockchain</strong>.</p>
+<h2>Why is Bitcoin Valued So Much?</h2>
+<p>If it is just a currency, why the heck is it <strong>valued insanely</strong>. For those of you who don't know, <strong>1 BTC or Bitcoin currently costs about Rs. 40 lacs</strong> as I am writing this article. For understanding the real value behind BTC, let's dive into a short and sweet concept of economics.</p>
+<p>You all know the game of <strong>demand and supply</strong>. <strong>More demand</strong> and <strong>less supply</strong> means that <strong>higher the price</strong> (value) of the <strong>item being traded</strong>, and <strong>vice-versa</strong>. Fair enough?</p>
+<p>Okay let's take a recent example to talk about it. When the <strong>pandemic began</strong>, <strong>sanitizers</strong> were so <strong>costly</strong>. I remember ordering a <strong>1L bottle for Rs. 450</strong>. Later, as the <strong>supply</strong> <strong>ramped</strong> up, the <strong>prices</strong> <strong>fell</strong> <strong>down</strong>. Now, a similar bottle would cost about <strong>Rs. 200</strong>.</p>
+<h3>A. Non Depreciating Currency:</h3>
+<p>Apply the similar concept to <strong>dollar</strong>. Entire <strong>world transacts in dollars</strong> right now. It is a <strong>global currency</strong>.</p>
+<p>If <strong>US government needs more money</strong>, it could technically <strong>print more dollars</strong> and <strong>fulfill</strong> its <strong>requirement</strong>. There is <strong>no</strong> <strong>cap</strong> to it right? So, if you are <strong>valuing your assets against dollar</strong>, it is <strong>highly likely</strong> that someday when <strong>dollar is not in demand</strong> any more and the <strong>printing happens at the same rate</strong>, it's <strong>price will fall</strong>. India currently holds a foreign currency reserve of $580bn (<a href="https://www.business-standard.com/article/economy-policy/forex-reserves-jump-1-193-billion-to-582-406-billion-rbi-data-121042300858_1.html#:~:text=In%20the%20week%20ended%20April%2016%2C%202021%2C%20the%20increase%20in,of%20India%20(RBI)%20showed.">Source</a>). If dollar starts falling, we are likely to lose an exorbitant sum.</p>
+<p><img alt="" src="https://i.pinimg.com/originals/9f/99/93/9f99939fd97300a2acfc0bf8fb093c22.png" /></p>
+<p>Image Courtesy: Coin Credits</p>
+<p>In contrast to dollar, <strong>BTC is cannot be mined limitlessly</strong>. The <strong>incentive</strong> for <strong>mining</strong> BTC is <strong>halved</strong> every <strong>four years</strong> roughly. That means if you get <strong>10 BTC</strong> for validating a transaction <strong>today</strong> (example), this will <strong>reduce to 5 BTC in 2025</strong>. Hence, there is a limit to the <strong>number of BTC</strong> that can come in the <strong>circulation</strong>. This number is capped at <strong>21million</strong>.</p>
+<p>All the <strong>BTC that could ever be mined would end in the year 2140</strong>. Therefore, more the <strong>demand</strong>, <strong>higher</strong> the <strong>price</strong> of BTC. Because you cannot have more than 21mn in any case. This makes BTC a very strong candidate for an <strong>alternate currency</strong>.</p>
+<h3>B. Tool of Investment:</h3>
+<p>What if no one is <strong>willing to trade in BTC</strong>. And if you are <strong>not able to purchase real life</strong> things like <strong>Pizza</strong>, <strong>Car</strong>, <strong>Stationary</strong> using BTC as a mode of payment? What if <strong>people don't trust</strong> it? All these questions are highly likely to pop up. Therefore, there is an <strong>additional driver of value</strong> of BTC.</p>
+<p><img alt="" src="https://miro.medium.com/max/1000/0*-r_G_GE80IoKk_G8.jpg" /></p>
+<p>This time around, think of <strong>BTC as an asset class</strong>. Why is <strong>gold so valuable</strong>? Because it is <strong>limited in nature</strong> and is <strong>used</strong> for making <strong>ornaments</strong> since time immemorial. This value of <strong>gold has been a man made concept</strong> right?</p>
+<p>If suddenly, <strong>everybody</strong> starts <strong>hating</strong> <strong>gold</strong> jewelry, it would have no <strong>value</strong>. As a matter of fact, <strong>Aluminum used to have much more value than gold in 19th century</strong>, just because it was <strong>harder</strong> to <strong>obtain</strong> and had much more <strong>practical</strong> <strong>uses</strong> (<a href="http://www.slate.com/articles/health_and_science/elements/features/2010/blogging_the_periodic_table/aluminum_it_used_to_be_more_precious_than_gold.html#:~:text=In%20fact%2C%20aluminum%20became%20more,for%20special%20guests%20at%20banquets.">source</a>)</p>
+<p>Now think if <strong>Gold can be pegged</strong> so high in value, why can't <strong>BTC</strong>? After all, valuation is a notion built up in human mind. If people think BTC is valuable then it would be.</p>
+<h3>C. Hype:</h3>
+<p>Because Blockchain and BTC is a very new technology, there is a lot of buzz around it. Some people understand it, some don't, so the ambiguity continues. In the middle of this, when a <strong>celebrity decides to endorse BTC</strong>, the market just blows up. Recently <strong>Elon Musk</strong> confirmed that they would accept <strong>BTC</strong> as the <strong>mode</strong> of <strong>payment</strong> to buy <strong>Tesla</strong>. In the past, <strong>Gary Vaynerchuk, Kevin O'Leary</strong> from Shark Tank etc. all have revealed their investments in BTC. Therefore, driving the trust and hence the price much higher.</p>
+<p>https://twitter.com/elonmusk/status/1374617643446063105</p>
+<h2>WazirX- How to invest in Cryptocurrency:</h2>
+<p>Finally. Now that you all are apparently experts in blockchain and crypto. How to invest in it? I will try to draw a <strong>parlance</strong> with <strong>stock</strong> <strong>market</strong> here. Just like every stock requires careful <strong>evaluation</strong> of a <strong>company</strong>, it's <strong>future</strong> <strong>prospects</strong>, <strong>past</strong> <strong>performance</strong>, so is the case with cryptocurrency. There are tons of cryptos out there. A careful evaluation is needed in terms of which one to pick up.</p>
+<p><img alt="" src="https://wazirx.com/og_image.png" /></p>
+<p>The way we discussed about BTC in detail, there has to be an analysis behind each of the cryptos. Once you <strong>double</strong> <strong>down</strong> on the crypto of your choice, WazirX comes into picture.</p>
+<p><strong>WazirX</strong>, is a fintech platform that helps you invest in these cryptos. There are a lot of apps in the market having the similar offering. Eg. <strong>CoinDCX, CoinSwitch, Binance</strong> etc.</p>
+<p>These trading <strong>platforms</strong>, just like stock brokers, will charge a <strong>commission</strong> in lieu of <strong>enabling</strong> a <strong>transaction</strong>. The overall <strong>concept</strong> and UI is pretty similar too. You <strong>complete your KYC, add in funds and hit the buy/sell button</strong> on crypto of your choice.</p>
+<h2>Famous Cryptocurrencies Listed on WazirX (Personal Investments):</h2>
+<p>There are multiple cryptos which are doing great. Let's quickly discuss about a couple of them. I am not keeping BTC a part of this discussion as it is the largest crypto by market cap. So, if you have limited funds and want to invest in just 1 crypto, BTC is your answer.</p>
+<h3>A. BAT or Basic Attention Token:</h3>
+<p>Ever since the <strong>role of social media</strong> in <strong>US</strong> <strong>elections</strong> surfaced, there was a huge concern around <strong>data and privacy</strong>. If you are not aware of the situation, let's think of it from the <strong>moral ground point</strong>. Companies like <strong>Facebook</strong> and <strong>Google</strong> actually <strong>use your data</strong> and <strong>sell it to brands for advertising</strong>. Don't you think that you <strong>deserve to be paid</strong>? After all, it's your <strong>persona</strong> which is being <strong>sold</strong> in the <strong>open</strong> <strong>market</strong> right?</p>
+<p><img alt="" src="https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/https://captainaltcoin.com/wp-content/uploads/2018/10/Basic-Attention-Token.jpg" /></p>
+<p>Now there is a browser named <strong>'Brave Browser'</strong>. This <strong>browser</strong> is based on the fact that <strong>none of the advertisers</strong> are <strong>allowed to access user data for free</strong>. In case they want to do so, they would have to <strong>pay the user</strong>. This payment would happen in the form of <strong>crypto currency called, BAT</strong> or <strong>Basic attention token</strong>.</p>
+<p>So if you think that a concept like Brave browser could blow up, so would BAT.</p>
+<h3>B. Doge Coin:</h3>
+<p>This is just a <strong>joke</strong> blown out of proportion. Back in 2013 two techies named <strong>Billy Markus</strong> and <strong>Jackson Palmer</strong> decided to take a <strong>jab on crypto world</strong> by making a <strong>currency</strong> out of then famous <strong>meme</strong>, <strong>Doge (Shiba Inu)</strong>. The Doge coin has <strong>no real use</strong>.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Original_Doge_meme.jpg/300px-Original_Doge_meme.jpg" /></p>
+<p>Soon enough, it became the <strong>tipping currency</strong> of the internet. People used to tip others using doge on <strong>reddit</strong>. Since the entire aim was never to make money, <strong>donations</strong> became another <strong>use case</strong> of doge. Back in 2015, people donated <strong>4.2mn ($7000 worth) of dogecoin</strong> to <strong>Indian Olympians</strong> to fund their visit to Russia. Later, it was used to fund a <strong>well in Kenya</strong>. So you get the idea.</p>
+<p>Around the time <a href="https://pandatechie.in/2021/01/29/what-is-gamestop-and-why-is-it-rallying-like-crazy/">Gamestop</a> saga happened, Doge caught some momentum. And when <strong>Elon musk decided to tweet</strong> about it, it just went berserk. This year, <strong>Doge has grown by 8031%</strong> and hit a valuation of $50bn. Wah!</p>
+<p>While one may think that there is no actual value of dogecoin and they are not wrong either, <strong>intrinsically</strong> it is the <strong>social currency</strong> which drives it. Instead of actual use, it is the <strong>fun</strong>, <strong>benevolent</strong>, <strong>punter</strong> nature of <strong>dogecoin</strong> that makes the difference.</p>
+<p>https://twitter.com/elonmusk/status/1377567762919292938</p>
+<h2>Conclusion:</h2>
+<p>I understand that this is a lengthy post but I tried my best to breakdown blockchain and bitcoin for the dummies by a dummy. Got any questions? Would try my best to address them!</p>
+<p>Apart from that, do you want me to dive deeper into working of blockchains? How is it so secure? What's happening in the background?</p>
+<p>Do you invest in crypto? Did this article change your mind?</p>
+<p>This article is in association with Blogchatter's #BlogchatterA2ZChallenge.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

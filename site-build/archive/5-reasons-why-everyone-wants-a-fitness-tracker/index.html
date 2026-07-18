@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Reasons Why Everyone Wants a Fitness Tracker | Raghav</title>
+<meta name="description" content="Wearable tech, a domain of technology that has taken the world by a storm lately. Be it marathon runners, casual gym -goers, or people like me, everyone is rely…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">5 Reasons Why Everyone Wants a Fitness Tracker</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-02-10</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-02-10 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xODYwNDU2NS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1NjU3NjcxM30.-zxsUoywRY1WOLUgMgsHpBsaxoCmZm9R8NTgHPQQOBY/img.jpg?width=980" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Wearable tech, a domain of technology that has taken the world by a storm lately. Be it <strong>marathon runners</strong>, <strong>casual gym -goers</strong>, or people like me, everyone is relying on this newest trend of <strong>fitness trackers</strong> to keep a <strong>record</strong> of their workout. Internet is flooded with the likes of #10kstepschallenge, #30dayfitnesschallenge etc. With the entire cult built around fitness, you would <strong>spot a tracker</strong>, <strong>smart watch</strong> on every other wrist more than often these days. While I recently covered <a href="https://pandatechie.in/2021/01/06/why-does-everyone-want-to-sell-wearable-tech/">why every tech company wants to jump into this business</a>, this one's focused on the consumer side of it. Let us understand why is a fitness tracker becoming a must have piece of technology for everyone.</p>
+<h2>1. Instant Gratification:</h2>
+<p>Instant gratification is the desire to <strong>experience</strong> the <strong>pleasure</strong> of <strong>outcome</strong> of an activity almost <strong>instantly</strong>. Now, we all know Rome was not built in a day. Likewise, <strong>getting rid of those extra pounds</strong> takes some time (a lot actually). While most of us <strong>rage quit</strong> before experiencing the results, our fitness trackers tend to keep us engaged. With <strong>daily goals</strong>, <strong>reminders</strong>, <strong>badges</strong>- there is a full blown <strong>gamification model</strong> around it.</p>
+<p><img alt="" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xODYwNDU2NS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1NjU3NjcxM30.-zxsUoywRY1WOLUgMgsHpBsaxoCmZm9R8NTgHPQQOBY/img.jpg?width=980" /></p>
+<p>There are multiple apps like <a href="https://play.google.com/store/apps/details?id=com.pepkit.ssg&amp;hl=en_IN&amp;gl=US">step set go</a> which <strong>integrate</strong> with the <strong>tracker</strong> of <strong>any brand</strong> and allow you to compete with your friends. Similarly, Google's Fit would constantly nudge you to revise your goals upward/downward basis your daily activity. So, there's something in store each time you move dem body. Another #tech4good example may be?</p>
+<h2>2. FOMO</h2>
+<p>And then there's FOMO. The good old <strong>friend</strong> you made with the <strong>inception</strong> of <strong>social</strong> <strong>media</strong>. When everyone's posting images of their <strong>cycling route for the day, miles ran</strong>, I think you are bound to lose faith in humanity if you don't have one on your wrist. Sad, but true.</p>
+<p>If you have been reading my posts regularly, you may have realized that I am not here to preach. I am guilty of this behavior too. I still don't own a fitness tracker or a smart watch yet. However, I have <strong>postponed my daily exercise regime indefinitely, until I have one</strong>. In a nutshell, <strong>I am using FOMO to my advantage (or disadvantage may be?).</strong> And if you bother to ask, I am waiting for <strong>OnePlus smart watch</strong> which was supposed to come out last year. WTF Carl and Pete? This baby is gaining weight because of you guys.</p>
+<p><img alt="" src="data:image/jpeg;base64,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" /></p>
+<h2>3. The 10K Steps Fad:</h2>
+<p>This challenge is currently doing rounds for a while now. Every other person you meet tends to aim for <strong>10k steps a day</strong>. Ever wondered why only 10k? Well, it turns out that <strong>10,000 steps provide a proper balance of caloric intake and activity-based calorie expenditure to maintain a healthy body</strong>. Modern fitness trackers to this day still use 10,000 steps as a benchmark goal; however, a <a href="https://www.nytimes.com/2017/03/22/well/move/should-15000-steps-a-day-be-our-new-exercise-target.html?em_pos=small&amp;emc=edit_hh_20170324&amp;nl=well&amp;nl_art=3&amp;nlid=72133813&amp;ref=headline&amp;te=1&amp;_r=2">recent study published in the International Journal of Obesity suggests that 15,000 steps</a> may actually be a more beneficial target to aim for.</p>
+<p>And because we want to be a part of that 10k club, <strong>our phones are just not enough to track our fitness</strong>. We want to track every single step we take in the day to hit that goal. I remember that I took one such challenge a couple of years ago with my office mates. I became so obsessed with it that <strong>I used to carry my phone while brushing my teeth and walking</strong>. At that point I almost decided to <strong>buy a tracker</strong> to save me from this problem. However, lack of a good alternative stopped me in the tracks.</p>
+<p><img alt="" src="https://organizingmoms.com/wp-content/uploads/how-to-reach-10000-steps-a-day-1000x1500-1-667x1000.jpg" /></p>
+<p>I am totally not against this trend. However, a noteworthy point would be to <strong>make sure that you are not relying on such challenges alone to exercise.</strong> The journey should go on with or without fitness trackers or such challenges.</p>
+<h2>4. Price Point</h2>
+<p>With the Chinese inquisition of wearables industry, simply typing in 'fitness tracker' on Amazon would give you <a href="https://www.amazon.in/madrock-beat-Pedometer-Monitoring-Waterproof/dp/B07XVHK97T/ref=sr_1_3?dchild=1&amp;keywords=fitness+tracker&amp;qid=1612926347&amp;sr=8-3">results starting from Rs. 299</a>. Owning a piece of tech at that price is absolutely not seen before. Therefore, more <strong>affordability</strong>, more <strong>adoption</strong> and hence <strong>more FOMO</strong> if you don't own one yourself.</p>
+<p><img alt="" src="https://cdn.mos.cms.futurecdn.net/agZoXqhjtwXb9dmEQNEudb.jpg" /></p>
+<p>Apart from that, there is some amazing <strong>art</strong> involved in <strong>copying</strong> the <strong>giants</strong> here. <strong>Oppo Smartwatch and Apple Watch have a barely noticeable difference</strong>s. These days, they have come up with a glorified term for being a copy cat- <em>Inspired with the design</em>. With <strong>aesthetics of Apple and OS of Google, Oppo Watch has the best of both worlds at less than half the price</strong>. So if someone's probably waiting for a Black Friday Deal on wearable tech (especially health trackers), today it is.</p>
+<h2>5. Exposure to TMI</h2>
+<p>TMI or too much information is always perceived bad when you are at the listening end. However, in this case we love to track our vitals like <strong>blood pressure, SPO2 levels, Oxygen monitor and in some watches, stress level too.</strong></p>
+<p>For becoming a doctor, you first opt for medical in your 11th standard onwards. Later, there is a 5 year MBBS. Then a specialization. After that there are tons of fields you can go into. In a nutshell, becoming a successful doctor takes almost 10 years of time. But, all thanks to Google, <strong>we all are certified quacks these days</strong>. For some reason, it makes us feel <strong>informed</strong> or <strong>empowered</strong> in some sense. And that trait is well exploited by these fitness trackers. <strong>By looking at the data we may not even understand completely, we feel in control.</strong></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/02/1-2.png" /></p>
+<p>My grandmother recently asked me to buy a tracker for her because she wanted to keep a <strong>track of her blood pressure and heart beat</strong>. I am not sure if that would put her in the driving seat of her health parameters or further create a panic situation. Therefore, using the age old logic "When in doubt, Stay Out" I have decided to stall that purchase for now.</p>
+<h2>Conclusion:</h2>
+<p>I think the way smartphone penetration has reached to the grassroot levels in India, fitness trackers would see a similar trend with time. I can totally imagine my domestic help discussing the average calories burnt while doing the dishes with my wife, some day. What a time to be alive, indeed. <strong>Fitness trackers are a win win for the manufacturers and consumers both</strong> and totally fit into my bucket of using technology for good.</p>
+<p>Do you own a fitness tracker or a smart watch? Is there any other reason apart from the ones mentioned above that drove your purchase decision?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

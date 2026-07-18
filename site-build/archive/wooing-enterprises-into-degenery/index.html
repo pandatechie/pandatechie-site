@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wooing Enterprises into Degenery | Raghav</title>
+<meta name="description" content="A Quick Guide to dApp into Enterprise Business
+
+Tl;dr
+
+This article talks about my experience as someone leading the Blockchain and Web3 initiatives for Enterpr…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Wooing Enterprises into Degenery</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2023-03-06</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2023-03-06 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media4.giphy.com/media/NipFetnQOuKhW/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><strong><em>A Quick Guide to dApp into Enterprise Business</em></strong></p>
+<p><em>Tl;dr</em></p>
+<p><em>This article talks about my experience as someone leading the Blockchain and Web3 initiatives for Enterprise. It is a deep-dive into the mindset of the legacy organizations and what points to keep in mind while cracking a deal with them as a web3 startup.</em></p>
+<p>Back in 2020, I took a conscious call of filtering out my LinkedIn requests. Rather than aimlessly connecting with people that are here to 'explore synergies', I decided to connect with relevant people. And given the then mindset, it seemed like everyone associated with web3 fit this mould perfectly. But why are we talking about my LinkedIn all of sudden?</p>
+<p>Turns out that three years later, my timeline is full of people talking about web3. I barely get a post that talks about anything outside that. Is this bad? I don't think so. But today, we'd talk about how this has enabled a peek into the broader niches being formed in the crypto space.</p>
+<p>Out of those siloed narratives, one clan is of people building in web3 from the ground up. These people would be solving a problem they feel is relevant. Mostly related to UI/UX, some novel financial instrument or a trick to take NFTs mainstream.</p>
+<p><img alt="" src="https://media4.giphy.com/media/NipFetnQOuKhW/giphy.gif" /></p>
+<p><em>Watching Degens fight over which Blockchain is better while enterprises are yet to figure out if they should opt for this tech at all.</em></p>
+<p>Then on the other side, we've got Blockchain Men of culture. These folks see this space from a different perspective. They are doing the noble work of bringing legacy orgs onto Blockchain, but then a lot of it comes at the cost of bashing web3 proponents. Why you do this?</p>
+<h2>Why does this happen?</h2>
+<p>Essentially, the problem here isn't the community but the nomenclature and hype. Most of the time when you are pitching a traceability solution to an enterprise, you are mostly referring to a DLT (Distributed Ledger Technology). However, you end up using Blockchains in your communication.</p>
+<p>Okay, before you burn me, I am trying to portray that the entire umbrella of Blockchain has been bastardized by us.</p>
+<p>A senior CXO on the board of the company probably had his first encounter with Blockchain over a post on LinkedIn that talks about a scam. After that, when they decided to dive deeper, they encountered maximalists talking about how Bitcoin can cure cancer. And finally, when they start to make sense of what was going on, they often end up equating Blockchain with Decentralization. While that is true, they don't understand that this figure isn't a boolean. It's a spectrum.</p>
+<p><img alt="" src="https://arweave.net/FpZIXYPa38zfB2BM1XO1YczwezhsfMUPVp5tRd-2MGI" /><em>Image generated by DallE</em></p>
+<p>As a result, the entire conversation would be washed away in the direction of the number of nodes, how it is set up, what it looks like, etc. While this conversation definitely has some merit, I don't remember the last time Salesforce pitched me the process of creating objects. Pick your battles wisely.</p>
+<p>On top of it, it is hard to bring back someone from the grave when they consider the only USP of technology is doing away with intermediaries. I think immutability, and composability often take a backseat.</p>
+<p>Here's a real example. A client pitches us a Blockchain solution to verify and trade carbon credits. The guy ends up saying that Blockchain helps in the verification of the carbon credits.</p>
+<p>For the uninitiated, a verifying agency like <a href="https://www.varaha.earth/">Varaha</a> is responsible for vetting if there was some real saving of carbon in the process.</p>
+<p>Now by the virtue of being actively involved in this business, we know that blockchains can't do that. But it's your godification of the technology that took the conversation in a different direction.</p>
+<p>Another key concern is when Blockchains become a victim of their own success. Yes. The transparency. While we mean in all good intent that Blockchains help brings transparency between the participants, it is perceived as divulging private information in the org context. So, calling out the real meaning of it would help.</p>
+<h2>Is there even a common ground?</h2>
+<p>That is like asking if NFTs and cryptocurrency have anything in common. While you fight for layer1/2 supremacy, I believe that the underlying technology is Blockchain. And that is what matters the most.</p>
+<p>After all, we all talk about solving real world use cases with Blockchains right?</p>
+<p>I think if we were to borrow something from the crypto world in its raw form, that could be stablecoins and NFTs.</p>
+<p><img alt="" src="https://arweave.net/lBYAlVgYeekNQallqjOzGdCY9sSNhVDG7TZ-QKiEQ9g" /></p>
+<p>Apart from that, there are tons of use cases in the legal domain, supply chain side of things (currently the government is pushing that) and also loyalty programs.</p>
+<p>You would be surprised to know how significantly a chunk of some of the core processes is non-digitized. You could position Blockchain as the better form of database in such scenarios.</p>
+<p>I could do a whole other blogpost for these use cases, but we’ll wrap this one here.</p>
+<h2>The Intent:</h2>
+<blockquote>
+<p>Hold on to your seats before reading this. Full disclosure, Blockchains have not reached a stage where it is intuitive to think of it as the only way of solving a problem.</p>
+<p><a href="http://twitter.com/share?&amp;text=Hold%20on%20to%20your%20seats%20before%20reading%20this.%20Full%20disclosure%2C%20Blockchains%20have%20not%20reached%20a%20stage%20where%20it%20is%20intuitive%20to%20think%20of%20it%20as%20the%20only%20way%20of%20solving%20a%20problem.%C2%A0&amp;url=[post_permalink]">Tweet</a></p>
+</blockquote>
+<p>If your business has attained a critical mass and you want to manage the accounts seamlessly, WYD? For an MSME, this takes the form of an accounting tool like Tally. For an enterprise, an ERP is a way forward.</p>
+<p>Similarly, too much data would make them think in the direction of tableau, powerBI etc.</p>
+<p>Where do you position Blockchain? The overall question of “Are there any situations where multiple partners interact with each other without trusting?” is kind of subjective. For a sales professional/account manager, it is a question of prestige to claiming that his partners do not trust him.</p>
+<p><img alt="" src="https://arweave.net/kvm6ZuG36NkZVKMi9TW1FWtXrKbsnqFbOmIi9xiL0-A" /><em>DILO: Blockchain/Web3 Lead</em></p>
+<p>So, rather a Blockchain champion is on a constant lookout to find these inefficiencies himself.</p>
+<p>For that, he might also have to evangelize the core philosophy of the tech.</p>
+<p>The next step is to take buy-ins from the higher ups and convince them that this is a problem worth solving.</p>
+<p>And because it wasn’t an intuitive problem (specially something that could be tackled with Blockchain), the next step is to figure out budgets.</p>
+<p>While we are on it, here is how this would usually fit into a deal flow.</p>
+<p><img alt="" src="https://arweave.net/u9f5lt94NN5BCItZKmYNxWuzTGzqIztCbm-59qndoYE" /><em>Average Deal Flow of web3 projects</em></p>
+<p>The left side of this chart is something that happens internally. It could be a great opportunity if you are willing to do a free discovery session for the organization and get an entry in step 1 itself. This would boost your chances while keeping the competition at bay.</p>
+<h2>So what should I do then?</h2>
+<p>Yeah. I am not going to give you some sales tips here. But then, I have been privileged enough to be a part of the boardroom meetings that discuss teenagers flipping monkeys for millions. Just kidding. They do not give no eff. But then, I have seen the eyes sparkle in certain instances. Today, I am going to talk about some factors that can make or break your dreams of going enterprise.</p>
+<h3>1. ROI</h3>
+<p>A new concept indeed for web3 degens. ROI or return on investment is the most critical aspect of a web2 enterprise. They are reviewed on that, their bonuses depend on it. So if your pitch revolves around 'maybe give it a shot' or 'let us try this', it is likely to fall through.</p>
+<p>Fun fact: Even though most corporates have a 'fuck you money' budget (read experimental money), they are extremely frugal about it. For someone driving this budget, this could be an opportunity to unlock a new career trajectory with this money. Therefore, as a vendor, you are likely to feel the pinch. Never go in with the mindset of a startup. Even though the revenues and profits are abundant, there is significant attention on spends. Maybe that is why they are profitable. Eureka right?</p>
+<p>Okay. So while preparing a deck, make sure you add a slide that talks about potential cost/time savings. At the same time, if you have implemented a use case before, rather than just sharing its details it is better to talk about the objective benefits it yielded. The numbers.</p>
+<p>This is generally missing from web3 projects as they are relatively new. But then, at least seek these inputs from your existing partners. They won't have begun without this analysis in place.</p>
+<p>Example time. One of our vendors has implemented a smart Eway  Bill of Lading (EBL)  for our organization. This is a document that traces the shipments from source to destination and is mandatory to get access to the product at the final delivery step.</p>
+<p>Quick explainer: We import a lot of rubber from overseas. The rubber would reach us way before its documentation would (via courier). This led to demurrage charges. We cannot digitize it because of multiple players with their individual ecosystems that do not talk to or trust each other.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/03/image.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/03/image-1.png" /></p>
+<p>Smart EBL is a way to prove the source, history and legitimacy of an Eway bill by putting it on the Blockchain.</p>
+<p>Auxiliary Benefits of Implementation Select an Image</p>
+<p>While we were evaluating the pitch, the vendor literally had costs of different courier companies compared with their transaction cost. "This would save XYZ money for your suppliers", they said. Now imagine how the trust level shoots up when someone is getting into the change management aspect of deploying it successfully not only for you but for your suppliers as well.</p>
+<h2>2. Small = Speed</h2>
+<p>We think of startups as puny disruptors. You are small and hence likely to fast track the decision-making. After all, you do not have a long hierarchy to buy in from. Therefore, roll out a proposal ASAP. Unlike the contrary belief, it does not have to be perfect. Guess what? We are evaluating multiple partners at the same time. Therefore, if you can get the mindshare often, you are likely to make the cut.</p>
+<p>For instance, in my early days, we decided to get someone from a startup background to consult us and cull out some use cases in the organization. The person was knowledgeable, renowned and cost-effective. We also planned to feature this gentleman in our board meeting.</p>
+<p>For an outsider, this might be just a client call. For an insider, it is a matter of prestige. A question of survival. It is not every day that you get to interact with the CXOs in a legacy organization. A stark difference from a start-up.</p>
+<p>Lo and behold we get to the preparation. As a consultant, you are supposed to create a presentation and seek input from the driver if it works for the senior leadership. Unfortunately, I did not get that support. In fact, the entire deliberation with the consultant was a function of follow-ups.</p>
+<p>I cannot risk my job for someone so non-serious about a potential business opportunity.</p>
+<p>In another case, it literally took a week for a web3 brand dealing in supply chain solutions to sign a non-disclosure agreement. The bone of contention? We said that in case of a dispute, laws applicable in Mumbai would be valid. They were pushing for New Delhi. Duuude? Read the freakin room. We have a legit team of 10 lawyers who would never agree to go outside their home grounds in such a case. You on the other hand my friend are supposed to be reckless right?</p>
+<h2>3. Sell the problem not the tech:</h2>
+<p>I am a victim and a culprit of this. As a web3 degen, I can spew about this space in the middle of my sleep. And if you are someone like this, it is okay. But do not bring this to the table when you are pitching your product. Easier said than done.</p>
+<p>The problem is that we overestimate the capabilities of Blockchain whilst detaching ourselves from the harsh realities of business.</p>
+<p>Today, I met a partner who was pitching a Blockchain solution to avoid double-spending carbon credits. The gentleman had a slide that talks about how they are not a maximalist and Blockchain cannot solve everything.</p>
+<p>I could immediately see reassurance in the eyes of all the listeners. Realism is always preferred.</p>
+<p>Another way to think of this is that you are talking to someone who has enough problems to solve. Therefore, you are just an additional TASK for them.</p>
+<p>They are unlikely to buy your story if you are constantly narrating the following words: decentralization, immutable, trustless.</p>
+<p>Instead, understand their problem and explain why Blockchain could be a solution. Do not shy away from mentioning that even web2 could solve this (because in most cases it can). But then, Blockchain does it better. Even better if it does it cheaper.</p>
+<h2>4. Winner takes it all:</h2>
+<p>Well, I am totally in favour of a multi-chain world. But then, in an individual organizational setup, it is going to be the 'winner takes it all'.</p>
+<p><img alt="" src="https://static.toiimg.com/photo/msid-89630990/89630990.jpg" /></p>
+<p><em>Multichain you never asked for</em></p>
+<p>Let me tell you why.</p>
+<p>So we had this brilliant use case of Blockchain technology, ripe in our company. The idea was to provide visibility to the process of tyre delivery from one location to another and so on.</p>
+<p>If you have been around for a while, this might sound like a textbook use case. Everyone talks about it.</p>
+<p>But we decided to skip that as we had implemented a part of the cycle with a web2 tool.</p>
+<p>Therefore, if you are able to get a foot in the door, you are likely to go in deeper. This is even more relevant in a Blockchain context. Why? Because the systems to talk to each other (the coveted interoperability) are still not in place. Therefore, you are likely to remain the preferred partner.</p>
+<p>This would also give you a sense of how to price your product. Maybe the initial use case is not the one where you make the most monies. However, subsequently, you will get there.</p>
+<h2>5. Go Hard or Go Home!</h2>
+<p>It is a new technology with an unestablished impact. If you are a Blockchain, please do not expect enterprises to use your exposed APIs and be happy with them. There are no in-house teams that are acquainted with Blockchains and the intent to hire an external vendor is little to insignificant.</p>
+<p>Polygon has cracked this problem spectacularly. They are willing to be the face of your business implementation whilst maintaining a robust list of partners that will implement the project.</p>
+<p>This solves two purposes:</p>
+<ul>
+<li>For starters, the effort to choose the right partner goes down.</li>
+<li>I am being backed by a big name in the industry. So the confidence level shoots up.</li>
+</ul>
+<p>In another example, we decided to timestamp our innovations with a public, permissioned Blockchain. (On a side note, this is probably one of the most simple yet powerful use cases of this technology). Now, we were asked to set up a node of that Blockchain to get started.</p>
+<p>Honestly, it is a simple job. But what an outsider does not realize is the fact that there are tons of SOPs to be dabbled with. For your reference, I managed to set up a node for personal use in an hour (I had zero experience using AWS).</p>
+<p>When it came to official usage, I had to find the person who deployed on AWS, figure out budgets, make sure that the cost of running the node does not mingle with the other programs hosted on AWS, get a KT from the vendor etc.</p>
+<p>After going through all this, I would then need someone to design a front end for us. Then, that front end would have to be tweaked multiple times to come up with an iteration that suits the legal team(s). You see where this is going right?</p>
+<p>So if you as a blockchain provider do not have the bandwidth or resources to do that, be upfront. And before you do that, please note that this could be a dealbreaker. I wonder if this platform-only model would work in the long run or not.</p>
+<h2>6. Legalities:</h2>
+<p>We love this, don't we?</p>
+<p>Typically when you reach a certain scale and size, it is hard to break things and remain under the radar at the same time. Therefore, it is kind of important to make sure that you are on the right side of the law. Always.</p>
+<p>What if you could solve that problem for your client and suggest alternatives if applicable?</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2023/03/image-2.png" /></p>
+<p><em>Contrary to the legendary meme, my net-worth depends on both these individuals</em></p>
+<p>Yes. We love a partner who can show us the path to glory amidst regulatory uncertainty.</p>
+<p>So this one time, a gentleman came up to us with a specific type of token that is exempt from taxes by the Indian government. This type of alpha just boosts your chances of getting in.</p>
+<p>We are all up for innovation, but not at the cost of hurting our business prospects. To give you some perspective, a web3 startup doing well would be at most 5 years old. Some of our group companies are almost 12 times that. So you could appreciate the stakes are a lot higher.</p>
+<h2>What Next?</h2>
+<p>I would summarize it in a way that might trigger your web3 snoot. Yes. Believe it or not. But learn from your web2 counterparts. What is wrong with the traditional outreach, discovery session and sharing how you could help? Why do you have to come out so strong on your first visit?</p>
+<p>Just on top of that, a quick basic background check of our businesses would really help. I once was approached by a smart contract audit company for business. Umm. We would probably never get into writing smart contracts ourselves.</p>
+<p>If you think this is a harsh stance on the already fragile ecosystem, it is for our own good. Once again, I am a huge proponent of finding the middle ground. These worlds look different but the ultimate aim is to merge them into one.</p>
+<p>To drive this thought home, here are some of the areas where an enterprise stands to benefit from its web3 peers:</p>
+<ul>
+<li>Access to a newer set of audience. Web3 is young. Some <a href="https://www.banklesstimes.com/web3-statistics/">statistics</a> suggest that 20% of GenZ and 18% of Millennials are interested in web3 as compared to only 11% of GenX.</li>
+</ul>
+<p>A brand’s strength is defined by its longevity. In fact, a brand-building exercise typically takes decades if not less. And the name of the game is to stay relevant at all times. Web3 is an opportunity to tap into that.</p>
+<ul>
+<li>It can also open the room for exploring newer business models. Current models for an online product revolve around milking the user data. Web3 could change that for the good.</li>
+</ul>
+<p>Gone are the days when the user base was happy being the product of the application whilst scrolling aimlessly. The upcoming generation is smart and as per a <a href="https://www.techrepublic.com/article/data-privacy-is-a-growing-concern-for-more-consumers/">report</a>, 87% people value their privacy over the experience.</p>
+<ul>
+<li>The world is evolving and the customer preference is changing. A global <a href="https://www.bcg.com/en-gb/publications/2020/pandemic-is-heightening-environmental-awareness">BCG study</a> in 2020 found that 70% of people are more aware now than before COVID-19 that human activity threatens the climate. Heightened awareness of sustainability is translating to our shopping habits–<a href="https://www.creativebrief.com/bite/trend/guest-trend/if-not-now-when-the-marketing-store">72%</a> of Gen Z and Millennial consumers now ‘prefer to buy from brands that do good.’</li>
+</ul>
+<p>For a manufacturing heavy setup, Blockchains could be a game changer owing to their ability to operate as a base layer between different participants. An additional layer of web3 on the top of it to gamify the process could help the participants like no other web2 platform.</p>
+<p>I can continue to spew out multiple facts like these but unfortunately, ideas are just a commodity. The real juice lies in execution.</p>
+<p>So gear up and get ready to get your hands dirty. Cuz this is goin to be a wild one!</p>
+<hr />
+<p><em>S/o to <a href="https://twitter.com/yashhsm/">Yash</a> for helping me edit this one!</em></p>
+<hr />
+<hr />
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

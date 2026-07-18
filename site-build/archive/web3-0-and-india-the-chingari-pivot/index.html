@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web3.0 and India: The Chingari Pivot | Raghav</title>
+<meta name="description" content="I come from two Indias. One where a mass sell-off is initiated owing to the panic created by upcoming regulation bill. A bill, that allegedly proposes banning a…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span> <span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Web3.0 and India: The Chingari Pivot</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-30</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-30 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/10/image-6.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>I come from two Indias. One where a <strong>mass sell</strong>-<strong>off</strong> is initiated <strong>owing</strong> to the <strong>panic</strong> created by upcoming regulation bill. A bill, that allegedly <strong>proposes</strong> <strong>banning</strong> all <strong>private</strong> <strong>cryptocurrencies</strong>. Other where world's <strong>greatest</strong> <strong>developers</strong> are leading the <strong>#wagmi movement</strong> at a <strong>global</strong> <strong>centerstage</strong> with their work. In today's blogpost, we are going to talk about the latter. How India is <strong>pioneering</strong> the <strong>web3.0</strong> innovation and what does future hold for us. But before that, first things first --&gt;</p>
+<h2>What is Web 3.0?</h2>
+<p>Well, this topic is so close to my heart that I covered it in detail a few days ago. If you're interested, you can give it a read <a href="https://pandatechie.in/2021/10/31/what-is-web3-0-how-is-different-from-web1-0-and-web2-0/">here</a>. For the uninitiated, let me summarize it. When <strong>internet</strong> was born back in <strong>early 90s</strong>, it was full of <strong>static</strong> <strong>web</strong> pages. There was a <strong>one way flow</strong> of the <strong>information</strong> where you could go and <strong>read</strong> something and that was it.</p>
+<p>A <strong>decade</strong> later, in 2000s, there was a shift in the course of internet with the <strong>evolution</strong> of big tech. Companies like <strong>Google</strong>, <strong>Facebook</strong>, <strong>Yahoo</strong> came up with <strong>platforms</strong> where you could <strong>interact</strong> with the internet. A <strong>two way communication</strong> was established through your <strong>likes</strong>, <strong>comments</strong>, <strong>tweets</strong> etc. Even this blogpost is a <strong>product</strong> of <strong>web2.0</strong>. It is feasible for me or anyone in the world to create a <strong>website</strong> on <strong>Wordpress</strong> and let you <strong>consume</strong> the information with a possibility of <strong>commenting</strong>, <strong>liking</strong> it.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/image-6.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/image-7.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/1-1-1024x683.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/image-6.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/image-7.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/10/1-1-1024x683.png" /></p>
+<p>About 15 years later, we are at the brink of another <strong>paradigm shift</strong>. You see, web2.0 is amazingly built. But it has some <strong>inherent issues</strong> which are stated below.</p>
+<h3>Issues with Web2.0:</h3>
+<ul>
+<li>
+<p><strong>Privacy:</strong> Where big tech controls all your data and even monetizes it by selling it to brands.</p>
+</li>
+<li>
+<p><strong>Monetization:</strong> As a consumer you have no options to monetize your time spent on the internet while viewing countless ads. As a creator, the options are limited as there are entry barriers, conditions to monetizing your work.</p>
+</li>
+</ul>
+<p><img alt="" src="https://s27389.pcdn.co/wp-content/uploads/Screen%20Shot%202015-08-26%20at%2011.31.55-937x440.png" /></p>
+<ul>
+<li><strong>Centralization:</strong> All your <strong>data</strong> is stored at a central location run by companies like <strong>Amazon, Facebook, Microsoft</strong> etc. So if this were to get <strong>breached</strong> somehow, your entire <strong>persona</strong> would go for a toss. Not to forget that these companies have and will <strong>increasingly</strong> become more <strong>powerful</strong> as they <strong>gather</strong> more <strong>data</strong> about you. Think of it like this: Facebook knows more about my <strong>likes, dislikes, relationship status, food preferences</strong> than Indian Government itself. Yes, that's when you have your SSN or Aadhar card with the government authorities.</li>
+</ul>
+<h3>Enter Web 3.0:</h3>
+<p>Web 3.0 tries to take care of the aforementioned issues, at scale. With <strong>blockchain</strong> as it's <strong>backbone</strong>, web3.0 aims to provide us with a <strong>decentralized</strong> version of <strong>internet</strong> that doesn't rely on <strong>snooping</strong>. In my opinion, it wouldn't be wrong to call <strong><em>web 3.0 a business model disruption</em></strong>. Let's take that up with an example.</p>
+<p><img alt="" src="https://media0.giphy.com/media/Xtg9ygGsjvouF7vZ1w/giphy.gif" /></p>
+<p>Creators of Mozilla and Java script ventured into web3.0 by creating a browser called Brave. Unlike big tech like Google and Facebook, <strong>Brave doesn’t track</strong>you all over the <strong>internet</strong>to gather data about your preferences. As a matter of fact, if you are viewing this on <strong>Brave browser</strong>, you will get<strong>no ads</strong>. However, I can still get <strong>paid</strong>because I <strong>signed up</strong>for the <strong>creator program</strong>.</p>
+<p>As a user of Brave browser, you have full control of how many ads you want to see from <strong>10 per hour down to ZERO.</strong></p>
+<p><img alt="" src="https://i2.wp.com/brave.com/wp-content/uploads/2021/09/image1-1-1024x583.png?resize=459%2C260&amp;ssl=1" /></p>
+<p>So here’s the secret sauce. Unlike Google and Facebook which invade your privacy in the name of targeted advertisement, Brave approaches this by <strong>tracking user attention</strong>and <strong>engagement</strong>in real time. They track what <strong>tabs</strong>are you <strong>working</strong>on and how you are <strong>interacting</strong>with each of them. This data is not sent back to some <strong>centralized</strong> server.</p>
+<p>This enables Brave to learn what kind of ads need to be shown basis your <strong>consumption</strong>of <strong>particular</strong> <strong>type</strong>of <strong>content</strong>. For example, if you are like me, you’d get <strong>crypto specific ads</strong> all the time. All of this is yet again powered by a crypto called Basic Attention Token.</p>
+<p><em>Brands use BAT to pay creators to run ads for their brand and a part of it is given the the actual user because he paid attention to the ad. In a nutshell, you just changed the entire ad ecosystem.</em></p>
+<h2>India and Web 3.0</h2>
+<p>Amidst the <strong>regulatory</strong> <strong>uncertainty</strong>, Web 3.0 seeds in India started to bear fruits already. Since time immemorial, Indians have been known for their <strong>technical know-how</strong>. However, a major chunk of them were stuck in working in a <strong>support</strong> <strong>function</strong> for their <strong>US, EU</strong> counterparts. Remainder of them <strong>left</strong> our <strong>country</strong> to head biggest S&amp;P 500 companies like <strong>Microsoft</strong>, <strong>Twitter</strong>, <strong>Google</strong>, <strong>Adobe</strong> etc.</p>
+<p>But this time, things were a quite different.</p>
+<p>We weren't just a bunch of <strong>HODLERs</strong> but also <strong>BUIDLERs</strong>. For some perspective let's first dive deeper into how creator economy is doing in India:</p>
+<h3>Creator Economy:</h3>
+<p>As per YouTube, it has seen <strong>over 60% year-on-year increase</strong> in the <strong>number</strong> of <strong>channels</strong> which <strong>earn</strong> more than <strong>Rs. one lakh</strong> in <strong>revenue</strong>, as of June 2021. Besides rise in revenue, many of these creators have witnessed an <strong>increase</strong> in <strong>subscriber</strong> base. More than <strong>140 channels</strong> have crossed <strong>10 million subscribers</strong> in India, while more than <strong>4,000 channels</strong> have over <strong>one million</strong> subscribers, as of June 2021.</p>
+<p><img alt="" src="https://media4.giphy.com/media/13Nc3xlO1kGg3S/giphy.gif" /></p>
+<p>It is evident that when you give <strong>one of the world's cheapest internet to one of the world's largest populations</strong>, people are bound to play along. With <strong>lockdown induced viewership</strong>, content <strong>consumption</strong> has <strong>jumped</strong> manifold. It is evident with the <strong>current</strong> <strong>trend</strong> that India will emerge as the biggest player in <strong>educational</strong> and <strong>personal</strong> <strong>development</strong> related content on the internet.</p>
+<p>Therefore, if native companies stick to basic models of revenue generation based on <strong>ads</strong>, it will be extremely difficult for them to survive. Why? Because as discussed above, these ads rely on <strong>scavenging</strong> the <strong>user</strong> <strong>information</strong> to show them the relevant stuff.</p>
+<p>Which is why you would now see YT pivoting to models like <strong>super chat, subscription</strong> for content creators. However, a bigger piece of user is still being ignored here.</p>
+<h2>Chingari: India's First Mainstream Web 3.0 Transition</h2>
+<p>When <strong>Tiktok</strong> was banned in India, it paved the way for multiple similar applications. However, none of them could make it as big as Tiktok. Why? Because Tiktok, by <strong>design</strong> was meant to be <strong>addictive</strong>. There was a set of <strong>psychiatrists</strong> and <strong>neurobiologists</strong> in the <strong>development</strong> <strong>team</strong> of the product that worked on how to make the platform addictive.</p>
+<p>This is outright <strong>unethical</strong>. How is this different from someone <strong>duping</strong> you into taking <strong>drugs</strong>?</p>
+<p>However, one platform rose the occasion and decided to put an end to all of this forever. Chingari, led by Sumit Ghosh, became first existing <strong>social media platform</strong> to <strong>pivot</strong> from <strong>web 2.0 to web 3.0</strong>.</p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/r3HEhQRu-lP6H7xImKvwBTa0GBuDTGDqEm1lddmJlzBEiazMrbpaOfgwDPSEDKQBt9A" /></p>
+<h3>Revenue Models:</h3>
+<p>Starting December 5th, if you are on Chingari, there'll be <strong>no ads</strong>. How do they generate revenue then you ask? Well, there are multiple streams instead of just one:</p>
+<p><strong>A.</strong> All <strong>creators</strong> would be <strong>incentivized</strong> to make videos in the form of <strong>$GARI</strong> token. So you are helping the <strong>people</strong> who run the <strong>platform</strong>, generate <strong>wealth</strong>. More work they do, more wealth they generate.</p>
+<p><img alt="" src="https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/j8axmkdulkssnomg_1634442495.jpeg" /></p>
+<p><strong>B</strong>. Each of the short video can be <strong>minted</strong> into an <strong>NFT</strong> and users could now buy it. Finally, a <strong>user</strong> has skin in the game. They can <strong>participate</strong> in the entire <strong>ecosystem</strong> instead of just <strong>liking/commenting</strong> on the video.</p>
+<p><strong>C.</strong> Users could also send <strong>$GARI</strong> tokens to their favorite small <strong>creators</strong> to get better equipment etc. In effect, betting on their future. In return, they could get a share of the <strong>creator's revenue</strong> in the <strong>future</strong>.</p>
+<p>D. On the top of all transactions, <strong>$GARI</strong> charges a <strong>facilitation</strong> <strong>fee</strong> which becomes there <strong>source</strong> of <strong>revenue</strong>.</p>
+<p>If this model succeeds, we could see a lot more shifts. Why? Because every player of the ecosystem has skin in the game. If the platform booms, I won't be surprised if $GARI is HODL'd by general public which isn't even there on the platform.</p>
+<h2>Conclusion:</h2>
+<p>The crypto industry could add $184 billion dollars of economic value to India by 2030, says a report published by the National Association of Software and Services Companies (NASSCOM) in India. With the right policies, India is extremely well positioned to allow the revolution in information technology to improve India’s citizens’ quality of life, creating jobs and reinvigorate the economy.</p>
+<p>We have already seen Indian exchanges like <a href="http://coindcx.com">CoinDCX</a> achieving the coveted Unicorn status. And I think we are just getting started here.</p>
+<p>I am rooting for this revolution. Are you game?</p>
+<p>https://www.instagram.com/p/CW7eZnNIdXk/</p>
+<p>This blog post is part of the blog challenge ‘Blogaberry Dazzle’ hosted by <a href="https://www.blogaberry.com/">Cindy D’Silva</a> and <a href="https://nooranandchawla.com/">Noor Anand Chawla</a> in collaboration with <a href="https://tinyurl.com/Blogaberry">Mojo Box – A great way to sample brands before buying them</a>.</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

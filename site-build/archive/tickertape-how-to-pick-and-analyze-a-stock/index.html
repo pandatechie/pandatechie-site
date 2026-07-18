@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tickertape: How to Pick and Analyze a Stock | Raghav</title>
+<meta name="description" content="For succeeding in stock markets, one needs to master fundamental and technical analysis. Fundamental analysis deals with the underlying value of the company. Th…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">TECHNOLOGY TRENDS</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Tickertape: How to Pick and Analyze a Stock</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-04-23</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-04-23 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://static.toiimg.com/thumb/msid-71956830,width-1200,height-900,resizemode-4/.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>For succeeding in stock markets, one needs to master <strong>fundamental</strong> and <strong>technical</strong> <strong>analysis</strong>. Fundamental analysis deals with the <strong>underlying</strong> <strong>value</strong> of the company. This includes monitoring of <strong>performance</strong> <strong>indicators</strong> like <strong>revenue</strong>, <strong>profits</strong>, <strong>debt</strong>, <strong>cash flow</strong> etc. Once you have doubled down on the stock you plan to buy, you move to <strong>technical</strong> <strong>analysis</strong>. This deals with the timing of <strong>entry/exit</strong> of the stock basis parameters like <strong>moving averages, volumes, momentum</strong> etc.</p>
+<p><img alt="" src="https://static.toiimg.com/thumb/msid-71956830,width-1200,height-900,resizemode-4/.jpg" /></p>
+<p>Let's understand this using a real life example. You plan to buy an <strong>Air conditioner</strong> for your home. You start your search with the <strong>fundamental</strong> <strong>analysis</strong>. <strong>Tonnage</strong>, Window or Split (<strong>type</strong>), <strong>electricity consumption</strong> rating, <strong>brands</strong>, <strong>reviews</strong>, after sales <strong>service</strong> and what not. Finally you decide that you plan to buy a <strong>Voltas AC</strong>. Now, you don't buy it immediately after that. You think of a correct time of purchase. May be you get a <strong>good discount</strong> as the season draws towards it's end (you might be planning for next year), you might be looking forward to that <strong>Holi/Diwali</strong> sale on Amazon. May be there's an additional <strong>cashback</strong> on your bank's credit card etc. You also ask your friend about the <strong>price he got it for</strong>. All this is equivalent to a technical analysis.</p>
+<p>Why am I telling you all this? Because today's topic of the <strong>blogpost</strong> is a <strong>fintech</strong> <strong>platform</strong>, that aims to <strong>simplify</strong> this <strong>entire</strong> process for you. <strong>Tickertape</strong>, a <a href="https://pandatechie.in/2021/04/22/what-is-smallcase-should-you-go-for-thematic-investment-2/">smallcase</a> owned company, has this amazing product which is perfect for <strong>beginners</strong> and <strong>professionals</strong>, alike.</p>
+<h2>What is Tickertape?</h2>
+<p><a href="https://www.tickertape.in/">Tickertape</a> is a suite of products available <strong>online</strong> that helps you with various <strong>aspects</strong> of <strong>decision making</strong> while <strong>investing</strong> in <strong>stock market</strong>. The most famous products out of these are <strong>screener</strong> and <strong>market mood indicator (MMI)</strong> (More on these in a while). Tickertape provides <strong>data</strong>, <strong>information</strong> &amp; <strong>content</strong> about Indian <strong>stocks</strong>, <strong>ETFs</strong> &amp; <strong>indices</strong>. It is a new age screener tool built specifically for a <strong>crisper</strong>, <strong>concise</strong> and <strong>quick</strong> analysis of stocks in a particular <strong>basket</strong>.</p>
+<p><img alt="" src="https://aliceblueonline.com/ticker-tape/logo.jpg" /></p>
+<p>This tool is <strong>funded</strong> and invested by <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha</a>. For those who don't know, Zerodha is India's largest stock broker. A bootstrapped company that turned into a unicorn a few months ago. If you follow any of the finance bloggers (creating content on stock market) on the internet (including YouTube, Wordpress and Instagram), you would find almost <strong>all of them using tickertape.</strong> After all who doesn't love a product that <strong>simplifies</strong> a <strong>complicated</strong> job.</p>
+<h2>Why Tickertape?</h2>
+<p>Although company has not confirmed this officially, I think the name '<strong>tickertape</strong>' has to do with the <strong>old school method</strong> of <strong>tracking</strong> <strong>stocks</strong>.</p>
+<p>Back in the day, <strong>Ticker Tape referred to the ribbon of paper or electronic representation of price quotes that appear in a linear fashion, providing market information to investors</strong>. Ticker tape first appeared as part of 19th-century ticker devices that <strong>printed stock symbols and numeric data</strong> to convey <strong>information</strong> about <strong>trades</strong> and <strong>prices</strong> via information transmitted over telegraph wire. (<a href="https://www.investopedia.com/terms/t/tickertape.asp">Source</a>).</p>
+<p><img alt="" src="https://www.investopedia.com/thmb/n0lhL8m1jW6WnVcNUczavTgF9b8=/1024x768/filters:no_upscale():max_bytes(150000):strip_icc()/StockTicker-56a6d22f3df78cf772906872.jpg" /></p>
+<p>Tickertape Machine</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-22.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-23.png" /></p>
+<p>Tickertape Machine Printing</p>
+<p>In today's world, tickertape is <strong>completely electronic</strong>. However, when it wasn't, the machine used to make the "<strong>tick-tick</strong>" sound while printing. Hence the name.</p>
+<h2>Tickertape Products:</h2>
+<p>Coming back to the star of our blogpost, modern day tickertape. As mentioned earlier, key offerings of tickertape are screener and Market Mood Index. Let's see what they have in store for us:</p>
+<h2>1. Market Mood Index (MMI)</h2>
+<blockquote>
+<p>Be greedy when others are fearful and be fearful when others are greedy.</p>
+<ul>
+<li>Warren Buffet</li>
+</ul>
+</blockquote>
+<p>While it may sound absurd to a <strong>beginner</strong>, this quote by Warren Buffet <strong>encapsulates</strong> the <strong>crux</strong> of stock <strong>market</strong> investing. The best time to <strong>pick up</strong> the right <strong>stocks</strong> is when everyone is selling in the <strong>panic</strong> <strong>mode</strong>. You can get the stock of your choice at the right price this way.</p>
+<p><strong>Market mood index</strong> will help you <strong>gauge</strong> this metric. While looking at the <strong>data</strong> for a <strong>single day</strong> may not cull out meaningful <strong>insights</strong>, if you <strong>track</strong> it over a <strong>period</strong> of <strong>time</strong>, you may be able to <strong>formulate</strong> a <strong>trend</strong> and hence taking better <strong>investing</strong> <strong>decisions</strong>.</p>
+<p>Not only this, each <strong>sentiment</strong> is also <strong>explained</strong> in the tool so that a relatively new investor knows the <strong>significance</strong> of each mood.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-18.png" /></p>
+<p>MMI</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-19.png" /></p>
+<h2>2. Screener:</h2>
+<p>When I first found this feature, I instantly fell in love with it. It is super handy to know all the key details of the stock.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-20-1024x438.png" /></p>
+<p>Screener UI: Stock Overview</p>
+<p>In the overview of the stock, you would get some basic information about the stock:</p>
+<ul>
+<li><strong>Intrinsic Value:</strong> Analysts at tickertape would guess an <strong>intrinsic value of the stock</strong>. Basis that value, it is suggested if the <strong>stock is overpriced</strong> right now or not.</li>
+<li><strong>Returns Vs FD:</strong> Duh! FD's are the investment instruments with <strong>lowest yields</strong> after a savings account. So, if you are putting your money into a <strong>relatively risky instrument</strong>, it is imperative that the <strong>stock should earn more than the FDs</strong> at least.</li>
+<li><strong>Dividend Returns:</strong> Dividends are like <strong>rewards</strong> paid to the investors/<strong>shareholders</strong> from the <strong>earnings</strong> of the company. A red signal here means that this company doesn't pay significant dividends. A good dividend paying company indicates strong future growth prospects.</li>
+<li><strong>Entry Point:</strong> This shows if the stock is in overbought or underbought zone.</li>
+</ul>
+<p>Other section includes features like <strong>financials</strong> that have all the <strong>key</strong> <strong>ratios</strong> for the company for a <strong>period</strong> of <strong>10 years</strong>. Apart from the key ratios, there are some key <strong>insights</strong> <strong>drawn</strong> from them for your perusal. You may also chose to download company's <strong>annual</strong> <strong>reports</strong> and investor's <strong>presentations</strong> from the same area.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/04/image-21.png" /></p>
+<p>Financials of a company</p>
+<h2>Conclusion:</h2>
+<p>Although tickertape is completely free to use, some of the features are available only in the <strong>pro mode</strong>. Plans for pro are pretty <strong>economical</strong> given the <strong>value</strong> it adds to your life. A typical plan would cost you a meagre Rs. 100 per month. If you like a <strong>stock</strong> while analyzing, you can place an <strong>order</strong> for the same straight from the tickertape app/website. It seamlessly connects with all the key brokers. There is a possibility of doing a competitive analysis as well if need be.</p>
+<p>So, what are you waiting for? Go ahead and boast your analytical skills right away. But before that, let me know your stock of interest.</p>
+<p>This blogpost is in association with <a href="https://www.theblogchatter.com/">Blogchatter's</a> #BlogchatterA2ZChallenge</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

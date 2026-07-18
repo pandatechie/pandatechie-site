@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why is Bitcoin Deflationary? | Raghav</title>
+<meta name="description" content="Enough of discussion around this right? Every one keeps on saying that Bitcoin is valuable because it is a deflationary asset. Influencers across the social med…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Why is Bitcoin Deflationary?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-08-02</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-08-02 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://cdn.corporatefinanceinstitute.com/assets/deflation-1-1024x499.jpeg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Enough of discussion around this right? Every one keeps on saying that <strong>Bitcoin is valuable because it is a deflationary</strong> asset. <strong>Influencers</strong> across the <strong>social</strong> <strong>media</strong> would make sure that they <strong>feed</strong> this <strong>idea</strong> of BTC being <strong>fixed in supply</strong> to you. However, do we really know what it means? I don't have any <strong>economics</strong> or <strong>finance</strong> background. Therefore, I clearly didn't <strong>understand</strong> what these <strong>influencers</strong> were talking about. So, I did what most people don't do: <strong>DYOR</strong>. "Do your own research" to actually find these answers. And through this blogpost, I would love to help you out with the same. Why is Bitcoin Deflationary? What is <strong>deflationary</strong> after all? Well, wait no more. Let's jump right in:</p>
+<h2>What is Deflationary:</h2>
+<p><strong>Deflationary</strong> is derived from the word '<strong>deflation</strong>'. Deflation means a prolonged <strong>decrease</strong> in <strong>prices</strong> of <strong>goods</strong> and <strong>services</strong> over a period of time. It is usually <strong>characterized</strong> by a <strong>decrease</strong> in <strong>demand</strong> and hence a <strong>non desirable</strong> event in the economy.</p>
+<p><img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/deflation-1-1024x499.jpeg" /></p>
+<p>However, in case of <strong>Bitcoin</strong> the deflation refers to the fact the <strong>purchasing power</strong> of people increases as the time progresses. In other words, the asset that they hold is <strong>growing</strong> more in terms of <strong>intrinsic</strong> <strong>value</strong> as compared to the <strong>rate at which inflation</strong> is growing.</p>
+<h2>What is Inflation:</h2>
+<p>Well, there are no surprises for guessing this one. It is the other end of the spectrum. Inflation refers to <strong>increase</strong> in the <strong>price of goods</strong> or <strong>services</strong> (or decrease in the value of the currency that you are holding) over a period of time. My <strong>grandfather</strong> likes to talk about when he started his <strong>job</strong> back in <strong>1968</strong>. His first <strong>paycheck</strong> was worth <strong>Rs. 175</strong> (inclusive of all deductions).</p>
+<p>Soon after getting married, he got first <strong>gas connection</strong> for our home. The <strong>cylinder</strong>, <strong>gas stove</strong> and <strong>regulator</strong> (with rubber pipe) costed him <strong>Rs. 25.</strong> Today, the same amount would fetch you a <strong>packet</strong> of <strong>Lay's</strong> which might be <strong>more air</strong> and <strong>less chips</strong>.</p>
+<p>You kind of get the idea right? Our money lost it's value to the extent that I recently had to shell out <strong>Rs. 3500</strong> for a <strong>similar setup</strong> in <strong>Gurugram</strong>. That's a <strong>100x devaluation</strong>.</p>
+<h2>But Why Does Inflation and Deflation Happen?</h2>
+<p>I will not go into economical concepts of <strong>demand pull</strong> and <strong>cost push inflation</strong>. Just putting out these words here to look smart.</p>
+<p>We would try to understand this using a small <strong>oversimplified</strong> example.</p>
+<p>There is a sale at Lifestyle. You buy this amazing <strong>T-Shirt</strong> at a bargain price. You are so happy because you have made a <strong>fantastic decision</strong>. The shirt was <strong>originally</strong> worth <strong>Rs. 1800</strong> and you got it just for <strong>Rs. 900</strong>. Soon after a few days, you decide to <strong>visit a concert</strong> (pre pandemic blues much?). What better occasion to <strong>flash</strong> that <strong>amazing tee</strong> right? But at the concert, you find <strong>6 other boys wearing the exact same T-shirt</strong>.</p>
+<p>Do you still <strong>value</strong> that shirt @900? I think there might be a case that <strong>you don't wear it again</strong>. Ever. Thus reducing it's value to zero. If you are not <strong>bought</strong> in by this example, <strong>replace</strong> yourself with your <strong>significant</strong> other. It'll all make sense.</p>
+<p>So what do we learn? <strong>More the supply of something, lesser is it's value (given that demand is constant)</strong>.</p>
+<p>The same has happened with INR as well. The government time and again <strong>prints more money</strong> which runs a <strong>risk</strong> of <strong>devaluing</strong> it. The latest example of such an incident is <strong>during the pandemic</strong>, when <strong>government</strong> was forced to <strong>push money</strong> into the <strong>system</strong> to <strong>kickstart</strong> economy.</p>
+<p>Now, on the contrary, you can take the example of <strong><a href="https://pandatechie.in/2020/10/22/is-it-the-right-time-to-buy-gold-how-to-invest-in-gold/">Gold</a></strong>. Since it is <strong>fixed in quantity</strong> globally, <strong>increase</strong> in <strong>demand</strong> only <strong>pushes</strong> it's price <strong>up</strong>. As a result, gold is also a deflationary asset.</p>
+<h2>But what about Bitcoin?</h2>
+<p>You must have heard someone saying that Bitcoin is fixed in supply at <strong>21mn</strong>. But how is that possible? The answer lies in the intricate design of BTC which we are going to discuss in the next section.</p>
+<h2>The Magic Behind:</h2>
+<p>As we know that people <strong>validate blockchain transactions</strong> to win <strong>Bitcoin</strong> as a <strong>reward</strong> or <strong>incentive</strong> to do so (if you wish to dig in deeper on how Bitcoin works, please read <a href="https://pandatechie.in/2021/07/29/how-does-bitcoin-work/">this</a>). So, the only way to earn Bitcoin is:</p>
+<p>A. If <strong>someone gives it to you</strong>, in which case they lose it.</p>
+<p>B. If you <strong>mine the bitcoin</strong> by validating transactions.</p>
+<p>But if everyone who is <strong>mining gets BTC for validating</strong> the transaction, isn't <strong>new BTC</strong> entering the system <strong>constantly</strong>. This would make it a <strong>inflationary</strong> asset right?</p>
+<p>Here's where things get spicy.</p>
+<p>Luckily enough, the creator(s) of BTC, Satoshi Nakamoto thought of this problem. So, the <strong>reward earned</strong> for mining <strong>Bitcoin</strong> keeps on <strong>reducing</strong> at a <strong>steady</strong> rate.</p>
+<p>This reward has decreased as per the following rate:</p>
+<ul>
+<li>
+<p>2008-2012: <strong>50</strong> Bitcoins per block</p>
+</li>
+<li>
+<p>2012-2016: <strong>25</strong> Bitcoins per block</p>
+</li>
+<li>
+<p>2016-2020: <strong>12.5</strong> Bitcoins per block</p>
+</li>
+<li>
+<p>2020 till data: <strong>6.25</strong> Bitcoins per block</p>
+</li>
+</ul>
+<p><img alt="" src="https://i2.wp.com/pandatechie.in/wp-content/uploads/2021/07/image-14.png?resize=768%2C370&amp;ssl=1" /></p>
+<p>As you can see, that <strong>reward</strong> for mining gets <strong>halved</strong> every <strong>4 years</strong>. Therefore, theoretically, after the <strong>year 2140</strong>, there would be <strong>no new bitcoin rewards</strong> for <strong>validating</strong> a <strong>transaction</strong>.</p>
+<p>At that time, the <strong>circulating supply</strong> of BTC would be equal to the <strong>max supply</strong> of Bitcoin i.e. <strong>21 million</strong>.</p>
+<h2>Conclusion:</h2>
+<p>While I often find myself blown away with the nuances that were taken care off by Satoshi Nakamoto, I think it is a must have when you are set to overthrow the existing global economic system.</p>
+<p>Will BTC ever be able to do that? May be time will tell. But does it have all the tools required to do so? Hell yeah!</p>
+<blockquote>
+<p>If you forget your secret key to Bitcoin Wallet for 20 years, it would still buy you more than what it could buy today.</p>
+<p><a href="http://twitter.com/share?&amp;text=If%20you%20forget%20your%20secret%20key%20to%20Bitcoin%20Wallet%20for%2020%20years%2C%20it%20would%20still%20buy%20you%20more%20than%20what%20it%20could%20buy%20today.%20&amp;url=https://pandatechie.in/2021/08/02/why-is-bitcoin-deflationary/">Tweet</a></p>
+</blockquote>
+<p>So, what do you think about this piece of technology which tries to solve multiple problems with one solution?</p>
+<p>https://www.instagram.com/p/CQ262_lLkWj/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

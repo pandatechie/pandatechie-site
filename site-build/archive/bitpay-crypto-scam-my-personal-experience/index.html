@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitpay Crypto Scam: My Personal Experience | Raghav</title>
+<meta name="description" content="The growth of crypto market has been phenomenal in the post pandemic era. Even the people who exhibit patience and discipline of the highest order, felt the FOM…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Bitpay Crypto Scam: My Personal Experience</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-10</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-10 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.investopedia.com/thmb/Tdghp5QTVMe2B8dQ4Rj2iWh9CbQ=/2218x1352/filters:fill(auto,1)/GettyImages-1050228750-78b205c15493434ca0fda93a37b0d095.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>The <strong>growth</strong> of crypto market has been <strong>phenomenal</strong> in the post pandemic era. Even the people who exhibit <strong>patience</strong> and <strong>discipline</strong> of the highest order, felt the <strong>FOMO</strong> for real. In one of his interviews, <strong>Nikhil Kamath</strong> (Founder, <a href="https://pandatechie.in/2021/04/13/kite-zerodhas-disruptive-fintech-platform/">Zerodha</a>), went on record to mention that if he could <strong>change</strong> one thing by going <strong>back</strong> in time, it would be <strong>NOT</strong> <strong>purchasing</strong> <strong>Bitcoin</strong>. But with <strong>exuberance</strong>, we also see some <strong>low lives</strong> entering into the market. The <strong>scammers</strong> and <strong>fraudsters</strong> are a part of any <strong>booming</strong> ecosystem. And crypto markets are specifically <strong>notorious</strong> for that. So today, I wanted to share my <strong>experience</strong> with one such pathetic individual. Here's how I identified a <strong>Bitpay crypto scam</strong> and got out of it <strong>safely</strong>. I would share a few <strong>tipping</strong> <strong>points</strong> that screamed of a <strong>scam</strong> all along the conversation. Let's get started.</p>
+<p><img alt="" src="https://www.investopedia.com/thmb/Tdghp5QTVMe2B8dQ4Rj2iWh9CbQ=/2218x1352/filters:fill(auto,1)/GettyImages-1050228750-78b205c15493434ca0fda93a37b0d095.jpg" /></p>
+<h2>The Discovery:</h2>
+<p>I was minding my own business and grappling with my office work when a <strong>notification</strong> caught my attention. It was one of those pretty notifications where <strong>Instagram</strong> asks you if you want to <strong>receive</strong> a <strong>message</strong> from an unknown person. I have had some brand deals in the past via this route so I usually get super excited when this happens. I left my work and <strong>instantly</strong> <strong>opened</strong> this <strong>notification</strong>. It was a message from a lady with <strong>Instagram ID</strong> as <strong>debby_m07</strong>. It was a very decent <strong>"Hey Dear"</strong> to open the conversation.</p>
+<p><img alt="" src="https://images.thequint.com/thequint/2015-09/2e44654a-f812-497d-8ddf-e70e6fd03d8d/bakra.jpg?%20%20%20%20%20%20%20%20%20%20%20%20%20%20auto=format,compress&amp;fmt=webp&amp;format=webp&amp;w=1200&amp;h=900&amp;dpr=1.0" /></p>
+<p>Finding ~~Nemo~~ Bakra</p>
+<p>So, I immediately decided to reply. Acting <strong>"hard to get"</strong>? Not my thing! So she starts off with a very normal conversation. Asks me <strong>where</strong> I am from. Slowly she slides into the topic of <strong>cryptos</strong>. Then she goes on to ask me if I am <strong>crypto</strong> <strong>oriented</strong>. I ask myself who even uses that <strong>term</strong>, anymore. It's not like a sexual preference. But with no further judgement, I reply with a '<strong>yes</strong>'.</p>
+<h2>The Setup:</h2>
+<p>After my <strong>"Yes"</strong>, there is complete silence for next <strong>90 minutes</strong>. Acting "Hard to get"? Well, she knows it! After that <strong>drops</strong> in a <strong>question</strong> asking if I am into <strong>mining</strong> or <strong>trading</strong>. She also mentions that she is into both, but prefers more of <strong>mining</strong>. In continuation, she mentions the following:</p>
+<p><em>"It’s a new generation of mining, which doesn’t require you surging huge amount of electricity</em>"</p>
+<p>I ask her if the consensus mechanism is based on '<a href="https://pandatechie.in/2021/09/05/what-is-hash-function-in-blockchain-how-is-it-used-in-proof-of-work/">Proof of Work</a>' or 'Proof of Stake' or something else!</p>
+<p><strong>ALARM 1:</strong></p>
+<p>The term "new generation" was kind of odd for me. Cryptocurrency is about 10 years old. What's this next GENERATION thing? Also, she choses not to respond to my question and go on.</p>
+<p><em>"This is popularly known as </em><em>Bitcoin</em><em> and </em><em>Cryptocurrency</em><em> </em><em>mining</em><em> and it allows you to make </em><em>Profit</em><em> with every </em><em>investment</em><em> you make to your </em><em>Mining</em><em> </em><em>wallet</em><em> which will mine to a </em><em>stipulated</em><em> period of time (A complete mining cycle) so as to generate your </em><em>ROI</em><em>.</em>"</p>
+<p>"<em>We work with </em><em>advanced security protocol</em><em> requiring just an </em><em>email address</em><em> to get registered, afterwards you would be </em><em>delivered</em><em> a private </em><em>mining</em><em> </em><em>wallet</em><em> from </em><em>Bitpay</em><em>. You would have to </em><em>verify</em><em> and </em><em>secure</em><em> this wallet first, Before proceeding."</em></p>
+<p><img alt="" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/crypto_mining.jpg?aEUBe4AJmS20kf017a85sF6GFd_TTu64&amp;size=770:433" /></p>
+<p><strong>ALARM 2:</strong></p>
+<p>This is popularly known as Bitcoin and Cryptocurrency mining? Seriously? I wonder what the non-popular term for Bitcoin mining would be!   </p>
+<p>Delivering a private mining wallet? It's not a physical thing. And for the uninitiated, anyone can open account on Bitpay, you don't have to get it 'delivered'</p>
+<h2>The Build Up:</h2>
+<p>What did I do next? Obviously, I <strong>played</strong> <strong>along</strong>. She now asks me if I want to do a <strong>minimum</strong> <strong>investment</strong> and <strong>withdraw</strong> my <strong>profits</strong> from it, directly into my <strong>wallet</strong>.</p>
+<p>"Hell yes"</p>
+<p><img alt="" src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/cdef3a7f-b714-4d6e-804b-90741b4c6124/1484960896/bitpay-secure-bitcoin-wallet-screenshot.png" /></p>
+<p><em>"Our platform will efficiently manage a profitable mining profile for you which allows you to Mine directly with your Wallet without sending money to anyone nor to me.</em></p>
+<p><em>This option allows your investment to stay with you. We mine all type of Cryptocurrency using my hardware that was issued and licensed to me by the authorities."</em></p>
+<p>ALARM 3:</p>
+<p>What platform? You don't own Bitpay woman!</p>
+<h2>The Execution:</h2>
+<p>I got bored real soon. Therefore, I quickly wanted to jump into the <strong>modus operandi</strong>. So I go on and ask her about the <strong>initial</strong> <strong>investment</strong>. To my surprise, I am presented with a <strong>couple</strong> of <strong>options</strong>. "Short term or long term", she asks? When I chose the long term option she quoted a price of <strong>$500</strong>.</p>
+<p>And my wallet was ready to be <strong>imported</strong>. Quick service right?</p>
+<p>That woman now asks me to share the <strong>screenshots</strong> at each <strong>step</strong> of <strong>transaction</strong> because she doesn't want me to make any <strong>mistake</strong>. How considerate!</p>
+<p>I am asked to install <strong><a href="https://play.google.com/store/apps/details?id=com.bitpay.wallet&amp;hl=en_IN&amp;gl=US">Bitpay</a></strong> and click on <strong>import</strong> button. I am asked to put the following <strong>12 word phrase</strong> there:</p>
+<p>"<em>banner angle danger vibrant chronic energy west undo foam season gym good"</em></p>
+<p>Alarm 4:</p>
+<p>For the uninitiated, most of the crypto wallets like <strong>Bitpay</strong>, <strong>Metamask</strong>, <strong>Trust</strong> <strong>wallet</strong> are secured using a 12 word <strong>unique</strong> <strong>phrase</strong> called <strong>seed</strong> <strong>phrase</strong>. You see, in a <strong>decentralized</strong> <strong>world</strong>, there's no <strong>central authority</strong> that will help you <strong>recover your lost password</strong>. Therefore, this 12 word phrase is used to <strong>recover/import</strong> your wallet to <strong>another</strong> device.   </p>
+<p>What she was trying to do is <strong>import her empty wallet in my phone</strong> and then asking me to <strong>load</strong> it with <strong>$500</strong> worth of BTC.</p>
+<p>I import the wallet. Just to have fun, I tell her that can we also do this in <strong>Metamask</strong> wallet? Because I already have it <strong>setup</strong> and <strong>$500 are already loaded</strong> in it. Why won't she agree. I propose to tell her the 12 word seed phrase.</p>
+<p>"<em>screw lowlife debby ruin her scam rot in hell dumb potato</em>"</p>
+<p>And that was it. Her <strong>cover</strong> was <strong>blown</strong>. The <strong>adrenaline</strong> <strong>rush</strong> she might be having while she <strong>dreamt</strong> of <strong>$500</strong>, was crushed.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-2.png" /></p>
+<p>What happened next? Find it for yourself (Screenshot).</p>
+<h2>Conclusion:</h2>
+<p>If you are dealing in cryptocurrencies, these scams are nothing new. You would always find people who are trying to siphon off money from the ones who are looking to make a quick buck. The only way to save oneself is to question your every move. If you are getting insanely high returns with very little risk, start by doubting yourself. As they say, when it comes to investing, boring is often the best strategy.</p>
+<p>The next day I came across this gentlemen with a similar scheme. However, this time I wasn't free. Therefore, I tried to settle it rather calmly.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-3.png" /></p>
+<p>Have you ever been duped online?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

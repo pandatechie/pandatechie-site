@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Metaverse and it’s Future?: What Makes Metaverses Valuable? | Raghav</title>
+<meta name="description" content="It is the year 2056. There is a new virus deployed by China to take over Indian supremacy. Virus is so deadly that it would kill anyone within 72 hours who come…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is Metaverse and it’s Future?: What Makes Metaverses Valuable?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-01-16</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-01-16 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media2.giphy.com/media/eNwB16yedci1MhLut4/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>It is the year <strong>2056</strong>. There is a new <strong>virus</strong> deployed by <strong>China</strong> to take over <strong>Indian</strong> supremacy. Virus is so <strong>deadly</strong> that it would <strong>kill</strong> anyone within <strong>72</strong> <strong>hours</strong> who comes in contact with it. So, everyone is <strong>locked</strong> <strong>inside</strong> their <strong>homes</strong> with no hope of going out.</p>
+<p><img alt="" src="https://media2.giphy.com/media/eNwB16yedci1MhLut4/giphy.gif" /></p>
+<p>Now this could take another shape too. It could be <strong>climate change, general laziness</strong> to move or whatever. But one thing is for sure. <strong>World</strong> is <strong>moving</strong> towards a future where <strong>remote</strong> <strong>working</strong> will be the <strong>ONLY</strong> way to work!</p>
+<p>But hey, why are we discussing this all of a sudden? Well, to answer the question why <strong>Metaverse</strong> holds so much <strong>value</strong>, I had to paint this picture. We would go back to all of this shortly. For now, let’s understand the agenda of this blogpost. This one is <em>NOT going to be a typical explainer of Metaverse</em>. We already have so many of them floating around.</p>
+<p>In this article I want to put some <strong>rationale</strong> behind the <strong>madness</strong> that surrounds it. Why are <strong>smart</strong> <strong>billionaires</strong> <strong>investing</strong> in <strong>land</strong> that doesn’t <strong>exist</strong> in real world? Why would someone buy a <strong>digital Ferrari</strong>? All of that and in between. So let’s get started.</p>
+<h2>What is Metaverse?</h2>
+<p>Metaverse is still an <strong>amorphous</strong> idea and nobody knows for sure how things will pan out. But what we do know is that it’s an <strong>ambitious</strong> <strong>project</strong> that has the potential to change our lives forever.</p>
+<blockquote>
+<p>“What is the metaverse?” — “It’s a virtual environment where you can be present with people in digital spaces. You can kind of think of this as an embodied internet that you’re inside of rather than just looking at.”</p>
+<ul>
+<li>Mark Zukerberg</li>
+</ul>
+</blockquote>
+<p><img alt="" src="https://www.businessnewsdaily.com/images/i/000/017/338/original/zoom.jpg" /></p>
+<p>We have all experienced <strong>transition</strong> to a <strong>digital</strong> environment. More so, during the pandemic. <em>From texting “LOL” we can now actually laugh in virtual meets.</em> However, we’re still <strong>interacting</strong> with the <strong>screen</strong> right?</p>
+<p>Now, imagine you could put on a <strong>virtual</strong> <strong>avatar</strong> and meet the <strong>avatars</strong> of your <strong>friends</strong> and <strong>families</strong>. You could go on a <strong>date</strong> with your partner near the <strong>waterfall</strong>, you could play <strong>stone-paper-scissors</strong> with your <strong>cousins</strong>, you could <strong>travel</strong> <strong>anywhere</strong> in the world almost <strong>instantly</strong>. Get the picture?</p>
+<h2>But Where’s the Value?</h2>
+<p>I know, I know you are still pulling your hair in the hope of getting an answer to your <strong>value</strong> <strong>proposition</strong>. So here goes an explanation of sorts:</p>
+<p><strong>Utopian worlds</strong> like the ones promised by today’s Metaverses aren’t a new concept at all. We have been a <strong>part</strong> of this <strong>realm</strong> through <strong>games</strong> like <strong>second</strong> <strong>life</strong> and movies/tv shows like <strong>upload</strong>, <strong>Ready Player One</strong>.</p>
+<p>So why is this noise breaking all the barriers now?</p>
+<p>So it all started with <strong>NFTs</strong>. Think of it like a <strong>proof</strong> <strong>of</strong> <strong>ownership</strong> of a <strong>digital</strong> <strong>asset</strong>. This asset could be an <strong>image</strong>, <strong>video</strong>, <strong>GIF</strong>, anything that is digital. We’ve already covered NFTs on pandatechie in details from <a href="https://pandatechie.in/2021/09/26/what-is-nft-why-are-nfts-so-valuable/">here</a> and <a href="https://pandatechie.in/2021/10/03/what-are-the-uses-of-nft-top-use-cases/">here</a>.</p>
+<p><img alt="What is NFT?" src="https://pandatechie.in/wp-content/uploads/2021/09/1-1024x576.jpeg" /></p>
+<p>Now let’s go back to the situation we started with. Imagine you just purchased an <strong>expensive</strong> <strong>Rolex</strong> right before these <strong>virus/climate</strong> induced <strong>lockdowns</strong>. This watch doesn’t derive <strong>value</strong> from it’s <strong>ability</strong> to <strong>show</strong> <strong>time</strong>. Why? <em>Because any watch can do that.</em></p>
+<p><img alt="" src="https://www.jamesedition.com/stories/wp-content/uploads/2021/09/main_NL_auto_x2-1-950x628.jpeg" /></p>
+<p>But it does derive the <strong>value</strong> from the fact that it gives you <strong>ability</strong> to <strong>flex</strong>. There’s an <strong>immediate</strong> <strong>ego</strong> <strong>boost</strong> when you find someone <strong>staring</strong> at that <strong>watch</strong> in the <strong>crowd</strong>.</p>
+<p>But hey, you <strong>can’t go out</strong> no more. So what happens now? No more <strong>flex</strong>? If only there was a way to <strong>flaunt</strong> this watch <strong>digitally</strong>. If only, my <strong>digital avatar</strong>, a <strong>representation</strong> of me could <strong>wear</strong> this <strong>watch</strong>.</p>
+<p>But since it is <strong>digital</strong>, any one could <strong>copy</strong> it right? That’s where <strong>NFTs come into play</strong>. They enforce a <strong>proof</strong> of <strong>ownership</strong> for these digital assets.</p>
+<p>You could now <strong>flaunt</strong> being the owner of a <strong>classy</strong> <strong>Rolex</strong> albeit <strong>digitally</strong>. Since you can only <strong>network</strong> as <strong>avatars</strong> now, it instantly makes <strong>digital assets</strong> more valuable then their <strong>real life counterparts</strong>. I know it’s a hard to swallow pill, but it is what it is.</p>
+<h3>NFT + Metaverse:</h3>
+<p>Now let’s go back to all these <strong>virtual</strong> <strong>worlds</strong>. Imagine whatever you <strong>wear</strong>, <strong>flaunt</strong> and <strong>use</strong> in the Metaverse actually belongs to you. Not just <strong>belong</strong>, but you own it and can <strong>prove</strong> it via <strong>immutable</strong> <strong>records</strong> in the <strong>blockchain</strong>.</p>
+<p>As a result, the <strong>Metaverse</strong> now has a <strong>value</strong> attached to it. This <strong>value</strong> will <strong>appreciate</strong> as and when more and more people <strong>flock</strong> on the platform. Just like <strong>Facebook derives it’s value from the network</strong>, these platforms would become a place to be.</p>
+<p><img alt="" src="https://static.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=1190,h=595,dpr=2.0/magazine/wp-content/uploads/2018/10/Magazin-Beitragsseite_900x450-1.jpg" /></p>
+<p><strong>Brands</strong> would want to <strong>advertise</strong> on these platforms because <strong>people</strong> like to <strong>hang out</strong> there. <strong>Political</strong> <strong>leaders</strong> would <strong>push</strong> their <strong>agenda</strong>, <strong>movie</strong> <strong>stars</strong> would <strong>promote</strong> their <strong>work</strong>, <strong>content</strong> <strong>creators</strong> would <strong>publish</strong> their best work.. you get the idea. All of this happening in a virtual world deriving it’s value from people.</p>
+<h2>Is it all Theory?</h2>
+<p>For someone going through this for the first time, it does feel like a <strong>narrative</strong> rather than something of <strong>actual</strong> value. Which is why, in this section, I would share a few examples which would tell us that this is here to stay:</p>
+<ul>
+<li>
+<p><strong>American Rapper, Snoop Dogg</strong>, recently purchased land on the virtual platform named <strong><a href="https://www.sandbox.game/en/">Sandbox</a></strong>. He is currently building a <strong>digital</strong> <strong>recreation</strong> of his <strong>real-life Diamond Bar</strong>, <strong>California</strong> <strong>mansion</strong>, wherein he’ll throw exclusive, <strong>members</strong>-<strong>only</strong> <strong>parties</strong>, according to plans on The Sandbox website. There will also be a music venue for concerts.</p>
+</li>
+<li>
+<p>Not only that, insanity lies in the fact that a <strong>person paid $450,000 just to be Snoop’s neighbor</strong> (in the Metaverse of course). Sweet!</p>
+</li>
+</ul>
+<p><img alt="" src="https://miro.medium.com/max/1200/1*DZGYkKD0byFWOIhBCwlG_Q.jpeg" /></p>
+<ul>
+<li><strong>Nike</strong> just bought a <strong>virtual</strong> <strong>shoe</strong> company called <strong>RTFKT</strong> that makes NFTs and sneakers ‘for the metaverse’. <strong>RTFKT</strong> makes shoes too, except these only exist digitally.</li>
+</ul>
+<p><img alt="" src="https://data.nssmag.com/images/galleries/30079/01(1).jpg" /></p>
+<ul>
+<li><strong>Adidas</strong> has announced its next collection will be a mix of digital and physical items, and will be sold as <a href="https://pandatechie.in/2021/09/26/top-5-most-expensive-nfts-valuation-is-subjective-or-objective/">NFTs</a> produced with collaborators such as <strong>Bored Ape Yacht Club</strong> (another NFT project).</li>
+</ul>
+<p><img alt="" src="https://static.news.bitcoin.com/wp-content/uploads/2021/12/adibayc.jpg" /></p>
+<p>Very soon, most brands would hop on to the Metaverse bandwagon that would create an <strong>alternate</strong> <strong>channel</strong> for <strong>marketing</strong>. After all, you’d want to market where people are. Currently, they are moving to <strong>virtual land faster</strong> than ever.</p>
+<h2>Conclusion:</h2>
+<p>Folks out there buy a coin from an exchange like CoinDCX and think they've made it. However, this space is still 99% unexplored if you stop there.</p>
+<p>Next time you get into a fight with your friends over why you’d buy a land in a virtual world, hopefully you can make some solid arguments. However, if you still get stuck and need a solid counter, hmu!</p>
+<p>https://www.instagram.com/p/CY_yrp0vhZw/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

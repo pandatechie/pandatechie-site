@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is a Rug Pull? How Does it Work? | Raghav</title>
+<meta name="description" content="Another day, another [crypto lingo](https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/). That's what I like about this re…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is a Rug Pull? How Does it Work?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-12</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-12 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media3.giphy.com/media/js0nrD2tXm3zNIIZSW/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Another day, another <a href="https://pandatechie.in/2021/08/27/8-cryptocurrency-lingo-you-should-know-crypto-glossary/">crypto lingo</a>. That's what I like about this realm. Everyday, a Gen Z would come up with a fresh <strong>perspective</strong> and an absolutely <strong>bizarre</strong> way of representing it. One such term that we all have heard about recently, is a <strong>Rug Pull</strong>. For the uninitiated, after the immense success of <strong>Squid Games</strong>, a project on <strong>BSC</strong> was launched on a similar theme. Since it was one of the first <strong>GameFI</strong> projects on Binance Smart Chain, it immediately caught attention. Riding on the crazy hype of the Netflix Original, Squid Games token started surging. From a <strong>price of $0.012 it went up to about $2800 within 3 odd days</strong>. And then, the inevitable happened. On the third day, within <strong>5 minutes</strong>, Squid Game Token <strong>crashed</strong>. It fell down to <strong>zero</strong> within a few seconds.</p>
+<p>Events like these might <strong>shake</strong> the <strong>core belief</strong> system of the people who plan to <strong>invest</strong> in <strong>crypto</strong>. But there's an <strong>art</strong> behind how these <strong>scams</strong> are conducted. And knowing about that, we might just <strong>safeguard</strong> ourselves. Today, we are going to learn just that. What is a rug pull and how does it work?</p>
+<h2>What is a Rug Pull?</h2>
+<p>Rug Pull is a classic <strong>maneuver</strong> in <strong>cryptoverse</strong> where the <strong>developers</strong> run away with <strong>people's money</strong> once they <strong>invest</strong> in their projects. There are various ways this could be done (more about it in a while). The key issue here is that it is very <strong>difficult</strong> to <strong>differentiate</strong> between an actual <strong>project</strong> and the <strong>scams</strong>.</p>
+<p>This not only impacts the <strong>investor's wealth</strong> but also <strong>pushes normies</strong> away. Their general <strong>notion</strong> of <strong>cryptocurrency</strong> being a <strong>bubble</strong> just gets validated. Apart from that, because these <strong>incidents</strong> spread <strong>faster</strong> than the <strong>positive</strong> <strong>news</strong>, a lot more people <strong>hesitate</strong> from <strong>investing</strong> into <strong>cryptocurrencies</strong>. In a <strong>nutshell</strong>, it is a <strong>loss</strong> for the entire <strong>community</strong>. But how does a scam of such epic proportions work? For example, in the example quoted above, the people/team behind squid games was able to rake in a sweet <strong>INR 25 crores.</strong></p>
+<p><img alt="" src="https://media3.giphy.com/media/js0nrD2tXm3zNIIZSW/giphy.gif" /></p>
+<p>Let's find out what are the various modus operandi for a rug pull.</p>
+<h2>A. Sucking Liquidity</h2>
+<p>For truly appreciating this technique, you need to understand how <strong>liquidity pools</strong> work. Please go through the article that talks about <strong>Automated Market</strong> <strong>Makers</strong> or <strong>AMMs</strong> <a href="https://pandatechie.in/2021/10/09/what-is-an-automated-market-maker-amm/">here</a>. Once you create a <strong>token</strong>, the entire <strong>supply</strong> is in your <strong>wallet</strong>. You could send it to anyone but it’s still not available for <strong>trading</strong> on <strong>public platforms</strong> and exchanges like <strong>Uniswap</strong>, <strong>Pancakeswap</strong> or <strong>CoinDCX</strong>.</p>
+<p>For enabling that <strong>trading</strong>, you need to provide <strong>liquidity</strong> in certain pairs. That means that developer takes the <strong>token</strong> he developed (which has <strong>no value</strong> initially) and <strong>supplies</strong> it along with a valuable token like <strong>ETH, USDT, BNB etc.</strong> in equal proportion.</p>
+<p><img alt="" src="https://finematics.com/wp-content/uploads/2020/07/lp-pools-1024x481.png" /></p>
+<p>That means if I supply a <strong>liquidity</strong> of <strong>1000</strong> coins for <strong>20 USDT</strong>, each of the <strong>coin</strong> would be <strong>priced</strong> at <strong>$0.02</strong>.</p>
+<p>Now when someone comes along with <strong>USDT</strong> and tries to <strong>exchange</strong> it with the <strong>newly</strong> <strong>minted</strong> <strong>token</strong>, price of the token will keep on <strong>increasing</strong>. This also means the <strong>quantity</strong> of <strong>token</strong> present in the pool (<strong>1000</strong>) is <strong>constantly decreasing</strong> and the <strong>quantity</strong> of the <strong>valuable</strong> token like <strong>USDT</strong> (20) is constantly <strong>increasing</strong>.</p>
+<p>It’s pretty simple from here on. Once the pool has <strong>sufficient valuable</strong> currency, you simply <strong>withdraw</strong> the <strong>liquidity</strong>. Not only you can take the <strong>entire quota</strong> of <strong>valuable</strong> tokens, but others won’t be able to trade using this pool anymore. Whoops!</p>
+<h2>B. Selling Stake</h2>
+<p>This one’s classic. Why? Because it is really <strong>hard</strong> to <strong>differentiate</strong> between an actual <strong>project</strong> or a ru<strong>g pull</strong> executed like this.</p>
+<p>Anyone can come up with a <strong>token</strong>. For the hell of it, even I did a few days ago. If you are <strong>interested</strong> in <strong>knowing</strong> more, here’s a <a href="https://pandatechie.in/2021/11/06/how-to-create-your-own-cryptocurrency-under-rs-500/">step by step guide</a> on how to create one. Coming back to the topic. Now it’s up to the <strong>developer</strong> or <strong>team</strong> to portray the project. The project can have an <strong>actual use case</strong> like <strong>MANA</strong>, <strong>BTC</strong>, <strong>ETH</strong> or could just have a <strong>perceived</strong> <strong>value</strong> like <strong>DOGE</strong> or <strong>SHIB</strong>.</p>
+<p>Either way, if you <strong>convince</strong> the <strong>masses</strong> about the <strong>value</strong> your project has, they are going to buy it. And guess what are they <strong>paying</strong> in order to buy? Yup. Valuable currencies like <strong>ETH</strong>, <strong>USDT</strong> etc.</p>
+<p>At this point, you could <strong>slowly sell your own holdings</strong> of your worthless token and accumulate more and more value. EZPZ right? That’s why you need to do a thorough DYOR.</p>
+<p><img alt="" src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-12/22/full/1608582276-5248.jpg" /></p>
+<p>I’ll leave you with an example. Riding on the immense popularity of our honorary PM, I could literally create a token using his name and sell it to people in the name of fandom. I won’t do it, but possibilities are endless.</p>
+<h2>C<strong>.</strong> The Code Scam</h2>
+<p>Well, they say a <strong>mother knows everything about her children</strong>. Same is the case with a <strong>developer</strong> and his <strong>code</strong>. As you know, <strong>cryptos</strong> at a <strong>fundamental level</strong> are nothing but <strong>programmable</strong> money. You want people to spend it only at a particular location, you could program it that way.</p>
+<p><img alt="" src="https://media0.giphy.com/media/xT8qBsOjMOcdeGJIU8/giphy.gif" /></p>
+<p>Downsides? You could also <strong>program your crypto</strong> <strong>token</strong> in a way that <strong>no one can sell it</strong>. They could only <strong>purchase</strong> it and when they come back on a <strong>DEX</strong> to sell it, they just can’t.</p>
+<p>Source code for all <strong>major tokens</strong> is available in <strong>open source</strong>. But hey, general <strong>unsuspecting</strong> people can’t <strong>understand</strong> that.</p>
+<h2>Conclusion:</h2>
+<p>I don’t know. These scams make cryptoverse a very exciting territory. I have been lucky so far to not be a victim of any such rug pulls, but I have friends who have lost a decent sum. But then that’s what makes it all so intriguing. On some days you win, some days you learn. Also, don't lose hope yet. There are ways by which you can validate the legitimacy of a project. But that's a topic for another blogpost.</p>
+<p>Have you ever been caught up in a rug pull?</p>
+<p>https://www.instagram.com/p/CWAKaFgPpXC/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

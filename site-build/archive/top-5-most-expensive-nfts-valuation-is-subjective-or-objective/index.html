@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 5 Most Expensive NFTs: Valuation is Subjective or Objective? | Raghav</title>
+<meta name="description" content="NFT, NFT, NFT. You must be living under the rock if you haven't come across this term yet. As a matter of fact, NFT market has hit a size of $2.5 billion in the…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Top 5 Most Expensive NFTs: Valuation is Subjective or Objective?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-09-26</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-09-26 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://i.ytimg.com/vi/GBnGAXxp8BA/maxresdefault.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>NFT, NFT, NFT. You must be living under the rock if you haven't come across this term yet. As a matter of fact, NFT market has hit a size of <strong>$2.5 billion</strong> in the first <strong>six</strong> <strong>months</strong> of <strong>2021</strong> (<a href="https://www.pymnts.com/cryptocurrency/2021/nft-market-hits-2-5b-in-six-months/#:~:text=Transactions%20totaled%20%241.3%20billion%2C%20minus,across%20multiple%20blockchains%2C%20Fox%20reported.">source</a>). No matter how much we joke about JPEGs <a href="https://au.finance.yahoo.com/news/rock-drawing-sells-18-million-meet-the-internets-newest-craze-210044498.html#:~:text=The%20cartoon%20image%20of%20a,%2Dfungible%20token%20(NFT).">rocks being sold for millions</a>, this is serious money. So today, we try to acknowledge and embrace this madness. A few posts ago, <a href="https://pandatechie.in/2021/09/26/what-is-nft-why-are-nfts-so-valuable/">I wrote about a framework</a> that helped us find the underlying value of an NFT. If you haven't read it yet, this post might seem a little off for you. Today, I plan to bring forth <strong>top 10 most expensive NFTs</strong> and we'd try to figure out how they would fit within our framework. Let's begin.</p>
+<h2>5. Metarift:</h2>
+<p>Sold for $904K, Metarift is a <strong>12 second GIF</strong> sold on Marketplace on March 2021 for <strong>ETH 489</strong>. It is developed by an artist that goes by the name of <strong>Pak</strong>. Just like Bitcoin's brilliant <strong>marketing</strong> <strong>strategy</strong> of keeping the identity of the founder <strong>hidden</strong> (<a href="https://pandatechie.in/2021/08/08/top-5-bitcoin-facts/">Satoshi Nakamoto</a>), Metarift creator's is also a <strong>mystic creature</strong>. Driving it's value from this mystery, Metarift has become one of the most expensive pieces of art sold through NFT.</p>
+<p><img alt="" src="https://i.ytimg.com/vi/GBnGAXxp8BA/maxresdefault.jpg" /></p>
+<p>The image below explains how this NFT finds it's place in our <strong>valuation</strong> <strong>framework</strong>. NFT is mainly driving it's value from the name "Pak". Pak has other famous digital artworks and mystery around his identity just adds that buzz around his work.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-13.png" /></p>
+<h2>4. CryptoPunk #4156</h2>
+<p>Okay. So this one is even weirder. There are over <strong>10,000 collectible</strong> <strong>characters</strong> known as <strong>CryptoPunks</strong> on Ethereum blockchain. Released by a two member team <strong>Larva Labs</strong>, each of these characters are <strong>unique</strong> in terms of the <strong>traits</strong>. How? Because each of them are algorithmically generated. They have been in circulation around 2017.</p>
+<p><img alt="" src="https://101blockchains.com/wp-content/uploads/2021/04/cryptopunk-4156.png" /></p>
+<p>Although the meaning of CryptoPunks has lost in the middle of the hype but these are a part of a <strong>bigger</strong> <strong>movement</strong> that started back in <strong>1992</strong>. During that period, <strong>governments</strong> started taking control over the <strong>internet</strong> and <strong>privacy</strong> for it's citizens. Some of the key techniques, like <strong>cryptography</strong>, that would drive privacy were kept limited to <strong>army</strong> and <strong>government banks</strong>.</p>
+<p>At the same time group of rebels, known as the <strong>cypherpunks</strong>, opposed state control, especially of the internet. They felt that the government intervening in the early internet had led to <strong>censorship</strong> and lack of <strong>privacy</strong>. The restrictions on the export of <strong>encryption</strong> <strong>algorithms</strong> went against their <strong>core</strong> <strong>belief</strong> that privacy is a human right. They wanted to create a world where all information on the internet could be traced ONLY if the person sending a message wanted that information revealed.</p>
+<p><strong><em>The cypherpunks believed cryptography was the path to freedom and would allow people to maintain total privacy over their own communications.</em></strong></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-15.png" /></p>
+<p>Despite not fitting into our framework completely, this cyberpunk was sold for $1,250,000.</p>
+<p>It is driving its value from the history that I just mentioned above. Also, punk culture is usually in line with crypto space where the general narrative is of being a rebel.</p>
+<h2>3. Axie Infinity Genesis Land</h2>
+<p><img alt="" src="https://gamingonphone.com/wp-content/uploads/2021/09/Axie-Infinity-Game.jpg" /></p>
+<p>Metaverse in itself could be a series of it's own blogs. But for now think of a <strong>virtual</strong> world. A world where you could <strong>travel, live, shop</strong> and do whatever you could do in your <strong>normal</strong> life. One such metaverse based game that has gained a lot of popularity in the past is <strong>Axie Infinity</strong>.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-17.png" /></p>
+<p>So one person actually decided to <strong>purchase</strong> a land in this game. This land called <strong>genesis</strong> <strong>land</strong> is extremely rare and has a high price. Which is why it was purchased for a whopping <strong>$1.5 million</strong>. At this point, I don't even feel like evaluating this purchase. But as one Indian ad once said, <em>"Shaunk badi cheez hai"</em>.</p>
+<h2>2. The First Tweet:</h2>
+<p><strong>Jack Dorsey</strong>, founder of Twitter inc. has been a big believer of crypto. So it didn't come out as a surprise when he decided to jump into NFT space. He sold an image of his <strong>first ever tweet</strong> while he was setting up his <strong>Twitter</strong> <strong>account</strong> back in <strong>2006</strong>. He was able to rake in a sweet <strong>$2.9mn</strong> after this transaction.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-20.png" /></p>
+<p>Being the first of it's kind of NFT, coupled with a historical significance, this tweet was obviously sold for a hefty amount in the market. Valuation framework is given below:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/image-18.png" /></p>
+<h2>1. Everydays: First 5000 Days</h2>
+<p>Beeple, a digital artist is the creator of this NFT. It was sold in an <strong>auction</strong> with the price starting at <strong>$100.</strong> However it kept on going up with final bid taking place at <strong>$69.3mn.</strong> Yes you read it right. Beeple has been making <strong>artwork</strong> since <strong>May 2007</strong> and as <strong>not even skipped a single day</strong> ever since. This particular artwork is the collection (collage) of his first 5000 days of work. This has become the most expensive NFT sold ever.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/Instead-of-1024x1024.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/20210312-beeple-artwork-1024x550.jpg" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/Instead-of-1024x1024.png" /></p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/09/20210312-beeple-artwork-1024x550.jpg" /></p>
+<h2>Conclusion:</h2>
+<p>This blogpost is just a glimpse of what this space is. There are so many NFTs which are sold at unimaginable prices right now. For example, I just covered one of the cryptopunks. Other CryptoPunks like #6965, #7804, #3100 were sold for more than $5mn each. Apart from that, the meme space is also gearing up for NFTs. I recently read about the infamous <a href="https://www.charliebitme.com/#/">"Charlie bit my finger"</a> video being sold by it's original creator.</p>
+<p>I can totally see "Bachpan ka Pyar" being the next NFT. Beauty really lies in the eyes of the beholder! For real.</p>
+<p>https://www.instagram.com/p/CUKs_xPoBX1/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

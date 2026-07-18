@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is a DEX Aggregator? Example of 1inch | Raghav</title>
+<meta name="description" content="The year 2021 has seen an exponential growth of Decentralized Ecosystem. I was checking [defillama](http://defillama.com) a few days ago and I realized that TVL…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">What is a DEX Aggregator? Example of 1inch</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-12-05</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-12-05 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://pandatechie.in/wp-content/uploads/2021/10/Automated-Market-Maker.png" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>The year 2021 has seen an exponential growth of Decentralized Ecosystem. I was checking <a href="http://defillama.com">defillama</a> a few days ago and I realized that TVL (total value locked) in DeFi was about <strong>$29B on 30th December 2020</strong>. This figure was hovering over <strong>$250B on 3rd December 2021</strong>. With this <strong>gargantuan</strong> leap, the tools that powers this <strong>ecosystem</strong> is bound to evolve. Therefore, today's blogpost is dedicated to one such tool called a <strong>DEX aggregator</strong> or a decentralized exchange aggregator.</p>
+<p>In this blogpost we would talk about the underlying issues with DEX. And how DEX aggregators help us minimize the same. Let's get started.</p>
+<h2>The Magic of DEX:</h2>
+<p>It is no less than <strong>magic</strong> how a <strong>decentralized</strong> <strong>exchange</strong> works. For the uninitiated, our centralized exchanges like <strong>CoinDCX</strong>, <strong>Zerodha</strong> etc. work on <strong>order book</strong> based model. This means that whenever you place a buy/sell <strong>order</strong> at a <strong>specific</strong> <strong>price</strong>, the <strong>order</strong> <strong>book</strong> matches it with corresponding <strong>buyer</strong>/<strong>seller</strong> of similar price. In essence, centralized exchanges are matching buyers and sellers on their platform.</p>
+<p>However, things are quite different when it comes to a decentralized exchange. In that case, you need not have a <strong>buyer</strong> when you are <strong>selling</strong> OR a <strong>seller</strong> when you need to <strong>buy</strong>. In other words, you are interacting with an <strong>algorithm</strong> instead of another <strong>human</strong>. This forms the basis of a <strong>trustless</strong> ecosystem where you don't have to trust anyone, even the platform itself.</p>
+<p><img alt="Robot representing automated market maker" src="https://pandatechie.in/wp-content/uploads/2021/10/Automated-Market-Maker.png" /></p>
+<p>Then how do you trade assets you ask? Most DEXes use an algorithm called <strong>Constant product Automated Market Maker</strong>. In this case, a <strong>pool</strong> of <strong>funds</strong> (which contains assets to be swapped in equal ratio) is created by individuals. <em>The price of each asset is decided by the amount of that asset remaining in the pool.</em></p>
+<p>More the quantity of an asset in the pool, lesser is it's price and vice versa.</p>
+<h2>Slippage: Where's the Problem?</h2>
+<p>While it works flawlessly to an extent, the problems start arising when you are a <strong>big</strong> <strong>investor</strong> (they call it whale here). In that case, if you keep on <strong>buying</strong> <strong>one</strong> <strong>asset</strong> from a <strong>liquidity</strong> <strong>pool</strong>, the price of that <strong>asset</strong> keeps on growing <strong>exponentially</strong> due to the way <strong>algorithms</strong> work. Therefore, it is a potential loss for a <strong>whale</strong> to buy an asset from a <strong>single</strong> <strong>liquidity</strong> <strong>pool</strong>.</p>
+<p><img alt="" src="https://bpcdn.co/images/2010/11/broker-slippage.png" /></p>
+<p>This entire issue that we just discussed about is also called <strong>slippage</strong>. <em>Slippage is essentially the difference between the prices at which trader agreed to trade and the price at which it actually executed.</em></p>
+<p>To avoid this slippage issues, you could actually try <strong>swapping</strong> through <strong>different</strong> <strong>decentralized</strong> <strong>exchanges</strong>, the <strong>rate</strong>, <strong>impact</strong> on the <strong>price</strong> once you decide to move assets and finally take your transactions through multiple of them.</p>
+<p>But ain’t nobody got time for that?</p>
+<h2>Enter: 1inch</h2>
+<p>Ever since this <strong>blogpost</strong> started you might be wondering why is it called a <strong>DEX</strong> <strong>aggregator</strong>. Now you probably have an idea. <strong>1inch</strong> <strong>automates</strong> this entire stuff for you and <strong>algorithmically</strong> shows you the best <strong>path</strong> to <strong>swap</strong> your <strong>assets</strong>.</p>
+<p>Let's understand this with an example. Imagine you want to swap your <strong>100 wETH</strong> (Ethereum on Polygon) to <strong>DAI</strong> (a stablecoin). The total value of this trade as I am writing this is about <strong>$399,270</strong>.</p>
+<p><em>The way 1inch suggests to transfer this is a 7 step process.</em> Details in the screenshot below:</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/12/image-7.png" /></p>
+<p>Keep in mind that this keeps on changing in real time as per the <strong>liquidity pool situation</strong> in multiple DEXs. This also takes care of the situations when there is not <strong>enough</strong> <strong>liquidity</strong> in a pool to assist the transaction that you are trying to carry out.</p>
+<p>In November 2020, v2 of inch was launched that enabled the swap across <strong>21 different decentralised exchanges.</strong></p>
+<h2>1inch Token:</h2>
+<p>1inch also has it’s native token by the name 1inch. Let’s discuss the use cases of that token:</p>
+<h3>A. Farming</h3>
+<p>Yield farming is whole another <strong>beast</strong> and out of the scope of this blogpost (inquisitive heads can read more <a href="https://pandatechie.in/2021/10/23/what-is-yield-farming-in-crypto/">here</a>). For now, let me summarize what this is.</p>
+<p>For a decentralised exchange to work, investors like you and me can come to create a <strong>pool</strong> of <strong>assets</strong> for traders to come and swap their tokens on top of it. Why would we do that you ask? Because these investors (liquidity providers) are <strong>given</strong> a <strong>share</strong> of the <strong>fees</strong> that traders are <strong>charged</strong>.</p>
+<p><img alt="" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60bcccec3da2c1de5b064c05%2FA-tractor-plows-dry-land-with-the-words-DeFi-Yield-Farms-in-the-background-and-a%2F960x0.jpg%3Ffit%3Dscale" /></p>
+<p>Now this doesn’t end here. Once you provide liquidity to a pool, you get a <strong>representation</strong> of your <strong>investment</strong> in the form of <strong>LP tokens</strong>. You can <strong>stake</strong> these <strong>LP tokens</strong> to <strong>earn</strong> rewards in the form of <strong>1inch</strong> tokens.</p>
+<p><img alt="" src="https://images.ctfassets.net/0idwgenf7ije/62GowTAUa5CTzx4H4xze8b/28b93596b6577f4db7ff51867d4dc05a/Gemini-Bancor-_The_Liquidity_Token-100.jpg?fm=webp" /></p>
+<p>DEXes use this technique to <strong><em>ensure that liquidity providers don’t withdraw their liquidity and leave.</em></strong> Another reason for providing this additional <strong>incentive</strong> is to <strong>mitigate</strong> <strong>impermanent</strong> <strong>loss</strong> (loss you bear for providing the liquidity as compared to the situation where you would have been better off by just holding the tokens)</p>
+<h3>B. Governance</h3>
+<p>1inch tokens are also the <strong>governance</strong> tokens of <strong>1inch</strong> <strong>protocol</strong>. This means that holders of these tokens get to <strong>vote</strong> on the <strong>future</strong> of the platform. For example, if platform plans to double the fees, token holders can collectively decide on that decision.</p>
+<p>This is very <strong>similar</strong> to <strong>holding</strong> <strong>shares</strong> of a publicly traded company. You get an option of <strong>voting</strong> on <strong>key</strong> <strong>decisions</strong> during the <strong>AGM</strong>. More the number of shares, more is your authority.</p>
+<p>Of the 1.5 billion tokens minted, 6% were distributed during the initial 1INCH airdrop. Of the remaining supply, 14.5% of 1INCH tokens will be unlocked over fours years to support team expansion, audits, grants, and insurance against potential hacks. Another 23% of 1INCH tokens will be a source of funding for community incentives, including the 1inch Liquidity Protocol.</p>
+<h2>Conclusion:</h2>
+<p>Oh come on! If this isn’t able to convince you on magical powers of blockchain and crypto realm, I fail to understand what will. Just compare it with traditional finance. Where would you find such a sophisticated system automated like a charm.</p>
+<p>Got any examples in mind?</p>
+<p>https://www.instagram.com/p/CW7eZnNIdXk/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

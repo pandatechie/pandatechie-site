@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Covid Blogpost: How Blockchain Could've Helped | Raghav</title>
+<meta name="description" content="Yup. After surviving two gory waves, third wave finally took me down. Just like every citizen of the country should, I had already got jabbed twice. Despite tha…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">The Covid Blogpost: How Blockchain Could've Helped</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2022-01-09</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2022-01-09 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://media4.giphy.com/media/2h21RRciwqJsk7JGNB/giphy.gif" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>Yup. After surviving two gory waves, <strong>third</strong> <strong>wave</strong> finally took me <strong>down</strong>. Just like every <strong>citizen</strong> of the country should, I had already got <strong>jabbed</strong> <strong>twice</strong>. Despite that, this wave hit me out of the blue. For those of you who know, I am not a <strong>partying</strong> kind of a person. So, I did not go to <strong>Goa</strong>, neither did I attend any local new year’s party. <em>If at all, I attended my 31st night snuck into my light quilt waiting for the noise at 12 midnight to mellow down a bit so that I can go back to sleep.</em></p>
+<p>My latest venturing into outside world was on <strong>30th December</strong> wherein I watched a movie in a <strong>drive</strong> <strong>in</strong> <strong>theatre</strong>. So once again, with mask on, I was watching movie in a <strong>confined</strong> <strong>space</strong> with just me and my wife. However, this one’s not about the ‘Oh god, why me?’ rant.</p>
+<p>Neither is this about how <strong>irresponsible</strong> <strong>humans</strong> (including me) can be. It’s about what can we do next. How about <strong>improving the infrastructure</strong> to an extent that we are at least <strong>better</strong> <strong>equipped</strong> for viruses to come. So today, I am going to talk about my horrible experience around <strong>RT-PCR test</strong> and how I think <strong>blockchain</strong> <strong>technology</strong> can help the entire ecosystem.</p>
+<h2>The RT-PCR Test:</h2>
+<p>On 5th of January, my wife developed a <strong>mild</strong> <strong>fever</strong>, <strong>cold</strong> and <strong>throat</strong> <strong>pain</strong>. Since we were hearing about the Omicron variant and sudden spike in the cases, it wasn’t hard to think in this direction. So we decided to wait for the day (it was already evening) and get the RT-PCR done.</p>
+<p><img alt="" src="https://media4.giphy.com/media/2h21RRciwqJsk7JGNB/giphy.gif" /></p>
+<p>Next morning we called up <strong>Dr. Lal Path Labs</strong> and booked a <strong>slot</strong> for her test. During that time, even I had started feeling the <strong>uneasiness</strong> in my throat. So when the <strong>technician</strong> arrived, both of us got <strong>tested</strong>. We were told that due to <strong>high volumes</strong> of the <strong>sample collection</strong>, results may take up to <strong>36 hours.</strong></p>
+<h2>The Shcrodinger’s Cat:</h2>
+<p>A lot changed in these 36 hours. My wife’s fever was sorted out but she now just had a mild <strong>blockage</strong> in her nose. In the mean time, I had my own share of <strong>shivering</strong> and constant <strong>bouts</strong> of <strong>fever</strong> as well. Since she <strong>started</strong> feeling <strong>better</strong>, we were not sure of what treatment to start.</p>
+<p>There was so much confusion around the fact if we should inform our <strong>society</strong> <strong>authority</strong> about it? <strong>Domestic</strong> <strong>help</strong>? <strong>People</strong> we’ve <strong>interacted</strong> in the past one week? But these were least of our problems. Things were just about to go worse from the results perspective.</p>
+<p><img alt="" src="https://images.theconversation.com/files/363348/original/file-20201014-17-m7ixup.jpg?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1200&amp;h=1200.0&amp;fit=crop" /></p>
+<p>After waiting for about 40 hours for the report, we decided to get in touch with the lab personnel. He told us that there would be some <strong>additional</strong> <strong>delay</strong> as many people at the <strong>testing</strong> <strong>facility</strong> have themselves got Covid.</p>
+<h3>Thane Municipal Corporation (TMC):</h3>
+<p>After waiting for over 48 hours now and multiple follow ups, we get a call from <strong>Thane</strong> <strong>Municipal</strong> <strong>Corporation</strong> (TMC) (local governing authority of our area) to inform us that we’ve tested positive.</p>
+<p>The lady on the call asks us <strong><em>when did you get tested and when did you get reports</em><em>?</em> We told her that reports are yet to arrive. Equally </strong>confused<strong> she says but your name is </strong>featuring<strong> in the list of patients testing positive. And post that she </strong>hangs<strong> </strong>up**.</p>
+<p>We call Lal Path labs again to <strong>check</strong> and he now cooks yet another story:</p>
+<blockquote>
+<p>"<em>As per the latest guidelines, all positive cases would be handed over to the government, a retest of the samples would be done, and then we could release the report."</em></p>
+</blockquote>
+<p>At this point, our society needs the report copy to initiate the Covid protocols for our floor.</p>
+<h2>Where's the Blockchain?</h2>
+<p>Enough of rant over how inefficient the systems are. As usual, my brain started thinking if Blockchain technology could be of any help here. Turns out there are so many merits of moving this entire database to a <strong>distributed</strong> <strong>ledger</strong>.</p>
+<p>Let's discuss what I have in mind:</p>
+<h2>A. Skip the Back and Forth Loop:</h2>
+<p>Even if the statement made by lab team is correct, there is no benefit in hiding the report from me. So, to skip the back and forth between me, lab and the government agencies, it is best to put it on an open ledger for anyone to access.</p>
+<p>All of us could see the actual status of my sample. Be it movement of samples to another lab (because shutdowns) or governments retesting, information about the sample is as important as the result itself.</p>
+<h2>B. Transparency:</h2>
+<p>The inherent properties of blockchain always apply. I see so many trackers out there trying to update the Covid numbers. Fun fact: all of them have minor variations. Wouldn't it be better if we could update this data directly from the testing facility on a single platform and then anyone could access it?</p>
+<h2>C. One Citizen One Report:</h2>
+<p>And because now the report is on public blockchain, I don't have to reproduce it every time someone asks for it. Office asking for it as you apply for leaves? They can fetch it from the public server. Insurance companies? Society officials? Airport authorities? Basically anyone could now simply fetch it using a key like Aadhar number. Imagine how helpful could that be in case of contact tracing.</p>
+<p>You go to a hotel and they update your number in a CRM. That CRM constantly fetches data from this blockchain and then informs you/all visitors in case their fellow diner tested positive.</p>
+<p>While we're on it, we could apply this to vaccine certificates too. You share your number and anyone on the earth could see it.</p>
+<h2>D. Smarter Analytics:</h2>
+<p>There so much data and experts put it to use each day to stay ahead of the virus. Consolidating this data at a global level on single source would just speed up this entire process. You don't have to connect to multiple sources for relevant insights.</p>
+<p>This also means that data inconsistencies are found easily and can be resolved in one go (contrary to fixing it for each individual data set).</p>
+<h2>Conclusion:</h2>
+<p>I think that's a decent job of portraying the power of blockchain amidst an irritating cold and cough situation all around. I would love to hear thoughts and opinions on this one as it was just a random use case in my head and I would want to refine it further. In an absolutely unrelated news, BTC has now fallen below 42K. I'm adding some through CoinDCX as I have some USDT laying around. You?</p>
+<p>Blockchained yet?</p>
+<p>https://www.instagram.com/p/CYjcQ4wPQnQ/</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

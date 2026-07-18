@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unfolding the Trolls: What's Up with Meme Coins? | Raghav</title>
+<meta name="description" content="Cadbury is selling happiness since time immemorial. Hindustan Unilever is building relationships with it's users. Procter and Gamble is carving their own niche …">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"><span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded">CRYPTOCURRENCY</span></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">Unfolding the Trolls: What's Up with Meme Coins?</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-11-22</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-11-22 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://2.bp.blogspot.com/-hx8XqMrv0IY/WKsjG4J_N8I/AAAAAAAACZU/OzNULpLx050HNLsKHpXj1VL6hKLXOPhZQCLcB/s1600/asci-upheld-complaints-against-patanjali-hul-ads-in-march-2016.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p><strong>Cadbury</strong> is selling <strong>happiness</strong> since time immemorial. <strong>Hindustan Unilever</strong> is building relationships with it's users. <strong>Procter</strong> and <strong>Gamble</strong> is carving their own <strong>niche</strong> for <strong>decades</strong> now. However, a few years ago, came along a player that gave these top notch <strong>marketers</strong> a <strong>bang</strong> for their <strong>buck</strong>. Yes, I am talking about <strong>Baba Ramdev</strong> and his <strong>Patanjali</strong>. Without signing any <strong>Bollywood</strong> model, <strong>Baba Ramdev</strong> drove the wave of <strong>Ayurveda</strong> across the country.</p>
+<p>However, <strong>Patanjali</strong> still had a very <strong>competitive</strong> product to offer. It found it's product market fit amongst Indians who believe in the power of <strong>alternate</strong> science.</p>
+<h2>The HUL and Patanjali of Crypto:</h2>
+<p>Drawing a parlance in the crypto industry, we have <strong>Bitcoin</strong> the <strong>HUL</strong>. The <strong>OG medium of exchange</strong> built to <strong>revolutionize</strong> the world. BTC didn't have to market itself as it had that function <strong>inbuilt</strong> behind the <strong>veil</strong> of mysterious <strong>Nakamoto</strong>. Mystery around the creators spread the word for BTC like nothing else.</p>
+<p><img alt="" src="https://2.bp.blogspot.com/-hx8XqMrv0IY/WKsjG4J_N8I/AAAAAAAACZU/OzNULpLx050HNLsKHpXj1VL6hKLXOPhZQCLcB/s1600/asci-upheld-complaints-against-patanjali-hul-ads-in-march-2016.jpg" /></p>
+<p>But you know what? This was the decade where internet was <strong>reaching</strong> the <strong>masses</strong>. Every <strong>meme</strong> had a <strong>potential</strong> to blow up. Everybody could be <strong>famous momentarily</strong>. Fortunes were not restricted to high rise buildings of <strong>Bandra</strong> and <strong>legacy</strong> <strong>actors</strong> living in them.</p>
+<p>So, we came across a <strong>Patanjali</strong>. This time, in the form of <strong>Doge Coin</strong>. A <strong>joke</strong> that blew out of <strong>proportion</strong>. So much so that it entered the coveted <strong>top 10 cryptos</strong> by <strong>market</strong> <strong>cap</strong> in the industry. What makes me <strong>ponder</strong> further is the fact that it isn't even <strong>adding value</strong> to the market.</p>
+<h2>Why Dogecoin Can Never be Bitcoin?</h2>
+<p>You see the entire <strong>genesis</strong> of <strong>BTC</strong> was around a couple of factors. It wanted to create a <strong>decentralized</strong>, <strong>scarce</strong> money. Why? Because <strong>historically</strong>, governments had been known for <strong>screwing up</strong> by <strong>printing more</strong> money. In essence, it was meant to <strong>democratize</strong> wealth.</p>
+<p>On the other hand <strong>Dogecoin</strong> simply wanted to take a toll on BTC. And with <strong>unlimited supply</strong> took birth the <strong>doggy coin</strong> of <strong>crypto industry</strong> that soon picked up <strong>crazy momentum</strong>.</p>
+<h2>But Why Dogecoin is a Thing?</h2>
+<p>Well, the next <strong>legitimate</strong> question in this series is, if <strong>Dogecoin</strong> is such a joke, why is it even a thing? For some context, last <strong>24 hour trading volume for $DOGE was $794,886,395</strong>. This is serious money for any cryptocurrency, leave aside a god damn meme. So why can't people stop talking about it?</p>
+<p>For that, let's rewind a little. Dogecoin had <strong>little</strong> to no value soon after it's <strong>existence</strong>. Therefore, it became an <strong>easy gateway</strong> for people <strong>entering</strong> into the <strong>crypto</strong> market. They could hold <strong>ONE UNIT</strong> of a digital asset, unlike <strong>BTC</strong> which was <strong>out</strong> of <strong>reach</strong> for many in terms of buying a whole of it.</p>
+<p>Secondly, since it had very little value, people started using it as <strong>tips</strong> on platforms like <strong>reddit</strong>. It would also be used as <strong>donations</strong> at times. Eg. Once Indian Paralympics team was funded in Dogecoin by a community to travel and take part in the event.</p>
+<p>Thirdly, the <strong>dog</strong>! <strong>Shiba Inu</strong> is a cute creature. Although it was meant to be a <strong>joke</strong>, a lot of people get drawn towards the currency because it features a cute dog.</p>
+<p><img alt="" src="https://i.redd.it/g4tnkm3pzvv61.jpg" /></p>
+<p>Fourth. <strong>The Dogefather</strong>. Yes. Since crypto markets are <strong>unregulated</strong> and there's no <strong>SEC</strong> or <strong>SEBI</strong> involved to check the <strong>communication</strong> going out in <strong>public</strong> from <strong>CXOs</strong> of the <strong>company</strong>, <strong>Elon Musk</strong> took this opportunity to Pump Doge. He tweeted about it quite often. Other stars like Snoop Dogg, Gene Simmons followed the suit.</p>
+<h2>What Happened Next?:</h2>
+<p>Yup. It's exactly what you had never expected for. Dogecoin blew up and reached to an <strong>ATH</strong> of Rs. <strong>58</strong>. Mind it, this journey began from the cost of a fraction of <strong>Paisa</strong>.</p>
+<p><img alt="" src="https://fabiandablander.com/assets/img/Doge-2.png" /></p>
+<p>Elon Musk even came on a record to say that it <strong><em>would be fun to watch if something that wants to become the mainstream currency (BTC) would be overtaken by something that was started as a joke (DOGE).</em></strong></p>
+<h2>The Doge Killer:</h2>
+<p>While Doge has been now <strong>stable</strong> between the range of <strong>Rs. 18 - Rs. 25</strong> for the past <strong>4</strong> odd <strong>months</strong> now, the ripples of <strong>enormous</strong> success of the <strong>infamous</strong> <strong>dog</strong> are far from stabilization. In October of 2020, we found yet another dog growling in the crypto space.</p>
+<p><img alt="" src="https://assets.gadgets360cdn.com/img/crypto/shiba-inu-og-logo.png" /></p>
+<p>It termed itself as the <strong>Doge Killer</strong>. Yes, I am talking about <strong>Shiba Inu</strong>. Founded by anonymous entity that goes by the pseudonym called <strong>Ryoshi</strong>, Shiba Inu is built on <strong>Ethereum blockchain</strong>. This is in contrast to <strong>Doge</strong> which has it's own <strong>blockchain</strong>.</p>
+<p>But why is $SHIB called the DOGE killer?</p>
+<h3>A. Smart Contracts:</h3>
+<p>The Dogecoin was an abandoned baby. It's own developers <strong>exited</strong> the project by <strong>selling</strong> their <strong>holdings</strong> for a <strong>Honda Civic</strong> back in 2015. Although <strong>Elon Musk</strong> and <strong>Vitalik Buterin</strong> are <strong>onboarded</strong> on to the project now in 2021, it still has a long way to go.</p>
+<p>On the other hand, <strong>Shiba Inu</strong>, built on <strong>Ethereum</strong> has the <strong>capability</strong> of <strong>executing smart contracts</strong>. For the uninitiated, <strong>Smart Contracts</strong> are self executing <strong>pieces</strong> of <strong>code</strong> that are deemed to be the backbone of <strong>dApps</strong> or decentralized applications.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-26-1024x453.png" /></p>
+<p>This enables the whole world of DeFi for SHIB where you can lend, borrow, charge interest, earn interest using $SHIB.</p>
+<h3>B. Ecosystem:</h3>
+<p>Apart from being a token, $SHIB is trying to be an ecosystem where you can provide <strong>liquidity</strong>, earn <strong>LP tokens</strong> called <strong>bones</strong>, You could also <strong>BURY</strong> your bones which is essentially a way of <strong>staking</strong> your <strong>LP tokens</strong> to earn further interest.</p>
+<p>There's also a <strong>NFT market place</strong> where you can buy <strong>Shiboshis</strong>.</p>
+<p>For the serious crypto community out there, I can understand your cringe while reading this. For the ones who don't <strong>understand</strong> what this is about, its a model similar to what top notch <strong>DEXs</strong> like <strong>Uniswap</strong> or <strong>Pancakeswap</strong> have in store.</p>
+<h2>But Why is SHIB a Thing?</h2>
+<p>Yet again, it's our <strong>crazy billionaire</strong> who added fuel to this fire. In the March of 2021, Elon Musk tweeted that has got a Shiba Inu dog. That pumped the price of the <strong>token</strong> by <strong>300%</strong>.</p>
+<p>Also, the team behind SHIB did something very interesting. <strong><em>They sent half of all the SHIB that ever exists to Vitalik Buterin (founder of Ethereum</em></strong>). This was meant to be a marketing gimmick to showcase that Vitalik also holds some SHIB.</p>
+<p><img alt="" src="https://cryptoslate.com/wp-content/uploads/2021/05/vitalik-burn-shiba.jpg" /></p>
+<p>Vitalik smarty <strong>donated</strong> 10% of it to India for Covid relief fund and <strong>rest of it was burnt</strong> by him. Which by the way means sending the tokens to an inaccessible address. This means that the <strong>tokens</strong> will never be <strong>back</strong> in <strong>supply</strong>.</p>
+<p>Apart from that, it's that <strong>little ecosystem</strong> they have <strong>created</strong> that tries to drive SHIB away from the perception of a meme coin.</p>
+<h2>What Happened Next?</h2>
+<p>Recently, about 20 days ago, <strong>SHIB hit an all time high of $0.00008845</strong>. I invested my <strong>Rs. 2000</strong> in SHIB about 2 months ago. I pulled out about <strong>15,000</strong> at that point. With so much <strong>euphoria</strong> around this crypto, people believe that it will soon hit a <strong>penny</strong> or a <strong>dollar</strong> even may be.</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/11/image-27.png" /></p>
+<p>But before you buy into these statement, here's some <strong>perspective</strong>. <strong>Market Cap is the metric to gauge the average price of each unit of cryptocurrency/stock.</strong> It is calculated by <strong>multiplying</strong> the <strong>number of tokens</strong> in circulation by the <strong>current price</strong>. So if <strong>$SHIB ever hits a cent</strong>, it's market cap would reach <strong>$4 trillion</strong>. This is greater than the market cap of entire crypto market. I'd leave it up to you to think the possibility of the same.</p>
+<h2>Conclusion:</h2>
+<p>In totality, it is really hard to predict how meme coin market is going to perform in the future. For all we know, it is just getting started. Secondly, it does not end at Shiba Inu, there's a new coin called Floki Inu which is knocking the doors of top 10. It's really far as of now, but hey, we couldn't anticipate Doge and SHIB to be there any way.</p>
+<p>What do you think?</p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

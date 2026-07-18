@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Car Vs Old Car: Decision Backed By Numbers | Raghav</title>
+<meta name="description" content="In India, owning a car is still a luxury rather than a necessity. It is the gateway of entering the adulthood. You are earning, banks are willing to lend you, s…">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">try{ tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "secondary": "#1e5cb5",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#79767b",
+                "vibrant-magenta": "#DE2F7B",
+                "secondary-container": "#70a2ff",
+                "surface-container": "#edeeef",
+                "on-surface-variant": "#48464a",
+                "electric-azure": "#5286E1",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d9dadb",
+                "outline-variant": "#cac5ca",
+                "surface-container-lowest": "#ffffff",
+                "deep-obsidian": "#181719",
+                "primary-container": "#1c1b1d",
+                "surface-variant": "#e1e3e4",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e3e4",
+                "surface-gray": "#F1F3F5",
+                "surface-bright": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "surface": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "tertiary": "#000000",
+                "on-background": "#191c1d",
+                "primary": "#000000",
+                "surface-tint": "#605e60"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["JetBrains Mono"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+        }
+    }
+}
+ }catch(_e){}</script>
+<style>.material-symbols-outlined{
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-header, .glass-card{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card{ background: rgba(255,255,255,0.72); }
+.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.card-hover{ transition: border-color .3s ease, transform .3s ease; }
+.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+
+/* --- FIX: this is the piece the Stitch export was missing ---
+   The JS adds .reveal on load and .active on intersect; previously there
+   was no CSS backing either class, so the observer ran and did nothing. */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav{ transition: height .25s ease, box-shadow .25s ease; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+<a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
+<a href="/about/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+</div>
+<a href="/#contact-footer" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all">Contact Me</a>
+</div>
+</nav>
+
+<main class="pt-20">
+<article class="py-16 reveal-item">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+<a href="/archive/" class="font-label-sm text-label-sm text-secondary flex items-center gap-2">← Back to the log</a>
+<div class="flex flex-wrap gap-2 mt-8"></div>
+<h1 class="font-headline-lg text-[32px] md:text-headline-lg mt-6 leading-tight">New Car Vs Old Car: Decision Backed By Numbers</h1>
+<div class="font-label-sm text-label-sm text-outline-variant mt-4">2021-01-19</div>
+<div class="mt-8 ghost-border rounded-lg p-4 flex items-center gap-3 bg-vibrant-magenta/5">
+<span class="w-1.5 h-1.5 rounded-full bg-vibrant-magenta flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Originally published 2021-01-19 on the site's earlier chapter as a crypto/Web3 blog. Kept as-is for the record.</p>
+</div>
+<img src="https://www.bajajallianz.com/blog/wp-content/uploads/2020/09/Car-Insurance-For-New-Car-vs-Used-Car.jpg" alt="" class="w-full rounded-xl ghost-border mt-10" loading="lazy">
+<div class="prose-post font-body-lg text-body-lg text-on-surface leading-relaxed mt-10">
+<p>In India, owning a car is still a luxury rather than a necessity. It is the <strong>gateway of entering the adulthood</strong>. You are earning, banks are willing to lend you, so you decide to bring home a nice four wheeler for you and your family. But wait, are you <strong>buying a new one? Or should you consider a used car instead?</strong> Here's something that will help you chose between new car vs old car using nothing but, mathematics.</p>
+<p>Before we jump into the pool of numbers, I want to address the <strong>social stigma</strong> around buying a used car. There was a time when <strong>used cars were looked down upon</strong>. It was considered <strong>bad for your reputation</strong> to own a used car. However, things are changing lately. And with financial literacy spreading its wings, people are <strong>opening up to the idea of purchasing a used car</strong>.</p>
+<p><img alt="New car vs old car" src="https://www.bajajallianz.com/blog/wp-content/uploads/2020/09/Car-Insurance-For-New-Car-vs-Used-Car.jpg" /></p>
+<p>Any way, <strong>life cycle of holding a car has also come down</strong>. Earlier, people used to own and maintain a car for <strong>10 years</strong> which has now <strong>come down</strong> to <strong>5-6 years</strong>. So, it is quite common these days to find a car which was used for <strong>less than 5 years</strong> and has a kilometer running of about <strong>50k</strong>.</p>
+<p>Also, back in the day, apart from societal constraints, <strong>regulatory norms also made it very difficult for you to buy a used car</strong>. But with <a href="https://www.cars24.com/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=brand&amp;utm_source=google&amp;utm_medium=adwords&amp;utm_keyword=cars24&amp;utm_matchtype=e&amp;utm_device=c&amp;adgroup_id=62355979834&amp;campaign_id=1572559357&amp;gclid=CjwKCAiAo5qABhBdEiwAOtGmbipjgVnVyehdBNclbzZG7imN17qHEdukg9J7GI-0AOOq5bsWAZmm4hoCAWoQAvD_BwE">Cars24</a>, <a href="https://www.google.com/search?q=car+dekho&amp;rlz=1C1GCEU_enIN858IN858&amp;oq=car+dekho&amp;aqs=chrome..69i57j0j0i433l2j0l2j0i433j5i395.1316j1j4&amp;sourceid=chrome&amp;ie=UTF-8">Car Dekho</a>, <a href="https://www.olx.in/">OLX</a> etc. coming into the mainstream, you don't have to worry about any of this. <strong>RC transfers, NOCs are all managed by these platforms.</strong></p>
+<h2>Benefits of Buying an Old Car:</h2>
+<p>While the personalized decision of picking between new vs old car will come out while we do mathematics, let's do a <strong>quick overview</strong> of high level <strong>benefits</strong> of picking the either side. Starting with the benefits of buying an older car:</p>
+<h3>1. Depreciation:</h3>
+<p>Newer cars depreciate faster. In fact, the <strong>sharpest decline in the value of the car is observed during it's first year of purchase</strong>.</p>
+<p>Therefore, if you purchase a used car, you don't have to bear the humongous depreciation cost.</p>
+<p><em>Fun Fact: A new car will lose 20% of it's value as soon as you take it out from the showroom.</em></p>
+<p><img alt="Depreciation trend of a car over the years" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5GWn9odXxcdfktVRFBop1UiUxMIQCfY81w&amp;usqp=CAU" /></p>
+<p>Depreciation trend of a car over the years</p>
+<h3>2. EMI</h3>
+<p>Yup, the dreaded EMIs. Although the loans on a used car are more expensive than newer ones, but even then, the difference between EMIs is huge. You may have to shunt out 2x in case of a new car for EMIs.</p>
+<h3>3. The Inexperienced Driver:</h3>
+<p>This may not be a direct benefit but if you have just learnt how to drive a car, buying a used car may make much more sense. You will drive with <strong>more confidence and lesser fear of scratches and dents.</strong></p>
+<p><img alt="Peace of mind because of old car instead of new car" src="https://www.carrentals.com/blog/wp-content/uploads/2020/05/best-driving-roads-hero.jpg" /></p>
+<h3>4. Cheaper Insurance:</h3>
+<p><strong>The insurance cost for an older car is much lower than a new car</strong>. For example, I purchased a car in December 2018 and paid 21k as insurance. Three years later, I got the same renewed at 14k. Therefore, older the car, lesser is the insurance cost.</p>
+<p><img alt="Trend of Average Insurance Cost over the years" src="https://i.pinimg.com/originals/e8/11/d5/e811d5445d8481bb675b89e0434286dd.jpg" /></p>
+<p>Trend of Average Insurance Cost over the years</p>
+<h3>5. Choice of Variant:</h3>
+<p>And since a used car is much likely to come within your budget, you can go for a <strong>feature rich top variant</strong> option rather than compromising in case of an new car. In case of new cars, there is a difference of lacs between the base and top variant. Therefore, you tend to forego some features.</p>
+<h2><strong>Benefits of Buying an new Car:</strong></h2>
+<p>While comparing two scenarios, we need to evaluate the both sides with proper diligence and same lens. Therefore, let us find out some key benefits of buying a new car.</p>
+<h3>1. Better Mileage:</h3>
+<p>Since you have a brand new revving engine at your disposal, a new car gives more mileage than an older one.</p>
+<h3>2. Lower Maintenance Cost:</h3>
+<p>Most of the expenses are either covered in warranty or by zero dep add-on in your insurance policy. Neither of these are applicable on an older car. Therefore, you need to worry less about maintenance of a new car.</p>
+<h3>3. Freebies and Discounts:</h3>
+<p>Auto dealerships offer multiple discounts in the year end/festival season on the new cars. Along with that, they have many additional benefits in store to lure you. All of this is hardly found while purchasing a second hand car.</p>
+<p><img alt="Freebies in a new car" src="https://images.freekaamaal.com/post_images/1610098995.png" /></p>
+<h2>Cost of Ownership: New Car Vs Old Car</h2>
+<p>Mathematics time. Disclaimer: Numbers ahead.</p>
+<p>I have mentioned some key parameters to be considered while evaluating. Basis these parameters, I will derive a cost of owning the vehicle. Let's get started.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parameter</td>
+<td>New Car</td>
+<td>Old Car</td>
+<td>Remarks</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>10,00,000</td>
+<td>5,00,000</td>
+<td>Assuming 50% deprication on a new car after 5 years- Cost of old car of same model will be 5L</td>
+</tr>
+<tr>
+<td>Loan</td>
+<td>9,00,000 @ 9%</td>
+<td>4,00,000 @14%</td>
+<td>Assuming 1,00,000 of down payment for both cases (Loan for used cars is at a higher ROI)</td>
+</tr>
+<tr>
+<td>EMI</td>
+<td>16,223</td>
+<td>8036</td>
+<td>For a period of 6 years</td>
+</tr>
+<tr>
+<td>Mileage</td>
+<td>18kmpl</td>
+<td>14kmpl</td>
+<td>Older cars are lesser efficient</td>
+</tr>
+<tr>
+<td>Total Fuel Cost of Running</td>
+<td>2.2L</td>
+<td>2.85L</td>
+<td>(Assuming Petrol Prices to be @Rs. 80/L on average for 5 years) (Assuming running of about 50,000km in 5 years)</td>
+</tr>
+<tr>
+<td>Insurance Cost</td>
+<td>10,000 per year</td>
+<td>7,500 per year</td>
+<td>(Older cars have cheaper insurance)</td>
+</tr>
+<tr>
+<td>Maintaince Cost</td>
+<td>X</td>
+<td>1.5X</td>
+<td>(No warranty/zero dep applicable on older cars)</td>
+</tr>
+</tbody>
+</table>
+<p>So taking into account the above expenses, a <strong>new car costs about Rs. 14,40,278 for a period of 5 years</strong>. Whereas, an <strong>old car will cost about 9,01,092 for a period of 5 years</strong>. (This is excluding maintenance).</p>
+<p>Let us take into account the resale value as well. A new car depreciates faster in it's initial years. However an older car will depreciate slowly.</p>
+<p>So, <strong>if you sell your new car in 5 years, @50% depreciation you will fetch 5L and on the other hand, assuming depreciation @30% for older car, you will fetch 3.5L</strong>.</p>
+<p>Deducting the above from the total cost, ownership of a <strong>new car costed you Rs. 9,40,000</strong>, whereas an <strong>older car costed you Rs. 5,51,092</strong>. So, over a period of 5 years, you can save 3.5L (approx.) by purchasing an older car. And if you switch <strong>5 cars</strong> in your life time, that is a humongous <strong>saving of 17.5L.</strong></p>
+<h3>And Finally:</h3>
+<p>This will vary person to person. One may decide to <strong>purchase and hold a new car for 10 years</strong>. In that case, it make much more sense as you would've used up the entire life value of the car by then. Also, <strong>if your car runs much more than 10,000kms</strong> an year, a new car may suit you better. The idea here is to <strong>draw a basic skeleton of analysis between new car vs old car.</strong></p>
+<h2>Conclusion:</h2>
+<p>As mentioned above, around 3 years ago, I purchased a brand new car for me. Today, when I still pay the EMI of that car, <strong>I feel really bad about my decision and regret not researching enough before taking a call.</strong> However, in order to turn this bad decision into a life-long lesson, I have decided to own this car for a total period of 10 years. That way, at least I would be able to come at par with the cost of the older car. And this is nothing, read <a href="https://pandatechie.in/2020/11/30/personal-finance-and-its-importance/">here about my bigger financial blunders!</a> Buying a car didn't even make it to that list.</p>
+<p>With that being said, I quickly learnt from my mistake and never let my younger brother purchase a new car. And he couldn't be happier with his decision. Next month, he is taking a vacation outside India. You know why? Because his EMIs allow him to do so. *Sobs in a corner*</p>
+<p><img alt="" src="https://pandatechie.in/wp-content/uploads/2021/01/1-4.png" /></p>
+</div>
+</div>
+</article>
+</main>
+<style>
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post p{margin-top:14px;}
+.prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
+.prose-post li{margin-top:6px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
+.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
+.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+</style>
+<footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 · formerly pandatechie</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
+<a href="https://twitter.com/pandatechie_" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Twitter</a>
+<a href="https://calendly.com/summon_panda" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Calendly</a>
+<a href="mailto:dudejaraghav@gmail.com" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">Email</a>
+</div>
+</div>
+</footer>
+<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+(function(){
+  var observerOptions = { threshold: 0.12 };
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .bento-item, .reveal-item').forEach(function(el){
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Sticky navbar subtle shrink — now applied consistently on every page,
+  // not just the blog archive export
+  var nav = document.querySelector('nav');
+  if (nav) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 50) {
+        nav.classList.add('h-16', 'shadow-sm');
+        nav.classList.remove('h-20');
+      } else {
+        nav.classList.add('h-20');
+        nav.classList.remove('h-16', 'shadow-sm');
+      }
+    });
+  }
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  document.querySelectorAll('.card-hover').forEach(function(card){
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>
