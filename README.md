@@ -20,3 +20,4 @@ cd site-build && python3 -m http.server 8000, then open http://localhost:8000
 - Post-detail images still hotlink to the old pandatechie.in / i0.wp.com URLs.
 - Point pandatechie.in's DNS at your chosen host when ready to cut over.
 - No CMS yet — see chat for options (editing Markdown directly vs. adding a git-backed admin UI like Decap CMS).
+# pandatechie-site
