@@ -7,6 +7,7 @@ tags: ["Finance", "Lifestyle", "gratitude", "influencer", "social media"]
 original_url: "https://pandatechie.in/2021/07/15/the-real-joy-of-influencing/"
 cover_image: "https://practicebusiness.co.uk/wp-content/uploads/2020/03/iStock-1158202021-591x381.jpg"
 archive: true
+featured: true
 ---
 
 What month is it? Nope. It's not just **July**. It is the month of **appraisals** for most Indian **companies**. Companies release the **bonuses**, handover **increment** letters to the employees and in a nutshell, it is a month full of **drama**. I could have gone with the word '**happiness**' but in my short 6 years of corporate life, I have always seen people **ranting** about their **increments**. I don't know if it's general human **tendency** to **value** themselves higher or they just **lie** outright about their increment percentage. Whatever the case be, it's **hard to find a happy employee in this season**.

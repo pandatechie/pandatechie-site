@@ -7,6 +7,7 @@ tags: ["Enterprise", "blockchain"]
 original_url: "https://pandatechie.in/2024/01/16/revisiting-delta-4-framework-why-india-can-never-adopt-public-blockchains/"
 cover_image: "https://pandatechie.in/wp-content/uploads/2024/01/bitcoins-price-history-Final-2022-1ee18825fac544509c03fc3a2adfe4e9-1024x683.jpg"
 archive: true
+featured: true
 ---
 
 The year was 2021 (Wait, we're in 2024 already?).

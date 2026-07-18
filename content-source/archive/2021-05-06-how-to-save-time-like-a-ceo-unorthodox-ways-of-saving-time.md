@@ -7,6 +7,7 @@ tags: ["Lifestyle", "saving", "savings", "time", "time management"]
 original_url: "https://pandatechie.in/2021/05/06/how-to-save-time-like-a-ceo-unorthodox-ways-of-saving-time/"
 cover_image: "https://i.kym-cdn.com/photos/images/newsfeed/001/075/794/3e1.png"
 archive: true
+featured: true
 ---
 
 We have talked a lot about ***Mann(ey) Ki Baat*** ([Money Matters](https://pandatechie.in/2021/04/01/how-to-save-money-without-feeling-the-crunch-zeffo-bravo/)) in the past. Today, I intend to talk about a **resource**, which is **available for free** to everyone. However, **you have to pay a hefty amount for NOT using it**. It is important to understand that **time** is one of the most **valuable** **assets** of your lives. In fact, one of the **rare assets** that are **equally** **available** and **accessible** to everyone. **Rich, poor, old, young, everyone has 24 hours in a day**. It is just how you use those 24 hours, makes all the difference. So, it is of utmost significance to answer the age old question of: How to save time?

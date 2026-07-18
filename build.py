@@ -1,4 +1,4 @@
-import os, json, re, glob, math
+import os, json, re, glob, math, shutil
 import markdown as md_lib
 from datetime import datetime
 
@@ -71,7 +71,7 @@ def page_shell(title, body, description="Raghav — writer and facilitator, cros
 <body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
-<a href="/" class="font-headline-md text-headline-md font-bold text-primary">Raghav <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">fka pandatechie</span></a>
+<a href="/" class="font-headline-md text-headline-md font-bold text-primary">pandatechie <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">aka Raghav</span></a>
 <div class="hidden md:flex items-center gap-8">
 {nav_link('/', 'Home', 'home')}
 {nav_link('/archive/', 'Log', 'archive')}
@@ -84,8 +84,8 @@ def page_shell(title, body, description="Raghav — writer and facilitator, cros
 <footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
 <div class="mb-8 md:mb-0 text-center md:text-left">
-<div class="font-headline-md text-headline-md font-bold text-primary mb-2">Raghav</div>
-<p class="font-label-sm text-label-sm text-on-surface-variant">© {datetime.now().year} · formerly pandatechie</p>
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">pandatechie</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© {datetime.now().year}</p>
 </div>
 <div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
 <a href="https://linkedin.com/in/rgvd" target="_blank" class="text-on-surface-variant hover:text-vibrant-magenta transition-colors">LinkedIn</a>
@@ -208,9 +208,13 @@ def render_homepage(posts):
     with open(os.path.join(SITE_DIR, 'homepage_body_v2.html'), encoding='utf-8') as f:
         tpl = f.read()
 
-    recent_new = [p for p in posts if not p.get('archive')][:1]
-    recent_legacy = [p for p in posts if p.get('archive')][:2]
-    log_preview = (recent_new + recent_legacy)[:3]
+    featured = [p for p in posts if p.get('featured')]
+    if featured:
+        log_preview = featured[:3]
+    else:
+        recent_new = [p for p in posts if not p.get('archive')][:1]
+        recent_legacy = [p for p in posts if p.get('archive')][:2]
+        log_preview = (recent_new + recent_legacy)[:3]
 
     cards = ""
     for p in log_preview:
@@ -251,6 +255,18 @@ def render_about(posts):
     with open(os.path.join(out_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(html)
 
+def copy_static_assets():
+    # Copy image assets (photos etc.) into dist/assets — skip the CSS/JS/config
+    # source files, which are inlined into the page shell instead.
+    src_dir = os.path.join(SITE_DIR, 'assets')
+    dst_dir = os.path.join(OUT, 'assets')
+    os.makedirs(dst_dir, exist_ok=True)
+    skip = {'site.css', 'site.js', 'tailwind-config.js'}
+    for fname in os.listdir(src_dir):
+        if fname in skip:
+            continue
+        shutil.copy2(os.path.join(src_dir, fname), os.path.join(dst_dir, fname))
+
 def main():
     posts = load_posts()
     print(f"Loaded {len(posts)} archive posts")
@@ -259,6 +275,7 @@ def main():
         render_post(p)
     render_homepage(posts)
     render_about(posts)
+    copy_static_assets()
     print("Build complete ->", OUT)
 
 if __name__ == '__main__':
