@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>5 Reasons You Should Ditch Gold and Buy Bitcoin this Dhanteras | Raghav</title>
 <meta name="description" content="My favorite time of the year is here. While there is a clear downside of putting on a lot of holiday weight, but the vibe of the town is just ethereal. Last yea…">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -13,33 +14,33 @@
     theme: {
         extend: {
             "colors": {
-                "secondary": "#1e5cb5",
-                "surface-container-high": "#e7e8e9",
-                "outline": "#79767b",
-                "vibrant-magenta": "#DE2F7B",
-                "secondary-container": "#70a2ff",
-                "surface-container": "#edeeef",
-                "on-surface-variant": "#48464a",
-                "electric-azure": "#5286E1",
-                "background": "#f8f9fa",
-                "on-secondary": "#ffffff",
-                "surface-dim": "#d9dadb",
-                "outline-variant": "#cac5ca",
-                "surface-container-lowest": "#ffffff",
-                "deep-obsidian": "#181719",
-                "primary-container": "#1c1b1d",
-                "surface-variant": "#e1e3e4",
-                "on-primary": "#ffffff",
-                "surface-container-highest": "#e1e3e4",
-                "surface-gray": "#F1F3F5",
-                "surface-bright": "#f8f9fa",
-                "surface-container-low": "#f3f4f5",
-                "surface": "#f8f9fa",
-                "on-surface": "#191c1d",
-                "tertiary": "#000000",
-                "on-background": "#191c1d",
-                "primary": "#000000",
-                "surface-tint": "#605e60"
+                "secondary": "#FF6A3D",
+                "surface-container-high": "#232328",
+                "outline": "#77777F",
+                "vibrant-magenta": "#E8598B",
+                "secondary-container": "#5C2A18",
+                "surface-container": "#1C1C21",
+                "on-surface-variant": "#9C9CA3",
+                "electric-azure": "#FF6A3D",
+                "background": "#0B0B0D",
+                "on-secondary": "#0B0B0D",
+                "surface-dim": "#050506",
+                "outline-variant": "#2C2C32",
+                "surface-container-lowest": "#131316",
+                "deep-obsidian": "#FF6A3D",
+                "primary-container": "#1C1B1D",
+                "surface-variant": "#232328",
+                "on-primary": "#0B0B0D",
+                "surface-container-highest": "#2A2A30",
+                "surface-gray": "#1C1C21",
+                "surface-bright": "#0B0B0D",
+                "surface-container-low": "#17171B",
+                "surface": "#0B0B0D",
+                "on-surface": "#F3F3F1",
+                "tertiary": "#F3F3F1",
+                "on-background": "#F3F3F1",
+                "primary": "#F3F3F1",
+                "surface-tint": "#9C9CA3"
             },
             "borderRadius": {
                 "DEFAULT": "0.125rem",
@@ -72,27 +73,50 @@
                 "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
                 "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
                 "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                "display-lg": ["72px", {"lineHeight": "78px", "letterSpacing": "-0.03em", "fontWeight": "800"}]
             }
         }
     }
 }
  }catch(_e){}</script>
-<style>.material-symbols-outlined{
+<style>html{ background: #0B0B0D; }
+body{ background: #0B0B0D; }
+::selection{ background: rgba(255,106,61,0.3); color: #F3F3F1; }
+
+/* Custom scrollbar — coral thumb on dark track */
+::-webkit-scrollbar{ width: 10px; }
+::-webkit-scrollbar-track{ background: #0B0B0D; }
+::-webkit-scrollbar-thumb{ background: #3A3A40; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover{ background: #FF6A3D; }
+html{ scrollbar-color: #3A3A40 #0B0B0D; scrollbar-width: thin; }
+
+.magnetic{ transition: transform .25s cubic-bezier(.3,.8,.4,1); }
+.pandatechie-logo{ cursor: pointer; }
+
+.material-symbols-outlined{
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 .glass-header, .glass-card{
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
-.glass-card{ background: rgba(255,255,255,0.72); }
-.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.glass-card{ background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.08); }
+.ghost-border{ border: 1px solid rgba(255,255,255,0.10); }
 .card-hover{ transition: border-color .3s ease, transform .3s ease; }
-.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+.card-hover:hover{ border-color:#FF6A3D; transform: translateY(-2px); }
 
-/* --- FIX: this is the piece the Stitch export was missing ---
-   The JS adds .reveal on load and .active on intersect; previously there
-   was no CSS backing either class, so the observer ran and did nothing. */
+/* Grayscale-to-color hover on log/post thumbnails — slick editorial touch */
+.thumb-duotone{ filter: grayscale(0.85) contrast(1.05) brightness(0.9); transition: filter .5s ease, transform .6s ease; }
+.group:hover .thumb-duotone{ filter: grayscale(0) contrast(1) brightness(1); transform: scale(1.03); }
+
+/* Numbered editorial list divider rows */
+.index-row{ border-top: 1px solid rgba(255,255,255,0.08); transition: background .3s ease, padding-left .3s ease; }
+.index-row:hover{ background: rgba(255,255,255,0.02); padding-left: 8px; }
+.index-row:last-child{ border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+/* --- FIX carried over from the original Stitch export: the JS adds .reveal
+   on load and .active on intersect; without this CSS the observer ran and
+   did nothing. --- */
 .reveal{
   opacity: 0;
   transform: translateY(24px);
@@ -103,7 +127,7 @@
   transform: translateY(0);
 }
 
-nav{ transition: height .25s ease, box-shadow .25s ease; }
+nav{ transition: height .25s ease, box-shadow .25s ease, background-color .25s ease; }
 
 @media (prefers-reduced-motion: reduce){
   .reveal{ opacity:1; transform:none; transition:none; }
@@ -114,7 +138,7 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
 <body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
-<a href="/" class="font-headline-md text-headline-md font-bold text-primary">pandatechie <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">aka Raghav</span></a>
+<a href="/" class="pandatechie-logo font-headline-md text-headline-md font-bold text-primary select-none">pandatechie <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">aka Raghav</span></a>
 <div class="hidden md:flex items-center gap-8">
 <a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
 <a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
@@ -178,15 +202,15 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
 </article>
 </main>
 <style>
-.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px;}
-.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px;}
+.prose-post h2{font-family:'Hanken Grotesk',sans-serif; font-size:26px; font-weight:600; margin-top:40px; margin-bottom:14px; color:#F3F3F1;}
+.prose-post h3{font-family:'Hanken Grotesk',sans-serif; font-size:20px; font-weight:600; margin-top:28px; margin-bottom:10px; color:#F3F3F1;}
 .prose-post p{margin-top:14px;}
 .prose-post ul, .prose-post ol{margin-top:14px; padding-left:22px;}
 .prose-post li{margin-top:6px;}
-.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(0,0,0,0.1);}
-.prose-post a{color:#5286E1; text-decoration:underline; text-underline-offset:3px;}
-.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #5286E1; color:#48464a; font-style:italic;}
-.prose-post code{background:rgba(82,134,225,0.1); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px;}
+.prose-post img{margin-top:20px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);}
+.prose-post a{color:#FF6A3D; text-decoration:underline; text-underline-offset:3px;}
+.prose-post blockquote{margin-top:18px; padding-left:18px; border-left:3px solid #FF6A3D; color:#9C9CA3; font-style:italic;}
+.prose-post code{background:rgba(255,106,61,0.12); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#F3F3F1;}
 </style>
 <footer id="contact-footer" class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
@@ -204,7 +228,7 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
 </div>
 </div>
 </footer>
-<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+<script>// Reveal on scroll — see site.css .reveal / .reveal.active
 (function(){
   var observerOptions = { threshold: 0.12 };
   var observer = new IntersectionObserver(function(entries){
@@ -221,8 +245,7 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
     observer.observe(el);
   });
 
-  // Sticky navbar subtle shrink — now applied consistently on every page,
-  // not just the blog archive export
+  // Sticky navbar subtle shrink
   var nav = document.querySelector('nav');
   if (nav) {
     window.addEventListener('scroll', function(){
@@ -247,11 +270,93 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
     });
   });
 
-  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  // Card hover micro-interaction
   document.querySelectorAll('.card-hover').forEach(function(card){
-    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(255, 106, 61, 0.5)'; });
     card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
   });
+
+  // Count-up on stat numbers — was in the original mockup, dropped during the
+  // Stitch port, restored here. Add data-count="N" (optionally data-suffix="+")
+  // to any element to make it count up when it scrolls into view.
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length) {
+    var counterIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var target = parseInt(el.dataset.count, 10);
+          var suffix = el.dataset.suffix || '';
+          var duration = 1000;
+          var start = performance.now();
+          function tick(now){
+            var progress = Math.min((now - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(eased * target) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          counterIO.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function(el){ counterIO.observe(el); });
+  }
+
+  // Magnetic pull on primary buttons — cursor nudges the button toward itself
+  // within a small radius. Skipped entirely on touch devices.
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.magnetic').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var rect = btn.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = 'translate(' + (x * 0.25) + 'px, ' + (y * 0.35) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function(){
+        btn.style.transform = '';
+      });
+    });
+  }
+
+  // Panda easter egg — click the wordmark 5 times, bamboo leaves fall.
+  // Purely decorative, self-contained, doesn't touch layout.
+  var logo = document.querySelector('.pandatechie-logo');
+  if (logo) {
+    var clicks = 0, clickTimer;
+    logo.addEventListener('click', function(e){
+      clicks++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(function(){ clicks = 0; }, 1200);
+      if (clicks >= 5) {
+        clicks = 0;
+        e.preventDefault();
+        spawnPandaBurst();
+      }
+    });
+  }
+
+  function spawnPandaBurst(){
+    var emojis = ['🐼', '🎋', '🐾'];
+    for (var i = 0; i < 24; i++) {
+      var span = document.createElement('span');
+      span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      span.style.cssText = [
+        'position:fixed', 'top:-40px', 'left:' + (Math.random() * 100) + 'vw',
+        'font-size:' + (18 + Math.random() * 20) + 'px',
+        'z-index:9999', 'pointer-events:none',
+        'transition:transform 2.4s cubic-bezier(.3,.8,.4,1), opacity 2.4s ease'
+      ].join(';');
+      document.body.appendChild(span);
+      requestAnimationFrame(function(el){
+        return function(){
+          el.style.transform = 'translateY(' + (window.innerHeight + 80) + 'px) rotate(' + (Math.random() * 360) + 'deg)';
+          el.style.opacity = '0';
+        };
+      }(span));
+      setTimeout(function(el){ return function(){ el.remove(); }; }(span), 2600);
+    }
+  }
 })();
 </script>
 </body>

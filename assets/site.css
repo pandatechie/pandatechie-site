@@ -1,18 +1,41 @@
+html{ background: #0B0B0D; }
+body{ background: #0B0B0D; }
+::selection{ background: rgba(255,106,61,0.3); color: #F3F3F1; }
+
+/* Custom scrollbar — coral thumb on dark track */
+::-webkit-scrollbar{ width: 10px; }
+::-webkit-scrollbar-track{ background: #0B0B0D; }
+::-webkit-scrollbar-thumb{ background: #3A3A40; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover{ background: #FF6A3D; }
+html{ scrollbar-color: #3A3A40 #0B0B0D; scrollbar-width: thin; }
+
+.magnetic{ transition: transform .25s cubic-bezier(.3,.8,.4,1); }
+.pandatechie-logo{ cursor: pointer; }
+
 .material-symbols-outlined{
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 .glass-header, .glass-card{
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
-.glass-card{ background: rgba(255,255,255,0.72); }
-.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.glass-card{ background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.08); }
+.ghost-border{ border: 1px solid rgba(255,255,255,0.10); }
 .card-hover{ transition: border-color .3s ease, transform .3s ease; }
-.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+.card-hover:hover{ border-color:#FF6A3D; transform: translateY(-2px); }
 
-/* --- FIX: this is the piece the Stitch export was missing ---
-   The JS adds .reveal on load and .active on intersect; previously there
-   was no CSS backing either class, so the observer ran and did nothing. */
+/* Grayscale-to-color hover on log/post thumbnails — slick editorial touch */
+.thumb-duotone{ filter: grayscale(0.85) contrast(1.05) brightness(0.9); transition: filter .5s ease, transform .6s ease; }
+.group:hover .thumb-duotone{ filter: grayscale(0) contrast(1) brightness(1); transform: scale(1.03); }
+
+/* Numbered editorial list divider rows */
+.index-row{ border-top: 1px solid rgba(255,255,255,0.08); transition: background .3s ease, padding-left .3s ease; }
+.index-row:hover{ background: rgba(255,255,255,0.02); padding-left: 8px; }
+.index-row:last-child{ border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+/* --- FIX carried over from the original Stitch export: the JS adds .reveal
+   on load and .active on intersect; without this CSS the observer ran and
+   did nothing. --- */
 .reveal{
   opacity: 0;
   transform: translateY(24px);
@@ -23,7 +46,7 @@
   transform: translateY(0);
 }
 
-nav{ transition: height .25s ease, box-shadow .25s ease; }
+nav{ transition: height .25s ease, box-shadow .25s ease, background-color .25s ease; }
 
 @media (prefers-reduced-motion: reduce){
   .reveal{ opacity:1; transform:none; transition:none; }

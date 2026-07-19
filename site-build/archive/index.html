@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Log — Page 1 | Raghav</title>
+<title>The Log | Raghav</title>
 <meta name="description" content="Raghav — writer and facilitator, cross-industry.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -13,33 +14,33 @@
     theme: {
         extend: {
             "colors": {
-                "secondary": "#1e5cb5",
-                "surface-container-high": "#e7e8e9",
-                "outline": "#79767b",
-                "vibrant-magenta": "#DE2F7B",
-                "secondary-container": "#70a2ff",
-                "surface-container": "#edeeef",
-                "on-surface-variant": "#48464a",
-                "electric-azure": "#5286E1",
-                "background": "#f8f9fa",
-                "on-secondary": "#ffffff",
-                "surface-dim": "#d9dadb",
-                "outline-variant": "#cac5ca",
-                "surface-container-lowest": "#ffffff",
-                "deep-obsidian": "#181719",
-                "primary-container": "#1c1b1d",
-                "surface-variant": "#e1e3e4",
-                "on-primary": "#ffffff",
-                "surface-container-highest": "#e1e3e4",
-                "surface-gray": "#F1F3F5",
-                "surface-bright": "#f8f9fa",
-                "surface-container-low": "#f3f4f5",
-                "surface": "#f8f9fa",
-                "on-surface": "#191c1d",
-                "tertiary": "#000000",
-                "on-background": "#191c1d",
-                "primary": "#000000",
-                "surface-tint": "#605e60"
+                "secondary": "#FF6A3D",
+                "surface-container-high": "#232328",
+                "outline": "#77777F",
+                "vibrant-magenta": "#E8598B",
+                "secondary-container": "#5C2A18",
+                "surface-container": "#1C1C21",
+                "on-surface-variant": "#9C9CA3",
+                "electric-azure": "#FF6A3D",
+                "background": "#0B0B0D",
+                "on-secondary": "#0B0B0D",
+                "surface-dim": "#050506",
+                "outline-variant": "#2C2C32",
+                "surface-container-lowest": "#131316",
+                "deep-obsidian": "#FF6A3D",
+                "primary-container": "#1C1B1D",
+                "surface-variant": "#232328",
+                "on-primary": "#0B0B0D",
+                "surface-container-highest": "#2A2A30",
+                "surface-gray": "#1C1C21",
+                "surface-bright": "#0B0B0D",
+                "surface-container-low": "#17171B",
+                "surface": "#0B0B0D",
+                "on-surface": "#F3F3F1",
+                "tertiary": "#F3F3F1",
+                "on-background": "#F3F3F1",
+                "primary": "#F3F3F1",
+                "surface-tint": "#9C9CA3"
             },
             "borderRadius": {
                 "DEFAULT": "0.125rem",
@@ -72,27 +73,50 @@
                 "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
                 "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
                 "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                "display-lg": ["72px", {"lineHeight": "78px", "letterSpacing": "-0.03em", "fontWeight": "800"}]
             }
         }
     }
 }
  }catch(_e){}</script>
-<style>.material-symbols-outlined{
+<style>html{ background: #0B0B0D; }
+body{ background: #0B0B0D; }
+::selection{ background: rgba(255,106,61,0.3); color: #F3F3F1; }
+
+/* Custom scrollbar — coral thumb on dark track */
+::-webkit-scrollbar{ width: 10px; }
+::-webkit-scrollbar-track{ background: #0B0B0D; }
+::-webkit-scrollbar-thumb{ background: #3A3A40; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover{ background: #FF6A3D; }
+html{ scrollbar-color: #3A3A40 #0B0B0D; scrollbar-width: thin; }
+
+.magnetic{ transition: transform .25s cubic-bezier(.3,.8,.4,1); }
+.pandatechie-logo{ cursor: pointer; }
+
+.material-symbols-outlined{
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 .glass-header, .glass-card{
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
-.glass-card{ background: rgba(255,255,255,0.72); }
-.ghost-border{ border: 1px solid rgba(0,0,0,0.1); }
+.glass-card{ background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.08); }
+.ghost-border{ border: 1px solid rgba(255,255,255,0.10); }
 .card-hover{ transition: border-color .3s ease, transform .3s ease; }
-.card-hover:hover{ border-color:#5286E1; transform: translateY(-2px); }
+.card-hover:hover{ border-color:#FF6A3D; transform: translateY(-2px); }
 
-/* --- FIX: this is the piece the Stitch export was missing ---
-   The JS adds .reveal on load and .active on intersect; previously there
-   was no CSS backing either class, so the observer ran and did nothing. */
+/* Grayscale-to-color hover on log/post thumbnails — slick editorial touch */
+.thumb-duotone{ filter: grayscale(0.85) contrast(1.05) brightness(0.9); transition: filter .5s ease, transform .6s ease; }
+.group:hover .thumb-duotone{ filter: grayscale(0) contrast(1) brightness(1); transform: scale(1.03); }
+
+/* Numbered editorial list divider rows */
+.index-row{ border-top: 1px solid rgba(255,255,255,0.08); transition: background .3s ease, padding-left .3s ease; }
+.index-row:hover{ background: rgba(255,255,255,0.02); padding-left: 8px; }
+.index-row:last-child{ border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+/* --- FIX carried over from the original Stitch export: the JS adds .reveal
+   on load and .active on intersect; without this CSS the observer ran and
+   did nothing. --- */
 .reveal{
   opacity: 0;
   transform: translateY(24px);
@@ -103,7 +127,7 @@
   transform: translateY(0);
 }
 
-nav{ transition: height .25s ease, box-shadow .25s ease; }
+nav{ transition: height .25s ease, box-shadow .25s ease, background-color .25s ease; }
 
 @media (prefers-reduced-motion: reduce){
   .reveal{ opacity:1; transform:none; transition:none; }
@@ -114,7 +138,7 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
 <body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 h-20">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
-<a href="/" class="font-headline-md text-headline-md font-bold text-primary">pandatechie <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">aka Raghav</span></a>
+<a href="/" class="pandatechie-logo font-headline-md text-headline-md font-bold text-primary select-none">pandatechie <span class="font-label-sm text-label-sm text-on-surface-variant font-normal align-middle">aka Raghav</span></a>
 <div class="hidden md:flex items-center gap-8">
 <a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
 <a href="/archive/" class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1">Log</a>
@@ -130,137 +154,36 @@ nav{ transition: height .25s ease, box-shadow .25s ease; }
 <div class="flex justify-between items-center mb-16">
 <div>
 <h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4">The full log</h2>
-<h1 class="font-headline-lg text-headline-lg">303 posts, 2020 to now</h1>
+<h1 class="font-headline-lg text-headline-lg">303 posts, sorted by topic</h1>
 </div>
+<a href="/archive/all/" class="hidden sm:flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-vibrant-magenta transition-colors">Browse all chronologically <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">UNCATEGORIZED</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/the-mayhem-should-i-buy-bitcoin/">The MAYhem: Should I Buy Bitcoin?</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">"It is going back up again, should I invest?"
-
-It was a Sunday morning and my brother woke me up from the lumber with this question. Sometimes I wonder why does…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2025-05-03</span>
-<a href="/archive/the-mayhem-should-i-buy-bitcoin/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<a href="/archive/category/cryptocurrency/" class="group ghost-border rounded-lg p-8 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded self-start mb-4">158 POSTS</span>
+<h3 class="font-headline-md text-[22px] mb-3 group-hover:text-electric-azure transition-colors">Cryptocurrency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Bitcoin, blockchain, and the wider crypto ecosystem — the site's original beat.</p>
+</a>
+<a href="/archive/category/technology-trends/" class="group ghost-border rounded-lg p-8 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded self-start mb-4">86 POSTS</span>
+<h3 class="font-headline-md text-[22px] mb-3 group-hover:text-electric-azure transition-colors">Technology Trends</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Consumer tech, apps, and everyday digital life.</p>
+</a>
+<div class="ghost-border rounded-lg p-8 bg-surface-container-lowest flex flex-col opacity-70">
+<span class="font-label-sm text-label-sm bg-outline-variant/20 text-on-surface-variant px-3 py-1 rounded self-start mb-4">COMING SOON</span>
+<h3 class="font-headline-md text-[22px] mb-3">AI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Applied AI in the enterprise — practical notes, not hype.</p>
 </div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">UNCATEGORIZED</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/is-gen-z-cooked-gold-standard-of-modern-investing/">Is Gen Z cooked - Gold Standard of Modern Investing</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Every generation has its go-to asset.
-
-For your grandparents, it was fixed deposits, earning a rock-solid 15% returns.  
-Your parents swore by gold and real est…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2025-04-23</span>
-<a href="/archive/is-gen-z-cooked-gold-standard-of-modern-investing/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
+<div class="ghost-border rounded-lg p-8 bg-surface-container-lowest flex flex-col opacity-70">
+<span class="font-label-sm text-label-sm bg-outline-variant/20 text-on-surface-variant px-3 py-1 rounded self-start mb-4">COMING SOON</span>
+<h3 class="font-headline-md text-[22px] mb-3">Change Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">How organisations actually adopt new systems and processes.</p>
 </div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">UNCATEGORIZED</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/memecoins-a-new-financial-paradigm/">Memecoins: A New Financial Paradigm?</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Bitcoin has breached $100K.
-
-One inadvertent consequence of these run ups is revival of long lost friendships.
-
-With peaking retail interest in crypto, one such…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-12-22</span>
-<a href="/archive/memecoins-a-new-financial-paradigm/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/cryptos-future-lies-in-compliance-the-e-money-network/">Crypto’s Future Lies in Compliance: The E Money Network</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Nearly 15 years ago, an enigmatic pseudonym unveiled the Bitcoin whitepaper, introducing a revolutionary alternative to government-controlled money. What starte…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-11-22</span>
-<a href="/archive/cryptos-future-lies-in-compliance-the-e-money-network/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/from-digital-gold-to-defi-bitcoins-next-move-btcfi/">From Digital Gold to DeFi: Bitcoin’s Next Move with BTCfi</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">In the fast-moving digital age, some ideas are so revolutionary they simply… gather dust. Yes, you heard that right—revolutionary ideas gathering dust. It sound…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-11-06</span>
-<a href="/archive/from-digital-gold-to-defi-bitcoins-next-move-btcfi/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/the-bitcoin-interoperability-race-why-its-time-to-plug-into-btcfi/">The Bitcoin Interoperability Race: Why It’s Time to Plug Into BTCfi</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Bitcoin interoperability is quickly becoming one of the hottest topics in crypto, especially in the wake of the Wrapped Bitcoin (WBTC) drama. With only 1% of Bi…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-10-27</span>
-<a href="/archive/the-bitcoin-interoperability-race-why-its-time-to-plug-into-btcfi/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/the-intent-solver-heart-of-btcfi/">The Intent-Solver: Heart of BTCfi</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">I don't know if I've become an integral part of another echo chamber or if this is actually big, but BTCfi is flooding my [Twitter](http://x.com/pandatechie) ti…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-09-08</span>
-<a href="/archive/the-intent-solver-heart-of-btcfi/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/proto-next-incarnation-of-maps/">Proto: Next Incarnation of Maps?</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">It was one of those hangry evenings, where you reconsider legal bans on cannibalism. Glued to the screen, I kept on visiting the Zomato app, watching my Tandoor…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-08-25</span>
-<a href="/archive/proto-next-incarnation-of-maps/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">UNCATEGORIZED</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/finternet-finance-at-the-speed-of-internet/">Finternet: Finance at the Speed of Internet</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">After months of deliberation, I finally decided to opt for a second life insurance plan as my spouse felt I was underinsured (major sus?). I have lost about 20 …</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-08-17</span>
-<a href="/archive/finternet-finance-at-the-speed-of-internet/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/is-bitcoin-it-questioning-our-existence/">Is Bitcoin it?: Questioning Our Existence</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">"Oh don't worry. It will fade away."
-
-That is often how I convince (fool) myself to ignore my intrusive thoughts. Before you call 9-1-1 on me, these thoughts ar…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-07-14</span>
-<a href="/archive/is-bitcoin-it-questioning-our-existence/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/how-to-stake-bitcoin-on-pstake-testnet/">How to Stake Bitcoin on pStake Testnet?</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">Imagine a world where your Bitcoin isn't just sitting idle in your wallet but actively working for you, earning rewards while still being available for trading …</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-06-23</span>
-<a href="/archive/how-to-stake-bitcoin-on-pstake-testnet/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-<article class="group ghost-border rounded-lg p-6 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
-<span class="font-label-sm text-label-sm bg-vibrant-magenta/10 text-vibrant-magenta px-3 py-1 rounded self-start mb-4">CRYPTOCURRENCY</span>
-<h3 class="font-headline-md text-[19px] mb-3 leading-snug group-hover:text-electric-azure transition-colors"><a href="/archive/democratization-of-liquid-staking-on-solana/">Democratization of Liquid Staking on Solana</a></h3>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4 flex-1">The rain gods have showered their blessings upon us, and it looks like a great day to write. But do you know what form rain takes? Liquid.
-
-Reminds you of somet…</p>
-<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
-<span class="font-label-sm text-label-sm text-outline-variant">2024-06-13</span>
-<a href="/archive/democratization-of-liquid-staking-on-solana/" class="material-symbols-outlined text-outline-variant group-hover:text-electric-azure transition-colors">open_in_new</a>
-</div>
-</article>
-</div>
-
-<div class="mt-20 flex justify-center items-center gap-4">
-
-<span class="font-label-md text-label-md px-4">Page 1 of 26</span>
-<a href="/archive/page/2/" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-gray transition-colors"><span class="material-symbols-outlined">chevron_right</span></a>
+<a href="/archive/category/uncategorized/" class="group ghost-border rounded-lg p-8 card-hover transition-all duration-300 bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-3 py-1 rounded self-start mb-4">59 POSTS</span>
+<h3 class="font-headline-md text-[22px] mb-3 group-hover:text-electric-azure transition-colors">Uncategorized</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Early posts and one-offs that don't fit elsewhere.</p>
+</a>
 </div>
 </div>
 </section>
@@ -281,7 +204,7 @@ Reminds you of somet…</p>
 </div>
 </div>
 </footer>
-<script>// Reveal on scroll — now has matching CSS (see site.css .reveal / .reveal.active)
+<script>// Reveal on scroll — see site.css .reveal / .reveal.active
 (function(){
   var observerOptions = { threshold: 0.12 };
   var observer = new IntersectionObserver(function(entries){
@@ -298,8 +221,7 @@ Reminds you of somet…</p>
     observer.observe(el);
   });
 
-  // Sticky navbar subtle shrink — now applied consistently on every page,
-  // not just the blog archive export
+  // Sticky navbar subtle shrink
   var nav = document.querySelector('nav');
   if (nav) {
     window.addEventListener('scroll', function(){
@@ -324,11 +246,93 @@ Reminds you of somet…</p>
     });
   });
 
-  // Card hover micro-interaction (mirrors the Stitch export, kept for parity)
+  // Card hover micro-interaction
   document.querySelectorAll('.card-hover').forEach(function(card){
-    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(82, 134, 225, 0.5)'; });
+    card.addEventListener('mouseenter', function(){ card.style.borderColor = 'rgba(255, 106, 61, 0.5)'; });
     card.addEventListener('mouseleave', function(){ card.style.borderColor = ''; });
   });
+
+  // Count-up on stat numbers — was in the original mockup, dropped during the
+  // Stitch port, restored here. Add data-count="N" (optionally data-suffix="+")
+  // to any element to make it count up when it scrolls into view.
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length) {
+    var counterIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var target = parseInt(el.dataset.count, 10);
+          var suffix = el.dataset.suffix || '';
+          var duration = 1000;
+          var start = performance.now();
+          function tick(now){
+            var progress = Math.min((now - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(eased * target) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          counterIO.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function(el){ counterIO.observe(el); });
+  }
+
+  // Magnetic pull on primary buttons — cursor nudges the button toward itself
+  // within a small radius. Skipped entirely on touch devices.
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.magnetic').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var rect = btn.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = 'translate(' + (x * 0.25) + 'px, ' + (y * 0.35) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function(){
+        btn.style.transform = '';
+      });
+    });
+  }
+
+  // Panda easter egg — click the wordmark 5 times, bamboo leaves fall.
+  // Purely decorative, self-contained, doesn't touch layout.
+  var logo = document.querySelector('.pandatechie-logo');
+  if (logo) {
+    var clicks = 0, clickTimer;
+    logo.addEventListener('click', function(e){
+      clicks++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(function(){ clicks = 0; }, 1200);
+      if (clicks >= 5) {
+        clicks = 0;
+        e.preventDefault();
+        spawnPandaBurst();
+      }
+    });
+  }
+
+  function spawnPandaBurst(){
+    var emojis = ['🐼', '🎋', '🐾'];
+    for (var i = 0; i < 24; i++) {
+      var span = document.createElement('span');
+      span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      span.style.cssText = [
+        'position:fixed', 'top:-40px', 'left:' + (Math.random() * 100) + 'vw',
+        'font-size:' + (18 + Math.random() * 20) + 'px',
+        'z-index:9999', 'pointer-events:none',
+        'transition:transform 2.4s cubic-bezier(.3,.8,.4,1), opacity 2.4s ease'
+      ].join(';');
+      document.body.appendChild(span);
+      requestAnimationFrame(function(el){
+        return function(){
+          el.style.transform = 'translateY(' + (window.innerHeight + 80) + 'px) rotate(' + (Math.random() * 360) + 'deg)';
+          el.style.opacity = '0';
+        };
+      }(span));
+      setTimeout(function(el){ return function(){ el.remove(); }; }(span), 2600);
+    }
+  }
 })();
 </script>
 </body>
